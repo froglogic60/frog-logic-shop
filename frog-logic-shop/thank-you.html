@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Frog Logic</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap" style="display:flex; align-items:center; gap:10px;">
+      <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit;">
+        <img src="assets/frog-logic-mark-sm.png" alt="" width="34" height="30">
+        <strong>Frog Logic</strong>
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap" style="max-width:640px; padding:80px 24px; text-align:center;">
+    <h1>Thank you 🐸</h1>
+    <p id="status" style="font-size:1.1em; opacity:.85;">Confirming your order…</p>
+    <p style="margin-top:32px;"><a href="/">Back to the collection</a></p>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get('session_id');
+    const el = document.getElementById('status');
+    if (!sessionId) {
+      el.textContent = "Something's not quite right — if you were charged and don't hear from us shortly, email hello@froglogic.co.uk.";
+    } else {
+      el.innerHTML = "Your order's confirmed. Digital pieces arrive by email in a moment; physical pieces ship separately once they're printed. If anything looks off, email <a href=\"mailto:hello@froglogic.co.uk\">hello@froglogic.co.uk</a>.";
+    }
+  </script>
+</body>
+</html>
