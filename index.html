@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frog Logic — words for how it actually feels</title>
+<meta name="description" content="Neurodivergent-affirming prints, pins and printables. The words we actually use, set as artwork — with a small Frog Logic frog on every piece.">
+<link rel="icon" href="assets/frog-logic-mark-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&family=Abril+Fatface&family=Anton&family=Instrument+Serif:ital@0;1&family=Syne:wght@600;800&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="#top">
+      <img src="assets/frog-logic-mark-sm.png" alt="">
+      Frog Logic
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#collection">The collection</a>
+      <a href="#digital">Digital</a>
+      <a href="#guides">Guides</a>
+      <a href="#why">Why this exists</a>
+      <a href="#newsletter">Newsletter</a>
+      <button id="low-stim-toggle" class="btn btn-ghost btn-small" type="button" aria-pressed="false">Low-stim mode</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-content">
+      <p class="eyebrow">Neurodivergent-made · Printed to order</p>
+      <h1>Words for how it<br><em>actually</em> feels.</h1>
+      <p class="hero-sub">Overstimulated. Low spoons. Touched out. The language we already use, set as artwork you'd actually hang up — and a small frog on every piece, because it's still us who made it.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#collection">See the collection</a>
+        <a class="btn btn-ghost" href="#digital">Instant downloads</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="wrap trust-row">
+      <p>Printed to order, never mass-made</p>
+      <p>Said plainly, never diagnosed on a t-shirt</p>
+      <p>Arrives faulty? Replaced, no argument</p>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <h2>Why this exists</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <p class="num">01</p>
+          <h3>Said by us, not about us</h3>
+          <p>Every word here is language neurodivergent people already use for themselves — never a clinical label, never someone else's diagnosis printed on your chest.</p>
+        </div>
+        <div class="why-card">
+          <p class="num">02</p>
+          <h3>The word is the artwork</h3>
+          <p>Each piece is drawn out of its own word — the letters scatter, spiral, sink, or trail off unfinished depending on what the feeling actually does to you.</p>
+        </div>
+        <div class="why-card">
+          <p class="num">03</p>
+          <h3>Built to be easy to use</h3>
+          <p>High contrast, generous spacing, and a low-stimulation mode that flattens the motion and turns the colour down — the toggle's in the header, use it freely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collection" id="collection">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The collection</h2>
+        <p class="count">Sixty-eight pieces</p>
+      </div>
+      <p class="section-sub">Tees, totes, pins, prints, mugs and stickers. Every piece is drawn out of its own word — and carries the Frog Logic frog, small, top right.</p>
+      <div class="pad-grid" id="product-grid"><!-- rendered from PRODUCTS in script.js --></div>
+    </div>
+  </section>
+
+  <section class="collection" id="digital">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Digital</h2>
+        <p class="count">Thirty downloads</p>
+      </div>
+      <p class="section-sub">No shipping, no waiting. Low-pressure planners and check-in tools, deliberately calmer than the prints — these are meant to be used on a hard day.</p>
+      <div class="pad-grid" id="digital-grid"><!-- rendered from DIGITAL_PRODUCTS in script.js --></div>
+    </div>
+  </section>
+
+  <section class="collection" id="guides">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The Pond Guides</h2>
+        <p class="count">Twenty-three explainers</p>
+      </div>
+      <p class="section-sub">One warm, plain-English guide per neurotype — what it actually feels like from the inside, what people get wrong, what genuinely helps, and what to say. Written to be handed to a relative, a partner, or a manager. The second set covers contested ground — conditions many people who have them call neurodivergent, and others don’t. Each of those says so on the first page.</p>
+      <div class="pad-grid" id="guides-grid"><!-- rendered from GUIDES in script.js --></div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <div class="wrap newsletter-inner">
+      <h2>Once a month. Never more.</h2>
+      <p>New pieces, restocks, the occasional frog. No spam — we know what it costs to open an inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" method="get" action="#" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn btn-primary" type="submit">Sign up</button>
+      </form>
+      <p class="form-note" id="form-note">This form isn't wired to a mailing list yet — see the README's newsletter section for the last step.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>Frog Logic — made with care, printed to order</p>
+    <nav aria-label="Social">
+      <a href="#" rel="noopener">Facebook</a>
+      <a href="#" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
