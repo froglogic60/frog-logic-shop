@@ -13,20 +13,8 @@
 // Stripe -> Developers -> Webhooks, listening for checkout.session.completed.
 
 import Stripe from "stripe";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import catalog from "./catalog.json";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-let catalogCache = null;
-
-async function loadCatalog() {
-  if (!catalogCache) {
-    const raw = await readFile(path.join(__dirname, "catalog.json"), "utf-8");
-    catalogCache = JSON.parse(raw);
-  }
-  return catalogCache;
-}
 
 async function sendDownloadEmail({ toEmail, item }) {
   const site = process.env.SITE_URL;
@@ -113,7 +101,6 @@ export default async (req) => {
 
   const session = event.data.object;
   const productId = session.metadata?.product_id;
-  const catalog = await loadCatalog();
   const item = catalog.find((p) => p.id === productId);
 
   if (!item) {

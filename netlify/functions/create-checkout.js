@@ -10,25 +10,12 @@
 // (Site settings → Environment variables). Nothing else.
 
 import Stripe from "stripe";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-let catalogCache = null;
+import catalog from "./catalog.json";
 
 const EU_COUNTRIES = [
   "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR",
   "HU", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE",
 ];
-
-async function loadCatalog() {
-  if (!catalogCache) {
-    const raw = await readFile(path.join(__dirname, "catalog.json"), "utf-8");
-    catalogCache = JSON.parse(raw);
-  }
-  return catalogCache;
-}
 
 export default async (req) => {
   if (req.method !== "POST") {
@@ -50,7 +37,6 @@ export default async (req) => {
     return new Response(JSON.stringify({ error: "Bad request" }), { status: 400 });
   }
 
-  const catalog = await loadCatalog();
   const item = catalog.find((p) => p.id === id);
   if (!item) {
     return new Response(JSON.stringify({ error: "Unknown product" }), { status: 404 });
