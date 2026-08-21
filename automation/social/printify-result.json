@@ -1,24 +1,24 @@
 {
-  "createdAt": "2026-08-21T16:56:38.511Z",
+  "createdAt": "2026-08-21T17:32:11.828Z",
   "results": [
     {
       "id": "04-47-things-at-once",
       "num": "04 — Mug",
       "word": "47 Things at Once",
       "kind": "mug",
-      "printifyProductId": "6a8882d49147c07250045039",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b5997c6cfe5e306804e",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "05-info-dump-incoming",
       "num": "05 — Wall print",
       "word": "Info Dump Incoming",
       "kind": "print",
-      "printifyProductId": "6a8882d845248cbd850c5224",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b5da5a5c668e904855f",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -46,9 +46,9 @@
       "num": "10 — Wall print",
       "word": "Executive Dysfunction",
       "kind": "print",
-      "printifyProductId": "6a8882e1f1701b85f7048b45",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b60a5a5c668e9048562",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -56,9 +56,9 @@
       "num": "11 — Wall print",
       "word": "Waiting Mode",
       "kind": "print",
-      "printifyProductId": "6a8882e6a9520d71fa0e89cf",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b6397c6cfe5e3068056",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -76,19 +76,19 @@
       "num": "14 — Mug",
       "word": "Object Permanence",
       "kind": "mug",
-      "printifyProductId": "6a8882ebf1701b85f7048b5e",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b657ad3f442910bd1db",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "17-decision-paralysis",
       "num": "17 — Wall print",
       "word": "Decision Paralysis",
       "kind": "print",
-      "printifyProductId": "6a8882eff1701b85f7048b60",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b68a5a5c668e904856d",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -106,19 +106,19 @@
       "num": "20 — Mug",
       "word": "Snacks and Spite",
       "kind": "mug",
-      "printifyProductId": "6a8882f445248cbd850c5241",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b6b45248cbd850c5a83",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "21-autistic-joy",
       "num": "21 — Wall print",
       "word": "Autistic Joy",
       "kind": "print",
-      "printifyProductId": "6a8882f8d946a7ea390d04a4",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b6da5a5c668e9048577",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -126,10 +126,10 @@
       "num": "22 — Mug",
       "word": "Interoception",
       "kind": "mug",
-      "printifyProductId": "6a8882fba5a5c668e9047d2a",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b7097c6cfe5e306806c",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "23-do-not-perceive-me",
@@ -146,9 +146,9 @@
       "num": "26 — Wall print",
       "word": "Justice Sensitive",
       "kind": "print",
-      "printifyProductId": "6a888302478c56b24d00607b",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b727ad3f442910bd1fa",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -166,9 +166,9 @@
       "num": "32 — Wall print",
       "word": "Unreasonably Delighted",
       "kind": "print",
-      "printifyProductId": "6a888308a5a5c668e9047d36",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b75a9520d71fa0e9259",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -176,9 +176,9 @@
       "num": "35 — Wall print",
       "word": "Found My People",
       "kind": "print",
-      "printifyProductId": "6a88830d478c56b24d006082",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b7897c6cfe5e30680a0",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -186,10 +186,10 @@
       "num": "36 — Mug",
       "word": "Comfort Rewatch",
       "kind": "mug",
-      "printifyProductId": "6a88830f45248cbd850c5250",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b7b7ad3f442910bd222",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "37-same-meal-still-perfect",
@@ -206,9 +206,9 @@
       "num": "40 — Wall print",
       "word": "Small Things, Enormous Joy",
       "kind": "print",
-      "printifyProductId": "6a888315d946a7ea390d04b0",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b7d97c6cfe5e30680af",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -216,9 +216,9 @@
       "num": "41 — Wall print",
       "word": "Never Too Much",
       "kind": "print",
-      "printifyProductId": "6a88831a9147c0725004505d",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b81f1701b85f70493de",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -226,9 +226,9 @@
       "num": "43 — Wall print",
       "word": "Not Broken",
       "kind": "print",
-      "printifyProductId": "6a88831ea5a5c668e9047d41",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b84a5a5c668e90485c2",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -236,9 +236,9 @@
       "num": "47 — Wall print",
       "word": "You Were Paying Attention",
       "kind": "print",
-      "printifyProductId": "6a8883239147c07250045068",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b877ad3f442910bd246",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -256,19 +256,19 @@
       "num": "50 — Mug",
       "word": "The Right Amount of You",
       "kind": "mug",
-      "printifyProductId": "6a8883289147c0725004506e",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b8997c6cfe5e30680c4",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "52-i-accommodated-you-first",
       "num": "52 — Wall print",
       "word": "I Accommodated You First",
       "kind": "print",
-      "printifyProductId": "6a88832ca9520d71fa0e8a05",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b8ca5a5c668e90485d6",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -286,10 +286,10 @@
       "num": "58 — Mug",
       "word": "Shared Interest, Not Small Talk",
       "kind": "mug",
-      "printifyProductId": "6a888332d946a7ea390d04c8",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b8fa5a5c668e90485dd",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "59-tell-me-before-you-change-it",
@@ -306,9 +306,9 @@
       "num": "60 — Wall print",
       "word": "Recovery Is Part Of The Plan",
       "kind": "print",
-      "printifyProductId": "6a888338478c56b24d006099",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b92a5a5c668e90485e4",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -316,9 +316,9 @@
       "num": "61 — Wall print",
       "word": "Nobody Asked How You Were",
       "kind": "print",
-      "printifyProductId": "6a88833c9147c0725004507e",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b95f1701b85f70493fe",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
@@ -326,19 +326,19 @@
       "num": "62 — Mug",
       "word": "Twenty Minutes Counts",
       "kind": "mug",
-      "printifyProductId": "6a88833f478c56b24d00609f",
-      "printifyVariantId": 65217,
-      "blueprint": "Black Mug (11oz, 15oz)",
-      "provider": "Harrier"
+      "printifyProductId": "6a888b9845248cbd850c5af8",
+      "printifyVariantId": 62327,
+      "blueprint": "Ceramic Mug (EU)",
+      "provider": "OPT OnDemand"
     },
     {
       "id": "65-a-different-route",
       "num": "65 — Wall print",
       "word": "A Different Route",
       "kind": "print",
-      "printifyProductId": "6a888343478c56b24d0060a5",
-      "printifyVariantId": 75271,
-      "blueprint": "Indoor and Outdoor Silk Posters",
+      "printifyProductId": "6a888b9a45248cbd850c5afc",
+      "printifyVariantId": 75333,
+      "blueprint": "Framed Posters",
       "provider": "Print Clever"
     },
     {
