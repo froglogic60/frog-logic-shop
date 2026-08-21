@@ -1,8 +1,10 @@
-// Posts the monthly Lilypad update to a Facebook Page and a linked
+// Posts the monthly Frog Logic update to a Facebook Page and a linked
 // Instagram professional account, via the Meta Graph API.
 //
 // Requires (as env vars / GitHub secrets):
-//   META_ACCESS_TOKEN  - a long-lived Page access token (see README for how to get one)
+//   META_ACCESS_TOKEN  - a long-lived USER access token (from the Access Token
+//                        Debugger's "Extend Access Token" button). The script
+//                        exchanges it for a Page token itself on every run.
 //   FB_PAGE_ID         - your Facebook Page's numeric ID
 //   IG_USER_ID         - your Instagram professional account's numeric ID
 //
@@ -23,6 +25,18 @@ async function loadContent() {
     "utf-8"
   );
   return JSON.parse(raw);
+}
+
+async function getPageToken(userToken, pageId) {
+  // Posting to a Page's feed needs a Page token, not a user token. Rather
+  // than storing one (fiddly to extract by hand), exchange the long-lived
+  // user token for the Page token fresh on every run.
+  const res = await fetch(`${GRAPH}/${pageId}?fields=access_token&access_token=${userToken}`);
+  const body = await res.json();
+  if (!res.ok || !body.access_token) {
+    throw new Error(`Could not get Page token: ${JSON.stringify(body.error || body)}`);
+  }
+  return body.access_token;
 }
 
 async function postToFacebook(token, pageId, message) {
@@ -65,7 +79,7 @@ async function main() {
   }
 
   const { caption, image_url } = await loadContent();
-  const token = process.env.META_ACCESS_TOKEN;
+  const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
 
   await postToFacebook(token, process.env.FB_PAGE_ID, caption);
   await postToInstagram(token, process.env.IG_USER_ID, caption, image_url);
