@@ -15,7 +15,7 @@
 // Page token is derived on every run), FB_PAGE_ID, IG_USER_ID.
 const fs = require("fs");
 const path = require("path");
-const { loadSiteData, prepareFonts, scheduleFor, buildPost } = require("./lib.js");
+const { loadSiteData, scheduleFor, buildPost } = require("./lib.js");
 const { makeRenderer } = require("./render2.js");
 
 const GRAPH = "https://graph.facebook.com/v20.0";
@@ -40,9 +40,7 @@ async function generate() {
   const site = loadSiteData();
   const sched = scheduleFor(d, slot);
   const post = buildPost(sched, bank, site);
-  const fontFiles = await prepareFonts(path.join(__dirname, ".fonts"));
   const renderer = makeRenderer({
-    fontFiles,
     logoFile: path.join(__dirname, "..", "..", "assets", "frog-logic-mark-sm.png"),
   });
   const name = `${iso}-${slot}`;
