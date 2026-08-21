@@ -1,0 +1,356 @@
+{
+  "createdAt": "2026-08-21T16:56:38.511Z",
+  "results": [
+    {
+      "id": "04-47-things-at-once",
+      "num": "04 — Mug",
+      "word": "47 Things at Once",
+      "kind": "mug",
+      "printifyProductId": "6a8882d49147c07250045039",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "05-info-dump-incoming",
+      "num": "05 — Wall print",
+      "word": "Info Dump Incoming",
+      "kind": "print",
+      "printifyProductId": "6a8882d845248cbd850c5224",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "06-infinity",
+      "num": "06 — Pin / sticker",
+      "word": "Infinity",
+      "kind": "sticker",
+      "printifyProductId": "6a8882dba9520d71fa0e89ad",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "07-touched-out",
+      "num": "07 — Sticker",
+      "word": "Touched Out",
+      "kind": "sticker",
+      "printifyProductId": "6a8882dda9520d71fa0e89ae",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "10-executive-dysfunction",
+      "num": "10 — Wall print",
+      "word": "Executive Dysfunction",
+      "kind": "print",
+      "printifyProductId": "6a8882e1f1701b85f7048b45",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "11-waiting-mode",
+      "num": "11 — Wall print",
+      "word": "Waiting Mode",
+      "kind": "print",
+      "printifyProductId": "6a8882e6a9520d71fa0e89cf",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "13-rejection-sensitive",
+      "num": "13 — Sticker",
+      "word": "Rejection Sensitive",
+      "kind": "sticker",
+      "printifyProductId": "6a8882e9a9520d71fa0e89dd",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "14-object-permanence",
+      "num": "14 — Mug",
+      "word": "Object Permanence",
+      "kind": "mug",
+      "printifyProductId": "6a8882ebf1701b85f7048b5e",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "17-decision-paralysis",
+      "num": "17 — Wall print",
+      "word": "Decision Paralysis",
+      "kind": "print",
+      "printifyProductId": "6a8882eff1701b85f7048b60",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "19-demand-avoidant",
+      "num": "19 — Sticker",
+      "word": "Demand Avoidant",
+      "kind": "sticker",
+      "printifyProductId": "6a8882f2d946a7ea390d04a1",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "20-snacks-and-spite",
+      "num": "20 — Mug",
+      "word": "Snacks and Spite",
+      "kind": "mug",
+      "printifyProductId": "6a8882f445248cbd850c5241",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "21-autistic-joy",
+      "num": "21 — Wall print",
+      "word": "Autistic Joy",
+      "kind": "print",
+      "printifyProductId": "6a8882f8d946a7ea390d04a4",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "22-interoception",
+      "num": "22 — Mug",
+      "word": "Interoception",
+      "kind": "mug",
+      "printifyProductId": "6a8882fba5a5c668e9047d2a",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "23-do-not-perceive-me",
+      "num": "23 — Sticker",
+      "word": "Do Not Perceive Me",
+      "kind": "sticker",
+      "printifyProductId": "6a8882fe45248cbd850c5245",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "26-justice-sensitive",
+      "num": "26 — Wall print",
+      "word": "Justice Sensitive",
+      "kind": "print",
+      "printifyProductId": "6a888302478c56b24d00607b",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "30-recharging",
+      "num": "30 — Sticker",
+      "word": "Recharging",
+      "kind": "sticker",
+      "printifyProductId": "6a888304d946a7ea390d04aa",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "32-unreasonably-delighted",
+      "num": "32 — Wall print",
+      "word": "Unreasonably Delighted",
+      "kind": "print",
+      "printifyProductId": "6a888308a5a5c668e9047d36",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "35-found-my-people",
+      "num": "35 — Wall print",
+      "word": "Found My People",
+      "kind": "print",
+      "printifyProductId": "6a88830d478c56b24d006082",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "36-comfort-rewatch",
+      "num": "36 — Mug",
+      "word": "Comfort Rewatch",
+      "kind": "mug",
+      "printifyProductId": "6a88830f45248cbd850c5250",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "37-same-meal-still-perfect",
+      "num": "37 — Sticker",
+      "word": "Same Meal, Still Perfect",
+      "kind": "sticker",
+      "printifyProductId": "6a88831245248cbd850c5254",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "40-small-things-enormous-joy",
+      "num": "40 — Wall print",
+      "word": "Small Things, Enormous Joy",
+      "kind": "print",
+      "printifyProductId": "6a888315d946a7ea390d04b0",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "41-never-too-much",
+      "num": "41 — Wall print",
+      "word": "Never Too Much",
+      "kind": "print",
+      "printifyProductId": "6a88831a9147c0725004505d",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "43-not-broken",
+      "num": "43 — Wall print",
+      "word": "Not Broken",
+      "kind": "print",
+      "printifyProductId": "6a88831ea5a5c668e9047d41",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "47-you-were-paying-attention",
+      "num": "47 — Wall print",
+      "word": "You Were Paying Attention",
+      "kind": "print",
+      "printifyProductId": "6a8883239147c07250045068",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "48-you-made-it-this-far",
+      "num": "48 — Sticker",
+      "word": "You Made It This Far",
+      "kind": "sticker",
+      "printifyProductId": "6a888326f1701b85f7048b76",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "50-the-right-amount-of-you",
+      "num": "50 — Mug",
+      "word": "The Right Amount of You",
+      "kind": "mug",
+      "printifyProductId": "6a8883289147c0725004506e",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "52-i-accommodated-you-first",
+      "num": "52 — Wall print",
+      "word": "I Accommodated You First",
+      "kind": "print",
+      "printifyProductId": "6a88832ca9520d71fa0e8a05",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "53-believe-me-the-first-time",
+      "num": "53 — Sticker",
+      "word": "Believe Me The First Time",
+      "kind": "sticker",
+      "printifyProductId": "6a88832f9147c07250045073",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "58-shared-interest-not-small-talk",
+      "num": "58 — Mug",
+      "word": "Shared Interest, Not Small Talk",
+      "kind": "mug",
+      "printifyProductId": "6a888332d946a7ea390d04c8",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "59-tell-me-before-you-change-it",
+      "num": "59 — Sticker",
+      "word": "Tell Me Before You Change It",
+      "kind": "sticker",
+      "printifyProductId": "6a888334d946a7ea390d04ca",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    },
+    {
+      "id": "60-recovery-is-part-of-the-plan",
+      "num": "60 — Wall print",
+      "word": "Recovery Is Part Of The Plan",
+      "kind": "print",
+      "printifyProductId": "6a888338478c56b24d006099",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "61-nobody-asked-how-you-were",
+      "num": "61 — Wall print",
+      "word": "Nobody Asked How You Were",
+      "kind": "print",
+      "printifyProductId": "6a88833c9147c0725004507e",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "62-twenty-minutes-counts",
+      "num": "62 — Mug",
+      "word": "Twenty Minutes Counts",
+      "kind": "mug",
+      "printifyProductId": "6a88833f478c56b24d00609f",
+      "printifyVariantId": 65217,
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "provider": "Harrier"
+    },
+    {
+      "id": "65-a-different-route",
+      "num": "65 — Wall print",
+      "word": "A Different Route",
+      "kind": "print",
+      "printifyProductId": "6a888343478c56b24d0060a5",
+      "printifyVariantId": 75271,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever"
+    },
+    {
+      "id": "66-i-see-you-too",
+      "num": "66 — Sticker",
+      "word": "I See You Too",
+      "kind": "sticker",
+      "printifyProductId": "6a888345a5a5c668e9047d65",
+      "printifyVariantId": 92315,
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "provider": "Sticky Products Europe"
+    }
+  ],
+  "errors": []
+}
