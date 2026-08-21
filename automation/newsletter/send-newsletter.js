@@ -1,8 +1,9 @@
-// Sends the monthly Lilypad newsletter via Resend.
+// Sends the monthly Frog Logic newsletter via Resend.
 // Requires (as env vars / GitHub secrets):
 //   RESEND_API_KEY       - from resend.com/api-keys
-//   FROM_EMAIL            - a verified sender, e.g. "Lilypad <hello@yourdomain.com>"
-//   SUBSCRIBERS_CSV_URL   - a published-to-web Google Sheet CSV link (one email per row)
+//   FROM_EMAIL            - a verified sender, e.g. "Sammie @ Frog Logic <hello@shop.froglogic.co.uk>"
+//   SUBSCRIBERS_CSV_URL   - a published-to-web Google Sheet CSV link (one email per row;
+//                           any column may hold the address - the first cell containing "@" is used)
 //
 // Content is read from content/newsletter.json, one folder up from this script.
 // Edit that file each month before the scheduled run (or run manually via
@@ -30,8 +31,13 @@ async function loadSubscribers(csvUrl) {
   const text = await res.text();
   const rows = text.split(/\r?\n/).map((r) => r.trim()).filter(Boolean);
   const emails = rows
-    .map((r) => r.split(",")[0].trim().replace(/^"|"$/g, ""))
-    .filter((e) => e && e.includes("@") && e.toLowerCase() !== "email");
+    .map((r) =>
+      r
+        .split(",")
+        .map((c) => c.trim().replace(/^"|"$/g, ""))
+        .find((c) => c.includes("@")) || ""
+    )
+    .filter((e) => e && e.toLowerCase() !== "email");
   return [...new Set(emails)];
 }
 
@@ -46,7 +52,7 @@ function renderHtml(content) {
       </a>
     </p>
     <p style="margin-top:32px;font-size:12px;color:#5a6b5f;">
-      You're getting this because you signed up at Lilypad. It's monthly, always optional, and easy to leave.
+      You're getting this because you signed up at Frog Logic. It's monthly, always optional, and easy to leave.
     </p>
   </div>`;
 }
