@@ -5,7 +5,7 @@ be enough to start work without opening twenty other files. Keep it current —
 when a decision changes, edit the line here rather than leaving it to be
 rediscovered.
 
-Last updated: 20 August 2026.
+Last updated: 21 August 2026.
 
 ## Where everything lives (on Sam's PC, device "jay")
 
@@ -140,6 +140,83 @@ Three sections, as of 20 Aug 2026:
 - Store name: "Frog Logic" is still in use. A friendlier rename has been
   discussed ("The Friendly Frog Co.") but not adopted.
 
+## The feelings-collection shop is LIVE (21 Aug 2026)
+
+- URL: **https://shop.froglogic.co.uk** (custom domain added 21 Aug: Porkbun CNAME `shop` → `jade-arithmetic-2d2701.netlify.app`, Let's Encrypt cert auto-renews). The netlify.app URL still works and the Stripe webhooks deliberately still point at it — don't "fix" them, both hostnames serve the same functions. `SITE_URL` env var = https://shop.froglogic.co.uk (recreated as a plain variable). GitHub repo `froglogic60/frog-logic-shop` auto-deploys to Netlify project `jade-arithmetic-2d2701` on every commit.
+- **Digital sales work end to end in LIVE mode**: Stripe Checkout (live key) → `stripe-webhook` function → Resend download email from `hello@shop.froglogic.co.uk` (subdomain verified in Sam's own Resend account — the apex domain's Resend records belong to the main store's separate setup; don't touch either).
+- Live + test webhooks both exist in Stripe ("frog-logic-shop-live" / "charismatic-brilliance"); everything is in the Frog Logic account's sandbox/test + live environments.
+- **Netlify env-var gotcha that cost an hour (twice)**: EDITS to variables flagged "Contains secret values" silently never reach the functions — the UI shows the edit saved, but the runtime keeps the old value (secret vars created once and never edited work fine). Both `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` had to be deleted and recreated as plain (non-secret) variables. Never use the secret-values flag on this project, and if a config value mysteriously doesn't take effect, delete-and-recreate the variable rather than editing it.
+- Verified with a real £4 live purchase (21 Aug, ~02:19): payment → webhook 200 → download email received. A failed webhook delivery can be replayed from Stripe → the destination → Event deliveries → Resend.
+- Debugging entry point: Netlify → Logs → Functions → `stripe-webhook` (fulfilment errors log there; "where's my download?" complaints start there).
+- Physical products deliberately refuse checkout until mapped to Printify (see README Part 3b).
+- **Netlify free-plan credits ran out 21 Aug** (the day's ~15 deploys used the
+  month's allowance). The live site, functions, checkout and emails all keep
+  running on "operational credits" — only NEW production deploys are paused,
+  so commits to GitHub won't go live until the billing cycle resets on
+  **19 September 2026** or the plan is upgraded. After the reset, push a commit (or Trigger deploy)
+  to publish anything that queued up in the meantime.
+
+## Newsletter automation is LIVE (21 Aug 2026)
+
+- Monthly send: GitHub Actions workflow `.github/workflows/send-newsletter.yml`
+  (cron, 1st of each month 09:00 UTC; manual run via Actions → "Send monthly
+  newsletter" → Run workflow). Verified with a manual run: green, "Sent 0/0".
+- Repo secrets set: `RESEND_API_KEY` (Resend key "github-newsletter", created
+  21 Aug), `FROM_EMAIL` (Sammie @ Frog Logic <hello@shop.froglogic.co.uk>),
+  `SUBSCRIBERS_CSV_URL`.
+- Subscriber list: Google Form "The Frog Logic newsletter" (Sam's Google
+  account) → linked Sheet "The Frog Logic newsletter (Responses)" → sheet tab
+  "Form Responses 1" published to web as CSV; that pub CSV link is the
+  `SUBSCRIBERS_CSV_URL` secret. Column A is a timestamp, column B the email —
+  `send-newsletter.js` picks the first cell containing "@" per row, so column
+  order doesn't matter. Form responder link:
+  https://docs.google.com/forms/d/e/1FAIpQLSeZy3f1I3JB7L2wdGxzCMl1govvS6-mVotb5_MWXgFgJL1UIQ/viewform
+- The site's newsletter section (index.html) now POSTs straight into that
+  Google Form (`entry.1412839294`, hidden-iframe target) — signups on
+  shop.froglogic.co.uk land in the Sheet with no other service involved.
+- Content per issue: since 21 Aug the issue writes itself.
+  `automation/social/generate-newsletter.js` runs inside the send workflow on
+  the 1st, before sending: it rebuilds `content/newsletter.json` from the live
+  product data in `script.js` (1 physical + 2 digital picks, rotating subject
+  lines and sign-offs, deterministic by month so re-runs are identical). To
+  hand-write an issue instead, edit `content/newsletter.json` and add
+  `"handwritten": true` — the generator then leaves it alone for that month
+  (remove the flag afterwards to resume auto-writing). The old "Lilypad"
+  template leftovers in `send-newsletter.js` were renamed to Frog Logic 21 Aug.
+
+## Social automation is LIVE — three posts a day (21 Aug 2026)
+
+- Replaced the original once-a-month `post-social.yml`/`post-social.js`
+  (both deleted from the repo 21 Aug — do not restore them, they'd
+  double-post) with `.github/workflows/daily-social.yml`: crons at 08:00,
+  12:00 and 17:00 UTC = 9am, 1pm, 6pm UK in summer. Each run designs the
+  image, writes the caption, and publishes to the Frog Logic Facebook Page
+  and linked Instagram — no human step.
+- Engine lives in `automation/social/`: `lib.js` (loads products from
+  `script.js`, builds the deterministic schedule + captions), `render2.js`
+  (renders 1080×1080 JPEGs in the house style via resvg + sharp),
+  `daily.js` (generate + post), `bank.json` (the pre-written content bank:
+  60 quotes, 40 educational micro-posts, 16 behind-the-scenes notes — all in
+  Sam's voice, feelings-only, no diagnosis labels; hashtags allowed as
+  search keywords per Sam's 21 Aug decision).
+- Weekly mix per content rules: ~5 quote, ~4 product art, ~6 showcase
+  (digital products with price + "link in bio"), ~4 educational, ~2 BTS =
+  21 posts/week, shuffled deterministically (`EPOCH` = Mon 17 Aug 2026 in
+  `lib.js`; same date+slot always yields the same post, so re-runs are safe).
+- Instagram needs a public image URL: each run commits the JPEG to
+  `automation/social/queue/` with `[skip netlify]` and posts the
+  raw.githubusercontent.com URL; queue files older than 7 days are
+  auto-deleted. To refresh content: edit `bank.json` — nothing else to touch.
+- Manual run: Actions → "Daily social posts" → Run workflow (optional slot
+  input 0/1/2). Secrets (already set): `META_ACCESS_TOKEN` — long-lived
+  "never expires" USER token from Sam's "Frog Logic" Meta app; the script
+  exchanges it for a Page token itself each run and polls the IG media
+  container until FINISHED before publishing (publishing immediately fails
+  with code 9007). `FB_PAGE_ID` = 1261260813728337, `IG_USER_ID` =
+  17841416254592463. The first-ever test run half-failed (FB posted, IG hit
+  9007 pre-fix), so the Page briefly had a duplicate post — Sam was told to
+  delete one.
+
 ## Open threads
 
 - The 30-design productisation plan for the *main* store (3 waves, ~107
@@ -152,10 +229,9 @@ Three sections, as of 20 Aug 2026:
   per-product Payment Links / Payhip / Zapier plan. Digital items are fully
   wired (email delivery via Resend); physical items deliberately refuse
   checkout until real artwork exists in Printify and the item gets
-  `printifyProductId`/`printifyVariantId` in `catalog.json`. Still to do by
-  Sam, per README Parts 1–3: create the GitHub repo + Netlify site, add the
-  Stripe/Resend env vars, register the Stripe webhook. `catalog.json` is
-  generated from `script.js` — regenerate it whenever a product or price
-  changes.
+  `printifyProductId`/`printifyVariantId` in `catalog.json` (README Parts 1–3
+  — repo, Netlify, env vars, webhook — were all completed 21 Aug; see the
+  LIVE sections above). `catalog.json` is generated from `script.js` —
+  regenerate it whenever a product or price changes.
 - Physical artwork: all 68 physical pieces are SVG mockups only — no
   print-ready files exist yet (README Part 6).
