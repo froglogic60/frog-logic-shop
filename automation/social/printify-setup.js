@@ -27,9 +27,9 @@ async function api(p, method = "GET", body) {
 }
 
 const KINDS = {
-  print:   { label: "Wall print", px: 3600, patterns: [/giclee|giclée/i, /matte.*poster/i, /premium.*poster/i, /art print/i, /poster/i], square: true, sizePref: [12, 14, 10] },
-  sticker: { label: "Sticker",    px: 1800, patterns: [/kiss-?cut sticker(?!.*sheet)/i, /kiss-?cut/i, /(?<!bumper )sticker/i], square: true, sizePref: [4, 3] },
-  mug:     { label: "Mug",        px: 1800, patterns: [/ceramic mug.*11/i, /mug.*11\s*oz/i, /ceramic mug/i, /^mug/i], square: false, sizePref: [11] },
+  print:   { label: "Wall print", px: 3600, patterns: [/giclee|giclée/i, /matte.*poster/i, /premium.*poster/i, /art print/i, /poster/i], avoid: /silk|outdoor|gloss|foam|canvas|fabric/i, square: true, sizePref: [12, 14, 10] },
+  sticker: { label: "Sticker",    px: 1800, patterns: [/kiss-?cut sticker(?!.*sheet)/i, /kiss-?cut/i, /(?<!bumper )sticker/i], avoid: /sheet|bumper|holographic/i, square: true, sizePref: [4, 3] },
+  mug:     { label: "Mug",        px: 1800, patterns: [/white ceramic mug/i, /^ceramic mug/i, /mug.*11\s*oz/i, /^mug/i], avoid: /black|colou?r|accent|two-tone|enamel|travel|espresso|latte|camp|magic|frosted/i, square: false, sizePref: [11] },
 };
 
 function kindOf(num) {
@@ -51,7 +51,7 @@ async function providerCountry(id) {
 async function pickTarget(kind, blueprints) {
   const K = KINDS[kind];
   for (const pat of K.patterns) {
-    const cands = blueprints.filter((b) => pat.test(b.title));
+    const cands = blueprints.filter((b) => pat.test(b.title) && !(K.avoid && K.avoid.test(b.title)));
     for (const bp of cands) {
       let provs;
       try { provs = await api(`/catalog/blueprints/${bp.id}/print_providers.json`); } catch { continue; }
@@ -124,6 +124,13 @@ async function pickTarget(kind, blueprints) {
       const t = targets[kind];
       const ph = t.variant.placeholders[0];
       let productId, variantId = t.variant.id;
+      // A product with this title but the wrong blueprint (e.g. the earlier
+      // black-mug / silk-poster picks) gets deleted and recreated properly.
+      if (existing[title] && existing[title].blueprint_id !== t.blueprint.id) {
+        await api(`/shops/${SHOP}/products/${existing[title].id}.json`, "DELETE");
+        console.log("deleted (wrong blueprint):", title);
+        delete existing[title];
+      }
       if (existing[title]) {
         productId = existing[title].id;
         const ev = (existing[title].variants || []).find((v) => v.is_enabled) || (existing[title].variants || [])[0];
