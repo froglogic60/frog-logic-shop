@@ -2088,9 +2088,13 @@ function wireNewsletterForm(){
   const form = document.getElementById('newsletter-form');
   const note = document.getElementById('form-note');
   if(!form) return;
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    note.textContent = "Thanks — but heads up, this form isn't connected to a real mailing list yet. See the README's newsletter section to finish that wiring.";
+  form.addEventListener('submit', () => {
+    // The form posts to the Google Form behind the subscriber list, into a
+    // hidden iframe (Google doesn't send CORS headers, so fetch() can't do it).
+    setTimeout(() => {
+      form.reset();
+      note.textContent = "You're on the list. One email a month, easy to leave. 🐸";
+    }, 400);
   });
 }
 
