@@ -1,6 +1,11 @@
 name: Printify product setup
 on:
   workflow_dispatch:
+    inputs:
+      recreate:
+        description: "Recreate all products (replace artwork)"
+        type: boolean
+        default: false
 permissions:
   contents: write
 jobs:
@@ -14,12 +19,16 @@ jobs:
       - name: Install renderer
         working-directory: automation/social
         run: npm install --no-audit --no-fund
+      - name: Install Chromium for rendering
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
       - name: Create Printify products
         working-directory: automation/social
         run: node printify-setup.js
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          RECREATE: ${{ inputs.recreate && '1' || '' }}
       - name: Commit the result file
         if: always()
         run: |
