@@ -2,12 +2,7 @@
   "name": "frog-logic-social",
   "private": true,
   "dependencies": {
-    "@fontsource/anton": "^5.3.0",
-    "@fontsource/fraunces": "^5.3.0",
-    "@fontsource/space-grotesk": "^5.3.0",
-    "@fontsource/space-mono": "^5.3.0",
-    "@resvg/resvg-js": "^2.6.2",
-    "sharp": "^0.35.3",
-    "wawoff2": "^2.0.1"
+    "playwright": "^1.49.0",
+    "sharp": "^0.35.3"
   }
 }
