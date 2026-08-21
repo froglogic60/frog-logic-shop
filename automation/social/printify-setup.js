@@ -83,6 +83,37 @@ async function pickTarget(kind, blueprints) {
   return null;
 }
 
+// Prints need care: many poster blueprints are portrait-only, glossy, or
+// framed (base cost above the £12 price). Score every square option in
+// GB/EU and pick the best unframed, matte-leaning one near 12".
+async function pickPrintTarget(blueprints) {
+  const opts = [];
+  const cands = blueprints.filter((b) => /poster|art print|giclee|giclée/i.test(b.title) && !/canvas|foam|fabric|outdoor|silk|framed|hanger/i.test(b.title));
+  for (const bp of cands) {
+    let provs; try { provs = await api(`/catalog/blueprints/${bp.id}/print_providers.json`); } catch { continue; }
+    for (const pr of provs) {
+      const c = await providerCountry(pr.id);
+      if (c !== "GB" && !EU.includes(c)) continue;
+      let vres; try { vres = await api(`/catalog/blueprints/${bp.id}/print_providers/${pr.id}/variants.json`); } catch { continue; }
+      for (const v of vres.variants || []) {
+        const d = dims(v.title);
+        if (!d || Math.abs(d[0] - d[1]) > 0.01) continue;
+        if (!v.placeholders || !v.placeholders.length) continue;
+        let score = 0;
+        if (c === "GB") score += 100;
+        if (/matte/i.test(bp.title + " " + v.title)) score += 80;
+        if (/gloss/i.test(bp.title + " " + v.title)) score -= 40;
+        score -= Math.abs(d[0] - 12) * 5;
+        opts.push({ blueprint: bp, provider: pr, variant: v, country: c, score, label: `${bp.title} | ${pr.title} (${c}) | ${v.title}` });
+      }
+    }
+  }
+  opts.sort((a, b) => b.score - a.score);
+  console.log("square print options (top 8):");
+  opts.slice(0, 8).forEach((o) => console.log("  ", o.score, o.label));
+  return opts[0] || null;
+}
+
 (async () => {
   if (!SHOP) {
     const shops = await api("/shops.json");
@@ -99,7 +130,7 @@ async function pickTarget(kind, blueprints) {
   const blueprints = await api("/catalog/blueprints.json");
   const targets = {};
   for (const kind of Object.keys(KINDS)) {
-    targets[kind] = await pickTarget(kind, blueprints);
+    targets[kind] = kind === "print" ? await pickPrintTarget(blueprints) : await pickTarget(kind, blueprints);
     if (!targets[kind]) { console.error("NO TARGET for", kind); process.exit(1); }
     const t = targets[kind];
     console.log(kind, "->", t.blueprint.title, "| provider:", t.provider.title, "(" + t.country + ") | variant:", t.variant.title);
