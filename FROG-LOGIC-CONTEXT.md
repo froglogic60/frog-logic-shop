@@ -217,6 +217,32 @@ Three sections, as of 20 Aug 2026:
   9007 pre-fix), so the Page briefly had a duplicate post — Sam was told to
   delete one.
 
+## Printify wave 1 is mapped — physical sales staged for 19 Sept (21 Aug 2026)
+
+- 35 physical products now exist in Sam's Printify shop (id 28035653) with
+  print-ready files: 16 wall prints (Fine Art Posters, Print Clever GB,
+  16″×16″ matte), 8 mugs (Ceramic Mug (EU), OPT OnDemand CZ, 11oz white),
+  11 stickers (Vinyl Kiss-Cut, Sticky Products Europe NL, 4″×4″ matte).
+  All created by `automation/social/printify-setup.js` via the "Printify
+  product setup" workflow (workflow_dispatch; renders the site SVGs at 300 DPI
+  in CI, uploads, creates products; idempotent — re-runs skip existing and
+  delete/recreate any whose blueprint no longer matches the script's pick).
+  IDs live in `automation/social/printify-result.json`.
+- `netlify/functions/catalog.json` now carries `printifyProductId`/
+  `printifyVariantId` for those 35 — checkout for them switches on
+  automatically when Netlify deploys resume **19 Sept** (or the plan is
+  upgraded), because the catalog ships inside the functions bundle.
+- Still needed from Sam before physical fulfilment works end-to-end: add
+  `PRINTIFY_API_KEY` and `PRINTIFY_SHOP_ID` (= 28035653) as **plain** Netlify
+  environment variables (never the "secret values" flag — see the env-var
+  gotcha above). Repo secret `PRINTIFY_API_KEY` is already set for the
+  workflow.
+- Not yet mapped (wave 2, artwork decisions pending): 11 tees, 7 totes,
+  3 hoodies (Sam chose full colour-block panel printing 21 Aug), 5 notebooks,
+  7 pins. Extend `KINDS`/`kindOf` in printify-setup.js and re-run.
+- Worth a look before launch: open a couple of mugs in Printify to check how
+  the centred square panel sits on the wrap.
+
 ## Open threads
 
 - The 30-design productisation plan for the *main* store (3 waves, ~107
