@@ -3,7 +3,7 @@
 // note (educational / behind-the-scenes card).
 const fs = require("fs");
 const path = require("path");
-const { Resvg } = require("@resvg/resvg-js");
+
 const sharp = require("sharp");
 
 const SIZE = 1080;
@@ -31,7 +31,7 @@ function wrap(text, maxChars) {
   return lines;
 }
 
-function makeRenderer({ fontFiles, logoFile }) {
+function makeRenderer({ logoFile }) {
   const logoData = "data:image/png;base64," + fs.readFileSync(logoFile).toString("base64");
 
   const grain = (id, opacity, fill) => `<defs><pattern id="${id}" width="22" height="22" patternUnits="userSpaceOnUse">
@@ -105,14 +105,20 @@ function makeRenderer({ fontFiles, logoFile }) {
 </svg>`;
   }
 
+  // Renders in headless Chromium with the site's exact fonts (see gfonts.js)
+  // — the old resvg path lacked several font families the product artwork
+  // uses, so embedded designs came out with wrong, overflowing type.
+  let browserRenderer = null;
   async function renderToJpeg(svg, outPath) {
-    const resvg = new Resvg(svg, {
-      fitTo: { mode: "width", value: SIZE },
-      font: { fontFiles, loadSystemFonts: false, defaultFontFamily: "Fraunces" },
-    });
-    const png = resvg.render().asPng();
+    if (!browserRenderer) {
+      const { makeBrowserRenderer } = require("./gfonts.js");
+      browserRenderer = await makeBrowserRenderer(path.join(__dirname, ".gfonts"));
+    }
+    const png = await browserRenderer.renderPng(svg, "#ffffff", SIZE);
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     await sharp(png).flatten({ background: "#ffffff" }).jpeg({ quality: 88 }).toFile(outPath);
+    await browserRenderer.close();
+    browserRenderer = null;
     return outPath;
   }
 
