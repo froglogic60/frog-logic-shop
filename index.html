@@ -113,13 +113,15 @@
   <section class="newsletter" id="newsletter">
     <div class="wrap newsletter-inner">
       <h2>Once a month. Never more.</h2>
-      <p>New pieces, restocks, the occasional frog. No spam — we know what it costs to open an inbox.</p>
-      <form class="newsletter-form" id="newsletter-form" method="get" action="#" novalidate>
+      <p>New pieces, restocks, the occasional frog. No spam — I know what it costs to open an inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" method="POST" target="newsletter-sink"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeZy3f1I3JB7L2wdGxzCMl1govvS6-mVotb5_MWXgFgJL1UIQ/formResponse">
         <label class="sr-only" for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <input type="email" id="email" name="entry.1412839294" placeholder="you@example.com" required autocomplete="email">
         <button class="btn btn-primary" type="submit">Sign up</button>
       </form>
-      <p class="form-note" id="form-note">This form isn't wired to a mailing list yet — see the README's newsletter section for the last step.</p>
+      <iframe name="newsletter-sink" title="hidden" style="display:none" aria-hidden="true"></iframe>
+      <p class="form-note" id="form-note"></p>
     </div>
   </section>
 
