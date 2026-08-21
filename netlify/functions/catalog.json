@@ -2,51 +2,59 @@
   {
     "id": "01-overstimulated",
     "name": "Overstimulated",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "02-hyperfocused",
     "name": "Hyperfocused",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "03-shutdown-mode",
     "name": "Shutdown Mode",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "04-47-things-at-once",
     "name": "47 Things at Once",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b5997c6cfe5e306804e",
+    "printifyVariantId": 62327
   },
   {
     "id": "05-info-dump-incoming",
     "name": "Info Dump Incoming",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888def97c6cfe5e30682fa",
+    "printifyVariantId": 75303
   },
   {
     "id": "06-infinity",
     "name": "Infinity",
     "price": 6.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8882dba9520d71fa0e89ad",
+    "printifyVariantId": 92315
   },
   {
     "id": "07-touched-out",
     "name": "Touched Out",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8882dda9520d71fa0e89ae",
+    "printifyVariantId": 92315
   },
   {
     "id": "08-low-spoons-today",
@@ -58,28 +66,32 @@
   {
     "id": "09-special-interest",
     "name": "Special Interest",
-    "price": 32.0,
+    "price": 32,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "10-executive-dysfunction",
     "name": "Executive Dysfunction",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888df3a9520d71fa0e94ee",
+    "printifyVariantId": 75303
   },
   {
     "id": "11-waiting-mode",
     "name": "Waiting Mode",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888df69147c07250045bab",
+    "printifyVariantId": 75303
   },
   {
     "id": "12-time-blind",
     "name": "Time Blind",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
@@ -88,19 +100,23 @@
     "name": "Rejection Sensitive",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8882e9a9520d71fa0e89dd",
+    "printifyVariantId": 92315
   },
   {
     "id": "14-object-permanence",
     "name": "Object Permanence",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b657ad3f442910bd1db",
+    "printifyVariantId": 62327
   },
   {
     "id": "15-auditory-processing",
     "name": "Auditory Processing",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
@@ -114,14 +130,16 @@
   {
     "id": "17-decision-paralysis",
     "name": "Decision Paralysis",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888df9a9520d71fa0e94f5",
+    "printifyVariantId": 75303
   },
   {
     "id": "18-parallel-play",
     "name": "Parallel Play",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
@@ -130,61 +148,73 @@
     "name": "Demand Avoidant",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8882f2d946a7ea390d04a1",
+    "printifyVariantId": 92315
   },
   {
     "id": "20-snacks-and-spite",
     "name": "Snacks and Spite",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b6b45248cbd850c5a83",
+    "printifyVariantId": 62327
   },
   {
     "id": "21-autistic-joy",
     "name": "Autistic Joy",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888dfc9147c07250045bad",
+    "printifyVariantId": 75303
   },
   {
     "id": "22-interoception",
     "name": "Interoception",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b7097c6cfe5e306806c",
+    "printifyVariantId": 62327
   },
   {
     "id": "23-do-not-perceive-me",
     "name": "Do Not Perceive Me",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8882fe45248cbd850c5245",
+    "printifyVariantId": 92315
   },
   {
     "id": "24-late-diagnosed",
     "name": "Late Diagnosed",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "25-monotropic",
     "name": "Monotropic",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "26-justice-sensitive",
     "name": "Justice Sensitive",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888dff97c6cfe5e3068308",
+    "printifyVariantId": 75303
   },
   {
     "id": "27-regulation-loading",
     "name": "Regulation: Loading",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
     "currency": "gbp"
   },
@@ -198,7 +228,7 @@
   {
     "id": "29-no-idea-what-my-face-is-doing",
     "name": "No Idea What My Face Is Doing",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
@@ -207,26 +237,30 @@
     "name": "Recharging",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888304d946a7ea390d04aa",
+    "printifyVariantId": 92315
   },
   {
     "id": "31-ask-me-about-it",
     "name": "Ask Me About It",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "32-unreasonably-delighted",
     "name": "Unreasonably Delighted",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e0552359c3e7706e16d",
+    "printifyVariantId": 75303
   },
   {
     "id": "33-i-notice-everything",
     "name": "I Notice Everything",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
@@ -240,100 +274,116 @@
   {
     "id": "35-found-my-people",
     "name": "Found My People",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e0852359c3e7706e172",
+    "printifyVariantId": 75303
   },
   {
     "id": "36-comfort-rewatch",
     "name": "Comfort Rewatch",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b7b7ad3f442910bd222",
+    "printifyVariantId": 62327
   },
   {
     "id": "37-same-meal-still-perfect",
     "name": "Same Meal, Still Perfect",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a88831245248cbd850c5254",
+    "printifyVariantId": 92315
   },
   {
     "id": "38-pattern-recognition",
     "name": "Pattern Recognition",
-    "price": 32.0,
+    "price": 32,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "39-enthusiasm-unmasked",
     "name": "Enthusiasm, Unmasked",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "40-small-things-enormous-joy",
     "name": "Small Things, Enormous Joy",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e0ba9520d71fa0e950d",
+    "printifyVariantId": 75303
   },
   {
     "id": "41-never-too-much",
     "name": "Never Too Much",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e0e7ad3f442910bd4a4",
+    "printifyVariantId": 75303
   },
   {
     "id": "42-nothing-needs-fixing",
     "name": "Nothing Needs Fixing",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "43-not-broken",
     "name": "Not Broken",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e1197c6cfe5e3068317",
+    "printifyVariantId": 75303
   },
   {
     "id": "44-functioning-as-designed",
     "name": "Functioning As Designed",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "45-enough",
     "name": "Enough",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "46-it-was-precision",
     "name": "It Was Precision",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "47-you-were-paying-attention",
     "name": "You Were Paying Attention",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e1552359c3e7706e17c",
+    "printifyVariantId": 75303
   },
   {
     "id": "48-you-made-it-this-far",
     "name": "You Made It This Far",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888326f1701b85f7048b76",
+    "printifyVariantId": 92315
   },
   {
     "id": "49-loved-as-standard",
@@ -345,35 +395,41 @@
   {
     "id": "50-the-right-amount-of-you",
     "name": "The Right Amount of You",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b8997c6cfe5e30680c4",
+    "printifyVariantId": 62327
   },
   {
     "id": "51-in-writing-please",
     "name": "In Writing, Please",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "52-i-accommodated-you-first",
     "name": "I Accommodated You First",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e18f1701b85f704964a",
+    "printifyVariantId": 75303
   },
   {
     "id": "53-believe-me-the-first-time",
     "name": "Believe Me The First Time",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a88832f9147c07250045073",
+    "printifyVariantId": 92315
   },
   {
     "id": "54-asking-is-not-failing",
     "name": "Asking Is Not Failing",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
     "currency": "gbp"
   },
@@ -387,84 +443,98 @@
   {
     "id": "56-yes-i-want-friends",
     "name": "Yes, I Want Friends",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "57-trust-me-with-it",
     "name": "Trust Me With It",
-    "price": 32.0,
+    "price": 32,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "58-shared-interest-not-small-talk",
     "name": "Shared Interest, Not Small Talk",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b8fa5a5c668e90485dd",
+    "printifyVariantId": 62327
   },
   {
     "id": "59-tell-me-before-you-change-it",
     "name": "Tell Me Before You Change It",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888334d946a7ea390d04ca",
+    "printifyVariantId": 92315
   },
   {
     "id": "60-recovery-is-part-of-the-plan",
     "name": "Recovery Is Part Of The Plan",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e1b9147c07250045bd7",
+    "printifyVariantId": 75303
   },
   {
     "id": "61-nobody-asked-how-you-were",
     "name": "Nobody Asked How You Were",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e1e7ad3f442910bd4b7",
+    "printifyVariantId": 75303
   },
   {
     "id": "62-twenty-minutes-counts",
     "name": "Twenty Minutes Counts",
-    "price": 14.0,
+    "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888b9845248cbd850c5af8",
+    "printifyVariantId": 62327
   },
   {
     "id": "63-guilt-is-not-evidence",
     "name": "Guilt Is Not Evidence",
-    "price": 19.0,
+    "price": 19,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "64-i-learned-their-language",
     "name": "I Learned Their Language",
-    "price": 16.0,
+    "price": 16,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "65-a-different-route",
     "name": "A Different Route",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888e217ad3f442910bd4b8",
+    "printifyVariantId": 75303
   },
   {
     "id": "66-i-see-you-too",
     "name": "I See You Too",
     "price": 3.5,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a888345a5a5c668e9047d65",
+    "printifyVariantId": 92315
   },
   {
     "id": "67-you-re-allowed-to-find-it-hard",
     "name": "You're Allowed To Find It Hard",
-    "price": 12.0,
+    "price": 12,
     "type": "physical",
     "currency": "gbp"
   },
@@ -486,7 +556,7 @@
   {
     "id": "d1-low-spoons-day-planner",
     "name": "Low Spoons Day Planner",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Low-Spoons-Day-Planner.pdf"
@@ -494,14 +564,14 @@
   {
     "id": "d2-my-pond-plan",
     "name": "My Pond Plan",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "My-Pond-Plan.pdf"
   },
   {
     "id": "d3-say-it-communication-scripts",
-    "name": "Say It \u2014 Communication Scripts",
+    "name": "Say It — Communication Scripts",
     "price": 4.5,
     "type": "digital",
     "currency": "gbp",
@@ -526,7 +596,7 @@
   {
     "id": "d6-my-sensory-profile",
     "name": "My Sensory Profile",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "My-Sensory-Profile.pdf"
@@ -534,7 +604,7 @@
   {
     "id": "d7-appointment-prep",
     "name": "Appointment Prep",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Appointment-Prep.pdf"
@@ -542,7 +612,7 @@
   {
     "id": "d8-permission-cards",
     "name": "Permission Cards",
-    "price": 3.0,
+    "price": 3,
     "type": "digital",
     "currency": "gbp",
     "file": "Permission-Cards.pdf"
@@ -558,7 +628,7 @@
   {
     "id": "d10-one-task-broken-down",
     "name": "One Task, Broken Down",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "One-Task-Broken-Down.pdf"
@@ -566,7 +636,7 @@
   {
     "id": "d11-safe-foods-planner",
     "name": "Safe Foods Planner",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Safe-Foods-Planner.pdf"
@@ -582,7 +652,7 @@
   {
     "id": "d13-what-i-m-actually-good-at",
     "name": "What I'm Actually Good At",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "What-Im-Actually-Good-At.pdf"
@@ -590,7 +660,7 @@
   {
     "id": "d14-good-day-blueprint",
     "name": "Good Day Blueprint",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Good-Day-Blueprint.pdf"
@@ -614,7 +684,7 @@
   {
     "id": "d17-finding-my-people",
     "name": "Finding My People",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Finding-My-People.pdf"
@@ -630,7 +700,7 @@
   {
     "id": "d20-your-sheet-for-once",
     "name": "Your Sheet, For Once",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Your-Sheet-For-Once.pdf"
@@ -638,7 +708,7 @@
   {
     "id": "d21-how-to-help-me",
     "name": "How To Help Me",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "How-To-Help-Me.pdf"
@@ -654,7 +724,7 @@
   {
     "id": "d23-lily-pad-planner",
     "name": "Lily Pad Planner",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Lily-Pad-Planner.pdf"
@@ -669,7 +739,7 @@
   },
   {
     "id": "d25-hoppy-thoughts-issue-01",
-    "name": "Hoppy Thoughts \u2014 Issue 01",
+    "name": "Hoppy Thoughts — Issue 01",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -677,7 +747,7 @@
   },
   {
     "id": "d26-hoppy-thoughts-issue-02",
-    "name": "Hoppy Thoughts \u2014 Issue 02",
+    "name": "Hoppy Thoughts — Issue 02",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -686,7 +756,7 @@
   {
     "id": "d27-30-days-at-the-pond",
     "name": "30 Days at the Pond",
-    "price": 4.0,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "30-Days-at-the-Pond.pdf"
@@ -694,7 +764,7 @@
   {
     "id": "d28-affirmation-cards",
     "name": "Affirmation Cards",
-    "price": 3.0,
+    "price": 3,
     "type": "digital",
     "currency": "gbp",
     "file": "Affirmation-Cards.pdf"
@@ -702,7 +772,7 @@
   {
     "id": "d29-habit-stacking-cards",
     "name": "Habit Stacking Cards",
-    "price": 3.0,
+    "price": 3,
     "type": "digital",
     "currency": "gbp",
     "file": "Habit-Stacking-Cards.pdf"
@@ -710,14 +780,14 @@
   {
     "id": "d30-translation-cards",
     "name": "Translation Cards",
-    "price": 3.0,
+    "price": 3,
     "type": "digital",
     "currency": "gbp",
     "file": "Translation-Cards.pdf"
   },
   {
     "id": "guide-pond-guide-autism",
-    "name": "Pond Guide \u2014 Autism",
+    "name": "Pond Guide — Autism",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -725,7 +795,7 @@
   },
   {
     "id": "guide-pond-guide-adhd",
-    "name": "Pond Guide \u2014 ADHD",
+    "name": "Pond Guide — ADHD",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -733,7 +803,7 @@
   },
   {
     "id": "guide-pond-guide-audhd",
-    "name": "Pond Guide \u2014 AuDHD",
+    "name": "Pond Guide — AuDHD",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -741,7 +811,7 @@
   },
   {
     "id": "guide-pond-guide-dyslexia",
-    "name": "Pond Guide \u2014 Dyslexia",
+    "name": "Pond Guide — Dyslexia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -749,7 +819,7 @@
   },
   {
     "id": "guide-pond-guide-dyspraxia",
-    "name": "Pond Guide \u2014 Dyspraxia",
+    "name": "Pond Guide — Dyspraxia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -757,7 +827,7 @@
   },
   {
     "id": "guide-pond-guide-dyscalculia",
-    "name": "Pond Guide \u2014 Dyscalculia",
+    "name": "Pond Guide — Dyscalculia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -765,7 +835,7 @@
   },
   {
     "id": "guide-pond-guide-dysgraphia",
-    "name": "Pond Guide \u2014 Dysgraphia",
+    "name": "Pond Guide — Dysgraphia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -773,7 +843,7 @@
   },
   {
     "id": "guide-pond-guide-tourette-s-tics",
-    "name": "Pond Guide \u2014 Tourette's & Tics",
+    "name": "Pond Guide — Tourette's & Tics",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -781,7 +851,7 @@
   },
   {
     "id": "guide-pond-guide-ocd",
-    "name": "Pond Guide \u2014 OCD",
+    "name": "Pond Guide — OCD",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -789,7 +859,7 @@
   },
   {
     "id": "guide-pond-guide-pda",
-    "name": "Pond Guide \u2014 PDA",
+    "name": "Pond Guide — PDA",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -797,7 +867,7 @@
   },
   {
     "id": "guide-pond-guide-sensory-differences",
-    "name": "Pond Guide \u2014 Sensory Differences",
+    "name": "Pond Guide — Sensory Differences",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -805,7 +875,7 @@
   },
   {
     "id": "guide-pond-guide-bipolar",
-    "name": "Pond Guide \u2014 Bipolar",
+    "name": "Pond Guide — Bipolar",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -813,7 +883,7 @@
   },
   {
     "id": "guide-pond-guide-cptsd",
-    "name": "Pond Guide \u2014 CPTSD",
+    "name": "Pond Guide — CPTSD",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -821,7 +891,7 @@
   },
   {
     "id": "guide-pond-guide-bpd-eupd",
-    "name": "Pond Guide \u2014 BPD / EUPD",
+    "name": "Pond Guide — BPD / EUPD",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -829,7 +899,7 @@
   },
   {
     "id": "guide-pond-guide-anxiety",
-    "name": "Pond Guide \u2014 Anxiety",
+    "name": "Pond Guide — Anxiety",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -837,7 +907,7 @@
   },
   {
     "id": "guide-pond-guide-depression",
-    "name": "Pond Guide \u2014 Depression",
+    "name": "Pond Guide — Depression",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -845,7 +915,7 @@
   },
   {
     "id": "guide-pond-guide-misophonia",
-    "name": "Pond Guide \u2014 Misophonia",
+    "name": "Pond Guide — Misophonia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -853,7 +923,7 @@
   },
   {
     "id": "guide-pond-guide-aphantasia",
-    "name": "Pond Guide \u2014 Aphantasia",
+    "name": "Pond Guide — Aphantasia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -861,7 +931,7 @@
   },
   {
     "id": "guide-pond-guide-synaesthesia",
-    "name": "Pond Guide \u2014 Synaesthesia",
+    "name": "Pond Guide — Synaesthesia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -869,7 +939,7 @@
   },
   {
     "id": "guide-pond-guide-alexithymia",
-    "name": "Pond Guide \u2014 Alexithymia",
+    "name": "Pond Guide — Alexithymia",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -877,7 +947,7 @@
   },
   {
     "id": "guide-pond-guide-face-blindness",
-    "name": "Pond Guide \u2014 Face Blindness",
+    "name": "Pond Guide — Face Blindness",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -885,7 +955,7 @@
   },
   {
     "id": "guide-pond-guide-situational-mutism",
-    "name": "Pond Guide \u2014 Situational Mutism",
+    "name": "Pond Guide — Situational Mutism",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
@@ -893,7 +963,7 @@
   },
   {
     "id": "guide-pond-guide-auditory-processing",
-    "name": "Pond Guide \u2014 Auditory Processing",
+    "name": "Pond Guide — Auditory Processing",
     "price": 3.5,
     "type": "digital",
     "currency": "gbp",
