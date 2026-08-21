@@ -1,0 +1,31 @@
+name: Printify product setup
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Create Printify products
+        working-directory: automation/social
+        run: node printify-setup.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Commit the result file
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-result.json
+          git commit -m "Printify setup result [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
