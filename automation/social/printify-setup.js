@@ -11,8 +11,8 @@ const { loadSiteData, prepareFonts } = require("./lib.js");
 const { Resvg } = require("@resvg/resvg-js");
 
 const KEY = process.env.PRINTIFY_API_KEY;
-const SHOP = process.env.PRINTIFY_SHOP_ID;
-if (!KEY || !SHOP) { console.error("Missing PRINTIFY_API_KEY / PRINTIFY_SHOP_ID"); process.exit(1); }
+let SHOP = process.env.PRINTIFY_SHOP_ID; // optional — auto-detected when absent
+if (!KEY) { console.error("Missing PRINTIFY_API_KEY"); process.exit(1); }
 
 const EU = ["LV","CZ","DE","NL","PL","ES","IT","FR","IE","SE","AT","BE","PT","DK","FI","EE","LT","SK","SI","HR","RO","BG","HU","LU","GR","MT","CY"];
 
@@ -84,6 +84,12 @@ async function pickTarget(kind, blueprints) {
 }
 
 (async () => {
+  if (!SHOP) {
+    const shops = await api("/shops.json");
+    if (!shops.length) { console.error("No shops on this Printify account"); process.exit(1); }
+    SHOP = shops[0].id;
+    console.log("auto-detected shop:", shops[0].title, "(id " + SHOP + ")");
+  }
   const fontFiles = await prepareFonts(path.join(__dirname, ".fonts"));
   const logoURI = "data:image/png;base64," + fs.readFileSync(path.join(__dirname, "../../assets/frog-logic-mark-sm.png")).toString("base64");
   const { PRODUCTS } = loadSiteData();
