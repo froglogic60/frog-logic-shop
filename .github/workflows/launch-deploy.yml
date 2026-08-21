@@ -1,0 +1,26 @@
+name: Launch deploy (20 Sept)
+# One-shot: after Netlify's credits reset on 19 Sept 2026, this makes a
+# normal commit (no [skip netlify]) so Netlify rebuilds and the physical
+# products go live — no human needed. Guarded to 2026 so it never re-fires
+# in later years. Can also be run manually from the Actions tab.
+on:
+  schedule:
+    - cron: "0 9 20 9 *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  nudge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Commit a launch note to trigger the Netlify build
+        run: |
+          if [ "$(date -u +%Y)" != "2026" ]; then echo "Not 2026 - skipping"; exit 0; fi
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "Launch deploy triggered $(date -u): physical products published." >> LAUNCH-LOG.md
+          git add LAUNCH-LOG.md
+          git commit -m "Launch: publish physical products"
+          git pull --rebase origin main
+          git push
