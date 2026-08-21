@@ -42,10 +42,16 @@ function main() {
   const dig1 = site.DIGITAL_PRODUCTS[(m * 5) % site.DIGITAL_PRODUCTS.length];
   const dig2 = site.DIGITAL_PRODUCTS[(m * 5 + 11) % site.DIGITAL_PRODUCTS.length];
 
+  // Explain, don't just name: say what the featured piece physically is,
+  // frame its caption as the words on the design, and use each tool's real
+  // description from the site — a name and a price sell nothing on their own.
+  const kind = (phys.num.split("—")[1] || "piece").trim().toLowerCase();
+  const art = /^[aeiou]/.test(kind) ? "an" : "a";
   const body = [
-    `<p>Hello. One short note, as promised — never more than this.</p>`,
-    `<p><strong>From the collection:</strong> <em>${esc(phys.word)}</em>. ${esc(phys.line)}</p>`,
-    `<p><strong>Two of the calm tools:</strong> <em>${esc(dig1.word)}</em> (${esc(dig1.price)}) and <em>${esc(dig2.word)}</em> (${esc(dig2.price)}) — both instant downloads, both designed to be legible on a hard day.</p>`,
+    `<p>Hello. One short note, as promised — never more than this: one piece from the feelings collection, two printable tools, done.</p>`,
+    `<p><strong>From the collection:</strong> <em>${esc(phys.word)}</em> — ${art} ${esc(kind)}, ${esc(phys.price)}. The design reads: “${esc(phys.line)}”</p>`,
+    `<p><strong>A tool to download:</strong> <em>${esc(dig1.word)}</em> (${esc(dig1.price)}) — ${esc(dig1.line)}</p>`,
+    `<p><strong>And one more:</strong> <em>${esc(dig2.word)}</em> (${esc(dig2.price)}) — ${esc(dig2.line)} Both are printable PDFs, in your inbox the moment you buy.</p>`,
     `<p>${SIGNOFFS[m % SIGNOFFS.length]}</p>`,
   ].join("");
 
