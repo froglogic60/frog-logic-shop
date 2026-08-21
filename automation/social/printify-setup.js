@@ -7,8 +7,8 @@
 // already exist (matched by title) are skipped but still reported.
 const fs = require("fs");
 const path = require("path");
-const { loadSiteData, prepareFonts } = require("./lib.js");
-const { Resvg } = require("@resvg/resvg-js");
+const { loadSiteData } = require("./lib.js");
+const { makeBrowserRenderer } = require("./gfonts.js");
 
 const KEY = process.env.PRINTIFY_API_KEY;
 let SHOP = process.env.PRINTIFY_SHOP_ID; // optional — auto-detected when absent
@@ -95,106 +95,3 @@ async function pickPrintTarget(blueprints) {
       const c = await providerCountry(pr.id);
       if (c !== "GB" && !EU.includes(c)) continue;
       let vres; try { vres = await api(`/catalog/blueprints/${bp.id}/print_providers/${pr.id}/variants.json`); } catch { continue; }
-      for (const v of vres.variants || []) {
-        const d = dims(v.title);
-        if (!d || Math.abs(d[0] - d[1]) > 0.01) continue;
-        if (!v.placeholders || !v.placeholders.length) continue;
-        let score = 0;
-        if (c === "GB") score += 100;
-        if (/matte/i.test(bp.title + " " + v.title)) score += 80;
-        if (/gloss/i.test(bp.title + " " + v.title)) score -= 40;
-        score -= Math.abs(d[0] - 12) * 5;
-        opts.push({ blueprint: bp, provider: pr, variant: v, country: c, score, label: `${bp.title} | ${pr.title} (${c}) | ${v.title}` });
-      }
-    }
-  }
-  opts.sort((a, b) => b.score - a.score);
-  console.log("square print options (top 8):");
-  opts.slice(0, 8).forEach((o) => console.log("  ", o.score, o.label));
-  return opts[0] || null;
-}
-
-(async () => {
-  if (!SHOP) {
-    const shops = await api("/shops.json");
-    if (!shops.length) { console.error("No shops on this Printify account"); process.exit(1); }
-    SHOP = shops[0].id;
-    console.log("auto-detected shop:", shops[0].title, "(id " + SHOP + ")");
-  }
-  const fontFiles = await prepareFonts(path.join(__dirname, ".fonts"));
-  const logoURI = "data:image/png;base64," + fs.readFileSync(path.join(__dirname, "../../assets/frog-logic-mark-sm.png")).toString("base64");
-  const { PRODUCTS } = loadSiteData();
-  const wave = PRODUCTS.filter((p) => kindOf(p.num));
-  console.log("first wave:", wave.length, "items");
-
-  const blueprints = await api("/catalog/blueprints.json");
-  const targets = {};
-  for (const kind of Object.keys(KINDS)) {
-    targets[kind] = kind === "print" ? await pickPrintTarget(blueprints) : await pickTarget(kind, blueprints);
-    if (!targets[kind]) { console.error("NO TARGET for", kind); process.exit(1); }
-    const t = targets[kind];
-    console.log(kind, "->", t.blueprint.title, "| provider:", t.provider.title, "(" + t.country + ") | variant:", t.variant.title);
-  }
-
-  // Existing products (idempotency)
-  const existing = {};
-  for (let page = 1; ; page++) {
-    const res = await api(`/shops/${SHOP}/products.json?limit=50&page=${page}`);
-    (res.data || []).forEach((pr) => (existing[pr.title] = pr));
-    if (!res.data || res.data.length < 50) break;
-  }
-
-  const results = [], errors = [];
-  for (const p of wave) {
-    const kind = kindOf(p.num);
-    const K = KINDS[kind];
-    const numPrefix = p.num.split("—")[0].trim();
-    const catalogId = numPrefix + "-" + slug(p.word);
-    const title = `${p.word} — Frog Logic ${K.label}`;
-    try {
-      const t = targets[kind];
-      const ph = t.variant.placeholders[0];
-      let productId, variantId = t.variant.id;
-      // A product with this title but the wrong blueprint (e.g. the earlier
-      // black-mug / silk-poster picks) gets deleted and recreated properly.
-      if (existing[title] && existing[title].blueprint_id !== t.blueprint.id) {
-        await api(`/shops/${SHOP}/products/${existing[title].id}.json`, "DELETE");
-        console.log("deleted (wrong blueprint):", title);
-        delete existing[title];
-      }
-      if (existing[title]) {
-        productId = existing[title].id;
-        const ev = (existing[title].variants || []).find((v) => v.is_enabled) || (existing[title].variants || [])[0];
-        if (ev) variantId = ev.id;
-        console.log("exists:", title);
-      } else {
-        const inner = p.svg
-          .replace(/href="assets\/frog-logic-mark-sm\.png"/g, `href="${logoURI}"`)
-          .replace(/<svg viewBox="0 0 300 300">/, "");
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${K.px}" height="${K.px}" viewBox="0 0 300 300"><rect width="300" height="300" fill="${p.bg}"/>` + inner;
-        const png = new Resvg(svg, { fitTo: { mode: "width", value: K.px }, font: { fontFiles, loadSystemFonts: false, defaultFontFamily: "Fraunces" } }).render().asPng();
-        const up = await api("/uploads/images.json", "POST", { file_name: catalogId + ".png", contents: Buffer.from(png).toString("base64") });
-        const scale = Math.min(1, ph.height / ph.width); // square image fitted inside the print area
-        const pence = Math.round(parseFloat(p.price.replace(/[^0-9.]/g, "")) * 100);
-        const created = await api(`/shops/${SHOP}/products.json`, "POST", {
-          title,
-          description: p.line + " — " + p.word + ", from the Frog Logic feelings collection.",
-          blueprint_id: t.blueprint.id,
-          print_provider_id: t.provider.id,
-          variants: [{ id: t.variant.id, price: pence, is_enabled: true }],
-          print_areas: [{ variant_ids: [t.variant.id], placeholders: [{ position: ph.position, images: [{ id: up.id, x: 0.5, y: 0.5, scale, angle: 0 }] }] }],
-        });
-        productId = created.id;
-        console.log("created:", title, "->", productId);
-      }
-      results.push({ id: catalogId, num: p.num, word: p.word, kind, printifyProductId: productId, printifyVariantId: variantId, blueprint: targets[kind].blueprint.title, provider: targets[kind].provider.title });
-    } catch (e) {
-      console.error("FAILED:", title, "-", e.message);
-      errors.push({ id: catalogId, error: e.message });
-    }
-  }
-
-  fs.writeFileSync(path.join(__dirname, "printify-result.json"), JSON.stringify({ createdAt: new Date().toISOString(), results, errors }, null, 2));
-  console.log(`done: ${results.length} ok, ${errors.length} failed`);
-  if (errors.length) process.exit(1);
-})().catch((e) => { console.error(e); process.exit(1); });
