@@ -60,7 +60,20 @@ async function postToInstagram(token, igUserId, caption, imageUrl) {
   const createBody = await createRes.json();
   if (!createRes.ok) throw new Error(`IG media container failed: ${JSON.stringify(createBody)}`);
 
-  // Step 2: publish it
+  // Step 2: wait for Instagram to finish processing the image — publishing
+  // immediately fails with "Media ID is not available" (code 9007).
+  for (let i = 0; i < 20; i++) {
+    const st = await fetch(
+      `${GRAPH}/${createBody.id}?fields=status_code&access_token=${token}`
+    ).then((r) => r.json());
+    if (st.status_code === "FINISHED") break;
+    if (st.status_code === "ERROR") {
+      throw new Error(`IG media processing failed: ${JSON.stringify(st)}`);
+    }
+    await new Promise((r) => setTimeout(r, 3000));
+  }
+
+  // Step 3: publish it
   const publishRes = await fetch(`${GRAPH}/${igUserId}/media_publish`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
