@@ -1,0 +1,53 @@
+name: Daily social posts
+on:
+  schedule:
+    - cron: "0 8 * * *"
+    - cron: "0 12 * * *"
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Which of the day's three posts (0, 1 or 2)"
+        default: ""
+permissions:
+  contents: write
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Work out which slot this run is
+        id: slot
+        run: |
+          if [ -n "${{ github.event.inputs.slot }}" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            H=$(date -u +%H)
+            if [ "$H" -lt 10 ]; then echo "slot=0" >> "$GITHUB_OUTPUT"
+            elif [ "$H" -lt 15 ]; then echo "slot=1" >> "$GITHUB_OUTPUT"
+            else echo "slot=2" >> "$GITHUB_OUTPUT"; fi
+          fi
+      - name: Install renderer
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Generate today's post
+        working-directory: automation/social
+        run: SLOT=${{ steps.slot.outputs.slot }} node daily.js generate
+      - name: Commit the image so Instagram can fetch it
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/queue
+          git commit -m "Social queue $(date -u +%F) slot ${{ steps.slot.outputs.slot }} [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
+      - name: Publish to Facebook and Instagram
+        working-directory: automation/social
+        run: SLOT=${{ steps.slot.outputs.slot }} node daily.js post
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
