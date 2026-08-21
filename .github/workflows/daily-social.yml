@@ -33,6 +33,9 @@ jobs:
       - name: Install renderer
         working-directory: automation/social
         run: npm install --no-audit --no-fund
+      - name: Install Chromium for rendering
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
       - name: Generate today's post
         working-directory: automation/social
         run: SLOT=${{ steps.slot.outputs.slot }} node daily.js generate
