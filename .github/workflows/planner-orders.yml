@@ -1,0 +1,39 @@
+name: Bespoke planner orders
+# Every 2 hours: read questionnaire responses, verify payment on Stripe,
+# build the personalised PDF, email it, record fulfilment.
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fulfil:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Process planner orders
+        run: node automation/planner/process-orders.js
+        env:
+          PLANNER_CSV_URL: ${{ secrets.PLANNER_CSV_URL }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+      - name: Record fulfilled orders
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/planner/fulfilled.json
+          git commit -m "Planner orders fulfilled [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
