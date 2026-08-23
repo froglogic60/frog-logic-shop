@@ -23,22 +23,66 @@ async function loadContent() {
   return JSON.parse(raw);
 }
 
+// Proper CSV parsing — form question text contains commas and quotes.
+function parseCsv(text) {
+  const rows = [];
+  let row = [], cur = "", inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQ) {
+      if (c === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else inQ = false; }
+      else cur += c;
+    } else if (c === '"') inQ = true;
+    else if (c === ",") { row.push(cur); cur = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(cur); cur = "";
+      if (row.some((f) => f !== "")) rows.push(row);
+      row = [];
+    } else cur += c;
+  }
+  if (cur !== "" || row.length) { row.push(cur); if (row.some((f) => f !== "")) rows.push(row); }
+  return rows;
+}
+
 async function loadSubscribers(csvUrl) {
   const res = await fetch(csvUrl);
   if (!res.ok) {
     throw new Error(`Could not fetch subscriber list: ${res.status} ${res.statusText}`);
   }
-  const text = await res.text();
-  const rows = text.split(/\r?\n/).map((r) => r.trim()).filter(Boolean);
-  const emails = rows
-    .map((r) =>
-      r
-        .split(",")
-        .map((c) => c.trim().replace(/^"|"$/g, ""))
-        .find((c) => c.includes("@")) || ""
-    )
+  const emails = parseCsv(await res.text())
+    .map((cells) => cells.map((c) => c.trim()).find((c) => c.includes("@")) || "")
     .filter((e) => e && e.toLowerCase() !== "email");
-  return [...new Set(emails)];
+  return emails;
+}
+
+// Bespoke-planner customers who ticked the newsletter opt-in on the order form.
+// Tolerant by design: no URL, no opt-in column, or an unreachable sheet just
+// means no extra names — the monthly send carries on regardless.
+async function loadPlannerOptIns(csvUrl) {
+  if (!csvUrl) return [];
+  try {
+    const res = await fetch(csvUrl);
+    if (!res.ok) { console.error(`Planner sheet unreachable (${res.status}) — skipping opt-ins.`); return []; }
+    const rows = parseCsv(await res.text());
+    if (rows.length < 2) return [];
+    const header = rows[0];
+    const emailIdx = header.findIndex((h) => /send it|email/i.test(h));
+    const optIdx = header.findIndex((h) => /monthly note|from the pond|newsletter/i.test(h));
+    if (emailIdx === -1 || optIdx === -1) {
+      console.log("Planner sheet has no newsletter opt-in column yet — skipping.");
+      return [];
+    }
+    const emails = rows.slice(1)
+      .filter((r) => /^\s*yes/i.test(r[optIdx] || ""))
+      .map((r) => (r[emailIdx] || "").trim())
+      .filter((e) => e.includes("@"));
+    console.log(`Planner opt-ins found: ${emails.length}`);
+    return emails;
+  } catch (err) {
+    console.error(`Planner opt-in lookup failed (${err.message}) — skipping.`);
+    return [];
+  }
 }
 
 function renderHtml(content) {
@@ -83,7 +127,19 @@ async function main() {
 
   const content = await loadContent();
   const html = renderHtml(content);
-  const subscribers = await loadSubscribers(process.env.SUBSCRIBERS_CSV_URL);
+  // Two sources, one list: the signup form, plus planner customers who opted in.
+  // Deduped case-insensitively so nobody ever gets the same issue twice.
+  const [signups, optIns] = await Promise.all([
+    loadSubscribers(process.env.SUBSCRIBERS_CSV_URL),
+    loadPlannerOptIns(process.env.PLANNER_CSV_URL),
+  ]);
+  const seen = new Set();
+  const subscribers = [...signups, ...optIns].filter((e) => {
+    const k = e.toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
 
   console.log(`Sending "${content.subject}" to ${subscribers.length} subscriber(s)...`);
 
