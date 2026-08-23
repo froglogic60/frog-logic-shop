@@ -30,3 +30,5 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
           SUBSCRIBERS_CSV_URL: ${{ secrets.SUBSCRIBERS_CSV_URL }}
+          # Planner customers who ticked the newsletter opt-in join the same send.
+          PLANNER_CSV_URL: ${{ secrets.PLANNER_CSV_URL }}
