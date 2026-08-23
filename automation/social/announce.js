@@ -1,13 +1,19 @@
-// One-off announcement post (Facebook Page + Instagram), separate from the
-// three scheduled daily posts so it can never clash with them.
+// One-off and scheduled announcement posts (Facebook Page + Instagram),
+// separate from the three scheduled daily posts so they can never clash.
 //
-// Content lives in announce.json: the card text plus the caption. The image is
-// rendered here at run time in the house style — same renderer as daily.js —
-// so nothing binary ever needs committing by hand.
+// Content lives in announce.json (one-off, run by hand) or announce-queue.json
+// (a dated queue, checked once a day). The image is rendered here at run time in
+// the house style — same renderer as daily.js — so nothing binary is ever
+// committed by hand.
 //
-//   node announce.js generate   -> writes queue/<name>.jpg
-//   node announce.js post       -> publishes it (after the workflow has
-//                                  committed the jpg, so Instagram can fetch it)
+//   node announce.js generate       -> renders queue/<name>.jpg from announce.json
+//   node announce.js post           -> publishes it (after the workflow has
+//                                      committed the jpg, so Instagram can fetch it)
+//
+//   node announce.js due-generate   -> if a queue entry is due today, renders it
+//                                      and leaves a .due marker; otherwise no-op
+//   node announce.js due-post       -> publishes what .due names, then marks the
+//                                      queue entry posted; no marker = no-op
 //
 // Secrets: META_ACCESS_TOKEN, FB_PAGE_ID, IG_USER_ID.
 const fs = require("fs");
@@ -17,9 +23,27 @@ const { makeRenderer } = require("./render2.js");
 const GRAPH = "https://graph.facebook.com/v20.0";
 const RAW_BASE = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/queue";
 const QUEUE = path.join(__dirname, "queue");
-const spec = JSON.parse(fs.readFileSync(path.join(__dirname, "announce.json"), "utf8"));
+const QUEUE_FILE = path.join(__dirname, "announce-queue.json");
+const DUE_MARKER = path.join(__dirname, ".due");
 
-async function generate() {
+function readSpec() {
+  return JSON.parse(fs.readFileSync(path.join(__dirname, "announce.json"), "utf8"));
+}
+
+function today() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+// First unposted entry whose date has arrived. Dates in the past still fire —
+// a missed run catches up rather than silently dropping the post.
+function findDue() {
+  if (!fs.existsSync(QUEUE_FILE)) return null;
+  const queue = JSON.parse(fs.readFileSync(QUEUE_FILE, "utf8"));
+  const now = today();
+  return queue.find((e) => !e.posted && e.postOn <= now) || null;
+}
+
+async function render(spec) {
   const renderer = makeRenderer({
     logoFile: path.join(__dirname, "..", "..", "assets", "frog-logic-mark-sm.png"),
   });
@@ -44,7 +68,7 @@ async function waitForUrl(url) {
   throw new Error(`Image never became reachable: ${url}`);
 }
 
-async function post() {
+async function publish(spec) {
   const imageUrl = `${RAW_BASE}/${spec.name}.jpg`;
   const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
   await waitForUrl(imageUrl);
@@ -78,6 +102,33 @@ async function post() {
   console.log("Instagram post created:", pub.id);
 }
 
+async function dueGenerate() {
+  if (fs.existsSync(DUE_MARKER)) fs.unlinkSync(DUE_MARKER);
+  const entry = findDue();
+  if (!entry) { console.log(`Nothing due on ${today()}.`); return; }
+  await render(entry);
+  fs.writeFileSync(DUE_MARKER, entry.name);
+}
+
+async function duePost() {
+  if (!fs.existsSync(DUE_MARKER)) { console.log("No post due — nothing to publish."); return; }
+  const name = fs.readFileSync(DUE_MARKER, "utf8").trim();
+  const queue = JSON.parse(fs.readFileSync(QUEUE_FILE, "utf8"));
+  const entry = queue.find((e) => e.name === name);
+  if (!entry) throw new Error(`Queue entry disappeared: ${name}`);
+  await publish(entry);
+  entry.posted = true;
+  entry.postedAt = new Date().toISOString();
+  fs.writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2) + "\n");
+  fs.unlinkSync(DUE_MARKER);
+  console.log(`Marked "${entry.title}" posted.`);
+}
+
 const mode = process.argv[2];
-(mode === "generate" ? generate() : mode === "post" ? post() : Promise.reject(new Error("usage: node announce.js generate|post")))
-  .catch((err) => { console.error(err); process.exit(1); });
+const run =
+  mode === "generate" ? render(readSpec()) :
+  mode === "post" ? publish(readSpec()) :
+  mode === "due-generate" ? dueGenerate() :
+  mode === "due-post" ? duePost() :
+  Promise.reject(new Error("usage: node announce.js generate|post|due-generate|due-post"));
+run.catch((err) => { console.error(err); process.exit(1); });
