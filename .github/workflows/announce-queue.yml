@@ -1,0 +1,67 @@
+name: Scheduled announcement queue
+# Checks automation/social/announce-queue.json once a day at 10:00 UTC (11am BST),
+# sitting between the 08/12/17 UTC daily posts. If an entry's date has arrived and
+# it hasn't gone out yet, it is rendered, committed and posted, then marked done.
+# Nothing due = the job exits in seconds without installing anything.
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Is anything due today?
+        id: check
+        run: |
+          node -e '
+            const fs = require("fs");
+            const f = "automation/social/announce-queue.json";
+            const q = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : [];
+            const now = new Date().toISOString().slice(0, 10);
+            const e = q.find((x) => !x.posted && x.postOn <= now);
+            console.log(e ? `Due: ${e.title}` : `Nothing due on ${now}.`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, `due=${e ? "yes" : "no"}\n`);
+          '
+      - name: Install renderer
+        if: steps.check.outputs.due == 'yes'
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium for rendering
+        if: steps.check.outputs.due == 'yes'
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Render the card
+        if: steps.check.outputs.due == 'yes'
+        working-directory: automation/social
+        run: node announce.js due-generate
+      - name: Commit the image
+        if: steps.check.outputs.due == 'yes'
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/queue
+          git commit -m "Queued announcement image [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
+      - name: Post to Facebook and Instagram
+        if: steps.check.outputs.due == 'yes'
+        working-directory: automation/social
+        run: node announce.js due-post
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      - name: Mark it posted
+        if: steps.check.outputs.due == 'yes'
+        run: |
+          git add automation/social/announce-queue.json
+          git commit -m "Queue entry posted [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
