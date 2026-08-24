@@ -43,6 +43,13 @@ async function sendDownloadEmail({ toEmail, item }) {
 async function createPrintifyOrder({ session, item }) {
   const shopId = process.env.PRINTIFY_SHOP_ID;
   const apiKey = process.env.PRINTIFY_API_KEY;
+  // The size the customer picked, written into the session server-side by
+  // create-checkout.js. Falling back to the catalogue default is only right for
+  // one-size items — for a garment it would be the wrong size, so say so loudly.
+  const variantId = Number(session.metadata?.variant_id) || item.printifyVariantId;
+  if (Array.isArray(item.sizes) && !session.metadata?.variant_id) {
+    console.error("Ordering", item.id, "with no size in the session metadata — check create-checkout");
+  }
   const addr = session.shipping_details?.address;
   const name = session.shipping_details?.name || session.customer_details?.name || "";
   const [first_name, ...rest] = name.split(" ");
@@ -52,9 +59,9 @@ async function createPrintifyOrder({ session, item }) {
     headers: { Authorization: `Bearer ${apiKey}`, "content-type": "application/json" },
     body: JSON.stringify({
       external_id: session.id,
-      label: item.id,
+      label: session.metadata?.size ? `${item.id} (${session.metadata.size})` : item.id,
       line_items: [
-        { product_id: item.printifyProductId, variant_id: item.printifyVariantId, quantity: 1 },
+        { product_id: item.printifyProductId, variant_id: variantId, quantity: 1 },
       ],
       shipping_method: 1,
       send_shipping_notification: true,
