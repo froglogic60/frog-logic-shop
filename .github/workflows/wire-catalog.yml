@@ -1,0 +1,53 @@
+name: Rebuild the checkout catalogue
+# Not a one-shot — run this whenever a price changes on the shop page, or after
+# a Printify wave creates new products.
+#
+# netlify/functions/catalog.json is what create-checkout.js charges from and
+# what stripe-webhook.js fulfils from. It used to be maintained by hand, which
+# is how three hoodies came to read £36.99 on the page and £32.00 at the till,
+# and seven stickers £3.50 on the page and £6.50 at the till. This regenerates
+# it from the two sources that actually know: script.js for what the customer is
+# shown, and the Printify result files for what can be fulfilled.
+#
+# The script refuses to write if the result fails its own checks, so a bad run
+# commits nothing.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Rebuild catalog.json
+        run: node automation/social/wire-catalog.js
+      - name: Check it is valid JSON and still complete
+        run: |
+          node -e '
+            const cat = require("./netlify/functions/catalog.json");
+            const physical = cat.filter((x) => x.type === "physical");
+            const sellable = physical.filter((x) => x.printifyProductId);
+            console.log(cat.length, "entries;", sellable.length, "of", physical.length, "physical are orderable");
+            if (cat.length !== 121) throw new Error("expected 121 entries");
+            for (const x of sellable) {
+              if (!x.printifyVariantId) throw new Error(x.id + ": no variant id");
+              if (x.sizes && !x.sizes.some((s) => s.variantId === x.printifyVariantId)) {
+                throw new Error(x.id + ": default variant is not one of its sizes");
+              }
+            }
+            const sized = sellable.filter((x) => x.sizes);
+            console.log(sized.length, "products carry a size list");
+          '
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add netlify/functions/catalog.json
+          git status --short
+          git commit -m "Rebuild the checkout catalogue [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
