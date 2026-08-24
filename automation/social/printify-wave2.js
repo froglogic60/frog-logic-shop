@@ -86,7 +86,10 @@ const KINDS = {
     // Gildan 18500 Heavy Blend at £28.69, not the College Hoodie at £29.24 —
     // same maker, same postage, so postage-ranking cannot tell them apart.
     // The size guide on the product pages is written to this garment.
-    pin: { blueprint: /heavy blend|18500/i },
+    // Print Clever £28.69, T Shirt and Sons £30.14, for the identical
+    // garment at identical postage — so the postage ranking below cannot tell
+    // them apart and was taking the dearer one. Measured 24 Aug 2026.
+    pin: { blueprint: /heavy blend|18500/i, provider: /print clever/i },
   },
   tote: {
     label: "Tote", px: 2400,
@@ -111,6 +114,11 @@ const KINDS = {
     sizeHint: /3.*x.*3|medium/i,
     pin: { blueprint: /kiss-?cut sticker/i, provider: /sticky products europe/i },
     pinVariantId: 92315,
+    // Held back 24 Aug 2026. Base cost £5.46 against a £3.50 price is a £1.96
+    // loss a sale before postage, and postage is £6.49 because the only maker
+    // is in the Netherlands. Delete this one line to bring them back once
+    // there is a UK maker or the basket lets one parcel carry several items.
+    hold: "base cost £5.46 vs a £3.50 price — a £1.96 loss a sale, plus £6.49 postage from NL",
   },
 };
 
@@ -264,8 +272,14 @@ async function createProduct(shop, cand, p, K, title, price, imageId) {
   }
 
   const { PRODUCTS } = loadSiteData();
-  const wave = PRODUCTS.filter((p) => kindOf(p.num) && !ALREADY.has(p.num));
+  const wave = PRODUCTS.filter((p) => {
+    const k = kindOf(p.num);
+    return k && !ALREADY.has(p.num) && !KINDS[k].hold;
+  });
   console.log(`skipping ${ALREADY.size} products wave 1 already made`);
+  Object.keys(KINDS)
+    .filter((k) => KINDS[k].hold)
+    .forEach((k) => console.log(`HELD BACK — ${k}: ${KINDS[k].hold}`));
   const counts = {};
   wave.forEach((p) => (counts[kindOf(p.num)] = (counts[kindOf(p.num)] || 0) + 1));
   console.log("wave 2:", wave.length, "items", JSON.stringify(counts));
