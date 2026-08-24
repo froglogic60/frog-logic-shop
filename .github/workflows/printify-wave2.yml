@@ -53,7 +53,11 @@ jobs:
             mv automation/social/printify-wave2-result.json \
                automation/social/printify-wave2-price-check.json || true
           fi
-          git add automation/social/printify-wave2-result.json automation/social/printify-wave2-price-check.json || true
+          # Added one at a time on purpose: `git add a b` stages nothing at all
+          # when either path is missing, and after the rename above one always is.
+          git add automation/social/printify-wave2-result.json || true
+          git add automation/social/printify-wave2-price-check.json || true
+          git status --short
           git commit -m "Printify wave 2 ${{ inputs.dry_run && 'price check' || 'result' }} [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
