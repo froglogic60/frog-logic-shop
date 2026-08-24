@@ -1,0 +1,54 @@
+name: Pin the wave-2 makers
+# One-shot. Runs automation/social/pin-wave2-makers.js, which rewrites
+# printify-wave2.js: the hoodie is pinned to the Gildan Heavy Blend (the
+# cheaper of the two), the pin kind becomes a sticker matching wave 1's
+# blueprint, maker and variant, and anything wave 1 already made is skipped.
+#
+# Done in CI rather than through the web editor because that editor virtualises
+# long files and silently duplicates them. The script asserts every replacement
+# matched exactly once and parses the result before writing, so a failed run
+# commits nothing. Safe to delete once run.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  pin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Rewrite printify-wave2.js
+        run: node automation/social/pin-wave2-makers.js
+      - name: Check it still selects exactly 33 products
+        run: |
+          node -e '
+            const fs = require("fs");
+            const src = fs.readFileSync("automation/social/printify-wave2.js", "utf8");
+            const m = /function kindOf\(num\)[\s\S]*?\n\}/.exec(src);
+            const kindOf = new Function("num", m[0].replace(/^function kindOf\(num\)\s*\{/, "").replace(/\}$/, ""));
+            const { PRODUCTS } = require("./automation/social/lib.js").loadSiteData();
+            const already = new Set();
+            const prev = require("./automation/social/printify-result.json");
+            (prev.results || prev).forEach((x) => x && x.num && already.add(x.num));
+            const wave = PRODUCTS.filter((p) => kindOf(p.num) && !already.has(p.num));
+            const counts = {};
+            wave.forEach((p) => (counts[kindOf(p.num)] = (counts[kindOf(p.num)] || 0) + 1));
+            const norm = (o) => JSON.stringify(Object.keys(o).sort().map((k) => [k, o[k]]));
+            console.log(wave.length, norm(counts));
+            const want = { tee: 11, tote: 7, notebook: 5, sticker: 7, hoodie: 3 };
+            if (norm(counts) !== norm(want)) throw new Error("unexpected wave-2 selection: " + norm(counts));
+            if (wave.length !== 33) throw new Error("expected 33 products, got " + wave.length);
+            console.log("selection is correct");
+          '
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-wave2.js
+          git status --short
+          git commit -m "Pin the hoodie to Heavy Blend; pins become stickers [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
