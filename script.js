@@ -177,9 +177,9 @@ const PRODUCTS = [
       ${caption("NOTHING PERSONAL. ALL SENSORY.", CREAM)}${mark()}</svg>`
   },
   {
-    num: "08 — Pin", word: "Low Spoons Today",
+    num: "08 — Sticker", word: "Low Spoons Today",
     line: "Operating at reduced capacity. Still operating.",
-    price: "£6.50", link: "#", bg: "#E0A81C",
+    price: "£3.50", link: "#", bg: "#E0A81C",
     // The word runs out of energy and sinks down the page.
     svg: `<svg viewBox="0 0 300 300">${grain("g8", 0.11)}
       <g font-family="Fraunces, serif" font-size="52" fill="${INK}">
@@ -199,7 +199,7 @@ const PRODUCTS = [
   {
     num: "09 — Hoodie", word: "Special Interest",
     line: "Ask me one question. Clear your afternoon.",
-    price: "£32.00", link: "#", bg: "#29527A",
+    price: "£36.99", link: "#", bg: "#29527A",
     // The subject repeats obsessively behind the words.
     svg: `<svg viewBox="0 0 300 300">${grain("g9", 0.12)}
       <g font-family="Space Grotesk, sans-serif" font-size="9" fill="${CREAM}" opacity="0.22" letter-spacing="0.1em">
@@ -361,9 +361,9 @@ const PRODUCTS = [
       ${caption("I HEARD YOU. GIVE ME FOUR SECONDS.", CREAM)}${mark()}</svg>`
   },
   {
-    num: "16 — Pin", word: "Stimming",
+    num: "16 — Sticker", word: "Stimming",
     line: "It's regulating, not fidgeting.",
-    price: "£6.50", link: "#", bg: "#1F6F8B",
+    price: "£3.50", link: "#", bg: "#1F6F8B",
     // A repeating rhythm the eye can follow.
     svg: `<svg viewBox="0 0 300 300">${grain("g16", 0.12)}
       <g font-family="Fraunces, serif" font-size="30" fill="${CREAM}">
@@ -601,9 +601,9 @@ const PRODUCTS = [
       ${mark()}</svg>`
   },
   {
-    num: "28 — Pin", word: "Sensory Seeking",
+    num: "28 — Sticker", word: "Sensory Seeking",
     line: "More pressure, more texture, more of that sound.",
-    price: "£6.50", link: "#", bg: "#B03A6E",
+    price: "£3.50", link: "#", bg: "#B03A6E",
     // The word crushed inward, letters piling up under the pressure.
     svg: `<svg viewBox="0 0 300 300">${grain("g28", 0.12)}
       <g font-family="Fraunces, serif" font-size="34" fill="${CREAM}">
@@ -723,9 +723,9 @@ const PRODUCTS = [
       ${mark()}</svg>`
   },
   {
-    num: "34 — Pin", word: "Happy Flappy",
+    num: "34 — Sticker", word: "Happy Flappy",
     line: "Joy, with the whole body.",
-    price: "£6.50", link: "#", bg: "#F0B429",
+    price: "£3.50", link: "#", bg: "#F0B429",
     // The word won't hold still either — caught mid-flap.
     svg: `<svg viewBox="0 0 300 300">${grain("g34", 0.11)}
       <g text-anchor="middle" font-family="Fraunces, serif" font-size="34" fill="${INK}">
@@ -816,7 +816,7 @@ const PRODUCTS = [
   {
     num: "38 — Hoodie", word: "Pattern Recognition",
     line: "I saw it three steps ago. I did say.",
-    price: "£32.00", link: "#", bg: "#1F5E52",
+    price: "£36.99", link: "#", bg: "#1F5E52",
     // The word hides in the noise until you see it — then you can't unsee it.
     svg: `<svg viewBox="0 0 300 300">${grain("g38", 0.11)}
       <g font-family="Space Grotesk, sans-serif" font-size="14" fill="${CREAM}" opacity="0.28">
@@ -1021,9 +1021,9 @@ const PRODUCTS = [
       ${mark()}</svg>`
   },
   {
-    num: "49 — Pin", word: "Loved As Standard",
+    num: "49 — Sticker", word: "Loved As Standard",
     line: "Not an upgrade. Not conditional.",
-    price: "£6.50", link: "#", bg: "#C2456E",
+    price: "£3.50", link: "#", bg: "#C2456E",
     // Every condition anyone ever attached, struck off.
     svg: `<svg viewBox="0 0 300 300">${grain("a9", 0.11)}
       <g font-family="Fraunces, serif" font-size="21" fill="${CREAM}" opacity="0.4">
@@ -1148,9 +1148,9 @@ const PRODUCTS = [
       ${mark()}</svg>`
   },
   {
-    num: "55 — Pin", word: "You Noticed Without Me Asking",
+    num: "55 — Sticker", word: "You Noticed Without Me Asking",
     line: "The rarest kindness there is.",
-    price: "£6.50", link: "#", bg: "#3E6E8C",
+    price: "£3.50", link: "#", bg: "#3E6E8C",
     // The moment someone clocks it before you've said a word.
     svg: `<svg viewBox="0 0 300 300">${grain("n5", 0.11)}
       <g font-family="Instrument Serif, serif" font-size="17" fill="${CREAM}" opacity="0.28">
@@ -1184,7 +1184,7 @@ const PRODUCTS = [
   {
     num: "57 — Hoodie", word: "Trust Me With It",
     line: "Give me the work. Then leave me alone.",
-    price: "£32.00", link: "#", bg: "#2C4A6E",
+    price: "£36.99", link: "#", bg: "#2C4A6E",
     // The ask is simple and rarely granted.
     svg: `<svg viewBox="0 0 300 300">${grain("n7", 0.11)}
       <g font-family="Space Grotesk, sans-serif" font-size="10" fill="${CREAM}" opacity="0.45" letter-spacing="0.12em">
@@ -1385,9 +1385,9 @@ const PRODUCTS = [
       <rect width="300" height="300" fill="url(#c7)"/>${mark()}</svg>`
   },
   {
-    num: "68 — Pin", word: "Their Person",
+    num: "68 — Sticker", word: "Their Person",
     line: "The one they look for first in a crowded room.",
-    price: "£6.50", link: "#", bg: "#255E75",
+    price: "£3.50", link: "#", bg: "#255E75",
     // Out of everyone in the room, you.
     svg: `<svg viewBox="0 0 300 300">${grain("c8", 0.11)}
       <g fill="${CREAM}" opacity="0.28">
