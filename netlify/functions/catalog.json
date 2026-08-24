@@ -4,21 +4,49 @@
     "name": "Overstimulated",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc0f82a3603eb2d0d5e3d",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "02-hyperfocused",
     "name": "Hyperfocused",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc0fdb8c6212d72054f8b",
+    "printifyVariantId": 73419
   },
   {
     "id": "03-shutdown-mode",
     "name": "Shutdown Mode",
     "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc1009178f085df05a1e0",
+    "printifyVariantId": 91848
   },
   {
     "id": "04-47-things-at-once",
@@ -59,16 +87,40 @@
   {
     "id": "08-low-spoons-today",
     "name": "Low Spoons Today",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
   {
     "id": "09-special-interest",
     "name": "Special Interest",
-    "price": 32,
+    "price": 36.99,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc102fdd5a017170fed12",
+    "printifyVariantId": 32870,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 32870
+      },
+      {
+        "size": "M",
+        "variantId": 32871
+      },
+      {
+        "size": "L",
+        "variantId": 32872
+      },
+      {
+        "size": "XL",
+        "variantId": 32873
+      },
+      {
+        "size": "2XL",
+        "variantId": 32874
+      }
+    ]
   },
   {
     "id": "10-executive-dysfunction",
@@ -93,7 +145,31 @@
     "name": "Time Blind",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc109d649fe907107d569",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "13-rejection-sensitive",
@@ -118,12 +194,14 @@
     "name": "Auditory Processing",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc10fb8c6212d72054f99",
+    "printifyVariantId": 73419
   },
   {
     "id": "16-stimming",
     "name": "Stimming",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
@@ -141,7 +219,31 @@
     "name": "Parallel Play",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc113b8c6212d72054f9e",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "19-demand-avoidant",
@@ -193,14 +295,40 @@
     "name": "Late Diagnosed",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc119dbf9aebaf708a15c",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "25-monotropic",
     "name": "Monotropic",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc11ffdd5a017170fed1f",
+    "printifyVariantId": 73419
   },
   {
     "id": "26-justice-sensitive",
@@ -216,12 +344,14 @@
     "name": "Regulation: Loading",
     "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc122b8c6212d72054fa2",
+    "printifyVariantId": 91848
   },
   {
     "id": "28-sensory-seeking",
     "name": "Sensory Seeking",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
@@ -230,7 +360,31 @@
     "name": "No Idea What My Face Is Doing",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc1279178f085df05a1f9",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "30-recharging",
@@ -246,7 +400,31 @@
     "name": "Ask Me About It",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc12d790e2a6cf10563cc",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "32-unreasonably-delighted",
@@ -262,12 +440,14 @@
     "name": "I Notice Everything",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc132dbf9aebaf708a16a",
+    "printifyVariantId": 73419
   },
   {
     "id": "34-happy-flappy",
     "name": "Happy Flappy",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
@@ -301,16 +481,64 @@
   {
     "id": "38-pattern-recognition",
     "name": "Pattern Recognition",
-    "price": 32,
+    "price": 36.99,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc13753075cc40309bc75",
+    "printifyVariantId": 32870,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 32870
+      },
+      {
+        "size": "M",
+        "variantId": 32871
+      },
+      {
+        "size": "L",
+        "variantId": 32872
+      },
+      {
+        "size": "XL",
+        "variantId": 32873
+      },
+      {
+        "size": "2XL",
+        "variantId": 32874
+      }
+    ]
   },
   {
     "id": "39-enthusiasm-unmasked",
     "name": "Enthusiasm, Unmasked",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc13dd649fe907107d579",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "40-small-things-enormous-joy",
@@ -335,7 +563,31 @@
     "name": "Nothing Needs Fixing",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc143dbf9aebaf708a178",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "43-not-broken",
@@ -351,21 +603,49 @@
     "name": "Functioning As Designed",
     "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc1482a3603eb2d0d5e50",
+    "printifyVariantId": 91848
   },
   {
     "id": "45-enough",
     "name": "Enough",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc14cb8c6212d72054fb3",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "46-it-was-precision",
     "name": "It Was Precision",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc152dbf9aebaf708a18a",
+    "printifyVariantId": 73419
   },
   {
     "id": "47-you-were-paying-attention",
@@ -388,7 +668,7 @@
   {
     "id": "49-loved-as-standard",
     "name": "Loved As Standard",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
@@ -406,7 +686,31 @@
     "name": "In Writing, Please",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc156dbf9aebaf708a197",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "52-i-accommodated-you-first",
@@ -431,12 +735,14 @@
     "name": "Asking Is Not Failing",
     "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc15cdbf9aebaf708a1ab",
+    "printifyVariantId": 91848
   },
   {
     "id": "55-you-noticed-without-me-asking",
     "name": "You Noticed Without Me Asking",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
@@ -445,14 +751,40 @@
     "name": "Yes, I Want Friends",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc160b8c6212d72054fdd",
+    "printifyVariantId": 73419
   },
   {
     "id": "57-trust-me-with-it",
     "name": "Trust Me With It",
-    "price": 32,
+    "price": 36.99,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc164dbf9aebaf708a1bf",
+    "printifyVariantId": 32870,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 32870
+      },
+      {
+        "size": "M",
+        "variantId": 32871
+      },
+      {
+        "size": "L",
+        "variantId": 32872
+      },
+      {
+        "size": "XL",
+        "variantId": 32873
+      },
+      {
+        "size": "2XL",
+        "variantId": 32874
+      }
+    ]
   },
   {
     "id": "58-shared-interest-not-small-talk",
@@ -504,14 +836,40 @@
     "name": "Guilt Is Not Evidence",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc16a0fa2912bd50ebad2",
+    "printifyVariantId": 18388,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 18388
+      },
+      {
+        "size": "M",
+        "variantId": 18389
+      },
+      {
+        "size": "L",
+        "variantId": 18390
+      },
+      {
+        "size": "XL",
+        "variantId": 18391
+      },
+      {
+        "size": "2XL",
+        "variantId": 18392
+      }
+    ]
   },
   {
     "id": "64-i-learned-their-language",
     "name": "I Learned Their Language",
     "price": 16,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc170f95fff6a1705fc91",
+    "printifyVariantId": 73419
   },
   {
     "id": "65-a-different-route",
@@ -536,12 +894,14 @@
     "name": "You're Allowed To Find It Hard",
     "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a8cc174dbf9aebaf708a1d0",
+    "printifyVariantId": 91848
   },
   {
     "id": "68-their-person",
     "name": "Their Person",
-    "price": 6.5,
+    "price": 3.5,
     "type": "physical",
     "currency": "gbp"
   },
