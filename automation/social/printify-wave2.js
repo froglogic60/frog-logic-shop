@@ -36,14 +36,40 @@ const SIZES = ["S", "M", "L", "XL", "2XL"];
 // simply belt and braces.
 const RETIRED = /(drukātava|drukatava|drive fulfillment|hft71|rogac|jams designs|\bc4\b)/i;
 
+// Printify rate-limits the catalogue endpoints hard, and scoring every UK/EU
+// maker for five kinds is hundreds of calls. Space them out, and back off
+// rather than dying when one comes back 429.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const GAP_MS = 150;
+let lastCall = 0;
+const cache = new Map();
+
 async function api(p, method = "GET", body) {
-  const r = await fetch("https://api.printify.com/v1" + p, {
-    method,
-    headers: { Authorization: "Bearer " + KEY, "Content-Type": "application/json" },
-    body: body ? JSON.stringify(body) : undefined,
-  });
-  if (!r.ok) throw new Error(method + " " + p + " -> " + r.status + " " + (await r.text()).slice(0, 300));
-  return r.json();
+  for (let attempt = 0; ; attempt++) {
+    const wait = lastCall + GAP_MS - Date.now();
+    if (wait > 0) await sleep(wait);
+    lastCall = Date.now();
+    const r = await fetch("https://api.printify.com/v1" + p, {
+      method,
+      headers: { Authorization: "Bearer " + KEY, "Content-Type": "application/json" },
+      body: body ? JSON.stringify(body) : undefined,
+    });
+    if (r.ok) return r.json();
+    if ((r.status === 429 || r.status >= 500) && attempt < 5) {
+      const retryAfter = Number(r.headers.get("retry-after"));
+      const backoff = retryAfter > 0 ? retryAfter * 1000 : Math.min(30000, 2000 * Math.pow(2, attempt));
+      console.log(`   ${r.status} on ${p} — waiting ${Math.round(backoff / 1000)}s and retrying`);
+      await sleep(backoff);
+      continue;
+    }
+    throw new Error(method + " " + p + " -> " + r.status + " " + (await r.text()).slice(0, 300));
+  }
+}
+
+// GETs during the catalogue sweep repeat a lot; one fetch each is plenty.
+async function getCached(p) {
+  if (!cache.has(p)) cache.set(p, api(p));
+  return cache.get(p);
 }
 
 const KINDS = {
@@ -95,7 +121,7 @@ const gbp = (p) => "£" + (p / 100).toFixed(2);
 
 const providerCache = {};
 async function providerCountry(id) {
-  if (!providerCache[id]) providerCache[id] = (await api(`/catalog/print_providers/${id}.json`)).location?.country || "?";
+  if (!providerCache[id]) providerCache[id] = (await getCached(`/catalog/print_providers/${id}.json`)).location?.country || "?";
   return providerCache[id];
 }
 
@@ -110,7 +136,7 @@ function parseVariant(title) {
 // First-item UK postage for a blueprint/provider, in pence.
 async function ukShipping(bpId, prId) {
   try {
-    const s = await api(`/catalog/blueprints/${bpId}/print_providers/${prId}/shipping.json`);
+    const s = await getCached(`/catalog/blueprints/${bpId}/print_providers/${prId}/shipping.json`);
     for (const profile of s.profiles || []) {
       if ((profile.countries || []).includes("GB")) return profile.first_item?.cost ?? null;
     }
@@ -128,17 +154,19 @@ async function collectCandidates(kind, blueprints) {
   const K = KINDS[kind];
   const out = [], tried = [], seenBp = new Set();
   for (const pat of K.patterns) {
-    for (const bp of blueprints.filter((b) => pat.test(b.title) && !(K.avoid && K.avoid.test(b.title)))) {
+    // Capped: the long tail of near-matching blueprints never wins, and
+    // sweeping all of them is what got the last run rate-limited.
+    for (const bp of blueprints.filter((b) => pat.test(b.title) && !(K.avoid && K.avoid.test(b.title))).slice(0, 6)) {
       if (seenBp.has(bp.id)) continue;
       seenBp.add(bp.id);
       let provs;
-      try { provs = await api(`/catalog/blueprints/${bp.id}/print_providers.json`); } catch { continue; }
+      try { provs = await getCached(`/catalog/blueprints/${bp.id}/print_providers.json`); } catch { continue; }
       for (const pr of provs) {
         if (RETIRED.test(pr.title)) { tried.push(`${bp.title} | ${pr.title} — skipped, partnership ending`); continue; }
         const country = await providerCountry(pr.id);
         if (country !== "GB" && !EU.includes(country)) continue;
         let vres;
-        try { vres = await api(`/catalog/blueprints/${bp.id}/print_providers/${pr.id}/variants.json`); } catch { continue; }
+        try { vres = await getCached(`/catalog/blueprints/${bp.id}/print_providers/${pr.id}/variants.json`); } catch { continue; }
         const vars = (vres.variants || []).filter((v) => v.placeholders && v.placeholders.length);
         if (!vars.length) continue;
 
