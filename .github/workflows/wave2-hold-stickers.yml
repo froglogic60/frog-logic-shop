@@ -1,0 +1,57 @@
+name: Hold the stickers, pin the hoodie maker
+# One-shot. Runs automation/social/wave2-hold-stickers.js, which pins the
+# hoodie to Print Clever (£28.69 against T Shirt and Sons' £30.14 for the same
+# garment at the same postage) and holds the seven stickers back, because their
+# £5.46 base cost against a £3.50 price loses £1.96 a sale. Both numbers come
+# from the 24 Aug price check. Safe to delete once run.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  adjust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Rewrite printify-wave2.js
+        run: node automation/social/wave2-hold-stickers.js
+      - name: Check it now selects exactly 26 products
+        run: |
+          node -e '
+            const fs = require("fs");
+            const src = fs.readFileSync("automation/social/printify-wave2.js", "utf8");
+            const km = /function kindOf\(num\)[\s\S]*?\n\}/.exec(src);
+            const kindOf = new Function("num", km[0].replace(/^function kindOf\(num\)\s*\{/, "").replace(/\}$/, ""));
+            const bm = /const KINDS = \{[\s\S]*?\n\};/.exec(src);
+            const KINDS = eval("(" + bm[0].replace(/^const KINDS = /, "").replace(/;$/, "") + ")");
+            const { PRODUCTS } = require("./automation/social/lib.js").loadSiteData();
+            const already = new Set();
+            const prev = require("./automation/social/printify-result.json");
+            (prev.results || prev).forEach((x) => x && x.num && already.add(x.num));
+            const wave = PRODUCTS.filter((p) => {
+              const k = kindOf(p.num);
+              return k && !already.has(p.num) && !KINDS[k].hold;
+            });
+            const counts = {};
+            wave.forEach((p) => (counts[kindOf(p.num)] = (counts[kindOf(p.num)] || 0) + 1));
+            const norm = (o) => JSON.stringify(Object.keys(o).sort().map((k) => [k, o[k]]));
+            console.log(wave.length, norm(counts));
+            if (!KINDS.sticker.hold) throw new Error("the stickers are not held");
+            if (!/print clever/i.test(String(KINDS.hoodie.pin.provider))) throw new Error("the hoodie maker is not pinned");
+            const want = { tee: 11, tote: 7, notebook: 5, hoodie: 3 };
+            if (norm(counts) !== norm(want)) throw new Error("unexpected selection: " + norm(counts));
+            if (wave.length !== 26) throw new Error("expected 26 products, got " + wave.length);
+            console.log("selection is correct");
+          '
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-wave2.js
+          git status --short
+          git commit -m "Pin the hoodie to Print Clever; hold the stickers [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
