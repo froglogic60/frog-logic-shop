@@ -1,4 +1,4 @@
-// Wave 2: tees, hoodies, totes, notebooks and pins.
+// Wave 2: tees, hoodies, totes, notebooks and the ex-pin stickers.
 //
 // Deliberately a separate file from printify-setup.js. That script deletes and
 // recreates any product whose blueprint no longer matches its own pick, so
@@ -82,6 +82,11 @@ const KINDS = {
     label: "Hoodie", px: 3600, apparel: true,
     patterns: [/unisex.*hoodie/i, /hooded sweatshirt/i, /^hoodie/i],
     avoid: /zip|kid|youth|crop|women|ladies|lightweight|sleeveless/i,
+    // Sam's instruction, 24 Aug 2026: run the cheaper hoodie. That is the
+    // Gildan 18500 Heavy Blend at £28.69, not the College Hoodie at £29.24 —
+    // same maker, same postage, so postage-ranking cannot tell them apart.
+    // The size guide on the product pages is written to this garment.
+    pin: { blueprint: /heavy blend|18500/i },
   },
   tote: {
     label: "Tote", px: 2400,
@@ -95,11 +100,17 @@ const KINDS = {
     avoid: /sticky|note pad|notepad|planner/i,
     sizeHint: /a5|5.*x.*8|medium/i,
   },
-  pin: {
-    label: "Pin", px: 1800,
-    patterns: [/enamel pin/i, /pin button/i, /button pin/i, /\bbadge\b/i, /\bpins?\b/i, /magnet/i],
-    avoid: /sticker|keychain|keyring/i,
-    sizeHint: /1\.?25|1\.?5|25 ?mm|32 ?mm|small/i,
+  // The seven pin designs became £3.50 stickers, because Printify has no UK
+  // or EU maker for pins at all. Pinned to exactly what wave 1 used for its ten
+  // stickers — same blueprint, same maker, same variant — so the shop sells one
+  // sticker, not two that differ in size for no reason a customer can see.
+  sticker: {
+    label: "Sticker", px: 1800,
+    patterns: [/vinyl kiss-?cut sticker/i, /kiss-?cut sticker/i, /\bsticker sheet\b/i, /\bstickers?\b/i],
+    avoid: /magnet|decal|wall|bumper|laptop skin/i,
+    sizeHint: /3.*x.*3|medium/i,
+    pin: { blueprint: /kiss-?cut sticker/i, provider: /sticky products europe/i },
+    pinVariantId: 92315,
   },
 };
 
@@ -111,7 +122,7 @@ function kindOf(num) {
   if (/—\s*Hoodie/.test(num)) return "hoodie";
   if (/—\s*Tote/.test(num)) return "tote";
   if (/—\s*Notebook/.test(num)) return "notebook";
-  if (/—\s*Pin/.test(num)) return "pin";
+  if (/—\s*Sticker/.test(num)) return "sticker";
   return null;
 }
 
@@ -177,7 +188,13 @@ async function collectCandidates(kind, blueprints) {
           if (picked.length < 4) { tried.push(`${bp.title} | ${pr.title} (${country}) — only ${picked.length}/5 white sizes`); continue; }
           variants = picked.map((x) => x.v);
         } else {
-          variants = [(K.sizeHint && vars.find((v) => K.sizeHint.test(v.title))) || vars[0]];
+          // Wave 1's sticker is variant 92315. Matching it exactly keeps the
+          // seven new stickers the same size as the ten already on sale.
+          variants = [
+            (K.pinVariantId && vars.find((v) => v.id === K.pinVariantId)) ||
+            (K.sizeHint && vars.find((v) => K.sizeHint.test(v.title))) ||
+            vars[0],
+          ];
         }
         const shipGB = await ukShipping(bp.id, pr.id);
         out.push({ blueprint: bp, provider: pr, country, variants, shipGB });
@@ -185,11 +202,23 @@ async function collectCandidates(kind, blueprints) {
       }
     }
   }
+  // A pinned maker wins outright. Postage ranking is the right default but
+  // not always the right answer: two candidates can post identically and differ
+  // only in base cost, which the catalogue does not expose before a product
+  // exists. If the pin matches nothing we say so loudly and fall back rather
+  // than silently building on whatever came first.
+  const wantBp = K.pin && K.pin.blueprint;
+  const wantPr = K.pin && K.pin.provider;
+  const isPinned = (c) =>
+    (!wantBp || wantBp.test(c.blueprint.title)) && (!wantPr || wantPr.test(c.provider.title)) ? 0 : 1;
+  const pinMissed = !!(K.pin && !out.some((c) => isPinned(c) === 0));
+  if (pinMissed) tried.push("!! nothing matched the pinned maker for this kind");
   out.sort((a, b) =>
+    (K.pin ? isPinned(a) - isPinned(b) : 0) ||
     (a.country === "GB" ? 0 : 1) - (b.country === "GB" ? 0 : 1) ||
     (a.shipGB ?? 999999) - (b.shipGB ?? 999999) ||
     b.variants.length - a.variants.length);
-  return { ranked: out, tried };
+  return { ranked: out, tried, pinMissed };
 }
 
 function artworkFor(renderer, logoURI) {
@@ -223,8 +252,20 @@ async function createProduct(shop, cand, p, K, title, price, imageId) {
     console.log("auto-detected shop:", shops[0].title, "(id " + SHOP + ")");
   }
 
+  // Wave 1 made ten of the seventeen stickers. Skipping by product number
+  // rather than by shop title means renaming a product inside Printify cannot
+  // cause a duplicate to be built here.
+  const ALREADY = new Set();
+  try {
+    const prev = require("./printify-result.json");
+    (prev.results || prev).forEach((x) => x && x.num && ALREADY.add(x.num));
+  } catch (e) {
+    console.log("could not read the wave-1 result file:", e.message);
+  }
+
   const { PRODUCTS } = loadSiteData();
-  const wave = PRODUCTS.filter((p) => kindOf(p.num));
+  const wave = PRODUCTS.filter((p) => kindOf(p.num) && !ALREADY.has(p.num));
+  console.log(`skipping ${ALREADY.size} products wave 1 already made`);
   const counts = {};
   wave.forEach((p) => (counts[kindOf(p.num)] = (counts[kindOf(p.num)] || 0) + 1));
   console.log("wave 2:", wave.length, "items", JSON.stringify(counts));
@@ -234,7 +275,8 @@ async function createProduct(shop, cand, p, K, title, price, imageId) {
   for (const kind of Object.keys(KINDS)) {
     if (!counts[kind]) continue;
     console.log(`\nchoosing ${kind}...`);
-    const { ranked, tried } = await collectCandidates(kind, blueprints);
+    const { ranked, tried, pinMissed } = await collectCandidates(kind, blueprints);
+    if (pinMissed) console.log(`  !! the pinned maker for ${kind} was not found — do not trust this pick`);
     if (!ranked.length) {
       missing.push(kind);
       console.log(`  no usable UK/EU maker. Considered:`);
