@@ -1,0 +1,52 @@
+name: Printify wave 2 (tees, hoodies, totes, notebooks, pins)
+# Separate from "Printify product setup" on purpose: that workflow owns the 35
+# wave-1 products whose IDs are already in catalog.json, and re-running it can
+# delete and recreate them. This one only ever touches wave-2 items.
+#
+# Run it with "Price check only" ticked first — that builds one sample product
+# per kind, reads Printify's real base cost, reports the margin against the
+# shelf price, then deletes the sample. Untick it to create all 33 for real.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Price check only (creates nothing permanent)"
+        type: boolean
+        default: true
+      recreate:
+        description: "Delete and rebuild wave-2 products that already exist"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  wave2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium for rendering
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Create wave 2 products
+        working-directory: automation/social
+        run: node printify-wave2.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+          RECREATE: ${{ inputs.recreate && '1' || '' }}
+      - name: Commit the result file
+        if: always() && !inputs.dry_run
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-wave2-result.json
+          git commit -m "Printify wave 2 result [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
