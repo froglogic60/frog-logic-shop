@@ -1,0 +1,751 @@
+{
+  "createdAt": "2026-08-24T22:11:00.542Z",
+  "dryRun": false,
+  "skippedKinds": [],
+  "results": [
+    {
+      "id": "01-overstimulated",
+      "num": "01 — Tee",
+      "word": "Overstimulated",
+      "kind": "tee",
+      "printifyProductId": "6a8cc0f82a3603eb2d0d5e3d",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "02-hyperfocused",
+      "num": "02 — Tote",
+      "word": "Hyperfocused",
+      "kind": "tote",
+      "printifyProductId": "6a8cc0fdb8c6212d72054f8b",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "03-shutdown-mode",
+      "num": "03 — Notebook",
+      "word": "Shutdown Mode",
+      "kind": "notebook",
+      "printifyProductId": "6a8cc1009178f085df05a1e0",
+      "printifyVariantId": 91848,
+      "price": 1200,
+      "worstCost": 879,
+      "ukShipping": 439,
+      "blueprint": "Wirobound Softcover Notebook, A5",
+      "provider": "Harrier",
+      "country": "GB"
+    },
+    {
+      "id": "09-special-interest",
+      "num": "09 — Hoodie",
+      "word": "Special Interest",
+      "kind": "hoodie",
+      "printifyProductId": "6a8cc102fdd5a017170fed12",
+      "printifyVariantId": 32870,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 32870,
+          "cost": 2869
+        },
+        {
+          "size": "M",
+          "variantId": 32871,
+          "cost": 2869
+        },
+        {
+          "size": "L",
+          "variantId": 32872,
+          "cost": 2869
+        },
+        {
+          "size": "XL",
+          "variantId": 32873,
+          "cost": 2869
+        },
+        {
+          "size": "2XL",
+          "variantId": 32874,
+          "cost": 2869
+        }
+      ],
+      "price": 3699,
+      "worstCost": 2869,
+      "ukShipping": 449,
+      "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+      "provider": "Print Clever",
+      "country": "GB"
+    },
+    {
+      "id": "12-time-blind",
+      "num": "12 — Tee",
+      "word": "Time Blind",
+      "kind": "tee",
+      "printifyProductId": "6a8cc109d649fe907107d569",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "15-auditory-processing",
+      "num": "15 — Tote",
+      "word": "Auditory Processing",
+      "kind": "tote",
+      "printifyProductId": "6a8cc10fb8c6212d72054f99",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "18-parallel-play",
+      "num": "18 — Tee",
+      "word": "Parallel Play",
+      "kind": "tee",
+      "printifyProductId": "6a8cc113b8c6212d72054f9e",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "24-late-diagnosed",
+      "num": "24 — Tee",
+      "word": "Late Diagnosed",
+      "kind": "tee",
+      "printifyProductId": "6a8cc119dbf9aebaf708a15c",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "25-monotropic",
+      "num": "25 — Tote",
+      "word": "Monotropic",
+      "kind": "tote",
+      "printifyProductId": "6a8cc11ffdd5a017170fed1f",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "27-regulation-loading",
+      "num": "27 — Notebook",
+      "word": "Regulation: Loading",
+      "kind": "notebook",
+      "printifyProductId": "6a8cc122b8c6212d72054fa2",
+      "printifyVariantId": 91848,
+      "price": 1200,
+      "worstCost": 879,
+      "ukShipping": 439,
+      "blueprint": "Wirobound Softcover Notebook, A5",
+      "provider": "Harrier",
+      "country": "GB"
+    },
+    {
+      "id": "29-no-idea-what-my-face-is-doing",
+      "num": "29 — Tee",
+      "word": "No Idea What My Face Is Doing",
+      "kind": "tee",
+      "printifyProductId": "6a8cc1279178f085df05a1f9",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "31-ask-me-about-it",
+      "num": "31 — Tee",
+      "word": "Ask Me About It",
+      "kind": "tee",
+      "printifyProductId": "6a8cc12d790e2a6cf10563cc",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "33-i-notice-everything",
+      "num": "33 — Tote",
+      "word": "I Notice Everything",
+      "kind": "tote",
+      "printifyProductId": "6a8cc132dbf9aebaf708a16a",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "38-pattern-recognition",
+      "num": "38 — Hoodie",
+      "word": "Pattern Recognition",
+      "kind": "hoodie",
+      "printifyProductId": "6a8cc13753075cc40309bc75",
+      "printifyVariantId": 32870,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 32870,
+          "cost": 2869
+        },
+        {
+          "size": "M",
+          "variantId": 32871,
+          "cost": 2869
+        },
+        {
+          "size": "L",
+          "variantId": 32872,
+          "cost": 2869
+        },
+        {
+          "size": "XL",
+          "variantId": 32873,
+          "cost": 2869
+        },
+        {
+          "size": "2XL",
+          "variantId": 32874,
+          "cost": 2869
+        }
+      ],
+      "price": 3699,
+      "worstCost": 2869,
+      "ukShipping": 449,
+      "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+      "provider": "Print Clever",
+      "country": "GB"
+    },
+    {
+      "id": "39-enthusiasm-unmasked",
+      "num": "39 — Tee",
+      "word": "Enthusiasm, Unmasked",
+      "kind": "tee",
+      "printifyProductId": "6a8cc13dd649fe907107d579",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "42-nothing-needs-fixing",
+      "num": "42 — Tee",
+      "word": "Nothing Needs Fixing",
+      "kind": "tee",
+      "printifyProductId": "6a8cc143dbf9aebaf708a178",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "44-functioning-as-designed",
+      "num": "44 — Notebook",
+      "word": "Functioning As Designed",
+      "kind": "notebook",
+      "printifyProductId": "6a8cc1482a3603eb2d0d5e50",
+      "printifyVariantId": 91848,
+      "price": 1200,
+      "worstCost": 879,
+      "ukShipping": 439,
+      "blueprint": "Wirobound Softcover Notebook, A5",
+      "provider": "Harrier",
+      "country": "GB"
+    },
+    {
+      "id": "45-enough",
+      "num": "45 — Tee",
+      "word": "Enough",
+      "kind": "tee",
+      "printifyProductId": "6a8cc14cb8c6212d72054fb3",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "46-it-was-precision",
+      "num": "46 — Tote",
+      "word": "It Was Precision",
+      "kind": "tote",
+      "printifyProductId": "6a8cc152dbf9aebaf708a18a",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "51-in-writing-please",
+      "num": "51 — Tee",
+      "word": "In Writing, Please",
+      "kind": "tee",
+      "printifyProductId": "6a8cc156dbf9aebaf708a197",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "54-asking-is-not-failing",
+      "num": "54 — Notebook",
+      "word": "Asking Is Not Failing",
+      "kind": "notebook",
+      "printifyProductId": "6a8cc15cdbf9aebaf708a1ab",
+      "printifyVariantId": 91848,
+      "price": 1200,
+      "worstCost": 879,
+      "ukShipping": 439,
+      "blueprint": "Wirobound Softcover Notebook, A5",
+      "provider": "Harrier",
+      "country": "GB"
+    },
+    {
+      "id": "56-yes-i-want-friends",
+      "num": "56 — Tote",
+      "word": "Yes, I Want Friends",
+      "kind": "tote",
+      "printifyProductId": "6a8cc160b8c6212d72054fdd",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "57-trust-me-with-it",
+      "num": "57 — Hoodie",
+      "word": "Trust Me With It",
+      "kind": "hoodie",
+      "printifyProductId": "6a8cc164dbf9aebaf708a1bf",
+      "printifyVariantId": 32870,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 32870,
+          "cost": 2869
+        },
+        {
+          "size": "M",
+          "variantId": 32871,
+          "cost": 2869
+        },
+        {
+          "size": "L",
+          "variantId": 32872,
+          "cost": 2869
+        },
+        {
+          "size": "XL",
+          "variantId": 32873,
+          "cost": 2869
+        },
+        {
+          "size": "2XL",
+          "variantId": 32874,
+          "cost": 2869
+        }
+      ],
+      "price": 3699,
+      "worstCost": 2869,
+      "ukShipping": 449,
+      "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+      "provider": "Print Clever",
+      "country": "GB"
+    },
+    {
+      "id": "63-guilt-is-not-evidence",
+      "num": "63 — Tee",
+      "word": "Guilt Is Not Evidence",
+      "kind": "tee",
+      "printifyProductId": "6a8cc16a0fa2912bd50ebad2",
+      "printifyVariantId": 18388,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 18388,
+          "cost": 1208
+        },
+        {
+          "size": "M",
+          "variantId": 18389,
+          "cost": 1208
+        },
+        {
+          "size": "L",
+          "variantId": 18390,
+          "cost": 1208
+        },
+        {
+          "size": "XL",
+          "variantId": 18391,
+          "cost": 1208
+        },
+        {
+          "size": "2XL",
+          "variantId": 18392,
+          "cost": 1437
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1437,
+      "ukShipping": 349,
+      "blueprint": "Unisex Jersey Short Sleeve Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB"
+    },
+    {
+      "id": "64-i-learned-their-language",
+      "num": "64 — Tote",
+      "word": "I Learned Their Language",
+      "kind": "tote",
+      "printifyProductId": "6a8cc170f95fff6a1705fc91",
+      "printifyVariantId": 73419,
+      "price": 1600,
+      "worstCost": 1219,
+      "ukShipping": 349,
+      "blueprint": "Cotton Tote",
+      "provider": "T Shirt and Sons",
+      "country": "GB"
+    },
+    {
+      "id": "67-you-re-allowed-to-find-it-hard",
+      "num": "67 — Notebook",
+      "word": "You're Allowed To Find It Hard",
+      "kind": "notebook",
+      "printifyProductId": "6a8cc174dbf9aebaf708a1d0",
+      "printifyVariantId": 91848,
+      "price": 1200,
+      "worstCost": 879,
+      "ukShipping": 439,
+      "blueprint": "Wirobound Softcover Notebook, A5",
+      "provider": "Harrier",
+      "country": "GB"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}
