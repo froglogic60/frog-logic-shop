@@ -153,7 +153,13 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
         variants: allVariants,
         print_areas: [{
           variant_ids: [TO_VARIANT],
-          placeholders: area.placeholders.map((p) => ({ position: p.position, images: p.images || [] })),
+          // Only the placeholders that actually carry artwork. These products
+          // have a second, empty placeholder (the sticker's back), and Printify
+          // rejects the whole update with "placeholders.1.images is required"
+          // rather than ignoring an empty one.
+          placeholders: area.placeholders
+            .filter((p) => (p.images || []).length)
+            .map((p) => ({ position: p.position, images: p.images })),
         }],
       });
     } catch (e) {
