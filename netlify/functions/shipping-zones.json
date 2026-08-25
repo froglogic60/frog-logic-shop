@@ -1,1 +1,5 @@
-
+{
+  "//": "Written by automation/social/shipping-rates.js — run the 'Refresh the postage rates' workflow to fill it. Until then it is empty on purpose: the checkout falls back to the flat UK rate on each catalogue entry and offers GB only, which is exactly how it behaved before zones existed. Nothing here is edited by hand.",
+  "providers": {},
+  "servedEverywhere": []
+}
