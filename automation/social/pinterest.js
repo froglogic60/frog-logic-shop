@@ -34,10 +34,7 @@ const SITE = "https://shop.froglogic.co.uk/#digital";
 // Products whose pin is deliberately not built. A Pinterest description is
 // public, indexed and durable, so anything unresolved in the product copy gets
 // worse here, not better. Clear the entry once the copy is settled.
-const HOLD = {
-  "Show These Cards":
-    "the product line names the Sunflower lanyard, which is a registered trademark — flagged 23 Aug and still unresolved. Needs Sam's wording before it goes in a public description.",
-};
+const HOLD = {};
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");

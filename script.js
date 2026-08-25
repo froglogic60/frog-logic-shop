@@ -1425,8 +1425,8 @@ function renderProducts(){
 // low-stimulation, not a joke.
 const DIGITAL_PRODUCTS = [
   {
-    num: "D18 — Printable PDF", word: "Show These Cards",
-    line: "For the moment speech goes and you're stood in a shop. Twenty-two point-and-show cards — the toilet, help finding something, somewhere quieter, please don't touch me — sized to fit a Sunflower lanyard, plus blanks and a contact card.",
+    num: "D18 — Printable PDF", word: "When Words Go",
+    line: "For the moment speech goes and you're stood in a shop. Twenty-two point-and-show cards — the toilet, help finding something, somewhere quieter, please don't touch me — sized to fit a standard lanyard card holder, plus blanks and a contact card.",
     price: "£4.50", link: "#", bg: "#1A1A1A",
     // A card being held out, because the words aren't available.
     svg: `<svg viewBox="0 0 300 300">${grain("d18", 0.09)}
