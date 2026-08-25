@@ -1438,7 +1438,7 @@ const DIGITAL_PRODUCTS = [
       <text x="70" y="132" font-family="Fraunces, serif" font-size="20" fill="${INK}">I can't speak</text>
       <text x="70" y="158" font-family="Fraunces, serif" font-size="20" fill="${INK}">right now.</text>
       <text x="70" y="182" font-family="DM Sans, sans-serif" font-size="10" fill="#6B6355">I can hear and understand you.</text>
-      <text x="150" y="252" text-anchor="middle" font-family="Anton, sans-serif" font-size="34" fill="${CREAM}">SHOW THESE CARDS</text>
+      <text x="150" y="252" text-anchor="middle" font-family="Anton, sans-serif" font-size="34" fill="${CREAM}">WHEN WORDS GO</text>
       <text x="150" y="276" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOR WHEN THE WORDS HAVE GONE</text>
       <rect width="300" height="300" fill="url(#d18)"/>${mark()}</svg>`
   },
