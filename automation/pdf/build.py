@@ -39,6 +39,16 @@ FONTS = [
     ("dmsans/DMSans%5Bopsz,wght%5D.ttf", "DMSans-var.ttf", "DM Sans", "100 1000"),
     ("spacemono/SpaceMono-Regular.ttf", "SpaceMono.ttf", "Space Mono", "400"),
     ("spacemono/SpaceMono-Bold.ttf", "SpaceMono-Bold.ttf", "Space Mono", "700"),
+    # The rest of the collection's faces. A card sheet only needs the first
+    # four, but a sheet of product artwork carries whatever the designs use, and
+    # a missing face does not fail loudly — it silently substitutes and the
+    # artwork comes out looking like someone else's.
+    ("instrumentserif/InstrumentSerif-Regular.ttf", "InstrumentSerif.ttf", "Instrument Serif", "400"),
+    ("anton/Anton-Regular.ttf", "Anton.ttf", "Anton", "400"),
+    ("spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf", "SpaceGrotesk-var.ttf", "Space Grotesk", "300 700"),
+    ("abrilfatface/AbrilFatface-Regular.ttf", "AbrilFatface.ttf", "Abril Fatface", "400"),
+    ("syne/Syne%5Bwght%5D.ttf", "Syne-var.ttf", "Syne", "400 800"),
+    ("caveat/Caveat%5Bwght%5D.ttf", "Caveat-var.ttf", "Caveat", "400 700"),
 ]
 FONT_BASE = "https://raw.githubusercontent.com/google/fonts/main/ofl/"
 
@@ -114,6 +124,22 @@ def card_html(card, mark):
     return '<div class="%s">%s</div>' % (cls, "".join(parts))
 
 
+def tile_html(tile):
+    """One square of artwork, with its name under it.
+
+    The name sits outside the cut line on purpose: the sticker is the artwork,
+    not the artwork plus a caption. It is there so someone cutting out nine
+    squares knows which is which, and so the sheet reads as a contents page
+    rather than a puzzle.
+    """
+    return (
+        '<div class="tile">'
+        '<div class="tile-art" style="background:%s">%s</div>'
+        '<p class="tile-name">%s</p>'
+        "</div>"
+    ) % (esc(tile.get("bg", "#FFFFFF")), tile["svg"], esc(tile.get("name", "")))
+
+
 def sheet_html(sheet, title, mark, licence=None):
     head = (
         '<div class="head">'
@@ -123,7 +149,14 @@ def sheet_html(sheet, title, mark, licence=None):
         "</div>" % (mark, esc(title), esc(sheet.get("label", "")))
     )
     intro = '<p class="intro">%s</p>' % esc(sheet["intro"]) if sheet.get("intro") else ""
-    cards = "".join(card_html(c, mark) for c in sheet["cards"])
+
+    # Two kinds of sheet. "cards" is the 85x54mm message card. "tiles" is a
+    # grid of the shop's own artwork, printed square so it can be cut out —
+    # the same designs that go on vinyl, on paper you already own.
+    if sheet.get("type") == "tiles":
+        body = '<div class="tiles">%s</div>' % "".join(tile_html(t) for t in sheet["tiles"])
+    else:
+        body = '<div class="grid">%s</div>' % "".join(card_html(c, mark) for c in sheet["cards"])
     # The licence line rides in the last sheet's footer on purpose. In the
     # original it sat outside the sheets and overflowed onto a fourth,
     # otherwise blank page — three sheets of cards, then a page carrying one
@@ -134,9 +167,7 @@ def sheet_html(sheet, title, mark, licence=None):
         '<p class="foot-brand">FROG LOGIC — MADE WITH CARE</p>%s</div>'
         % (esc(sheet.get("note", "")), lic)
     )
-    return '<section class="sheet">%s%s<div class="grid">%s</div>%s</section>' % (
-        head, intro, cards, foot,
-    )
+    return '<section class="sheet">%s%s%s%s</section>' % (head, intro, body, foot)
 
 
 def build(spec):
@@ -193,6 +224,15 @@ body { margin: 0; font-family: 'DM Sans', sans-serif; color: %(ink)s; }
 .card.invert .card-brand { color: #8C867A; }
 .card-mark { width: 4mm; height: 4mm; }
 
+/* Artwork tiles. 54mm squares, three across, with a dashed cut line so the
+   edge is visible without printing a heavy border into the sticker itself. */
+.tiles { display: flex; flex-wrap: wrap; gap: 5mm 4mm; margin-top: 5mm; }
+.tile { width: 54mm; }
+.tile-art { width: 54mm; height: 54mm; border: 0.5pt dashed %(faint)s; overflow: hidden; }
+.tile-art svg { display: block; width: 100%%; height: 100%%; }
+.tile-name { font-family: 'Space Mono', monospace; font-size: 5.6pt; letter-spacing: 0.1em;
+             text-transform: uppercase; color: %(faint)s; margin: 1.6mm 0 0; text-align: center; }
+
 .foot { margin-top: 6mm; text-align: center; }
 .foot-note { font-family: 'Space Mono', monospace; font-size: 6pt;
              letter-spacing: 0.14em; color: %(faint)s; margin: 0 0 3mm; }
@@ -237,9 +277,9 @@ def main():
         out = os.path.join(ROOT, spec["output"])
         os.makedirs(os.path.dirname(out), exist_ok=True)
         HTML(string=html, base_url=ROOT).write_pdf(out)
-        cards = sum(len(s["cards"]) for s in spec["sheets"])
-        print("  %d sheets, %d cards -> %s (%d bytes)"
-              % (len(spec["sheets"]), cards, spec["output"], os.path.getsize(out)))
+        pieces = sum(len(s.get("cards") or s.get("tiles") or []) for s in spec["sheets"])
+        print("  %d sheets, %d pieces -> %s (%d bytes)"
+              % (len(spec["sheets"]), pieces, spec["output"], os.path.getsize(out)))
 
         # A renamed product keeps its old filename alive on purpose. Download
         # links are minted at purchase and live in a customer's inbox, so
