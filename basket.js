@@ -27,9 +27,14 @@
   var STORE_KEY = "froglogic.basket.v1";
   var MAX_QTY = 20;
 
+  var COUNTRY_KEY = "froglogic.country.v1";
+
   var basket = [];      // [{ id, name, size, qty, price }] — price in pence, display only
   var quote = null;     // last server quote
   var quoteSeq = 0;     // so a slow reply cannot overwrite a newer one
+  // Postage depends on where it is going, and Stripe fixes the delivery charge
+  // before it ever asks for an address — so the basket has to ask first.
+  var country = "GB";
   var open = false;
   var lastFocus = null;
 
@@ -48,6 +53,15 @@
 
   function save() {
     try { window.localStorage.setItem(STORE_KEY, JSON.stringify(basket)); } catch (e) { /* not fatal */ }
+  }
+
+  // Remembering where someone is saves them re-picking it every visit. The
+  // server checks it anyway, so a stale or nonsense value costs nothing.
+  function loadCountry() {
+    try {
+      var c = window.localStorage.getItem(COUNTRY_KEY);
+      return /^[A-Z]{2}$/.test(c || "") ? c : "GB";
+    } catch (e) { return "GB"; }
   }
 
   // --------------------------------------------------------------- money ---
@@ -111,6 +125,9 @@
     ".bk-row{display:flex;justify-content:space-between;gap:12px;margin:0 0 6px;font-variant-numeric:tabular-nums}",
     ".bk-row.total{font-weight:700;font-size:1.05rem;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}",
     ".bk-note{margin:8px 0 0;font-size:.78rem;color:var(--muted);line-height:1.5}",
+    ".bk-where{align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}",
+    ".bk-where label{font-size:.82rem;color:var(--muted)}",
+    ".bk-country{font:inherit;font-size:.9rem;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg,#fff);color:inherit;max-width:60%}",
     ".bk-empty{padding:40px 20px;text-align:center;color:var(--muted)}",
     ".bk-go{width:100%;margin-top:14px}",
     ".bk-go[disabled]{opacity:.55;cursor:not-allowed}",
@@ -296,14 +313,49 @@
       note = "Downloads arrive by email, usually within a minute.";
     }
 
+    // Where to. Only shown once the server has said which countries this
+    // particular basket can actually reach, and only when there is more than
+    // one — a picker with a single option is just noise.
+    var places = (quote && quote.destinations) || [];
+    var picker = "";
+    if (places.length > 1 && quote && !quote.digitalOnly) {
+      picker =
+        '<p class="bk-row bk-where"><label for="bk-country">Deliver to</label>' +
+        '<select id="bk-country" class="bk-country">' +
+        places.map(function (p) {
+          return '<option value="' + p.code + '"' + (p.code === country ? " selected" : "") + ">" +
+            escapeHtml(p.name) + "</option>";
+        }).join("") +
+        "</select></p>";
+    }
+
+    // A customs bill on the doorstep is exactly the kind of surprise this shop
+    // exists not to spring on people, so it is said before anyone pays.
+    var customs = quote && quote.customsRisk
+      ? '<p class="bk-note">Posted from the UK — there may be an import charge to pay on delivery, which we don\'t collect and can\'t predict.</p>'
+      : "";
+
     els.foot.innerHTML =
+      picker +
       rows +
       (note ? '<p class="bk-note">' + note + "</p>" : "") +
+      customs +
       '<p class="bk-err" hidden></p>' +
-      '<button class="btn btn-primary bk-go" type="button">Checkout</button>' +
-      '<p class="bk-note">We only deliver within the UK at the moment.</p>';
+      '<button class="btn btn-primary bk-go" type="button">Checkout</button>';
 
     els.foot.querySelector(".bk-go").addEventListener("click", checkout);
+    var sel = els.foot.querySelector(".bk-country");
+    if (sel) sel.addEventListener("change", function () {
+      country = sel.value;
+      try { localStorage.setItem(COUNTRY_KEY, country); } catch (e) { /* fine */ }
+      refreshQuote();
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
   }
 
   // --------------------------------------------------------------- state ---
@@ -337,12 +389,20 @@
     fetch("/api/quote", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ items: basket.map(function (l) { return { id: l.id, qty: l.qty }; }) }),
+      body: JSON.stringify({
+        country: country,
+        items: basket.map(function (l) { return { id: l.id, qty: l.qty }; }),
+      }),
     })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (q) {
         if (seq !== quoteSeq || !q) return;
         quote = q;
+        // The server has the last word on where this basket can go. If the
+        // remembered country is not one of them it says so, and the picker
+        // follows rather than showing a choice that would be refused at
+        // payment.
+        if (q.country) country = q.country;
         if (basket.length) renderFoot();
       })
       .catch(function () { /* the basket still works; the total just says items only */ });
@@ -366,6 +426,7 @@
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
+        country: country,
         items: basket.map(function (l) { return { id: l.id, size: l.size, qty: l.qty }; }),
       }),
     })
@@ -442,6 +503,7 @@
     buildPanel();
     buildButton();
     basket = load();
+    country = loadCountry();
     render();
     document.addEventListener("click", interceptBuy, true);
   }
