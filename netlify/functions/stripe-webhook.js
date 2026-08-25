@@ -1,7 +1,12 @@
 // Stripe calls this the moment a payment succeeds. This is the whole
 // fulfilment pipeline for the site — no Zapier, no Payhip/Gumroad account:
-//   digital item  -> email the buyer their download link, via Resend
-//   physical item -> create the order in Printify, via the Printify API
+//   digital items  -> email the buyer their download links, via Resend
+//   physical items -> create the orders in Printify, via the Printify API
+//
+// A basket can now hold several things at once, which changes the shape of
+// this: one payment can mean one email with three downloads AND two separate
+// Printify orders, because items made by different print providers ship as
+// separate parcels and Printify wants one order per provider.
 //
 // Requires these env vars in Netlify (Site settings -> Environment variables):
 //   STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET   (Stripe -> Developers -> Webhooks)
@@ -15,10 +20,42 @@
 import Stripe from "stripe";
 import catalog from "./catalog.json";
 
+// create-checkout.js writes the basket as "id~variant~qty~size|id~variant~qty~size",
+// split across basket_0, basket_1... because Stripe caps a metadata value at
+// 500 characters. Rejoin in index order — a basket reassembled out of order
+// would still parse and would still be wrong.
+function readBasket(metadata = {}) {
+  const parts = [];
+  for (let i = 0; metadata[`basket_${i}`] != null; i++) parts.push(metadata[`basket_${i}`]);
+  const encoded = parts.join("");
 
-async function sendDownloadEmail({ toEmail, item }) {
+  if (!encoded) {
+    // A session created before baskets existed, or by an older cached page.
+    if (!metadata.product_id) return [];
+    return [{
+      id: metadata.product_id,
+      variantId: Number(metadata.variant_id) || null,
+      qty: 1,
+      size: metadata.size || null,
+    }];
+  }
+
+  return encoded.split("|").filter(Boolean).map((row) => {
+    const [id, variantId, qty, size] = row.split("~");
+    return {
+      id,
+      variantId: Number(variantId) || null,
+      qty: Math.max(1, Number(qty) || 1),
+      size: size || null,
+    };
+  });
+}
+
+async function sendDownloadEmail({ toEmail, items }) {
   const site = process.env.SITE_URL;
-  const downloadUrl = `${site}/digital/${item.file}`;
+  const links = items
+    .map((item) => `<p><a href="${site}/digital/${item.file}">${item.name}</a></p>`)
+    .join("\n");
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -28,10 +65,10 @@ async function sendDownloadEmail({ toEmail, item }) {
     body: JSON.stringify({
       from: process.env.FROM_EMAIL,
       to: toEmail,
-      subject: `Your download: ${item.name}`,
-      html: `<p>Thanks for your order! Here's your download:</p>
-             <p><a href="${downloadUrl}">${item.name}</a></p>
-             <p>For personal and household use — print freely, please don't resell or redistribute the file.</p>
+      subject: items.length === 1 ? `Your download: ${items[0].name}` : `Your ${items.length} downloads`,
+      html: `<p>Thanks for your order! Here ${items.length === 1 ? "it is" : "they are"}:</p>
+             ${links}
+             <p>For personal and household use — print freely, please don't resell or redistribute the files.</p>
              <p>🐸 Frog Logic</p>`,
     }),
   });
@@ -40,16 +77,12 @@ async function sendDownloadEmail({ toEmail, item }) {
   }
 }
 
-async function createPrintifyOrder({ session, item }) {
+// One Printify order per print provider. Printify will not accept a single
+// order spanning two providers, and splitting is not optional — it is what is
+// physically happening, since each provider posts its own parcel.
+async function createPrintifyOrder({ session, providerKey, lines }) {
   const shopId = process.env.PRINTIFY_SHOP_ID;
   const apiKey = process.env.PRINTIFY_API_KEY;
-  // The size the customer picked, written into the session server-side by
-  // create-checkout.js. Falling back to the catalogue default is only right for
-  // one-size items — for a garment it would be the wrong size, so say so loudly.
-  const variantId = Number(session.metadata?.variant_id) || item.printifyVariantId;
-  if (Array.isArray(item.sizes) && !session.metadata?.variant_id) {
-    console.error("Ordering", item.id, "with no size in the session metadata — check create-checkout");
-  }
   const addr = session.shipping_details?.address;
   const name = session.shipping_details?.name || session.customer_details?.name || "";
   const [first_name, ...rest] = name.split(" ");
@@ -58,11 +91,15 @@ async function createPrintifyOrder({ session, item }) {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "content-type": "application/json" },
     body: JSON.stringify({
-      external_id: session.id,
-      label: session.metadata?.size ? `${item.id} (${session.metadata.size})` : item.id,
-      line_items: [
-        { product_id: item.printifyProductId, variant_id: variantId, quantity: 1 },
-      ],
+      // Unique per provider: Printify rejects a repeated external_id, so a
+      // two-parcel order would silently lose its second half without this.
+      external_id: `${session.id}-${providerKey}`,
+      label: lines.map((l) => (l.size ? `${l.item.id} (${l.size}) x${l.qty}` : `${l.item.id} x${l.qty}`)).join(", ").slice(0, 250),
+      line_items: lines.map((l) => ({
+        product_id: l.item.printifyProductId,
+        variant_id: l.variantId || l.item.printifyVariantId,
+        quantity: l.qty,
+      })),
       shipping_method: 1,
       send_shipping_notification: true,
       address_to: {
@@ -107,26 +144,62 @@ export default async (req) => {
   }
 
   const session = event.data.object;
-  const productId = session.metadata?.product_id;
-  const item = catalog.find((p) => p.id === productId);
+  const rows = readBasket(session.metadata);
 
-  if (!item) {
-    console.error("Webhook: unknown product_id in session metadata", productId);
+  if (!rows.length) {
+    console.error("Webhook: no basket in session metadata", session.id);
     return new Response("ok", { status: 200 }); // ack anyway, nothing more we can do
   }
 
-  try {
-    if (item.type === "digital") {
-      await sendDownloadEmail({ toEmail: session.customer_details?.email, item });
-    } else {
-      await createPrintifyOrder({ session, item });
+  const lines = [];
+  for (const row of rows) {
+    const item = catalog.find((p) => p.id === row.id);
+    if (!item) { console.error("Webhook: unknown product id", row.id, "in session", session.id); continue; }
+    if (Array.isArray(item.sizes) && !row.variantId) {
+      console.error("Ordering", item.id, "with no size — check create-checkout");
     }
-  } catch (err) {
+    lines.push({ ...row, item });
+  }
+
+  const digital = lines.filter((l) => l.item.type === "digital").map((l) => l.item);
+  const physical = lines.filter((l) => l.item.type === "physical");
+
+  // Grouped by provider, because that is one parcel and one Printify order.
+  const byProvider = new Map();
+  for (const l of physical) {
+    const k = String(l.item.shipping?.provider ?? `unknown-${l.item.id}`);
+    byProvider.set(k, [...(byProvider.get(k) || []), l]);
+  }
+
+  // Each fulfilment is attempted on its own. One failing maker must not stop
+  // the others, and a failed Printify order must not stop the download email —
+  // a customer who paid for four things should get the three that worked.
+  const failures = [];
+
+  if (digital.length) {
+    try {
+      await sendDownloadEmail({ toEmail: session.customer_details?.email, items: digital });
+    } catch (err) {
+      failures.push(`downloads (${digital.map((d) => d.id).join(", ")}): ${err.message}`);
+    }
+  }
+
+  for (const [providerKey, group] of byProvider) {
+    try {
+      await createPrintifyOrder({ session, providerKey, lines: group });
+    } catch (err) {
+      failures.push(`printify ${providerKey} (${group.map((l) => l.item.id).join(", ")}): ${err.message}`);
+    }
+  }
+
+  if (failures.length) {
     // Log loudly (visible in Netlify's function log) but still ack Stripe —
     // otherwise Stripe will keep retrying a payment that already succeeded.
     // A failure here means a paying customer with no fulfilment yet, so this
     // log is where to look first if someone emails asking "where's my order?"
-    console.error("Fulfilment failed for", productId, err);
+    console.error(`Fulfilment problems on session ${session.id}:\n  ` + failures.join("\n  "));
+  } else {
+    console.log(`Fulfilled ${session.id}: ${digital.length} download(s), ${byProvider.size} parcel(s)`);
   }
 
   return new Response("ok", { status: 200 });
