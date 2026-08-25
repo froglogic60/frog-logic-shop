@@ -28,6 +28,16 @@ if (!KEY) { console.error("PRINTIFY_API_KEY is not set"); process.exit(1); }
 const LIMIT = Number(process.env.LIMIT) || 10;
 const KEEP = !!process.env.KEEP;
 
+// Every size on the blueprint gets sampled, not just the first. The first run
+// of this script priced one variant per maker and reported £2.69 for a maker
+// the shop is already paying £5.46 to — because it had silently sampled a
+// smaller sticker. Size is the whole question, so read all of them.
+const MAX_VARIANTS = Number(process.env.MAX_VARIANTS) || 24;
+
+// The variant the ten live stickers are actually built on, so its row can be
+// marked in the report rather than having to be matched up by eye.
+const LIVE_VARIANT = 92315;
+
 // What the shop charges today, and the two prices worth testing against.
 const PRICES = [350, 450, 650];
 
@@ -114,7 +124,7 @@ async function sweep() {
         if (!vars.length) continue;
         out.push({
           blueprint: bp, provider: pr, country,
-          variant: vars[0], variantCount: vars.length,
+          variants: vars.slice(0, MAX_VARIANTS), variantCount: vars.length,
           shipGB: await ukShipping(bp.id, pr.id),
         });
       }
@@ -156,30 +166,35 @@ async function sweep() {
   const undeleted = [];
   for (const c of candidates.slice(0, LIMIT)) {
     const label = `${c.blueprint.title} | ${c.provider.title} (${c.country})`;
+    console.log(`\n${label} — ${c.variants.length} of ${c.variantCount} size(s)`);
     let productId = null;
     try {
-      const ph = c.variant.placeholders.find((x) => /front|default/i.test(x.position)) || c.variant.placeholders[0];
+      const first = c.variants[0];
+      const ph = first.placeholders.find((x) => /front|default/i.test(x.position)) || first.placeholders[0];
+      const ids = c.variants.map((v) => v.id);
       const created = await api(`/shops/${SHOP}/products.json`, "POST", {
         title: "COST PROBE — delete me",
-        description: "Temporary product created to read a base cost. Safe to delete.",
+        description: "Temporary product created to read base costs. Safe to delete.",
         blueprint_id: c.blueprint.id,
         print_provider_id: c.provider.id,
-        variants: [{ id: c.variant.id, price: 999, is_enabled: true }],
-        print_areas: [{ variant_ids: [c.variant.id], placeholders: [{ position: ph.position, images: [{ id: image.id, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] }],
+        variants: ids.map((id) => ({ id, price: 999, is_enabled: true })),
+        print_areas: [{ variant_ids: ids, placeholders: [{ position: ph.position, images: [{ id: image.id, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] }],
       });
       productId = created.id;
-      const v = (created.variants || []).find((x) => x.id === c.variant.id) || (created.variants || [])[0];
-      const cost = v ? v.cost : null;
-      rows.push({
-        blueprint: c.blueprint.title, blueprintId: c.blueprint.id,
-        provider: c.provider.title, providerId: c.provider.id,
-        country: c.country, variantId: c.variant.id, variantTitle: c.variant.title,
-        cost, ukShipping: c.shipGB,
-        margins: Object.fromEntries(PRICES.map((p) => [p, cost == null ? null : p - cost])),
-      });
-      console.log(`  ${pad(label, 58)} cost ${gbp(cost)}  post ${gbp(c.shipGB)}`);
+      for (const v of created.variants || []) {
+        const src = c.variants.find((x) => x.id === v.id);
+        rows.push({
+          blueprint: c.blueprint.title, blueprintId: c.blueprint.id,
+          provider: c.provider.title, providerId: c.provider.id,
+          country: c.country, variantId: v.id, variantTitle: (src && src.title) || v.title || String(v.id),
+          live: v.id === LIVE_VARIANT,
+          cost: v.cost, ukShipping: c.shipGB,
+          margins: Object.fromEntries(PRICES.map((p) => [p, v.cost == null ? null : p - v.cost])),
+        });
+        console.log(`  ${v.id === LIVE_VARIANT ? "*" : " "} ${pad((src && src.title) || v.id, 40)} cost ${gbp(v.cost)}`);
+      }
     } catch (e) {
-      console.log(`  ${pad(label, 58)} FAILED — ${e.message.slice(0, 80)}`);
+      console.log(`  FAILED — ${e.message.slice(0, 120)}`);
     } finally {
       if (productId && !KEEP) {
         try { await api(`/shops/${SHOP}/products/${productId}.json`, "DELETE"); }
@@ -195,29 +210,39 @@ async function sweep() {
   console.log("\n" + "=".repeat(78));
   console.log("BASE COST, CHEAPEST FIRST");
   console.log("=".repeat(78));
-  console.log(pad("maker", 44) + pad("cost", 9) + pad("UK post", 9) + PRICES.map((p) => pad("@" + (p / 100).toFixed(2), 8)).join(""));
+  console.log(pad("maker / size", 46) + pad("cost", 9) + pad("UK post", 9) + PRICES.map((p) => pad("@" + (p / 100).toFixed(2), 8)).join(""));
   for (const r of priced) {
     console.log(
-      pad(`${r.provider} (${r.country})`, 44) +
+      (r.live ? "* " : "  ") +
+      pad(`${r.provider} (${r.country}) — ${r.variantTitle}`, 44) +
       pad(gbp(r.cost), 9) + pad(gbp(r.ukShipping), 9) +
       PRICES.map((p) => pad((r.margins[p] < 0 ? "-" : "+") + "£" + (Math.abs(r.margins[p]) / 100).toFixed(2), 8)).join("")
     );
   }
+  console.log("\n* = the size the ten live stickers are built on today.");
 
-  const current = priced.find((r) => /sticky products europe/i.test(r.provider));
+  const current = priced.find((r) => r.live);
   const best = priced[0];
   console.log("\n" + "-".repeat(78));
   if (!best) {
     console.log("No candidate returned a base cost. Nothing can be concluded from this run.");
-  } else if (current && best.providerId === current.providerId) {
-    console.log(`The maker already in use (${current.provider}) is the cheapest of the ${priced.length} sampled.`);
-    console.log("So repricing or repacking is the only way out, not switching maker.");
+  } else if (current && best.variantId === current.variantId) {
+    console.log(`The size already in use (${current.provider} — ${current.variantTitle}) is the cheapest of the ${priced.length} sampled.`);
+    console.log("So repricing or repacking is the only way out, not switching size or maker.");
   } else {
-    const saving = current ? current.cost - best.cost : null;
-    console.log(`Cheapest: ${best.provider} (${best.country}) at ${gbp(best.cost)} + ${gbp(best.ukShipping)} UK postage.`);
-    if (saving != null) console.log(`That is ${gbp(saving)} per sticker cheaper than the maker in use.`);
-    console.log(`At £3.50 it ${best.margins[350] >= 0 ? "makes" : "still loses"} ${gbp(Math.abs(best.margins[350]))} a sale.`);
+    console.log(`Cheapest: ${best.provider} (${best.country}) — ${best.variantTitle}`);
+    console.log(`  ${gbp(best.cost)} base + ${gbp(best.ukShipping)} UK postage.`);
+    if (current) {
+      console.log(`In use today: ${current.provider} — ${current.variantTitle} at ${gbp(current.cost)}.`);
+      console.log(`Switching would save ${gbp(current.cost - best.cost)} a sticker — but it is a different size,`);
+      console.log("so this is a product decision, not just a cheaper supplier.");
+    }
+    console.log(`At £3.50 the cheapest ${best.margins[350] >= 0 ? "makes" : "still loses"} ${gbp(Math.abs(best.margins[350]))} a sale.`);
   }
+  const gbOnly = priced.filter((r) => r.country === "GB");
+  console.log(gbOnly.length
+    ? `${gbOnly.length} UK-based option(s) in this sample.`
+    : "No UK-based sticker maker appeared in the catalogue at all — every option posts from the EU.");
   console.log("Postage is charged on top and is not in these margins.");
 
   if (undeleted.length) {
