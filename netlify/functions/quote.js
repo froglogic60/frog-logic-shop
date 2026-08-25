@@ -13,7 +13,7 @@
 // basket change.
 
 import catalog from "./catalog.json";
-import { postageFor } from "./create-checkout.js";
+import { postageFor, destinationsFor, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
 
 const FREE_DELIVERY_OVER = 5000;
 const MAX_QTY = 20;
@@ -39,18 +39,30 @@ export default async (req) => {
 
   const goods = lines.reduce((sum, l) => sum + Math.round(l.item.price * 100) * l.qty, 0);
   const physical = lines.filter((l) => l.item.type === "physical");
-  const { total: rawPostage, parcels } = postageFor(physical);
-  const freeDelivery = goods >= FREE_DELIVERY_OVER;
+
+  // Where this basket can go, and where it is going. An unservable choice falls
+  // back to the UK rather than erroring: the basket is not the place to argue,
+  // and create-checkout refuses properly if it is still wrong at payment.
+  const destinations = destinationsFor(lines);
+  let country = String(body.country || "GB").toUpperCase();
+  if (!destinations.includes(country)) country = "GB";
+
+  const { total: rawPostage, parcels, unknown } = postageFor(physical, country);
+  const freeDelivery = country === "GB" && goods >= FREE_DELIVERY_OVER;
   const postage = physical.length === 0 ? 0 : freeDelivery ? 0 : rawPostage;
 
   return json({
+    country,
+    destinations: destinations.map((c) => ({ code: c, name: COUNTRY_NAMES[c] || c })),
+    customsRisk: physical.length > 0 && CUSTOMS_RISK(country),
+    ...(unknown.length ? { noRateFor: unknown } : {}),
     goods,
     postage,
     total: goods + postage,
     freeDelivery,
     // How much more is needed to reach free delivery, so the basket can say so
     // plainly instead of leaving people to work it out.
-    toFreeDelivery: physical.length && !freeDelivery ? FREE_DELIVERY_OVER - goods : 0,
+    toFreeDelivery: physical.length && country === "GB" && !freeDelivery ? FREE_DELIVERY_OVER - goods : 0,
     freeDeliveryOver: FREE_DELIVERY_OVER,
     // Two parcels is not a mistake to hide — it is why the postage is what it
     // is, and saying so is cheaper than an email asking about it.
