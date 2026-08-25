@@ -21,6 +21,23 @@
 //
 // Rates are in pence, read from Printify's own catalogue. Run it again whenever
 // Printify changes prices.
+//
+// EVERYWHERE ELSE
+// ---------------
+// Those two figures are the UK ones, and the checkout was UK-only because of
+// it: charging a Dublin address a UK rate for a parcel that costs more to send
+// loses money on every order. So this also writes every zone each maker
+// quotes into netlify/functions/shipping-zones.json:
+//
+//   { "providers": { "99": { "name": "…", "zones": [
+//       { "countries": ["GB"], "first": 349, "additional": 199 },
+//       { "countries": ["IE","FR","DE",…], "first": 599, "additional": 299 },
+//       { "countries": ["REST_OF_THE_WORLD"], "first": 999, "additional": 499 }
+//   ] } } }
+//
+// Kept in its own file rather than on each of the 122 catalogue entries: the
+// country lists are long and identical for every product a maker makes, so
+// repeating them 122 times would be a megabyte of the same thing.
 const fs = require("fs");
 const path = require("path");
 
@@ -29,6 +46,7 @@ let SHOP = process.env.PRINTIFY_SHOP_ID;
 if (!KEY) { console.error("PRINTIFY_API_KEY is not set"); process.exit(1); }
 
 const CATALOG = path.join(__dirname, "../../netlify/functions/catalog.json");
+const ZONES = path.join(__dirname, "../../netlify/functions/shipping-zones.json");
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const GAP_MS = 150;
@@ -62,20 +80,51 @@ async function getCached(p) {
 
 const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
 
-// The GB profile if there is one, otherwise whatever covers the rest of the
+// Every destination a maker quotes, collapsed into zones.
+//
+// Printify's profiles are per variant as well as per country, so the same
+// country can appear more than once at different prices — a hoodie posts for
+// more than a tee even from the same maker. Where that happens this keeps the
+// DEAREST, because over-covering costs a few pence and under-covering costs the
+// difference on every order for as long as nobody notices.
+//
+// Countries that end up on the same pair of rates are then grouped, which turns
+// forty near-identical rows into three or four real zones.
+function zonesFrom(shipping) {
+  const byCountry = new Map();
+  for (const p of shipping.profiles || []) {
+    const first = p.first_item?.cost;
+    if (first == null) continue;
+    const additional = p.additional_items?.cost ?? first;
+    for (const c of p.countries || []) {
+      const prev = byCountry.get(c);
+      if (!prev || first > prev.first) byCountry.set(c, { first, additional });
+    }
+  }
+  if (!byCountry.size) return null;
+
+  const groups = new Map();
+  for (const [country, r] of byCountry) {
+    const key = r.first + ":" + r.additional;
+    const g = groups.get(key) || { first: r.first, additional: r.additional, countries: [] };
+    g.countries.push(country);
+    groups.set(key, g);
+  }
+  return [...groups.values()]
+    .map((g) => ({ first: g.first, additional: g.additional, countries: g.countries.sort() }))
+    .sort((a, b) => a.first - b.first);
+}
+
+// The GB zone if there is one, otherwise whatever covers the rest of the
 // world. Falling back matters: a provider with no explicit GB row still posts
 // here, just on the catch-all rate, and pretending otherwise would under-charge.
-function ukRates(shipping) {
-  const profiles = shipping.profiles || [];
-  const gb = profiles.find((p) => (p.countries || []).includes("GB"));
-  const rest = profiles.find((p) => (p.countries || []).includes("REST_OF_THE_WORLD"));
+function ukRates(zones) {
+  if (!zones) return null;
+  const gb = zones.find((z) => z.countries.includes("GB"));
+  const rest = zones.find((z) => z.countries.includes("REST_OF_THE_WORLD"));
   const chosen = gb || rest;
   if (!chosen) return null;
-  return {
-    first: chosen.first_item?.cost ?? null,
-    additional: chosen.additional_items?.cost ?? null,
-    explicitGB: !!gb,
-  };
+  return { first: chosen.first, additional: chosen.additional, explicitGB: !!gb };
 }
 
 (async () => {
@@ -90,7 +139,8 @@ function ukRates(shipping) {
   const live = catalog.filter((x) => x.type === "physical" && x.printifyProductId);
   console.log(`${live.length} orderable products to price up\n`);
 
-  const providers = new Map();   // providerId -> { title, country, first, additional }
+  const providers = new Map();   // "blueprint:provider" -> { title, first, additional, zones }
+  const zoneTable = {};          // the same, flattened for the checkout to read
   const problems = [];
   let done = 0;
 
@@ -108,16 +158,17 @@ function ukRates(shipping) {
 
     const key = `${bpId}:${prId}`;
     if (!providers.has(key)) {
-      let rates = null, title = String(prId);
+      let rates = null, zones = null, title = String(prId);
       try {
-        rates = ukRates(await getCached(`/catalog/blueprints/${bpId}/print_providers/${prId}/shipping.json`));
+        zones = zonesFrom(await getCached(`/catalog/blueprints/${bpId}/print_providers/${prId}/shipping.json`));
+        rates = ukRates(zones);
       } catch (e) {
         problems.push(`${item.id}: no shipping profile — ${e.message.slice(0, 60)}`);
       }
       try {
         title = (await getCached(`/catalog/print_providers/${prId}.json`)).title || title;
       } catch { /* the name is cosmetic; the rates are not */ }
-      providers.set(key, rates ? { ...rates, title, providerId: prId } : null);
+      providers.set(key, rates ? { ...rates, zones, title, providerId: prId } : null);
     }
 
     const p = providers.get(key);
@@ -131,8 +182,14 @@ function ukRates(shipping) {
       providerName: p.title,
       first: p.first,
       additional: p.additional == null ? p.first : p.additional,
+      // Rates differ by blueprint as well as by maker — a hoodie posts for more
+      // than a tee from the same place — so the zone table is keyed by the pair,
+      // not by the maker alone. Parcel grouping still goes by maker, because
+      // that is what decides how many boxes there are.
+      zoneKey: key,
       ...(p.explicitGB ? {} : { restOfWorldRate: true }),
     };
+    if (p.zones) zoneTable[key] = { name: p.title, provider: prId, zones: p.zones };
     done++;
   }
 
@@ -175,6 +232,49 @@ function ukRates(shipping) {
     process.exit(1);
   }
 
+  // Which destinations can actually be served — a country only counts if EVERY
+  // maker will post to it, because a basket can hold anything and a checkout
+  // that takes the money and then cannot fulfil one line is worse than a
+  // checkout that never offered the country.
+  const served = [];
+  const keys = Object.keys(zoneTable);
+  if (keys.length) {
+    const sets = keys.map((k) => {
+      const z = zoneTable[k].zones;
+      if (z.some((x) => x.countries.includes("REST_OF_THE_WORLD"))) return null; // posts anywhere
+      return new Set(z.flatMap((x) => x.countries));
+    });
+    const explicit = sets.filter(Boolean);
+    const universe = explicit.length
+      ? [...explicit[0]]
+      : [...new Set(keys.flatMap((k) => zoneTable[k].zones.flatMap((x) => x.countries)))];
+    for (const c of universe) {
+      if (c === "REST_OF_THE_WORLD") continue;
+      if (explicit.every((s) => s.has(c))) served.push(c);
+    }
+    served.sort();
+  }
+
+  console.log("\nZONES");
+  console.log("=".repeat(66));
+  for (const k of keys) {
+    const z = zoneTable[k];
+    console.log(`${z.name} (${k})`);
+    for (const zone of z.zones) {
+      const shown = zone.countries.length > 6
+        ? zone.countries.slice(0, 6).join(",") + ` +${zone.countries.length - 6}`
+        : zone.countries.join(",");
+      console.log("   " + gbp(zone.first).padEnd(8) + "then " + gbp(zone.additional).padEnd(8) + shown);
+    }
+  }
+  console.log(`\n${served.length} countries every maker will post to:`);
+  console.log("  " + served.join(" "));
+
   fs.writeFileSync(CATALOG, JSON.stringify(catalog, null, 2) + "\n");
+  fs.writeFileSync(
+    ZONES,
+    JSON.stringify({ providers: zoneTable, servedEverywhere: served }, null, 2) + "\n"
+  );
   console.log(`\nwrote shipping rates for all ${done} orderable products into catalog.json`);
+  console.log(`wrote ${keys.length} zone tables into netlify/functions/shipping-zones.json`);
 })().catch((e) => { console.error(e); process.exit(1); });
