@@ -88,6 +88,7 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
 
   const problems = [];
   let changed = 0;
+  let diagnosed = false;
 
   for (const item of stickers) {
     const label = `${item.id} (${item.name})`;
@@ -161,6 +162,34 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
       });
     } catch (e) {
       problems.push(`${label}: update refused — ${e.message.slice(0, 600)}`);
+      // Printify's validation messages name a field, not a cause. Rather than
+      // guess at the payload shape again, ask the catalogue what this blueprint
+      // and provider actually offer, and print it once.
+      if (!diagnosed) {
+        diagnosed = true;
+        console.log("\n--- what Printify thinks this product is ---");
+        console.log("blueprint:", product.blueprint_id, "provider:", product.print_provider_id,
+          "locked:", product.is_locked, "visible:", product.visible);
+        console.log("variants on the product:", (product.variants || []).length,
+          "| enabled:", (product.variants || []).filter((v) => v.is_enabled).map((v) => v.id).join(","));
+        console.log("print_areas:", JSON.stringify((product.print_areas || []).map((a) => ({
+          variant_ids: a.variant_ids,
+          placeholders: (a.placeholders || []).map((ph) => ({ position: ph.position, images: (ph.images || []).length })),
+        }))));
+        try {
+          const cat = await api(`/catalog/blueprints/${product.blueprint_id}/print_providers/${product.print_provider_id}/variants.json`);
+          const list = cat.variants || [];
+          console.log("catalogue offers", list.length, "variants for that pair");
+          const t = list.find((v) => v.id === TO_VARIANT);
+          console.log("target", TO_VARIANT, t ? "IS offered: " + t.title : "is NOT offered by this pair");
+          if (t) console.log("its placeholders:", JSON.stringify((t.placeholders || []).map((ph) => ph.position)));
+          const f = list.find((v) => v.id === FROM_VARIANT);
+          if (f) console.log("current", FROM_VARIANT, "placeholders:", JSON.stringify((f.placeholders || []).map((ph) => ph.position)));
+        } catch (e2) {
+          console.log("could not read the catalogue variants:", e2.message.slice(0, 200));
+        }
+        console.log("--- end ---\n");
+      }
       continue;
     }
 
