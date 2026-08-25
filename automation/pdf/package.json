@@ -1,0 +1,5 @@
+{
+  "name": "frog-logic-pdf",
+  "private": true,
+  "//": "No \"type\" field on purpose. The repo root sets \"type\": \"module\" for the Netlify functions, which would make every .js file here an ES module and break require(). automation/social does the same thing for the same reason."
+}
