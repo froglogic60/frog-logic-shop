@@ -28,7 +28,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "02-hyperfocused",
@@ -37,7 +43,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc0fdb8c6212d72054f8b",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "03-shutdown-mode",
@@ -46,7 +58,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc1009178f085df05a1e0",
-    "printifyVariantId": 91848
+    "printifyVariantId": 91848,
+    "shipping": {
+      "provider": 94,
+      "providerName": "Harrier",
+      "first": 439,
+      "additional": 129
+    }
   },
   {
     "id": "04-47-things-at-once",
@@ -55,7 +73,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c11ef3d753324803ceaa",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "05-info-dump-incoming",
@@ -64,7 +88,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c123d8291a248e0250ef",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "06-infinity",
@@ -73,7 +103,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c127ef8f20f9810abe03",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "07-touched-out",
@@ -82,7 +118,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c12a0c6a0521510512e6",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "08-low-spoons-today",
@@ -120,7 +162,13 @@
         "size": "2XL",
         "variantId": 32874
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 449,
+      "additional": 299
+    }
   },
   {
     "id": "10-executive-dysfunction",
@@ -129,7 +177,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c12e0c6a0521510512ea",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "11-waiting-mode",
@@ -138,7 +192,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c134d8291a248e02510a",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "12-time-blind",
@@ -169,7 +229,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "13-rejection-sensitive",
@@ -178,7 +244,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c13729968299dd065552",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "14-object-permanence",
@@ -187,7 +259,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c13aef8f20f9810abe16",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "15-auditory-processing",
@@ -196,7 +274,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc10fb8c6212d72054f99",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "16-stimming",
@@ -212,7 +296,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c13f29968299dd06555a",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "18-parallel-play",
@@ -243,7 +333,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "19-demand-avoidant",
@@ -252,7 +348,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c143f3d753324803cec1",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "20-snacks-and-spite",
@@ -261,7 +363,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c14629968299dd065565",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "21-autistic-joy",
@@ -270,7 +378,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c14a761b9bbd8008c5f7",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "22-interoception",
@@ -279,7 +393,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c14e08274c014000d6c6",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "23-do-not-perceive-me",
@@ -288,7 +408,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c151cf106ff5b3072c49",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "24-late-diagnosed",
@@ -319,7 +445,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "25-monotropic",
@@ -328,7 +460,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc11ffdd5a017170fed1f",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "26-justice-sensitive",
@@ -337,7 +475,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c15508274c014000d6cc",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "27-regulation-loading",
@@ -346,7 +490,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc122b8c6212d72054fa2",
-    "printifyVariantId": 91848
+    "printifyVariantId": 91848,
+    "shipping": {
+      "provider": 94,
+      "providerName": "Harrier",
+      "first": 439,
+      "additional": 129
+    }
   },
   {
     "id": "28-sensory-seeking",
@@ -384,7 +534,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "30-recharging",
@@ -393,7 +549,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c15908274c014000d6d7",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "31-ask-me-about-it",
@@ -424,7 +586,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "32-unreasonably-delighted",
@@ -433,7 +601,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c15ed8291a248e02513d",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "33-i-notice-everything",
@@ -442,7 +616,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc132dbf9aebaf708a16a",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "34-happy-flappy",
@@ -458,7 +638,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c164d8291a248e025150",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "36-comfort-rewatch",
@@ -467,7 +653,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c167d8291a248e025157",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "37-same-meal-still-perfect",
@@ -476,7 +668,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c16bf3d753324803cf1c",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "38-pattern-recognition",
@@ -507,7 +705,13 @@
         "size": "2XL",
         "variantId": 32874
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 449,
+      "additional": 299
+    }
   },
   {
     "id": "39-enthusiasm-unmasked",
@@ -538,7 +742,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "40-small-things-enormous-joy",
@@ -547,7 +757,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c16ff3d753324803cf27",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "41-never-too-much",
@@ -556,7 +772,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c174761b9bbd8008c655",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "42-nothing-needs-fixing",
@@ -587,7 +809,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "43-not-broken",
@@ -596,7 +824,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c17af3d753324803cf48",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "44-functioning-as-designed",
@@ -605,7 +839,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc1482a3603eb2d0d5e50",
-    "printifyVariantId": 91848
+    "printifyVariantId": 91848,
+    "shipping": {
+      "provider": 94,
+      "providerName": "Harrier",
+      "first": 439,
+      "additional": 129
+    }
   },
   {
     "id": "45-enough",
@@ -636,7 +876,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "46-it-was-precision",
@@ -645,7 +891,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc152dbf9aebaf708a18a",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "47-you-were-paying-attention",
@@ -654,7 +906,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c18008274c014000d721",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "48-you-made-it-this-far",
@@ -663,7 +921,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c183761b9bbd8008c66c",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "49-loved-as-standard",
@@ -679,7 +943,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c18608274c014000d725",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "51-in-writing-please",
@@ -710,7 +980,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "52-i-accommodated-you-first",
@@ -719,7 +995,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c18bcf106ff5b3072ca3",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "53-believe-me-the-first-time",
@@ -728,7 +1010,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c18ff3d753324803cf74",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "54-asking-is-not-failing",
@@ -737,7 +1025,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc15cdbf9aebaf708a1ab",
-    "printifyVariantId": 91848
+    "printifyVariantId": 91848,
+    "shipping": {
+      "provider": 94,
+      "providerName": "Harrier",
+      "first": 439,
+      "additional": 129
+    }
   },
   {
     "id": "55-you-noticed-without-me-asking",
@@ -753,7 +1047,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc160b8c6212d72054fdd",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "57-trust-me-with-it",
@@ -784,7 +1084,13 @@
         "size": "2XL",
         "variantId": 32874
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 449,
+      "additional": 299
+    }
   },
   {
     "id": "58-shared-interest-not-small-talk",
@@ -793,7 +1099,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c193f3d753324803cf7a",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "59-tell-me-before-you-change-it",
@@ -802,7 +1114,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c196f3d753324803cf80",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "60-recovery-is-part-of-the-plan",
@@ -811,7 +1129,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c19a761b9bbd8008c684",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "61-nobody-asked-how-you-were",
@@ -820,7 +1144,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c19e761b9bbd8008c687",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "62-twenty-minutes-counts",
@@ -829,7 +1159,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c1a2761b9bbd8008c68a",
-    "printifyVariantId": 62327
+    "printifyVariantId": 62327,
+    "shipping": {
+      "provider": 30,
+      "providerName": "OPT OnDemand",
+      "first": 779,
+      "additional": 169
+    }
   },
   {
     "id": "63-guilt-is-not-evidence",
@@ -860,7 +1196,13 @@
         "size": "2XL",
         "variantId": 18392
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "64-i-learned-their-language",
@@ -869,7 +1211,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc170f95fff6a1705fc91",
-    "printifyVariantId": 73419
+    "printifyVariantId": 73419,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 349,
+      "additional": 199
+    }
   },
   {
     "id": "65-a-different-route",
@@ -878,7 +1226,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c1a7f3d753324803cf91",
-    "printifyVariantId": 75303
+    "printifyVariantId": 75303,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 529,
+      "additional": 99
+    }
   },
   {
     "id": "66-i-see-you-too",
@@ -887,7 +1241,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a88c1abf3d753324803cf93",
-    "printifyVariantId": 92315
+    "printifyVariantId": 92315,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5
+    }
   },
   {
     "id": "67-you-re-allowed-to-find-it-hard",
@@ -896,7 +1256,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc174dbf9aebaf708a1d0",
-    "printifyVariantId": 91848
+    "printifyVariantId": 91848,
+    "shipping": {
+      "provider": 94,
+      "providerName": "Harrier",
+      "first": 439,
+      "additional": 129
+    }
   },
   {
     "id": "68-their-person",
