@@ -10,6 +10,11 @@ name: Refresh the postage rates
 #
 # The script refuses to write unless every orderable product got a rate, because
 # a product with no rate would silently ship free, which is the bug being fixed.
+#
+# It also writes netlify/functions/shipping-zones.json — every destination each
+# maker quotes, not just the UK. That file is what lets the checkout offer
+# anywhere beyond GB: without it the shop falls back to the flat UK rate and
+# offers the UK only, which is how it behaved before.
 on:
   workflow_dispatch:
 permissions:
@@ -39,11 +44,30 @@ jobs:
             const makers = new Set(live.map((x) => x.shipping.providerName));
             console.log(makers.size, "maker(s):", [...makers].join(", "));
           '
+      - name: Check the zone table covers every maker
+        # A zone table missing a maker is not an error — the checkout just keeps
+        # that maker UK-only — but it is worth seeing, because it is the reason
+        # a country quietly stops being offered.
+        run: |
+          node -e '
+            const cat = require("./netlify/functions/catalog.json");
+            const z = require("./netlify/functions/shipping-zones.json");
+            const keys = Object.keys(z.providers || {});
+            console.log(keys.length, "zone table(s)");
+            const live = cat.filter((x) => x.type === "physical" && x.printifyProductId);
+            const missing = [...new Set(live.filter((x) => !z.providers[x.shipping.zoneKey]).map((x) => x.shipping.providerName))];
+            if (missing.length) console.log("no zones for:", missing.join(", "), "— those stay UK-only");
+            console.log("every maker posts to:", (z.servedEverywhere || []).join(" ") || "(UK only)");
+            for (const k of keys) {
+              const t = z.providers[k];
+              console.log(" ", t.name, "-", t.zones.length, "zone(s), from £" + (t.zones[0].first / 100).toFixed(2));
+            }
+          '
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add netlify/functions/catalog.json
+          git add netlify/functions/catalog.json netlify/functions/shipping-zones.json
           git status --short
           git commit -m "Refresh the postage rates [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
