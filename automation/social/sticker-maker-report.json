@@ -1,5 +1,5 @@
 {
-  "sampledAt": "2026-08-25T15:53:20.573Z",
+  "sampledAt": "2026-08-25T16:05:05.143Z",
   "prices": [
     350,
     450,
@@ -15,12 +15,81 @@
       "country": "CZ",
       "variantId": 65210,
       "variantTitle": "15\" × 15\"",
+      "live": false,
       "cost": 651,
       "ukShipping": 629,
       "margins": {
         "350": -301,
         "450": -201,
         "650": -1
+      }
+    },
+    {
+      "blueprint": "Square Vinyl Stickers",
+      "blueprintId": 476,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65211,
+      "variantTitle": "2\" × 2\"",
+      "live": false,
+      "cost": 382,
+      "ukShipping": 629,
+      "margins": {
+        "350": -32,
+        "450": 68,
+        "650": 268
+      }
+    },
+    {
+      "blueprint": "Square Vinyl Stickers",
+      "blueprintId": 476,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65212,
+      "variantTitle": "3.5\" × 3.5\"",
+      "live": false,
+      "cost": 382,
+      "ukShipping": 629,
+      "margins": {
+        "350": -32,
+        "450": 68,
+        "650": 268
+      }
+    },
+    {
+      "blueprint": "Square Vinyl Stickers",
+      "blueprintId": 476,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65213,
+      "variantTitle": "5\" × 5\"",
+      "live": false,
+      "cost": 530,
+      "ukShipping": 629,
+      "margins": {
+        "350": -180,
+        "450": -80,
+        "650": 120
+      }
+    },
+    {
+      "blueprint": "Square Vinyl Stickers",
+      "blueprintId": 476,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65214,
+      "variantTitle": "8\" × 8\"",
+      "live": false,
+      "cost": 567,
+      "ukShipping": 629,
+      "margins": {
+        "350": -217,
+        "450": -117,
+        "650": 83
       }
     },
     {
@@ -31,12 +100,98 @@
       "country": "NL",
       "variantId": 92313,
       "variantTitle": "2\" × 2\" / 1 pc / Matte",
+      "live": false,
       "cost": 269,
       "ukShipping": 649,
       "margins": {
         "350": 81,
         "450": 181,
         "650": 381
+      }
+    },
+    {
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "blueprintId": 1216,
+      "provider": "Sticky Products Europe",
+      "providerId": 255,
+      "country": "NL",
+      "variantId": 92314,
+      "variantTitle": "3\" × 3\" / 1 pc / Matte",
+      "live": false,
+      "cost": 279,
+      "ukShipping": 649,
+      "margins": {
+        "350": 71,
+        "450": 171,
+        "650": 371
+      }
+    },
+    {
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "blueprintId": 1216,
+      "provider": "Sticky Products Europe",
+      "providerId": 255,
+      "country": "NL",
+      "variantId": 92315,
+      "variantTitle": "4\" × 4\" / 1 pc / Matte",
+      "live": true,
+      "cost": 546,
+      "ukShipping": 649,
+      "margins": {
+        "350": -196,
+        "450": -96,
+        "650": 104
+      }
+    },
+    {
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "blueprintId": 1216,
+      "provider": "Sticky Products Europe",
+      "providerId": 255,
+      "country": "NL",
+      "variantId": 92316,
+      "variantTitle": "5\" × 5\" / 1 pc / Matte",
+      "live": false,
+      "cost": 565,
+      "ukShipping": 649,
+      "margins": {
+        "350": -215,
+        "450": -115,
+        "650": 85
+      }
+    },
+    {
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "blueprintId": 1216,
+      "provider": "Sticky Products Europe",
+      "providerId": 255,
+      "country": "NL",
+      "variantId": 92317,
+      "variantTitle": "6\" × 6\" / 1 pc / Matte",
+      "live": false,
+      "cost": 583,
+      "ukShipping": 649,
+      "margins": {
+        "350": -233,
+        "450": -133,
+        "650": 67
+      }
+    },
+    {
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "blueprintId": 1216,
+      "provider": "Sticky Products Europe",
+      "providerId": 255,
+      "country": "NL",
+      "variantId": 92318,
+      "variantTitle": "9'' x 9'' / 1 pc / Matte",
+      "live": false,
+      "cost": 1074,
+      "ukShipping": 649,
+      "margins": {
+        "350": -724,
+        "450": -624,
+        "650": -424
       }
     }
   ],
