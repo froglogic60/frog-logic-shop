@@ -1,0 +1,39 @@
+name: Rename Show These Cards to When Words Go
+# One-shot. Safe to delete after it has run once.
+#
+# Two problems in one product, fixed together:
+#   1. "Show These Cards" was a placeholder name nobody settled on.
+#   2. Its description named the Hidden Disabilities Sunflower lanyard — a
+#      registered trademark Frog Logic has no affiliation with. Naming it both
+#      risks the mark and implies an endorsement that does not exist.
+#
+# The script asserts every replacement matched exactly once and refuses to
+# write if the result fails its checks, so a bad run commits nothing.
+#
+# AFTER THIS RUNS: run "Rebuild the checkout catalogue" so nothing drifts, and
+# note that digital/Show-These-Cards.pdf still carries the old title on its
+# cover and the Sunflower wording inside. There is no generator for that
+# artwork in this repo — it has to be remade by hand.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Apply the rename
+        run: node automation/social/rename-when-words-go.js
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add script.js netlify/functions/catalog.json automation/social/pinterest.js
+          git status --short
+          git commit -m "Rename Show These Cards to When Words Go, drop the Sunflower wording" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
