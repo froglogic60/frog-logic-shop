@@ -1,0 +1,87 @@
+name: Rebuild the printable PDFs
+# Not a one-shot. Run it whenever a printable's wording, name or price changes.
+#
+# The PDFs in digital/ used to have no generator at all — they were made once by
+# a tool that is no longer around. So when "Show These Cards" became "When Words
+# Go", the shop sold one name and delivered a file with another on its cover,
+# and the old text inside still named the Hidden Disabilities Sunflower, a
+# registered trademark Frog Logic is not affiliated with. Nothing in the repo
+# could fix it.
+#
+# Now the content lives in automation/pdf/products/*.json and the layout in
+# automation/pdf/build.py, rendered with WeasyPrint — the same renderer that
+# made the originals. A wording change is a JSON edit and a run of this.
+on:
+  workflow_dispatch:
+    inputs:
+      product:
+        description: "Which product to build, or --all"
+        default: "--all"
+permissions:
+  contents: write
+jobs:
+  pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install WeasyPrint and its text-shaping libraries
+        # WeasyPrint renders through Pango and Cairo. Without these the install
+        # succeeds and the first render dies, which is a confusing way to fail.
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2 libgdk-pixbuf-2.0-0
+          pip install --quiet weasyprint
+      - name: Build
+        run: python3 automation/pdf/build.py ${{ inputs.product }}
+      - name: Check the output
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, subprocess, sys
+          problems = []
+          for spec_path in glob.glob("automation/pdf/products/*.json"):
+              spec = json.load(open(spec_path, encoding="utf-8"))
+              out = spec["output"]
+              if not os.path.exists(out):
+                  problems.append(out + " was not written"); continue
+              text = subprocess.run(["pdftotext", out, "-"], capture_output=True, text=True).stdout
+              # The two things that were wrong with the original, asserted so
+              # they cannot quietly come back in a future content edit.
+              if "Sunflower" in text:
+                  problems.append(out + " still names the Sunflower lanyard")
+              if spec["title"] not in text:
+                  problems.append(out + " does not contain its own title")
+              print(out, os.path.getsize(out), "bytes")
+          if problems:
+              print("\nFAILED:"); [print("  !", p) for p in problems]; sys.exit(1)
+          print("\nall checks passed")
+          PY
+      - name: Point the checkout at the current filename
+        # catalog.json carries the filename the download link is built from.
+        # wire-catalog.js does not touch digital entries, so this is the one
+        # place a renamed printable has to be followed up by hand.
+        run: |
+          node -e '
+            const fs = require("fs");
+            const p = "netlify/functions/catalog.json";
+            const cat = JSON.parse(fs.readFileSync(p, "utf8"));
+            const e = cat.find((x) => x.id === "d18-when-words-go");
+            if (e && e.file !== "When-Words-Go.pdf") {
+              console.log("download file:", e.file, "->", "When-Words-Go.pdf");
+              e.file = "When-Words-Go.pdf";
+              fs.writeFileSync(p, JSON.stringify(cat, null, 2) + "\n");
+            } else {
+              console.log("download filename already correct");
+            }
+          '
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digital netlify/functions/catalog.json
+          git status --short
+          git commit -m "Rebuild the printable PDFs" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
