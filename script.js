@@ -1940,6 +1940,21 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="274" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${CREAM}" opacity="0.65" letter-spacing="0.12em">TWELVE SWAPS, READY TO USE</text>
       <rect width="300" height="300" fill="url(#d30)"/>${mark()}</svg>`
   },
+  {
+    num: "D31 — Printable PDF", word: "Frog Logic Stickers",
+    line: "Every design in the sticker collection, to print at home on whatever paper you already have. Eighteen designs across two sheets, 54mm square.",
+    price: "£4.50", link: "#", bg: "#2F5D50",
+    svg: `<svg viewBox="0 0 300 300">${grain("d31", 0.1)}
+      <g stroke="${CREAM}" stroke-width="1" stroke-dasharray="4 4" opacity="0.55" fill="none">
+        <rect x="42" y="52" width="66" height="66"/><rect x="117" y="52" width="66" height="66"/><rect x="192" y="52" width="66" height="66"/>
+        <rect x="42" y="127" width="66" height="66"/><rect x="192" y="127" width="66" height="66"/>
+      </g>
+      <rect x="117" y="127" width="66" height="66" fill="${GOLD}"/>
+      <text x="150" y="167" text-anchor="middle" font-family="Anton, sans-serif" font-size="17" fill="#1A1A1A">CUT</text>
+      <text x="150" y="228" text-anchor="middle" font-family="Anton, sans-serif" font-size="34" fill="${CREAM}">PRINT YOUR OWN</text>
+      <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${GOLD}" letter-spacing="0.12em">EIGHTEEN DESIGNS · TWO SHEETS</text>
+      <rect width="300" height="300" fill="url(#d31)"/>${mark()}</svg>`
+  },
 ];
 
 // Any SVG text wider than the artboard gets scaled down until it fits.

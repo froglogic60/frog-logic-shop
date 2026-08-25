@@ -1694,5 +1694,13 @@
     "type": "digital",
     "currency": "gbp",
     "file": "Pond-Guide-APD.pdf"
+  },
+  {
+    "id": "d31-frog-logic-stickers",
+    "name": "Frog Logic Stickers",
+    "price": 4.5,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Frog-Logic-Stickers.pdf"
   }
 ]
