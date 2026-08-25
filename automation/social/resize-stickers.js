@@ -140,17 +140,14 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
     if (!APPLY) { changed++; continue; }
 
     try {
-      // Every variant on the product, not just the one being switched on.
-      // Sending the single new variant alone is rejected as a validation error:
-      // Printify wants the whole set so it can see what is being turned off as
-      // well as what is being turned on.
-      const allVariants = (product.variants || []).map((v) => ({
-        id: v.id,
-        price: v.id === TO_VARIANT ? retail : v.price,
-        is_enabled: v.id === TO_VARIANT,
-      }));
+      // Just the one variant, and a print area covering exactly it.
+      //
+      // Sending every variant on the product instead is rejected: Printify then
+      // demands that all of them appear in print_areas.*.variant_ids, which
+      // would mean claiming the artwork is set up on five sizes nobody sells.
+      // One variant in, one variant in the print area, nothing else touched.
       await api(`/shops/${SHOP}/products/${item.printifyProductId}.json`, "PUT", {
-        variants: allVariants,
+        variants: [{ id: TO_VARIANT, price: retail, is_enabled: true }],
         print_areas: [{
           variant_ids: [TO_VARIANT],
           // Only the placeholders that actually carry artwork. These products
