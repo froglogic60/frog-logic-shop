@@ -211,73 +211,11 @@
     return wrap;
   }
 
-  function warnOn(card, message) {
-    var warn = card.querySelector(".sg-warn");
-    if (!warn) return;
-    warn.textContent = message;
-    warn.hidden = false;
-  }
-
-  // Must stay identical to checkoutId() in script.js — the id the server looks
-  // up in catalog.json is derived from these two fields.
-  function checkoutId(num, word, kind) {
-    var numPart = num.indexOf("—") !== -1 ? num.split("—")[0].trim() : num;
-    var base = (numPart + "-" + word).replace(/[^A-Za-z0-9]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase();
-    return kind === "guide" ? "guide-" + base : base;
-  }
-
-  // script.js listens on document.body in the bubble phase and posts { id }
-  // with no size. Catching the click here, on document in the capture phase,
-  // lets a garment send its size without touching that file at all: everything
-  // else falls through to the original handler untouched.
-  function interceptBuy(e) {
-    var btn = e.target.closest && e.target.closest("[data-checkout-num]");
-    if (!btn) return;
-    var card = btn.closest(".card");
-    if (!card) return;
-    var select = card.querySelector("select.sg-size");
-    if (!select) return; // not a garment — let script.js handle it as before
-
-    e.preventDefault();
-    e.stopPropagation();
-    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-
-    if (!select.value) {
-      warnOn(card, "Which size? Pick one above and we'll get it made.");
-      select.focus();
-      return;
-    }
-
-    var id = checkoutId(btn.dataset.checkoutNum, btn.dataset.checkoutWord, btn.dataset.checkoutKind);
-    var original = btn.textContent;
-    btn.textContent = "One moment…";
-    btn.disabled = true;
-
-    fetch("/api/create-checkout", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ id: id, size: select.value }),
-    })
-      .then(function (res) {
-        return res.json().then(function (data) {
-          return { ok: res.ok, data: data };
-        });
-      })
-      .then(function (r) {
-        if (!r.ok || !r.data.url) {
-          warnOn(card, r.data.error || "Sorry, checkout isn't available right now.");
-          btn.textContent = original;
-          btn.disabled = false;
-          return;
-        }
-        window.location.href = r.data.url;
-      })
-      .catch(function () {
-        warnOn(card, "Sorry, something went wrong reaching checkout. Please try again in a moment.");
-        btn.textContent = original;
-        btn.disabled = false;
-      });
-  }
+  // The buy click itself is no longer handled here. basket.js catches it in the
+  // capture phase and adds the item — with the size read from the picker this
+  // file builds — instead of sending one item straight to Stripe. Two capture
+  // listeners racing for the same click is exactly the kind of bug that only
+  // shows up on someone else's machine, so there is only one.
 
   // ---------------------------------------------------------------- wiring --
 
@@ -304,7 +242,6 @@
 
   function start() {
     enhance();
-    document.addEventListener("click", interceptBuy, true);
     var grid = document.getElementById("product-grid");
     if (!grid || typeof MutationObserver === "undefined") return;
     // The collection re-renders (low-stim mode, for one), which would otherwise
