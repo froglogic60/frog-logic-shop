@@ -49,11 +49,29 @@ const FREE_DELIVERY_OVER = 5000;
 //
 // A country is only offered if EVERY maker in the basket posts there and a
 // real rate exists for it. Adding one here does not force it; it permits it.
-const DESTINATIONS = ["GB", "IE"];
+//
+// The UK and the EU. Every maker quotes all 61 of the destinations in
+// shipping-zones.json, so this list is a choice, not a limit — the US, Canada
+// and Australia are all reachable and all left off, because postage there runs
+// £17 to £33 on a £16 tee and a price like that is not an offer, it is a
+// wasted click.
+const DESTINATIONS = [
+  "GB",
+  "IE", "FR", "DE", "NL", "BE", "ES", "IT", "PT", "AT", "LU",
+  "DK", "SE", "FI", "PL", "CZ", "SK", "SI", "HR", "HU", "RO",
+  "BG", "GR", "EE", "LV", "LT", "CY", "MT",
+];
 
 // Only for what the customer sees. Kept next to the list so adding a country
 // to one without the other shows a bare code rather than the wrong name.
-export const COUNTRY_NAMES = { GB: "the UK", IE: "Ireland" };
+export const COUNTRY_NAMES = {
+  GB: "the UK", IE: "Ireland", FR: "France", DE: "Germany", NL: "the Netherlands",
+  BE: "Belgium", ES: "Spain", IT: "Italy", PT: "Portugal", AT: "Austria",
+  LU: "Luxembourg", DK: "Denmark", SE: "Sweden", FI: "Finland", PL: "Poland",
+  CZ: "Czechia", SK: "Slovakia", SI: "Slovenia", HR: "Croatia", HU: "Hungary",
+  RO: "Romania", BG: "Bulgaria", GR: "Greece", EE: "Estonia", LV: "Latvia",
+  LT: "Lithuania", CY: "Cyprus", MT: "Malta",
+};
 
 // Countries where a parcel from the UK can attract import VAT or duty on
 // arrival. Said out loud in the basket rather than discovered on the doorstep.
