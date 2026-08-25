@@ -48,6 +48,10 @@ console.log("script.js");
 edit("script.js", [
   [`word: "${OLD_NAME}"`, `word: "${NEW_NAME}"`],
   [OLD_CLAUSE, NEW_CLAUSE],
+  // The name is drawn into the product's own artwork too, in caps. Missing it
+  // the first time left a card headlined SHOW THESE CARDS sitting under the
+  // label "When Words Go" — on the shop page and on the Pinterest pin.
+  [">SHOW THESE CARDS<", ">WHEN WORDS GO<"],
 ]);
 
 console.log("catalog.json");
@@ -60,10 +64,15 @@ console.log("pinterest.js");
 const pin = path.join(ROOT, "automation/social/pinterest.js");
 let ps = fs.readFileSync(pin, "utf8");
 const holdBlock = /const HOLD = \{[\s\S]*?\n\};/;
-if (!holdBlock.test(ps)) throw new Error("could not find the HOLD block in pinterest.js");
-ps = ps.replace(holdBlock, "const HOLD = {};");
-fs.writeFileSync(pin, ps);
-console.log("  hold cleared — the pin will now build");
+if (ps.includes("const HOLD = {};")) {
+  console.log("  hold already cleared");
+} else if (holdBlock.test(ps)) {
+  ps = ps.replace(holdBlock, "const HOLD = {};");
+  fs.writeFileSync(pin, ps);
+  console.log("  hold cleared — the pin will now build");
+} else {
+  throw new Error("could not find the HOLD block in pinterest.js");
+}
 
 // ---- checks ----
 const problems = [];
