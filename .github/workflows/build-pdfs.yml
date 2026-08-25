@@ -30,9 +30,10 @@ jobs:
       - name: Install WeasyPrint and its text-shaping libraries
         # WeasyPrint renders through Pango and Cairo. Without these the install
         # succeeds and the first render dies, which is a confusing way to fail.
+        # poppler-utils is for pdftotext, which the check step below reads with.
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2 libgdk-pixbuf-2.0-0
+          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 libcairo2 libgdk-pixbuf-2.0-0 poppler-utils
           pip install --quiet weasyprint
       - name: Build
         run: python3 automation/pdf/build.py ${{ inputs.product }}
