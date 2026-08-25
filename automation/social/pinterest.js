@@ -86,11 +86,53 @@ function hookLinesFor(line, maxLines, maxChars) {
   return kept;
 }
 
+// The sticker sheet gets its own artwork, and only it.
+//
+// Every other product's shop card shows the thing you are buying. The sticker
+// sheet's card shows empty dashed squares and the words PRINT YOUR OWN, which
+// works on the shop — you have already scrolled past the stickers themselves —
+// and fails on Pinterest, where the pin IS the shop window. A pin claiming
+// eighteen designs should show eighteen designs.
+//
+// So this lays the real sticker artwork out on a cutting grid: nine to the
+// visible square, dashed lines between them, exactly what comes out of the
+// printer. Read from script.js like everything else, so a redrawn sticker
+// reaches the pin without anyone remembering.
+function stickerGridArt(all) {
+  const stickers = all.filter((x) => /sticker/i.test(x.num || ""));
+  if (stickers.length < 9) return null;
+
+  const COLS = 3, GAP = 6, PAD = 4;
+  const cell = (300 - PAD * 2 - GAP * (COLS - 1)) / COLS;
+  const k = cell / 300;
+
+  // Groups and transforms, NOT nested <svg> elements. The renderer's page CSS
+  // sets `svg { width:100%; height:100% }` to make the pin fill its stage, and
+  // that rule applies to every svg on the page — including nested ones, whose
+  // width and height attributes it silently overrides. The first version of this
+  // used nested <svg> and produced nine flat coloured squares with no artwork on
+  // them at all. A <g transform> has no viewport for CSS to resize.
+  const tiles = stickers.slice(0, 9).map((s, i) => {
+    const x = PAD + (i % COLS) * (cell + GAP);
+    const y = PAD + Math.floor(i / COLS) * (cell + GAP);
+    const clip = `sg${i}`;
+    const inner = String(s.svg).replace(/^<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
+    return (
+      `<clipPath id="${clip}"><rect x="0" y="0" width="300" height="300"/></clipPath>` +
+      `<g transform="translate(${x.toFixed(2)},${y.toFixed(2)}) scale(${k.toFixed(5)})" clip-path="url(#${clip})">` +
+      `<rect width="300" height="300" fill="${esc(s.bg || "#FFFFFF")}"/>${inner}</g>` +
+      `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${cell.toFixed(2)}" height="${cell.toFixed(2)}" ` +
+      `fill="none" stroke="${INK}" stroke-width="0.7" stroke-dasharray="3 2.5" opacity="0.45"/>`
+    );
+  });
+  return `<svg viewBox="0 0 300 300"><rect width="300" height="300" fill="${CREAM}"/>${tiles.join("")}</svg>`;
+}
+
 // The artwork sits square and uncropped at the top; the caption panel takes the
 // remaining 460px. Sizes step down as the title wraps so the panel never
 // overflows — a pin whose text runs off the bottom looks broken in the feed.
-function pinSvg(p, logoData) {
-  const art = String(p.svg)
+function pinSvg(p, logoData, artOverride) {
+  const art = String(artOverride || p.svg)
     .replace(/href="assets\/frog-logic-mark-sm\.png"/g, `href="${logoData}"`)
     .replace(/^<svg[^>]*>/, "")
     .replace(/<\/svg>\s*$/, "");
@@ -140,10 +182,37 @@ function pinSvg(p, logoData) {
 </svg>`;
 }
 
+// A pin title is a search query; a product name is a shelf label. Usually the
+// two are close enough — "Sensory Overload Plan" is roughly what someone would
+// type. Where they are not, the pin says the searchable thing and the shop keeps
+// its own name.
+//
+// "Frog Logic Stickers" is the clearest case: nobody is searching for a brand
+// they have not heard of, and the whole point of the sheet is that it is
+// eighteen designs you print yourself. Say that instead.
+const COPY_OVERRIDES = {
+  "Frog Logic Stickers": {
+    title: "Printable neurodivergent stickers | 18 designs to print at home",
+    description:
+      "Eighteen sticker designs for autistic and ADHD adults, on two A4 sheets you print at home — " +
+      "spoons, sensory overload, rejection sensitivity, hyperfocus and the rest of it. " +
+      "Sticker paper from any stationers works, and so does ordinary paper with a glue stick. " +
+      "Cut along the dashed lines. Instant download, £4.50. " +
+      "From Frog Logic — soft landings for busy brains.",
+  },
+};
+
 // Pinterest allows 100 characters of title and 500 of description. Both are
 // written as plain sentences rather than stuffed with keywords — Pinterest
 // stopped rewarding that years ago and it reads badly to a human.
 function copyFor(p) {
+  const override = COPY_OVERRIDES[p.word];
+  if (override) {
+    return {
+      title: override.title.slice(0, 100),
+      description: override.description.slice(0, 500),
+    };
+  }
   const isSheet = /spreadsheet/i.test(kindOf(p.num));
   // A pipe rather than a dash: several product names already contain an em
   // dash, and "Say It — Communication Scripts — printable PDF" reads badly.
@@ -159,8 +228,18 @@ function copyFor(p) {
 
 (async () => {
   const { DIGITAL_PRODUCTS } = loadSiteData();
-  const limit = Number(process.env.LIMIT) || DIGITAL_PRODUCTS.length;
-  const items = DIGITAL_PRODUCTS.slice(0, limit);
+  // ONLY="Frog Logic Stickers" rebuilds one pin. Adding a product used to mean
+  // re-rendering all thirty-one to get at the new one.
+  const only = (process.env.ONLY || "").trim().toLowerCase();
+  const pool = only
+    ? DIGITAL_PRODUCTS.filter((p) => String(p.word).toLowerCase().includes(only))
+    : DIGITAL_PRODUCTS;
+  if (only && !pool.length) {
+    console.error(`No digital product matches ONLY="${process.env.ONLY}"`);
+    process.exit(1);
+  }
+  const limit = Number(process.env.LIMIT) || pool.length;
+  const items = pool.slice(0, limit);
 
   const fontDir = path.join(__dirname, ".gfonts");
   await ensureFonts(fontDir);
@@ -178,10 +257,15 @@ function copyFor(p) {
   fs.mkdirSync(OUT, { recursive: true });
   const manifest = [];
 
+  // Built once from the full product list, not from `items`, so ONLY= still
+  // gets the real stickers rather than whatever happened to be filtered in.
+  const { PRODUCTS } = loadSiteData();
+  const gridArt = stickerGridArt(PRODUCTS);
+
   const held = [];
   for (const p of items) {
     if (HOLD[p.word]) { held.push(`${p.word} — ${HOLD[p.word]}`); continue; }
-    const svg = pinSvg(p, logoData);
+    const svg = pinSvg(p, logoData, p.word === "Frog Logic Stickers" ? gridArt : null);
     const ctx = await browser.newContext({ viewport: { width: W, height: H } });
     const page = await ctx.newPage();
     await page.setContent(
