@@ -31,50 +31,102 @@
 
 import Stripe from "stripe";
 import catalog from "./catalog.json";
+import zoneData from "./shipping-zones.json";
 
 // Goods total, in pence, above which UK delivery is free.
 const FREE_DELIVERY_OVER = 5000;
 
-// Deliberately GB only. The postage rates in catalog.json are UK rates; an EU
-// address would be charged UK prices for a parcel that costs more to send, so
-// every European order would quietly lose money. Add the EU rates first, then
-// widen this list — do not widen it on its own.
-const ALLOWED_COUNTRIES = ["GB"];
+// Where the shop is willing to post. This used to be ["GB"] alone, because the
+// only rates in catalog.json were UK ones and charging a Dublin address a UK
+// price for a parcel that costs more to send loses money on every order.
+//
+// The real rate for every destination each maker quotes now lives in
+// shipping-zones.json, so the limit is no longer arithmetic. It is judgement:
+// outside the UK a parcel can arrive with an import VAT or duty bill on the
+// doorstep, and this shop's whole promise is that nothing jumps out at you.
+// So this is a shortlist, not "everywhere Printify will post" — and the
+// checkout says plainly, before anyone pays, that a customs charge is possible.
+//
+// A country is only offered if EVERY maker in the basket posts there and a
+// real rate exists for it. Adding one here does not force it; it permits it.
+const DESTINATIONS = ["GB", "IE"];
+
+// Only for what the customer sees. Kept next to the list so adding a country
+// to one without the other shows a bare code rather than the wrong name.
+export const COUNTRY_NAMES = { GB: "the UK", IE: "Ireland" };
+
+// Countries where a parcel from the UK can attract import VAT or duty on
+// arrival. Said out loud in the basket rather than discovered on the doorstep.
+export const CUSTOMS_RISK = (c) => c !== "GB";
+
+const ZONES = zoneData.providers || {};
 
 const MAX_QTY = 20;
 
 const json = (body, status) =>
   new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json" } });
 
+// The rate a single product posts at, to one country, in pence.
+//
+// Zones are keyed by blueprint AND maker, because the same maker charges more
+// for a hoodie than a tee. Falls back to the flat UK figure on the catalogue
+// entry — which is only ever right for GB, and is why an unknown country
+// returns null rather than guessing.
+function rateFor(item, country) {
+  const s = item.shipping;
+  if (!s) return null;
+  const table = ZONES[s.zoneKey] || ZONES[String(s.provider)];
+  if (table && Array.isArray(table.zones)) {
+    const zone =
+      table.zones.find((z) => z.countries.includes(country)) ||
+      table.zones.find((z) => z.countries.includes("REST_OF_THE_WORLD"));
+    if (zone && zone.first != null) {
+      return { first: zone.first, additional: zone.additional ?? zone.first };
+    }
+  }
+  if (country === "GB" && s.first != null) {
+    return { first: s.first, additional: s.additional ?? s.first };
+  }
+  return null;
+}
+
 // Postage for a set of physical lines, in pence.
 //
-// Exported shape of each line: { item, qty }. Lines are grouped by print
-// provider because that is what decides how many parcels there are.
-export function postageFor(lines) {
+// Each line is { item, qty }. Lines are grouped by print provider because that
+// is what decides how many parcels there are — but the first-item rate charged
+// for a parcel is the dearest of the things in it, since a maker bills the
+// parcel at the rate of what is in it and a hoodie is not a sticker.
+export function postageFor(lines, country = "GB") {
   const parcels = new Map();
+  const unknown = [];
   for (const { item, qty } of lines) {
     if (item.type !== "physical") continue;
-    // A physical product with no shipping row would ship free, which is the
-    // bug this whole change exists to fix. Treat it as its own parcel at a
-    // deliberately visible rate rather than silently zero.
-    const s = item.shipping;
-    if (!s || s.first == null) {
-      parcels.set("unknown:" + item.id, { first: 0, additional: 0, qty, unknown: item.id });
-      continue;
-    }
-    const key = String(s.provider);
-    const p = parcels.get(key) || { first: s.first, additional: s.additional ?? s.first, qty: 0 };
+    // A physical product with no usable rate would ship free, which is the bug
+    // this whole thing exists to fix. Name it rather than silently zero it.
+    const rate = rateFor(item, country);
+    if (!rate) { unknown.push(item.id); continue; }
+    const key = String(item.shipping.provider);
+    const p = parcels.get(key) || { first: 0, additional: 0, qty: 0 };
+    p.first = Math.max(p.first, rate.first);
+    p.additional = Math.max(p.additional, rate.additional);
     p.qty += qty;
     parcels.set(key, p);
   }
 
   let total = 0;
-  const unknown = [];
   for (const p of parcels.values()) {
-    if (p.unknown) { unknown.push(p.unknown); continue; }
     total += p.first + p.additional * Math.max(0, p.qty - 1);
   }
   return { total, parcels: parcels.size, unknown };
+}
+
+// The countries this particular basket can be sent to: on the shortlist, and
+// quotable for every physical line in it. Always includes GB, which the flat
+// catalogue rate covers even before the zone table has ever been built.
+export function destinationsFor(lines) {
+  const physical = lines.filter((l) => l.item.type === "physical");
+  if (!physical.length) return DESTINATIONS.slice();
+  return DESTINATIONS.filter((c) => physical.every((l) => rateFor(l.item, c)));
 }
 
 export default async (req) => {
@@ -142,11 +194,25 @@ export default async (req) => {
   const goodsTotal = lines.reduce((sum, l) => sum + Math.round(l.item.price * 100) * l.qty, 0);
   const physical = lines.filter((l) => l.item.type === "physical");
 
-  const { total: rawPostage, unknown } = postageFor(physical.map((l) => ({ item: l.item, qty: l.qty })));
+  // Stripe's fixed-amount shipping rates are set before the customer types an
+  // address, so the amount cannot react to where they turn out to live. The
+  // basket therefore asks first, and the address form is then locked to that
+  // one country — otherwise someone could pick the UK, pay UK postage and have
+  // it sent to Dublin.
+  const allowed = destinationsFor(lines);
+  const country = String(body.country || "GB").toUpperCase();
+  if (physical.length && !allowed.includes(country)) {
+    return json({ error: "We can't post this order to that country yet.", country, allowed }, 400);
+  }
+
+  const { total: rawPostage, unknown } = postageFor(physical.map((l) => ({ item: l.item, qty: l.qty })), country);
   if (unknown.length) {
     console.error("No postage rate for", unknown.join(", "), "— run the Refresh the postage rates workflow");
+    return json({ error: "We can't work out delivery for one of these just now. Please try again shortly." }, 503);
   }
-  const freeDelivery = goodsTotal >= FREE_DELIVERY_OVER;
+  // Free delivery is a UK offer. Posting abroad costs roughly double, so
+  // extending it there would turn the best orders into the worst ones.
+  const freeDelivery = country === "GB" && goodsTotal >= FREE_DELIVERY_OVER;
   const postage = physical.length === 0 || freeDelivery ? 0 : rawPostage;
 
   const stripe = new Stripe(key);
@@ -176,13 +242,15 @@ export default async (req) => {
       quantity: l.qty,
     })),
     shipping_address_collection:
-      physical.length ? { allowed_countries: ALLOWED_COUNTRIES } : undefined,
+      physical.length ? { allowed_countries: [country] } : undefined,
     shipping_options: physical.length
       ? [{
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: { amount: postage, currency: "gbp" },
-            display_name: freeDelivery ? "Free UK delivery (over £50)" : "UK delivery",
+            display_name: freeDelivery
+              ? "Free UK delivery (over £50)"
+              : "Delivery to " + (COUNTRY_NAMES[country] || country),
           },
         }]
       : undefined,
