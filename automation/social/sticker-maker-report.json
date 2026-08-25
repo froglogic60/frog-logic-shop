@@ -1,0 +1,44 @@
+{
+  "sampledAt": "2026-08-25T15:53:20.573Z",
+  "prices": [
+    350,
+    450,
+    650
+  ],
+  "considered": 2,
+  "rows": [
+    {
+      "blueprint": "Square Vinyl Stickers",
+      "blueprintId": 476,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65210,
+      "variantTitle": "15\" × 15\"",
+      "cost": 651,
+      "ukShipping": 629,
+      "margins": {
+        "350": -301,
+        "450": -201,
+        "650": -1
+      }
+    },
+    {
+      "blueprint": "Vinyl Kiss-Cut Stickers",
+      "blueprintId": 1216,
+      "provider": "Sticky Products Europe",
+      "providerId": 255,
+      "country": "NL",
+      "variantId": 92313,
+      "variantTitle": "2\" × 2\" / 1 pc / Matte",
+      "cost": 269,
+      "ukShipping": 649,
+      "margins": {
+        "350": 81,
+        "450": 181,
+        "650": 381
+      }
+    }
+  ],
+  "undeleted": []
+}
