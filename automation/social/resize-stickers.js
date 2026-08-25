@@ -59,7 +59,7 @@ async function api(p, method = "GET", body) {
       await sleep(backoff);
       continue;
     }
-    throw new Error(method + " " + p + " -> " + r.status + " " + (await r.text()).slice(0, 300));
+    throw new Error(method + " " + p + " -> " + r.status + " " + (await r.text()).slice(0, 900));
   }
 }
 
@@ -140,15 +140,24 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
     if (!APPLY) { changed++; continue; }
 
     try {
+      // Every variant on the product, not just the one being switched on.
+      // Sending the single new variant alone is rejected as a validation error:
+      // Printify wants the whole set so it can see what is being turned off as
+      // well as what is being turned on.
+      const allVariants = (product.variants || []).map((v) => ({
+        id: v.id,
+        price: v.id === TO_VARIANT ? retail : v.price,
+        is_enabled: v.id === TO_VARIANT,
+      }));
       await api(`/shops/${SHOP}/products/${item.printifyProductId}.json`, "PUT", {
-        variants: [{ id: TO_VARIANT, price: retail, is_enabled: true }],
+        variants: allVariants,
         print_areas: [{
           variant_ids: [TO_VARIANT],
           placeholders: area.placeholders.map((p) => ({ position: p.position, images: p.images || [] })),
         }],
       });
     } catch (e) {
-      problems.push(`${label}: update refused — ${e.message.slice(0, 120)}`);
+      problems.push(`${label}: update refused — ${e.message.slice(0, 600)}`);
       continue;
     }
 
