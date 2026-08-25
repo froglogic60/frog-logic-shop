@@ -1,5 +1,740 @@
 {
-  "//": "Written by automation/social/shipping-rates.js — run the 'Refresh the postage rates' workflow to fill it. Until then it is empty on purpose: the checkout falls back to the flat UK rate on each catalogue entry and offers GB only, which is exactly how it behaved before zones existed. Nothing here is edited by hand.",
-  "providers": {},
-  "servedEverywhere": []
+  "providers": {
+    "12:331": {
+      "name": "Shirt Monkey",
+      "provider": 331,
+      "zones": [
+        {
+          "first": 349,
+          "additional": 199,
+          "countries": [
+            "GB",
+            "IM"
+          ]
+        },
+        {
+          "first": 1119,
+          "additional": 399,
+          "countries": [
+            "CA"
+          ]
+        },
+        {
+          "first": 1129,
+          "additional": 299,
+          "countries": [
+            "AD",
+            "AL",
+            "AM",
+            "AT",
+            "AX",
+            "BA",
+            "BE",
+            "BG",
+            "BV",
+            "BY",
+            "CY",
+            "CZ",
+            "DE",
+            "ES",
+            "FO",
+            "FR",
+            "GE",
+            "GG",
+            "GI",
+            "GL",
+            "GP",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IT",
+            "JE",
+            "LU",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "RS",
+            "SI",
+            "SK",
+            "SM",
+            "TR",
+            "UA",
+            "VA",
+            "XK"
+          ]
+        },
+        {
+          "first": 1139,
+          "additional": 399,
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 1249,
+          "additional": 399,
+          "countries": [
+            "AU"
+          ]
+        },
+        {
+          "first": 1349,
+          "additional": 299,
+          "countries": [
+            "CH",
+            "DK",
+            "EE",
+            "FI",
+            "IS",
+            "LI",
+            "LT",
+            "LV",
+            "NO",
+            "SE"
+          ]
+        },
+        {
+          "first": 2299,
+          "additional": 399,
+          "countries": [
+            "US"
+          ]
+        }
+      ]
+    },
+    "720:6": {
+      "name": "T Shirt and Sons",
+      "provider": 6,
+      "zones": [
+        {
+          "first": 349,
+          "additional": 199,
+          "countries": [
+            "GB"
+          ]
+        },
+        {
+          "first": 949,
+          "additional": 149,
+          "countries": [
+            "AT",
+            "BE",
+            "BG",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "EE",
+            "ES",
+            "FI",
+            "FR",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IT",
+            "LT",
+            "LU",
+            "LV",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RO",
+            "SE",
+            "SI",
+            "SK"
+          ]
+        },
+        {
+          "first": 2279,
+          "additional": 619,
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 3279,
+          "additional": 619,
+          "countries": [
+            "US"
+          ]
+        }
+      ]
+    },
+    "1193:94": {
+      "name": "Harrier",
+      "provider": 94,
+      "zones": [
+        {
+          "first": 439,
+          "additional": 129,
+          "countries": [
+            "GB"
+          ]
+        },
+        {
+          "first": 499,
+          "additional": 179,
+          "countries": [
+            "CZ",
+            "DE"
+          ]
+        },
+        {
+          "first": 549,
+          "additional": 179,
+          "countries": [
+            "AD",
+            "AL",
+            "AM",
+            "AT",
+            "AX",
+            "BA",
+            "BE",
+            "BG",
+            "BV",
+            "BY",
+            "CY",
+            "ES",
+            "FO",
+            "FR",
+            "GE",
+            "GG",
+            "GI",
+            "GL",
+            "GP",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "RS",
+            "SI",
+            "SK",
+            "SM",
+            "TR",
+            "UA",
+            "VA",
+            "XK"
+          ]
+        },
+        {
+          "first": 839,
+          "additional": 239,
+          "countries": [
+            "CH",
+            "DK",
+            "EE",
+            "FI",
+            "IS",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "NO",
+            "SE"
+          ]
+        },
+        {
+          "first": 1719,
+          "additional": 399,
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 2719,
+          "additional": 399,
+          "countries": [
+            "US"
+          ]
+        }
+      ]
+    },
+    "441:30": {
+      "name": "OPT OnDemand",
+      "provider": 30,
+      "zones": [
+        {
+          "first": 529,
+          "additional": 199,
+          "countries": [
+            "DE"
+          ]
+        },
+        {
+          "first": 579,
+          "additional": 239,
+          "countries": [
+            "CZ"
+          ]
+        },
+        {
+          "first": 659,
+          "additional": 199,
+          "countries": [
+            "AD",
+            "AL",
+            "AM",
+            "AT",
+            "AX",
+            "BA",
+            "BE",
+            "BG",
+            "BV",
+            "BY",
+            "CY",
+            "ES",
+            "FO",
+            "FR",
+            "GE",
+            "GG",
+            "GI",
+            "GL",
+            "GP",
+            "GR",
+            "HR",
+            "HU",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "RS",
+            "SI",
+            "SK",
+            "SM",
+            "TR",
+            "UA",
+            "VA",
+            "XK"
+          ]
+        },
+        {
+          "first": 779,
+          "additional": 169,
+          "countries": [
+            "GB",
+            "IE"
+          ]
+        },
+        {
+          "first": 999,
+          "additional": 199,
+          "countries": [
+            "CH",
+            "DK",
+            "EE",
+            "FI",
+            "IS",
+            "LI",
+            "LT",
+            "LV",
+            "NO",
+            "SE"
+          ]
+        },
+        {
+          "first": 1699,
+          "additional": 1399,
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 2199,
+          "additional": 999,
+          "countries": [
+            "AU"
+          ]
+        }
+      ]
+    },
+    "804:72": {
+      "name": "Print Clever",
+      "provider": 72,
+      "zones": [
+        {
+          "first": 529,
+          "additional": 99,
+          "countries": [
+            "GB",
+            "IM"
+          ]
+        },
+        {
+          "first": 1449,
+          "additional": 299,
+          "countries": [
+            "AD",
+            "AL",
+            "AM",
+            "AT",
+            "AX",
+            "BA",
+            "BE",
+            "BG",
+            "BV",
+            "BY",
+            "CY",
+            "CZ",
+            "DE",
+            "ES",
+            "FO",
+            "FR",
+            "GE",
+            "GG",
+            "GI",
+            "GL",
+            "GP",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IT",
+            "JE",
+            "LU",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "RS",
+            "SI",
+            "SK",
+            "SM",
+            "TR",
+            "UA",
+            "VA",
+            "XK"
+          ]
+        },
+        {
+          "first": 1649,
+          "additional": 299,
+          "countries": [
+            "CH",
+            "DK",
+            "EE",
+            "FI",
+            "IS",
+            "LI",
+            "LT",
+            "LV",
+            "NO",
+            "SE"
+          ]
+        },
+        {
+          "first": 1979,
+          "additional": 609,
+          "countries": [
+            "AU",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 2919,
+          "additional": 199,
+          "countries": [
+            "US"
+          ]
+        }
+      ]
+    },
+    "1216:255": {
+      "name": "Sticky Products Europe",
+      "provider": 255,
+      "zones": [
+        {
+          "first": 649,
+          "additional": 5,
+          "countries": [
+            "GB"
+          ]
+        },
+        {
+          "first": 739,
+          "additional": 5,
+          "countries": [
+            "AD",
+            "AL",
+            "AM",
+            "AT",
+            "AX",
+            "BA",
+            "BE",
+            "BG",
+            "BV",
+            "BY",
+            "CH",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "EE",
+            "ES",
+            "FI",
+            "FO",
+            "FR",
+            "GE",
+            "GG",
+            "GI",
+            "GL",
+            "GP",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IM",
+            "IS",
+            "IT",
+            "JE",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "RS",
+            "SE",
+            "SI",
+            "SK",
+            "SM",
+            "TR",
+            "UA",
+            "VA",
+            "XK"
+          ]
+        },
+        {
+          "first": 1969,
+          "additional": 5,
+          "countries": [
+            "US"
+          ]
+        },
+        {
+          "first": 2299,
+          "additional": 5,
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ]
+        }
+      ]
+    },
+    "77:72": {
+      "name": "Print Clever",
+      "provider": 72,
+      "zones": [
+        {
+          "first": 449,
+          "additional": 299,
+          "countries": [
+            "GB",
+            "IM"
+          ]
+        },
+        {
+          "first": 1349,
+          "additional": 399,
+          "countries": [
+            "AD",
+            "AL",
+            "AM",
+            "AT",
+            "AX",
+            "BA",
+            "BE",
+            "BG",
+            "BV",
+            "BY",
+            "CY",
+            "CZ",
+            "DE",
+            "ES",
+            "FO",
+            "FR",
+            "GE",
+            "GG",
+            "GI",
+            "GL",
+            "GP",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IT",
+            "JE",
+            "LU",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "RS",
+            "SI",
+            "SK",
+            "SM",
+            "TR",
+            "UA",
+            "VA",
+            "XK"
+          ]
+        },
+        {
+          "first": 1629,
+          "additional": 999,
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 1649,
+          "additional": 399,
+          "countries": [
+            "CH",
+            "DK",
+            "EE",
+            "FI",
+            "IS",
+            "LI",
+            "LT",
+            "LV",
+            "NO",
+            "SE"
+          ]
+        },
+        {
+          "first": 1799,
+          "additional": 899,
+          "countries": [
+            "AU"
+          ]
+        },
+        {
+          "first": 2999,
+          "additional": 999,
+          "countries": [
+            "US"
+          ]
+        }
+      ]
+    }
+  },
+  "servedEverywhere": [
+    "AD",
+    "AL",
+    "AM",
+    "AT",
+    "AU",
+    "AX",
+    "BA",
+    "BE",
+    "BG",
+    "BV",
+    "BY",
+    "CA",
+    "CH",
+    "CY",
+    "CZ",
+    "DE",
+    "DK",
+    "EE",
+    "ES",
+    "FI",
+    "FO",
+    "FR",
+    "GB",
+    "GE",
+    "GG",
+    "GI",
+    "GL",
+    "GP",
+    "GR",
+    "HR",
+    "HU",
+    "IE",
+    "IM",
+    "IS",
+    "IT",
+    "JE",
+    "LI",
+    "LT",
+    "LU",
+    "LV",
+    "MC",
+    "MD",
+    "ME",
+    "MK",
+    "MT",
+    "NL",
+    "NO",
+    "PL",
+    "PT",
+    "RE",
+    "RO",
+    "RS",
+    "SE",
+    "SI",
+    "SK",
+    "SM",
+    "TR",
+    "UA",
+    "US",
+    "VA",
+    "XK"
+  ]
 }
