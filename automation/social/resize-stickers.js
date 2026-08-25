@@ -141,25 +141,25 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
     if (!APPLY) { changed++; continue; }
 
     try {
-      // Just the one variant, and a print area covering exactly it.
+      // Only the enabled flags change. Nothing else.
       //
-      // Sending every variant on the product instead is rejected: Printify then
-      // demands that all of them appear in print_areas.*.variant_ids, which
-      // would mean claiming the artwork is set up on five sizes nobody sells.
-      // One variant in, one variant in the print area, nothing else touched.
-      await api(`/shops/${SHOP}/products/${item.printifyProductId}.json`, "PUT", {
-        variants: [{ id: TO_VARIANT, price: retail, is_enabled: true }],
-        print_areas: [{
-          variant_ids: [TO_VARIANT],
-          // Only the placeholders that actually carry artwork. These products
-          // have a second, empty placeholder (the sticker's back), and Printify
-          // rejects the whole update with "placeholders.1.images is required"
-          // rather than ignoring an empty one.
-          placeholders: area.placeholders
-            .filter((p) => (p.images || []).length)
-            .map((p) => ({ position: p.position, images: p.images })),
-        }],
-      });
+      // The print area on these products already covers all six sizes —
+      // variant_ids [92313…92318] with the artwork on the "front" placeholder —
+      // so the 3" square has had the design on it all along. The 4" was simply
+      // the one switched on.
+      //
+      // So print_areas is not sent at all. Three earlier attempts did send it
+      // and Printify refused every one: a print area naming only the new variant
+      // leaves the other five uncovered ("all product variants must be present
+      // in print_areas.*.variant_ids"), and copying the existing placeholders
+      // across sends the empty "all" placeholder, which it also rejects. Leaving
+      // the field out keeps the artwork exactly as it is.
+      const variants = (product.variants || []).map((v) => ({
+        id: v.id,
+        price: v.id === TO_VARIANT ? retail : v.price,
+        is_enabled: v.id === TO_VARIANT,
+      }));
+      await api(`/shops/${SHOP}/products/${item.printifyProductId}.json`, "PUT", { variants });
     } catch (e) {
       problems.push(`${label}: update refused — ${e.message.slice(0, 600)}`);
       // Printify's validation messages name a field, not a cause. Rather than
