@@ -1,0 +1,50 @@
+{
+  "id": "when-words-go",
+  "output": "digital/When-Words-Go.pdf",
+  "alsoWriteTo": ["digital/Show-These-Cards.pdf"],
+  "title": "When Words Go",
+  "subtitle": "FOR WHEN THE WORDS HAVE GONE",
+  "licence": "For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic",
+  "sheets": [
+    {
+      "label": "FOR WHEN THE WORDS HAVE GONE",
+      "intro": "Print, cut out, and keep them wherever you'll actually reach for them — a wallet, a phone case, or a standard lanyard card holder. They're sized to fit one. Laminating makes them last; a hole punch in the corner puts them on a keyring.",
+      "note": "CUT ALONG THE OUTLINES · 85 × 54 MM · FITS A STANDARD LANYARD SLEEVE",
+      "cards": [
+        { "title": "I can't speak right now.", "sub": "I can hear and understand you. Please give me a moment — I'm not ignoring you.", "invert": true },
+        { "title": "Please could you help me find something?", "sub": "I'll show you on my phone, or point." },
+        { "title": "Where is the toilet?", "sub": "Pointing is fine. Thank you." },
+        { "title": "Is there somewhere quieter I can sit?", "sub": "Just for a few minutes. I'll be alright." },
+        { "title": "Please could you write that down?", "sub": "I process written words far better than spoken ones." },
+        { "title": "I need to leave now.", "sub": "Nothing is wrong with your service. Please let me past." }
+      ]
+    },
+    {
+      "label": "SHEET TWO — EXPLAINING AND EVERYDAY",
+      "note": "YOU DON'T NEED A DIAGNOSIS, OR ANYONE'S PERMISSION, TO USE THESE",
+      "cards": [
+        { "title": "Please don't touch me.", "sub": "Not personal — touch is painful for me right now." },
+        { "title": "Please speak slowly and quietly.", "sub": "Short sentences help. One question at a time." },
+        { "title": "I'm not being rude.", "sub": "I'm overloaded. This is what it looks like for me.", "invert": true },
+        { "title": "I need a moment before I answer.", "sub": "Silence means I'm processing, not refusing." },
+        { "title": "I'm autistic.", "sub": "You don't have to do anything differently unless I ask." },
+        { "title": "I have ADHD.", "sub": "I may need instructions repeated or written down." },
+        { "title": "Please phone this person for me.", "sub": "Their name and number are on my contact card." },
+        { "title": "I've already paid.", "sub": "The receipt is on my phone — one second." }
+      ]
+    },
+    {
+      "label": "SHEET THREE — YOURS TO FILL IN",
+      "note": "WRITE YOUR OWN IN THE SAME SHAPE — BIG WORDS, ONE MESSAGE PER CARD",
+      "cards": [
+        { "title": "Yes." },
+        { "title": "No, thank you." },
+        { "title": "My name is", "lines": 1, "sub": "Best way to communicate with me:", "linesAfter": 1 },
+        { "title": "If I need help, please contact", "lines": 2 },
+        { "title": "What helps me most", "lines": 2 },
+        { "lines": 3 },
+        { "lines": 3 }
+      ]
+    }
+  ]
+}
