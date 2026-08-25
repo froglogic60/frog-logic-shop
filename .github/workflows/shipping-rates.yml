@@ -1,0 +1,50 @@
+name: Refresh the postage rates
+# Not a one-shot. Run it after any Printify price change, and after a new wave
+# of products is created.
+#
+# The shop collected a delivery address and charged nothing for delivery, so
+# every parcel came out of Frog Logic's margin. This reads what Printify
+# actually charges to post each product to the UK — a first-item rate and a
+# cheaper additional-item rate, per maker — and writes it into catalog.json so
+# the checkout can charge the real thing.
+#
+# The script refuses to write unless every orderable product got a rate, because
+# a product with no rate would silently ship free, which is the bug being fixed.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Read the postage rates
+        working-directory: automation/social
+        run: node shipping-rates.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Check every orderable product has one
+        run: |
+          node -e '
+            const cat = require("./netlify/functions/catalog.json");
+            const live = cat.filter((x) => x.type === "physical" && x.printifyProductId);
+            const missing = live.filter((x) => !x.shipping || x.shipping.first == null);
+            console.log(live.length, "orderable;", live.length - missing.length, "with a postage rate");
+            if (missing.length) throw new Error(missing.length + " without a rate: " + missing.slice(0, 5).map((x) => x.id).join(", "));
+            const makers = new Set(live.map((x) => x.shipping.providerName));
+            console.log(makers.size, "maker(s):", [...makers].join(", "));
+          '
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add netlify/functions/catalog.json
+          git status --short
+          git commit -m "Refresh the postage rates [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
