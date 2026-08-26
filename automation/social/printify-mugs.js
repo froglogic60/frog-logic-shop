@@ -132,13 +132,16 @@ function body({ title, description, price, ids, ph, scale }) {
 // Every product in the shop, so an earlier run's mug can be found and corrected
 // instead of a second one being built beside it.
 async function shopProducts() {
+  // 50 is Printify's maximum for this endpoint; asking for 100 gets a 400
+  // "Validation failed", which is exactly how the first run of this fix died.
+  const PER_PAGE = 50;
   const all = [];
-  for (let page = 1; page <= 20; page++) {
-    const r = await api(`/shops/${SHOP}/products.json?limit=100&page=${page}`);
+  for (let page = 1; page <= 40; page++) {
+    const r = await api(`/shops/${SHOP}/products.json?limit=${PER_PAGE}&page=${page}`);
     const rows = r.data || r;
     if (!Array.isArray(rows) || !rows.length) break;
     all.push(...rows);
-    if (rows.length < 100) break;
+    if (rows.length < PER_PAGE) break;
   }
   return all;
 }
