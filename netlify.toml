@@ -1,6 +1,22 @@
 [build]
   publish = "."
   functions = "netlify/functions"
+  # Only rebuild when something a visitor could actually see has changed.
+  #
+  # A production deploy costs 15 credits, and the plan grants 1,000 a month. On
+  # 26 Aug 2026, 39 deploys spent 585 of them in a single day — and 13 of those
+  # deploys were commits to automation/ or .github/ that never touched the
+  # website at all. That is 195 credits of building nothing.
+  #
+  # Netlify's rule: this command exiting 0 SKIPS the build, exiting non-zero
+  # runs it. So this asks "did anything outside automation/ and .github/
+  # change?" and skips when the answer is no. If CACHED_COMMIT_REF is empty —
+  # a cleared cache, a first build — the diff errors, exits non-zero, and the
+  # build runs, which is the safe way round.
+  #
+  # The scheduled workflows already tag their commits [skip netlify]; this
+  # catches everything done by hand, which is where the money went.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)automation' ':(exclude).github'"
 
 [functions]
   node_bundler = "esbuild"
