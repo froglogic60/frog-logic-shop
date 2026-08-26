@@ -4,3 +4,12 @@
 
 [functions]
   node_bundler = "esbuild"
+
+# sw.js removes the old Replit service worker still installed in people's
+# browsers on froglogic.co.uk and www.froglogic.co.uk. A browser will only pick
+# it up if it actually re-fetches it, so it must never be served from cache.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
