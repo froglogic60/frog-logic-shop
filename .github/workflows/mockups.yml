@@ -1,0 +1,42 @@
+name: Refresh the product photos
+# Re-run this after any product is rebuilt in Printify, because a mockup URL
+# belongs to the product it was rendered for and dies with it.
+#
+# It writes mockups.json at the site root — catalogue id to photo — which the
+# shop loads after rendering to put a real photograph on every physical card.
+# The commit is tagged [skip netlify], so refreshing the photos costs no deploy
+# credits; they go live with the next deploy of anything else.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report what it would write, change nothing"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch the mockups
+        working-directory: automation/social
+        run: node mockups.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mockups.json || true
+          git status --short
+          git commit -m "Refresh the product photos [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
