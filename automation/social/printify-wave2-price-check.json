@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-08-24T21:46:52.226Z",
+  "createdAt": "2026-08-26T14:40:52.378Z",
   "dryRun": true,
   "skippedKinds": [],
   "report": [
@@ -64,25 +64,6 @@
       "kind": "hoodie",
       "price": 3699,
       "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
-      "provider": "T Shirt and Sons",
-      "country": "GB",
-      "costLow": 3014,
-      "costHigh": 3014,
-      "ukShipping": 449,
-      "marginCustomerPaysPost": 685,
-      "marginYouPayPost": 236,
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "2XL"
-      ]
-    },
-    {
-      "kind": "hoodie",
-      "price": 3699,
-      "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
       "provider": "Print Clever",
       "country": "GB",
       "costLow": 2869,
@@ -101,14 +82,33 @@
     {
       "kind": "hoodie",
       "price": 3699,
+      "blueprint": "Unisex College Hoodie",
+      "provider": "Print Clever",
+      "country": "GB",
+      "costLow": 2924,
+      "costHigh": 2924,
+      "ukShipping": 449,
+      "marginCustomerPaysPost": 775,
+      "marginYouPayPost": 326,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ]
+    },
+    {
+      "kind": "hoodie",
+      "price": 3699,
       "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
-      "provider": "Textildruck Europa",
-      "country": "DE",
-      "costLow": 2431,
-      "costHigh": 2431,
-      "ukShipping": 779,
-      "marginCustomerPaysPost": 1268,
-      "marginYouPayPost": 489,
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "costLow": 3014,
+      "costHigh": 3014,
+      "ukShipping": 449,
+      "marginCustomerPaysPost": 685,
+      "marginYouPayPost": 236,
       "sizes": [
         "S",
         "M",
@@ -183,11 +183,11 @@
       "blueprint": "Vinyl Kiss-Cut Stickers",
       "provider": "Sticky Products Europe",
       "country": "NL",
-      "costLow": 546,
-      "costHigh": 546,
+      "costLow": 279,
+      "costHigh": 279,
       "ukShipping": 649,
-      "marginCustomerPaysPost": -196,
-      "marginYouPayPost": -845
+      "marginCustomerPaysPost": 71,
+      "marginYouPayPost": -578
     },
     {
       "kind": "sticker",
