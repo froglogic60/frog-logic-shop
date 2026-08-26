@@ -41,7 +41,15 @@ function loadResults(file) {
 
 const catalog = JSON.parse(fs.readFileSync(CATALOG, "utf8"));
 const byId = new Map(catalog.map((x) => [x.id, x]));
-const { PRODUCTS } = loadSiteData();
+const { PRODUCTS, ALL_PRODUCTS } = loadSiteData();
+
+// Retired pieces are off the page and out of the catalogue, but they still exist
+// as products in Printify — nothing was deleted there. Without this, every
+// retired sticker would read as an orphan in the result files and block the
+// whole rebuild.
+const RETIRED = new Set(
+  ALL_PRODUCTS.filter((p) => p.retired).map((p) => slugFor(p.num, p.word))
+);
 
 // ---- 1. prices and names, from the page ----
 const repriced = [];
@@ -65,6 +73,7 @@ for (const p of PRODUCTS) {
 const wired = [];
 for (const file of ["printify-result.json", "printify-wave2-result.json"]) {
   for (const r of loadResults(file)) {
+    if (RETIRED.has(r.id)) continue;
     const entry = byId.get(r.id);
     if (!entry) { orphans.push(r.id + " (in " + file + ")"); continue; }
     const isNew = !entry.printifyProductId;
@@ -86,14 +95,15 @@ const held = physical.filter((x) => !x.printifyProductId);
 const problems = [];
 
 if (orphans.length) problems.push("ids with no catalogue entry: " + orphans.join(", "));
-// 68 physical + 54 digital. The physical half checks itself against the page,
-// so a new wave of pieces no longer needs this number touched by hand; the
-// total is still spelled out because it is the one thing that would catch
-// catalog.json being truncated or half-written by something outside this script.
+// 50 physical + 54 digital, since the 18 printed stickers were retired on
+// 26 Aug 2026. The physical half checks itself against the page, so a new wave
+// of pieces no longer needs this number touched by hand; the total is still
+// spelled out because it is the one thing that would catch catalog.json being
+// truncated or half-written by something outside this script.
 if (physical.length !== PRODUCTS.length) {
   problems.push("page shows " + PRODUCTS.length + " physical pieces, catalogue holds " + physical.length);
 }
-if (catalog.length !== 122) problems.push("expected 122 catalogue entries, found " + catalog.length);
+if (catalog.length !== 104) problems.push("expected 104 catalogue entries, found " + catalog.length);
 for (const x of sellable) {
   if (!x.printifyVariantId) problems.push(x.id + " has a product id but no variant id");
   if (x.sizes && !x.sizes.some((s) => s.variantId === x.printifyVariantId)) {
