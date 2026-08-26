@@ -1,1 +1,67 @@
-
+name: Sticker safety net (keep 4 inch orderable)
+# One-shot. Safe to delete once it has run.
+#
+# The stickers moved to 3" on 26 Aug, but the live site is frozen on the 21 Aug
+# build and that build still orders the 4". Until the shop redeploys, a sticker
+# sold on the live site would reach Printify as a disabled variant and the order
+# would fail after payment. This turns the 4" back on alongside the 3".
+#
+# It also corrects printify-result.json, which wire-catalog.js rebuilds
+# catalog.json from — without that, the next catalogue rebuild would put every
+# sticker back on the 4" and quietly restore the £1.96-a-sale loss.
+#
+# Run with apply = "no" first and read the log.
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Actually change the products? Leave as "no" for a dry run first.'
+        default: "no"
+        type: choice
+        options: ["no", "yes"]
+permissions:
+  contents: write
+jobs:
+  safety-net:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Turn the 4 inch back on
+        working-directory: automation/social
+        run: node sticker-safety-net.js
+        env:
+          APPLY: ${{ inputs.apply == 'yes' && '1' || '' }}
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Check the catalogue still says 3 inch
+        if: ${{ inputs.apply == 'yes' }}
+        # The safety net must not change what the SHOP sells — only what
+        # Printify will still accept an order for.
+        run: |
+          node -e '
+            const cat = require("./netlify/functions/catalog.json");
+            const res = require("./automation/social/printify-result.json");
+            const rows = Array.isArray(res) ? res : (res.created || res.results || res.products || []);
+            const onFour = cat.filter((x) => x.printifyVariantId === 92315);
+            const onThree = cat.filter((x) => x.printifyVariantId === 92314);
+            console.log("catalogue:", onThree.length, "on 3\"", "|", onFour.length, "on 4\"");
+            if (onFour.length) throw new Error("catalogue drifted back to the 4 inch");
+            if (!onThree.length) throw new Error("catalogue has no 3 inch stickers");
+            const stale = rows.filter((r) => r && r.printifyVariantId === 92315);
+            console.log("printify-result.json rows still on 4\":", stale.length);
+            if (stale.length) throw new Error("result file would still revert the catalogue");
+            console.log("shop sells 3\"; Printify accepts both. Correct.");
+          '
+      - name: Commit
+        if: ${{ inputs.apply == 'yes' }}
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-result.json
+          git status --short
+          git commit -m "Keep the 4 inch sticker orderable until the shop redeploys [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
