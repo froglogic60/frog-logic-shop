@@ -1433,7 +1433,7 @@ function renderProducts(){
   // which is built from these very entries by automation/pdf/sticker-sheet.js.
   // That is why they are flagged rather than deleted.
   grid.innerHTML = PRODUCTS.filter(p => !p.retired).map(p => `
-    <article class="card">
+    <article class="card" data-id="${checkoutId(p.num, p.word, 'physical')}">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
@@ -1444,6 +1444,70 @@ function renderProducts(){
       </div>
     </article>
   `).join('');
+  wirePhotos();
+}
+
+// ===== The real thing, next to the artwork =====
+//
+// Every physical card showed the artwork and nothing else, which is right for a
+// download — there the artwork IS the product — and wrong for a £19 tee, where
+// the customer never saw a tee. mockups.json is written from Printify's own
+// product photographs by automation/social/mockups.js.
+//
+// The artwork stays the main image, because it is what the shop looks like. The
+// photograph sits underneath as a thumbnail you tap to enlarge.
+//
+// Deliberately no hover behaviour: hover does not exist on a phone, and a card
+// that changes when a pointer drifts across it is exactly the kind of surprise
+// this shop is built to avoid. Tapping is the only thing that does anything.
+//
+// If mockups.json is missing or unreachable this quietly does nothing and the
+// page stays as it was, so the shop can never be broken by a photo.
+function openPhoto(photo){
+  let dlg = document.getElementById('photo-view');
+  if(!dlg){
+    dlg = document.createElement('dialog');
+    dlg.id = 'photo-view';
+    dlg.innerHTML =
+      '<img alt="">' +
+      '<form method="dialog"><button class="btn btn-ghost btn-small">Close</button></form>';
+    document.body.appendChild(dlg);
+  }
+  const img = dlg.querySelector('img');
+  img.src = photo.src;
+  img.alt = photo.alt || '';
+  // <dialog> gives Escape-to-close and focus handling for free.
+  dlg.showModal();
+}
+
+async function wirePhotos(){
+  let photos;
+  try {
+    const res = await fetch('mockups.json');
+    if(!res.ok) return;
+    photos = await res.json();
+  } catch (err) { return; }
+
+  document.querySelectorAll('#product-grid .card[data-id]').forEach(card => {
+    const photo = photos[card.dataset.id];
+    const meta = card.querySelector('.card-meta');
+    const price = card.querySelector('.card-price');
+    if(!photo || !meta || !price || card.querySelector('.card-photo')) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'card-photo';
+    const img = document.createElement('img');
+    img.src = photo.src;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.width = 56; img.height = 56;
+    const label = document.createElement('span');
+    label.textContent = 'See the real thing';
+    btn.append(img, label);
+    btn.addEventListener('click', () => openPhoto(photo));
+    meta.insertBefore(btn, price);
+  });
 }
 
 // ===== Digital products =====
