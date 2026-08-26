@@ -235,6 +235,16 @@ async function shopProducts() {
       console.log(`   ${already ? "corrected" : "created"} ${product.id} — artwork at scale ${scale.toFixed(4)}`);
       console.log(`   ${gbp(price)} - cost ${gbp(cost)} = ${gbp(keep)}   (was ${gbp(old.worstCost ?? null)} on the EU mug)`);
 
+      // The whole point of this script is that somebody looks at the result, so
+      // it records where to look. Printify re-renders the mockups after an
+      // update, which takes a few seconds, so the photo is read back fresh
+      // rather than taken from the response to the write.
+      await sleep(2000);
+      const fresh = await api(`/shops/${SHOP}/products/${product.id}.json`);
+      const shot = (fresh.images || []).find((i) => i.is_default) || (fresh.images || [])[0];
+      if (shot) console.log(`   ${shot.src}`);
+      else console.log("   (no mockup rendered yet — re-run to pick it up)");
+
       results.push({
         id: catalogId, num: p.num, word: p.word, kind: "mug",
         printifyProductId: product.id,
@@ -242,6 +252,7 @@ async function shopProducts() {
         price, worstCost: cost,
         blueprint: bp.title, provider: pr.title, country: "GB",
         artworkScale: scale,
+        mockup: shot ? shot.src : null,
         replaces: old.printifyProductId,
       });
     } catch (e) {
