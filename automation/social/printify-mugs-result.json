@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-08-26T23:07:46.656Z",
+  "createdAt": "2026-08-26T23:12:52.342Z",
   "target": {
     "blueprintId": 535,
     "providerId": 6,
@@ -19,6 +19,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f422aecea373cf90cecdf/69010/8348/47-things-at-once-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c11ef3d753324803ceaa"
     },
     {
@@ -34,6 +35,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f422b03b32619540a8277/69010/8348/object-permanence-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c13aef8f20f9810abe16"
     },
     {
@@ -49,6 +51,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f422c773c31dfa10f7b4c/69010/8348/snacks-and-spite-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c14629968299dd065565"
     },
     {
@@ -64,6 +67,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f422effd89d136008de72/69010/8348/interoception-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c14e08274c014000d6c6"
     },
     {
@@ -79,6 +83,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f422feb95a088fa0a0316/69010/8348/comfort-rewatch-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c167d8291a248e025157"
     },
     {
@@ -94,6 +99,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f4231ffd89d136008de78/69010/8348/the-right-amount-of-you-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c18608274c014000d725"
     },
     {
@@ -109,6 +115,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f4232ecea373cf90cece6/69010/8348/shared-interest-not-small-talk-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c193f3d753324803cf7a"
     },
     {
@@ -124,6 +131,7 @@
       "provider": "T Shirt and Sons",
       "country": "GB",
       "artworkScale": 0.4337722695584818,
+      "mockup": "https://images-api.printify.com/mockup/6a8f4234773c31dfa10f7b50/69010/8348/twenty-minutes-counts-frog-logic-mug.jpg?camera_label=front",
       "replaces": "6a88c1a2761b9bbd8008c68a"
     }
   ],
