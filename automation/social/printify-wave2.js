@@ -113,12 +113,16 @@ const KINDS = {
     avoid: /magnet|decal|wall|bumper|laptop skin/i,
     sizeHint: /3.*x.*3|medium/i,
     pin: { blueprint: /kiss-?cut sticker/i, provider: /sticky products europe/i },
-    pinVariantId: 92315,
-    // Held back 24 Aug 2026. Base cost £5.46 against a £3.50 price is a £1.96
-    // loss a sale before postage, and postage is £6.49 because the only maker
-    // is in the Netherlands. Delete this one line to bring them back once
-    // there is a UK maker or the basket lets one parcel carry several items.
-    hold: "base cost £5.46 vs a £3.50 price — a £1.96 loss a sale, plus £6.49 postage from NL",
+    // 92314 is the 3", not the 4". These seven were held back on 24 Aug because
+    // the 4" (92315) costs £5.46 against a £3.50 price — a £1.96 loss a sale.
+    // On 26 Aug the ten live stickers moved to the 3", which costs £2.79 and
+    // keeps 71p, so the reason for holding these back stopped being true. They
+    // now match the ten already on sale: same blueprint, same maker, same size.
+    //
+    // Postage is still £6.49 from the Netherlands, because there is no UK maker
+    // for kiss-cut stickers — but that is already the case for the ten on sale,
+    // and the basket now quotes it before anyone commits to paying.
+    pinVariantId: 92314,
   },
 };
 
