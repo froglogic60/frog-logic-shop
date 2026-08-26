@@ -1,8 +1,11 @@
-name: Find a cheaper sticker maker
+name: Find a cheaper maker
 # Not a one-shot — worth re-running whenever Printify changes its prices.
 #
-# Ten stickers are on sale at £3.50 against a £5.46 base cost, losing £1.96 a
-# sale before postage. This finds out whether a cheaper UK or EU maker exists.
+# Pick the product with the "kind" input. It answers one question: is there a
+# cheaper or closer maker than the one in use? It was written for the stickers
+# (£3.50 against a £5.46 cost) and now also covers the mugs, where the problem
+# is postage rather than cost — £7.79 to send a £14 mug to a UK address,
+# because the maker in use is in the EU.
 #
 # Printify does not expose base cost in its catalogue, only postage, so the
 # script builds a throwaway product per candidate maker, reads the real cost off
@@ -11,6 +14,11 @@ name: Find a cheaper sticker maker
 on:
   workflow_dispatch:
     inputs:
+      kind:
+        description: "Which product to sample"
+        type: choice
+        options: ["mug", "sticker"]
+        default: "mug"
       limit:
         description: "How many makers to sample (each one builds and deletes a product)"
         default: "10"
@@ -21,19 +29,20 @@ on:
 permissions:
   contents: write
 jobs:
-  stickers:
+  makers:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Sample the sticker makers
+      - name: Sample the makers
         working-directory: automation/social
         run: node sticker-makers.js
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          KIND: ${{ inputs.kind }}
           LIMIT: ${{ inputs.limit }}
           KEEP: ${{ inputs.keep && '1' || '' }}
       - name: Commit the report
@@ -41,8 +50,8 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/sticker-maker-report.json || true
+          git add automation/social/sticker-maker-report.json automation/social/mug-maker-report.json || true
           git status --short
-          git commit -m "Sticker maker cost report [skip netlify]" || echo "nothing to commit"
+          git commit -m "Maker cost report [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
