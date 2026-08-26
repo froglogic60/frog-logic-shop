@@ -272,111 +272,62 @@
         }
       ]
     },
-    "441:30": {
-      "name": "OPT OnDemand",
-      "provider": 30,
+    "535:6": {
+      "name": "T Shirt and Sons",
+      "provider": 6,
       "zones": [
         {
-          "first": 529,
-          "additional": 199,
+          "first": 379,
+          "additional": 249,
           "countries": [
-            "DE"
+            "GB"
           ]
         },
         {
-          "first": 579,
-          "additional": 239,
-          "countries": [
-            "CZ"
-          ]
-        },
-        {
-          "first": 659,
+          "first": 1549,
           "additional": 199,
           "countries": [
-            "AD",
-            "AL",
-            "AM",
             "AT",
-            "AX",
-            "BA",
             "BE",
             "BG",
-            "BV",
-            "BY",
             "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "EE",
             "ES",
-            "FO",
+            "FI",
             "FR",
-            "GE",
-            "GG",
-            "GI",
-            "GL",
-            "GP",
             "GR",
             "HR",
             "HU",
-            "IM",
+            "IE",
             "IT",
-            "JE",
+            "LT",
             "LU",
-            "MC",
-            "MD",
-            "ME",
-            "MK",
+            "LV",
             "MT",
             "NL",
             "PL",
             "PT",
-            "RE",
             "RO",
-            "RS",
+            "SE",
             "SI",
-            "SK",
-            "SM",
-            "TR",
-            "UA",
-            "VA",
-            "XK"
+            "SK"
           ]
         },
         {
-          "first": 779,
-          "additional": 169,
+          "first": 2279,
+          "additional": 619,
           "countries": [
-            "GB",
-            "IE"
-          ]
-        },
-        {
-          "first": 999,
-          "additional": 199,
-          "countries": [
-            "CH",
-            "DK",
-            "EE",
-            "FI",
-            "IS",
-            "LI",
-            "LT",
-            "LV",
-            "NO",
-            "SE"
-          ]
-        },
-        {
-          "first": 1699,
-          "additional": 1399,
-          "countries": [
-            "CA",
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 2199,
-          "additional": 999,
+          "first": 3279,
+          "additional": 619,
           "countries": [
-            "AU"
+            "US"
           ]
         }
       ]
