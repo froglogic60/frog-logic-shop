@@ -99,11 +99,25 @@ const HASHTAG_SETS = [
 ];
 function tags(n) { return HASHTAG_SETS[n % HASHTAG_SETS.length]; }
 
+// The shop address, spelled out rather than "link in bio".
+//
+// Every one of these captions used to end "link in bio", and the same caption
+// goes to Facebook and Instagram alike. On Instagram that works. On Facebook
+// there is no bio link to follow, so for a month half of every day's posts
+// pointed at nothing — Meta's per-post link-click column was empty because
+// there was never a link to click. A bare domain is clickable on Facebook and
+// short enough to read off a phone screen on Instagram, so it works on both.
+//
+// Only the posts that show something for sale carry it. The quotes, the
+// educational notes and the behind-the-scenes ones stay clean, because a feed
+// where every single post ends in an address is an advert, not a pond.
+const SHOP = "froglogic.co.uk";
+
 const SHOWCASE_LINES = [
-  "Made for the days it describes. Instant download — link in bio.",
-  "No shipping, no waiting, no fuss. Link in bio.",
-  "Designed to be legible on a hard day. Link in bio.",
-  "One of the calm tools from the pond. Link in bio.",
+  `Made for the days it describes. Instant download at ${SHOP}`,
+  `No shipping, no waiting, no fuss. ${SHOP}`,
+  `Designed to be legible on a hard day. ${SHOP}`,
+  `One of the calm tools from the pond. ${SHOP}`,
 ];
 
 function buildPost({ type, occurrence }, bank, site) {
@@ -118,7 +132,7 @@ function buildPost({ type, occurrence }, bank, site) {
     const p = site.PRODUCTS[(occurrence * 7) % site.PRODUCTS.length];
     return {
       kind: "art", item: p,
-      caption: `${p.word}. ${p.line} 🐸\n\nFrom the feelings collection — the word is the artwork.\n\n${tags(occurrence)}`,
+      caption: `${p.word}. ${p.line} 🐸\n\nFrom the feelings collection at ${SHOP} — the word is the artwork.\n\n${tags(occurrence)}`,
     };
   }
   if (type === "s") {
