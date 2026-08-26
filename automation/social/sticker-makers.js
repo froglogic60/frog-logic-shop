@@ -34,21 +34,48 @@ const KEEP = !!process.env.KEEP;
 // smaller sticker. Size is the whole question, so read all of them.
 const MAX_VARIANTS = Number(process.env.MAX_VARIANTS) || 24;
 
-// The variant the ten live stickers are actually built on, so its row can be
-// marked in the report rather than having to be matched up by eye.
-const LIVE_VARIANT = 92315;
+// The same question keeps coming up for different products, so the parts that
+// change live here and the rest of the script does not care which one it is.
+// KIND=mug node sticker-makers.js sweeps mugs instead of stickers.
+//
+//   patterns / avoid  what counts as this product in Printify's catalogue
+//   liveVariant       the variant the shop uses today, marked * in the report
+//   prices            today's price first, then the ones worth testing
+const KINDS = {
+  sticker: {
+    label: "sticker",
+    patterns: [/kiss-?cut sticker/i, /die-?cut sticker/i, /vinyl sticker/i, /^sticker/i, /sticker sheet/i],
+    avoid: /magnet|bumper|wall decal|transfer|iron-?on|window/i,
+    liveVariant: 92314,
+    prices: [350, 450, 650],
+    report: "sticker-maker-report.json",
+  },
+  mug: {
+    // £14 mug, £7.79 to post the first one to a UK address, because the maker
+    // in use (OPT OnDemand, blueprint 441) is in the EU. The question this run
+    // answers is whether a UK maker exists and what it would cost.
+    label: "mug",
+    patterns: [/ceramic mug/i, /^mug/i, /coffee mug/i, /enamel mug/i, /colou?r[- ]changing mug/i],
+    avoid: /travel|tumbler|bottle|flask|shot glass|can cooler|stein/i,
+    liveVariant: 62327,
+    prices: [1400, 1600, 1800],
+    report: "mug-maker-report.json",
+  },
+};
 
-// What the shop charges today, and the two prices worth testing against.
-const PRICES = [350, 450, 650];
+const KIND = KINDS[(process.env.KIND || "sticker").toLowerCase()];
+if (!KIND) { console.error("Unknown KIND — use one of: " + Object.keys(KINDS).join(", ")); process.exit(1); }
+
+const LIVE_VARIANT = KIND.liveVariant;
+const PRICES = KIND.prices;
+const PATTERNS = KIND.patterns;
+const AVOID = KIND.avoid;
 
 // Same retirement list as the wave-2 script: Printify keeps announced-ending
 // partnerships in the catalogue right up to their cut-off date.
 const RETIRED = /(drukātava|drukatava|drive fulfillment|hft71|rogac|jams designs|\bc4\b)/i;
 
 const EU = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"];
-
-const PATTERNS = [/kiss-?cut sticker/i, /die-?cut sticker/i, /vinyl sticker/i, /^sticker/i, /sticker sheet/i];
-const AVOID = /magnet|bumper|wall decal|transfer|iron-?on|window/i;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const GAP_MS = 150;
@@ -160,7 +187,7 @@ async function sweep() {
   console.log("sampling with existing upload:", image.file_name);
 
   const candidates = await sweep();
-  console.log(`\n${candidates.length} usable UK/EU sticker maker(s) found. Sampling the best ${Math.min(LIMIT, candidates.length)}:\n`);
+  console.log(`\n${candidates.length} usable UK/EU ${KIND.label} maker(s) found. Sampling the best ${Math.min(LIMIT, candidates.length)}:\n`);
 
   const rows = [];
   const undeleted = [];
@@ -219,7 +246,7 @@ async function sweep() {
       PRICES.map((p) => pad((r.margins[p] < 0 ? "-" : "+") + "£" + (Math.abs(r.margins[p]) / 100).toFixed(2), 8)).join("")
     );
   }
-  console.log("\n* = the size the ten live stickers are built on today.");
+  console.log(`\n* = the ${KIND.label} variant the shop uses today.`);
 
   const current = priced.find((r) => r.live);
   const best = priced[0];
@@ -234,15 +261,16 @@ async function sweep() {
     console.log(`  ${gbp(best.cost)} base + ${gbp(best.ukShipping)} UK postage.`);
     if (current) {
       console.log(`In use today: ${current.provider} — ${current.variantTitle} at ${gbp(current.cost)}.`);
-      console.log(`Switching would save ${gbp(current.cost - best.cost)} a sticker — but it is a different size,`);
+      console.log(`Switching would save ${gbp(current.cost - best.cost)} a ${KIND.label} — but it is a different variant,`);
       console.log("so this is a product decision, not just a cheaper supplier.");
     }
-    console.log(`At £3.50 the cheapest ${best.margins[350] >= 0 ? "makes" : "still loses"} ${gbp(Math.abs(best.margins[350]))} a sale.`);
+    const p0 = PRICES[0];
+    console.log(`At £${(p0/100).toFixed(2)} the cheapest ${best.margins[p0] >= 0 ? "makes" : "still loses"} ${gbp(Math.abs(best.margins[p0]))} a sale.`);
   }
   const gbOnly = priced.filter((r) => r.country === "GB");
   console.log(gbOnly.length
     ? `${gbOnly.length} UK-based option(s) in this sample.`
-    : "No UK-based sticker maker appeared in the catalogue at all — every option posts from the EU.");
+    : `No UK-based ${KIND.label} maker appeared in the catalogue at all — every option posts from the EU.`);
   console.log("Postage is charged on top and is not in these margins.");
 
   if (undeleted.length) {
@@ -253,8 +281,8 @@ async function sweep() {
   }
 
   fs.writeFileSync(
-    path.join(__dirname, "sticker-maker-report.json"),
+    path.join(__dirname, KIND.report),
     JSON.stringify({ sampledAt: new Date().toISOString(), prices: PRICES, considered: candidates.length, rows, undeleted }, null, 2) + "\n"
   );
-  console.log("\nwrote sticker-maker-report.json");
+  console.log("\nwrote " + KIND.report);
 })().catch((e) => { console.error(e); process.exit(1); });
