@@ -1,0 +1,41 @@
+name: Publish the shop
+# Push everything that is waiting to the live site.
+#
+# The automatic workflows — the catalogue, the postage, the product photos —
+# all tag their commits [skip netlify] on purpose. A production deploy costs 15
+# of the 1,000 credits the plan grants each month, and those three run often
+# enough that deploying on every one of them would burn the month on refreshes
+# nobody asked for. The cost of that choice is that their work sits in the repo,
+# correct but invisible, until something else deploys.
+#
+# This is the "something else". It commits nothing but an empty marker, which is
+# enough for Netlify to start a build; the build then picks up everything
+# already waiting. Run it when the shop should show the latest.
+#
+# ONE RUN = ONE DEPLOY = 15 CREDITS. That is the whole reason it is a button and
+# not a schedule.
+#
+# netlify.toml still has the last word: if literally nothing outside automation/
+# and .github/ has changed since the last deploy, its ignore rule cancels the
+# build and the credits are not spent.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Say what is waiting
+        run: |
+          echo "Changes to the site since the last deploy:"
+          git log --oneline -12 -- . ':(exclude)automation' ':(exclude).github'
+      - name: Trigger the deploy
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "Publish the shop"
+          git push
