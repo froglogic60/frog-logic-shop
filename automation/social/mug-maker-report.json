@@ -1,12 +1,63 @@
 {
-  "sampledAt": "2026-08-26T18:42:17.374Z",
+  "sampledAt": "2026-08-26T19:14:40.109Z",
   "prices": [
     1400,
     1600,
     1800
   ],
-  "considered": 5,
+  "considered": 7,
   "rows": [
+    {
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "blueprintId": 479,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 65217,
+      "variantTitle": "11oz",
+      "live": false,
+      "cost": 1016,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 384,
+        "1600": 584,
+        "1800": 784
+      }
+    },
+    {
+      "blueprint": "Black Mug (11oz, 15oz)",
+      "blueprintId": 479,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 104470,
+      "variantTitle": "15oz",
+      "live": false,
+      "cost": 1055,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 345,
+        "1600": 545,
+        "1800": 745
+      }
+    },
+    {
+      "blueprint": "11oz White Mug",
+      "blueprintId": 535,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 69010,
+      "variantTitle": "11oz",
+      "live": false,
+      "cost": 523,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 877,
+        "1600": 1077,
+        "1800": 1277
+      }
+    },
     {
       "blueprint": "Accent Coffee Mug (11, 15oz)",
       "blueprintId": 635,
