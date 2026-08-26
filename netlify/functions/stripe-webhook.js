@@ -69,6 +69,9 @@ async function sendDownloadEmail({ toEmail, items }) {
       html: `<p>Thanks for your order! Here ${items.length === 1 ? "it is" : "they are"}:</p>
              ${links}
              <p>For personal and household use — print freely, please don't resell or redistribute the files.</p>
+             <p>Trouble with a file — won't open, wrong one, didn't arrive? Reply to this email or write to
+             <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a> and I'll sort it. The
+             <a href="${site}/returns">returns page</a> has the detail.</p>
              <p>🐸 Frog Logic</p>`,
     }),
   });
