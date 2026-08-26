@@ -102,54 +102,6 @@
     }
   },
   {
-    "id": "06-infinity",
-    "name": "Infinity",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c127ef8f20f9810abe03",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
-    "id": "07-touched-out",
-    "name": "Touched Out",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c12a0c6a0521510512e6",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
-    "id": "08-low-spoons-today",
-    "name": "Low Spoons Today",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc60011bb2030205535d",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "09-special-interest",
     "name": "Special Interest",
     "price": 36.99,
@@ -258,22 +210,6 @@
     }
   },
   {
-    "id": "13-rejection-sensitive",
-    "name": "Rejection Sensitive",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c13729968299dd065552",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "14-object-permanence",
     "name": "Object Permanence",
     "price": 14,
@@ -303,22 +239,6 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "720:6"
-    }
-  },
-  {
-    "id": "16-stimming",
-    "name": "Stimming",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc6596d562e2ab050515",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
@@ -376,22 +296,6 @@
     }
   },
   {
-    "id": "19-demand-avoidant",
-    "name": "Demand Avoidant",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c143f3d753324803cec1",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "20-snacks-and-spite",
     "name": "Snacks and Spite",
     "price": 14,
@@ -437,22 +341,6 @@
       "first": 779,
       "additional": 169,
       "zoneKey": "441:30"
-    }
-  },
-  {
-    "id": "23-do-not-perceive-me",
-    "name": "Do Not Perceive Me",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c151cf106ff5b3072c49",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
@@ -542,22 +430,6 @@
     }
   },
   {
-    "id": "28-sensory-seeking",
-    "name": "Sensory Seeking",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc696e100cbb53065248",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "29-no-idea-what-my-face-is-doing",
     "name": "No Idea What My Face Is Doing",
     "price": 19,
@@ -593,22 +465,6 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "12:331"
-    }
-  },
-  {
-    "id": "30-recharging",
-    "name": "Recharging",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c15908274c014000d6d7",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
@@ -682,22 +538,6 @@
     }
   },
   {
-    "id": "34-happy-flappy",
-    "name": "Happy Flappy",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc6f8a66efd65c0cf7ee",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "35-found-my-people",
     "name": "Found My People",
     "price": 12,
@@ -727,22 +567,6 @@
       "first": 779,
       "additional": 169,
       "zoneKey": "441:30"
-    }
-  },
-  {
-    "id": "37-same-meal-still-perfect",
-    "name": "Same Meal, Still Perfect",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c16bf3d753324803cf1c",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
@@ -994,38 +818,6 @@
     }
   },
   {
-    "id": "48-you-made-it-this-far",
-    "name": "You Made It This Far",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c183761b9bbd8008c66c",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
-    "id": "49-loved-as-standard",
-    "name": "Loved As Standard",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc746e100cbb53065262",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "50-the-right-amount-of-you",
     "name": "The Right Amount of You",
     "price": 14,
@@ -1096,22 +888,6 @@
     }
   },
   {
-    "id": "53-believe-me-the-first-time",
-    "name": "Believe Me The First Time",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c18ff3d753324803cf74",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "54-asking-is-not-failing",
     "name": "Asking Is Not Failing",
     "price": 12,
@@ -1125,22 +901,6 @@
       "first": 439,
       "additional": 129,
       "zoneKey": "1193:94"
-    }
-  },
-  {
-    "id": "55-you-noticed-without-me-asking",
-    "name": "You Noticed Without Me Asking",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc7851e58562780adfd6",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
@@ -1211,22 +971,6 @@
       "first": 779,
       "additional": 169,
       "zoneKey": "441:30"
-    }
-  },
-  {
-    "id": "59-tell-me-before-you-change-it",
-    "name": "Tell Me Before You Change It",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c196f3d753324803cf80",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
@@ -1348,22 +1092,6 @@
     }
   },
   {
-    "id": "66-i-see-you-too",
-    "name": "I See You Too",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a88c1abf3d753324803cf93",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
-    }
-  },
-  {
     "id": "67-you-re-allowed-to-find-it-hard",
     "name": "You're Allowed To Find It Hard",
     "price": 12,
@@ -1377,22 +1105,6 @@
       "first": 439,
       "additional": 129,
       "zoneKey": "1193:94"
-    }
-  },
-  {
-    "id": "68-their-person",
-    "name": "Their Person",
-    "price": 3.5,
-    "type": "physical",
-    "currency": "gbp",
-    "printifyProductId": "6a8efc7dd2d1779e930206a1",
-    "printifyVariantId": 92314,
-    "shipping": {
-      "provider": 255,
-      "providerName": "Sticky Products Europe",
-      "first": 649,
-      "additional": 5,
-      "zoneKey": "1216:255"
     }
   },
   {
