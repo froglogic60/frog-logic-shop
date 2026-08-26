@@ -261,6 +261,25 @@ export default async (req) => {
     })),
     shipping_address_collection:
       physical.length ? { allowed_countries: [country] } : undefined,
+    // The 14-day right to cancel survives print-on-demand — these are stock
+    // designs, not made to anyone's specification — but it does NOT survive a
+    // download the buyer gets immediately, PROVIDED they agreed to that up
+    // front. Regulation 37 of the Consumer Contracts Regulations wants two
+    // things together: express consent to supply starting early, and an
+    // acknowledgement that the cancellation right goes with it. A tick-box
+    // linked to the terms page is how that gets recorded. Without it every
+    // download stays refundable for a fortnight after the file has been sent.
+    //
+    // Asked on every basket, not only digital ones, because the mixed case is
+    // the common one and a checkbox that appears and disappears is worse than
+    // one that is always there.
+    consent_collection: { terms_of_service: "required" },
+    custom_text: {
+      terms_of_service_acceptance: {
+        message:
+          "I agree to the terms and returns policy. For downloads, I want them straight away and accept that means giving up the 14-day right to cancel those files. Physical pieces keep the full 14 days.",
+      },
+    },
     shipping_options: physical.length
       ? [{
           shipping_rate_data: {
