@@ -70,13 +70,22 @@ for (const p of PRODUCTS) {
 }
 
 // ---- 2. Printify ids, from what was actually created ----
+// Order matters. Later files win, because a piece can appear in more than one
+// of them: the eight mugs are in wave 1 on the EU maker AND in the mugs file on
+// the UK maker, and the UK one is the one that should be sold. Keep
+// printify-mugs-result.json last.
 const wired = [];
-for (const file of ["printify-result.json", "printify-wave2-result.json"]) {
+const moved = [];
+for (const file of ["printify-result.json", "printify-wave2-result.json", "printify-mugs-result.json"]) {
   for (const r of loadResults(file)) {
     if (RETIRED.has(r.id)) continue;
     const entry = byId.get(r.id);
     if (!entry) { orphans.push(r.id + " (in " + file + ")"); continue; }
     const isNew = !entry.printifyProductId;
+    const wasElsewhere = !isNew && entry.printifyProductId !== r.printifyProductId;
+    if (wasElsewhere) {
+      moved.push(`${r.id}: ${entry.printifyProductId} -> ${r.printifyProductId} (${r.provider || "?"})`);
+    }
     entry.printifyProductId = r.printifyProductId;
     entry.printifyVariantId = r.printifyVariantId;
     // Apparel only. The cost figures stay out — nothing downstream needs a
@@ -138,4 +147,13 @@ if (repriced.length) {
 if (wired.length) {
   console.log(`\nnewly orderable (${wired.length}):`);
   wired.forEach((w) => console.log("  " + w));
+}
+if (moved.length) {
+  console.log(`\n${moved.length} piece(s) now point at a different Printify product:`);
+  moved.forEach((m) => console.log("  " + m));
+  console.log("\n  ! Each of these still carries the OLD maker's postage. A different maker");
+  console.log("    means a different parcel and a different rate, so run \"Refresh the");
+  console.log("    postage rates\" next or the customer is charged the wrong delivery.");
+  console.log("  ! Their product photos are dead too — a mockup URL belongs to the product");
+  console.log("    it was rendered for. Run \"Refresh the product photos\" as well.");
 }
