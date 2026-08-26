@@ -1,0 +1,539 @@
+{
+  "sampledAt": "2026-08-26T18:42:17.374Z",
+  "prices": [
+    1400,
+    1600,
+    1800
+  ],
+  "considered": 5,
+  "rows": [
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 72180,
+      "variantTitle": "11oz / Black",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 72182,
+      "variantTitle": "11oz / Navy",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 72183,
+      "variantTitle": "11oz / Pink",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 72184,
+      "variantTitle": "11oz / Red",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 105888,
+      "variantTitle": "11oz / Light Blue",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 108906,
+      "variantTitle": "11oz / Orange",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 108907,
+      "variantTitle": "11oz / Purple",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 108908,
+      "variantTitle": "11oz / Yellow",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Accent Coffee Mug (11, 15oz)",
+      "blueprintId": 635,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 113942,
+      "variantTitle": "11oz / Light Green",
+      "live": false,
+      "cost": 776,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 624,
+        "1600": 824,
+        "1800": 1024
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98602,
+      "variantTitle": "Pink / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98603,
+      "variantTitle": "Yellow / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98604,
+      "variantTitle": "Red / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98605,
+      "variantTitle": "Light Green / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98606,
+      "variantTitle": "Blue / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98607,
+      "variantTitle": "Dark Blue / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mugs, 11oz",
+      "blueprintId": 1302,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 98608,
+      "variantTitle": "Black / 11oz",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 379,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    },
+    {
+      "blueprint": "Ceramic Mug (EU)",
+      "blueprintId": 441,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 62327,
+      "variantTitle": "11oz",
+      "live": true,
+      "cost": 576,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 824,
+        "1600": 1024,
+        "1800": 1224
+      }
+    },
+    {
+      "blueprint": "Ceramic Mug (EU)",
+      "blueprintId": 441,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 62328,
+      "variantTitle": "15oz",
+      "live": false,
+      "cost": 968,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 432,
+        "1600": 632,
+        "1800": 832
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 79701,
+      "variantTitle": "11oz / Black / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 79702,
+      "variantTitle": "11oz / Pink / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80021,
+      "variantTitle": "11oz / Gold / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80022,
+      "variantTitle": "11oz / Red / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80023,
+      "variantTitle": "11oz / Cambridge Blue / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80024,
+      "variantTitle": "11oz / Dark Green / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80025,
+      "variantTitle": "11oz / Light Blue / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80026,
+      "variantTitle": "11oz / Light Green / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80027,
+      "variantTitle": "11oz / Maroon / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80028,
+      "variantTitle": "11oz / Orange / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80029,
+      "variantTitle": "11oz / Yellow / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Two-Tone Coffee Mug, 11oz",
+      "blueprintId": 1018,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 80030,
+      "variantTitle": "11oz / Dark Blue / Glossy",
+      "live": false,
+      "cost": 676,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 724,
+        "1600": 924,
+        "1800": 1124
+      }
+    },
+    {
+      "blueprint": "Color-Changing Mug, 11oz",
+      "blueprintId": 1017,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 79698,
+      "variantTitle": "11oz / Black / Glossy",
+      "live": false,
+      "cost": 804,
+      "ukShipping": 779,
+      "margins": {
+        "1400": 596,
+        "1600": 796,
+        "1800": 996
+      }
+    }
+  ],
+  "undeleted": []
+}
