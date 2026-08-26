@@ -21,11 +21,13 @@ const { loadSiteData } = require("../social/lib.js");
 const OUT = path.join(__dirname, "products", "frog-logic-stickers.json");
 const PER_PAGE = 9;
 
-const { PRODUCTS } = loadSiteData();
+// ALL_PRODUCTS, not PRODUCTS: the printed stickers were retired from the shop on
+// 26 Aug 2026 and PRODUCTS no longer contains them. This sheet is the reason the
+// artwork was kept, so it is the one place that wants the retired ones too.
+const { ALL_PRODUCTS } = loadSiteData();
 
-// Both the plain stickers and the one pin/sticker crossover. The artwork is the
-// product here, not the substrate.
-const stickers = PRODUCTS.filter((p) => /sticker/i.test(p.num));
+// The artwork is the product here, not the substrate.
+const stickers = ALL_PRODUCTS.filter((p) => /sticker/i.test(p.num));
 if (!stickers.length) {
   console.error("No sticker products found in script.js — nothing to build.");
   process.exit(1);
