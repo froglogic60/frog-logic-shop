@@ -86,7 +86,14 @@ const held = physical.filter((x) => !x.printifyProductId);
 const problems = [];
 
 if (orphans.length) problems.push("ids with no catalogue entry: " + orphans.join(", "));
-if (catalog.length !== 121) problems.push("expected 121 catalogue entries, found " + catalog.length);
+// 68 physical + 54 digital. The physical half checks itself against the page,
+// so a new wave of pieces no longer needs this number touched by hand; the
+// total is still spelled out because it is the one thing that would catch
+// catalog.json being truncated or half-written by something outside this script.
+if (physical.length !== PRODUCTS.length) {
+  problems.push("page shows " + PRODUCTS.length + " physical pieces, catalogue holds " + physical.length);
+}
+if (catalog.length !== 122) problems.push("expected 122 catalogue entries, found " + catalog.length);
 for (const x of sellable) {
   if (!x.printifyVariantId) problems.push(x.id + " has a product id but no variant id");
   if (x.sizes && !x.sizes.some((s) => s.variantId === x.printifyVariantId)) {
