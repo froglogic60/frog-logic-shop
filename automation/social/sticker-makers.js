@@ -55,8 +55,13 @@ const KINDS = {
     // in use (OPT OnDemand, blueprint 441) is in the EU. The question this run
     // answers is whether a UK maker exists and what it would cost.
     label: "mug",
-    patterns: [/ceramic mug/i, /^mug/i, /coffee mug/i, /enamel mug/i, /colou?r[- ]changing mug/i],
+    // The broad \bmug\b pattern is here on purpose. The first mug run only
+    // matched the specific names and came back with accent and two-tone mugs
+    // and no plain white one, which is not a safe answer to "is there a UK
+    // mug" — it might just have been a search that did not look widely enough.
+    patterns: [/\bmug\b/i, /ceramic mug/i, /^mug/i, /coffee mug/i, /enamel mug/i, /colou?r[- ]changing mug/i],
     avoid: /travel|tumbler|bottle|flask|shot glass|can cooler|stein/i,
+    maxBlueprints: 14,
     liveVariant: 62327,
     prices: [1400, 1600, 1800],
     report: "mug-maker-report.json",
@@ -136,7 +141,7 @@ async function sweep() {
   const blueprints = await api("/catalog/blueprints.json");
   const out = [], seen = new Set();
   for (const pat of PATTERNS) {
-    for (const bp of blueprints.filter((b) => pat.test(b.title) && !AVOID.test(b.title)).slice(0, 6)) {
+    for (const bp of blueprints.filter((b) => pat.test(b.title) && !AVOID.test(b.title)).slice(0, KIND.maxBlueprints || 6)) {
       if (seen.has(bp.id)) continue;
       seen.add(bp.id);
       let provs;
