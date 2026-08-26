@@ -1,7 +1,7 @@
 name: Move the mugs to the UK maker
-# A one-shot, but a re-runnable one: it creates NEW products and never deletes
-# the old ones, so a second run just makes a second set rather than breaking
-# anything. Delete the extras in Printify if that happens.
+# Safe to run as often as you like. It never deletes anything, and a mug it
+# built on a previous run is CORRECTED in place rather than built again, so a
+# second run leaves eight mugs, not sixteen.
 #
 # The mugs were made in Czechia: £5.76 to produce, £7.79 to post the first one
 # to a UK address. The maker sweep on 26 Aug 2026 found the same plain white
@@ -9,14 +9,21 @@ name: Move the mugs to the UK maker
 # make and four pounds less to post — and they already make the totes, so the
 # two now share a parcel.
 #
-# Run with dry_run first. That builds ONE mug, reads its real base cost off
-# Printify, deletes it again and stops. Nothing in the shop changes either way:
-# the site keeps pointing at the old mugs until the catalogue is rebuilt.
+# The first run placed the artwork at scale 1 and it ran off the edges of the
+# mug. scale is a fraction of the print area's WIDTH, and a mug's print area is
+# much wider than it is tall, so a square design at 1 overflows top and bottom.
+# The script now reads the real print area from Printify and fits the artwork to
+# it, the same way the tees and totes were always done.
+#
+# Run with dry_run first. That prints the print area, the scale it works out and
+# what it would do to each mug, and changes nothing. Nothing in the shop changes
+# either way: the site keeps pointing at the old mugs until the catalogue is
+# rebuilt.
 on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Build one sample, read its cost, delete it, stop"
+        description: "Report the print area and scale, change nothing"
         type: boolean
         default: true
 permissions:
