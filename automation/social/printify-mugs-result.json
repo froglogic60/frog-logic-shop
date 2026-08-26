@@ -1,0 +1,123 @@
+{
+  "createdAt": "2026-08-26T19:44:52.464Z",
+  "target": {
+    "blueprintId": 535,
+    "providerId": 6,
+    "variantId": 69010
+  },
+  "results": [
+    {
+      "id": "04-47-things-at-once",
+      "num": "04 — Mug",
+      "word": "47 Things at Once",
+      "kind": "mug",
+      "printifyProductId": "6a8f422aecea373cf90cecdf",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c11ef3d753324803ceaa"
+    },
+    {
+      "id": "14-object-permanence",
+      "num": "14 — Mug",
+      "word": "Object Permanence",
+      "kind": "mug",
+      "printifyProductId": "6a8f422b03b32619540a8277",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c13aef8f20f9810abe16"
+    },
+    {
+      "id": "20-snacks-and-spite",
+      "num": "20 — Mug",
+      "word": "Snacks and Spite",
+      "kind": "mug",
+      "printifyProductId": "6a8f422c773c31dfa10f7b4c",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c14629968299dd065565"
+    },
+    {
+      "id": "22-interoception",
+      "num": "22 — Mug",
+      "word": "Interoception",
+      "kind": "mug",
+      "printifyProductId": "6a8f422effd89d136008de72",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c14e08274c014000d6c6"
+    },
+    {
+      "id": "36-comfort-rewatch",
+      "num": "36 — Mug",
+      "word": "Comfort Rewatch",
+      "kind": "mug",
+      "printifyProductId": "6a8f422feb95a088fa0a0316",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c167d8291a248e025157"
+    },
+    {
+      "id": "50-the-right-amount-of-you",
+      "num": "50 — Mug",
+      "word": "The Right Amount of You",
+      "kind": "mug",
+      "printifyProductId": "6a8f4231ffd89d136008de78",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c18608274c014000d725"
+    },
+    {
+      "id": "58-shared-interest-not-small-talk",
+      "num": "58 — Mug",
+      "word": "Shared Interest, Not Small Talk",
+      "kind": "mug",
+      "printifyProductId": "6a8f4232ecea373cf90cece6",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c193f3d753324803cf7a"
+    },
+    {
+      "id": "62-twenty-minutes-counts",
+      "num": "62 — Mug",
+      "word": "Twenty Minutes Counts",
+      "kind": "mug",
+      "printifyProductId": "6a8f4234773c31dfa10f7b50",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 523,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "replaces": "6a88c1a2761b9bbd8008c68a"
+    }
+  ],
+  "errors": []
+}
