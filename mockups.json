@@ -1,0 +1,202 @@
+{
+  "01-overstimulated": {
+    "src": "https://images-api.printify.com/mockup/6a8cc0f82a3603eb2d0d5e3d/18390/102044/overstimulated-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Overstimulated on the real product"
+  },
+  "02-hyperfocused": {
+    "src": "https://images-api.printify.com/mockup/6a8cc0fdb8c6212d72054f8b/73419/18632/hyperfocused-frog-logic-tote.jpg?camera_label=front",
+    "alt": "Hyperfocused on the real product"
+  },
+  "03-shutdown-mode": {
+    "src": "https://images-api.printify.com/mockup/6a8cc1009178f085df05a1e0/91848/60875/shutdown-mode-frog-logic-notebook.jpg?camera_label=front",
+    "alt": "Shutdown Mode on the real product"
+  },
+  "04-47-things-at-once": {
+    "src": "https://images-api.printify.com/mockup/6a88c11ef3d753324803ceaa/62327/3387/47-things-at-once-frog-logic-mug.jpg?camera_label=front",
+    "alt": "47 Things at Once on the real product"
+  },
+  "05-info-dump-incoming": {
+    "src": "https://images-api.printify.com/mockup/6a88c123d8291a248e0250ef/75303/22305/info-dump-incoming-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Info Dump Incoming on the real product"
+  },
+  "09-special-interest": {
+    "src": "https://images-api.printify.com/mockup/6a8cc102fdd5a017170fed12/32872/98424/special-interest-frog-logic-hoodie.jpg?camera_label=front",
+    "alt": "Special Interest on the real product"
+  },
+  "10-executive-dysfunction": {
+    "src": "https://images-api.printify.com/mockup/6a88c12e0c6a0521510512ea/75303/22305/executive-dysfunction-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Executive Dysfunction on the real product"
+  },
+  "11-waiting-mode": {
+    "src": "https://images-api.printify.com/mockup/6a88c134d8291a248e02510a/75303/22305/waiting-mode-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Waiting Mode on the real product"
+  },
+  "12-time-blind": {
+    "src": "https://images-api.printify.com/mockup/6a8cc109d649fe907107d569/18390/102044/time-blind-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Time Blind on the real product"
+  },
+  "14-object-permanence": {
+    "src": "https://images-api.printify.com/mockup/6a88c13aef8f20f9810abe16/62327/3387/object-permanence-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Object Permanence on the real product"
+  },
+  "15-auditory-processing": {
+    "src": "https://images-api.printify.com/mockup/6a8cc10fb8c6212d72054f99/73419/18632/auditory-processing-frog-logic-tote.jpg?camera_label=front",
+    "alt": "Auditory Processing on the real product"
+  },
+  "17-decision-paralysis": {
+    "src": "https://images-api.printify.com/mockup/6a88c13f29968299dd06555a/75303/22305/decision-paralysis-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Decision Paralysis on the real product"
+  },
+  "18-parallel-play": {
+    "src": "https://images-api.printify.com/mockup/6a8cc113b8c6212d72054f9e/18390/102044/parallel-play-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Parallel Play on the real product"
+  },
+  "20-snacks-and-spite": {
+    "src": "https://images-api.printify.com/mockup/6a88c14629968299dd065565/62327/3387/snacks-and-spite-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Snacks and Spite on the real product"
+  },
+  "21-autistic-joy": {
+    "src": "https://images-api.printify.com/mockup/6a88c14a761b9bbd8008c5f7/75303/22305/autistic-joy-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Autistic Joy on the real product"
+  },
+  "22-interoception": {
+    "src": "https://images-api.printify.com/mockup/6a88c14e08274c014000d6c6/62327/3387/interoception-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Interoception on the real product"
+  },
+  "24-late-diagnosed": {
+    "src": "https://images-api.printify.com/mockup/6a8cc119dbf9aebaf708a15c/18390/102044/late-diagnosed-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Late Diagnosed on the real product"
+  },
+  "25-monotropic": {
+    "src": "https://images-api.printify.com/mockup/6a8cc11ffdd5a017170fed1f/73419/18632/monotropic-frog-logic-tote.jpg?camera_label=front",
+    "alt": "Monotropic on the real product"
+  },
+  "26-justice-sensitive": {
+    "src": "https://images-api.printify.com/mockup/6a88c15508274c014000d6cc/75303/22305/justice-sensitive-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Justice Sensitive on the real product"
+  },
+  "27-regulation-loading": {
+    "src": "https://images-api.printify.com/mockup/6a8cc122b8c6212d72054fa2/91848/60875/regulation-loading-frog-logic-notebook.jpg?camera_label=front",
+    "alt": "Regulation: Loading on the real product"
+  },
+  "29-no-idea-what-my-face-is-doing": {
+    "src": "https://images-api.printify.com/mockup/6a8cc1279178f085df05a1f9/18390/102044/no-idea-what-my-face-is-doing-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "No Idea What My Face Is Doing on the real product"
+  },
+  "31-ask-me-about-it": {
+    "src": "https://images-api.printify.com/mockup/6a8cc12d790e2a6cf10563cc/18390/102044/ask-me-about-it-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Ask Me About It on the real product"
+  },
+  "32-unreasonably-delighted": {
+    "src": "https://images-api.printify.com/mockup/6a88c15ed8291a248e02513d/75303/22305/unreasonably-delighted-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Unreasonably Delighted on the real product"
+  },
+  "33-i-notice-everything": {
+    "src": "https://images-api.printify.com/mockup/6a8cc132dbf9aebaf708a16a/73419/18632/i-notice-everything-frog-logic-tote.jpg?camera_label=front",
+    "alt": "I Notice Everything on the real product"
+  },
+  "35-found-my-people": {
+    "src": "https://images-api.printify.com/mockup/6a88c164d8291a248e025150/75303/22305/found-my-people-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Found My People on the real product"
+  },
+  "36-comfort-rewatch": {
+    "src": "https://images-api.printify.com/mockup/6a88c167d8291a248e025157/62327/3387/comfort-rewatch-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Comfort Rewatch on the real product"
+  },
+  "38-pattern-recognition": {
+    "src": "https://images-api.printify.com/mockup/6a8cc13753075cc40309bc75/32872/98424/pattern-recognition-frog-logic-hoodie.jpg?camera_label=front",
+    "alt": "Pattern Recognition on the real product"
+  },
+  "39-enthusiasm-unmasked": {
+    "src": "https://images-api.printify.com/mockup/6a8cc13dd649fe907107d579/18390/102044/enthusiasm-unmasked-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Enthusiasm, Unmasked on the real product"
+  },
+  "40-small-things-enormous-joy": {
+    "src": "https://images-api.printify.com/mockup/6a88c16ff3d753324803cf27/75303/22305/small-things-enormous-joy-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Small Things, Enormous Joy on the real product"
+  },
+  "41-never-too-much": {
+    "src": "https://images-api.printify.com/mockup/6a88c174761b9bbd8008c655/75303/22305/never-too-much-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Never Too Much on the real product"
+  },
+  "42-nothing-needs-fixing": {
+    "src": "https://images-api.printify.com/mockup/6a8cc143dbf9aebaf708a178/18390/102044/nothing-needs-fixing-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Nothing Needs Fixing on the real product"
+  },
+  "43-not-broken": {
+    "src": "https://images-api.printify.com/mockup/6a88c17af3d753324803cf48/75303/22305/not-broken-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Not Broken on the real product"
+  },
+  "44-functioning-as-designed": {
+    "src": "https://images-api.printify.com/mockup/6a8cc1482a3603eb2d0d5e50/91848/60875/functioning-as-designed-frog-logic-notebook.jpg?camera_label=front",
+    "alt": "Functioning As Designed on the real product"
+  },
+  "45-enough": {
+    "src": "https://images-api.printify.com/mockup/6a8cc14cb8c6212d72054fb3/18390/102044/enough-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Enough on the real product"
+  },
+  "46-it-was-precision": {
+    "src": "https://images-api.printify.com/mockup/6a8cc152dbf9aebaf708a18a/73419/18632/it-was-precision-frog-logic-tote.jpg?camera_label=front",
+    "alt": "It Was Precision on the real product"
+  },
+  "47-you-were-paying-attention": {
+    "src": "https://images-api.printify.com/mockup/6a88c18008274c014000d721/75303/22305/you-were-paying-attention-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "You Were Paying Attention on the real product"
+  },
+  "50-the-right-amount-of-you": {
+    "src": "https://images-api.printify.com/mockup/6a88c18608274c014000d725/62327/3387/the-right-amount-of-you-frog-logic-mug.jpg?camera_label=front",
+    "alt": "The Right Amount of You on the real product"
+  },
+  "51-in-writing-please": {
+    "src": "https://images-api.printify.com/mockup/6a8cc156dbf9aebaf708a197/18390/102044/in-writing-please-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "In Writing, Please on the real product"
+  },
+  "52-i-accommodated-you-first": {
+    "src": "https://images-api.printify.com/mockup/6a88c18bcf106ff5b3072ca3/75303/22305/i-accommodated-you-first-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "I Accommodated You First on the real product"
+  },
+  "54-asking-is-not-failing": {
+    "src": "https://images-api.printify.com/mockup/6a8cc15cdbf9aebaf708a1ab/91848/60875/asking-is-not-failing-frog-logic-notebook.jpg?camera_label=front",
+    "alt": "Asking Is Not Failing on the real product"
+  },
+  "56-yes-i-want-friends": {
+    "src": "https://images-api.printify.com/mockup/6a8cc160b8c6212d72054fdd/73419/18632/yes-i-want-friends-frog-logic-tote.jpg?camera_label=front",
+    "alt": "Yes, I Want Friends on the real product"
+  },
+  "57-trust-me-with-it": {
+    "src": "https://images-api.printify.com/mockup/6a8cc164dbf9aebaf708a1bf/32872/98424/trust-me-with-it-frog-logic-hoodie.jpg?camera_label=front",
+    "alt": "Trust Me With It on the real product"
+  },
+  "58-shared-interest-not-small-talk": {
+    "src": "https://images-api.printify.com/mockup/6a88c193f3d753324803cf7a/62327/3387/shared-interest-not-small-talk-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Shared Interest, Not Small Talk on the real product"
+  },
+  "60-recovery-is-part-of-the-plan": {
+    "src": "https://images-api.printify.com/mockup/6a88c19a761b9bbd8008c684/75303/22305/recovery-is-part-of-the-plan-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Recovery Is Part Of The Plan on the real product"
+  },
+  "61-nobody-asked-how-you-were": {
+    "src": "https://images-api.printify.com/mockup/6a88c19e761b9bbd8008c687/75303/22305/nobody-asked-how-you-were-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "Nobody Asked How You Were on the real product"
+  },
+  "62-twenty-minutes-counts": {
+    "src": "https://images-api.printify.com/mockup/6a88c1a2761b9bbd8008c68a/62327/3387/twenty-minutes-counts-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Twenty Minutes Counts on the real product"
+  },
+  "63-guilt-is-not-evidence": {
+    "src": "https://images-api.printify.com/mockup/6a8cc16a0fa2912bd50ebad2/18390/102044/guilt-is-not-evidence-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Guilt Is Not Evidence on the real product"
+  },
+  "64-i-learned-their-language": {
+    "src": "https://images-api.printify.com/mockup/6a8cc170f95fff6a1705fc91/73419/18632/i-learned-their-language-frog-logic-tote.jpg?camera_label=front",
+    "alt": "I Learned Their Language on the real product"
+  },
+  "65-a-different-route": {
+    "src": "https://images-api.printify.com/mockup/6a88c1a7f3d753324803cf91/75303/22305/a-different-route-frog-logic-wall-print.jpg?camera_label=front",
+    "alt": "A Different Route on the real product"
+  },
+  "67-you-re-allowed-to-find-it-hard": {
+    "src": "https://images-api.printify.com/mockup/6a8cc174dbf9aebaf708a1d0/91848/60875/youre-allowed-to-find-it-hard-frog-logic-notebook.jpg?camera_label=front",
+    "alt": "You're Allowed To Find It Hard on the real product"
+  }
+}
