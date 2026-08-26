@@ -91,6 +91,20 @@
   max-width: 62ch;
 }
 
+/* The trading address. Published because an online seller legally has to give a
+   geographic one — set as a block so it reads as a postal address rather than
+   getting lost mid-sentence. */
+.policy-address {
+  font-family: var(--ui);
+  font-size: .94rem;
+  line-height: 1.7;
+  background: var(--card);
+  border-left: 3px solid var(--ink);
+  padding: 16px 20px;
+  margin: 0 0 1.15em;
+  max-width: 68ch;
+}
+
 .policy-quote {
   margin: 0 0 1.15em;
   padding: 16px 20px;
