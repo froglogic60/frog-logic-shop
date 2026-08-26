@@ -37,8 +37,18 @@ export default async (req) => {
     lines.push({ item, qty });
   }
 
-  const goods = lines.reduce((sum, l) => sum + Math.round(l.item.price * 100) * l.qty, 0);
-  const physical = lines.filter((l) => l.item.type === "physical");
+  // Seven of the stickers exist on the shop but have no Printify product behind
+  // them yet, so they cannot actually be made. The basket used to quote them
+  // happily and create-checkout then refused the WHOLE basket at the payment
+  // click — one unavailable sticker taking six good items down with it, at the
+  // last possible moment. Say it here instead, while it can still be removed.
+  const unavailable = lines
+    .filter((l) => l.item.type === "physical" && !l.item.printifyProductId)
+    .map((l) => ({ id: l.item.id, name: l.item.name }));
+
+  const sellable = lines.filter((l) => !unavailable.some((u) => u.id === l.item.id));
+  const goods = sellable.reduce((sum, l) => sum + Math.round(l.item.price * 100) * l.qty, 0);
+  const physical = sellable.filter((l) => l.item.type === "physical");
 
   // Where this basket can go, and where it is going. An unservable choice falls
   // back to the UK rather than erroring: the basket is not the place to argue,
@@ -55,6 +65,9 @@ export default async (req) => {
     country,
     destinations: destinations.map((c) => ({ code: c, name: COUNTRY_NAMES[c] || c })),
     customsRisk: physical.length > 0 && CUSTOMS_RISK(country),
+    // The totals above EXCLUDE these, so the figure shown is what would
+    // actually be charged once they are taken out.
+    ...(unavailable.length ? { unavailable } : {}),
     ...(unknown.length ? { noRateFor: unknown } : {}),
     goods,
     postage,
