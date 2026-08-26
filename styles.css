@@ -137,3 +137,34 @@ a{ color: var(--ink); }
   .header-row{ flex-direction:column; align-items:flex-start; }
   .site-nav{ gap:14px; flex-wrap:wrap; }
 }
+
+/* ===== The real thing =====
+   A photograph of the actual mug or tee, sitting under the artwork on every
+   physical card. The artwork stays the main image; this is the reassurance.
+   No hover behaviour anywhere here on purpose — hover does not exist on a
+   phone, and a card that reacts to a passing pointer is the sort of surprise
+   this shop exists to avoid. Tapping is the only thing that does anything. */
+.card-photo{
+  display:flex; align-items:center; gap:11px;
+  width:100%; margin:0 0 12px; padding:6px 0;
+  background:none; border:0; cursor:pointer;
+  font:inherit; text-align:left; color:var(--muted);
+}
+.card-photo img{
+  width:56px; height:56px; flex:0 0 auto;
+  object-fit:cover; background:#fff;
+  border:1px solid var(--line); border-radius:6px;
+}
+.card-photo span{
+  font-family:var(--ui); font-weight:700; font-size:.78rem;
+  letter-spacing:.04em; text-decoration:underline; text-underline-offset:3px;
+}
+.card-photo:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+
+#photo-view{
+  padding:0; max-width:min(92vw,560px); width:100%;
+  background:var(--card); border:2px solid var(--ink);
+}
+#photo-view::backdrop{ background:rgba(26,26,26,.74); }
+#photo-view img{ display:block; width:100%; height:auto; }
+#photo-view form{ margin:0; padding:14px; text-align:right; }
