@@ -140,7 +140,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc60011bb2030205535d",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "09-special-interest",
@@ -305,7 +312,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc6596d562e2ab050515",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "17-decision-paralysis",
@@ -534,7 +548,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc696e100cbb53065248",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "29-no-idea-what-my-face-is-doing",
@@ -667,7 +688,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc6f8a66efd65c0cf7ee",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "35-found-my-people",
@@ -988,7 +1016,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc746e100cbb53065262",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "50-the-right-amount-of-you",
@@ -1099,7 +1134,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc7851e58562780adfd6",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "56-yes-i-want-friends",
@@ -1344,7 +1386,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8efc7dd2d1779e930206a1",
-    "printifyVariantId": 92314
+    "printifyVariantId": 92314,
+    "shipping": {
+      "provider": 255,
+      "providerName": "Sticky Products Europe",
+      "first": 649,
+      "additional": 5,
+      "zoneKey": "1216:255"
+    }
   },
   {
     "id": "d18-when-words-go",
