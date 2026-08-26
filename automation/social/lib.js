@@ -15,7 +15,18 @@ function loadSiteData() {
   const ctx = { document: { getElementById: () => null } };
   vm.createContext(ctx);
   vm.runInContext(src.slice(0, cut) + "\n;__out={PRODUCTS,DIGITAL_PRODUCTS};", ctx);
-  return ctx.__out;
+  const { PRODUCTS, DIGITAL_PRODUCTS } = ctx.__out;
+  // A retired piece is off the page and out of the checkout, so it must also be
+  // out of anything that quotes prices or points people at the shop — the
+  // catalogue rebuild and the social posts both read PRODUCTS from here, and a
+  // post advertising something nobody can buy is the surprise this shop exists
+  // to avoid. ALL_PRODUCTS keeps the retired ones for the one job that still
+  // needs them: building the printable sticker sheet from their artwork.
+  return {
+    PRODUCTS: PRODUCTS.filter((p) => !p.retired),
+    DIGITAL_PRODUCTS,
+    ALL_PRODUCTS: PRODUCTS,
+  };
 }
 
 // ---- fonts: decompress the @fontsource woff2s to ttf once per run.
