@@ -32,6 +32,7 @@
   var basket = [];      // [{ id, name, size, qty, price }] — price in pence, display only
   var quote = null;     // last server quote
   var quoteSeq = 0;     // so a slow reply cannot overwrite a newer one
+  var lastUnavailable = "";  // which lines the server last said cannot be sold
   // Postage depends on where it is going, and Stripe fixes the delivery charge
   // before it ever asks for an address — so the basket has to ask first.
   var country = "GB";
@@ -128,6 +129,8 @@
     ".bk-where{align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}",
     ".bk-where label{font-size:.82rem;color:var(--muted)}",
     ".bk-country{font:inherit;font-size:.9rem;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg,#fff);color:inherit;max-width:60%}",
+    ".bk-unavailable .bk-name,.bk-unavailable .bk-price{opacity:.5;text-decoration:line-through}",
+    ".bk-nope{margin:4px 0 0;font-size:.78rem;font-weight:700;color:var(--ink);font-family:var(--ui)}",
     ".bk-empty{padding:40px 20px;text-align:center;color:var(--muted)}",
     ".bk-go{width:100%;margin-top:14px}",
     ".bk-go[disabled]{opacity:.55;cursor:not-allowed}",
@@ -241,6 +244,16 @@
       h.className = "bk-name";
       h.textContent = l.name;
       left.appendChild(h);
+
+      // A piece the shop lists but cannot yet make. Said on the line itself, so
+      // it is obvious which one is the problem when the Checkout button is off.
+      if (isUnavailable(l)) {
+        li.classList.add("bk-unavailable");
+        var no = document.createElement("p");
+        no.className = "bk-nope";
+        no.textContent = "Not available yet — remove it to carry on.";
+        left.appendChild(no);
+      }
       if (l.size) {
         var s = document.createElement("p");
         s.className = "bk-size";
@@ -343,6 +356,19 @@
       '<p class="bk-err" hidden></p>' +
       '<button class="btn btn-primary bk-go" type="button">Checkout</button>';
 
+    // Refusing at the payment click is the one place this must never happen, so
+    // the button goes off here, with the reason next to it.
+    var blocked = quote && quote.unavailable && quote.unavailable.length;
+    if (blocked) {
+      var go = els.foot.querySelector(".bk-go");
+      go.disabled = true;
+      var why = els.foot.querySelector(".bk-err");
+      why.textContent = quote.unavailable.length === 1
+        ? "“" + quote.unavailable[0].name + "” isn't available yet. Remove it and the rest can go through."
+        : quote.unavailable.length + " pieces aren't available yet. Remove them and the rest can go through.";
+      why.hidden = false;
+    }
+
     els.foot.querySelector(".bk-go").addEventListener("click", checkout);
     var sel = els.foot.querySelector(".bk-country");
     if (sel) sel.addEventListener("change", function () {
@@ -350,6 +376,11 @@
       try { localStorage.setItem(COUNTRY_KEY, country); } catch (e) { /* fine */ }
       refreshQuote();
     });
+  }
+
+  // The server decides what can be sold; the browser only reports it.
+  function isUnavailable(line) {
+    return !!(quote && quote.unavailable && quote.unavailable.some(function (u) { return u.id === line.id; }));
   }
 
   function escapeHtml(s) {
@@ -403,7 +434,14 @@
         // follows rather than showing a choice that would be refused at
         // payment.
         if (q.country) country = q.country;
-        if (basket.length) renderFoot();
+        if (!basket.length) return;
+        // Which lines are unsellable is only known once the server answers, and
+        // by then the lines are already drawn. Redraw them when that set
+        // changes — and only then, because a full redraw mid-typing would throw
+        // away focus for no reason.
+        var sig = (q.unavailable || []).map(function (u) { return u.id; }).sort().join(",");
+        if (sig !== lastUnavailable) { lastUnavailable = sig; render(); }
+        else renderFoot();
       })
       .catch(function () { /* the basket still works; the total just says items only */ });
   }
