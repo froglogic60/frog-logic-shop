@@ -1,11 +1,31 @@
 name: Launch deploy (20 Sept)
-# One-shot: after Netlify's credits reset on 19 Sept 2026, this makes a
-# normal commit (no [skip netlify]) so Netlify rebuilds and the physical
-# products go live — no human needed. Guarded to 2026 so it never re-fires
-# in later years. Can also be run manually from the Actions tab.
+# Netlify has been skipping every production deploy since 21 Aug — "account
+# credit usage exceeded". The site stays up, frozen on that build; nothing
+# queues, and nothing retries by itself once credits return. Netlify's billing
+# page says the current period runs 20 Aug → 19 Sep, so the new allowance lands
+# on 20 September. Sam is in Cyprus from 16 September and the physical launch is
+# the 20th, so nobody is at a desk when this has to work.
+#
+# So this does not fire once and hope. It checks whether the live site is still
+# the stale build, and only nudges if it is:
+#
+#   GET https://shop.froglogic.co.uk/api/quote
+#     404  -> /api/quote does not exist -> still the old build -> nudge
+#     405  -> the function is there and refusing GET -> the new build is live
+#
+# A nudge is an ordinary commit with no [skip netlify], which is what makes
+# Netlify build. It tries through the 20th, again on the 21st, and once more on
+# the 22nd — and that last attempt FAILS the job if the site is still stale, so
+# GitHub emails her rather than leaving it silently unlaunched.
+#
+# Guarded to 2026 so it never re-fires in later years. Can be run by hand from
+# the Actions tab at any time; running it when the site is already current does
+# nothing.
 on:
   schedule:
-    - cron: "0 9 20 9 *"
+    - cron: "0 9,13,17,21 20 9 *"
+    - cron: "0 9,15,21 21 9 *"
+    - cron: "0 12 22 9 *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,13 +34,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Commit a launch note to trigger the Netlify build
+
+      - name: Is the live site still the old build?
+        id: check
         run: |
-          if [ "$(date -u +%Y)" != "2026" ]; then echo "Not 2026 - skipping"; exit 0; fi
+          if [ "$(date -u +%Y)" != "2026" ]; then echo "Not 2026 — skipping"; echo "stale=no" >> $GITHUB_OUTPUT; exit 0; fi
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://shop.froglogic.co.uk/api/quote || echo "000")
+          echo "GET /api/quote -> $CODE"
+          if [ "$CODE" = "404" ]; then
+            echo "The deployed build has no /api/quote — still the 21 Aug build."
+            echo "stale=yes" >> $GITHUB_OUTPUT
+          elif [ "$CODE" = "000" ]; then
+            echo "Could not reach the site at all. Not nudging on a network blip."
+            echo "stale=unknown" >> $GITHUB_OUTPUT
+          else
+            echo "The new build is live. Nothing to do."
+            echo "stale=no" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Nudge Netlify into building
+        if: steps.check.outputs.stale == 'yes'
+        run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          echo "Launch deploy triggered $(date -u): physical products published." >> LAUNCH-LOG.md
+          echo "Launch deploy nudge $(date -u): live site was still the old build." >> LAUNCH-LOG.md
           git add LAUNCH-LOG.md
-          git commit -m "Launch: publish physical products"
+          git commit -m "Launch: publish the shop"
           git pull --rebase origin main
           git push
+
+      - name: Say plainly what happened
+        run: |
+          case "${{ steps.check.outputs.stale }}" in
+            yes)     echo "Nudged. Netlify should build within a few minutes — the next scheduled run will confirm." ;;
+            no)      echo "Live site is already serving the current build." ;;
+            unknown) echo "Site unreachable this run; will try again on the next schedule." ;;
+          esac
+
+      - name: Fail loudly if it is still not live on the last attempt
+        # Only the 22 Sept run reaches this as a real failure. A failed job is
+        # the one thing that reliably reaches her inbox while she is away.
+        if: steps.check.outputs.stale != 'no'
+        run: |
+          if [ "$(date -u +%m-%d)" = "09-22" ]; then
+            echo "Still not live on the final attempt. Netlify credits may not have reset —"
+            echo "check https://app.netlify.com/teams/froglogic60/billing and use Trigger deploy."
+            exit 1
+          fi
+          echo "Not the last attempt; leaving it for the next scheduled run."
