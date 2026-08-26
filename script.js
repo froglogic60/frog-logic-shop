@@ -143,6 +143,7 @@ const PRODUCTS = [
   },
   {
     num: "06 — Sticker", word: "Infinity",
+    retired: true,
     line: "The symbol, drawn out of the word itself.",
     // Was "Pin / sticker" at £6.50, from when this was going to be an enamel
     // pin. It is made as the same 3" kiss-cut sticker as every other sticker
@@ -166,6 +167,7 @@ const PRODUCTS = [
   },
   {
     num: "07 — Sticker", word: "Touched Out",
+    retired: true,
     line: "Nothing personal. Everything sensory.",
     price: "£3.50", link: "#", bg: "#C4614F",
     // The two words recoil from each other, leaving a gap of space.
@@ -182,6 +184,7 @@ const PRODUCTS = [
   },
   {
     num: "08 — Sticker", word: "Low Spoons Today",
+    retired: true,
     line: "Operating at reduced capacity. Still operating.",
     price: "£3.50", link: "#", bg: "#E0A81C",
     // The word runs out of energy and sinks down the page.
@@ -295,6 +298,7 @@ const PRODUCTS = [
   },
   {
     num: "13 — Sticker", word: "Rejection Sensitive",
+    retired: true,
     line: "They said 'ok'. I have been thinking about it since.",
     price: "£3.50", link: "#", bg: "#A63D5A",
     // The word takes the hit and fractures.
@@ -366,6 +370,7 @@ const PRODUCTS = [
   },
   {
     num: "16 — Sticker", word: "Stimming",
+    retired: true,
     line: "It's regulating, not fidgeting.",
     price: "£3.50", link: "#", bg: "#1F6F8B",
     // A repeating rhythm the eye can follow.
@@ -432,6 +437,7 @@ const PRODUCTS = [
   },
   {
     num: "19 — Sticker", word: "Demand Avoidant",
+    retired: true,
     line: "The moment it became compulsory, it became impossible.",
     price: "£3.50", link: "#", bg: "#5E7A2E",
     // The word pushes back against the instruction.
@@ -517,6 +523,7 @@ const PRODUCTS = [
   },
   {
     num: "23 — Sticker", word: "Do Not Perceive Me",
+    retired: true,
     line: "I'm fine. I just need everyone to look elsewhere.",
     price: "£3.50", link: "#", bg: "#3D4A42",
     // The words shrink into the corner of an enormous empty field.
@@ -606,6 +613,7 @@ const PRODUCTS = [
   },
   {
     num: "28 — Sticker", word: "Sensory Seeking",
+    retired: true,
     line: "More pressure, more texture, more of that sound.",
     price: "£3.50", link: "#", bg: "#B03A6E",
     // The word crushed inward, letters piling up under the pressure.
@@ -651,6 +659,7 @@ const PRODUCTS = [
   },
   {
     num: "30 — Sticker", word: "Recharging",
+    retired: true,
     line: "Not antisocial. Just at 4%.",
     price: "£3.50", link: "#", bg: "#3C6E5A",
     // The word fills up like a battery — solid at the start, hollow after.
@@ -728,6 +737,7 @@ const PRODUCTS = [
   },
   {
     num: "34 — Sticker", word: "Happy Flappy",
+    retired: true,
     line: "Joy, with the whole body.",
     price: "£3.50", link: "#", bg: "#F0B429",
     // The word won't hold still either — caught mid-flap.
@@ -796,6 +806,7 @@ const PRODUCTS = [
   },
   {
     num: "37 — Sticker", word: "Same Meal, Still Perfect",
+    retired: true,
     line: "Day forty-one. No notes.",
     price: "£3.50", link: "#", bg: "#D96C3F",
     // The same line, seven times, deliberately identical.
@@ -1007,6 +1018,7 @@ const PRODUCTS = [
   },
   {
     num: "48 — Sticker", word: "You Made It This Far",
+    retired: true,
     line: "Every single hard day. Undefeated.",
     price: "£3.50", link: "#", bg: "#2E6B4F",
     // A long difficult route — and the gold marker sitting at the end of it.
@@ -1026,6 +1038,7 @@ const PRODUCTS = [
   },
   {
     num: "49 — Sticker", word: "Loved As Standard",
+    retired: true,
     line: "Not an upgrade. Not conditional.",
     price: "£3.50", link: "#", bg: "#C2456E",
     // Every condition anyone ever attached, struck off.
@@ -1115,6 +1128,7 @@ const PRODUCTS = [
   },
   {
     num: "53 — Sticker", word: "Believe Me The First Time",
+    retired: true,
     line: "I shouldn't have to say it four ways.",
     price: "£3.50", link: "#", bg: "#7A2E4E",
     // The same sentence, over and over, until finally one lands.
@@ -1153,6 +1167,7 @@ const PRODUCTS = [
   },
   {
     num: "55 — Sticker", word: "You Noticed Without Me Asking",
+    retired: true,
     line: "The rarest kindness there is.",
     price: "£3.50", link: "#", bg: "#3E6E8C",
     // The moment someone clocks it before you've said a word.
@@ -1226,6 +1241,7 @@ const PRODUCTS = [
   },
   {
     num: "59 — Sticker", word: "Tell Me Before You Change It",
+    retired: true,
     line: "I'd already built the whole day around the old plan.",
     price: "£3.50", link: "#", bg: "#6B4A8C",
     // The plan, carefully assembled — then rearranged without warning.
@@ -1357,6 +1373,7 @@ const PRODUCTS = [
   },
   {
     num: "66 — Sticker", word: "I See You Too",
+    retired: true,
     line: "For the sibling who got very good at not needing things.",
     price: "£3.50", link: "#", bg: "#8C5A2E",
     // The one who learned to take up less room.
@@ -1390,6 +1407,7 @@ const PRODUCTS = [
   },
   {
     num: "68 — Sticker", word: "Their Person",
+    retired: true,
     line: "The one they look for first in a crowded room.",
     price: "£3.50", link: "#", bg: "#255E75",
     // Out of everyone in the room, you.
@@ -1408,7 +1426,13 @@ const PRODUCTS = [
 function renderProducts(){
   const grid = document.getElementById('product-grid');
   if(!grid) return;
-  grid.innerHTML = PRODUCTS.map(p => `
+  // Retired pieces stay in this file but never reach the page. The stickers were
+  // retired on 26 Aug 2026: the only maker Printify has for them is in the
+  // Netherlands, so a £3.50 sticker carried £6.49 of postage and kept 71p. The
+  // artwork is not gone — it is the printable sticker sheet in the downloads,
+  // which is built from these very entries by automation/pdf/sticker-sheet.js.
+  // That is why they are flagged rather than deleted.
+  grid.innerHTML = PRODUCTS.filter(p => !p.retired).map(p => `
     <article class="card">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
