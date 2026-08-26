@@ -32,7 +32,7 @@ jobs:
             const physical = cat.filter((x) => x.type === "physical");
             const sellable = physical.filter((x) => x.printifyProductId);
             console.log(cat.length, "entries;", sellable.length, "of", physical.length, "physical are orderable");
-            if (cat.length !== 121) throw new Error("expected 121 entries");
+            if (cat.length !== 122) throw new Error("expected 122 entries");
             for (const x of sellable) {
               if (!x.printifyVariantId) throw new Error(x.id + ": no variant id");
               if (x.sizes && !x.sizes.some((s) => s.variantId === x.printifyVariantId)) {
