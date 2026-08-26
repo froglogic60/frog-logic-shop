@@ -142,9 +142,13 @@ const PRODUCTS = [
       ${caption("ONE QUESTION. SORRY IN ADVANCE.", CREAM)}${mark()}</svg>`
   },
   {
-    num: "06 — Pin / sticker", word: "Infinity",
+    num: "06 — Sticker", word: "Infinity",
     line: "The symbol, drawn out of the word itself.",
-    price: "£6.50", link: "#", bg: "#5B3A62",
+    // Was "Pin / sticker" at £6.50, from when this was going to be an enamel
+    // pin. It is made as the same 3" kiss-cut sticker as every other sticker
+    // here, so it is priced like one — a customer should not pay £6.50 for the
+    // thing sitting next to it at £3.50.
+    price: "£3.50", link: "#", bg: "#5B3A62",
     // The neurodiversity infinity, written rather than drawn.
     svg: `<svg viewBox="0 0 300 300">${grain("g6", 0.12)}
       <path d="M150,136 C118,92 52,92 52,136 C52,180 118,180 150,136
