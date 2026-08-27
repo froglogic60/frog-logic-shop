@@ -22,8 +22,8 @@ on:
       kind:
         description: "Which product to sample"
         type: choice
-        options: ["tee", "hoodie", "tote", "notebook", "print", "mug", "sticker"]
-        default: "tee"
+        options: ["bottle", "tee", "hoodie", "tote", "notebook", "print", "mug", "sticker"]
+        default: "bottle"
       limit:
         description: "How many makers to sample (each one builds and deletes a product)"
         default: "10"
