@@ -15,7 +15,11 @@
 import catalog from "./catalog.json";
 import { postageFor, destinationsFor, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
 
-const FREE_DELIVERY_OVER = 5000;
+// MUST match create-checkout.js. These were two separate 5000s until 27 Aug
+// 2026, so raising the threshold in one place alone would have had the basket
+// promise free delivery that the till then charged for — the same shape of bug
+// as the hoodie that read £36.99 on the page and £32.00 at the till.
+const FREE_DELIVERY_OVER = 8000;
 const MAX_QTY = 20;
 
 const json = (body, status) =>
