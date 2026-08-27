@@ -204,10 +204,9 @@ const PRODUCTS = [
       ${caption("REDUCED CAPACITY, STILL RUNNING", INK)}${mark()}</svg>`
   },
   {
-    num: "09 — Hoodie", word: "Special Interest",
-    retired: true,
+    num: "09 — Water bottle", word: "Special Interest",
     line: "Ask me one question. Clear your afternoon.",
-    price: "£36.99", link: "#", bg: "#29527A",
+    price: "£17.75", link: "#", bg: "#29527A",
     // The subject repeats obsessively behind the words.
     svg: `<svg viewBox="0 0 300 300">${grain("g9", 0.12)}
       <g font-family="Space Grotesk, sans-serif" font-size="9" fill="${CREAM}" opacity="0.22" letter-spacing="0.1em">
@@ -830,10 +829,9 @@ const PRODUCTS = [
       ${caption("DAY FORTY-ONE. NO NOTES.", CREAM)}${mark()}</svg>`
   },
   {
-    num: "38 — Hoodie", word: "Pattern Recognition",
-    retired: true,
+    num: "38 — Water bottle", word: "Pattern Recognition",
     line: "I saw it three steps ago. I did say.",
-    price: "£36.99", link: "#", bg: "#1F5E52",
+    price: "£17.75", link: "#", bg: "#1F5E52",
     // The word hides in the noise until you see it — then you can't unsee it.
     svg: `<svg viewBox="0 0 300 300">${grain("g38", 0.11)}
       <g font-family="Space Grotesk, sans-serif" font-size="14" fill="${CREAM}" opacity="0.28">
@@ -1203,10 +1201,9 @@ const PRODUCTS = [
       ${mark()}</svg>`
   },
   {
-    num: "57 — Hoodie", word: "Trust Me With It",
-    retired: true,
+    num: "57 — Water bottle", word: "Trust Me With It",
     line: "Give me the work. Then leave me alone.",
-    price: "£36.99", link: "#", bg: "#2C4A6E",
+    price: "£17.75", link: "#", bg: "#2C4A6E",
     // The ask is simple and rarely granted.
     svg: `<svg viewBox="0 0 300 300">${grain("n7", 0.11)}
       <g font-family="Space Grotesk, sans-serif" font-size="10" fill="${CREAM}" opacity="0.45" letter-spacing="0.12em">
