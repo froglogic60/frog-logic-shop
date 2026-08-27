@@ -55,6 +55,33 @@ const KINDS = {
     title: (word) => `${word} — Frog Logic Mug`,
     out: "printify-mugs-result.json",
   },
+  tee: {
+    // Same maker as before (Shirt Monkey), same £3.49 postage, same £19 price.
+    // Only the blank changes: Bella+Canvas jersey at £14.37 becomes Gildan Heavy
+    // Cotton at £9.18, which takes expected profit from 16% to 43% of the price.
+    // Sam picked margin over the softer Gildan Softstyle (£11.34, 32%) on
+    // 27 Aug 2026. Charcoal is the nearest Gildan colour to the Asphalt in use.
+    //
+    // Every size costs the same £9.18 here, which is worth noticing: on the old
+    // blank a 2XL cost more than an S and they shared a price, so the 2XL set
+    // the margin for the whole line.
+    label: "tee",
+    target: {
+      blueprintId: 6,
+      providerId: 331,
+      sizes: [
+        { size: "S", id: 11874 },
+        { size: "M", id: 11873 },
+        { size: "L", id: 11872 },
+        { size: "XL", id: 11875 },
+        { size: "2XL", id: 11876 },
+      ],
+    },
+    expect: { blueprint: /heavy cotton tee/i, provider: /shirt monkey/i },
+    match: /—\s*Tee/,
+    title: (word) => `${word} — Frog Logic Tee`,
+    out: "printify-tees-result.json",
+  },
   print: {
     label: "wall print",
     target: { blueprintId: 763, providerId: 72, variantId: 75271 },
@@ -70,6 +97,11 @@ if (!KIND) { console.error("Set KIND to one of: " + Object.keys(KINDS).join(", "
 
 const TARGET = KIND.target;
 const EXPECT = KIND.expect;
+
+// A line is either one variant (a mug, a poster) or a run of sizes (a tee). The
+// rest of the script works off these two so it does not care which.
+const VARIANT_IDS = TARGET.sizes ? TARGET.sizes.map((s) => s.id) : [TARGET.variantId];
+const DEFAULT_VARIANT = VARIANT_IDS[0];
 
 const OUT = path.join(__dirname, KIND.out);
 
@@ -124,10 +156,18 @@ async function frontPlaceholder() {
   const { variants } = await api(
     `/catalog/blueprints/${TARGET.blueprintId}/print_providers/${TARGET.providerId}/variants.json`
   );
-  const v = (variants || []).find((x) => x.id === TARGET.variantId);
-  if (!v) throw new Error(`variant ${TARGET.variantId} is not made by provider ${TARGET.providerId} any more`);
+  const v = (variants || []).find((x) => x.id === DEFAULT_VARIANT);
+  if (!v) throw new Error(`variant ${DEFAULT_VARIANT} is not made by provider ${TARGET.providerId} any more`);
+  // Every size shares one print area on every blueprint seen so far, but check
+  // rather than assume: a size the artwork would not fit is worth stopping for.
+  const odd = (variants || []).filter((x) => VARIANT_IDS.includes(x.id))
+    .filter((x) => {
+      const q = (x.placeholders || []).find((y) => y.position === (v.placeholders || [])[0]?.position);
+      return q && (q.width !== (v.placeholders || [])[0]?.width || q.height !== (v.placeholders || [])[0]?.height);
+    });
+  if (odd.length) throw new Error(`${odd.length} size(s) have a different print area — check before building`);
   const ph = (v.placeholders || []).find((x) => /front/i.test(x.position)) || (v.placeholders || [])[0];
-  if (!ph || !ph.width || !ph.height) throw new Error("no usable print area on variant " + TARGET.variantId);
+  if (!ph || !ph.width || !ph.height) throw new Error("no usable print area on variant " + DEFAULT_VARIANT);
   return ph;
 }
 
@@ -141,9 +181,9 @@ function body({ title, description, price, ids, ph, scale }) {
     description,
     blueprint_id: TARGET.blueprintId,
     print_provider_id: TARGET.providerId,
-    variants: [{ id: TARGET.variantId, price, is_enabled: true }],
+    variants: VARIANT_IDS.map((id) => ({ id, price, is_enabled: true })),
     print_areas: [
-      { variant_ids: [TARGET.variantId], placeholders: [{ position: ph.position, images: placements(ids, ph, scale) }] },
+      { variant_ids: VARIANT_IDS, placeholders: [{ position: ph.position, images: placements(ids, ph, scale) }] },
     ],
   };
 }
@@ -247,8 +287,12 @@ async function shopProducts() {
         ? await api(`/shops/${SHOP}/products/${already.id}.json`, "PUT", payload)
         : await api(`/shops/${SHOP}/products.json`, "POST", payload);
 
-      const variant = (product.variants || []).find((v) => v.is_enabled) || (product.variants || [])[0];
-      const cost = variant ? variant.cost : null;
+      const enabled = (product.variants || []).filter((v) => VARIANT_IDS.includes(v.id));
+      const variant = enabled.find((v) => v.id === DEFAULT_VARIANT) || enabled[0] || (product.variants || [])[0];
+      // The dearest size, because they all share one price. On the old tee a 2XL
+      // cost £2 more than an S, so quoting the S would have flattered the line.
+      const costs = enabled.map((v) => v.cost).filter((c) => typeof c === "number");
+      const cost = costs.length ? Math.max(...costs) : (variant ? variant.cost : null);
       const keep = cost == null ? null : price - cost;
       console.log(`${title}`);
       console.log(`   ${already ? "corrected" : "created"} ${product.id} — artwork at scale ${scale.toFixed(4)}`);
@@ -267,7 +311,11 @@ async function shopProducts() {
       results.push({
         id: catalogId, num: p.num, word: p.word, kind: KIND.label === "wall print" ? "print" : KIND.label,
         printifyProductId: product.id,
-        printifyVariantId: variant ? variant.id : TARGET.variantId,
+        printifyVariantId: variant ? variant.id : DEFAULT_VARIANT,
+        ...(TARGET.sizes ? { sizes: TARGET.sizes.map((s) => {
+          const v = enabled.find((x) => x.id === s.id);
+          return { size: s.size, variantId: s.id, cost: v ? v.cost : null };
+        }) } : {}),
         price, worstCost: cost,
         blueprint: bp.title, provider: pr.title, country: "GB",
         artworkScale: scale,
