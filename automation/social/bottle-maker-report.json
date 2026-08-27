@@ -1,0 +1,148 @@
+{
+  "sampledAt": "2026-08-27T11:14:18.271Z",
+  "prices": [
+    1800,
+    2200,
+    2600
+  ],
+  "considered": 2,
+  "rows": [
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73358,
+      "variantTitle": "21.9oz / Lime",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73359,
+      "variantTitle": "21.9oz / Magenta",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73360,
+      "variantTitle": "21.9oz / Orange",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73361,
+      "variantTitle": "21.9oz / Red",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73362,
+      "variantTitle": "21.9oz / Royal",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73363,
+      "variantTitle": "21.9oz / White",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Sky Water Bottle",
+      "blueprintId": 716,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73364,
+      "variantTitle": "21.9oz / Black",
+      "live": false,
+      "cost": 1225,
+      "ukShipping": 449,
+      "margins": {
+        "1800": 575,
+        "2200": 975,
+        "2600": 1375
+      }
+    },
+    {
+      "blueprint": "Tumbler, 40oz",
+      "blueprintId": 1509,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 108949,
+      "variantTitle": "40oz / White",
+      "live": false,
+      "cost": 3186,
+      "ukShipping": 469,
+      "margins": {
+        "1800": -1386,
+        "2200": -986,
+        "2600": -586
+      }
+    }
+  ],
+  "undeleted": []
+}
