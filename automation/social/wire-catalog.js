@@ -96,8 +96,16 @@ for (const file of ["printify-result.json", "printify-wave2-result.json", "print
     entry.printifyVariantId = r.printifyVariantId;
     // Apparel only. The cost figures stay out — nothing downstream needs a
     // supplier price, and this file ships inside the checkout function.
+    //
+    // The else matters. A piece can move from a sized line to a single-variant
+    // one: the three ex-hoodie designs became water bottles on 27 Aug 2026, and
+    // their old five-size list stayed behind, so the checks below found a
+    // default variant that was not among its own sizes. A size picker offering
+    // S to 2XL on a water bottle is not a small cosmetic problem.
     if (Array.isArray(r.sizes) && r.sizes.length) {
       entry.sizes = r.sizes.map((s) => ({ size: s.size, variantId: s.variantId }));
+    } else {
+      delete entry.sizes;
     }
     if (isNew) wired.push(`${r.id} (${r.kind || "?"})${entry.sizes ? ", " + entry.sizes.length + " sizes" : ""}`);
   }
