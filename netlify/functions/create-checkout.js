@@ -22,7 +22,7 @@
 //   2. Different makers post separately. A tee and a notebook are two parcels
 //      and two first-item charges, however much it looks like one order.
 //
-// Free UK delivery over £50 of goods (postage itself does not count towards
+// Free UK delivery over £80 of goods (postage itself does not count towards
 // the threshold — otherwise adding postage could tip an order over and cancel
 // the very charge that tipped it).
 //
@@ -292,7 +292,7 @@ export default async (req) => {
             type: "fixed_amount",
             fixed_amount: { amount: postage, currency: "gbp" },
             display_name: freeDelivery
-              ? "Free UK delivery (over £50)"
+              ? "Free UK delivery (over £80)"
               : "Delivery to " + (COUNTRY_NAMES[country] || country),
           },
         }]
