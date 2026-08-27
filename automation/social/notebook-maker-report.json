@@ -1,0 +1,165 @@
+{
+  "sampledAt": "2026-08-27T10:52:36.724Z",
+  "prices": [
+    1200,
+    1400,
+    1600
+  ],
+  "considered": 4,
+  "rows": [
+    {
+      "blueprint": "Wirobound Softcover Notebook, A5",
+      "blueprintId": 1193,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 91848,
+      "variantTitle": "A5 / Lined",
+      "live": true,
+      "cost": 897,
+      "ukShipping": 459,
+      "margins": {
+        "1200": 303,
+        "1400": 503,
+        "1600": 703
+      }
+    },
+    {
+      "blueprint": "Softcover Notebook, A5",
+      "blueprintId": 1194,
+      "provider": "Harrier",
+      "providerId": 94,
+      "country": "GB",
+      "variantId": 91850,
+      "variantTitle": "A5 / Lined",
+      "live": false,
+      "cost": 877,
+      "ukShipping": 459,
+      "margins": {
+        "1200": 323,
+        "1400": 523,
+        "1600": 723
+      }
+    },
+    {
+      "blueprint": "Hard Backed Journal",
+      "blueprintId": 1481,
+      "provider": "Prodigi",
+      "providerId": 69,
+      "country": "GB",
+      "variantId": 107225,
+      "variantTitle": "Blank / 5.2\" x 7.4\"",
+      "live": false,
+      "cost": 1361,
+      "ukShipping": 489,
+      "margins": {
+        "1200": -161,
+        "1400": 39,
+        "1600": 239
+      }
+    },
+    {
+      "blueprint": "Hard Backed Journal",
+      "blueprintId": 1481,
+      "provider": "Prodigi",
+      "providerId": 69,
+      "country": "GB",
+      "variantId": 107226,
+      "variantTitle": "Graph / 5.2\" x 7.4\"",
+      "live": false,
+      "cost": 1361,
+      "ukShipping": 489,
+      "margins": {
+        "1200": -161,
+        "1400": 39,
+        "1600": 239
+      }
+    },
+    {
+      "blueprint": "Hard Backed Journal",
+      "blueprintId": 1481,
+      "provider": "Prodigi",
+      "providerId": 69,
+      "country": "GB",
+      "variantId": 107227,
+      "variantTitle": "Ruled line / 5.2\" x 7.4\"",
+      "live": false,
+      "cost": 1361,
+      "ukShipping": 489,
+      "margins": {
+        "1200": -161,
+        "1400": 39,
+        "1600": 239
+      }
+    },
+    {
+      "blueprint": "Spiral Journal (EU)",
+      "blueprintId": 475,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65482,
+      "variantTitle": "Blank / One Size",
+      "live": false,
+      "cost": 731,
+      "ukShipping": 779,
+      "margins": {
+        "1200": 469,
+        "1400": 669,
+        "1600": 869
+      }
+    },
+    {
+      "blueprint": "Spiral Journal (EU)",
+      "blueprintId": 475,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65483,
+      "variantTitle": "Dotgrid / One Size",
+      "live": false,
+      "cost": 882,
+      "ukShipping": 779,
+      "margins": {
+        "1200": 318,
+        "1400": 518,
+        "1600": 718
+      }
+    },
+    {
+      "blueprint": "Spiral Journal (EU)",
+      "blueprintId": 475,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65484,
+      "variantTitle": "Lined / One Size",
+      "live": false,
+      "cost": 882,
+      "ukShipping": 779,
+      "margins": {
+        "1200": 318,
+        "1400": 518,
+        "1600": 718
+      }
+    },
+    {
+      "blueprint": "Spiral Journal (EU)",
+      "blueprintId": 475,
+      "provider": "OPT OnDemand",
+      "providerId": 30,
+      "country": "CZ",
+      "variantId": 65485,
+      "variantTitle": "Task / One Size",
+      "live": false,
+      "cost": 882,
+      "ukShipping": 779,
+      "margins": {
+        "1200": 318,
+        "1400": 518,
+        "1600": 718
+      }
+    }
+  ],
+  "undeleted": []
+}
