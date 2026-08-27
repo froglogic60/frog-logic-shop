@@ -1,0 +1,505 @@
+{
+  "createdAt": "2026-08-27T11:48:34.441Z",
+  "target": {
+    "blueprintId": 6,
+    "providerId": 331,
+    "sizes": [
+      {
+        "size": "S",
+        "id": 11874
+      },
+      {
+        "size": "M",
+        "id": 11873
+      },
+      {
+        "size": "L",
+        "id": 11872
+      },
+      {
+        "size": "XL",
+        "id": 11875
+      },
+      {
+        "size": "2XL",
+        "id": 11876
+      }
+    ]
+  },
+  "results": [
+    {
+      "id": "01-overstimulated",
+      "num": "01 — Tee",
+      "word": "Overstimulated",
+      "kind": "tee",
+      "printifyProductId": "6a9023d738b33dca6506edb9",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023d738b33dca6506edb9/11872/92570/overstimulated-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc0f82a3603eb2d0d5e3d"
+    },
+    {
+      "id": "12-time-blind",
+      "num": "12 — Tee",
+      "word": "Time Blind",
+      "kind": "tee",
+      "printifyProductId": "6a9023dcffabf4bed40f3927",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023dcffabf4bed40f3927/11872/92570/time-blind-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc109d649fe907107d569"
+    },
+    {
+      "id": "18-parallel-play",
+      "num": "18 — Tee",
+      "word": "Parallel Play",
+      "kind": "tee",
+      "printifyProductId": "6a9023e238b33dca6506edc0",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023e238b33dca6506edc0/11872/92570/parallel-play-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc113b8c6212d72054f9e"
+    },
+    {
+      "id": "24-late-diagnosed",
+      "num": "24 — Tee",
+      "word": "Late Diagnosed",
+      "kind": "tee",
+      "printifyProductId": "6a9023e797e524423b00c8a5",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023e797e524423b00c8a5/11872/92570/late-diagnosed-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc119dbf9aebaf708a15c"
+    },
+    {
+      "id": "29-no-idea-what-my-face-is-doing",
+      "num": "29 — Tee",
+      "word": "No Idea What My Face Is Doing",
+      "kind": "tee",
+      "printifyProductId": "6a9023ecffabf4bed40f3932",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023ecffabf4bed40f3932/11872/92570/no-idea-what-my-face-is-doing-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc1279178f085df05a1f9"
+    },
+    {
+      "id": "31-ask-me-about-it",
+      "num": "31 — Tee",
+      "word": "Ask Me About It",
+      "kind": "tee",
+      "printifyProductId": "6a9023f297e524423b00c8b3",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023f297e524423b00c8b3/11872/92570/ask-me-about-it-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc12d790e2a6cf10563cc"
+    },
+    {
+      "id": "39-enthusiasm-unmasked",
+      "num": "39 — Tee",
+      "word": "Enthusiasm, Unmasked",
+      "kind": "tee",
+      "printifyProductId": "6a9023f71660304ab40b261a",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023f71660304ab40b261a/11872/92570/enthusiasm-unmasked-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc13dd649fe907107d579"
+    },
+    {
+      "id": "42-nothing-needs-fixing",
+      "num": "42 — Tee",
+      "word": "Nothing Needs Fixing",
+      "kind": "tee",
+      "printifyProductId": "6a9023fd97e524423b00c8bc",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a9023fd97e524423b00c8bc/11872/92570/nothing-needs-fixing-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc143dbf9aebaf708a178"
+    },
+    {
+      "id": "45-enough",
+      "num": "45 — Tee",
+      "word": "Enough",
+      "kind": "tee",
+      "printifyProductId": "6a90240238b33dca6506edde",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a90240238b33dca6506edde/11872/92570/enough-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc14cb8c6212d72054fb3"
+    },
+    {
+      "id": "51-in-writing-please",
+      "num": "51 — Tee",
+      "word": "In Writing, Please",
+      "kind": "tee",
+      "printifyProductId": "6a902407ffabf4bed40f393a",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a902407ffabf4bed40f393a/11872/92570/in-writing-please-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc156dbf9aebaf708a197"
+    },
+    {
+      "id": "63-guilt-is-not-evidence",
+      "num": "63 — Tee",
+      "word": "Guilt Is Not Evidence",
+      "kind": "tee",
+      "printifyProductId": "6a90240c97e524423b00c8c9",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 918
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 918
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 918
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 918
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 918
+        }
+      ],
+      "price": 1900,
+      "worstCost": 918,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "mockup": "https://images-api.printify.com/mockup/6a90240c97e524423b00c8c9/11872/92570/guilt-is-not-evidence-frog-logic-tee.jpg?camera_label=front",
+      "replaces": "6a8cc16a0fa2912bd50ebad2"
+    }
+  ],
+  "errors": []
+}
