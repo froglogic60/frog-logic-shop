@@ -1,0 +1,39 @@
+name: Check what every product makes
+# Read-only. It changes no price, in the shop or in Printify — it asks Printify
+# what each live product costs today and reports where that leaves the margin.
+#
+# Run it after any Printify price rise (there was one on 27 Aug 2026), before
+# setting a price, and before a launch. Costs no deploy credits: the report is
+# committed with [skip netlify], and nothing a visitor sees changes.
+#
+# Sam's standing rule is a 60% markup over base cost. The report flags anything
+# under it and anything losing money, and says what price would clear the rule —
+# but applying any of that is a separate, deliberate decision.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  margins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Ask Printify what everything costs
+        working-directory: automation/social
+        run: node margin-check.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Commit the report
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/margin-report.json || true
+          git status --short
+          git commit -m "Margin report [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
