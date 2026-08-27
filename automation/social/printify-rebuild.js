@@ -82,6 +82,23 @@ const KINDS = {
     title: (word) => `${word} — Frog Logic Tee`,
     out: "printify-tees-result.json",
   },
+  bottle: {
+    // A new line, not a move. The three designs were hoodies until 27 Aug 2026,
+    // when the hoodies were retired for earning 15% against a 25% bar — which
+    // left three pieces of finished artwork selling as nothing. Sam asked
+    // whether Printify did water bottles; it does, from the same maker as the
+    // mugs and totes, so a bottle and a mug travel as one parcel.
+    //
+    // £12.25 to make, £4.49 to post, sold at £17.75 — her choice of the prices
+    // that clear the bar, and the lowest of them: "I dont want prices too high
+    // because people cant afford it these days."
+    label: "water bottle",
+    target: { blueprintId: 716, providerId: 6, variantId: 73363 },
+    expect: { blueprint: /water bottle/i, provider: /t shirt and sons/i },
+    match: /—\s*Water bottle/,
+    title: (word) => `${word} — Frog Logic Bottle`,
+    out: "printify-bottles-result.json",
+  },
   print: {
     label: "wall print",
     target: { blueprintId: 763, providerId: 72, variantId: 75271 },
