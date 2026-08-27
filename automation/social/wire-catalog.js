@@ -72,11 +72,11 @@ for (const p of PRODUCTS) {
 // ---- 2. Printify ids, from what was actually created ----
 // Order matters. Later files win, because a piece can appear in more than one
 // of them: the eight mugs are in wave 1 on the EU maker AND in the mugs file on
-// the UK maker, and the UK one is the one that should be sold. Keep
-// printify-mugs-result.json last.
+// the UK maker, and the UK one is the one that should be sold. Same for the
+// sixteen wall prints. Keep the rebuild files last, wave 1 first.
 const wired = [];
 const moved = [];
-for (const file of ["printify-result.json", "printify-wave2-result.json", "printify-mugs-result.json"]) {
+for (const file of ["printify-result.json", "printify-wave2-result.json", "printify-mugs-result.json", "printify-prints-result.json"]) {
   for (const r of loadResults(file)) {
     if (RETIRED.has(r.id)) continue;
     const entry = byId.get(r.id);
