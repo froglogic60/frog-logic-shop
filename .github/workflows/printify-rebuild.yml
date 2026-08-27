@@ -1,0 +1,67 @@
+name: Move a product line to a new maker
+# Replaces the old "Move the mugs to the UK maker" workflow, which did the same
+# job for one product only.
+#
+# Printify will not let you change a product's blueprint or print provider, so
+# moving a line to a different maker means building it again on the new one.
+# This does that for a whole line, reusing the artwork already uploaded to
+# Printify — so the design is guaranteed identical to what is on sale today.
+#
+# Safe to run as often as you like. It never deletes anything, and an item it
+# built on a previous run is CORRECTED in place rather than built again, so a
+# second run leaves one set, not two.
+#
+#   mug   — moved to T Shirt and Sons in the UK: £5.23 to make against £5.76 in
+#           Czechia, and £3.79 postage against £7.79. Done 26 Aug 2026.
+#   print — the sixteen wall prints sold at £12 and cost £12.72, losing 72p a
+#           sale. Fine Art matte has no square size that works at that price
+#           (the smallest, 10x10, still costs £11.51), so the line moves to the
+#           same maker's silk poster at the same 16x16 for £6.83. Size and price
+#           unchanged; the paper goes from matte to semi-gloss. Sam's call.
+#
+# Run with dry_run first. That reports the print area, the scale it works out
+# and what it would do to each item, and changes nothing. Nothing in the shop
+# changes either way — the site keeps pointing at the old products until the
+# catalogue is rebuilt.
+on:
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "Which line to move"
+        type: choice
+        options: ["print", "mug"]
+        default: "print"
+      dry_run:
+        description: "Report the print area and scale, change nothing"
+        type: boolean
+        default: true
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build the line on the new maker
+        working-directory: automation/social
+        run: node printify-rebuild.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          KIND: ${{ inputs.kind }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+      - name: Commit the result file
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Every result file, not a hardcoded list — adding a kind to the KINDS
+          # map should not need this line changed as well.
+          git add "automation/social/printify-"*-result.json || true
+          git status --short
+          git commit -m "Product line moved to a new maker [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
