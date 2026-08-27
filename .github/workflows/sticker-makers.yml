@@ -3,9 +3,14 @@ name: Find a cheaper maker
 #
 # Pick the product with the "kind" input. It answers one question: is there a
 # cheaper or closer maker than the one in use? It was written for the stickers
-# (£3.50 against a £5.46 cost) and now also covers the mugs, where the problem
-# is postage rather than cost — £7.79 to send a £14 mug to a UK address,
-# because the maker in use is in the EU.
+# (£3.50 against a £5.46 cost), then covered the mugs, where the problem was
+# postage rather than cost — £7.79 to send a £14 mug to a UK address, because
+# the maker was in the EU. That one worked: the mugs moved to a UK maker,
+# cheaper to make AND four pounds cheaper to post, with no price change.
+#
+# It now also covers the wall prints, which are the worst position in the shop:
+# £12 a print against a £12.72 cost, so every sale loses 72p, and £5.29 postage
+# on top. Found by the margin check on 27 Aug 2026.
 #
 # Printify does not expose base cost in its catalogue, only postage, so the
 # script builds a throwaway product per candidate maker, reads the real cost off
@@ -17,8 +22,8 @@ on:
       kind:
         description: "Which product to sample"
         type: choice
-        options: ["mug", "sticker"]
-        default: "mug"
+        options: ["print", "mug", "sticker"]
+        default: "print"
       limit:
         description: "How many makers to sample (each one builds and deletes a product)"
         default: "10"
