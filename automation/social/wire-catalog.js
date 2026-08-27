@@ -41,6 +41,12 @@ function loadResults(file) {
 
 const catalog = JSON.parse(fs.readFileSync(CATALOG, "utf8"));
 const byId = new Map(catalog.map((x) => [x.id, x]));
+// Digital entries are never touched by this script — no Printify, no price
+// change, and retiring only ever affects printed pieces. So the count going in
+// must equal the count coming out, and that is the truncation guard. It used to
+// be a hardcoded total of every entry, which had to be edited by hand every
+// time the range changed and was wrong within a day of being written.
+const digitalBefore = catalog.filter((x) => x.type === "digital").length;
 const { PRODUCTS, ALL_PRODUCTS } = loadSiteData();
 
 // Retired pieces are off the page and out of the catalogue, but they still exist
@@ -75,17 +81,17 @@ for (const p of PRODUCTS) {
 // the UK maker, and the UK one is the one that should be sold. Same for the
 // sixteen wall prints. Keep the rebuild files last, wave 1 first.
 const wired = [];
-const moved = [];
+// Where each piece pointed BEFORE any of this ran. Comparing against the live
+// entry inside the loop reported every intermediate hop instead of the net
+// move — 48 for 24 pieces, because wave 1 sets a mug back to the EU product and
+// the mugs file then moves it forward again.
+const wasAt = new Map(catalog.map((x) => [x.id, x.printifyProductId]));
 for (const file of ["printify-result.json", "printify-wave2-result.json", "printify-mugs-result.json", "printify-prints-result.json"]) {
   for (const r of loadResults(file)) {
     if (RETIRED.has(r.id)) continue;
     const entry = byId.get(r.id);
     if (!entry) { orphans.push(r.id + " (in " + file + ")"); continue; }
-    const isNew = !entry.printifyProductId;
-    const wasElsewhere = !isNew && entry.printifyProductId !== r.printifyProductId;
-    if (wasElsewhere) {
-      moved.push(`${r.id}: ${entry.printifyProductId} -> ${r.printifyProductId} (${r.provider || "?"})`);
-    }
+    const isNew = !wasAt.get(r.id);
     entry.printifyProductId = r.printifyProductId;
     entry.printifyVariantId = r.printifyVariantId;
     // Apparel only. The cost figures stay out — nothing downstream needs a
@@ -97,22 +103,42 @@ for (const file of ["printify-result.json", "printify-wave2-result.json", "print
   }
 }
 
-// ---- 3. checks, before anything is written ----
+// Net moves only, worked out once everything has been applied.
+const moved = [];
+for (const x of catalog) {
+  const before = wasAt.get(x.id);
+  if (before && x.printifyProductId && before !== x.printifyProductId) {
+    moved.push(`${x.id}: ${before} -> ${x.printifyProductId}`);
+  }
+}
+
+// ---- 3. drop anything that has been retired ----
+// Retiring a piece is a single `retired: true` in script.js. Without this it
+// was only half a job: the piece vanished from the page but its entry stayed in
+// catalog.json, so the checks below saw more physical entries than the page had
+// and refused to write. That is what happened when the 18 stickers went and it
+// had to be sorted out by hand.
+const dropped = [];
+for (let i = catalog.length - 1; i >= 0; i--) {
+  if (RETIRED.has(catalog[i].id)) dropped.push(...catalog.splice(i, 1).map((x) => x.id));
+}
+
+// ---- 4. checks, before anything is written ----
 const physical = catalog.filter((x) => x.type === "physical");
 const sellable = physical.filter((x) => x.printifyProductId);
 const held = physical.filter((x) => !x.printifyProductId);
 const problems = [];
 
 if (orphans.length) problems.push("ids with no catalogue entry: " + orphans.join(", "));
-// 50 physical + 54 digital, since the 18 printed stickers were retired on
-// 26 Aug 2026. The physical half checks itself against the page, so a new wave
-// of pieces no longer needs this number touched by hand; the total is still
-// spelled out because it is the one thing that would catch catalog.json being
-// truncated or half-written by something outside this script.
+// Both halves check themselves against the page, so retiring a piece or adding
+// a wave needs no number touched by hand here.
 if (physical.length !== PRODUCTS.length) {
   problems.push("page shows " + PRODUCTS.length + " physical pieces, catalogue holds " + physical.length);
 }
-if (catalog.length !== 104) problems.push("expected 104 catalogue entries, found " + catalog.length);
+const digitalNow = catalog.filter((x) => x.type === "digital").length;
+if (digitalNow !== digitalBefore) {
+  problems.push("digital downloads went from " + digitalBefore + " to " + digitalNow + " — this script should never change them");
+}
 for (const x of sellable) {
   if (!x.printifyVariantId) problems.push(x.id + " has a product id but no variant id");
   if (x.sizes && !x.sizes.some((s) => s.variantId === x.printifyVariantId)) {
@@ -135,6 +161,11 @@ if (problems.length) {
 
 fs.writeFileSync(CATALOG, JSON.stringify(catalog, null, 2) + "\n");
 
+if (dropped.length) {
+  console.log(`removed ${dropped.length} retired piece(s) from the catalogue:`);
+  dropped.forEach((d) => console.log("  " + d));
+  console.log("");
+}
 console.log(`catalogue: ${catalog.length} entries`);
 console.log(`  ${sellable.length} physical products can be ordered`);
 console.log(`  ${held.length} physical products have no Printify product yet:`);
