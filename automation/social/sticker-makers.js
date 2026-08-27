@@ -66,6 +66,29 @@ const KINDS = {
     prices: [1400, 1600, 1800],
     report: "mug-maker-report.json",
   },
+  print: {
+    // The worst position in the shop. Sixteen wall prints sell at £12 and cost
+    // £12.72 to make (Print Clever, blueprint 804), so every sale loses 72p
+    // before postage — and postage is £5.29, the dearest in the shop. Nobody
+    // knew, because wave 1 never recorded a cost for them; the margin check on
+    // 27 Aug 2026 was the first time anyone asked.
+    //
+    // Repricing to clear the 60% rule would mean £20.50, nearly double. So the
+    // question this run answers first is whether a cheaper maker exists, the
+    // way one did for the mugs.
+    label: "wall print",
+    // Printify files these under several names and none of them is "wall
+    // print". Matte and giclée posters are the same object by another word.
+    patterns: [/poster/i, /art print/i, /giclée|giclee/i, /fine art/i, /wall art/i],
+    // Canvas, framed and metal are different products at different prices, not
+    // cheaper versions of this one. Excluded so the report compares like with
+    // like rather than looking cheap by changing the goods.
+    avoid: /canvas|framed|frame\b|metal|acrylic|wood|banner|sticker|decal|tapestry|puzzle/i,
+    maxBlueprints: 16,
+    liveVariant: 75303,
+    prices: [1200, 1400, 1600],
+    report: "print-maker-report.json",
+  },
 };
 
 const KIND = KINDS[(process.env.KIND || "sticker").toLowerCase()];
