@@ -34,7 +34,13 @@ import catalog from "./catalog.json";
 import zoneData from "./shipping-zones.json";
 
 // Goods total, in pence, above which UK delivery is free.
-const FREE_DELIVERY_OVER = 5000;
+//
+// Raised from £50 to £80 on 27 Aug 2026. At £50 the threshold was working
+// against the shop: three tees bought separately earned £12.27, but the same
+// three in one basket earned £5.36, because the postage came out of the margin.
+// Sam's pricing rule leaves roughly a quarter of the price as profit, so a
+// basket has to be worth about £80 before it can carry a parcel and still pay.
+const FREE_DELIVERY_OVER = 8000;
 
 // Where the shop is willing to post. This used to be ["GB"] alone, because the
 // only rates in catalog.json were UK ones and charging a Dublin address a UK
