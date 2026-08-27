@@ -89,6 +89,47 @@ const KINDS = {
     prices: [1200, 1400, 1600],
     report: "print-maker-report.json",
   },
+  // The four lines that fail Sam's pricing rule as at 27 Aug 2026: expected
+  // profit after costs, Stripe and a refund provision comes to 20%, 18%, 16%
+  // and 15% of the price against a 25% bar. Repricing to clear it would mean a
+  // £21.87 tee and a £42.69 hoodie, so the cheaper-maker question gets asked
+  // first — it answered the mugs and the prints without any price change.
+  tee: {
+    label: "tee",
+    patterns: [/t-?shirt/i, /tee\b/i, /unisex.*shirt/i, /jersey.*shirt/i],
+    avoid: /long ?sleeve|hoodie|sweatshirt|tank|crop|polo|baby|toddler|youth|kids|vest|raglan|3\/4/i,
+    maxBlueprints: 18,
+    liveVariant: 18388,
+    prices: [1900, 2200, 2500],
+    report: "tee-maker-report.json",
+  },
+  hoodie: {
+    label: "hoodie",
+    patterns: [/hoodie/i, /hooded sweatshirt/i, /pullover hood/i],
+    avoid: /zip|zipper|crop|baby|toddler|youth|kids|sleeveless|lightweight tee/i,
+    maxBlueprints: 16,
+    liveVariant: 32870,
+    prices: [3699, 4000, 4500],
+    report: "hoodie-maker-report.json",
+  },
+  tote: {
+    label: "tote",
+    patterns: [/tote/i, /shopping bag/i, /canvas bag/i],
+    avoid: /backpack|drawstring|duffel|weekender|pouch|cosmetic|lunch/i,
+    maxBlueprints: 14,
+    liveVariant: 73419,
+    prices: [1600, 1800, 2000],
+    report: "tote-maker-report.json",
+  },
+  notebook: {
+    label: "notebook",
+    patterns: [/notebook/i, /journal/i, /spiral/i, /wirebound|wiro/i],
+    avoid: /sticker|planner refill|calendar|poster|card/i,
+    maxBlueprints: 14,
+    liveVariant: 91848,
+    prices: [1200, 1400, 1600],
+    report: "notebook-maker-report.json",
+  },
 };
 
 const KIND = KINDS[(process.env.KIND || "sticker").toLowerCase()];
