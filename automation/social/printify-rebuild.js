@@ -1,43 +1,39 @@
-// Move the eight mugs from the EU maker to the UK one.
+// Move a whole product line onto a different maker, keeping the artwork.
 //
-// The mugs were built in wave 1 on "Ceramic Mug (EU)" by OPT OnDemand in
-// Czechia. That costs £5.76 to make and £7.79 to post the first one to a UK
-// address, so a £14 mug reaches a British doorstep at £21.79 and may pick up a
-// customs charge on the way.
+// Printify does not let you change a product's blueprint or print provider, so
+// "move the mugs to a UK maker" really means "build them again on the new one".
+// This does that for a whole line at once, reusing the images already uploaded
+// to Printify rather than re-rendering anything — which keeps the renderer, the
+// fonts and the browser out of it, and guarantees the artwork is identical to
+// what is on sale today.
 //
-// The maker sweep on 26 Aug 2026 found "11oz White Mug" from T Shirt and Sons
-// in the UK at £5.23 with £3.79 postage — cheaper to make AND four pounds
-// cheaper to post, for the same plain white 11oz mug. T Shirt and Sons already
-// make the seven totes, so a mug and a tote now travel as one parcel.
+//   KIND=mug   DRY_RUN=1 node printify-rebuild.js    report, change nothing
+//   KIND=print           node printify-rebuild.js    build or correct the line
 //
-// This script does one job and pins its target rather than ranking makers,
-// because the ranking has already been done and written down.
+// It has been used twice:
 //
-//   DRY_RUN=1 node printify-mugs.js   report the print area, the scale it works
-//                                     out, and what it would do to each mug.
-//                                     Nothing is created, changed or deleted.
-//   node printify-mugs.js             create or correct all eight, write the
-//                                     result file
+//   mug   — £5.76 to make in Czechia and £7.79 to post to a UK address, against
+//           £5.23 and £3.79 from T Shirt and Sons in the UK. Same plain white
+//           11oz mug, cheaper both ways, no price change.
+//   print — sixteen 16x16 Fine Art matte prints sold at £12 and cost £12.72, so
+//           every sale lost 72p. Fine Art has no square size that works at that
+//           price: the smallest, 10x10, still costs £11.51. The same maker's
+//           silk poster in the same 16x16 costs £6.83, so the size and the price
+//           both stay and the paper changes from matte to semi-gloss. Sam's
+//           call, made 27 Aug 2026 after seeing the alternatives.
 //
-// It does NOT re-render artwork. Every mug's design is already uploaded to
-// Printify from wave 1, and uploads belong to the account rather than to a
-// product, so the new mugs reuse the very same image. That keeps this script
-// free of the renderer, the fonts and the browser, and guarantees the artwork
-// is identical to what is on sale today.
+// It does NOT delete anything. The products being replaced stay in Printify,
+// unlisted and harmless, until the new ones have been looked at and approved.
+// And if a product from an earlier run of this script is already there, it is
+// CORRECTED in place rather than built again — so re-running never leaves
+// duplicates behind.
 //
-// It does NOT delete anything. The old EU mugs stay in Printify, unlisted and
-// harmless, until the new ones have been looked at and approved. And if a mug
-// from an earlier run of this script is already there, it is CORRECTED in place
-// rather than built again — so re-running this never leaves duplicates behind.
-//
-// The first run on 26 Aug 2026 placed the artwork at scale 1 and Sam rejected
-// the mockups: "the designs dont sit right", too big, running off the edges.
-// scale is a fraction of the print area's WIDTH, and a mug's print area is wide
-// and short, so 1 stretches a square design to the full width and it overflows
-// top and bottom. printify-setup.js and printify-wave2.js had this right all
-// along — min(1, height/width) fits the square inside the area whichever way up
-// the area is. This now does the same, from the real numbers Printify gives for
-// this exact blueprint and variant.
+// The first mug run placed the artwork at scale 1 and Sam rejected the mockups:
+// "the designs dont sit right", too big, running off the edges. scale is a
+// fraction of the print area's WIDTH, and a mug's print area is wide and short,
+// so a square design at 1 overflows top and bottom. min(1, height/width) fits
+// the square inside the area whichever way up the area is, and the real numbers
+// come from Printify for whichever blueprint and variant is being targeted.
 const fs = require("fs");
 const path = require("path");
 const { loadSiteData } = require("./lib.js");
@@ -47,12 +43,35 @@ let SHOP = process.env.PRINTIFY_SHOP_ID;
 if (!KEY) { console.error("Missing PRINTIFY_API_KEY"); process.exit(1); }
 const DRY = process.env.DRY_RUN === "1";
 
-// The answer from the maker sweep, pinned. blueprint 535 / provider 6 is
-// "11oz White Mug" by T Shirt and Sons; 69010 is its only variant, the 11oz.
-const TARGET = { blueprintId: 535, providerId: 6, variantId: 69010 };
-const EXPECT = { blueprint: /11oz white mug/i, provider: /t shirt and sons/i };
+// What each line is being moved TO. expect is checked against Printify's own
+// titles before anything is built, so a blueprint or provider id that has been
+// reused or retired stops the run rather than quietly making the wrong thing.
+const KINDS = {
+  mug: {
+    label: "mug",
+    target: { blueprintId: 535, providerId: 6, variantId: 69010 },
+    expect: { blueprint: /11oz white mug/i, provider: /t shirt and sons/i },
+    match: /—\s*Mug/,
+    title: (word) => `${word} — Frog Logic Mug`,
+    out: "printify-mugs-result.json",
+  },
+  print: {
+    label: "wall print",
+    target: { blueprintId: 763, providerId: 72, variantId: 75271 },
+    expect: { blueprint: /silk poster/i, provider: /print clever/i },
+    match: /—\s*Wall print/,
+    title: (word) => `${word} — Frog Logic Print`,
+    out: "printify-prints-result.json",
+  },
+};
 
-const OUT = path.join(__dirname, "printify-mugs-result.json");
+const KIND = KINDS[(process.env.KIND || "").toLowerCase()];
+if (!KIND) { console.error("Set KIND to one of: " + Object.keys(KINDS).join(", ")); process.exit(1); }
+
+const TARGET = KIND.target;
+const EXPECT = KIND.expect;
+
+const OUT = path.join(__dirname, KIND.out);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const GAP_MS = 150;
@@ -154,8 +173,8 @@ async function shopProducts() {
     console.log("auto-detected shop:", shops[0].title, "(id " + SHOP + ")");
   }
 
-  // Confirm the pinned target really is the mug we think it is, rather than
-  // trusting two numbers written down yesterday.
+  // Confirm the pinned target really is the product we think it is, rather
+  // than trusting three numbers written down some other day.
   const bp = await api(`/catalog/blueprints/${TARGET.blueprintId}.json`);
   const provs = await api(`/catalog/blueprints/${TARGET.blueprintId}/print_providers.json`);
   const pr = provs.find((x) => x.id === TARGET.providerId);
@@ -165,9 +184,9 @@ async function shopProducts() {
   }
   console.log(`target: ${bp.title} | ${pr.title}`);
 
-  // The whole fix lives in these three lines. scale is a fraction of the print
-  // area's width; the artwork is square; so fitting it means shrinking it to the
-  // area's height when the area is wider than it is tall, which a mug's is.
+  // scale is a fraction of the print area's WIDTH and the artwork is square,
+  // so fitting it means shrinking to the area's height whenever the area is
+  // wider than it is tall — which a mug's is, and a square poster's is not.
   const ph = await frontPlaceholder();
   const scale = Math.min(1, ph.height / ph.width);
   console.log(`print area: ${ph.position} ${ph.width}x${ph.height}px -> artwork scale ${scale.toFixed(4)}`);
@@ -176,32 +195,32 @@ async function shopProducts() {
   }
 
   const { PRODUCTS } = loadSiteData();
-  const mugs = PRODUCTS.filter((p) => /—\s*Mug/.test(p.num));
-  if (!mugs.length) { console.error("No mugs found in script.js"); process.exit(1); }
+  const items = PRODUCTS.filter((p) => KIND.match.test(p.num));
+  if (!items.length) { console.error(`No ${KIND.label}s found in script.js`); process.exit(1); }
 
-  // Wave 1 holds the current Printify product id for each mug, which is where
-  // the existing artwork lives.
+  // Wave 1 holds the current Printify product id for each piece, which is
+  // where the existing artwork lives.
   const wave1 = new Map();
   for (const r of (require("./printify-result.json").results || require("./printify-result.json"))) {
     if (r && r.id && r.printifyProductId) wave1.set(r.id, r);
   }
 
   // Anything this script built before, indexed by the title it gives them, so a
-  // second run corrects the same eight mugs rather than making eight more.
+  // second run corrects the same items rather than making a second set.
   const existing = new Map();
   for (const prod of await shopProducts()) {
     if (prod.blueprint_id === TARGET.blueprintId && prod.print_provider_id === TARGET.providerId) {
       existing.set(prod.title, prod);
     }
   }
-  if (existing.size) console.log(`${existing.size} mug(s) from an earlier run will be corrected in place`);
+  if (existing.size) console.log(`${existing.size} ${KIND.label}(s) from an earlier run will be corrected in place`);
 
-  console.log(`\n${mugs.length} mug(s) to move:\n`);
+  console.log(`\n${items.length} ${KIND.label}(s) to move:\n`);
 
   const results = [], errors = [];
-  for (const p of mugs) {
+  for (const p of items) {
     const catalogId = p.num.split("—")[0].trim() + "-" + slug(p.word);
-    const title = `${p.word} — Frog Logic Mug`;
+    const title = KIND.title(p.word);
     const price = pence(p.price);
     const old = wave1.get(catalogId);
     const already = existing.get(title);
@@ -210,7 +229,7 @@ async function shopProducts() {
       if (!old) throw new Error("no wave-1 product recorded, so there is no artwork to reuse");
       const oldProduct = await api(`/shops/${SHOP}/products/${old.printifyProductId}.json`);
       const ids = imageIdsFrom(oldProduct);
-      if (!ids) throw new Error("could not find the artwork on the existing mug");
+      if (!ids) throw new Error("could not find the artwork on the existing product");
 
       const payload = body({
         title,
@@ -233,7 +252,7 @@ async function shopProducts() {
       const keep = cost == null ? null : price - cost;
       console.log(`${title}`);
       console.log(`   ${already ? "corrected" : "created"} ${product.id} — artwork at scale ${scale.toFixed(4)}`);
-      console.log(`   ${gbp(price)} - cost ${gbp(cost)} = ${gbp(keep)}   (was ${gbp(old.worstCost ?? null)} on the EU mug)`);
+      console.log(`   ${gbp(price)} - cost ${gbp(cost)} = ${gbp(keep)}   (was ${gbp(old.worstCost ?? null)} before)`);
 
       // The whole point of this script is that somebody looks at the result, so
       // it records where to look. Printify re-renders the mockups after an
@@ -246,7 +265,7 @@ async function shopProducts() {
       else console.log("   (no mockup rendered yet — re-run to pick it up)");
 
       results.push({
-        id: catalogId, num: p.num, word: p.word, kind: "mug",
+        id: catalogId, num: p.num, word: p.word, kind: KIND.label === "wall print" ? "print" : KIND.label,
         printifyProductId: product.id,
         printifyVariantId: variant ? variant.id : TARGET.variantId,
         price, worstCost: cost,
@@ -270,10 +289,10 @@ async function shopProducts() {
     OUT,
     JSON.stringify({ createdAt: new Date().toISOString(), target: TARGET, results, errors }, null, 2) + "\n"
   );
-  console.log(`\ndone: ${results.length} created, ${errors.length} failed -> printify-mugs-result.json`);
+  console.log(`\ndone: ${results.length} created, ${errors.length} failed -> ${KIND.out}`);
   if (results.length) {
-    console.log("\nThe old EU mugs are untouched and still in Printify, and the shop is");
-    console.log("still selling them. Run \"Refresh the product photos\" and look at the new");
-    console.log("mockups before the shop is pointed at these.");
+    console.log("\nThe products being replaced are untouched and still in Printify, and");
+    console.log("the shop is still selling them. Run \"Refresh the product photos\" and look");
+    console.log("at the new mockups before the shop is pointed at these.");
   }
 })().catch((e) => { console.error(e); process.exit(1); });
