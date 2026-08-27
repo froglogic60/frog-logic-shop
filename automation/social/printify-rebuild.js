@@ -251,11 +251,19 @@ async function shopProducts() {
   const items = PRODUCTS.filter((p) => KIND.match.test(p.num));
   if (!items.length) { console.error(`No ${KIND.label}s found in script.js`); process.exit(1); }
 
-  // Wave 1 holds the current Printify product id for each piece, which is
-  // where the existing artwork lives.
-  const wave1 = new Map();
-  for (const r of (require("./printify-result.json").results || require("./printify-result.json"))) {
-    if (r && r.id && r.printifyProductId) wave1.set(r.id, r);
+  // Where the artwork already lives. This read wave 1 alone until 27 Aug 2026,
+  // which was fine while only mugs and wall prints were being moved — both were
+  // built in wave 1. The tees were built in wave 2, so every one of them failed
+  // with "no wave-1 product recorded". Read every result file instead: any
+  // product carrying the image will do, since a Printify upload belongs to the
+  // account rather than to a product.
+  const artwork = new Map();
+  for (const file of ["printify-result.json", "printify-wave2-result.json"]) {
+    let rows;
+    try { rows = require("./" + file); } catch { console.log("no", file, "— skipping"); continue; }
+    for (const r of (rows.results || rows)) {
+      if (r && r.id && r.printifyProductId) artwork.set(r.id, r);
+    }
   }
 
   // Anything this script built before, indexed by the title it gives them, so a
@@ -275,11 +283,11 @@ async function shopProducts() {
     const catalogId = p.num.split("—")[0].trim() + "-" + slug(p.word);
     const title = KIND.title(p.word);
     const price = pence(p.price);
-    const old = wave1.get(catalogId);
+    const old = artwork.get(catalogId);
     const already = existing.get(title);
 
     try {
-      if (!old) throw new Error("no wave-1 product recorded, so there is no artwork to reuse");
+      if (!old) throw new Error("not in any result file, so there is no artwork to reuse");
       const oldProduct = await api(`/shops/${SHOP}/products/${old.printifyProductId}.json`);
       const ids = imageIdsFrom(oldProduct);
       if (!ids) throw new Error("could not find the artwork on the existing product");
