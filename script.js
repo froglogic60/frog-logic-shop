@@ -205,6 +205,7 @@ const PRODUCTS = [
   },
   {
     num: "09 — Hoodie", word: "Special Interest",
+    retired: true,
     line: "Ask me one question. Clear your afternoon.",
     price: "£36.99", link: "#", bg: "#29527A",
     // The subject repeats obsessively behind the words.
@@ -830,6 +831,7 @@ const PRODUCTS = [
   },
   {
     num: "38 — Hoodie", word: "Pattern Recognition",
+    retired: true,
     line: "I saw it three steps ago. I did say.",
     price: "£36.99", link: "#", bg: "#1F5E52",
     // The word hides in the noise until you see it — then you can't unsee it.
@@ -1202,6 +1204,7 @@ const PRODUCTS = [
   },
   {
     num: "57 — Hoodie", word: "Trust Me With It",
+    retired: true,
     line: "Give me the work. Then leave me alone.",
     price: "£36.99", link: "#", bg: "#2C4A6E",
     // The ask is simple and rarely granted.
