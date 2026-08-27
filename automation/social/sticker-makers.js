@@ -130,6 +130,18 @@ const KINDS = {
     prices: [1200, 1400, 1600],
     report: "notebook-maker-report.json",
   },
+  // Not a product Frog Logic sells — Sam asked on 27 Aug 2026 whether Printify
+  // does water bottles at all. liveVariant is 0 because there is nothing live
+  // to compare against; the report simply lists what exists and what it costs.
+  bottle: {
+    label: "water bottle",
+    patterns: [/water bottle/i, /sports bottle/i, /\bbottle\b/i, /tumbler/i, /flask/i],
+    avoid: /mug|can cooler|shot glass|wine|baby|opener|holder|carrier/i,
+    maxBlueprints: 16,
+    liveVariant: 0,
+    prices: [1800, 2200, 2600],
+    report: "bottle-maker-report.json",
+  },
 };
 
 const KIND = KINDS[(process.env.KIND || "sticker").toLowerCase()];
