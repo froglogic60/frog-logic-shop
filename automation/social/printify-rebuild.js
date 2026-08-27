@@ -156,18 +156,31 @@ async function frontPlaceholder() {
   const { variants } = await api(
     `/catalog/blueprints/${TARGET.blueprintId}/print_providers/${TARGET.providerId}/variants.json`
   );
-  const v = (variants || []).find((x) => x.id === DEFAULT_VARIANT);
-  if (!v) throw new Error(`variant ${DEFAULT_VARIANT} is not made by provider ${TARGET.providerId} any more`);
-  // Every size shares one print area on every blueprint seen so far, but check
-  // rather than assume: a size the artwork would not fit is worth stopping for.
-  const odd = (variants || []).filter((x) => VARIANT_IDS.includes(x.id))
-    .filter((x) => {
-      const q = (x.placeholders || []).find((y) => y.position === (v.placeholders || [])[0]?.position);
-      return q && (q.width !== (v.placeholders || [])[0]?.width || q.height !== (v.placeholders || [])[0]?.height);
-    });
-  if (odd.length) throw new Error(`${odd.length} size(s) have a different print area — check before building`);
-  const ph = (v.placeholders || []).find((x) => /front/i.test(x.position)) || (v.placeholders || [])[0];
-  if (!ph || !ph.width || !ph.height) throw new Error("no usable print area on variant " + DEFAULT_VARIANT);
+  const mine = (variants || []).filter((x) => VARIANT_IDS.includes(x.id));
+  if (!mine.length) throw new Error(`none of ${VARIANT_IDS.join(", ")} is made by provider ${TARGET.providerId} any more`);
+
+  // Sizes do NOT share a print area. A 2XL tee has a bigger printable panel
+  // than an S, and Printify scales the placement against whichever variant it
+  // is printing — so one scale figure has to be safe on all five. The first tee
+  // run stopped here rather than guessing, which was the right instinct but the
+  // wrong ending.
+  //
+  // The binding size is the one with the smallest height-to-width ratio: fit
+  // the square there and it fits everywhere, because every other size has
+  // proportionally more room top to bottom.
+  const areas = mine.map((x) => {
+    const q = (x.placeholders || []).find((y) => /front/i.test(y.position)) || (x.placeholders || [])[0];
+    return q && q.width && q.height ? { id: x.id, ...q } : null;
+  }).filter(Boolean);
+  if (!areas.length) throw new Error("no usable print area on " + VARIANT_IDS.join(", "));
+
+  areas.sort((a, b) => a.height / a.width - b.height / b.width);
+  const ph = areas[0];
+  if (areas.length > 1) {
+    const loose = areas[areas.length - 1];
+    console.log(`${areas.length} size(s), print areas ${ph.width}x${ph.height} to ${loose.width}x${loose.height}px`);
+    console.log(`   fitting to the tightest of them, so the artwork is safe on every size`);
+  }
   return ph;
 }
 
