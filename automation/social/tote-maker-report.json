@@ -1,0 +1,233 @@
+{
+  "sampledAt": "2026-08-27T10:49:48.974Z",
+  "prices": [
+    1600,
+    1800,
+    2000
+  ],
+  "considered": 3,
+  "rows": [
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73419,
+      "variantTitle": "One size / Grey",
+      "live": true,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73420,
+      "variantTitle": "One size / Lavender",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73421,
+      "variantTitle": "One size / Lime",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73422,
+      "variantTitle": "One size / Navy Blue",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73423,
+      "variantTitle": "One size / Orange",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73424,
+      "variantTitle": "One size / Red",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73425,
+      "variantTitle": "One size / Royal Blue",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73426,
+      "variantTitle": "One size / White",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Cotton Tote",
+      "blueprintId": 720,
+      "provider": "T Shirt and Sons",
+      "providerId": 6,
+      "country": "GB",
+      "variantId": 73428,
+      "variantTitle": "One size / Black",
+      "live": false,
+      "cost": 1243,
+      "ukShipping": 349,
+      "margins": {
+        "1600": 357,
+        "1800": 557,
+        "2000": 757
+      }
+    },
+    {
+      "blueprint": "Shoulder Tote Bag (AOP)",
+      "blueprintId": 836,
+      "provider": "Print Clever",
+      "providerId": 72,
+      "country": "GB",
+      "variantId": 76241,
+      "variantTitle": "One size / White",
+      "live": false,
+      "cost": 2069,
+      "ukShipping": 359,
+      "margins": {
+        "1600": -469,
+        "1800": -269,
+        "2000": -69
+      }
+    },
+    {
+      "blueprint": "Organic Cotton Tote Bag",
+      "blueprintId": 731,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 79434,
+      "variantTitle": "Black / 15\" x 16.5\"",
+      "live": false,
+      "cost": 1300,
+      "ukShipping": 729,
+      "margins": {
+        "1600": 300,
+        "1800": 500,
+        "2000": 700
+      }
+    },
+    {
+      "blueprint": "Organic Cotton Tote Bag",
+      "blueprintId": 731,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 79435,
+      "variantTitle": "Classic Red / 15\" x 16.5\"",
+      "live": false,
+      "cost": 1300,
+      "ukShipping": 729,
+      "margins": {
+        "1600": 300,
+        "1800": 500,
+        "2000": 700
+      }
+    },
+    {
+      "blueprint": "Organic Cotton Tote Bag",
+      "blueprintId": 731,
+      "provider": "Textildruck Europa",
+      "providerId": 26,
+      "country": "DE",
+      "variantId": 79436,
+      "variantTitle": "French Navy / 15\" x 16.5\"",
+      "live": false,
+      "cost": 1300,
+      "ukShipping": 729,
+      "margins": {
+        "1600": 300,
+        "1800": 500,
+        "2000": 700
+      }
+    }
+  ],
+  "undeleted": []
+}
