@@ -64,7 +64,7 @@
     "shipping": {
       "provider": 94,
       "providerName": "Harrier",
-      "first": 439,
+      "first": 459,
       "additional": 129,
       "zoneKey": "1193:94"
     }
@@ -96,9 +96,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -134,7 +134,7 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 449,
+      "first": 469,
       "additional": 299,
       "zoneKey": "77:72"
     }
@@ -150,9 +150,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -166,9 +166,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -252,9 +252,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -322,9 +322,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -408,9 +408,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -424,7 +424,7 @@
     "shipping": {
       "provider": 94,
       "providerName": "Harrier",
-      "first": 439,
+      "first": 459,
       "additional": 129,
       "zoneKey": "1193:94"
     }
@@ -516,9 +516,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -548,9 +548,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -602,7 +602,7 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 449,
+      "first": 469,
       "additional": 299,
       "zoneKey": "77:72"
     }
@@ -656,9 +656,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -672,9 +672,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -726,9 +726,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -742,7 +742,7 @@
     "shipping": {
       "provider": 94,
       "providerName": "Harrier",
-      "first": 439,
+      "first": 459,
       "additional": 129,
       "zoneKey": "1193:94"
     }
@@ -812,9 +812,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -882,9 +882,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -898,7 +898,7 @@
     "shipping": {
       "provider": 94,
       "providerName": "Harrier",
-      "first": 439,
+      "first": 459,
       "additional": 129,
       "zoneKey": "1193:94"
     }
@@ -952,7 +952,7 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 449,
+      "first": 469,
       "additional": 299,
       "zoneKey": "77:72"
     }
@@ -984,9 +984,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -1000,9 +1000,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -1086,9 +1086,9 @@
     "shipping": {
       "provider": 72,
       "providerName": "Print Clever",
-      "first": 529,
+      "first": 559,
       "additional": 99,
-      "zoneKey": "804:72"
+      "zoneKey": "763:72"
     }
   },
   {
@@ -1102,7 +1102,7 @@
     "shipping": {
       "provider": 94,
       "providerName": "Harrier",
-      "first": 439,
+      "first": 459,
       "additional": 129,
       "zoneKey": "1193:94"
     }

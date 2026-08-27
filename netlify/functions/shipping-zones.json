@@ -175,14 +175,14 @@
       "provider": 94,
       "zones": [
         {
-          "first": 439,
+          "first": 459,
           "additional": 129,
           "countries": [
             "GB"
           ]
         },
         {
-          "first": 499,
+          "first": 519,
           "additional": 179,
           "countries": [
             "CZ",
@@ -190,7 +190,7 @@
           ]
         },
         {
-          "first": 549,
+          "first": 569,
           "additional": 179,
           "countries": [
             "AD",
@@ -240,7 +240,7 @@
           ]
         },
         {
-          "first": 839,
+          "first": 879,
           "additional": 239,
           "countries": [
             "CH",
@@ -257,14 +257,14 @@
           ]
         },
         {
-          "first": 1719,
+          "first": 1789,
           "additional": 399,
           "countries": [
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 2719,
+          "first": 2829,
           "additional": 399,
           "countries": [
             "US"
@@ -332,12 +332,12 @@
         }
       ]
     },
-    "804:72": {
+    "763:72": {
       "name": "Print Clever",
       "provider": 72,
       "zones": [
         {
-          "first": 529,
+          "first": 559,
           "additional": 99,
           "countries": [
             "GB",
@@ -372,7 +372,6 @@
             "GR",
             "HR",
             "HU",
-            "IE",
             "IT",
             "JE",
             "LU",
@@ -397,6 +396,13 @@
           ]
         },
         {
+          "first": 1529,
+          "additional": 299,
+          "countries": [
+            "IE"
+          ]
+        },
+        {
           "first": 1649,
           "additional": 299,
           "countries": [
@@ -413,7 +419,7 @@
           ]
         },
         {
-          "first": 1979,
+          "first": 2079,
           "additional": 609,
           "countries": [
             "AU",
@@ -422,7 +428,7 @@
           ]
         },
         {
-          "first": 2919,
+          "first": 3069,
           "additional": 199,
           "countries": [
             "US"
@@ -435,7 +441,7 @@
       "provider": 72,
       "zones": [
         {
-          "first": 449,
+          "first": 469,
           "additional": 299,
           "countries": [
             "GB",
@@ -495,14 +501,6 @@
           ]
         },
         {
-          "first": 1629,
-          "additional": 999,
-          "countries": [
-            "CA",
-            "REST_OF_THE_WORLD"
-          ]
-        },
-        {
           "first": 1649,
           "additional": 399,
           "countries": [
@@ -519,14 +517,22 @@
           ]
         },
         {
-          "first": 1799,
+          "first": 1699,
+          "additional": 999,
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ]
+        },
+        {
+          "first": 1879,
           "additional": 899,
           "countries": [
             "AU"
           ]
         },
         {
-          "first": 2999,
+          "first": 3119,
           "additional": 999,
           "countries": [
             "US"
