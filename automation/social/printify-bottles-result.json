@@ -1,0 +1,59 @@
+{
+  "createdAt": "2026-08-27T18:28:54.011Z",
+  "target": {
+    "blueprintId": 716,
+    "providerId": 6,
+    "variantId": 73363
+  },
+  "results": [
+    {
+      "id": "09-special-interest",
+      "num": "09 — Water bottle",
+      "word": "Special Interest",
+      "kind": "water bottle",
+      "printifyProductId": "6a9081da8d3b32106f0ded47",
+      "printifyVariantId": 73363,
+      "price": 1775,
+      "worstCost": 1225,
+      "blueprint": "Sky Water Bottle",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.8157063930544594,
+      "mockup": "https://images-api.printify.com/mockup/6a9081da8d3b32106f0ded47/73363/19382/special-interest-frog-logic-bottle.jpg?camera_label=front",
+      "replaces": "6a8cc102fdd5a017170fed12"
+    },
+    {
+      "id": "38-pattern-recognition",
+      "num": "38 — Water bottle",
+      "word": "Pattern Recognition",
+      "kind": "water bottle",
+      "printifyProductId": "6a9081ded6eda3cec605063c",
+      "printifyVariantId": 73363,
+      "price": 1775,
+      "worstCost": 1225,
+      "blueprint": "Sky Water Bottle",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.8157063930544594,
+      "mockup": "https://images-api.printify.com/mockup/6a9081ded6eda3cec605063c/73363/19382/pattern-recognition-frog-logic-bottle.jpg?camera_label=front",
+      "replaces": "6a8cc13753075cc40309bc75"
+    },
+    {
+      "id": "57-trust-me-with-it",
+      "num": "57 — Water bottle",
+      "word": "Trust Me With It",
+      "kind": "water bottle",
+      "printifyProductId": "6a9081e385dcb09c4a039b90",
+      "printifyVariantId": 73363,
+      "price": 1775,
+      "worstCost": 1225,
+      "blueprint": "Sky Water Bottle",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.8157063930544594,
+      "mockup": "https://images-api.printify.com/mockup/6a9081e385dcb09c4a039b90/73363/19382/trust-me-with-it-frog-logic-bottle.jpg?camera_label=front",
+      "replaces": "6a8cc164dbf9aebaf708a1bf"
+    }
+  ],
+  "errors": []
+}
