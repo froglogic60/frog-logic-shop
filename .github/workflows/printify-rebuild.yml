@@ -29,8 +29,8 @@ on:
       kind:
         description: "Which line to move"
         type: choice
-        options: ["tee", "print", "mug"]
-        default: "tee"
+        options: ["bottle", "tee", "print", "mug"]
+        default: "bottle"
       dry_run:
         description: "Report the print area and scale, change nothing"
         type: boolean
