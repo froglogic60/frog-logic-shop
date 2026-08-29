@@ -2112,60 +2112,60 @@ function renderDigital(){
 const GUIDES = [
   {
     num: "Pond Guide", word: "Autism", line: "No look, no cure, no growing out of it. What it's like from inside, what people get wrong, and what actually helps.",
-    price: "£3.50", link: "#", bg: "#B5432F", slug: "Autism",
+    price: "Free", link: "#", bg: "#B5432F", slug: "Autism",
   },
   {
     num: "Pond Guide", word: "ADHD", line: "Not a shortage of attention — attention that won't take instructions. Interest, urgency and novelty instead of importance.",
-    price: "£3.50", link: "#", bg: "#E0A81C", slug: "ADHD",
+    price: "Free", link: "#", bg: "#E0A81C", slug: "ADHD",
   },
   {
     num: "Pond Guide", word: "AuDHD", line: "Autistic and ADHD together: two nervous systems asking for opposite things. Not the two lists added up.",
-    price: "£3.50", link: "#", bg: "#5E4A8C", slug: "AuDHD",
+    price: "Free", link: "#", bg: "#5E4A8C", slug: "AuDHD",
   },
   {
     num: "Pond Guide", word: "Dyslexia", line: "Nothing to do with intelligence, and nothing to do with letters being backwards. It's the sounds inside words.",
-    price: "£3.50", link: "#", bg: "#25607A", slug: "Dyslexia",
+    price: "Free", link: "#", bg: "#25607A", slug: "Dyslexia",
   },
   {
     num: "Pond Guide", word: "Dyspraxia", line: "Usually reduced to clumsiness, which misses most of it. Planning and sequencing — of movement, and of everything else.",
-    price: "£3.50", link: "#", bg: "#2E6B5E", slug: "Dyspraxia",
+    price: "Free", link: "#", bg: "#2E6B5E", slug: "Dyspraxia",
   },
   {
     num: "Pond Guide", word: "Dyscalculia", line: "Dyslexia's less famous sibling, and it gets far less patience. A different relationship with quantity altogether.",
-    price: "£3.50", link: "#", bg: "#8C5A1C", slug: "Dyscalculia",
+    price: "Free", link: "#", bg: "#8C5A1C", slug: "Dyscalculia",
   },
   {
     num: "Pond Guide", word: "Dysgraphia", line: "When the ideas are all there and the last six inches, hand to paper, is what costs.",
-    price: "£3.50", link: "#", bg: "#4A6E2E", slug: "Dysgraphia",
+    price: "Free", link: "#", bg: "#4A6E2E", slug: "Dysgraphia",
   },
   {
     num: "Pond Guide", word: "Tourette's & Tics", line: "Almost everything you think you know came from one rare symptom used as a punchline. Swearing affects around one in ten.",
-    price: "£3.50", link: "#", bg: "#7A3A5E", slug: "Tourettes",
+    price: "Free", link: "#", bg: "#7A3A5E", slug: "Tourettes",
   },
   {
     num: "Pond Guide", word: "OCD", line: "The most misused word in the vocabulary. Not tidiness — a distressing loop the person wants out of.",
-    price: "£3.50", link: "#", bg: "#2C4A6E", slug: "OCD",
+    price: "Free", link: "#", bg: "#2C4A6E", slug: "OCD",
   },
   {
     num: "Pond Guide", word: "PDA", line: "Demands landing as threats, including wanted ones. Even the name is contested — both sides are here.",
-    price: "£3.50", link: "#", bg: "#8C4A2F", slug: "PDA",
+    price: "Free", link: "#", bg: "#8C4A2F", slug: "PDA",
   },
   {
     num: "Pond Guide", word: "Sensory Differences", line: "Eight senses, any of which can arrive far too loud, far too quiet, or unpredictably both.",
-    price: "£3.50", link: "#", bg: "#1F6B75", slug: "Sensory",
+    price: "Free", link: "#", bg: "#1F6B75", slug: "Sensory",
   },
-  { num: "Pond Guide", word: "Bipolar", line: "A difference in how the brain regulates mood and energy — not moodiness. Episodes last weeks, not hours.", price: "£3.50", link: "#", bg: "#4A5E8C", slug: "Bipolar" },
-  { num: "Pond Guide", word: "CPTSD", line: "Harm that repeated over time, when you were too young or too trapped to leave. Your nervous system learned to keep you alive.", price: "£3.50", link: "#", bg: "#3F5C6B", slug: "CPTSD" },
-  { num: "Pond Guide", word: "BPD / EUPD", line: "Few labels carry as much unfair stigma, including from professionals. Also one of the diagnoses people genuinely recover from.", price: "£3.50", link: "#", bg: "#8C3A5E", slug: "BPD" },
-  { num: "Pond Guide", word: "Anxiety", line: "Often the result of being neurodivergent in a world that isn't built for you, rather than a separate thing.", price: "£3.50", link: "#", bg: "#2E6B5E", slug: "Anxiety" },
-  { num: "Pond Guide", word: "Depression", line: "Very often the accumulated cost of years of masking and unmet needs. Not a mood, and not an attitude.", price: "£3.50", link: "#", bg: "#3A4E6B", slug: "Depression" },
-  { num: "Pond Guide", word: "Misophonia", line: "Small sounds provoking instant, disproportionate rage or panic. Increasingly well evidenced, including on brain imaging.", price: "£3.50", link: "#", bg: "#B5432F", slug: "Misophonia" },
-  { num: "Pond Guide", word: "Aphantasia", line: "No mental pictures at all. Most people find out in adulthood that “picture it” was never a figure of speech.", price: "£3.50", link: "#", bg: "#4A6E7A", slug: "Aphantasia" },
-  { num: "Pond Guide", word: "Synaesthesia", line: "Letters with colours, sounds with shapes, Tuesday being yellow-green. Extra channels, permanently on.", price: "£3.50", link: "#", bg: "#7A4A8C", slug: "Synaesthesia" },
-  { num: "Pond Guide", word: "Alexithymia", line: "Not the absence of feelings — having them at full strength with no reliable way to name them. Common alongside autism.", price: "£3.50", link: "#", bg: "#5E6B2E", slug: "Alexithymia" },
-  { num: "Pond Guide", word: "Face Blindness", line: "Prosopagnosia — difficulty recognising faces, including familiar ones. Nothing to do with memory or caring.", price: "£3.50", link: "#", bg: "#8C6A2E", slug: "Prosopagnosia" },
-  { num: "Pond Guide", word: "Situational Mutism", line: "Still often called selective mutism, which is unfortunate — nothing about it is selected. A freeze, not a refusal.", price: "£3.50", link: "#", bg: "#2E5F73", slug: "SelectiveMutism" },
-  { num: "Pond Guide", word: "Auditory Processing", line: "The hearing test is perfect and the pub is still impossible. The ears are fine; it's the sorting office.", price: "£3.50", link: "#", bg: "#6B4A2E", slug: "APD" },
+  { num: "Pond Guide", word: "Bipolar", line: "A difference in how the brain regulates mood and energy — not moodiness. Episodes last weeks, not hours.", price: "Free", link: "#", bg: "#4A5E8C", slug: "Bipolar" },
+  { num: "Pond Guide", word: "CPTSD", line: "Harm that repeated over time, when you were too young or too trapped to leave. Your nervous system learned to keep you alive.", price: "Free", link: "#", bg: "#3F5C6B", slug: "CPTSD" },
+  { num: "Pond Guide", word: "BPD / EUPD", line: "Few labels carry as much unfair stigma, including from professionals. Also one of the diagnoses people genuinely recover from.", price: "Free", link: "#", bg: "#8C3A5E", slug: "BPD" },
+  { num: "Pond Guide", word: "Anxiety", line: "Often the result of being neurodivergent in a world that isn't built for you, rather than a separate thing.", price: "Free", link: "#", bg: "#2E6B5E", slug: "Anxiety" },
+  { num: "Pond Guide", word: "Depression", line: "Very often the accumulated cost of years of masking and unmet needs. Not a mood, and not an attitude.", price: "Free", link: "#", bg: "#3A4E6B", slug: "Depression" },
+  { num: "Pond Guide", word: "Misophonia", line: "Small sounds provoking instant, disproportionate rage or panic. Increasingly well evidenced, including on brain imaging.", price: "Free", link: "#", bg: "#B5432F", slug: "Misophonia" },
+  { num: "Pond Guide", word: "Aphantasia", line: "No mental pictures at all. Most people find out in adulthood that “picture it” was never a figure of speech.", price: "Free", link: "#", bg: "#4A6E7A", slug: "Aphantasia" },
+  { num: "Pond Guide", word: "Synaesthesia", line: "Letters with colours, sounds with shapes, Tuesday being yellow-green. Extra channels, permanently on.", price: "Free", link: "#", bg: "#7A4A8C", slug: "Synaesthesia" },
+  { num: "Pond Guide", word: "Alexithymia", line: "Not the absence of feelings — having them at full strength with no reliable way to name them. Common alongside autism.", price: "Free", link: "#", bg: "#5E6B2E", slug: "Alexithymia" },
+  { num: "Pond Guide", word: "Face Blindness", line: "Prosopagnosia — difficulty recognising faces, including familiar ones. Nothing to do with memory or caring.", price: "Free", link: "#", bg: "#8C6A2E", slug: "Prosopagnosia" },
+  { num: "Pond Guide", word: "Situational Mutism", line: "Still often called selective mutism, which is unfortunate — nothing about it is selected. A freeze, not a refusal.", price: "Free", link: "#", bg: "#2E5F73", slug: "SelectiveMutism" },
+  { num: "Pond Guide", word: "Auditory Processing", line: "The hearing test is perfect and the pub is still impossible. The ears are fine; it's the sorting office.", price: "Free", link: "#", bg: "#6B4A2E", slug: "APD" },
 ];
 
 function renderGuides(){
@@ -2196,7 +2196,7 @@ function renderGuides(){
         <h3>${g.word}</h3>
         <p class="card-line">${g.line}</p>
         <p class="card-price">${g.price}</p>
-        <button class="btn btn-primary" data-checkout-num="${g.num}" data-checkout-word="${g.word}" data-checkout-kind="digital">Download</button>
+        <a class="btn btn-primary" href="/digital/Pond-Guide-${g.slug}.pdf" download>Download</a>
       </div>
     </article>
   `).join('');
@@ -2230,10 +2230,14 @@ function wireNewsletterForm(){
 // Turns a product's num+word into the same id catalog.json uses server-side
 // (netlify/functions/catalog.json is generated from these exact fields, so
 // keep this logic in sync if that generator ever changes).
-function checkoutId(num, word, kind){
+//
+// There used to be a 'guide' kind here, prefixing ids with "guide-". The
+// twenty-three Pond Guides became free downloads on 29 Aug 2026 and left the
+// checkout catalogue entirely, so nothing can produce that prefix any more.
+// Leaving the branch in would have implied ids that no longer exist.
+function checkoutId(num, word){
   const numPart = num.includes('\u2014') ? num.split('\u2014')[0].trim() : num;
-  const base = (numPart + '-' + word).replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
-  return kind === 'guide' ? 'guide-' + base : base;
+  return (numPart + '-' + word).replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
 }
 
 function wireCheckoutButtons(){
@@ -2241,8 +2245,7 @@ function wireCheckoutButtons(){
     const btn = e.target.closest('[data-checkout-num]');
     if(!btn) return;
     e.preventDefault();
-    const isGuide = btn.closest('#guides-grid') !== null;
-    const id = checkoutId(btn.dataset.checkoutNum, btn.dataset.checkoutWord, isGuide ? 'guide' : btn.dataset.checkoutKind);
+    const id = checkoutId(btn.dataset.checkoutNum, btn.dataset.checkoutWord);
     const original = btn.textContent;
     btn.textContent = 'One moment…';
     btn.disabled = true;
@@ -2268,10 +2271,52 @@ function wireCheckoutButtons(){
   });
 }
 
+// Things bought by someone doing a job, rather than by the person the job is
+// about. A teacher, a GP, an HR lead, a support worker. The individual Pond
+// Guides are free precisely so they travel; this is the whole shelf in one
+// file, for the person who needs all of it to hand rather than the one that
+// applies to them. Room here for more later.
+const PROFESSIONAL = [
+  {
+    num: "P1 — Complete set", word: "The Pond Guides",
+    line: "All twenty-three Pond Guides in one file, 46 pages. Every individual guide is free to download on its own — this is the whole set for the people who need all of them: teachers, GPs, managers, support workers, SENCOs.",
+    price: "£8.00", link: "#", bg: "#2C4A6E",
+    svg: `<svg viewBox="0 0 300 300">${grain("p1", 0.1)}
+      <g stroke="${CREAM}" stroke-width="1.4" fill="none" opacity="0.45">
+        <rect x="58" y="56" width="150" height="106" rx="2"/>
+        <rect x="70" y="68" width="150" height="106" rx="2"/>
+      </g>
+      <rect x="82" y="80" width="150" height="106" rx="2" fill="${CREAM}"/>
+      <text x="157" y="124" text-anchor="middle" font-family="Anton, sans-serif" font-size="34" fill="${INK}">23</text>
+      <text x="157" y="146" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${INK}" opacity="0.7" letter-spacing="0.14em">POND GUIDES</text>
+      <text x="150" y="228" text-anchor="middle" font-family="Fraunces, serif" font-size="30" fill="${CREAM}">The complete set</text>
+      <text x="150" y="254" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${GOLD}" letter-spacing="0.12em">FOR PROFESSIONALS</text>
+      <rect width="300" height="300" fill="url(#p1)"/>${mark()}</svg>`
+  },
+];
+
+function renderProfessional(){
+  const grid = document.getElementById('pro-grid');
+  if(!grid) return;
+  grid.innerHTML = PROFESSIONAL.map(p => `
+    <article class="card">
+      <div class="stage" style="background:${p.bg}">${p.svg}</div>
+      <div class="card-meta">
+        <p class="card-num">${p.num}</p>
+        <h3>${p.word}</h3>
+        <p class="card-line">${p.line}</p>
+        <p class="card-price">${p.price}</p>
+        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Buy the set</button>
+      </div>
+    </article>
+  `).join('');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
   renderDigital();
   renderGuides();
+  renderProfessional();
   // fonts load asynchronously, so measure once they're ready
   if(document.fonts && document.fonts.ready){
     document.fonts.ready.then(() => fitSvgText(document));
