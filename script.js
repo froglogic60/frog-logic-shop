@@ -1421,6 +1421,255 @@ const PRODUCTS = [
       <text x="150" y="266" text-anchor="middle" font-family="Instrument Serif, serif" font-size="44" fill="${CREAM}">their person</text>
       <rect width="300" height="300" fill="url(#c8)"/>${mark()}</svg>`
   },
+
+  // ===== The Comfort & Chaos collection =====
+  //
+  // Seven cute-frog designs, Sam's blueprints drawn onto the logo frog's own
+  // anatomy, approved 29 Aug 2026. They live in PRODUCTS with frog: true so the
+  // catalogue, the till and the social posts treat them like any other physical
+  // piece, but they render into their own grid — the frogs and the typography
+  // are two ranges with equal billing, not one collection with a mood swing.
+  // Card art is the real design at scale(0.3); data-no-fit stops fitSvgText
+  // measuring 1000-viewBox text against a 300px budget and shrinking it.
+  {
+    num: "51 — Tee", word: "Comfort Creature", frog: true,
+    line: "Wrapped up, holding something soft, going nowhere. Regulation, wearable.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="520" r="330" fill="#EDE4D0"/>
+
+  <text x="500" y="140" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="84" fill="#6B4A32">Comfort Creature</text>
+
+  <!-- the frog: logo squat -->
+  <path d="M 272 468
+           C 272 400 301 366 336 351
+           C 319 296 336 247 391 244
+           C 439 242 462 276 458 314
+           C 478 303 522 303 542 314
+           C 538 276 561 242 609 244
+           C 664 247 681 296 664 351
+           C 699 366 728 400 728 468
+           C 728 517 706 550 678 567
+           C 717 590 741 624 749 669
+           C 757 717 735 753 690 759
+           C 638 767 560 771 500 771
+           C 440 771 362 767 310 759
+           C 265 753 243 717 251 669
+           C 259 624 283 590 322 567
+           C 294 550 272 517 272 468 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/>
+
+  <!-- face -->
+  <path d="M 358 306 Q 396 274 434 306" fill="none" stroke="#22331F" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 566 306 Q 604 274 642 306" fill="none" stroke="#22331F" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="330" cy="440" r="36" fill="#F08F87"/>
+  <circle cx="670" cy="440" r="36" fill="#F08F87"/>
+  <circle cx="478" cy="392" r="6" fill="#22331F"/>
+  <circle cx="522" cy="392" r="6" fill="#22331F"/>
+  <path d="M 458 428 Q 500 460 542 428" fill="none" stroke="#22331F" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- blanket over the lap, tucked round the legs -->
+  <path d="M 218 664
+           C 266 622 342 636 396 646
+           C 452 656 548 656 604 646
+           C 658 636 734 622 782 664
+           C 796 712 798 756 788 782
+           C 780 802 756 810 724 810
+           L 276 810
+           C 244 810 220 802 212 782
+           C 202 756 204 712 218 664 Z"
+        fill="#E0C9A0" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/>
+  <path d="M 252 700 q 24 -18 48 0 q 24 -18 48 0" fill="none" stroke="#22331F" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 652 700 q 24 -18 48 0 q 24 -18 48 0" fill="none" stroke="#22331F" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+  <rect x="656" y="736" width="40" height="40" rx="9" transform="rotate(10 676 756)" fill="#D6BC90" stroke="#22331F" stroke-width="6" stroke-dasharray="10 8"/>
+
+  <!-- feet peeking out under the hem -->
+  <path d="M 372 792
+           C 354 796 346 810 356 820
+           C 360 830 374 832 382 826
+           C 388 834 402 834 408 826
+           C 418 830 430 824 430 812
+           C 430 798 414 789 396 788
+           C 388 788 379 789 372 792 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M 628 792
+           C 646 796 654 810 644 820
+           C 640 830 626 832 618 826
+           C 612 834 598 834 592 826
+           C 582 830 570 824 570 812
+           C 570 798 586 789 604 788
+           C 612 788 621 789 628 792 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+
+  <!-- plush frog in the lap -->
+  <g transform="rotate(-5 500 616)">
+    <circle cx="472" cy="564" r="20" fill="#F5C6CE" stroke="#22331F" stroke-width="9"/>
+    <circle cx="528" cy="564" r="20" fill="#F5C6CE" stroke="#22331F" stroke-width="9"/>
+    <circle cx="500" cy="616" r="60" fill="#F5C6CE" stroke="#22331F" stroke-width="9"/>
+    <circle cx="472" cy="567" r="5" fill="#22331F"/>
+    <circle cx="528" cy="567" r="5" fill="#22331F"/>
+    <circle cx="466" cy="610" r="10" fill="#E9A2AE"/>
+    <circle cx="534" cy="610" r="10" fill="#E9A2AE"/>
+    <path d="M 480 622 Q 500 636 520 622" fill="none" stroke="#22331F" stroke-width="7" stroke-linecap="round" stroke-dasharray="10 8"/>
+  </g>
+
+  <!-- arms: shoulder, arm and wrist as one limb -->
+  <path d="M 320 556
+           C 284 570 264 606 274 644
+           C 282 680 312 700 354 706
+           C 384 710 414 706 434 694
+           C 448 686 450 672 442 662
+           C 414 654 388 640 370 618
+           C 356 600 350 580 354 562
+           C 344 552 330 550 320 556 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M 680 556
+           C 716 570 736 606 726 644
+           C 718 680 688 700 646 706
+           C 616 710 586 706 566 694
+           C 552 686 550 672 558 662
+           C 586 654 612 640 630 618
+           C 644 600 650 580 646 562
+           C 656 552 670 550 680 556 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M 430 644
+           C 414 658 412 680 428 690
+           C 430 704 446 710 456 702
+           C 462 714 480 714 486 704
+           C 498 700 502 686 494 674
+           C 484 658 452 636 430 644 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M 570 644
+           C 586 658 588 680 572 690
+           C 570 704 554 710 544 702
+           C 538 714 520 714 514 704
+           C 502 700 498 686 506 674
+           C 516 658 548 636 570 644 Z"
+        fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+
+  <text x="500" y="920" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="72" fill="#6B4A32">I regulate with soft things</text>
+    </g></svg>`
+  },
+  {
+    num: "52 — Tee", word: "Brain Full of Tabs", frog: true,
+    line: "Five tabs open, none responding. Wearing it saves explaining it.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="400" cy="560" r="310" fill="#EAE3D2"/>
+  <g transform="rotate(-8 180.0 210)"><rect x="120" y="180" width="120" height="58" rx="10" fill="#F2E4B8" stroke="#22331F" stroke-width="9"/><rect x="120" y="180" width="120" height="20" rx="10" fill="#E4D097" stroke="none"/><circle cx="138" cy="192" r="5" fill="#22331F" opacity="0.55"/><circle cx="154" cy="192" r="5" fill="#22331F" opacity="0.55"/><path d="M 180 232 c -12 -10 -19 -17 -19 -26 c 0 -10 14 -14 19 -5 c 5 -9 19 -5 19 5 c 0 9 -7 16 -19 26 Z" fill="#D96C6C" stroke="#22331F" stroke-width="6"/></g><g transform="rotate(7 750.0 180)"><rect x="690" y="150" width="120" height="58" rx="10" fill="#F2E4B8" stroke="#22331F" stroke-width="9"/><rect x="690" y="150" width="120" height="20" rx="10" fill="#E4D097" stroke="none"/><circle cx="708" cy="162" r="5" fill="#22331F" opacity="0.55"/><circle cx="724" cy="162" r="5" fill="#22331F" opacity="0.55"/><polygon points="750,172 746,182 735,183 743,190 741,201 750,195 759,201 757,190 765,183 754,182" fill="#E8B63C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/></g><g transform="rotate(6 124.0 348)"><rect x="64" y="318" width="120" height="58" rx="10" fill="#F2E4B8" stroke="#22331F" stroke-width="9"/><rect x="64" y="318" width="120" height="20" rx="10" fill="#E4D097" stroke="none"/><circle cx="82" cy="330" r="5" fill="#22331F" opacity="0.55"/><circle cx="98" cy="330" r="5" fill="#22331F" opacity="0.55"/><path d="M 106 345 h 12 l 5 7 h 19 v 19 h -36 Z" fill="#B8C9E0" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/></g><g transform="rotate(-6 800.0 390)"><rect x="740" y="360" width="120" height="58" rx="10" fill="#F2E4B8" stroke="#22331F" stroke-width="9"/><rect x="740" y="360" width="120" height="20" rx="10" fill="#E4D097" stroke="none"/><circle cx="758" cy="372" r="5" fill="#22331F" opacity="0.55"/><circle cx="774" cy="372" r="5" fill="#22331F" opacity="0.55"/><text x="800" y="411" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="38" fill="#22331F">?</text></g><g transform="rotate(3 480.0 126)"><rect x="420" y="96" width="120" height="58" rx="10" fill="#F2E4B8" stroke="#22331F" stroke-width="9"/><rect x="420" y="96" width="120" height="20" rx="10" fill="#E4D097" stroke="none"/><circle cx="438" cy="108" r="5" fill="#22331F" opacity="0.55"/><circle cx="454" cy="108" r="5" fill="#22331F" opacity="0.55"/><polygon points="480,118 476,128 465,129 473,136 471,147 480,141 489,147 487,136 495,129 484,128" fill="#E8B63C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/></g>
+  <g transform="translate(-105 40) scale(0.96)"><path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="406" cy="296" r="17" fill="#22331F"/><circle cx="413" cy="289" r="7" fill="#FFFFFF"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="610" cy="296" r="17" fill="#22331F"/><circle cx="617" cy="289" r="7" fill="#FFFFFF"/><circle cx="330" cy="440" r="36" fill="#F08F87"/><circle cx="670" cy="440" r="36" fill="#F08F87"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 462 440 L 538 440" fill="none" stroke="#22331F" stroke-width="12" stroke-linecap="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 680 556 C 718 572 738 610 728 650 C 720 690 694 716 656 726 C 638 730 622 724 618 710 C 614 698 620 686 632 680 C 652 668 664 648 666 622 C 668 600 664 578 652 562 C 660 552 672 552 680 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/></g>
+  <text x="700" y="560" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="64" fill="#3A3A38">Brain full</text>
+  <text x="700" y="634" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="64" fill="#3A3A38">of tabs</text>
+  <text x="700" y="702" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="54" fill="#3A3A38">None responding</text>
+    </g></svg>`
+  },
+  {
+    num: "53 — Tee", word: "Neurospicy", frog: true,
+    line: "Mildly chaotic, highly loveable, and holding a chilli about it.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="530" r="320" fill="#F0E2C8"/>
+  <text x="500" y="132" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="96" fill="#22331F">Neurospicy</text>
+  <path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="398" cy="300" r="19" fill="#22331F"/><circle cx="405" cy="293" r="7" fill="#FFFFFF"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="300" r="19" fill="#22331F"/><circle cx="609" cy="293" r="7" fill="#FFFFFF"/><circle cx="330" cy="440" r="36" fill="#F08F87"/><circle cx="670" cy="440" r="36" fill="#F08F87"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 450 424 Q 500 478 550 424 Q 500 448 450 424 Z" fill="#7A3A3A" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 678 560 C 714 548 736 508 740 458 C 743 420 732 386 708 366 C 694 354 678 360 674 376 C 686 408 688 446 680 484 C 674 512 668 540 658 556 C 664 564 672 562 678 560 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 688 330 C 668 338 660 360 672 374 C 670 388 684 398 698 394 C 702 406 720 408 728 396 C 740 394 746 380 740 368 C 732 346 710 322 688 330 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M 700 320 C 660 300 640 250 652 196 C 656 176 672 168 686 178 C 682 232 700 272 736 296 C 748 306 744 322 730 326 C 720 330 710 326 700 320 Z"
+        fill="#D14A26" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M 672 174 C 664 156 668 140 684 132 C 690 144 692 160 686 176 Z" fill="#5E7A2E" stroke="#22331F" stroke-width="9" stroke-linejoin="round"/>
+<path d="M 590 128 L 596.16 143.84 L 612 150 L 596.16 156.16 L 590 172 L 583.84 156.16 L 568 150 L 583.84 143.84 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 770 164 L 774.48 175.52 L 786 180 L 774.48 184.48 L 770 196 L 765.52 184.48 L 754 180 L 765.52 175.52 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 600 237 L 603.64 246.36 L 613 250 L 603.64 253.64 L 600 263 L 596.36 253.64 L 587 250 L 596.36 246.36 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 780 240 L 785.6 254.4 L 800 260 L 785.6 265.6 L 780 280 L 774.4 265.6 L 760 260 L 774.4 254.4 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 320 208 C 306 232 300 250 308 262 C 316 274 336 274 344 262 C 352 250 344 230 330 208 C 327 203 323 203 320 208 Z" fill="#9CC4E4" stroke="#22331F" stroke-width="8"/>
+  <text x="500" y="920" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="64" fill="#22331F">mildly chaotic, highly loveable</text>
+    </g></svg>`
+  },
+  {
+    num: "54 — Mug", word: "Low Battery", frog: true,
+    line: "Three percent. The mug does the talking until at least the second cup.",
+    price: "£14.00", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="490" cy="540" r="320" fill="#E9E4D6"/>
+  
+  <text x="745" y="128" text-anchor="middle" font-family="Space Mono, monospace" font-size="34" fill="#4A4A46" font-weight="bold">Battery 3%</text>
+  <rect x="650" y="150" width="170" height="76" rx="16" fill="none" stroke="#4A4A46" stroke-width="11"/>
+  <rect x="826" y="172" width="18" height="32" rx="6" fill="#4A4A46"/>
+  <rect x="666" y="166" width="18" height="44" rx="6" fill="#C94436"/>
+
+  <g transform="rotate(11 520 780) translate(0 26)"><path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#87997B" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9D3BC" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="398" cy="312" r="19" fill="#22331F"/><path d="M 348 300 A 50 50 0 0 1 448 300 Z" fill="#87997B" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="312" r="19" fill="#22331F"/><path d="M 552 300 A 50 50 0 0 1 652 300 Z" fill="#87997B" stroke="#22331F" stroke-width="12"/><circle cx="330" cy="440" r="36" fill="#E39B94"/><circle cx="670" cy="440" r="36" fill="#E39B94"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 462 440 L 538 440" fill="none" stroke="#22331F" stroke-width="12" stroke-linecap="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#87997B" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#87997B" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#87997B" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 680 556 C 718 572 738 610 728 650 C 720 690 694 716 656 726 C 638 730 622 724 618 710 C 614 698 620 686 632 680 C 652 668 664 648 666 622 C 668 600 664 578 652 562 C 660 552 672 552 680 556 Z" fill="#87997B" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/></g>
+  <text x="500" y="924" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="62" fill="#4A4A46">Social battery depleted</text>
+    </g></svg>`
+  },
+  {
+    num: "55 — Mug", word: "Chaos Gremlin", frog: true,
+    line: "The wand is decorative. The caffeine is not.",
+    price: "£14.00", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="530" r="320" fill="#EDE2CC"/>
+  <text x="500" y="120" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="72" fill="#22331F">Chaos Gremlin Energy</text>
+  <g transform="rotate(-7 500 700)"><path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="404" cy="300" r="19" fill="#22331F"/><circle cx="411" cy="293" r="7" fill="#FFFFFF"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="608" cy="300" r="19" fill="#22331F"/><circle cx="615" cy="293" r="7" fill="#FFFFFF"/><circle cx="330" cy="440" r="36" fill="#F08F87"/><circle cx="670" cy="440" r="36" fill="#F08F87"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 450 424 Q 500 478 550 424 Q 500 448 450 424 Z" fill="#7A3A3A" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 678 560 C 714 548 736 508 740 458 C 743 420 732 386 708 366 C 694 354 678 360 674 376 C 686 408 688 446 680 484 C 674 512 668 540 658 556 C 664 564 672 562 678 560 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M 700 330 L 736 216" stroke="#22331F" stroke-width="22" stroke-linecap="round"/>
+  <path d="M 700 330 L 736 216" stroke="#8C5A2E" stroke-width="11" stroke-linecap="round"/>
+  <polygon points="742,162 734,181 713,183 729,196 724,216 742,206 760,216 755,196 771,183 750,181" fill="#E8B63C" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/>
+<path d="M 688 330 C 668 338 660 360 672 374 C 670 388 684 398 698 394 C 702 406 720 408 728 396 C 740 394 746 380 740 368 C 732 346 710 322 688 330 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 150 300 C 190 260 170 340 214 300 C 250 268 236 350 280 318" fill="none" stroke="#3E6ED9" stroke-width="9" stroke-linecap="round" opacity="0.85"/><path d="M 760 480 C 800 440 786 520 830 484 C 862 456 850 530 888 500" fill="none" stroke="#3E6ED9" stroke-width="9" stroke-linecap="round" opacity="0.85"/><path d="M 200 640 C 240 610 222 680 266 650" fill="none" stroke="#3E6ED9" stroke-width="9" stroke-linecap="round" opacity="0.85"/><path d="M 848 200 C 884 172 872 240 912 212" fill="none" stroke="#3E6ED9" stroke-width="9" stroke-linecap="round" opacity="0.85"/><polygon points="180,160 172,179 151,181 167,194 162,214 180,204 198,214 193,194 209,181 188,179" fill="#E85D9E" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/><polygon points="840,276 834,291 817,293 830,303 826,319 840,311 854,319 850,303 863,293 846,291" fill="#E85D9E" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/><polygon points="130,460 125,473 111,474 121,483 118,496 130,489 142,496 139,483 149,474 135,473" fill="#E85D9E" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/><polygon points="806,624 799,641 781,642 795,654 791,671 806,662 821,671 817,654 831,642 813,641" fill="#E85D9E" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/><polygon points="586,170 582,180 571,181 579,188 577,199 586,193 595,199 593,188 601,181 590,180" fill="#E85D9E" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/>
+  <text x="500" y="924" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="66" fill="#22331F">I’m doing my best</text>
+    </g></svg>`
+  },
+  {
+    num: "56 — Water bottle", word: "Overstimulated", frog: true,
+    line: "Hands over ears, still cute. Cold water genuinely helps.",
+    price: "£17.75", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <path d="M 500 190 C 660 180 790 300 800 470 C 810 640 700 790 500 800 C 300 790 190 640 200 470 C 210 300 340 180 500 190 Z" fill="#CDB8E0" opacity="0.55"/>
+  <path id="arc" d="M 100 200 Q 500 84 900 200" fill="none"/>
+  <text font-family="Fraunces" font-weight="600" font-size="50" fill="#2C3E6B"><textPath href="#arc" startOffset="50%" text-anchor="middle">Overstimulated but still cute</textPath></text>
+  <path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="398" cy="300" r="15" fill="#22331F"/><circle cx="405" cy="293" r="7" fill="#FFFFFF"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="300" r="15" fill="#22331F"/><circle cx="609" cy="293" r="7" fill="#FFFFFF"/><circle cx="330" cy="440" r="36" fill="#F08F87"/><circle cx="670" cy="440" r="36" fill="#F08F87"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 458 440 Q 480 430 500 440 Q 520 450 542 440" fill="none" stroke="#22331F" stroke-width="11" stroke-linecap="round"/><path d="M 306 212 L 288 186" fill="none" stroke="#2C3E6B" stroke-width="9" stroke-linecap="round" opacity="0.8"/><path d="M 346 200 L 336 172" fill="none" stroke="#2C3E6B" stroke-width="9" stroke-linecap="round" opacity="0.8"/><path d="M 694 212 L 712 186" fill="none" stroke="#2C3E6B" stroke-width="9" stroke-linecap="round" opacity="0.8"/><path d="M 654 200 L 664 172" fill="none" stroke="#2C3E6B" stroke-width="9" stroke-linecap="round" opacity="0.8"/><path d="M 500 188 L 500 158" fill="none" stroke="#2C3E6B" stroke-width="9" stroke-linecap="round" opacity="0.8"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 322 560 C 284 548 262 508 258 458 C 255 418 268 380 294 358 C 308 346 324 352 328 368 C 316 402 314 442 322 482 C 328 512 334 540 344 556 C 338 564 328 562 322 560 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 678 560 C 716 548 738 508 742 458 C 745 418 732 380 706 358 C 692 346 676 352 672 368 C 684 402 686 442 678 482 C 672 512 666 540 656 556 C 662 564 672 562 678 560 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 292 322 C 272 332 266 356 280 368 C 278 382 292 392 306 388 C 310 400 328 402 336 390 C 348 388 354 374 348 362 C 340 340 314 312 292 322 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 708 322 C 728 332 734 356 720 368 C 722 382 708 392 694 388 C 690 400 672 402 664 390 C 652 388 646 374 652 362 C 660 340 686 312 708 322 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+  <text x="500" y="916" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="72" fill="#2C3E6B">I need a minute</text>
+    </g></svg>`
+  },
+  {
+    num: "57 — Wall print", word: "Neurodivergent Household", frog: true,
+    line: "Signage for the front hall. Est. whenever you moved in.",
+    price: "£12.00", link: "#", bg: "#F4EFE3",
+    svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#B0603F"/>
+  
+  <rect x="72" y="72" width="856" height="856" rx="6" fill="none" stroke="#5E3A28" stroke-width="8"/><rect x="92" y="92" width="816" height="816" rx="4" fill="none" stroke="#5E3A28" stroke-width="3"/><text x="500" y="205" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="74" fill="#F4EFE3">Neurodivergent</text>
+  <text x="500" y="290" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="74" fill="#F4EFE3">Household</text>
+  <g transform="translate(0 96) scale(0.82) translate(110 60)"><path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#7A8B54" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#AFBD84" stroke="#22331F" stroke-width="11"/><path d="M 358 306 Q 396 274 434 306" fill="none" stroke="#22331F" stroke-width="13" stroke-linecap="round"/><path d="M 566 306 Q 604 274 642 306" fill="none" stroke="#22331F" stroke-width="13" stroke-linecap="round"/><circle cx="330" cy="440" r="36" fill="#D98B72"/><circle cx="670" cy="440" r="36" fill="#D98B72"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 458 428 Q 500 460 542 428" fill="none" stroke="#22331F" stroke-width="12" stroke-linecap="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#7A8B54" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#7A8B54" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 284 570 264 606 274 644 C 282 680 312 700 354 706 C 384 710 414 706 434 694 C 448 686 450 672 442 662 C 414 654 388 640 370 618 C 356 600 350 580 354 562 C 344 552 330 550 320 556 Z" fill="#7A8B54" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 680 556 C 716 570 736 606 726 644 C 718 680 688 700 646 706 C 616 710 586 706 566 694 C 552 686 550 672 558 662 C 586 654 612 640 630 618 C 644 600 650 580 646 562 C 656 552 670 550 680 556 Z" fill="#7A8B54" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 452 640 C 436 652 434 672 448 682 C 450 694 464 700 474 692 C 480 702 496 702 502 692 C 512 690 516 676 510 666 C 500 650 470 632 452 640 Z" fill="#7A8B54" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 548 640 C 564 652 566 672 552 682 C 550 694 536 700 526 692 C 520 702 504 702 498 692 C 488 690 484 676 490 666 C 500 650 530 632 548 640 Z" fill="#7A8B54" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g>
+  <text x="500" y="856" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" letter-spacing="6" fill="#F4EFE3" opacity="0.85">EST. WHENEVER WE MOVED IN</text>
+    </g></svg>`
+  },
 ];
 
 function renderProducts(){
@@ -1432,7 +1681,7 @@ function renderProducts(){
   // artwork is not gone — it is the printable sticker sheet in the downloads,
   // which is built from these very entries by automation/pdf/sticker-sheet.js.
   // That is why they are flagged rather than deleted.
-  grid.innerHTML = PRODUCTS.filter(p => !p.retired).map(p => `
+  grid.innerHTML = PRODUCTS.filter(p => !p.retired && !p.frog).map(p => `
     <article class="card" data-id="${checkoutId(p.num, p.word, 'physical')}">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
@@ -1488,7 +1737,7 @@ async function wirePhotos(){
     photos = await res.json();
   } catch (err) { return; }
 
-  document.querySelectorAll('#product-grid .card[data-id]').forEach(card => {
+  document.querySelectorAll('#product-grid .card[data-id], #frogs-grid .card[data-id]').forEach(card => {
     const photo = photos[card.dataset.id];
     const meta = card.querySelector('.card-meta');
     const price = card.querySelector('.card-price');
@@ -2077,6 +2326,7 @@ function fitSvgText(root){
   const MAX = 272;      // 300 artboard minus a little breathing room
   const KEEP = ['OVER','STIMU','LATED','TOO MUCH'];  // deliberate bleeds
   root.querySelectorAll('.stage svg text').forEach(t => {
+    if(t.closest('svg[data-no-fit]')) return;
     const txt = (t.textContent || '').trim();
     if(!txt) return;
     let len;
@@ -2202,6 +2452,24 @@ function renderGuides(){
   `).join('');
 }
 
+
+function renderFrogs(){
+  const grid = document.getElementById('frogs-grid');
+  if(!grid) return;
+  grid.innerHTML = PRODUCTS.filter(p => p.frog && !p.retired).map(p => `
+    <article class="card" data-id="${checkoutId(p.num, p.word)}">
+      <div class="stage" style="background:${p.bg}">${p.svg}</div>
+      <div class="card-meta">
+        <p class="card-num">${p.num}</p>
+        <h3>${p.word}</h3>
+        <p class="card-line">${p.line}</p>
+        <p class="card-price">${p.price}</p>
+        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="physical">Get this piece</button>
+      </div>
+    </article>
+  `).join('');
+}
+
 function wireLowStimToggle(){
   const btn = document.getElementById('low-stim-toggle');
   if(!btn) return;
@@ -2317,6 +2585,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderDigital();
   renderGuides();
   renderProfessional();
+  renderFrogs();
   // fonts load asynchronously, so measure once they're ready
   if(document.fonts && document.fonts.ready){
     document.fonts.ready.then(() => fitSvgText(document));

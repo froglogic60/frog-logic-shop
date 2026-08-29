@@ -42,7 +42,8 @@
       Frog Logic
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#collection">The collection</a>
+      <a href="#collection">The words</a>
+      <a href="#frogs">The frogs</a>
       <a href="#digital">Digital</a>
       <a href="#guides">Guides</a>
       <a href="#professionals">Professionals</a>
@@ -63,6 +64,46 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="#collection">See the collection</a>
         <a class="btn btn-ghost" href="#digital">Instant downloads</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="collection" id="ranges">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Two ranges, one pond</h2>
+        <p class="count">Pick a door</p>
+      </div>
+      <p class="section-sub">The words are typographic pieces — the language we actually use, set as artwork. The frogs are the Comfort &amp; Chaos collection — the Frog Logic frog living through it all. Both are the shop; neither is the warm-up act.</p>
+      <div class="pad-grid" id="ranges-grid">
+        <article class="card">
+          <div class="stage" style="background:#1A1A1A">
+            <svg viewBox="0 0 300 300">
+              <text x="46" y="120" font-family="Fraunces, serif" font-size="52" fill="#F4EFE3" transform="rotate(-6 46 120)">The</text>
+              <text x="86" y="196" font-family="Anton, sans-serif" font-size="64" fill="#E8B63C" transform="rotate(3 86 196)">WORDS</text>
+              <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="9" fill="#F4EFE3" opacity="0.65" letter-spacing="0.14em">FIFTY TYPOGRAPHIC PIECES</text>
+            </svg>
+          </div>
+          <div class="card-meta">
+            <h3>The words</h3>
+            <p class="card-line">Overstimulated. Low spoons. Touched out. The feelings, set in type you'd hang up.</p>
+            <a class="btn btn-primary" href="#collection">See the words</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="stage" style="background:#3D6B4A">
+            <svg viewBox="0 0 300 300">
+              <image href="assets/frog-logic-mark-sm.png" x="80" y="52" width="140" height="122" preserveAspectRatio="xMidYMid meet"/>
+              <text x="150" y="226" text-anchor="middle" font-family="Fraunces, serif" font-size="40" fill="#F4EFE3">The frogs</text>
+              <text x="150" y="256" text-anchor="middle" font-family="Space Mono, monospace" font-size="9" fill="#E8B63C" letter-spacing="0.14em">COMFORT &#183; CHAOS &#183; SEVEN MOODS</text>
+            </svg>
+          </div>
+          <div class="card-meta">
+            <h3>The frogs</h3>
+            <p class="card-line">The Comfort &amp; Chaos collection — one small green creature having a very relatable time.</p>
+            <a class="btn btn-primary" href="#frogs">See the frogs</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -109,6 +150,17 @@
     </div>
   </section>
 
+  <section class="collection" id="frogs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The frogs</h2>
+        <p class="count">Comfort &amp; Chaos &#183; seven pieces</p>
+      </div>
+      <p class="section-sub">One small green creature having a very relatable time: wrapped in a blanket, running on 3%, holding a chilli about it. Each design is the Frog Logic frog — the one in the corner of everything else — finally getting the whole card to itself. Tees, mugs, a bottle and a print.</p>
+      <div class="pad-grid" id="frogs-grid"><!-- rendered from PRODUCTS (frog: true) in script.js --></div>
+    </div>
+  </section>
+
   <section class="collection" id="digital">
     <div class="wrap">
       <div class="section-head">
@@ -140,6 +192,25 @@
       </div>
       <p class="section-sub">For the people who meet a lot of different brains at work — teachers, GPs, managers, support workers, SENCOs. The individual guides above stay free for the people they’re about; this is the whole shelf in one file, for when you need all of it rather than one of it.</p>
       <div class="pad-grid" id="pro-grid"><!-- rendered from PROFESSIONAL in script.js --></div>
+    </div>
+  </section>
+
+  <section class="collection" id="suggestions">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Suggestions very welcome</h2>
+        <p class="count">Seriously</p>
+      </div>
+      <p class="section-sub">Most of this shop exists because somebody needed a thing that didn't exist yet. If there's a word, a tool, a guide or a frog you wish were here, say so — no email required, no reply expected unless you want one. The best ideas so far have all come from exactly this.</p>
+      <form class="newsletter-form" name="design-suggestions" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" style="flex-direction:column; align-items:stretch; gap:12px; max-width:560px;">
+        <input type="hidden" name="form-name" value="design-suggestions">
+        <p style="display:none"><label>Don't fill this in: <input name="bot-field"></label></p>
+        <label class="sr-only" for="suggestion">Your suggestion</label>
+        <textarea id="suggestion" name="suggestion" rows="4" required placeholder="What should exist?" style="font:inherit; padding:12px 14px; border:1px solid currentColor; border-radius:4px; background:transparent; color:inherit; resize:vertical;"></textarea>
+        <label class="sr-only" for="sugg-email">Email, only if you'd like a reply</label>
+        <input type="email" id="sugg-email" name="email" placeholder="Email — only if you'd like a reply" autocomplete="email">
+        <button class="btn btn-primary" type="submit">Send it in</button>
+      </form>
     </div>
   </section>
 

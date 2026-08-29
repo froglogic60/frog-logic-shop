@@ -16,7 +16,7 @@
   #
   # The scheduled workflows already tag their commits [skip netlify]; this
   # catches everything done by hand, which is where the money went.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)automation' ':(exclude).github'"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)automation' ':(exclude).github' ':(exclude)artwork'"
 
 [functions]
   node_bundler = "esbuild"
