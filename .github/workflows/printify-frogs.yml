@@ -1,0 +1,46 @@
+name: Build the frog products
+# Builds the seven Comfort & Chaos frog products on Printify from the artwork
+# in artwork/frogs/, on the same makers and at the same prices as the
+# established lines — except the tees, which print on WHITE rather than the
+# typographic line's charcoal, because the frogs are dark-outlined and would
+# vanish on a dark shirt.
+#
+# Safe to re-run: products are corrected in place by title, never duplicated.
+# Nothing in the shop changes until the catalogue is rebuilt afterwards.
+#
+# Run with dry_run first: it reports every target, scale and price and
+# changes nothing at all.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report what would be built, change nothing"
+        type: boolean
+        default: true
+permissions:
+  contents: write
+jobs:
+  frogs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build the frog products
+        working-directory: automation/social
+        run: node printify-frogs.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+      - name: Commit the result file
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-frogs-result.json || true
+          git status --short
+          git commit -m "Frog products built on Printify [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
