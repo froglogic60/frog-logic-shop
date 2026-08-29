@@ -32,7 +32,10 @@ jobs:
             const physical = cat.filter((x) => x.type === "physical");
             const sellable = physical.filter((x) => x.printifyProductId);
             console.log(cat.length, "entries;", sellable.length, "of", physical.length, "physical are orderable");
-            if (cat.length !== 104) throw new Error("expected 104 entries");
+            // No hardcoded total: the range changes (guides went free, frogs
+            // arrived) and wire-catalog.js already refuses to write a bad result.
+            // A hardcoded 104 here failed the first rebuild after the range moved.
+            if (!physical.length || !cat.some((x) => x.type === "digital")) throw new Error("catalogue looks empty or one-sided");
             for (const x of sellable) {
               if (!x.printifyVariantId) throw new Error(x.id + ": no variant id");
               if (x.sizes && !x.sizes.some((s) => s.variantId === x.printifyVariantId)) {
