@@ -2047,6 +2047,27 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${GOLD}" letter-spacing="0.12em">EIGHTEEN DESIGNS · TWO SHEETS</text>
       <rect width="300" height="300" fill="url(#d31)"/>${mark()}</svg>`
   },
+  {
+    num: "D32 — Printable set", word: "Say What You Need",
+    line: "Three sheets for the days when saying it out loud is not going to happen. My Sensory Profile, How To Help Me and Appointment Prep — four pounds each on their own, six pounds together.",
+    price: "£6.00", link: "#", bg: "#3D6B4A",
+    svg: `<svg viewBox="0 0 300 300">${grain("d32", 0.11)}
+      <g stroke="${CREAM}" stroke-width="1.5" fill="none" opacity="0.45">
+        <rect x="46" y="48" width="140" height="98" rx="2" transform="rotate(-7 116 97)"/>
+        <rect x="88" y="54" width="140" height="98" rx="2" transform="rotate(5 158 103)"/>
+      </g>
+      <rect x="72" y="62" width="140" height="98" rx="2" fill="${CREAM}"/>
+      <g fill="${INK}" opacity="0.72">
+        <rect x="86" y="82" width="80" height="5"/>
+        <rect x="86" y="99" width="112" height="5"/>
+        <rect x="86" y="116" width="96" height="5"/>
+        <rect x="86" y="133" width="64" height="5"/>
+      </g>
+      <rect x="86" y="82" width="32" height="5" fill="${GOLD}"/>
+      <text x="150" y="212" text-anchor="middle" font-family="Anton, sans-serif" font-size="32" fill="${CREAM}">SAY WHAT YOU NEED</text>
+      <text x="150" y="236" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${GOLD}" letter-spacing="0.12em">THREE SHEETS · ONE PRICE</text>
+      <rect width="300" height="300" fill="url(#d32)"/>${mark()}</svg>`
+  },
 ];
 
 // Any SVG text wider than the artboard gets scaled down until it fits.
