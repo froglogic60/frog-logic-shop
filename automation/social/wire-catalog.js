@@ -86,7 +86,7 @@ const wired = [];
 // move — 48 for 24 pieces, because wave 1 sets a mug back to the EU product and
 // the mugs file then moves it forward again.
 const wasAt = new Map(catalog.map((x) => [x.id, x.printifyProductId]));
-for (const file of ["printify-result.json", "printify-wave2-result.json", "printify-mugs-result.json", "printify-prints-result.json", "printify-tees-result.json", "printify-bottles-result.json"]) {
+for (const file of ["printify-result.json", "printify-wave2-result.json", "printify-mugs-result.json", "printify-prints-result.json", "printify-tees-result.json", "printify-bottles-result.json", "printify-frogs-result.json"]) {
   for (const r of loadResults(file)) {
     if (RETIRED.has(r.id)) continue;
     const entry = byId.get(r.id);
