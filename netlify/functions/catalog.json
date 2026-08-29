@@ -1310,48 +1310,128 @@
     "name": "Comfort Creature",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931bddc1f8509ec80326f5",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ]
   },
   {
     "id": "52-brain-full-of-tabs",
     "name": "Brain Full of Tabs",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931be3c1f8509ec80326f8",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ]
   },
   {
     "id": "53-neurospicy",
     "name": "Neurospicy",
     "price": 19,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931beadb8c1bf77202f68b",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ]
   },
   {
     "id": "54-low-battery",
     "name": "Low Battery",
     "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931bf1c1f8509ec80326fb",
+    "printifyVariantId": 69010
   },
   {
     "id": "55-chaos-gremlin",
     "name": "Chaos Gremlin",
     "price": 14,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931bf6ccc5b4b0cd05d9a2",
+    "printifyVariantId": 69010
   },
   {
     "id": "56-overstimulated",
     "name": "Overstimulated",
     "price": 17.75,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931bfbdb8c1bf77202f69a",
+    "printifyVariantId": 73363
   },
   {
     "id": "57-neurodivergent-household",
     "name": "Neurodivergent Household",
     "price": 12,
     "type": "physical",
-    "currency": "gbp"
+    "currency": "gbp",
+    "printifyProductId": "6a931c01db8c1bf77202f6a5",
+    "printifyVariantId": 75271
   }
 ]
