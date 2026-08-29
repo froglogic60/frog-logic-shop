@@ -58,7 +58,7 @@ function makeRenderer({ logoFile }) {
   <rect width="${SIZE}" height="${SIZE}" fill="${bg}"/>${grain("g", 0.10, CREAM)}
   <text x="90" y="120" font-family="Space Mono" font-size="30" letter-spacing="6" fill="${CREAM}" opacity="0.85">${esc(kicker.toUpperCase())}</text>
   ${tspans}
-  <text x="90" y="${SIZE - 70}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.8">frog logic · shop.froglogic.co.uk</text>
+  <text x="90" y="${SIZE - 70}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.8">frog logic · froglogic.co.uk</text>
   ${logoMark(SIZE - 190, 62, 120)}
 </svg>`;
   }
@@ -82,7 +82,7 @@ function makeRenderer({ logoFile }) {
   <rect x="0" y="${SIZE - 290}" width="${SIZE}" height="290" fill="${INK}"/>
   <text x="90" y="${SIZE - 200}" font-family="Fraunces" font-size="52" font-weight="600" fill="${CREAM}">${esc(product.word)}</text>
   <text x="90" y="${SIZE - 136}" font-family="Space Mono" font-size="32" fill="${GOLD}">${esc(product.price)} · instant download</text>
-  <text x="90" y="${SIZE - 74}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.85">link in bio · shop.froglogic.co.uk</text>
+  <text x="90" y="${SIZE - 74}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.85">froglogic.co.uk</text>
 </svg>`;
   }
 
@@ -100,7 +100,7 @@ function makeRenderer({ logoFile }) {
   <rect width="${SIZE}" height="${SIZE}" fill="${bg}"/>${grain("g", 0.08, CREAM)}
   <text x="90" y="150" font-family="Space Mono" font-size="30" letter-spacing="6" fill="${GOLD}">${esc(tag.toUpperCase())}</text>
   ${tParts}${bParts}
-  <text x="90" y="${SIZE - 70}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.8">frog logic · shop.froglogic.co.uk</text>
+  <text x="90" y="${SIZE - 70}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.8">frog logic · froglogic.co.uk</text>
   ${logoMark(SIZE - 190, 62, 120)}
 </svg>`;
   }
