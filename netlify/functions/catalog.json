@@ -1304,5 +1304,54 @@
     "type": "digital",
     "currency": "gbp",
     "file": "The-Pond-Guides-Complete-Set.pdf"
+  },
+  {
+    "id": "51-comfort-creature",
+    "name": "Comfort Creature",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp"
+  },
+  {
+    "id": "52-brain-full-of-tabs",
+    "name": "Brain Full of Tabs",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp"
+  },
+  {
+    "id": "53-neurospicy",
+    "name": "Neurospicy",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp"
+  },
+  {
+    "id": "54-low-battery",
+    "name": "Low Battery",
+    "price": 14,
+    "type": "physical",
+    "currency": "gbp"
+  },
+  {
+    "id": "55-chaos-gremlin",
+    "name": "Chaos Gremlin",
+    "price": 14,
+    "type": "physical",
+    "currency": "gbp"
+  },
+  {
+    "id": "56-overstimulated",
+    "name": "Overstimulated",
+    "price": 17.75,
+    "type": "physical",
+    "currency": "gbp"
+  },
+  {
+    "id": "57-neurodivergent-household",
+    "name": "Neurodivergent Household",
+    "price": 12,
+    "type": "physical",
+    "currency": "gbp"
   }
 ]
