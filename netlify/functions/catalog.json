@@ -1334,7 +1334,14 @@
         "size": "2XL",
         "variantId": 12104
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
   },
   {
     "id": "52-brain-full-of-tabs",
@@ -1365,7 +1372,14 @@
         "size": "2XL",
         "variantId": 12104
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
   },
   {
     "id": "53-neurospicy",
@@ -1396,7 +1410,14 @@
         "size": "2XL",
         "variantId": 12104
       }
-    ]
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
   },
   {
     "id": "54-low-battery",
@@ -1405,7 +1426,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a931bf1c1f8509ec80326fb",
-    "printifyVariantId": 69010
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 389,
+      "additional": 249,
+      "zoneKey": "535:6"
+    }
   },
   {
     "id": "55-chaos-gremlin",
@@ -1414,7 +1442,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a931bf6ccc5b4b0cd05d9a2",
-    "printifyVariantId": 69010
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 389,
+      "additional": 249,
+      "zoneKey": "535:6"
+    }
   },
   {
     "id": "56-overstimulated",
@@ -1423,7 +1458,14 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a931bfbdb8c1bf77202f69a",
-    "printifyVariantId": 73363
+    "printifyVariantId": 73363,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 469,
+      "additional": 299,
+      "zoneKey": "716:6"
+    }
   },
   {
     "id": "57-neurodivergent-household",
@@ -1432,6 +1474,13 @@
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a931c01db8c1bf77202f6a5",
-    "printifyVariantId": 75271
+    "printifyVariantId": 75271,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 559,
+      "additional": 99,
+      "zoneKey": "763:72"
+    }
   }
 ]
