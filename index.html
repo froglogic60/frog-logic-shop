@@ -202,6 +202,8 @@
         <p class="count">Seriously</p>
       </div>
       <p class="section-sub">Most of this shop exists because somebody needed a thing that didn't exist yet. If there's a word, a tool, a guide or a frog you wish were here, say so — no email required, no reply expected unless you want one. The best ideas so far have all come from exactly this.</p>
+      <!-- Netlify registers this form during a build, so this comment exists
+           to force the first build AFTER form detection was switched on. -->
       <form class="newsletter-form" name="design-suggestions" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" style="flex-direction:column; align-items:stretch; gap:12px; max-width:560px;">
         <input type="hidden" name="form-name" value="design-suggestions">
         <p style="display:none"><label>Don't fill this in: <input name="bot-field"></label></p>
