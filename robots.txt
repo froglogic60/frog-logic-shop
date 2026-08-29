@@ -1,0 +1,8 @@
+# Frog Logic — froglogic.co.uk
+# Everything here is meant to be found. The only page kept out of search is the
+# post-purchase thank-you, which is no use to anyone arriving cold.
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+Sitemap: https://froglogic.co.uk/sitemap.xml
