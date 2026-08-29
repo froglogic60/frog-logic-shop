@@ -1472,5 +1472,13 @@
     "type": "digital",
     "currency": "gbp",
     "file": "Frog-Logic-Stickers.pdf"
+  },
+  {
+    "id": "d32-say-what-you-need",
+    "name": "Say What You Need",
+    "price": 6,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Say-What-You-Need.pdf"
   }
 ]
