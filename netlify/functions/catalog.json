@@ -1282,190 +1282,6 @@
     "file": "Translation-Cards.pdf"
   },
   {
-    "id": "guide-pond-guide-autism",
-    "name": "Pond Guide — Autism",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Autism.pdf"
-  },
-  {
-    "id": "guide-pond-guide-adhd",
-    "name": "Pond Guide — ADHD",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-ADHD.pdf"
-  },
-  {
-    "id": "guide-pond-guide-audhd",
-    "name": "Pond Guide — AuDHD",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-AuDHD.pdf"
-  },
-  {
-    "id": "guide-pond-guide-dyslexia",
-    "name": "Pond Guide — Dyslexia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Dyslexia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-dyspraxia",
-    "name": "Pond Guide — Dyspraxia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Dyspraxia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-dyscalculia",
-    "name": "Pond Guide — Dyscalculia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Dyscalculia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-dysgraphia",
-    "name": "Pond Guide — Dysgraphia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Dysgraphia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-tourette-s-tics",
-    "name": "Pond Guide — Tourette's & Tics",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Tourettes.pdf"
-  },
-  {
-    "id": "guide-pond-guide-ocd",
-    "name": "Pond Guide — OCD",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-OCD.pdf"
-  },
-  {
-    "id": "guide-pond-guide-pda",
-    "name": "Pond Guide — PDA",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-PDA.pdf"
-  },
-  {
-    "id": "guide-pond-guide-sensory-differences",
-    "name": "Pond Guide — Sensory Differences",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Sensory.pdf"
-  },
-  {
-    "id": "guide-pond-guide-bipolar",
-    "name": "Pond Guide — Bipolar",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Bipolar.pdf"
-  },
-  {
-    "id": "guide-pond-guide-cptsd",
-    "name": "Pond Guide — CPTSD",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-CPTSD.pdf"
-  },
-  {
-    "id": "guide-pond-guide-bpd-eupd",
-    "name": "Pond Guide — BPD / EUPD",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-BPD.pdf"
-  },
-  {
-    "id": "guide-pond-guide-anxiety",
-    "name": "Pond Guide — Anxiety",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Anxiety.pdf"
-  },
-  {
-    "id": "guide-pond-guide-depression",
-    "name": "Pond Guide — Depression",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Depression.pdf"
-  },
-  {
-    "id": "guide-pond-guide-misophonia",
-    "name": "Pond Guide — Misophonia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Misophonia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-aphantasia",
-    "name": "Pond Guide — Aphantasia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Aphantasia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-synaesthesia",
-    "name": "Pond Guide — Synaesthesia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Synaesthesia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-alexithymia",
-    "name": "Pond Guide — Alexithymia",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Alexithymia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-face-blindness",
-    "name": "Pond Guide — Face Blindness",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-Prosopagnosia.pdf"
-  },
-  {
-    "id": "guide-pond-guide-situational-mutism",
-    "name": "Pond Guide — Situational Mutism",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-SelectiveMutism.pdf"
-  },
-  {
-    "id": "guide-pond-guide-auditory-processing",
-    "name": "Pond Guide — Auditory Processing",
-    "price": 3.5,
-    "type": "digital",
-    "currency": "gbp",
-    "file": "Pond-Guide-APD.pdf"
-  },
-  {
     "id": "d31-frog-logic-stickers",
     "name": "Frog Logic Stickers",
     "price": 4.5,
@@ -1480,5 +1296,13 @@
     "type": "digital",
     "currency": "gbp",
     "file": "Say-What-You-Need.pdf"
+  },
+  {
+    "id": "p1-the-pond-guides",
+    "name": "The Pond Guides — Complete Set",
+    "price": 8,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "The-Pond-Guides-Complete-Set.pdf"
   }
 ]
