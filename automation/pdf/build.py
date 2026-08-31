@@ -140,6 +140,45 @@ def tile_html(tile):
     ) % (esc(tile.get("bg", "#FFFFFF")), tile["svg"], esc(tile.get("name", "")))
 
 
+def tracker_html(sheet):
+    """A week of rows to write in, with an energy scale to circle on each.
+
+    This replaced the Weekly Spoon Tracker spreadsheet on 31 Aug 2026. It was
+    the one download that was an .xlsx while everything else was a PDF: fine
+    on a laptop, useless on a phone, and impossible to print and stick on the
+    fridge, which is where a week-long tracker actually lives. The spreadsheet
+    counted the week up with formulas; here there is a tally row to fill in
+    by hand, which is slower and, for this purpose, better.
+    """
+    levels = sheet["levels"]
+    scale_head = "".join('<span class="lvl">%s</span>' % esc(l) for l in levels)
+    rows = []
+    for day in sheet["days"]:
+        dots = "".join('<span class="dot"></span>' for _ in levels)
+        rows.append(
+            '<div class="day">'
+            '<div class="day-name"><p class="dn">%s</p><p class="date">date</p></div>'
+            '<div class="scale">%s</div>'
+            '<div class="write"><p class="wl">%s</p><span class="ln"></span><span class="ln"></span></div>'
+            '<div class="write"><p class="wl">%s</p><span class="ln"></span><span class="ln"></span></div>'
+            "</div>" % (esc(day), dots, esc(sheet["columns"][0]), esc(sheet["columns"][1]))
+        )
+    tally = "".join(
+        '<div class="tally-cell"><span class="tally-box"></span><p class="tally-lbl">%s</p></div>' % esc(l)
+        for l in levels
+    )
+    return (
+        '<div class="tracker">'
+        '<div class="scale-head"><span class="sh-spacer"></span><div class="scale-labels">%s</div></div>'
+        "%s"
+        '<div class="glance"><p class="glance-title">%s</p>'
+        '<p class="glance-sub">%s</p><div class="tally">%s</div></div>'
+        "</div>"
+        % (scale_head, "".join(rows), esc(sheet.get("glanceTitle", "This week at a glance")),
+           esc(sheet.get("glanceSub", "Count the circles. That is the whole summary.")), tally)
+    )
+
+
 def sheet_html(sheet, title, mark, licence=None):
     head = (
         '<div class="head">'
@@ -155,6 +194,8 @@ def sheet_html(sheet, title, mark, licence=None):
     # the same designs that go on vinyl, on paper you already own.
     if sheet.get("type") == "tiles":
         body = '<div class="tiles">%s</div>' % "".join(tile_html(t) for t in sheet["tiles"])
+    elif sheet.get("type") == "tracker":
+        body = tracker_html(sheet)
     else:
         body = '<div class="grid">%s</div>' % "".join(card_html(c, mark) for c in sheet["cards"])
     # The licence line rides in the last sheet's footer on purpose. In the
@@ -233,6 +274,43 @@ body { margin: 0; font-family: 'DM Sans', sans-serif; color: %(ink)s; }
 .tile-name { font-family: 'Space Mono', monospace; font-size: 5.6pt; letter-spacing: 0.1em;
              text-transform: uppercase; color: %(faint)s; margin: 1.6mm 0 0; text-align: center; }
 
+
+/* The tracker. Seven rows, each: day, a five-dot scale to circle, two boxes
+   to write in. Sized so the whole week and the tally fit one A4 portrait
+   page with room to breathe, because a tracker that spills onto page two
+   never gets page two printed. */
+.tracker { margin-top: 4mm; }
+.scale-head { display: flex; align-items: flex-end; margin-bottom: 1.5mm; }
+.sh-spacer { width: 24mm; flex: none; }
+.scale-labels { width: 46mm; flex: none; display: flex; justify-content: space-between; }
+.lvl { font-family: 'Space Mono', monospace; font-size: 4.6pt; letter-spacing: 0.04em;
+       color: %(muted)s; width: 8.6mm; text-align: center; line-height: 1.2; }
+.day { display: flex; align-items: stretch; border-top: 0.6pt solid %(rule)s; padding: 2.6mm 0 2.4mm; }
+.day:last-of-type { border-bottom: 0.6pt solid %(rule)s; }
+.day-name { width: 24mm; flex: none; }
+.dn { font-family: 'Fraunces', serif; font-weight: 700; font-size: 10.5pt; margin: 0; }
+.date { font-family: 'Space Mono', monospace; font-size: 5pt; letter-spacing: 0.14em;
+        text-transform: uppercase; color: %(faint)s; margin: 1mm 0 0;
+        border-bottom: 0.5pt solid %(rule)s; width: 18mm; padding-bottom: 1mm; }
+.scale { width: 46mm; flex: none; display: flex; justify-content: space-between;
+         align-items: center; padding-top: 1.2mm; }
+.dot { width: 5.2mm; height: 5.2mm; border: 0.8pt solid %(ink)s; border-radius: 50%%;
+       display: inline-block; margin: 0 1.7mm; }
+.write { flex: 1; padding-left: 4mm; }
+.wl { font-family: 'Space Mono', monospace; font-size: 4.8pt; letter-spacing: 0.12em;
+      text-transform: uppercase; color: %(faint)s; margin: 0 0 0.6mm; }
+.ln { display: block; border-bottom: 0.5pt solid %(rule)s; height: 6.8mm; }
+.glance { margin-top: 5mm; background: %(cream)s; border-left: 1.2mm solid %(gold)s;
+          padding: 3.4mm 4mm 3.6mm; }
+.glance-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 11pt; margin: 0; }
+.glance-sub { font-size: 7.6pt; color: #4A453D; margin: 1mm 0 3mm; }
+.tally { display: flex; gap: 5mm; }
+.tally-cell { text-align: center; }
+.tally-box { display: block; width: 14mm; height: 11mm; border: 0.8pt solid %(ink)s;
+             border-radius: 1.5mm; margin: 0 auto 1.4mm; background: #fff; }
+.tally-lbl { font-family: 'Space Mono', monospace; font-size: 5pt; letter-spacing: 0.08em;
+             color: %(muted)s; margin: 0; }
+
 .foot { margin-top: 6mm; text-align: center; }
 .foot-note { font-family: 'Space Mono', monospace; font-size: 6pt;
              letter-spacing: 0.14em; color: %(faint)s; margin: 0 0 3mm; }
@@ -277,7 +355,7 @@ def main():
         out = os.path.join(ROOT, spec["output"])
         os.makedirs(os.path.dirname(out), exist_ok=True)
         HTML(string=html, base_url=ROOT).write_pdf(out)
-        pieces = sum(len(s.get("cards") or s.get("tiles") or []) for s in spec["sheets"])
+        pieces = sum(len(s.get("cards") or s.get("tiles") or s.get("days") or []) for s in spec["sheets"])
         print("  %d sheets, %d pieces -> %s (%d bytes)"
               % (len(spec["sheets"]), pieces, spec["output"], os.path.getsize(out)))
 
