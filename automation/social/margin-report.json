@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-27T10:55:48.518Z",
+  "checkedAt": "2026-08-31T15:47:45.957Z",
   "markupRule": 0.6,
   "rows": [
     {
@@ -11,7 +11,7 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
     },
     {
@@ -23,7 +23,7 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
     },
     {
@@ -35,7 +35,7 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
     },
     {
@@ -47,7 +47,7 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
     },
     {
@@ -59,7 +59,7 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
     },
     {
@@ -71,7 +71,7 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
     },
     {
@@ -83,176 +83,8 @@
       "cost": 1243,
       "keeps": 357,
       "markup": 0.28720836685438456,
-      "postageFirst": 349,
+      "postageFirst": 359,
       "sizes": 0
-    },
-    {
-      "id": "09-special-interest",
-      "name": "Special Interest",
-      "blueprint": 77,
-      "maker": "Print Clever",
-      "price": 3699,
-      "cost": 2869,
-      "keeps": 830,
-      "markup": 0.289299407459045,
-      "postageFirst": 469,
-      "sizes": 5
-    },
-    {
-      "id": "38-pattern-recognition",
-      "name": "Pattern Recognition",
-      "blueprint": 77,
-      "maker": "Print Clever",
-      "price": 3699,
-      "cost": 2869,
-      "keeps": 830,
-      "markup": 0.289299407459045,
-      "postageFirst": 469,
-      "sizes": 5
-    },
-    {
-      "id": "57-trust-me-with-it",
-      "name": "Trust Me With It",
-      "blueprint": 77,
-      "maker": "Print Clever",
-      "price": 3699,
-      "cost": 2869,
-      "keeps": 830,
-      "markup": 0.289299407459045,
-      "postageFirst": 469,
-      "sizes": 5
-    },
-    {
-      "id": "01-overstimulated",
-      "name": "Overstimulated",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "12-time-blind",
-      "name": "Time Blind",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "18-parallel-play",
-      "name": "Parallel Play",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "24-late-diagnosed",
-      "name": "Late Diagnosed",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "29-no-idea-what-my-face-is-doing",
-      "name": "No Idea What My Face Is Doing",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "31-ask-me-about-it",
-      "name": "Ask Me About It",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "39-enthusiasm-unmasked",
-      "name": "Enthusiasm, Unmasked",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "42-nothing-needs-fixing",
-      "name": "Nothing Needs Fixing",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "45-enough",
-      "name": "Enough",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "51-in-writing-please",
-      "name": "In Writing, Please",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
-    },
-    {
-      "id": "63-guilt-is-not-evidence",
-      "name": "Guilt Is Not Evidence",
-      "blueprint": 12,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 1437,
-      "keeps": 463,
-      "markup": 0.3221990257480863,
-      "postageFirst": 349,
-      "sizes": 5
     },
     {
       "id": "03-shutdown-mode",
@@ -312,6 +144,54 @@
       "keeps": 303,
       "markup": 0.3377926421404682,
       "postageFirst": 459,
+      "sizes": 0
+    },
+    {
+      "id": "09-special-interest",
+      "name": "Special Interest",
+      "blueprint": 716,
+      "maker": "T Shirt and Sons",
+      "price": 1775,
+      "cost": 1225,
+      "keeps": 550,
+      "markup": 0.4489795918367347,
+      "postageFirst": 469,
+      "sizes": 0
+    },
+    {
+      "id": "38-pattern-recognition",
+      "name": "Pattern Recognition",
+      "blueprint": 716,
+      "maker": "T Shirt and Sons",
+      "price": 1775,
+      "cost": 1225,
+      "keeps": 550,
+      "markup": 0.4489795918367347,
+      "postageFirst": 469,
+      "sizes": 0
+    },
+    {
+      "id": "57-trust-me-with-it",
+      "name": "Trust Me With It",
+      "blueprint": 716,
+      "maker": "T Shirt and Sons",
+      "price": 1775,
+      "cost": 1225,
+      "keeps": 550,
+      "markup": 0.4489795918367347,
+      "postageFirst": 469,
+      "sizes": 0
+    },
+    {
+      "id": "56-overstimulated",
+      "name": "Overstimulated",
+      "blueprint": 716,
+      "maker": "T Shirt and Sons",
+      "price": 1775,
+      "cost": 1225,
+      "keeps": 550,
+      "markup": 0.4489795918367347,
+      "postageFirst": 469,
       "sizes": 0
     },
     {
@@ -507,6 +387,186 @@
       "sizes": 0
     },
     {
+      "id": "57-neurodivergent-household",
+      "name": "Neurodivergent Household",
+      "blueprint": 763,
+      "maker": "Print Clever",
+      "price": 1200,
+      "cost": 696,
+      "keeps": 504,
+      "markup": 0.7241379310344828,
+      "postageFirst": 559,
+      "sizes": 0
+    },
+    {
+      "id": "01-overstimulated",
+      "name": "Overstimulated",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "12-time-blind",
+      "name": "Time Blind",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "18-parallel-play",
+      "name": "Parallel Play",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "24-late-diagnosed",
+      "name": "Late Diagnosed",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "29-no-idea-what-my-face-is-doing",
+      "name": "No Idea What My Face Is Doing",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "31-ask-me-about-it",
+      "name": "Ask Me About It",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "39-enthusiasm-unmasked",
+      "name": "Enthusiasm, Unmasked",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "42-nothing-needs-fixing",
+      "name": "Nothing Needs Fixing",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "45-enough",
+      "name": "Enough",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "51-in-writing-please",
+      "name": "In Writing, Please",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "63-guilt-is-not-evidence",
+      "name": "Guilt Is Not Evidence",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "51-comfort-creature",
+      "name": "Comfort Creature",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "52-brain-full-of-tabs",
+      "name": "Brain Full of Tabs",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
+      "id": "53-neurospicy",
+      "name": "Neurospicy",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 349,
+      "sizes": 5
+    },
+    {
       "id": "04-47-things-at-once",
       "name": "47 Things at Once",
       "blueprint": 535,
@@ -515,7 +575,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -527,7 +587,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -539,7 +599,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -551,7 +611,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -563,7 +623,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -575,7 +635,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -587,7 +647,7 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
       "sizes": 0
     },
     {
@@ -599,7 +659,31 @@
       "cost": 534,
       "keeps": 866,
       "markup": 1.6217228464419475,
-      "postageFirst": 379,
+      "postageFirst": 389,
+      "sizes": 0
+    },
+    {
+      "id": "54-low-battery",
+      "name": "Low Battery",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1400,
+      "cost": 534,
+      "keeps": 866,
+      "markup": 1.6217228464419475,
+      "postageFirst": 389,
+      "sizes": 0
+    },
+    {
+      "id": "55-chaos-gremlin",
+      "name": "Chaos Gremlin",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1400,
+      "cost": 534,
+      "keeps": 866,
+      "markup": 1.6217228464419475,
+      "postageFirst": 389,
       "sizes": 0
     }
   ],
