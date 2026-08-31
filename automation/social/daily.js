@@ -84,11 +84,22 @@ async function post() {
 
   await waitForUrl(imageUrl);
 
+  // One door per platform. The referrer panel in GoatCounter sat empty for the
+  // first weekend even with referrer collection on, because the Facebook,
+  // Instagram and Pinterest apps open links in in-app browsers that strip it.
+  // So the caption names a short path per platform — froglogic.co.uk/fb,
+  // froglogic.co.uk/ig — and netlify.toml redirects each to the shop with
+  // ?ref=<platform>, which GoatCounter records as the referrer. Still short
+  // enough to type off a phone, which is the whole reason it is a bare
+  // domain in the first place (see lib.js).
+  const forFacebook  = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/fb");
+  const forInstagram = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig");
+
   // Facebook: photo post (image + caption).
   const fb = await fetch(`${GRAPH}/${process.env.FB_PAGE_ID}/photos`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ url: imageUrl, message: meta.caption, access_token: token }),
+    body: JSON.stringify({ url: imageUrl, message: forFacebook, access_token: token }),
   }).then((r) => r.json());
   if (!fb.id) throw new Error(`Facebook post failed: ${JSON.stringify(fb)}`);
   console.log("Facebook post created:", fb.id);
@@ -97,7 +108,7 @@ async function post() {
   const create = await fetch(`${GRAPH}/${process.env.IG_USER_ID}/media`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ image_url: imageUrl, caption: meta.caption, access_token: token }),
+    body: JSON.stringify({ image_url: imageUrl, caption: forInstagram, access_token: token }),
   }).then((r) => r.json());
   if (!create.id) throw new Error(`IG media container failed: ${JSON.stringify(create)}`);
   for (let i = 0; i < 20; i++) {
