@@ -2489,7 +2489,11 @@ function wireNewsletterForm(){
     // hidden iframe (Google doesn't send CORS headers, so fetch() can't do it).
     setTimeout(() => {
       form.reset();
-      note.textContent = "You're on the list. One email a month, easy to leave. 🐸";
+      // The welcome gift, shown here because the list lives in a Google Form
+      // and nothing sends a welcome email. The code itself is a Stripe
+      // promotion code restricted to first orders, so it can't be stacked.
+      note.innerHTML = "You're on the list. One email a month, easy to leave. 🐸<br>" +
+        "Your welcome gift: <strong>POND10</strong> takes 10% off your first order — type it into the promotion code box at checkout.";
     }, 400);
   });
 }
