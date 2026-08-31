@@ -29,3 +29,35 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
     Service-Worker-Allowed = "/"
+
+# ---- One door per channel ----
+# The referrer panel in GoatCounter stayed empty all weekend with referrer
+# collection switched on: the Facebook, Instagram and Pinterest apps open links
+# in browsers that strip it. These short paths carry the channel in the URL
+# instead — ?ref=<channel> is what GoatCounter records as the referrer — so
+# "where did they come from" no longer depends on what an app chooses to send.
+# Pinterest pins link to /pin, the daily captions say /fb and /ig.
+[[redirects]]
+  from = "/pin"
+  to = "/?ref=pinterest"
+  status = 302
+[[redirects]]
+  from = "/pin/guides"
+  to = "/?ref=pinterest#guides"
+  status = 302
+[[redirects]]
+  from = "/pin/frogs"
+  to = "/?ref=pinterest#frogs"
+  status = 302
+[[redirects]]
+  from = "/ig"
+  to = "/?ref=instagram"
+  status = 302
+[[redirects]]
+  from = "/fb"
+  to = "/?ref=facebook"
+  status = 302
+[[redirects]]
+  from = "/etsy"
+  to = "/?ref=etsy"
+  status = 302
