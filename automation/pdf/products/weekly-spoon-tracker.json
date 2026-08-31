@@ -1,0 +1,19 @@
+{
+  "id": "weekly-spoon-tracker",
+  "output": "digital/Weekly-Spoon-Tracker.pdf",
+  "title": "Weekly Spoon Tracker",
+  "licence": "For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic",
+  "sheets": [
+    {
+      "type": "tracker",
+      "label": "A WEEK OF ENERGY · NO SCORE KEPT",
+      "intro": "Track where your energy actually goes — no scoring, no streaks, just a picture over a week. Each day, circle where you were, then jot what drained you and what put something back. An empty day is information, not a failure. Print one a week and keep it where you'll see it.",
+      "levels": ["Empty", "Low", "Some to spare", "Steady", "Full"],
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "columns": ["What drained my spoons", "What helped or put some back"],
+      "glanceTitle": "This week at a glance",
+      "glanceSub": "Count how many days landed on each. That's the whole summary — patterns show up on their own after two or three weeks.",
+      "note": "ONE SHEET A WEEK · CIRCLE, DON'T SCORE · KEEP THE OLD ONES, THEY ADD UP TO SOMETHING"
+    }
+  ]
+}
