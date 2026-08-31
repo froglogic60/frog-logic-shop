@@ -1,0 +1,44 @@
+{
+  "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
+  "updated": "2026-08-31",
+  "standing": [
+    { "time": "9am, 1pm, 6pm", "what": "Three social posts to Facebook + Instagram", "who": "robot" },
+    { "time": "11am", "what": "Announcement queue check — anything dated for today gets posted", "who": "robot" },
+    { "time": "every 2 hours", "what": "Bespoke planner orders — checks for paid questionnaires, builds and emails the PDF", "who": "robot" },
+    { "time": "noon", "what": "One Pinterest pin publishes itself (while the queue lasts)", "who": "robot" }
+  ],
+  "days": [
+    { "date": "2026-09-01", "items": [
+      { "what": "Pin: Overstimulated bottle", "who": "robot" },
+      { "what": "FB/IG announcement: The Bespoke Planner", "who": "robot" },
+      { "what": "Newsletter sends itself (1st of the month, 10am)", "who": "robot" }
+    ]},
+    { "date": "2026-09-02", "items": [ { "what": "Pin: Neurospicy tee", "who": "robot" } ]},
+    { "date": "2026-09-03", "items": [ { "what": "Pin: Chaos Gremlin mug", "who": "robot" } ]},
+    { "date": "2026-09-04", "items": [ { "what": "Pin: Neurodivergent Household print", "who": "robot" } ]},
+    { "date": "2026-09-05", "items": [ { "what": "Pin: Say What You Need → Etsy listing", "who": "robot" } ]},
+    { "date": "2026-09-06", "items": [ { "what": "Pin: Pond Guides set → Etsy listing", "who": "robot" } ]},
+    { "date": "2026-09-07", "items": [ { "what": "Pin: Low Spoons Planner → Etsy listing", "who": "robot" } ]},
+    { "date": "2026-09-08", "items": [
+      { "what": "Pin: Pocket Pond → Etsy listing", "who": "robot" },
+      { "what": "FB/IG announcement: Nine questions, one planner", "who": "robot" }
+    ]},
+    { "date": "2026-09-09", "items": [
+      { "what": "Pin: 30 Days at the Pond → Etsy listing", "who": "robot" },
+      { "what": "Pinterest queue runs dry after today — tell Claude to load the next batch", "who": "you" }
+    ]},
+    { "date": "2026-09-15", "items": [ { "what": "FB/IG announcement: For the planner graveyard", "who": "robot" } ]},
+    { "date": "2026-09-20", "items": [ { "what": "LAUNCH DAY — four posts through the day, all automatic", "who": "robot" } ]},
+    { "date": "2026-09-21", "items": [ { "what": "Launch follow-up posts (three)", "who": "robot" } ]},
+    { "date": "2026-09-22", "items": [ { "what": "Last launch post, midday", "who": "robot" } ]},
+    { "date": "2026-09-25", "items": [ { "what": "Netlify paid month ends — plan drops back to Free; deploys become precious", "who": "note" } ]},
+    { "date": "2026-10-01", "items": [ { "what": "Newsletter sends itself", "who": "robot" } ]}
+  ],
+  "whenever": [
+    "Next Etsy batch — ~27 downloads still to list; tell Claude which ones and the kit gets made",
+    "Printify tidy-up: delete the 18 abandoned silk posters, and check the My Products count",
+    "Order yourself one silk-poster sample so you've held what customers get",
+    "Decide: renumber the frog cards 51–57 to F1–F7 (cosmetic)",
+    "Decide: connect Printify → Etsy for the physical range (needs a fee-adjusted margin pass first)"
+  ]
+}
