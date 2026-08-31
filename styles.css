@@ -104,7 +104,9 @@ a{ color: var(--ink); }
 .bespoke-band{
   display:grid; grid-template-columns:minmax(230px,340px) 1fr;
   background:#5E4A8C; color:var(--cream); overflow:hidden;
+  margin-top:2em;
 }
+.bespoke-title{ font-family:var(--display); font-weight:600; font-size:1.7rem; margin:0 0 14px; }
 .bespoke-art{ aspect-ratio:1/1; }
 .bespoke-art svg{ display:block; width:100%; height:100%; }
 .bespoke-copy{ padding:34px 38px; display:flex; flex-direction:column; justify-content:center; }
