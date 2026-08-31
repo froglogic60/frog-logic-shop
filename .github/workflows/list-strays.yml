@@ -1,0 +1,45 @@
+name: List stray Printify products
+# Read-only. Lists every product in the Printify store that the shop's
+# catalogue does NOT sell — the leftovers from abandoned attempts — so Sam
+# knows exactly which ones are safe to delete by hand. Changes nothing.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  strays:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Ask Printify what exists, and compare to what the shop sells
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+        run: |
+          node -e '
+            const KEY = process.env.PRINTIFY_API_KEY, SHOP = process.env.PRINTIFY_SHOP_ID;
+            const get = async (p) => {
+              const r = await fetch("https://api.printify.com/v1" + p, { headers: { Authorization: "Bearer " + KEY } });
+              if (!r.ok) throw new Error(p + " -> " + r.status);
+              return r.json();
+            };
+            (async () => {
+              const sold = new Set(require("./netlify/functions/catalog.json")
+                .filter((x) => x.printifyProductId).map((x) => x.printifyProductId));
+              let page = 1, all = [];
+              for (;;) {
+                const d = await get(`/shops/${SHOP}/products.json?limit=50&page=${page}`);
+                all.push(...d.data);
+                if (page >= d.last_page) break;
+                page++;
+                await new Promise((r) => setTimeout(r, 300));
+              }
+              console.log(`Printify holds ${all.length} products; the shop sells ${sold.size} of them.`);
+              const strays = all.filter((p) => !sold.has(p.id));
+              console.log(`\n=== ${strays.length} NOT sold by the shop (candidates to delete) ===`);
+              for (const p of strays) console.log(`  ${p.title}   [blueprint ${p.blueprint_id}]   id ${p.id}`);
+            })().catch((e) => { console.error(e); process.exit(1); });
+          '
