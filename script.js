@@ -1741,20 +1741,36 @@ async function wirePhotos(){
     const photo = photos[card.dataset.id];
     const meta = card.querySelector('.card-meta');
     const price = card.querySelector('.card-price');
-    if(!photo || !meta || !price || card.querySelector('.card-photo')) return;
+    const stage = card.querySelector('.stage');
+    if(!photo || !meta || !price || !stage || card.querySelector('.card-photo')) return;
+
+    // The real product is the main image now (Sam's call, 31 Aug 2026 —
+    // reversing the earlier artwork-first choice). The artwork stays one tap
+    // away on the same card. Still no hover behaviour: tapping is the only
+    // thing that does anything.
+    const main = document.createElement('img');
+    main.className = 'stage-photo';
+    main.src = photo.src;
+    main.alt = photo.alt || '';
+    main.loading = 'lazy';
+    stage.appendChild(main);
 
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'card-photo';
-    const img = document.createElement('img');
-    img.src = photo.src;
-    img.alt = '';
-    img.loading = 'lazy';
-    img.width = 56; img.height = 56;
+    const thumb = document.createElement('span');
+    thumb.className = 'card-thumb';
+    thumb.style.background = stage.style.background || '';
+    const art = stage.querySelector('svg');
+    if(art) thumb.appendChild(art.cloneNode(true));
     const label = document.createElement('span');
-    label.textContent = 'See the real thing';
-    btn.append(img, label);
-    btn.addEventListener('click', () => openPhoto(photo));
+    label.textContent = 'See the artwork';
+    btn.append(thumb, label);
+    btn.addEventListener('click', () => {
+      const showingPhoto = !main.hidden;
+      main.hidden = showingPhoto;
+      label.textContent = showingPhoto ? 'See the real thing' : 'See the artwork';
+    });
     meta.insertBefore(btn, price);
   });
 }
