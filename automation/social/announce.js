@@ -72,11 +72,15 @@ async function publish(spec) {
   const imageUrl = `${RAW_BASE}/${spec.name}.jpg`;
   const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
   await waitForUrl(imageUrl);
+  // Same channel doors as the daily posts: the bare domain becomes /fb on
+  // Facebook and /ig on Instagram, so the visitor counter can tell them apart.
+  const forFacebook  = spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/fb");
+  const forInstagram = spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig");
 
   const fb = await fetch(`${GRAPH}/${process.env.FB_PAGE_ID}/photos`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ url: imageUrl, message: spec.caption, access_token: token }),
+    body: JSON.stringify({ url: imageUrl, message: forFacebook, access_token: token }),
   }).then((r) => r.json());
   if (!fb.id) throw new Error(`Facebook post failed: ${JSON.stringify(fb)}`);
   console.log("Facebook post created:", fb.id);
@@ -84,7 +88,7 @@ async function publish(spec) {
   const create = await fetch(`${GRAPH}/${process.env.IG_USER_ID}/media`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ image_url: imageUrl, caption: spec.caption, access_token: token }),
+    body: JSON.stringify({ image_url: imageUrl, caption: forInstagram, access_token: token }),
   }).then((r) => r.json());
   if (!create.id) throw new Error(`IG media container failed: ${JSON.stringify(create)}`);
   for (let i = 0; i < 20; i++) {
