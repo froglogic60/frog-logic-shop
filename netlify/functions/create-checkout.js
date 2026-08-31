@@ -257,6 +257,11 @@ export default async (req) => {
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
+    // Shows the "Add promotion code" box on the Stripe page. The codes themselves
+    // live in the Stripe dashboard (Products → Coupons), so a new offer never
+    // needs a deploy. POND10 is the newsletter welcome: 10% off, first order
+    // only, set on the code's restrictions in Stripe rather than checked here.
+    allow_promotion_codes: true,
     line_items: lines.map((l) => ({
       price_data: {
         currency: l.item.currency || "gbp",
