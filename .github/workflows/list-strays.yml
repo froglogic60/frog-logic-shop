@@ -20,13 +20,14 @@ jobs:
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
         run: |
           node -e '
-            const KEY = process.env.PRINTIFY_API_KEY, SHOP = process.env.PRINTIFY_SHOP_ID;
+            const KEY = process.env.PRINTIFY_API_KEY; let SHOP = process.env.PRINTIFY_SHOP_ID;
             const get = async (p) => {
               const r = await fetch("https://api.printify.com/v1" + p, { headers: { Authorization: "Bearer " + KEY } });
               if (!r.ok) throw new Error(p + " -> " + r.status);
               return r.json();
             };
             (async () => {
+              if (!SHOP) SHOP = (await get("/shops.json"))[0].id;
               const sold = new Set(require("./netlify/functions/catalog.json")
                 .filter((x) => x.printifyProductId).map((x) => x.printifyProductId));
               let page = 1, all = [];
