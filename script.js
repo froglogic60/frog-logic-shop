@@ -1833,8 +1833,8 @@ const DIGITAL_PRODUCTS = [
       <rect width="300" height="300" fill="url(#d3)"/>${mark()}</svg>`
   },
   {
-    num: "D4 — Spreadsheet", word: "Weekly Spoon Tracker",
-    line: "A week of energy check-ins with what drained you and what helped, plus an automatic at-a-glance summary. No streaks to keep up.",
+    num: "D4 — Printable PDF", word: "Weekly Spoon Tracker",
+    line: "One sheet a week: circle where your energy was each day, jot what drained you and what put some back, and tally it at the bottom. No streaks to keep up.",
     price: "£3.50", link: "#", bg: "#4A7A4E",
     // Seven days, none of them the same, and no streak to break.
     svg: `<svg viewBox="0 0 300 300">${grain("d4", 0.11)}
