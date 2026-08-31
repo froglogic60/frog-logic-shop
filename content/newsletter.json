@@ -1,7 +1,10 @@
 {
-  "subject": "🐸 New in the collection",
-  "heading": "New in the collection this month",
-  "body_html": "<p>Hello, and welcome back.</p><p>Replace this paragraph each month with whatever's new — a fresh piece, a restock, a small update. Keep it short; two or three paragraphs is plenty.</p>",
-  "cta_text": "See the collection",
-  "cta_url": "https://shop.froglogic.co.uk/"
+  "handwritten": true,
+  "note": "September 2026 — written by hand because the month actually had news. Delete the handwritten flag after this send so October generates itself again.",
+  "subject": "🐸 Big month at the pond (and something for you)",
+  "heading": "From the pond this month",
+  "body_html": "<p>Hello. This is usually a quiet note, but September arrives with actual news, so just this once it is a slightly longer one.</p><p><strong>The frogs have moved in.</strong> There is a whole new range — the Comfort &amp; Chaos collection. One small green frog living through seven very relatable moods: wrapped in a blanket, battery at 3%, five tabs open and none responding. Tees, mugs, a water bottle, a wall print. The typographic pieces have not gone anywhere; the shop just has two doors now.</p><p><strong>The Pond Guides are free. All of them.</strong> The 23 plain-English guides — one per neurotype, written to be handed to a relative, a partner, a manager — used to cost money. Now they cost nothing: no email address, no catch. Download, print, pass on.</p><p><strong>And the Bespoke Planner exists.</strong> Every planner you have ever bought was designed for somebody else’s brain. This one asks nine questions and gets built for yours — emailed as a printable PDF, usually within a couple of hours. £10.</p><p><strong>Yours, because you signed up:</strong> the code <strong>POND10</strong> takes 10% off your first order — type it into the promotion-code box at checkout. That was always the promise for subscribers, and now the till understands it.</p><p>That's the lot. Go gently.</p>",
+  "cta_text": "Come and meet the frogs",
+  "cta_url": "https://froglogic.co.uk/?ref=newsletter",
+  "generated": "2026-09"
 }
