@@ -2338,7 +2338,7 @@ const DIGITAL_PRODUCTS = [
     // from the answers and emails it, so the button goes to the form, not the till.
     num: "D33 — Made to order", word: "The Bespoke Planner",
     line: "Every planner you've bought was built for someone else's brain. Answer nine questions — how your day runs, how you track energy, what you need on the page — and a planner gets made for yours and emailed to you, usually within a couple of hours.",
-    price: "£10.00", link: "https://forms.gle/GJjQ8rMSoqh7ffPx5", external: "Answer the questions", bg: "#5E4A8C",
+    price: "£10.00", link: "https://forms.gle/GJjQ8rMSoqh7ffPx5", external: "Answer the questions", bg: "#5E4A8C", feature: true,
     // One page with the boxes still blank: it gets filled in for you.
     svg: `<svg viewBox="0 0 300 300">${grain("d33", 0.11)}
       <rect x="82" y="46" width="136" height="150" rx="2" fill="${CREAM}"/>
@@ -2382,10 +2382,22 @@ function fitSvgText(root){
   });
 }
 
+// The Bespoke Planner is the one made-to-order item, so it gets its own
+// stage (#bespoke in index.html) instead of a card in the grid. The entry
+// stays in DIGITAL_PRODUCTS (flagged feature: true) so the newsletter and
+// social rotations still know it exists.
+function renderBespoke(){
+  const slot = document.getElementById('bespoke-art');
+  const p = DIGITAL_PRODUCTS.find(x => x.feature);
+  if(!slot || !p) return;
+  slot.style.background = p.bg;
+  slot.innerHTML = p.svg;
+}
+
 function renderDigital(){
   const grid = document.getElementById('digital-grid');
   if(!grid) return;
-  grid.innerHTML = DIGITAL_PRODUCTS.map(p => `
+  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature).map(p => `
     <article class="card">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
@@ -2632,6 +2644,7 @@ function renderProfessional(){
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
   renderDigital();
+  renderBespoke();
   renderGuides();
   renderProfessional();
   renderFrogs();
