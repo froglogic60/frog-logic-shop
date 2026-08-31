@@ -4,5 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you.html
+Disallow: /desk.html
 
 Sitemap: https://froglogic.co.uk/sitemap.xml
