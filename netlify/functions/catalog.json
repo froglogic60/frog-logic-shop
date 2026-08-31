@@ -1306,7 +1306,7 @@
     "file": "The-Pond-Guides-Complete-Set.pdf"
   },
   {
-    "id": "51-comfort-creature",
+    "id": "f1-comfort-creature",
     "name": "Comfort Creature",
     "price": 19,
     "type": "physical",
@@ -1344,7 +1344,7 @@
     }
   },
   {
-    "id": "52-brain-full-of-tabs",
+    "id": "f2-brain-full-of-tabs",
     "name": "Brain Full of Tabs",
     "price": 19,
     "type": "physical",
@@ -1382,7 +1382,7 @@
     }
   },
   {
-    "id": "53-neurospicy",
+    "id": "f3-neurospicy",
     "name": "Neurospicy",
     "price": 19,
     "type": "physical",
@@ -1420,7 +1420,7 @@
     }
   },
   {
-    "id": "54-low-battery",
+    "id": "f4-low-battery",
     "name": "Low Battery",
     "price": 14,
     "type": "physical",
@@ -1436,7 +1436,7 @@
     }
   },
   {
-    "id": "55-chaos-gremlin",
+    "id": "f5-chaos-gremlin",
     "name": "Chaos Gremlin",
     "price": 14,
     "type": "physical",
@@ -1452,7 +1452,7 @@
     }
   },
   {
-    "id": "56-overstimulated",
+    "id": "f6-overstimulated",
     "name": "Overstimulated",
     "price": 17.75,
     "type": "physical",
@@ -1468,7 +1468,7 @@
     }
   },
   {
-    "id": "57-neurodivergent-household",
+    "id": "f7-neurodivergent-household",
     "name": "Neurodivergent Household",
     "price": 12,
     "type": "physical",
