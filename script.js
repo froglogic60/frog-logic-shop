@@ -2317,6 +2317,33 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="236" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${GOLD}" letter-spacing="0.12em">THREE SHEETS · ONE PRICE</text>
       <rect width="300" height="300" fill="url(#d32)"/>${mark()}</svg>`
   },
+  {
+    // Not a download — a questionnaire. The robot builds one planner per person
+    // from the answers and emails it, so the button goes to the form, not the till.
+    num: "D33 — Made to order", word: "The Bespoke Planner",
+    line: "Every planner you've bought was built for someone else's brain. Answer nine questions — how your day runs, how you track energy, what you need on the page — and a planner gets made for yours and emailed to you, usually within a couple of hours.",
+    price: "£10.00", link: "https://forms.gle/GJjQ8rMSoqh7ffPx5", external: "Answer the questions", bg: "#5E4A8C",
+    // One page with the boxes still blank: it gets filled in for you.
+    svg: `<svg viewBox="0 0 300 300">${grain("d33", 0.11)}
+      <rect x="82" y="46" width="136" height="150" rx="2" fill="${CREAM}"/>
+      <g fill="none" stroke="${INK}" stroke-width="1.6" opacity="0.7">
+        <rect x="96" y="62" width="12" height="12" rx="1"/>
+        <rect x="96" y="86" width="12" height="12" rx="1"/>
+        <rect x="96" y="110" width="12" height="12" rx="1"/>
+        <rect x="96" y="134" width="12" height="12" rx="1"/>
+      </g>
+      <g fill="${INK}" opacity="0.28">
+        <rect x="116" y="66" width="70" height="4"/>
+        <rect x="116" y="90" width="84" height="4"/>
+        <rect x="116" y="114" width="56" height="4"/>
+        <rect x="116" y="138" width="78" height="4"/>
+      </g>
+      <path d="M98,68 l3,3 l6,-7" fill="none" stroke="${GOLD}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="96" y="160" width="104" height="22" rx="2" fill="none" stroke="${GOLD}" stroke-width="1.6" stroke-dasharray="3 3"/>
+      <text x="150" y="228" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="${CREAM}">MADE FOR ONE BRAIN</text>
+      <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">YOURS · NINE QUESTIONS · £10</text>
+      <rect width="300" height="300" fill="url(#d33)"/>${mark()}</svg>`
+  },
 ];
 
 // Any SVG text wider than the artboard gets scaled down until it fits.
@@ -2350,7 +2377,9 @@ function renderDigital(){
         <h3>${p.word}</h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
-        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Download</button>
+        ${p.external
+          ? `<a class="btn btn-primary" href="${p.link}" target="_blank" rel="noopener">${p.external}</a>`
+          : `<button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Download</button>`}
       </div>
     </article>
   `).join('');
