@@ -1432,7 +1432,7 @@ const PRODUCTS = [
   // Card art is the real design at scale(0.3); data-no-fit stops fitSvgText
   // measuring 1000-viewBox text against a 300px budget and shrinking it.
   {
-    num: "51 — Tee", word: "Comfort Creature", frog: true,
+    num: "F1 — Tee", word: "Comfort Creature", frog: true,
     line: "Wrapped up, holding something soft, going nowhere. Regulation, wearable.",
     price: "£19.00", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
@@ -1552,7 +1552,7 @@ const PRODUCTS = [
     </g></svg>`
   },
   {
-    num: "52 — Tee", word: "Brain Full of Tabs", frog: true,
+    num: "F2 — Tee", word: "Brain Full of Tabs", frog: true,
     line: "Five tabs open, none responding. Wearing it saves explaining it.",
     price: "£19.00", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
@@ -1571,7 +1571,7 @@ const PRODUCTS = [
     </g></svg>`
   },
   {
-    num: "53 — Tee", word: "Neurospicy", frog: true,
+    num: "F3 — Tee", word: "Neurospicy", frog: true,
     line: "Mildly chaotic, highly loveable, and holding a chilli about it.",
     price: "£19.00", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
@@ -1592,7 +1592,7 @@ const PRODUCTS = [
     </g></svg>`
   },
   {
-    num: "54 — Mug", word: "Low Battery", frog: true,
+    num: "F4 — Mug", word: "Low Battery", frog: true,
     line: "Three percent. The mug does the talking until at least the second cup.",
     price: "£14.00", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
@@ -1614,7 +1614,7 @@ const PRODUCTS = [
     </g></svg>`
   },
   {
-    num: "55 — Mug", word: "Chaos Gremlin", frog: true,
+    num: "F5 — Mug", word: "Chaos Gremlin", frog: true,
     line: "The wand is decorative. The caffeine is not.",
     price: "£14.00", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
@@ -1635,7 +1635,7 @@ const PRODUCTS = [
     </g></svg>`
   },
   {
-    num: "56 — Water bottle", word: "Overstimulated", frog: true,
+    num: "F6 — Water bottle", word: "Overstimulated", frog: true,
     line: "Hands over ears, still cute. Cold water genuinely helps.",
     price: "£17.75", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
@@ -1653,7 +1653,7 @@ const PRODUCTS = [
     </g></svg>`
   },
   {
-    num: "57 — Wall print", word: "Neurodivergent Household", frog: true,
+    num: "F7 — Wall print", word: "Neurodivergent Household", frog: true,
     line: "Signage for the front hall. Est. whenever you moved in.",
     price: "£12.00", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
