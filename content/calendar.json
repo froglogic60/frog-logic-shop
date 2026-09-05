@@ -172,10 +172,42 @@
         {
           "what": "FB/IG announcement: For the planner graveyard",
           "who": "robot"
-        },
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "items": [
         {
-          "what": "Pinterest queue runs dry after today — tell Claude to load the next batch (Etsy batch two links would be ideal)",
-          "who": "you"
+          "what": "Pin: One Task, Broken Down → Etsy listing",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "items": [
+        {
+          "what": "Pin: How To Help Me → Etsy listing",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "items": [
+        {
+          "what": "Pin: Weekly Spoon Tracker → Etsy listing",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "items": [
+        {
+          "what": "Pin: Safe Foods Planner → Etsy listing",
+          "who": "robot"
         }
       ]
     },
@@ -183,8 +215,16 @@
       "date": "2026-09-20",
       "items": [
         {
+          "what": "Pin: The Joy Log → Etsy listing",
+          "who": "robot"
+        },
+        {
           "what": "LAUNCH DAY — four posts through the day, all automatic",
           "who": "robot"
+        },
+        {
+          "what": "Pinterest queue runs dry after today — tell Claude to load the next batch",
+          "who": "you"
         }
       ]
     },
@@ -226,7 +266,7 @@
     }
   ],
   "whenever": [
-    "Etsy batch two — five listings ready in your Frog Logic folder (kit, covers and PDFs); post them whenever, then paste the links here for matching pins",
+    "Etsy batch three — say the word and Claude makes the next five-listing kit (about 22 downloads still unlisted)",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
     "Order yourself one silk-poster sample so you have held what customers get",
     "Decide: connect Printify → Etsy for the physical range (needs a fee-adjusted margin pass first)",
