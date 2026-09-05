@@ -1482,5 +1482,245 @@
       "additional": 99,
       "zoneKey": "763:72"
     }
+  },
+  {
+    "id": "h1-do-not-perceive-me",
+    "name": "Do Not Perceive Me",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c41282525159670072912",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "h2-chaos-gremlin-halloween",
+    "name": "Chaos Gremlin Halloween",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c41325f2fea83b0004c4a",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "h3-social-battery-undead",
+    "name": "Social Battery: Undead",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c413a935ed1cc3c0dcd5c",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "h4-sensory-witch",
+    "name": "Sensory Witch",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c4144dd664f915805b8cd",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 349,
+      "additional": 199,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "h5-do-not-perceive-me",
+    "name": "Do Not Perceive Me",
+    "price": 14,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c41496f59811746060273",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 389,
+      "additional": 249,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "h6-chaos-gremlin-halloween",
+    "name": "Chaos Gremlin Halloween",
+    "price": 14,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c414c164919b0300617f2",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 389,
+      "additional": 249,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "h7-social-battery-undead",
+    "name": "Social Battery: Undead",
+    "price": 14,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c4150c8dc7ed3a507b184",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 389,
+      "additional": 249,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "h8-sensory-witch",
+    "name": "Sensory Witch",
+    "price": 14,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c41546f59811746060288",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 389,
+      "additional": 249,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "h9-do-not-perceive-me",
+    "name": "Do Not Perceive Me",
+    "price": 12,
+    "type": "physical",
+    "currency": "gbp",
+    "printifyProductId": "6a9c4159164919b030061805",
+    "printifyVariantId": 75271,
+    "shipping": {
+      "provider": 72,
+      "providerName": "Print Clever",
+      "first": 559,
+      "additional": 99,
+      "zoneKey": "763:72"
+    }
+  },
+  {
+    "id": "d34-halloween-stickers",
+    "name": "Halloween Stickers",
+    "price": 3,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Halloween-Stickers.pdf"
   }
 ]
