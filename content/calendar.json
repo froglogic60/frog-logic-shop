@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-08-31",
+  "updated": "2026-09-05",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -177,9 +177,9 @@
     }
   ],
   "whenever": [
+    "Sign back into Pinterest and Netlify in Chrome when you get a moment — the cache clear logged you out (GitHub's done). The pin queue keeps firing regardless",
     "Etsy batch two — five listings ready in your Frog Logic folder (kit, covers and PDFs); post them whenever, then paste the links here for matching pins",
-    "Replit: support is taking the old deployment down (account already deleted) — just confirm printify-designer.replit.app goes dark",
-    "After the Replit site is gone: tell Claude to build the Printify clean-out robot (~2,870 stray products, mostly Wombat test junk — not a hand job)",
+    "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
     "Order yourself one silk-poster sample so you have held what customers get",
     "Decide: connect Printify → Etsy for the physical range (needs a fee-adjusted margin pass first)",
     "1 Oct, Claude: remove the handwritten flag from newsletter.json so October writes itself"
