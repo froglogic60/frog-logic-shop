@@ -83,6 +83,10 @@
         {
           "what": "Pin: Pond Guides set → Etsy listing",
           "who": "robot"
+        },
+        {
+          "what": "FB/IG announcement: Halloween at the Pond is open",
+          "who": "robot"
         }
       ]
     },
@@ -344,12 +348,43 @@
         {
           "what": "Newsletter sends itself",
           "who": "robot"
+        },
+        {
+          "what": "FB/IG announcement: Social Battery: Undead",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "items": [
+        {
+          "what": "FB/IG announcement: Do Not Perceive Me",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "items": [
+        {
+          "what": "FB/IG announcement: Last orders for the 31st",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "items": [
+        {
+          "what": "Halloween — after today, retire H1–H9 + D34 (retired: true) and remove the section",
+          "who": "you"
         }
       ]
     }
   ],
   "whenever": [
-    "Halloween range: 9 products built on Printify (5 Sept); still to do — catalogue entries, site section commit, sticker PDF, one deploy, October pins + FB/IG posts",
+    "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
     "Etsy batch three — say the word and Claude makes the next five-listing kit (about 22 downloads still unlisted)",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
     "Order yourself one silk-poster sample so you have held what customers get",
