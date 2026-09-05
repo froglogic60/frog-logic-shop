@@ -109,6 +109,15 @@ a{ color: var(--ink); }
 
 /* The Bespoke Planner's own stage — one made-to-order item, deliberately
    not a card in the grid. Purple band, artwork left, words right. */
+/* Halloween at the Pond — a seasonal band, tinted lavender so it reads as a
+   pop-up rather than a permanent aisle. Removed with the section when the
+   season ends; the cards inside are the ordinary .card. */
+.collection.halloween{ background:#E9E3F0; }
+.collection.halloween .section-head{ border-bottom-color:#3E3452; }
+.collection.halloween h2{ color:#3E3452; }
+.collection.halloween .count{ color:#5E4A8C; }
+body.low-stim .collection.halloween{ background:var(--bg); }
+
 .bespoke-band{
   display:grid; grid-template-columns:minmax(230px,340px) 1fr;
   background:#5E4A8C; color:var(--cream); overflow:hidden;
