@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-08-29T17:51:00.720Z",
+  "createdAt": "2026-09-05T16:20:44.440Z",
   "results": [
     {
       "id": "f1-comfort-creature",
@@ -193,6 +193,258 @@
       "artworkScale": 1,
       "artworkFile": "nd-household.png",
       "mockup": "https://images-api.printify.com/mockup/6a931c01db8c1bf77202f6a5/75271/20213/neurodivergent-household-frog-logic-print.jpg?camera_label=front"
+    },
+    {
+      "id": "h1-do-not-perceive-me",
+      "num": "H1 — Tee",
+      "word": "Do Not Perceive Me",
+      "kind": "tee",
+      "printifyProductId": "6a9c41282525159670072912",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "do-not-perceive-me.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c41282525159670072912/12100/92570/do-not-perceive-me-frog-logic-tee.jpg?camera_label=front"
+    },
+    {
+      "id": "h2-chaos-gremlin-halloween",
+      "num": "H2 — Tee",
+      "word": "Chaos Gremlin Halloween",
+      "kind": "tee",
+      "printifyProductId": "6a9c41325f2fea83b0004c4a",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "chaos-gremlin-halloween.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c41325f2fea83b0004c4a/12100/92570/chaos-gremlin-halloween-frog-logic-tee.jpg?camera_label=front"
+    },
+    {
+      "id": "h3-social-battery-undead",
+      "num": "H3 — Tee",
+      "word": "Social Battery: Undead",
+      "kind": "tee",
+      "printifyProductId": "6a9c413a935ed1cc3c0dcd5c",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "social-battery-undead.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c413a935ed1cc3c0dcd5c/12100/92570/social-battery-undead-frog-logic-tee.jpg?camera_label=front"
+    },
+    {
+      "id": "h4-sensory-witch",
+      "num": "H4 — Tee",
+      "word": "Sensory Witch",
+      "kind": "tee",
+      "printifyProductId": "6a9c4144dd664f915805b8cd",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "sensory-witch.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c4144dd664f915805b8cd/12100/92570/sensory-witch-frog-logic-tee.jpg?camera_label=front"
+    },
+    {
+      "id": "h5-do-not-perceive-me",
+      "num": "H5 — Mug",
+      "word": "Do Not Perceive Me",
+      "kind": "mug",
+      "printifyProductId": "6a9c41496f59811746060273",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "do-not-perceive-me.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c41496f59811746060273/69010/8348/do-not-perceive-me-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "h6-chaos-gremlin-halloween",
+      "num": "H6 — Mug",
+      "word": "Chaos Gremlin Halloween",
+      "kind": "mug",
+      "printifyProductId": "6a9c414c164919b0300617f2",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "chaos-gremlin-halloween.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c414c164919b0300617f2/69010/8348/chaos-gremlin-halloween-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "h7-social-battery-undead",
+      "num": "H7 — Mug",
+      "word": "Social Battery: Undead",
+      "kind": "mug",
+      "printifyProductId": "6a9c4150c8dc7ed3a507b184",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "social-battery-undead.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c4150c8dc7ed3a507b184/69010/8348/social-battery-undead-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "h8-sensory-witch",
+      "num": "H8 — Mug",
+      "word": "Sensory Witch",
+      "kind": "mug",
+      "printifyProductId": "6a9c41546f59811746060288",
+      "printifyVariantId": 69010,
+      "price": 1400,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "sensory-witch.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c41546f59811746060288/69010/8348/sensory-witch-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "h9-do-not-perceive-me",
+      "num": "H9 — Wall print",
+      "word": "Do Not Perceive Me",
+      "kind": "print",
+      "printifyProductId": "6a9c4159164919b030061805",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 696,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "provider": "Print Clever",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "do-not-perceive-me-poster.png",
+      "mockup": "https://images-api.printify.com/mockup/6a9c4159164919b030061805/75271/20213/do-not-perceive-me-frog-logic-print.jpg?camera_label=front"
     }
   ],
   "errors": []
