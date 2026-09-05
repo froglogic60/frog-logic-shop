@@ -9,6 +9,8 @@
 //
 //   DRY_RUN=1 node printify-frogs.js    report targets, scales and prices, change nothing
 //             node printify-frogs.js    build or correct the seven products
+//   ONLY=^h   node printify-frogs.js    only pieces whose catalogue id matches (the
+//                                        Halloween range, say); other results are kept
 //
 // Safe to re-run: a product from an earlier run is found by its title and
 // corrected in place, and an image already uploaded is reused by URL, so a
@@ -28,19 +30,36 @@ const KEY = process.env.PRINTIFY_API_KEY;
 let SHOP = process.env.PRINTIFY_SHOP_ID;
 if (!KEY) { console.error("Missing PRINTIFY_API_KEY"); process.exit(1); }
 const DRY = process.env.DRY_RUN === "1";
+// Optional filter on the catalogue id (f1-comfort-creature, h3-social-battery-undead...).
+// With it set, the result file is MERGED rather than replaced, so building the
+// Halloween nine does not forget the seven frogs already recorded.
+const ONLY = process.env.ONLY ? new RegExp(process.env.ONLY, "i") : null;
 
 const RAW = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/artwork/frogs/";
 
-// Which PNG belongs to which piece. The file names predate the card numbers,
-// so this is spelled out rather than derived.
+// Which PNG belongs to which piece, keyed by the catalogue id (lowercase
+// card number + word, the same slug catalog.json and checkout use). The file
+// names predate the card numbers, so this is spelled out rather than derived.
+// The frogs were renumbered 51-57 -> F1-F7 on 4 Sept 2026; the Halloween range
+// (H1-H9) arrived 5 Sept 2026 and shares artwork across tee/mug, with a
+// full-bleed variant for the poster.
 const ARTWORK = {
-  "51-comfort-creature": "comfort-creature.png",
-  "52-brain-full-of-tabs": "brain-full-of-tabs.png",
-  "53-neurospicy": "neurospicy.png",
-  "54-low-battery": "low-battery.png",
-  "55-chaos-gremlin": "chaos-gremlin.png",
-  "56-overstimulated": "overstimulated.png",
-  "57-neurodivergent-household": "nd-household.png",
+  "f1-comfort-creature": "comfort-creature.png",
+  "f2-brain-full-of-tabs": "brain-full-of-tabs.png",
+  "f3-neurospicy": "neurospicy.png",
+  "f4-low-battery": "low-battery.png",
+  "f5-chaos-gremlin": "chaos-gremlin.png",
+  "f6-overstimulated": "overstimulated.png",
+  "f7-neurodivergent-household": "nd-household.png",
+  "h1-do-not-perceive-me": "do-not-perceive-me.png",
+  "h2-chaos-gremlin-halloween": "chaos-gremlin-halloween.png",
+  "h3-social-battery-undead": "social-battery-undead.png",
+  "h4-sensory-witch": "sensory-witch.png",
+  "h5-do-not-perceive-me": "do-not-perceive-me.png",
+  "h6-chaos-gremlin-halloween": "chaos-gremlin-halloween.png",
+  "h7-social-battery-undead": "social-battery-undead.png",
+  "h8-sensory-witch": "sensory-witch.png",
+  "h9-do-not-perceive-me": "do-not-perceive-me-poster.png",
 };
 
 // Same targets as printify-rebuild.js, checked against Printify's own titles
@@ -179,9 +198,10 @@ async function shopProducts() {
   }
 
   const { PRODUCTS } = loadSiteData();
-  const frogs = PRODUCTS.filter((p) => p.frog);
-  if (!frogs.length) { console.error("No frog pieces in script.js"); process.exit(1); }
-  console.log(`${frogs.length} frog piece(s) on the page\n`);
+  const idFor = (p) => slug(p.num.split("—")[0].trim() + "-" + p.word);
+  const frogs = PRODUCTS.filter((p) => p.frog && !p.retired && (!ONLY || ONLY.test(idFor(p))));
+  if (!frogs.length) { console.error("No frog pieces in script.js" + (ONLY ? " matching " + ONLY : "")); process.exit(1); }
+  console.log(`${frogs.length} frog piece(s) on the page${ONLY ? " (filtered by " + ONLY + ")" : ""}\n`);
 
   const existing = new Map();
   for (const prod of await shopProducts()) existing.set(prod.title, prod);
@@ -193,7 +213,7 @@ async function shopProducts() {
   for (const p of frogs) {
     const kindKey = Object.keys(KINDS).find((k) => KINDS[k].match.test(p.num));
     const kind = KINDS[kindKey];
-    const catalogId = p.num.split("—")[0].trim() + "-" + slug(p.word);
+    const catalogId = idFor(p);
     const title = kind.title(p.word);
     const price = pence(p.price);
     const art = ARTWORK[catalogId];
@@ -267,9 +287,15 @@ async function shopProducts() {
 
   if (DRY) { console.log("\nDRY_RUN — nothing was uploaded, created or changed."); return; }
 
+  let outResults = results;
+  if (ONLY && fs.existsSync(OUT)) {
+    const prev = JSON.parse(fs.readFileSync(OUT, "utf8"));
+    const built = new Set(results.map((r) => r.id));
+    outResults = [...(prev.results || []).filter((r) => !built.has(r.id)), ...results];
+  }
   fs.writeFileSync(
     OUT,
-    JSON.stringify({ createdAt: new Date().toISOString(), results, errors }, null, 2) + "\n"
+    JSON.stringify({ createdAt: new Date().toISOString(), results: outResults, errors }, null, 2) + "\n"
   );
   console.log(`\ndone: ${results.length} built, ${errors.length} failed -> printify-frogs-result.json`);
   if (errors.length) process.exit(1);
