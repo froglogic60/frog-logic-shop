@@ -293,7 +293,47 @@
           "who": "robot"
         },
         {
-          "what": "Welcome back — Pinterest queue runs dry after today; tell Claude to load the next batch",
+          "what": "Welcome back — the queue now runs to 30 Sept (Claude guide pins)",
+          "who": "note"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        {
+          "what": "Pin: The Best Way To Use Claude → Etsy",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "items": [
+        {
+          "what": "Pin: Claude for Neurodivergent Brains → Etsy",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "items": [
+        {
+          "what": "Pin: 40 Claude prompts → Etsy",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "items": [
+        {
+          "what": "Pin: I Can't Start → Etsy (ND guide)",
+          "who": "robot"
+        },
+        {
+          "what": "Pinterest queue runs dry after today — tell Claude to load October (Halloween pins)",
           "who": "you"
         }
       ]
@@ -309,6 +349,7 @@
     }
   ],
   "whenever": [
+    "Halloween range: 9 products built on Printify (5 Sept); still to do — catalogue entries, site section commit, sticker PDF, one deploy, October pins + FB/IG posts",
     "Etsy batch three — say the word and Claude makes the next five-listing kit (about 22 downloads still unlisted)",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
     "Order yourself one silk-poster sample so you have held what customers get",
