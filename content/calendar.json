@@ -114,10 +114,51 @@
         {
           "what": "Pin: 30 Days at the Pond → Etsy listing",
           "who": "robot"
-        },
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "items": [
         {
-          "what": "Pinterest queue runs dry after today — tell Claude to load the next batch",
-          "who": "you"
+          "what": "Pin: Free Autism guide",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "items": [
+        {
+          "what": "Pin: Free ADHD guide",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "items": [
+        {
+          "what": "Pin: Free AuDHD guide",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "items": [
+        {
+          "what": "Pin: Free PDA guide",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "items": [
+        {
+          "what": "Pin: Free Dyslexia guide",
+          "who": "robot"
         }
       ]
     },
@@ -125,8 +166,16 @@
       "date": "2026-09-15",
       "items": [
         {
+          "what": "Pin: Free Anxiety guide",
+          "who": "robot"
+        },
+        {
           "what": "FB/IG announcement: For the planner graveyard",
           "who": "robot"
+        },
+        {
+          "what": "Pinterest queue runs dry after today — tell Claude to load the next batch (Etsy batch two links would be ideal)",
+          "who": "you"
         }
       ]
     },
@@ -177,7 +226,6 @@
     }
   ],
   "whenever": [
-    "Sign back into Pinterest and Netlify in Chrome when you get a moment — the cache clear logged you out (GitHub's done). The pin queue keeps firing regardless",
     "Etsy batch two — five listings ready in your Frog Logic folder (kit, covers and PDFs); post them whenever, then paste the links here for matching pins",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
     "Order yourself one silk-poster sample so you have held what customers get",
