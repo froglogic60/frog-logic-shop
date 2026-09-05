@@ -71,6 +71,35 @@ const spec = {
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(spec, null, 2) + "\n");
+
+// ---- Halloween sheet (added 5 Sept 2026) ----
+// The four Halloween frogs, two of each, on one sheet. They live in PRODUCTS
+// as tees H1-H4 (mugs H5-H8 reuse the same artwork), so the tee entries are
+// the four unique designs. Same 54mm tiles as the main sheet.
+const halloween = ALL_PRODUCTS.filter((p) => p.halloween && /—\s*Tee/.test(p.num));
+if (halloween.length) {
+  const tiles = [...halloween, ...halloween].map((p) => ({ name: p.word, bg: p.bg, svg: p.svg }));
+  const hspec = {
+    id: "halloween-stickers",
+    output: "digital/Halloween-Stickers.pdf",
+    title: "Halloween at the Pond — Stickers",
+    subtitle: "PRINT THEM YOURSELF",
+    licence: spec.licence,
+    sheets: [{
+      type: "tiles",
+      label: "HALLOWEEN 2026",
+      intro:
+        "The four Halloween frogs as stickers, two of each, to print at home. Sticker paper from any " +
+        "stationers works, and so does ordinary paper with a glue stick. Cut along the dashed lines — or " +
+        "round the corners, which makes them last longer on a water bottle.",
+      note: "PRINT AT 100% · DO NOT SCALE TO FIT · EACH SQUARE IS 54 × 54 MM",
+      tiles,
+    }],
+  };
+  const HOUT = path.join(__dirname, "products", "halloween-stickers.json");
+  fs.writeFileSync(HOUT, JSON.stringify(hspec, null, 2) + "\n");
+  console.log(`${halloween.length} Halloween designs, two of each -> ${path.relative(path.join(__dirname, "../.."), HOUT)}`);
+}
 console.log(
   `${stickers.length} sticker designs across ${pages.length} sheet(s) -> ${path.relative(path.join(__dirname, "../.."), OUT)}`
 );
