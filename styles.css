@@ -33,8 +33,16 @@ body{
 
 /* Low-stimulation mode: flattens motion, texture, and the loudest colour */
 body.low-stim *{ transition:none !important; animation:none !important; }
+body.low-stim{ scroll-behavior:auto; }
 body.low-stim .card:hover{ transform:none !important; box-shadow:none !important; }
-body.low-stim .stage{ filter: saturate(0.55) brightness(1.04); }
+/* Turn the colour down properly — the old saturate(0.55) on artwork alone was
+   near-invisible once real product photos led the cards. This covers every
+   image on the page and is meant to be an obvious, restful change. */
+body.low-stim .stage,
+body.low-stim .stage-photo,
+body.low-stim .card-thumb,
+body.low-stim .bespoke-band{ filter: saturate(0.3) contrast(0.96) brightness(1.03); }
+body.low-stim .hero h1 em{ color:inherit; font-style:normal; }
 
 h1,h2,h3{ font-family: var(--display); font-weight:600; line-height:1.08; margin:0 0 .5em; letter-spacing:-0.02em; }
 h1{ font-size: clamp(2.6rem, 6vw, 4.6rem); }
@@ -119,7 +127,6 @@ a{ color: var(--ink); }
 }
 .bespoke-copy .btn-primary{ background:var(--cream); color:var(--ink); }
 .bespoke-note{ font-size:.85rem; opacity:.75 !important; margin-top:14px !important; }
-body.low-stim .bespoke-art{ filter: saturate(0.55) brightness(1.04); }
 @media (max-width:720px){
   .bespoke-band{ grid-template-columns:1fr; }
   .bespoke-art{ width:min(340px, calc(100% - 52px)); margin:26px auto 0; }
