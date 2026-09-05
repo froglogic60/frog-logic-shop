@@ -223,14 +223,18 @@
           "who": "robot"
         },
         {
-          "what": "Pinterest queue runs dry after today — tell Claude to load the next batch",
-          "who": "you"
+          "what": "Sam on holiday 20–26 Sept — everything below runs itself",
+          "who": "note"
         }
       ]
     },
     {
       "date": "2026-09-21",
       "items": [
+        {
+          "what": "Pin: Free Dyspraxia guide",
+          "who": "robot"
+        },
         {
           "what": "Launch follow-up posts (three)",
           "who": "robot"
@@ -241,7 +245,29 @@
       "date": "2026-09-22",
       "items": [
         {
+          "what": "Pin: Free OCD guide",
+          "who": "robot"
+        },
+        {
           "what": "Last launch post, midday",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "items": [
+        {
+          "what": "Pin: Free Sensory Differences guide",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "items": [
+        {
+          "what": "Pin: Free Misophonia guide",
           "who": "robot"
         }
       ]
@@ -250,8 +276,25 @@
       "date": "2026-09-25",
       "items": [
         {
+          "what": "Pin: Free Alexithymia guide",
+          "who": "robot"
+        },
+        {
           "what": "Netlify paid month ends — plan drops back to Free; deploys become precious",
           "who": "note"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "items": [
+        {
+          "what": "Pin: Free Auditory Processing guide",
+          "who": "robot"
+        },
+        {
+          "what": "Welcome back — Pinterest queue runs dry after today; tell Claude to load the next batch",
+          "who": "you"
         }
       ]
     },
