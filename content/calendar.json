@@ -335,10 +335,6 @@
         {
           "what": "Pin: I Can't Start → Etsy (ND guide)",
           "who": "robot"
-        },
-        {
-          "what": "Pinterest queue runs dry after today — tell Claude to load October (Halloween pins)",
-          "who": "you"
         }
       ]
     },
@@ -352,6 +348,49 @@
         {
           "what": "FB/IG announcement: Social Battery: Undead",
           "who": "robot"
+        },
+        {
+          "what": "Pin: Halloween at the Pond (all four costumes) → #halloween",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "items": [
+        {
+          "what": "Pin: Social Battery: Undead → #halloween",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "items": [
+        {
+          "what": "Pin: Chaos Gremlin, Halloween Edition → #halloween (noon)",
+          "who": "robot"
+        },
+        {
+          "what": "Pin: Halloween Sticker Sheet → #halloween (6pm)",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "items": [
+        {
+          "what": "Pin: Do Not Perceive Me → #halloween (noon)",
+          "who": "robot"
+        },
+        {
+          "what": "Pin: Sensory Witch → #halloween (6pm)",
+          "who": "robot"
+        },
+        {
+          "what": "Pinterest queue runs dry after today — tell Claude to load more (Pinterest only lets us schedule 30 days ahead)",
+          "who": "you"
         }
       ]
     },
