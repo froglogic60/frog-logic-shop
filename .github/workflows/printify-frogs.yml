@@ -17,6 +17,10 @@ on:
         description: "Report what would be built, change nothing"
         type: boolean
         default: true
+      only:
+        description: "Only pieces whose catalogue id matches this pattern (e.g. ^h for the Halloween range). Blank = all frogs."
+        type: string
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -34,6 +38,7 @@ jobs:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+          ONLY: ${{ inputs.only }}
       - name: Commit the result file
         if: always()
         run: |
