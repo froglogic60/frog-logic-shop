@@ -2567,6 +2567,21 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">YOURS · NINE QUESTIONS · £10</text>
       <rect width="300" height="300" fill="url(#d33)"/>${mark()}</svg>`
   },
+  {
+    num: "D34 — Printable PDF", word: "Halloween Stickers",
+    line: "The four Halloween frogs as stickers, two of each, to print at home. One sheet, 54mm squares, cut along the dashed lines.",
+    price: "£3.00", link: "#", bg: "#3E3452", halloween: true,
+    // Same dashed-square grid as the main sticker sheet, in Halloween purple.
+    svg: `<svg viewBox="0 0 300 300">${grain("d34", 0.1)}
+      <g stroke="${CREAM}" stroke-width="1" stroke-dasharray="4 4" opacity="0.55" fill="none">
+        <rect x="42" y="52" width="66" height="66"/><rect x="117" y="52" width="66" height="66"/><rect x="192" y="52" width="66" height="66"/>
+        <rect x="42" y="127" width="66" height="66"/><rect x="192" y="127" width="66" height="66"/>
+      </g>
+      <g fill="${GOLD}"><path d="M 150 152 C 140 138 120 134 98 144 C 106 156 112 158 120 156 C 124 164 132 166 140 162 C 144 166 156 166 160 162 C 168 166 176 164 180 156 C 188 158 194 156 202 144 C 180 134 160 138 150 152 Z"/></g>
+      <text x="150" y="228" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="${CREAM}">HALLOWEEN STICKERS</text>
+      <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOUR FROGS · TWO OF EACH · ONE SHEET</text>
+      <rect width="300" height="300" fill="url(#d34)"/>${mark()}</svg>`
+  },
 ];
 
 // Any SVG text wider than the artboard gets scaled down until it fits.
