@@ -27,6 +27,150 @@ function caption(text, fill){
     font-size="8.5" fill="${fill}" opacity="0.8" letter-spacing="0.18em">${text}</text>`;
 }
 
+// Halloween 2026 artwork, drawn once and shared: each design is sold as a tee
+// and a mug (and the ghost as a print), so the SVG lives here and the PRODUCTS
+// entries below point at it rather than carrying nine copies.
+const H_ART = {
+  ghost: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="540" r="320" fill="#DED6E6"/>
+  <text x="500" y="128" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="84" fill="#3E3452">Do Not Perceive Me</text>
+  <g transform="translate(180 250) scale(0.9)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#3E3452"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g><g transform="translate(830 210) scale(1.1)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#3E3452"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g><g transform="translate(790 330) scale(0.7)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#3E3452"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g>
+  <path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g>
+  <!-- the sheet -->
+  <path fill-rule="evenodd" d="M 500 196
+     C 366 196 292 300 288 430 C 286 520 300 600 296 700 C 294 760 292 790 296 808
+     C 314 826 336 800 358 812 C 380 830 402 802 424 814 C 446 832 468 804 500 816
+     C 532 804 554 832 576 814 C 598 802 620 830 642 812 C 664 800 686 826 704 808
+     C 708 790 706 760 704 700 C 700 600 714 520 712 430 C 708 300 634 196 500 196 Z
+     M 398 300 m -50 0 a 50 50 0 1 0 100 0 a 50 50 0 1 0 -100 0 Z
+     M 602 300 m -50 0 a 50 50 0 1 0 100 0 a 50 50 0 1 0 -100 0 Z"
+     fill="#FFFFFF" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/>
+  <!-- frog eyes through the holes -->
+  <circle cx="398" cy="300" r="50" fill="#8FB784"/><circle cx="602" cy="300" r="50" fill="#8FB784"/>
+  <circle cx="398" cy="300" r="34" fill="#FFFFFF" stroke="#22331F" stroke-width="10"/><circle cx="402" cy="300" r="14" fill="#22331F"/><circle cx="407" cy="295" r="5" fill="#FFFFFF"/>
+  <circle cx="602" cy="300" r="34" fill="#FFFFFF" stroke="#22331F" stroke-width="10"/><circle cx="606" cy="300" r="14" fill="#22331F"/><circle cx="611" cy="295" r="5" fill="#FFFFFF"/>
+  <!-- little arm lumps under the sheet -->
+  <path d="M 300 560 q -30 40 -6 80" fill="none" stroke="#22331F" stroke-width="8" stroke-linecap="round" opacity="0.35"/>
+  <path d="M 700 560 q 30 40 6 80" fill="none" stroke="#22331F" stroke-width="8" stroke-linecap="round" opacity="0.35"/>
+  <text x="500" y="922" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="66" fill="#3E3452">costume: same as every other day</text>
+    </g></svg>`,
+  gremlin: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="530" r="320" fill="#F3DFC4"/>
+  <text x="500" y="120" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="72" fill="#22331F">Chaos Gremlin Energy</text>
+  <!-- bat wings behind -->
+  <g fill="#3E3452" stroke="#22331F" stroke-width="11" stroke-linejoin="round">
+    <path d="M 300 520 C 240 470 170 470 110 520 C 150 520 170 540 176 570 C 200 550 230 552 250 580 C 266 556 292 552 316 570 C 312 548 304 532 300 520 Z"/>
+    <path d="M 700 520 C 760 470 830 470 890 520 C 850 520 830 540 824 570 C 800 550 770 552 750 580 C 734 556 708 552 684 570 C 688 548 696 532 700 520 Z"/>
+  </g>
+  <g transform="rotate(-7 500 700)">
+    <path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="404" cy="300" r="19" fill="#22331F"/><circle cx="411" cy="293" r="7" fill="#FFFFFF"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="608" cy="300" r="19" fill="#22331F"/><circle cx="615" cy="293" r="7" fill="#FFFFFF"/><circle cx="330" cy="440" r="36" fill="#F08F87"/><circle cx="670" cy="440" r="36" fill="#F08F87"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 450 424 Q 500 478 550 424 Q 500 448 450 424 Z" fill="#7A3A3A" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 678 560 C 714 548 736 508 740 458 C 743 420 732 386 708 366 C 694 354 678 360 674 376 C 686 408 688 446 680 484 C 674 512 668 540 658 556 C 664 564 672 562 678 560 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 688 330 C 668 338 660 360 672 374 C 670 388 684 398 698 394 C 702 406 720 408 728 396 C 740 394 746 380 740 368 C 732 346 710 322 688 330 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+  </g>
+  <!-- pumpkin held aloft -->
+  <g transform="translate(700 268) rotate(8)">
+    <path d="M -6 -66 C -8 -84 6 -96 18 -92 C 10 -80 6 -70 8 -58 Z" fill="#5E7A2E" stroke="#22331F" stroke-width="8" stroke-linejoin="round"/>
+    <ellipse cx="0" cy="0" rx="74" ry="60" fill="#E07B39" stroke="#22331F" stroke-width="11"/>
+    <path d="M -26 -56 C -40 -20 -40 20 -26 56 M 26 -56 C 40 -20 40 20 26 56" fill="none" stroke="#22331F" stroke-width="7" opacity="0.5"/>
+    <path d="M -34 -14 l 18 12 l -18 10 Z M 34 -14 l -18 12 l 18 10 Z" fill="#22331F"/>
+    <path d="M -34 22 Q 0 48 34 22 L 26 32 L 14 26 L 0 36 L -14 26 L -26 32 Z" fill="#22331F"/>
+  </g>
+  <path d="M 300 178 L 306.16 193.84 L 322 200 L 306.16 206.16 L 300 222 L 293.84 206.16 L 278 200 L 293.84 193.84 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 780 404 L 784.48 415.52 L 796 420 L 784.48 424.48 L 780 436 L 775.52 424.48 L 764 420 L 775.52 415.52 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 230 316 L 233.92 326.08 L 244 330 L 233.92 333.92 L 230 344 L 226.08 333.92 L 216 330 L 226.08 326.08 Z" fill="#E8952C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><g transform="translate(160 240) scale(0.8)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#22331F"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g><g transform="translate(860 300) scale(0.7)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#22331F"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g>
+  <text x="500" y="920" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="66" fill="#22331F">peak season</text>
+    </g></svg>`,
+  undead: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="540" r="320" fill="#DAD3E3"/>
+  <text x="500" y="112" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="74" fill="#3E3452">Social Battery: Undead</text>
+  <!-- moon -->
+  <path d="M 812 250 a 62 62 0 1 1 -40 -110 a 50 50 0 1 0 40 110 Z" fill="#E8B63C" stroke="#22331F" stroke-width="9" stroke-linejoin="round"/>
+  <g transform="translate(330 190) scale(0.8)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#3E3452"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g><g transform="translate(390 240) scale(0.55)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#3E3452"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g><g transform="translate(720 330) scale(0.7)"><path d="M 0 0 C -10 -14 -30 -18 -52 -8 C -44 4 -38 6 -30 4 C -26 12 -18 14 -10 10 C -6 14 6 14 10 10 C 18 14 26 12 30 4 C 38 6 44 4 52 -8 C 30 -18 10 -14 0 0 Z" fill="#3E3452"/><circle cx="-4" cy="-2" r="2.4" fill="#F4EFE3"/><circle cx="4" cy="-2" r="2.4" fill="#F4EFE3"/></g>
+  <!-- headstone -->
+  <g transform="translate(232 560) rotate(-4)">
+    <path d="M -90 180 L -90 -40 A 90 90 0 0 1 90 -40 L 90 180 Z" fill="#B9B3C4" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="52" fill="#3E3452">R.I.P.</text>
+    <text x="0" y="40" text-anchor="middle" font-family="Space Mono, monospace" font-weight="bold" font-size="20" fill="#3E3452">SOCIAL</text>
+    <text x="0" y="66" text-anchor="middle" font-family="Space Mono, monospace" font-weight="bold" font-size="20" fill="#3E3452">BATTERY</text>
+    <path d="M -50 100 l 100 0" stroke="#3E3452" stroke-width="5" opacity="0.5"/>
+    <path d="M -30 -60 l 14 20 M 40 -70 l -10 22" stroke="#22331F" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <!-- grave mound + grass -->
+  <path d="M 90 790 C 200 740 420 740 560 760 C 700 776 820 770 920 790 Z" fill="#8C7A5A" stroke="#22331F" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M 150 760 l 8 -26 l 10 26 M 300 748 l 8 -26 l 10 26 M 860 774 l 8 -26 l 10 26" fill="none" stroke="#5E7A2E" stroke-width="8" stroke-linecap="round"/>
+  <g transform="translate(20 -10) rotate(4 500 700)">
+    <path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#D2D8C6" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="398" cy="312" r="19" fill="#22331F"/><path d="M 348 300 A 50 50 0 0 1 448 300 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="312" r="19" fill="#22331F"/><path d="M 552 300 A 50 50 0 0 1 652 300 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="12"/><circle cx="330" cy="440" r="36" fill="#C9A9A5"/><circle cx="670" cy="440" r="36" fill="#C9A9A5"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 462 440 L 538 440" fill="none" stroke="#22331F" stroke-width="12" stroke-linecap="round"/>
+    <!-- stitches -->
+    <path d="M 456 342 l 60 -12 M 470 330 l 4 20 M 492 326 l 4 20" fill="none" stroke="#22331F" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 560 470 l 60 -18 M 572 458 l 6 20 M 592 452 l 6 20 M 612 446 l 6 20" fill="none" stroke="#22331F" stroke-width="7" stroke-linecap="round"/>
+    <!-- mummy wrap across the belly -->
+    <path d="M 358 600 C 420 580 580 580 642 600" fill="none" stroke="#F4EFE3" stroke-width="34" stroke-linecap="round"/>
+    <path d="M 358 600 C 420 580 580 580 642 600" fill="none" stroke="#22331F" stroke-width="9" stroke-dasharray="16 12" stroke-linecap="round" opacity="0.55"/>
+    <path d="M 372 664 C 430 690 570 690 628 664" fill="none" stroke="#F4EFE3" stroke-width="30" stroke-linecap="round"/>
+    <path d="M 372 664 C 430 690 570 690 628 664" fill="none" stroke="#22331F" stroke-width="9" stroke-dasharray="16 12" stroke-linecap="round" opacity="0.55"/>
+    <g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 676 540 C 720 528 790 520 850 522 C 872 523 884 536 882 552 C 880 568 866 576 846 576 C 792 576 730 584 690 598 C 672 604 660 592 660 574 C 660 558 664 546 676 540 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 862 528 C 884 524 900 536 902 552 C 904 566 894 578 880 580 C 878 592 866 598 856 592 C 846 600 832 596 830 584 C 826 570 834 556 846 546 C 850 538 856 530 862 528 Z" fill="#9BAA8A" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/>
+    <!-- bandage trailing off the arm -->
+    <path d="M 870 590 C 890 620 880 660 900 690" fill="none" stroke="#F4EFE3" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 870 590 C 890 620 880 660 900 690" fill="none" stroke="#22331F" stroke-width="6" stroke-dasharray="12 10" stroke-linecap="round" opacity="0.55"/>
+  </g>
+  <!-- battery, empty -->
+  <g transform="translate(96 208)">
+    <text x="60" y="-30" text-anchor="middle" font-family="Space Mono, monospace" font-weight="bold" font-size="28" fill="#3E3452">Battery 0%</text>
+    <rect x="-20" y="0" width="160" height="72" rx="16" fill="#F4EFE3" stroke="#3E3452" stroke-width="11"/>
+    <rect x="146" y="20" width="18" height="32" rx="6" fill="#3E3452"/>
+    <path d="M 40 14 l -14 24 h 22 l -12 22" fill="none" stroke="#C94436" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="500" y="922" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="64" fill="#3E3452">still coming to your party. briefly.</text>
+    </g></svg>`,
+  witch: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
+<rect width="1000" height="1000" fill="#F4EFE3"/>
+  <circle cx="500" cy="540" r="320" fill="#E3DCEC"/>
+  <text x="500" y="76" text-anchor="middle" font-family="Fraunces" font-weight="600" font-size="72" fill="#3E3452">Sensory Witch</text>
+  <path d="M 272 468 C 272 400 301 366 336 351 C 319 296 336 247 391 244
+ C 439 242 462 276 458 314 C 478 303 522 303 542 314 C 538 276 561 242 609 244
+ C 664 247 681 296 664 351 C 699 366 728 400 728 468 C 728 517 706 550 678 567
+ C 717 590 741 624 749 669 C 757 717 735 753 690 759 C 638 767 560 771 500 771
+ C 440 771 362 767 310 759 C 265 753 243 717 251 669 C 259 624 283 590 322 567
+ C 294 550 272 517 272 468 Z" fill="#8FB784" stroke="#22331F" stroke-width="13" stroke-linejoin="round"/><ellipse cx="500" cy="620" rx="145" ry="115" fill="#C9DCB4" stroke="#22331F" stroke-width="11"/><circle cx="398" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="398" cy="300" r="19" fill="#22331F"/><circle cx="405" cy="293" r="7" fill="#FFFFFF"/><circle cx="602" cy="300" r="50" fill="#FFFFFF" stroke="#22331F" stroke-width="12"/><circle cx="602" cy="300" r="19" fill="#22331F"/><circle cx="609" cy="293" r="7" fill="#FFFFFF"/><circle cx="330" cy="440" r="36" fill="#F08F87"/><circle cx="670" cy="440" r="36" fill="#F08F87"/><circle cx="478" cy="392" r="6" fill="#22331F"/><circle cx="522" cy="392" r="6" fill="#22331F"/><path d="M 458 428 Q 500 460 542 428" fill="none" stroke="#22331F" stroke-width="12" stroke-linecap="round"/><g transform="translate(0 16)"><path d="M 340 752 C 322 756 314 770 324 780 C 328 790 342 792 350 786 C 356 794 370 794 376 786 C 386 790 398 784 398 772 C 398 758 382 749 364 748 C 356 748 347 749 340 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/><path d="M 660 752 C 678 756 686 770 676 780 C 672 790 658 792 650 786 C 644 794 630 794 624 786 C 614 790 602 784 602 772 C 602 758 618 749 636 748 C 644 748 653 749 660 752 Z" fill="#8FB784" stroke="#22331F" stroke-width="11" stroke-linejoin="round"/></g><path d="M 320 556 C 282 572 262 610 272 650 C 280 690 306 716 344 726 C 362 730 378 724 382 710 C 386 698 380 686 368 680 C 348 668 336 648 334 622 C 332 600 336 578 348 562 C 340 552 328 552 320 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/><path d="M 680 556 C 718 572 738 610 728 650 C 720 690 694 716 656 726 C 638 730 622 724 618 710 C 614 698 620 686 632 680 C 652 668 664 648 666 622 C 668 600 664 578 652 562 C 660 552 672 552 680 556 Z" fill="#8FB784" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/>
+  <!-- headphones -->
+  <path d="M 318 380 C 300 260 380 190 500 190 C 620 190 700 260 682 380" fill="none" stroke="#22331F" stroke-width="22" stroke-linecap="round"/>
+  <rect x="270" y="360" width="76" height="120" rx="30" fill="#5E4A8C" stroke="#22331F" stroke-width="12"/>
+  <rect x="654" y="360" width="76" height="120" rx="30" fill="#5E4A8C" stroke="#22331F" stroke-width="12"/>
+  <rect x="292" y="384" width="32" height="72" rx="14" fill="#7A66A8" opacity="0.8"/>
+  <rect x="676" y="384" width="32" height="72" rx="14" fill="#7A66A8" opacity="0.8"/>
+  <!-- witch hat sits on the band -->
+  <g transform="translate(0 -16)">
+    <path d="M 300 236 C 380 210 620 210 700 236 C 720 244 720 262 700 268 C 620 292 380 292 300 268 C 280 262 280 244 300 236 Z" fill="#3E3452" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M 366 246 C 400 178 450 130 526 104 C 548 96 566 108 552 126 C 532 150 580 154 610 162 C 640 160 650 200 634 246 Z" fill="#3E3452" stroke="#22331F" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M 386 240 C 420 226 580 226 614 240" fill="none" stroke="#E07B39" stroke-width="18"/>
+    <rect x="474" y="212" width="52" height="38" rx="6" fill="#E8B63C" stroke="#22331F" stroke-width="8"/>
+  </g>
+  <!-- tiny cauldron with quiet steam -->
+  <g transform="translate(818 700)">
+    <path d="M -60 -10 C -70 40 -30 74 0 74 C 30 74 70 40 60 -10 Z" fill="#3E3452" stroke="#22331F" stroke-width="10" stroke-linejoin="round"/>
+    <ellipse cx="0" cy="-10" rx="66" ry="18" fill="#5E4A8C" stroke="#22331F" stroke-width="10"/>
+    <path d="M -46 -40 q 14 -20 0 -40 M -8 -44 q 16 -24 0 -48 M 34 -40 q 14 -20 0 -40" fill="none" stroke="#22331F" stroke-width="7" stroke-linecap="round" opacity="0.4"/>
+    <text x="0" y="-100" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="40" fill="#3E3452">shh</text>
+  </g>
+  <path d="M 190 282 L 195.04 294.96 L 208 300 L 195.04 305.04 L 190 318 L 184.96 305.04 L 172 300 L 184.96 294.96 Z" fill="#E8B63C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 240 706 L 243.92 716.08 L 254 720 L 243.92 723.92 L 240 734 L 236.08 723.92 L 226 720 L 236.08 716.08 Z" fill="#E8B63C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/><path d="M 800 238 L 803.36 246.64 L 812 250 L 803.36 253.36 L 800 262 L 796.64 253.36 L 788 250 L 796.64 246.64 Z" fill="#E8B63C" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/>
+  <text x="500" y="922" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="66" fill="#3E3452">brewing quiet since forever</text>
+    </g></svg>`,
+};
+
 const PRODUCTS = [
   {
     num: "01 — Tee", word: "Overstimulated",
@@ -1670,6 +1814,69 @@ const PRODUCTS = [
   <text x="500" y="856" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" letter-spacing="6" fill="#F4EFE3" opacity="0.85">EST. WHENEVER WE MOVED IN</text>
     </g></svg>`
   },
+
+  // ===== Halloween at the Pond (2026) =====
+  //
+  // Four seasonal costumes on the same frog, approved 5 Sept 2026. Each design
+  // is sold as a tee (H1-H4) and a mug (H5-H8); the ghost is also a print (H9).
+  // halloween: true routes them to their own section above the frogs; frog:
+  // true keeps them in the same Printify pipeline as F1-F7. When the season is
+  // over, retired: true on each entry takes them off the page without losing
+  // the artwork.
+  {
+    num: "H1 — Tee", word: "Do Not Perceive Me", frog: true, halloween: true,
+    line: "A ghost sheet with eye holes. Costume: same as every other day.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.ghost
+  },
+  {
+    num: "H2 — Tee", word: "Chaos Gremlin Halloween", frog: true, halloween: true,
+    line: "The gremlin has wings now. Nobody sanctioned this.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.gremlin
+  },
+  {
+    num: "H3 — Tee", word: "Social Battery: Undead", frog: true, halloween: true,
+    line: "Rising from the grave marked Social Battery. Attending briefly.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.undead
+  },
+  {
+    num: "H4 — Tee", word: "Sensory Witch", frog: true, halloween: true,
+    line: "Witch hat over the headphones. Brewing quiet since forever.",
+    price: "£19.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.witch
+  },
+  {
+    num: "H5 — Mug", word: "Do Not Perceive Me", frog: true, halloween: true,
+    line: "The only costume that also works in a meeting. Eyes out, everything else optional.",
+    price: "£14.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.ghost
+  },
+  {
+    num: "H6 — Mug", word: "Chaos Gremlin Halloween", frog: true, halloween: true,
+    line: "Bat wings, a pumpkin, and a coffee. Peak season for the gremlin.",
+    price: "£14.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.gremlin
+  },
+  {
+    num: "H7 — Mug", word: "Social Battery: Undead", frog: true, halloween: true,
+    line: "Zero percent, bandaged, still turning up. The mug does the talking.",
+    price: "£14.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.undead
+  },
+  {
+    num: "H8 — Mug", word: "Sensory Witch", frog: true, halloween: true,
+    line: "The cauldron says shh. Mornings, in a mug.",
+    price: "£14.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.witch
+  },
+  {
+    num: "H9 — Wall print", word: "Do Not Perceive Me", frog: true, halloween: true,
+    line: "For the front door on the 31st, and the bedroom door the other 364.",
+    price: "£12.00", link: "#", bg: "#F4EFE3",
+    svg: H_ART.ghost
+  },
 ];
 
 function renderProducts(){
@@ -1737,7 +1944,7 @@ async function wirePhotos(){
     photos = await res.json();
   } catch (err) { return; }
 
-  document.querySelectorAll('#product-grid .card[data-id], #frogs-grid .card[data-id]').forEach(card => {
+  document.querySelectorAll('#product-grid .card[data-id], #frogs-grid .card[data-id], #halloween-grid .card[data-id]').forEach(card => {
     const photo = photos[card.dataset.id];
     const meta = card.querySelector('.card-meta');
     const price = card.querySelector('.card-price');
@@ -2510,10 +2717,33 @@ function renderGuides(){
 }
 
 
+// The seasonal range gets its own band above the frogs (#halloween in
+// index.html). Same card, same checkout, same photo swap — only the section
+// differs, so the whole thing can be switched off with retired: true later.
+function renderHalloween(){
+  const grid = document.getElementById('halloween-grid');
+  const section = document.getElementById('halloween');
+  if(!grid) return;
+  const items = PRODUCTS.filter(p => p.halloween && !p.retired);
+  if(!items.length){ if(section) section.hidden = true; return; }
+  grid.innerHTML = items.map(p => `
+    <article class="card" data-id="${checkoutId(p.num, p.word)}">
+      <div class="stage" style="background:${p.bg}">${p.svg}</div>
+      <div class="card-meta">
+        <p class="card-num">${p.num}</p>
+        <h3>${p.word}</h3>
+        <p class="card-line">${p.line}</p>
+        <p class="card-price">${p.price}</p>
+        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="physical">Get this piece</button>
+      </div>
+    </article>
+  `).join('');
+}
+
 function renderFrogs(){
   const grid = document.getElementById('frogs-grid');
   if(!grid) return;
-  grid.innerHTML = PRODUCTS.filter(p => p.frog && !p.retired).map(p => `
+  grid.innerHTML = PRODUCTS.filter(p => p.frog && !p.halloween && !p.retired).map(p => `
     <article class="card" data-id="${checkoutId(p.num, p.word)}">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
@@ -2648,6 +2878,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderGuides();
   renderProfessional();
   renderFrogs();
+  renderHalloween();
   // fonts load asynchronously, so measure once they're ready
   if(document.fonts && document.fonts.ready){
     document.fonts.ready.then(() => fitSvgText(document));
