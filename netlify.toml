@@ -61,3 +61,39 @@
   from = "/etsy"
   to = "/?ref=etsy"
   status = 302
+
+# ---- Old Replit site, laid to rest ----
+# Google Search Console (7 Sept 2026) still held ~2,700 URLs from the Replit
+# shop that lived on this domain before 24 Aug 2026: /products/<printify id>,
+# /products, /policies/terms, /api/sitemap.xml. They all 404 here, and every
+# report Google sends about them is noise. A permanent redirect tells Google
+# the pages moved rather than broke, so it drops them faster and passes any
+# link value to the live page. Nothing on the current site uses these paths.
+[[redirects]]
+  from = "/products/*"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/products"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/collections/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/policies/terms"
+  to = "/terms.html"
+  status = 301
+[[redirects]]
+  from = "/policies/privacy"
+  to = "/privacy.html"
+  status = 301
+[[redirects]]
+  from = "/policies/*"
+  to = "/returns.html"
+  status = 301
+[[redirects]]
+  from = "/api/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
