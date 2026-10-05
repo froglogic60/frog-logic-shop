@@ -50,12 +50,37 @@ jobs:
             }
             if (!notes.length) { console.log("Printify check: nothing changed"); process.exit(0); }
             const day = now.checkedAt.slice(0, 10);
+            fs.writeFileSync("/tmp/notes.json", JSON.stringify({ day, notes }));
             const cal = JSON.parse(fs.readFileSync("content/calendar.json", "utf8"));
             cal.whenever = (cal.whenever || []).filter(w => !w.startsWith("Printify check " + day));
             cal.whenever.unshift("Printify check " + day + " — " + notes.join("; ") + ". Ask Claude what to do about it");
             cal.updated = day;
             fs.writeFileSync("content/calendar.json", JSON.stringify(cal, null, 2) + "\n");
             console.log("Desk note added:\n" + notes.join("\n"));
+          '
+      - name: Email Sam if anything changed
+        if: always()
+        # Only runs when the step above left /tmp/notes.json, i.e. something
+        # changed. Same Resend sender the planner and newsletter use.
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+        run: |
+          test -f /tmp/notes.json || { echo "nothing to email"; exit 0; }
+          node -e '
+            const fs = require("fs");
+            const { day, notes } = JSON.parse(fs.readFileSync("/tmp/notes.json", "utf8"));
+            const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+            const html = "<div style=\"font-family:-apple-system,sans-serif;max-width:560px;margin:0 auto;color:#1F3229;\">"
+              + "<h1 style=\"font-size:20px;\">Printify changed something (" + day + ")</h1>"
+              + "<ul>" + notes.map(n => "<li>" + esc(n) + "</li>").join("") + "</ul>"
+              + "<p>Nothing has been altered on the shop. The same note is on the Desk. Tell Claude what to do about it.</p>"
+              + "<p style=\"margin-top:28px;font-size:12px;color:#5a6b5f;\">Frog Logic robot · Monday Printify check</p></div>";
+            fetch("https://api.resend.com/emails", {
+              method: "POST",
+              headers: { Authorization: "Bearer " + process.env.RESEND_API_KEY, "Content-Type": "application/json" },
+              body: JSON.stringify({ from: process.env.FROM_EMAIL, to: "hello@froglogic.co.uk", subject: "Printify check: " + notes.length + " thing(s) changed", html }),
+            }).then(async r => { if (!r.ok) throw new Error("Resend " + r.status + " " + (await r.text()).slice(0, 200)); console.log("emailed"); });
           '
       - name: Commit the report
         if: always()
