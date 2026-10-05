@@ -73,6 +73,11 @@ for (const p of PRODUCTS) {
     repriced.push(`${id}: renamed "${entry.name}" -> "${p.word}"`);
     entry.name = p.word;
   }
+  // Tees and mugs carry UK postage in their price (5 Oct 2026). The checkout
+  // reads this flag; it is derived from the kind so a new tee gets it for free.
+  const freeUkPost = / — (Tee|Mug)$/.test(p.num);
+  if (freeUkPost) entry.freeUkPost = true;
+  else delete entry.freeUkPost;
 }
 
 // ---- 2. Printify ids, from what was actually created ----
