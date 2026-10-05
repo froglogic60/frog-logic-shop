@@ -16,7 +16,13 @@
   #
   # The scheduled workflows already tag their commits [skip netlify]; this
   # catches everything done by hand, which is where the money went.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)automation' ':(exclude).github' ':(exclude)artwork'"
+  #
+  # 5 Oct 2026: after a month without a build Netlify's cache had expired, it
+  # cloned fresh, and CACHED_COMMIT_REF came through EQUAL to COMMIT_REF — so
+  # the diff was empty, the command exited 0, and two real deploys were
+  # cancelled as "no content change". The guard in front now says: if there is
+  # nothing older to compare against, build.
+  ignore = "test \"$CACHED_COMMIT_REF\" != \"$COMMIT_REF\" && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)automation' ':(exclude).github' ':(exclude)artwork'"
 
 [functions]
   node_bundler = "esbuild"
