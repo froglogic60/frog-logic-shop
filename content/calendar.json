@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-09-05",
+  "updated": "2026-10-05",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -387,10 +387,33 @@
         {
           "what": "Pin: Sensory Witch → #halloween (6pm)",
           "who": "robot"
-        },
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "items": [
         {
-          "what": "Pinterest queue runs dry after today — tell Claude to load more (Pinterest only lets us schedule 30 days ahead)",
-          "who": "you"
+          "what": "Repricing live: printables £2/£3/£4, Say What You Need £5, Bespoke £10, mugs £13.50, tees £19 with free UK delivery built in; size pickers on frog + Halloween tees",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "items": [
+        {
+          "what": "Pin: Low Spoons Day Planner → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "items": [
+        {
+          "what": "Pin: My Pond Plan → #digital",
+          "who": "robot"
         }
       ]
     },
@@ -398,7 +421,65 @@
       "date": "2026-10-08",
       "items": [
         {
+          "what": "Pin: Say It — Communication Scripts → #digital",
+          "who": "robot"
+        },
+        {
           "what": "FB/IG announcement: Do Not Perceive Me",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "items": [
+        {
+          "what": "Pin: Weekly Spoon Tracker → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "items": [
+        {
+          "what": "Pin: Unmasking Recovery → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "items": [
+        {
+          "what": "Pin: My Sensory Profile → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "items": [
+        {
+          "what": "Pin: Appointment Prep → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "items": [
+        {
+          "what": "Pin: Permission Cards → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "items": [
+        {
+          "what": "Pin: The Joy Log → #digital",
           "who": "robot"
         }
       ]
@@ -407,7 +488,146 @@
       "date": "2026-10-15",
       "items": [
         {
+          "what": "Pin: One Task, Broken Down → #digital",
+          "who": "robot"
+        },
+        {
           "what": "FB/IG announcement: Last orders for the 31st",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "items": [
+        {
+          "what": "Pin: Safe Foods Planner → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "items": [
+        {
+          "what": "Pin: Access Needs Cards → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "items": [
+        {
+          "what": "Pin: What I'm Actually Good At → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "items": [
+        {
+          "what": "Pin: Good Day Blueprint → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "items": [
+        {
+          "what": "Pin: Ask For It Properly → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "items": [
+        {
+          "what": "Pin: After The Diagnosis → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "items": [
+        {
+          "what": "Pin: Finding My People → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "items": [
+        {
+          "what": "Pin: When Words Go → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "items": [
+        {
+          "what": "Pin: The Handover Sheet → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "items": [
+        {
+          "what": "Pin: Your Sheet, For Once → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "items": [
+        {
+          "what": "Pin: How To Help Me → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "items": [
+        {
+          "what": "Pin: For The Sibling → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "items": [
+        {
+          "what": "Pin: Lily Pad Planner → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "items": [
+        {
+          "what": "Pin: The Pocket Pond → #digital",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "items": [
+        {
+          "what": "Pin: 30 Days at the Pond → #digital",
           "who": "robot"
         }
       ]
@@ -416,7 +636,24 @@
       "date": "2026-10-31",
       "items": [
         {
+          "what": "Pin: Hoppy Thoughts — Issue 01 → #digital",
+          "who": "robot"
+        },
+        {
           "what": "Halloween — after today, retire H1–H9 + D34 (retired: true) and remove the section",
+          "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "items": [
+        {
+          "what": "Pin: Hoppy Thoughts — Issue 02 → #digital",
+          "who": "robot"
+        },
+        {
+          "what": "Pinterest queue runs dry after today — tell Claude to load more (Pinterest only lets us schedule 30 days ahead). Five printables still unpinned: Halloween Stickers, Affirmation Cards, Habit Stacking Cards, Translation Cards, Say What You Need",
           "who": "you"
         }
       ]
