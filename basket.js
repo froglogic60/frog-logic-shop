@@ -318,7 +318,9 @@
       money(quote ? quote.total : goods) + "</span></p>";
 
     var note = "";
-    if (quote && quote.toFreeDelivery > 0) {
+    if (quote && quote.freePostItems) {
+      note = "Tees and mugs post free in the UK.";
+    } else if (quote && quote.toFreeDelivery > 0) {
       note = "Add " + money(quote.toFreeDelivery) + " more for free UK delivery.";
     } else if (quote && quote.parcels > 1) {
       note = "This comes in " + quote.parcels + " parcels — different pieces are made in different places, so they post separately.";
