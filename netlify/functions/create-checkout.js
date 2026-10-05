@@ -125,6 +125,12 @@ export function postageFor(lines, country = "GB") {
   const unknown = [];
   for (const { item, qty } of lines) {
     if (item.type !== "physical") continue;
+    // Tees and mugs carry their UK postage in the price (Sam, 5 Oct 2026:
+    // "free UK delivery built in"), so they add nothing to a UK parcel. The
+    // flag is set by wire-catalog.js from the product kind. Everything else —
+    // prints, totes, notebooks, bottles — cannot absorb its postage at its
+    // price, so it still pays, and still counts towards the £80 threshold.
+    if (country === "GB" && item.freeUkPost) continue;
     // A physical product with no usable rate would ship free, which is the bug
     // this whole thing exists to fix. Name it rather than silently zero it.
     const rate = rateFor(item, country);
@@ -236,7 +242,9 @@ export default async (req) => {
   }
   // Free delivery is a UK offer. Posting abroad costs roughly double, so
   // extending it there would turn the best orders into the worst ones.
-  const freeDelivery = country === "GB" && goodsTotal >= FREE_DELIVERY_OVER;
+  const overThreshold = country === "GB" && goodsTotal >= FREE_DELIVERY_OVER;
+  // rawPostage is already 0 when every UK line is a tee or mug.
+  const freeDelivery = overThreshold || (country === "GB" && rawPostage === 0);
   const postage = physical.length === 0 || freeDelivery ? 0 : rawPostage;
 
   const stripe = new Stripe(key);
@@ -296,9 +304,11 @@ export default async (req) => {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: { amount: postage, currency: "gbp" },
-            display_name: freeDelivery
+            display_name: overThreshold
               ? "Free UK delivery (over £80)"
-              : "Delivery to " + (COUNTRY_NAMES[country] || country),
+              : freeDelivery
+                ? "Free UK delivery"
+                : "Delivery to " + (COUNTRY_NAMES[country] || country),
           },
         }]
       : undefined,
