@@ -11,6 +11,8 @@ name: Check what every product makes
 # but applying any of that is a separate, deliberate decision.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "40 6 * * 1"   # every Monday 06:40 UTC — Sam said yes on 5 Oct 2026
 permissions:
   contents: write
 jobs:
@@ -27,12 +29,40 @@ jobs:
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Flag anything that changed on the Desk
+        if: always()
+        # Compares this report with the last committed one. A product Printify
+        # no longer returns, or a cost that moved, becomes a YOURS line in
+        # content/calendar.json's "whenever" list so it shows on /desk.html.
+        run: |
+          git show HEAD:automation/social/margin-report.json > /tmp/previous.json || echo '{"rows":[],"failed":[]}' > /tmp/previous.json
+          node -e '
+            const fs = require("fs");
+            const now = JSON.parse(fs.readFileSync("automation/social/margin-report.json", "utf8"));
+            const was = JSON.parse(fs.readFileSync("/tmp/previous.json", "utf8"));
+            const old = Object.fromEntries((was.rows || []).map(r => [r.id, r]));
+            const notes = [];
+            for (const f of now.failed || []) notes.push("Printify could not return " + f);
+            for (const r of now.rows) {
+              const o = old[r.id];
+              if (o && o.cost !== r.cost) notes.push(r.id + " cost moved £" + (o.cost/100).toFixed(2) + " → £" + (r.cost/100).toFixed(2) + " (keeps £" + (r.keeps/100).toFixed(2) + " at £" + (r.price/100).toFixed(2) + ")");
+              if (r.keeps < 0) notes.push(r.id + " LOSES £" + (-r.keeps/100).toFixed(2) + " a sale");
+            }
+            if (!notes.length) { console.log("Printify check: nothing changed"); process.exit(0); }
+            const day = now.checkedAt.slice(0, 10);
+            const cal = JSON.parse(fs.readFileSync("content/calendar.json", "utf8"));
+            cal.whenever = (cal.whenever || []).filter(w => !w.startsWith("Printify check " + day));
+            cal.whenever.unshift("Printify check " + day + " — " + notes.join("; ") + ". Ask Claude what to do about it");
+            cal.updated = day;
+            fs.writeFileSync("content/calendar.json", JSON.stringify(cal, null, 2) + "\n");
+            console.log("Desk note added:\n" + notes.join("\n"));
+          '
       - name: Commit the report
         if: always()
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/margin-report.json || true
+          git add automation/social/margin-report.json content/calendar.json || true
           git status --short
           git commit -m "Margin report [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
