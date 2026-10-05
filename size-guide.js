@@ -219,11 +219,18 @@
 
   // ---------------------------------------------------------------- wiring --
 
+  // Every grid that can hold a tee: the typographic range, the frogs, and the
+  // seasonal Halloween band. It used to be product-grid alone, which is why the
+  // seven frog and Halloween tees had no size picker until 5 Oct 2026.
+  var GRIDS = ["product-grid", "frogs-grid", "halloween-grid"];
+
   function enhance() {
-    var grid = document.getElementById("product-grid");
-    if (!grid) return;
     injectCss();
-    var cards = grid.querySelectorAll(".card");
+    var cards = [];
+    for (var g = 0; g < GRIDS.length; g++) {
+      var grid = document.getElementById(GRIDS[g]);
+      if (grid) cards = cards.concat([].slice.call(grid.querySelectorAll(".card")));
+    }
     for (var i = 0; i < cards.length; i++) {
       var card = cards[i];
       if (card.querySelector(".size-guide")) continue;
@@ -242,11 +249,13 @@
 
   function start() {
     enhance();
-    var grid = document.getElementById("product-grid");
-    if (!grid || typeof MutationObserver === "undefined") return;
-    // The collection re-renders (low-stim mode, for one), which would otherwise
+    if (typeof MutationObserver === "undefined") return;
+    // The collections re-render (low-stim mode, for one), which would otherwise
     // wipe the guides and pickers out.
-    new MutationObserver(function () { enhance(); }).observe(grid, { childList: true });
+    for (var g = 0; g < GRIDS.length; g++) {
+      var grid = document.getElementById(GRIDS[g]);
+      if (grid) new MutationObserver(function () { enhance(); }).observe(grid, { childList: true });
+    }
   }
 
   if (document.readyState === "loading") {
