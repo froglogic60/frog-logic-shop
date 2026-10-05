@@ -250,7 +250,7 @@ const PRODUCTS = [
   {
     num: "04 — Mug", word: "47 Things at Once",
     line: "All of them urgent. None of them started.",
-    price: "£14.00", link: "#", bg: "#C77D22",
+    price: "£13.50", link: "#", bg: "#C77D22",
     // A huge 47 with the other thoughts swarming around it.
     svg: `<svg viewBox="0 0 300 300">${grain("g4", 0.12)}
       <g font-family="Abril Fatface, serif" font-size="11" fill="${CREAM}" opacity="0.55">
@@ -465,7 +465,7 @@ const PRODUCTS = [
   {
     num: "14 — Mug", word: "Object Permanence",
     line: "If I put it in a drawer, it no longer exists.",
-    price: "£14.00", link: "#", bg: "#2E6B5E",
+    price: "£13.50", link: "#", bg: "#2E6B5E",
     // The middle of the word simply stops existing.
     svg: `<svg viewBox="0 0 300 300">${grain("g14", 0.12)}
       <g font-family="Fraunces, serif" font-size="42" fill="${CREAM}">
@@ -600,7 +600,7 @@ const PRODUCTS = [
   {
     num: "20 — Mug", word: "Snacks and Spite",
     line: "The two-ingredient fuel blend.",
-    price: "£14.00", link: "#", bg: "#C2432F",
+    price: "£13.50", link: "#", bg: "#C2432F",
     // A fuel gauge with an honest breakdown.
     svg: `<svg viewBox="0 0 300 300">${grain("g20", 0.12)}
       <text x="150" y="78" text-anchor="middle" font-family="Space Grotesk, sans-serif"
@@ -646,7 +646,7 @@ const PRODUCTS = [
   {
     num: "22 — Mug", word: "Interoception",
     line: "Hungry? Thirsty? Sad? Unclear. Possibly all three.",
-    price: "£14.00", link: "#", bg: "#4C5D8A",
+    price: "£13.50", link: "#", bg: "#4C5D8A",
     // The body's status readout, all question marks.
     svg: `<svg viewBox="0 0 300 300">${grain("g22", 0.12)}
       <g font-family="Space Grotesk, sans-serif" font-size="10" fill="${CREAM}" letter-spacing="0.12em">
@@ -933,7 +933,7 @@ const PRODUCTS = [
   {
     num: "36 — Mug", word: "Comfort Rewatch",
     line: "I know what happens. That is the point.",
-    price: "£14.00", link: "#", bg: "#6B5CA8",
+    price: "£13.50", link: "#", bg: "#6B5CA8",
     // The words run round and round, never getting off.
     svg: `<svg viewBox="0 0 300 300">${grain("g36", 0.11)}
       <defs><path id="loop36" fill="none" d="M150,42 A108,108 0 1 1 149,42"/></defs>
@@ -1205,7 +1205,7 @@ const PRODUCTS = [
   {
     num: "50 — Mug", word: "The Right Amount of You",
     line: "Measured properly this time.",
-    price: "£14.00", link: "#", bg: "#8C6A1F",
+    price: "£13.50", link: "#", bg: "#8C6A1F",
     // A scale where the needle lands exactly where it should.
     svg: `<svg viewBox="0 0 300 300">${grain("a10", 0.11)}
       <line x1="30" y1="150" x2="270" y2="150" stroke="${CREAM}" stroke-width="2" opacity="0.7"/>
@@ -1368,7 +1368,7 @@ const PRODUCTS = [
   {
     num: "58 — Mug", word: "Shared Interest, Not Small Talk",
     line: "Sit next to me and care about the same thing.",
-    price: "£14.00", link: "#", bg: "#5E7A2E",
+    price: "£13.50", link: "#", bg: "#5E7A2E",
     // Two ways to connect; only one of them survives.
     svg: `<svg viewBox="0 0 300 300">${grain("n8", 0.11)}
       <g font-family="Caveat, cursive" font-size="24" fill="${CREAM}">
@@ -1453,7 +1453,7 @@ const PRODUCTS = [
   {
     num: "62 — Mug", word: "Twenty Minutes Counts",
     line: "It doesn't have to be a fortnight in Crete.",
-    price: "£14.00", link: "#", bg: "#4A7A5E",
+    price: "£13.50", link: "#", bg: "#4A7A5E",
     // Respite, at the only scale that's actually available.
     svg: `<svg viewBox="0 0 300 300">${grain("c2", 0.11)}
       <circle cx="150" cy="128" r="72" fill="none" stroke="${CREAM}" stroke-width="2.5" opacity="0.6"/>
@@ -1738,7 +1738,7 @@ const PRODUCTS = [
   {
     num: "F4 — Mug", word: "Low Battery", frog: true,
     line: "Three percent. The mug does the talking until at least the second cup.",
-    price: "£14.00", link: "#", bg: "#F4EFE3",
+    price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
 <rect width="1000" height="1000" fill="#F4EFE3"/>
   <circle cx="490" cy="540" r="320" fill="#E9E4D6"/>
@@ -1760,7 +1760,7 @@ const PRODUCTS = [
   {
     num: "F5 — Mug", word: "Chaos Gremlin", frog: true,
     line: "The wand is decorative. The caffeine is not.",
-    price: "£14.00", link: "#", bg: "#F4EFE3",
+    price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: `<svg viewBox="0 0 300 300" data-no-fit="true"><g transform="scale(0.3)">
 <rect width="1000" height="1000" fill="#F4EFE3"/>
   <circle cx="500" cy="530" r="320" fill="#EDE2CC"/>
@@ -1850,25 +1850,25 @@ const PRODUCTS = [
   {
     num: "H5 — Mug", word: "Do Not Perceive Me", frog: true, halloween: true,
     line: "The only costume that also works in a meeting. Eyes out, everything else optional.",
-    price: "£14.00", link: "#", bg: "#F4EFE3",
+    price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: H_ART.ghost
   },
   {
     num: "H6 — Mug", word: "Chaos Gremlin Halloween", frog: true, halloween: true,
     line: "Bat wings, a pumpkin, and a coffee. Peak season for the gremlin.",
-    price: "£14.00", link: "#", bg: "#F4EFE3",
+    price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: H_ART.gremlin
   },
   {
     num: "H7 — Mug", word: "Social Battery: Undead", frog: true, halloween: true,
     line: "Zero percent, bandaged, still turning up. The mug does the talking.",
-    price: "£14.00", link: "#", bg: "#F4EFE3",
+    price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: H_ART.undead
   },
   {
     num: "H8 — Mug", word: "Sensory Witch", frog: true, halloween: true,
     line: "The cauldron says shh. Mornings, in a mug.",
-    price: "£14.00", link: "#", bg: "#F4EFE3",
+    price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: H_ART.witch
   },
   {
@@ -1991,7 +1991,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D18 — Printable PDF", word: "When Words Go",
     line: "For the moment speech goes and you're stood in a shop. Twenty-two point-and-show cards — the toilet, help finding something, somewhere quieter, please don't touch me — sized to fit a standard lanyard card holder, plus blanks and a contact card.",
-    price: "£4.50", link: "#", bg: "#1A1A1A",
+    price: "£3.00", link: "#", bg: "#1A1A1A",
     // A card being held out, because the words aren't available.
     svg: `<svg viewBox="0 0 300 300">${grain("d18", 0.09)}
       <g>
@@ -2009,7 +2009,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D1 — Printable PDF", word: "Low Spoons Day Planner",
     line: "No hourly grid, no streaks, no scoring. One main task, rough time-of-day blocks, and explicit permission to leave boxes blank.",
-    price: "£4.00", link: "#", bg: "#E0A81C",
+    price: "£2.00", link: "#", bg: "#E0A81C",
     // A day with almost nothing in it, and that being fine.
     svg: `<svg viewBox="0 0 300 300">${grain("d1", 0.11)}
       <g stroke="${INK}" stroke-width="0.9" opacity="0.3">
@@ -2026,7 +2026,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D2 — Printable PDF", word: "My Pond Plan",
     line: "A shutdown/meltdown support plan, filled in on a calm day: early signs, what helps, and a page you can hand to someone who wants to help.",
-    price: "£4.00", link: "#", bg: "#2E5F73",
+    price: "£2.00", link: "#", bg: "#2E5F73",
     // Ripples going out from a still centre.
     svg: `<svg viewBox="0 0 300 300">${grain("d2", 0.11)}
       <g fill="none" stroke="${CREAM}" stroke-width="1.4" opacity="0.45">
@@ -2041,7 +2041,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D3 — Printable PDF", word: "Say It — Communication Scripts",
     line: "Twelve hard conversations, two tones each — cancelling plans, asking for accommodation, correcting a misread tone, disclosing if you choose to.",
-    price: "£4.50", link: "#", bg: "#B5432F",
+    price: "£2.00", link: "#", bg: "#B5432F",
     // The words are already written for you.
     svg: `<svg viewBox="0 0 300 300">${grain("d3", 0.11)}
       <text x="20" y="112" font-family="Abril Fatface, serif" font-size="120" fill="${CREAM}" opacity="0.28">"</text>
@@ -2058,7 +2058,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D4 — Printable PDF", word: "Weekly Spoon Tracker",
     line: "One sheet a week: circle where your energy was each day, jot what drained you and what put some back, and tally it at the bottom. No streaks to keep up.",
-    price: "£3.50", link: "#", bg: "#4A7A4E",
+    price: "£2.00", link: "#", bg: "#4A7A4E",
     // Seven days, none of them the same, and no streak to break.
     svg: `<svg viewBox="0 0 300 300">${grain("d4", 0.11)}
       <g>
@@ -2082,7 +2082,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D5 — Printable PDF", word: "Unmasking Recovery",
     line: "A wind-down for after the performance ends: what the day cost, what you held back, and one small place you could mask less next time.",
-    price: "£3.50", link: "#", bg: "#5B3A72",
+    price: "£2.00", link: "#", bg: "#5B3A72",
     // The performed version lifting away from the real one.
     svg: `<svg viewBox="0 0 300 300">${grain("d5", 0.11)}
       <text x="150" y="106" text-anchor="middle" font-family="Instrument Serif, serif" font-size="52" fill="${CREAM}" opacity="0.22" transform="rotate(-3 150 106)">the version</text>
@@ -2095,7 +2095,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D6 — Printable PDF", word: "My Sensory Profile",
     line: "Map yourself across eight senses on an avoid-to-seek scale, then note your hard no's and what actually regulates you. A maintenance manual, not a diagnosis.",
-    price: "£4.00", link: "#", bg: "#1F6B75",
+    price: "£2.00", link: "#", bg: "#1F6B75",
     // Eight scales, all landing differently — which is the point.
     svg: `<svg viewBox="0 0 300 300">${grain("d6", 0.11)}
       <g>
@@ -2113,7 +2113,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D7 — Printable PDF", word: "Appointment Prep",
     line: "Get the words ready before you need them — the one thing you need from the appointment, your questions, and a tick-list of what helps you in the room.",
-    price: "£4.00", link: "#", bg: "#8C5A1C",
+    price: "£2.00", link: "#", bg: "#8C5A1C",
     // The words, prepared in advance, so they're there when you need them.
     svg: `<svg viewBox="0 0 300 300">${grain("d7", 0.11)}
       <rect x="46" y="46" width="208" height="164" fill="${CREAM}" opacity="0.12" stroke="${CREAM}" stroke-width="1.4"/>
@@ -2129,7 +2129,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D8 — Printable PDF", word: "Permission Cards",
     line: "Twelve cut-out cards for wallet, mirror or desk. “Rest is not something you earn first.” “Cancelling is kinder than resenting it.”",
-    price: "£3.00", link: "#", bg: "#C4456B",
+    price: "£2.00", link: "#", bg: "#C4456B",
     // Cards waiting to be cut out.
     svg: `<svg viewBox="0 0 300 300">${grain("d8", 0.11)}
       <g fill="${CREAM}" opacity="0.14" stroke="${CREAM}" stroke-width="1.3" stroke-dasharray="5 4">
@@ -2150,7 +2150,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D9 — Printable PDF", word: "The Joy Log",
     line: "The one that isn't about coping. Textures, sounds and tastes you love, your current special interest, and a stim that feels genuinely good.",
-    price: "£3.50", link: "#", bg: "#2E7A55",
+    price: "£2.00", link: "#", bg: "#2E7A55",
     // The only worksheet here with nothing to fix.
     svg: `<svg viewBox="0 0 300 300">${grain("d9", 0.11)}
       <g fill="${GOLD}">
@@ -2167,7 +2167,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D10 — Printable PDF", word: "One Task, Broken Down",
     line: "Turn “tidy the kitchen” into steps small enough to start. Names the first physical action, then nine steps, then what might block you.",
-    price: "£4.00", link: "#", bg: "#3A4E8C",
+    price: "£2.00", link: "#", bg: "#3A4E8C",
     // One impossible word, split into things you can actually do.
     svg: `<svg viewBox="0 0 300 300">${grain("d10", 0.11)}
       <text x="150" y="74" text-anchor="middle" font-family="Anton, sans-serif" font-size="34" fill="${CREAM}">ONE TASK</text>
@@ -2190,7 +2190,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D11 — Printable PDF", word: "Safe Foods Planner",
     line: "Built around eating the same thing on purpose. Safe foods, zero-effort options, a loose week with a backup column, and a repeat shopping list.",
-    price: "£4.00", link: "#", bg: "#C77A22",
+    price: "£2.00", link: "#", bg: "#C77A22",
     // The same thing, all week, entirely on purpose.
     svg: `<svg viewBox="0 0 300 300">${grain("d11", 0.11)}
       <g>
@@ -2205,7 +2205,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D12 — Printable PDF", word: "Access Needs Cards",
     line: "Six cut-out cards to hand over instead of explaining out loud, plus a sheet of blanks to write your own.",
-    price: "£3.50", link: "#", bg: "#25607A",
+    price: "£2.00", link: "#", bg: "#25607A",
     // A card handed over, so you don't have to say it.
     svg: `<svg viewBox="0 0 300 300">${grain("d12", 0.11)}
       <g>
@@ -2222,7 +2222,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D13 — Printable PDF", word: "What I'm Actually Good At",
     line: "The page nobody hands you after an assessment. What you do better than most, what people come to you for, and a table for reframing every trait you've been criticised for.",
-    price: "£4.00", link: "#", bg: "#7A2E4E",
+    price: "£2.00", link: "#", bg: "#7A2E4E",
     // The other column of the report.
     svg: `<svg viewBox="0 0 300 300">${grain("d13", 0.11)}
       <line x1="150" y1="52" x2="150" y2="182" stroke="${CREAM}" stroke-width="1.2" opacity="0.45"/>
@@ -2241,7 +2241,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D14 — Printable PDF", word: "Good Day Blueprint",
     line: "Work backwards from a day that actually felt right, and pull out the ingredients you can repeat. Good days aren't luck — they have components.",
-    price: "£4.00", link: "#", bg: "#1F5A6B",
+    price: "£2.00", link: "#", bg: "#1F5A6B",
     // A good day, drawn up like a technical plan.
     svg: `<svg viewBox="0 0 300 300">${grain("d14", 0.11)}
       <g stroke="${CREAM}" stroke-width="0.5" opacity="0.25">
@@ -2264,7 +2264,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D15 — Printable PDF", word: "Ask For It Properly",
     line: "Builds a workplace accommodations request line by line — the situation, the effect on the work, the specific ask, and what it costs them (usually nothing). Plus ten common asks to tick.",
-    price: "£4.50", link: "#", bg: "#4A6E2E",
+    price: "£2.00", link: "#", bg: "#4A6E2E",
     // Four parts. Assembled, it's hard to refuse.
     svg: `<svg viewBox="0 0 300 300">${grain("d15", 0.11)}
       <g font-family="Space Mono, monospace" font-size="10" fill="${GOLD}" font-weight="700">
@@ -2284,7 +2284,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D16 — Printable PDF", word: "After The Diagnosis",
     line: "The part nobody hands you. Relief, grief and anger all at once, what suddenly made sense, who you've told, and who doesn't need to know.",
-    price: "£4.50", link: "#", bg: "#5E4A8C",
+    price: "£2.00", link: "#", bg: "#5E4A8C",
     // One line, and everything before it rereads differently.
     svg: `<svg viewBox="0 0 300 300">${grain("d16", 0.11)}
       <g font-family="Instrument Serif, serif" font-size="20" fill="${CREAM}" opacity="0.32">
@@ -2300,7 +2300,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D17 — Printable PDF", word: "Finding My People",
     line: "Connection built on shared interests and side-by-side time rather than small talk. Places organised around a thing, a low-effort contact list, and one small move.",
-    price: "£4.00", link: "#", bg: "#B5432F",
+    price: "£2.00", link: "#", bg: "#B5432F",
     // Scattered, then together.
     svg: `<svg viewBox="0 0 300 300">${grain("d17", 0.11)}
       <g fill="${CREAM}" opacity="0.3">
@@ -2319,7 +2319,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D19 — Printable PDF", word: "The Handover Sheet",
     line: "For respite, a hospital stay, a sitter, or the day you're ill. Everything the next person needs — how they communicate, what a good hour looks like, early warning signs, and a do / don't table. Fill it in once.",
-    price: "£4.50", link: "#", bg: "#2E5F5A",
+    price: "£2.00", link: "#", bg: "#2E5F5A",
     svg: `<svg viewBox="0 0 300 300">${grain("d19", 0.11)}
       <g stroke="${CREAM}" stroke-width="1.4" opacity="0.75" fill="none">
         <path d="M70,142 q-18,-22 4,-34 q16,-8 28,6 l18,20"/>
@@ -2337,7 +2337,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D20 — Printable PDF", word: "Your Sheet, For Once",
     line: "Every form you've filled in this year has been about someone else. This one isn't — your own warning signs, twenty minutes of respite named properly, and scripts for asking without apologising.",
-    price: "£4.00", link: "#", bg: "#7A3A5E",
+    price: "£2.00", link: "#", bg: "#7A3A5E",
     svg: `<svg viewBox="0 0 300 300">${grain("d20", 0.11)}
       <g font-family="Instrument Serif, serif" font-size="30" fill="${CREAM}" opacity="0.25">
         <text x="26" y="70">about them</text><text x="26" y="106">about them</text>
@@ -2351,7 +2351,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D21 — Printable PDF", word: "How To Help Me",
     line: "Hand it to the people who keep asking. A please-don't-say / try-instead table, what helps day to day, exactly what to do if you shut down, and one blank for the thing you most want them to know.",
-    price: "£4.00", link: "#", bg: "#B5432F",
+    price: "£2.00", link: "#", bg: "#B5432F",
     svg: `<svg viewBox="0 0 300 300">${grain("d21", 0.11)}
       <line x1="150" y1="56" x2="150" y2="192" stroke="${CREAM}" stroke-width="1.2" opacity="0.45"/>
       <g font-family="Fraunces, serif" font-size="14" fill="${CREAM}" opacity="0.4" text-anchor="end">
@@ -2371,7 +2371,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D22 — Printable PDF", word: "For The Sibling",
     line: "For the one who got very good at being fine. What you got good at, what you wanted but didn't ask for, what you love about them, and what you'd like more of now.",
-    price: "£3.50", link: "#", bg: "#8C5A2E",
+    price: "£2.00", link: "#", bg: "#8C5A2E",
     svg: `<svg viewBox="0 0 300 300">${grain("d22", 0.11)}
       <text x="150" y="126" text-anchor="middle" font-family="Instrument Serif, serif" font-size="66" fill="${CREAM}" opacity="0.85">them</text>
       <text x="150" y="176" text-anchor="middle" font-family="Instrument Serif, serif" font-size="19" fill="${CREAM}" opacity="0.3">you</text>
@@ -2385,7 +2385,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D23 — Printable PDF", word: "Lily Pad Planner",
     line: "Seven days, three big rocks instead of twenty, and a wins column for anything that counts — even the tiny hops.",
-    price: "£4.00", link: "#", bg: "#2E6B4A",
+    price: "£3.00", link: "#", bg: "#2E6B4A",
     // Stepping-stone lily pads across the week, not a straight line.
     svg: `<svg viewBox="0 0 300 300">${grain("d23", 0.11)}
       <g fill="${CREAM}" opacity="0.85">
@@ -2404,7 +2404,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D24 — Printable PDF", word: "The Pocket Pond",
     line: "Three rituals for hard moments, a comfort menu sorted by spoons, a sensory reset checklist, and a permission slip for the days you need it most.",
-    price: "£4.50", link: "#", bg: "#1F6B75",
+    price: "£4.00", link: "#", bg: "#1F6B75",
     // A small kit, packed and ready.
     svg: `<svg viewBox="0 0 300 300">${grain("d24", 0.1)}
       <rect x="86" y="96" width="128" height="98" rx="10" fill="none" stroke="${CREAM}" stroke-width="2.2"/>
@@ -2418,7 +2418,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D25 — Printable PDF", word: "Hoppy Thoughts — Issue 01",
     line: "A zine of one-liners and gentle truths for brains that run sideways. Focus, executive function, sensory everything, social battery, rest — read front to back, or flip to whatever page calls to you.",
-    price: "£3.50", link: "#", bg: "#7A3A5E",
+    price: "£4.00", link: "#", bg: "#7A3A5E",
     svg: `<svg viewBox="0 0 300 300">${grain("d25", 0.12)}
       <rect x="74" y="66" width="152" height="188" fill="none" stroke="${CREAM}" stroke-width="2"/>
       <line x1="90" y1="94" x2="210" y2="94" stroke="${CREAM}" stroke-width="1.2" opacity="0.55"/>
@@ -2432,7 +2432,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D26 — Printable PDF", word: "Hoppy Thoughts — Issue 02",
     line: "The slow season edition: work and school accommodations, relationships, holidays and big gatherings, an advice column, and a horoscope that only applies to frogs.",
-    price: "£3.50", link: "#", bg: "#5E4A8C",
+    price: "£4.00", link: "#", bg: "#5E4A8C",
     svg: `<svg viewBox="0 0 300 300">${grain("d26", 0.12)}
       <rect x="74" y="66" width="152" height="188" fill="none" stroke="${CREAM}" stroke-width="2"/>
       <line x1="90" y1="94" x2="210" y2="94" stroke="${CREAM}" stroke-width="1.2" opacity="0.55"/>
@@ -2459,7 +2459,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D28 — Printable PDF", word: "Affirmation Cards",
     line: "Twenty-four lines to cut out and keep somewhere you'll actually see them. Nothing here needs to be earned first.",
-    price: "£3.00", link: "#", bg: "#8C5A1C",
+    price: "£2.00", link: "#", bg: "#8C5A1C",
     svg: `<svg viewBox="0 0 300 300">${grain("d28", 0.09)}
       <g>
         <rect x="40" y="76" width="150" height="90" rx="6" fill="${CREAM}" opacity="0.18" transform="rotate(-7 115 121)"/>
@@ -2476,7 +2476,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D29 — Printable PDF", word: "Habit Stacking Cards",
     line: "Attach one small habit to something you already do without thinking. Fill in the blank, then stop thinking about it.",
-    price: "£3.00", link: "#", bg: "#4A6E2E",
+    price: "£2.00", link: "#", bg: "#4A6E2E",
     svg: `<svg viewBox="0 0 300 300">${grain("d29", 0.1)}
       <text x="150" y="118" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="${CREAM}" opacity="0.8">After I</text>
       <line x1="110" y1="128" x2="190" y2="128" stroke="${GOLD}" stroke-width="1.6"/>
@@ -2492,7 +2492,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D30 — Printable PDF", word: "Translation Cards",
     line: "The harsh thing you say about yourself, and a truer sentence to put next to it. Twelve swaps, ready to use.",
-    price: "£3.00", link: "#", bg: "#8C4A2F",
+    price: "£2.00", link: "#", bg: "#8C4A2F",
     svg: `<svg viewBox="0 0 300 300">${grain("d30", 0.1)}
       <text x="150" y="122" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="17" fill="${CREAM}" opacity="0.6">"I'm lazy."</text>
       <g stroke="${GOLD}" stroke-width="1.6" fill="none">
@@ -2507,7 +2507,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D31 — Printable PDF", word: "Frog Logic Stickers",
     line: "Every design in the sticker collection, to print at home on whatever paper you already have. Eighteen designs across two sheets, 54mm square.",
-    price: "£4.50", link: "#", bg: "#2F5D50",
+    price: "£2.00", link: "#", bg: "#2F5D50",
     svg: `<svg viewBox="0 0 300 300">${grain("d31", 0.1)}
       <g stroke="${CREAM}" stroke-width="1" stroke-dasharray="4 4" opacity="0.55" fill="none">
         <rect x="42" y="52" width="66" height="66"/><rect x="117" y="52" width="66" height="66"/><rect x="192" y="52" width="66" height="66"/>
@@ -2521,8 +2521,8 @@ const DIGITAL_PRODUCTS = [
   },
   {
     num: "D32 — Printable set", word: "Say What You Need",
-    line: "Three sheets for the days when saying it out loud is not going to happen. My Sensory Profile, How To Help Me and Appointment Prep — four pounds each on their own, six pounds together.",
-    price: "£6.00", link: "#", bg: "#3D6B4A",
+    line: "Three sheets for the days when saying it out loud is not going to happen. My Sensory Profile, How To Help Me and Appointment Prep — two pounds each on their own, five pounds together.",
+    price: "£5.00", link: "#", bg: "#3D6B4A",
     svg: `<svg viewBox="0 0 300 300">${grain("d32", 0.11)}
       <g stroke="${CREAM}" stroke-width="1.5" fill="none" opacity="0.45">
         <rect x="46" y="48" width="140" height="98" rx="2" transform="rotate(-7 116 97)"/>
@@ -2570,7 +2570,7 @@ const DIGITAL_PRODUCTS = [
   {
     num: "D34 — Printable PDF", word: "Halloween Stickers",
     line: "The four Halloween frogs as stickers, two of each, to print at home. One sheet, 54mm squares, cut along the dashed lines.",
-    price: "£3.00", link: "#", bg: "#3E3452", halloween: true,
+    price: "£2.00", link: "#", bg: "#3E3452", halloween: true,
     // Same dashed-square grid as the main sticker sheet, in Halloween purple.
     svg: `<svg viewBox="0 0 300 300">${grain("d34", 0.1)}
       <g stroke="${CREAM}" stroke-width="1" stroke-dasharray="4 4" opacity="0.55" fill="none">
