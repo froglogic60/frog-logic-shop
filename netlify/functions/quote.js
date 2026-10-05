@@ -62,7 +62,10 @@ export default async (req) => {
   if (!destinations.includes(country)) country = "GB";
 
   const { total: rawPostage, parcels, unknown } = postageFor(physical, country);
-  const freeDelivery = country === "GB" && goods >= FREE_DELIVERY_OVER;
+  const overThreshold = country === "GB" && goods >= FREE_DELIVERY_OVER;
+  // Tees and mugs post free in the UK at any basket size (their price carries
+  // the postage), so rawPostage is 0 for a basket of only those.
+  const freeDelivery = overThreshold || (country === "GB" && rawPostage === 0);
   const postage = physical.length === 0 ? 0 : freeDelivery ? 0 : rawPostage;
 
   return json({
@@ -80,6 +83,9 @@ export default async (req) => {
     // How much more is needed to reach free delivery, so the basket can say so
     // plainly instead of leaving people to work it out.
     toFreeDelivery: physical.length && country === "GB" && !freeDelivery ? FREE_DELIVERY_OVER - goods : 0,
+    // True when the basket is free to post because of WHAT is in it (tees and
+    // mugs) rather than how much — so the basket can say so.
+    freePostItems: physical.length > 0 && country === "GB" && rawPostage === 0 && !overThreshold,
     freeDeliveryOver: FREE_DELIVERY_OVER,
     // Two parcels is not a mistake to hide — it is why the postage is what it
     // is, and saying so is cheaper than an email asking about it.
