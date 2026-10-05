@@ -35,7 +35,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "02-hyperfocused",
@@ -72,7 +73,7 @@
   {
     "id": "04-47-things-at-once",
     "name": "47 Things at Once",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f422aecea373cf90cecdf",
@@ -83,7 +84,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "05-info-dump-incoming",
@@ -185,12 +187,13 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "14-object-permanence",
     "name": "Object Permanence",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f422b03b32619540a8277",
@@ -201,7 +204,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "15-auditory-processing",
@@ -271,12 +275,13 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "20-snacks-and-spite",
     "name": "Snacks and Spite",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f422c773c31dfa10f7b4c",
@@ -287,7 +292,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "21-autistic-joy",
@@ -308,7 +314,7 @@
   {
     "id": "22-interoception",
     "name": "Interoception",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f422effd89d136008de72",
@@ -319,7 +325,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "24-late-diagnosed",
@@ -357,7 +364,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "25-monotropic",
@@ -443,7 +451,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "31-ask-me-about-it",
@@ -481,7 +490,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "32-unreasonably-delighted",
@@ -534,7 +544,7 @@
   {
     "id": "36-comfort-rewatch",
     "name": "Comfort Rewatch",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f422feb95a088fa0a0316",
@@ -545,7 +555,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "38-pattern-recognition",
@@ -599,7 +610,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "40-small-things-enormous-joy",
@@ -669,7 +681,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "43-not-broken",
@@ -739,7 +752,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "46-it-was-precision",
@@ -776,7 +790,7 @@
   {
     "id": "50-the-right-amount-of-you",
     "name": "The Right Amount of You",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f4231ffd89d136008de78",
@@ -787,7 +801,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "51-in-writing-please",
@@ -825,7 +840,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "52-i-accommodated-you-first",
@@ -894,7 +910,7 @@
   {
     "id": "58-shared-interest-not-small-talk",
     "name": "Shared Interest, Not Small Talk",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f4232ecea373cf90cece6",
@@ -905,7 +921,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "60-recovery-is-part-of-the-plan",
@@ -942,7 +959,7 @@
   {
     "id": "62-twenty-minutes-counts",
     "name": "Twenty Minutes Counts",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8f4234773c31dfa10f7b50",
@@ -953,7 +970,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "63-guilt-is-not-evidence",
@@ -991,7 +1009,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "64-i-learned-their-language",
@@ -1044,7 +1063,7 @@
   {
     "id": "d18-when-words-go",
     "name": "When Words Go",
-    "price": 4.5,
+    "price": 3,
     "type": "digital",
     "currency": "gbp",
     "file": "When-Words-Go.pdf"
@@ -1052,7 +1071,7 @@
   {
     "id": "d1-low-spoons-day-planner",
     "name": "Low Spoons Day Planner",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Low-Spoons-Day-Planner.pdf"
@@ -1060,7 +1079,7 @@
   {
     "id": "d2-my-pond-plan",
     "name": "My Pond Plan",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "My-Pond-Plan.pdf"
@@ -1068,7 +1087,7 @@
   {
     "id": "d3-say-it-communication-scripts",
     "name": "Say It — Communication Scripts",
-    "price": 4.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Say-It-Scripts.pdf"
@@ -1076,7 +1095,7 @@
   {
     "id": "d4-weekly-spoon-tracker",
     "name": "Weekly Spoon Tracker",
-    "price": 3.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Weekly-Spoon-Tracker.pdf"
@@ -1084,7 +1103,7 @@
   {
     "id": "d5-unmasking-recovery",
     "name": "Unmasking Recovery",
-    "price": 3.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Unmasking-Recovery.pdf"
@@ -1092,7 +1111,7 @@
   {
     "id": "d6-my-sensory-profile",
     "name": "My Sensory Profile",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "My-Sensory-Profile.pdf"
@@ -1100,7 +1119,7 @@
   {
     "id": "d7-appointment-prep",
     "name": "Appointment Prep",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Appointment-Prep.pdf"
@@ -1108,7 +1127,7 @@
   {
     "id": "d8-permission-cards",
     "name": "Permission Cards",
-    "price": 3,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Permission-Cards.pdf"
@@ -1116,7 +1135,7 @@
   {
     "id": "d9-the-joy-log",
     "name": "The Joy Log",
-    "price": 3.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "The-Joy-Log.pdf"
@@ -1124,7 +1143,7 @@
   {
     "id": "d10-one-task-broken-down",
     "name": "One Task, Broken Down",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "One-Task-Broken-Down.pdf"
@@ -1132,7 +1151,7 @@
   {
     "id": "d11-safe-foods-planner",
     "name": "Safe Foods Planner",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Safe-Foods-Planner.pdf"
@@ -1140,7 +1159,7 @@
   {
     "id": "d12-access-needs-cards",
     "name": "Access Needs Cards",
-    "price": 3.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Access-Needs-Cards.pdf"
@@ -1148,7 +1167,7 @@
   {
     "id": "d13-what-i-m-actually-good-at",
     "name": "What I'm Actually Good At",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "What-Im-Actually-Good-At.pdf"
@@ -1156,7 +1175,7 @@
   {
     "id": "d14-good-day-blueprint",
     "name": "Good Day Blueprint",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Good-Day-Blueprint.pdf"
@@ -1164,7 +1183,7 @@
   {
     "id": "d15-ask-for-it-properly",
     "name": "Ask For It Properly",
-    "price": 4.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Ask-For-It-Properly.pdf"
@@ -1172,7 +1191,7 @@
   {
     "id": "d16-after-the-diagnosis",
     "name": "After The Diagnosis",
-    "price": 4.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "After-The-Diagnosis.pdf"
@@ -1180,7 +1199,7 @@
   {
     "id": "d17-finding-my-people",
     "name": "Finding My People",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Finding-My-People.pdf"
@@ -1188,7 +1207,7 @@
   {
     "id": "d19-the-handover-sheet",
     "name": "The Handover Sheet",
-    "price": 4.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "The-Handover-Sheet.pdf"
@@ -1196,7 +1215,7 @@
   {
     "id": "d20-your-sheet-for-once",
     "name": "Your Sheet, For Once",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Your-Sheet-For-Once.pdf"
@@ -1204,7 +1223,7 @@
   {
     "id": "d21-how-to-help-me",
     "name": "How To Help Me",
-    "price": 4,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "How-To-Help-Me.pdf"
@@ -1212,7 +1231,7 @@
   {
     "id": "d22-for-the-sibling",
     "name": "For The Sibling",
-    "price": 3.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "For-The-Sibling.pdf"
@@ -1220,7 +1239,7 @@
   {
     "id": "d23-lily-pad-planner",
     "name": "Lily Pad Planner",
-    "price": 4,
+    "price": 3,
     "type": "digital",
     "currency": "gbp",
     "file": "Lily-Pad-Planner.pdf"
@@ -1228,7 +1247,7 @@
   {
     "id": "d24-the-pocket-pond",
     "name": "The Pocket Pond",
-    "price": 4.5,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "The-Pocket-Pond.pdf"
@@ -1236,7 +1255,7 @@
   {
     "id": "d25-hoppy-thoughts-issue-01",
     "name": "Hoppy Thoughts — Issue 01",
-    "price": 3.5,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Hoppy-Thoughts-Issue-01.pdf"
@@ -1244,7 +1263,7 @@
   {
     "id": "d26-hoppy-thoughts-issue-02",
     "name": "Hoppy Thoughts — Issue 02",
-    "price": 3.5,
+    "price": 4,
     "type": "digital",
     "currency": "gbp",
     "file": "Hoppy-Thoughts-Issue-02.pdf"
@@ -1260,7 +1279,7 @@
   {
     "id": "d28-affirmation-cards",
     "name": "Affirmation Cards",
-    "price": 3,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Affirmation-Cards.pdf"
@@ -1268,7 +1287,7 @@
   {
     "id": "d29-habit-stacking-cards",
     "name": "Habit Stacking Cards",
-    "price": 3,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Habit-Stacking-Cards.pdf"
@@ -1276,7 +1295,7 @@
   {
     "id": "d30-translation-cards",
     "name": "Translation Cards",
-    "price": 3,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Translation-Cards.pdf"
@@ -1284,7 +1303,7 @@
   {
     "id": "d31-frog-logic-stickers",
     "name": "Frog Logic Stickers",
-    "price": 4.5,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Frog-Logic-Stickers.pdf"
@@ -1292,7 +1311,7 @@
   {
     "id": "d32-say-what-you-need",
     "name": "Say What You Need",
-    "price": 6,
+    "price": 5,
     "type": "digital",
     "currency": "gbp",
     "file": "Say-What-You-Need.pdf"
@@ -1341,7 +1360,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "f2-brain-full-of-tabs",
@@ -1379,7 +1399,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "f3-neurospicy",
@@ -1417,12 +1438,13 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "f4-low-battery",
     "name": "Low Battery",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a931bf1c1f8509ec80326fb",
@@ -1433,12 +1455,13 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "f5-chaos-gremlin",
     "name": "Chaos Gremlin",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a931bf6ccc5b4b0cd05d9a2",
@@ -1449,7 +1472,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "f6-overstimulated",
@@ -1519,7 +1543,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h2-chaos-gremlin-halloween",
@@ -1557,7 +1582,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h3-social-battery-undead",
@@ -1595,7 +1621,8 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h4-sensory-witch",
@@ -1633,12 +1660,13 @@
       "first": 349,
       "additional": 199,
       "zoneKey": "6:331"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h5-do-not-perceive-me",
     "name": "Do Not Perceive Me",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a9c41496f59811746060273",
@@ -1649,12 +1677,13 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h6-chaos-gremlin-halloween",
     "name": "Chaos Gremlin Halloween",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a9c414c164919b0300617f2",
@@ -1665,12 +1694,13 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h7-social-battery-undead",
     "name": "Social Battery: Undead",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a9c4150c8dc7ed3a507b184",
@@ -1681,12 +1711,13 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h8-sensory-witch",
     "name": "Sensory Witch",
-    "price": 14,
+    "price": 13.5,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a9c41546f59811746060288",
@@ -1697,7 +1728,8 @@
       "first": 389,
       "additional": 249,
       "zoneKey": "535:6"
-    }
+    },
+    "freeUkPost": true
   },
   {
     "id": "h9-do-not-perceive-me",
@@ -1718,7 +1750,7 @@
   {
     "id": "d34-halloween-stickers",
     "name": "Halloween Stickers",
-    "price": 3,
+    "price": 2,
     "type": "digital",
     "currency": "gbp",
     "file": "Halloween-Stickers.pdf"
