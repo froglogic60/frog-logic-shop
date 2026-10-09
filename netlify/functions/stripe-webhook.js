@@ -68,7 +68,9 @@ async function sendDownloadEmail({ toEmail, items }) {
       subject: items.length === 1 ? `Your download: ${items[0].name}` : `Your ${items.length} downloads`,
       html: `<p>Thanks for your order! Here ${items.length === 1 ? "it is" : "they are"}:</p>
              ${links}
-             <p>For personal and household use — print freely, please don't resell or redistribute the files.</p>
+             ${items.some((i) => i.licence)
+               ? `<p>Your pack is licensed for ${items.filter((i) => i.licence).map((i) => i.licence).join("; ")} — print as much as you need for the people you support. The full licence is on page two, in plain English. Updated files for the next twelve months come to this address.</p>`
+               : `<p>For personal and household use — print freely, please don't resell or redistribute the files.</p>`}
              <p>Trouble with a file — won't open, wrong one, didn't arrive? Reply to this email or write to
              <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a> and I'll sort it. The
              <a href="${site}/returns">returns page</a> has the detail.</p>
