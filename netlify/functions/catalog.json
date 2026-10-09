@@ -1754,5 +1754,32 @@
     "type": "digital",
     "currency": "gbp",
     "file": "Halloween-Stickers.pdf"
+  },
+  {
+    "id": "o1-the-organisation-pack",
+    "name": "The Organisation Pack — Team licence",
+    "price": 95,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Organisation-Pack-Team.pdf",
+    "licence": "one team of up to ten members of staff, at one organisation"
+  },
+  {
+    "id": "o2-the-organisation-pack",
+    "name": "The Organisation Pack — Service licence",
+    "price": 195,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Organisation-Pack-Service.pdf",
+    "licence": "one service, department or school of up to fifty members of staff, at one organisation"
+  },
+  {
+    "id": "o3-the-organisation-pack",
+    "name": "The Organisation Pack — Organisation licence",
+    "price": 395,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Organisation-Pack-Organisation.pdf",
+    "licence": "every member of staff at one organisation, across all of its sites"
   }
 ]
