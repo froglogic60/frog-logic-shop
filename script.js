@@ -2886,12 +2886,67 @@ function renderProfessional(){
   `).join('');
 }
 
+// The Organisation Pack: the same sheets, licensed for a team, a service or a
+// whole organisation. Three tiers, three files, identical contents — only the
+// licence page differs. Built by automation/pdf/organisation-pack.py.
+const ORGANISATION = [
+  {
+    num: "O1 — Team licence", word: "The Organisation Pack",
+    line: "One team of up to ten staff: a classroom team, a small clinic, a ward, a department's ND network. Print every sheet for every person you support, for as long as you like.",
+    price: "£95.00", link: "#", bg: "#2C4A6E", tier: "TEAM", scope: "UP TO 10 STAFF",
+  },
+  {
+    num: "O2 — Service licence", word: "The Organisation Pack",
+    line: "One service, department or school of up to fifty staff: a SEN department, an OT or CAMHS service, a college, a GP practice group. Same pack, wider licence.",
+    price: "£195.00", link: "#", bg: "#3D6B4A", tier: "SERVICE", scope: "UP TO 50 STAFF",
+  },
+  {
+    num: "O3 — Organisation licence", word: "The Organisation Pack",
+    line: "Every member of staff at one organisation, across all its sites, and on your own staff intranet: a trust, a council service, a multi-academy trust, an employer.",
+    price: "£395.00", link: "#", bg: "#5E4A8C", tier: "ORGANISATION", scope: "ALL STAFF · ALL SITES",
+  },
+].map(p => ({ ...p, svg: `<svg viewBox="0 0 300 300">${grain("org-" + p.tier.toLowerCase(), 0.1)}
+      <g stroke="${CREAM}" stroke-width="1.4" fill="none" opacity="0.4">
+        <rect x="52" y="52" width="150" height="106" rx="2"/>
+        <rect x="66" y="66" width="150" height="106" rx="2"/>
+      </g>
+      <rect x="80" y="80" width="150" height="106" rx="2" fill="${CREAM}"/>
+      <g fill="${INK}" opacity="0.7">
+        <rect x="94" y="98" width="64" height="4"/>
+        <rect x="94" y="112" width="100" height="4"/>
+        <rect x="94" y="126" width="80" height="4"/>
+        <rect x="94" y="140" width="92" height="4"/>
+      </g>
+      <rect x="94" y="98" width="28" height="4" fill="${GOLD}"/>
+      <text x="155" y="170" text-anchor="middle" font-family="Space Mono, monospace" font-size="7.5" fill="${INK}" opacity="0.7" letter-spacing="0.16em">${p.scope}</text>
+      <text x="150" y="228" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="${CREAM}">${p.tier} LICENCE</text>
+      <text x="150" y="254" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${GOLD}" letter-spacing="0.12em">79 PAGES · PRINT FOR EVERYONE YOU SUPPORT</text>
+      <rect width="300" height="300" fill="url(#org-${p.tier.toLowerCase()})"/>${mark()}</svg>` }));
+
+function renderOrganisations(){
+  const grid = document.getElementById('org-grid');
+  if(!grid) return;
+  grid.innerHTML = ORGANISATION.map(p => `
+    <article class="card">
+      <div class="stage" style="background:${p.bg}">${p.svg}</div>
+      <div class="card-meta">
+        <p class="card-num">${p.num}</p>
+        <h3>${p.word}</h3>
+        <p class="card-line">${p.line}</p>
+        <p class="card-price">${p.price}</p>
+        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Buy the licence</button>
+      </div>
+    </article>
+  `).join('');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
   renderDigital();
   renderBespoke();
   renderGuides();
   renderProfessional();
+  renderOrganisations();
   renderFrogs();
   renderHalloween();
   // fonts load asynchronously, so measure once they're ready
