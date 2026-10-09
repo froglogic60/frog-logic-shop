@@ -2544,7 +2544,7 @@ const DIGITAL_PRODUCTS = [
     // Not a download — a questionnaire. The robot builds one planner per person
     // from the answers and emails it, so the button goes to the form, not the till.
     num: "D33 — Made to order", word: "The Bespoke Planner",
-    line: "Every planner you've bought was built for someone else's brain. Answer nine questions — how your day runs, how you track energy, what you need on the page and what you need gone — and a planner of up to ten pages is built for yours and emailed as a printable PDF, usually within a couple of hours. Your second planner within a year is free.",
+    line: "Every planner you've bought was built for someone else's brain. Answer nine questions — how your day runs, how you track energy, what you need on the page and what you need gone — and a planner of up to ten pages is built for yours and emailed as a printable PDF, usually within a couple of hours. If it doesn't fit, answer again and it gets rebuilt free.",
     price: "£25.00", link: "https://forms.gle/GJjQ8rMSoqh7ffPx5", external: "Answer the questions", bg: "#5E4A8C", feature: true,
     // One page with the boxes still blank: it gets filled in for you.
     svg: `<svg viewBox="0 0 300 300">${grain("d33", 0.11)}
