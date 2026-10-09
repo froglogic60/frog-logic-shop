@@ -1,0 +1,51 @@
+name: Send the approach-list emails
+# Sends every entry in automation/outreach/approach-list.md that has a real
+# email address, once, from the shop's verified Resend sender, with replies
+# going to hello@froglogic.co.uk. sent.json records who has had one so a rerun
+# never emails anyone twice — rerun it freely after adding an organisation to
+# the list. The contact-form entries are printed at the end for Sam to do by
+# hand. Afterwards it logs the names on the Desk (content/calendar.json) under
+# today's date and commits both files with [skip netlify].
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Send
+        run: node automation/outreach/send.mjs
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+      - name: Log it on the Desk
+        run: |
+          node -e '
+            const fs = require("fs");
+            const sent = JSON.parse(fs.readFileSync("automation/outreach/sent.json", "utf8"));
+            const day = new Date().toISOString().slice(0, 10);
+            const today = sent.filter((s) => s.sentAt.slice(0, 10) === day);
+            if (!today.length) { console.log("nothing sent today"); process.exit(0); }
+            const cal = JSON.parse(fs.readFileSync("content/calendar.json", "utf8"));
+            let d = cal.days.find((x) => x.date === day);
+            if (!d) { d = { date: day, items: [] }; cal.days.push(d); cal.days.sort((a, b) => a.date.localeCompare(b.date)); }
+            const what = "Outreach emails SENT (" + today.length + "): " + today.map((s) => s.name.split(" — ")[0]).join(", ") + ". Replies go to hello@froglogic.co.uk. Nudge the quiet ones 8 Dec";
+            d.items = d.items.filter((i) => !i.what.startsWith("Outreach emails SENT"));
+            d.items.push({ what, who: "robot" });
+            cal.updated = day;
+            fs.writeFileSync("content/calendar.json", JSON.stringify(cal, null, 2) + "\n");
+            console.log(what);
+          '
+      - name: Commit the log
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/outreach/sent.json content/calendar.json
+          git commit -m "Outreach: sent log + Desk [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
