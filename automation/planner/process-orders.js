@@ -1,6 +1,6 @@
 // Bespoke planner order robot. Runs on a schedule in GitHub Actions.
 //   1. Reads the questionnaire responses (published-CSV Google Sheet).
-//   2. Checks Stripe for a completed £10 payment matching each email.
+//   2. Checks Stripe for a completed payment (£25 link, or the old £10 one) matching each email.
 //   3. Builds the personalised PDF and emails it via Resend.
 //   4. Records fulfilled orders in fulfilled.json (committed by the workflow)
 //      so nobody ever gets charged twice or mailed twice.
@@ -21,7 +21,9 @@ const CSV_URL = process.env.PLANNER_CSV_URL;
 const STRIPE = process.env.STRIPE_SECRET_KEY;
 const RESEND = process.env.RESEND_API_KEY;
 const FROM = process.env.FROM_EMAIL;
-const PLINK = process.env.PLANNER_PAYMENT_LINK || "plink_1U7CIqGgi5tektD4xseHc5th";
+// £25 link (live 9 Oct 2026) first; the old £10 link stays so anyone who answered
+// the questions before the change can still pay and be fulfilled.
+const PLINKS = (process.env.PLANNER_PAYMENT_LINK || "plink_1UOlwMGgi5tektD4tNjrcEe3,plink_1U7CIqGgi5tektD4xseHc5th").split(",").map((x) => x.trim()).filter(Boolean);
 const STATE = path.join(__dirname, "fulfilled.json");
 
 for (const [k, v] of Object.entries({ PLANNER_CSV_URL: CSV_URL, RESEND_API_KEY: RESEND, FROM_EMAIL: FROM })) {
@@ -71,13 +73,18 @@ function toAnswers(rec) {
   };
 }
 
-// Every completed checkout session on the payment link -> set of payer emails.
+// Every completed checkout session on the payment links -> set of payer emails.
 async function paidEmails() {
   if (process.env.ALLOW_UNPAID === "1") return null; // testing: treat everyone as paid
   const emails = new Set();
+  for (const plink of PLINKS) await collectPaid(plink, emails);
+  return emails;
+}
+
+async function collectPaid(plink, emails) {
   let after = "";
   for (let page = 0; page < 20; page++) {
-    const url = `https://api.stripe.com/v1/checkout/sessions?limit=100&payment_link=${PLINK}${after ? "&starting_after=" + after : ""}`;
+    const url = `https://api.stripe.com/v1/checkout/sessions?limit=100&payment_link=${plink}${after ? "&starting_after=" + after : ""}`;
     const r = await fetch(url, { headers: { Authorization: "Bearer " + STRIPE } });
     if (!r.ok) throw new Error("Stripe " + r.status + " " + (await r.text()).slice(0, 200));
     const j = await r.json();
@@ -89,7 +96,6 @@ async function paidEmails() {
     if (!j.has_more || !j.data.length) break;
     after = j.data[j.data.length - 1].id;
   }
-  return emails;
 }
 
 async function sendPlanner(email, name, pdfPath) {
