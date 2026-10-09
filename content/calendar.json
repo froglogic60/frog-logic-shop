@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-10-05",
+  "updated": "2026-10-08",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -432,6 +432,10 @@
         {
           "what": "FB/IG announcement: Do Not Perceive Me",
           "who": "robot"
+        },
+        {
+          "what": "90-DAY PLAN starts (to 6 Jan). Target: ten orders from strangers + one £100+ order. Then we set the £100k route with real numbers, not estimates",
+          "who": "note"
         }
       ]
     },
@@ -440,6 +444,10 @@
       "items": [
         {
           "what": "Pin: Weekly Spoon Tracker → #digital",
+          "who": "robot"
+        },
+        {
+          "what": "Claude: Etsy batch three kit (next 5 listings) — Etsy brings its own shoppers, the site doesn't yet",
           "who": "robot"
         }
       ]
@@ -450,6 +458,10 @@
         {
           "what": "Pin: Unmasking Recovery → #digital",
           "who": "robot"
+        },
+        {
+          "what": "Post Etsy batch three (kit in your Frog Logic folder)",
+          "who": "you"
         }
       ]
     },
@@ -467,6 +479,10 @@
       "items": [
         {
           "what": "Pin: Appointment Prep → #digital",
+          "who": "robot"
+        },
+        {
+          "what": "Claude: Bespoke Planner repositioned as the hero product — new price proposal (£25–£40), feature band rewritten, before/after for you to approve",
           "who": "robot"
         }
       ]
@@ -486,6 +502,10 @@
         {
           "what": "Pin: The Joy Log → #digital",
           "who": "robot"
+        },
+        {
+          "what": "Decide: Bespoke Planner price, and whether you'll put £50–£100 into an ad test on the two best pins (it is money you may lose — it buys the numbers)",
+          "who": "you"
         }
       ]
     },
@@ -516,6 +536,10 @@
       "items": [
         {
           "what": "Pin: Access Needs Cards → #digital",
+          "who": "robot"
+        },
+        {
+          "what": "Claude: Organisations pack — printed card sets for SEN departments, OT services, employer ND networks, with a price (£100+ an order) and a page to send people to",
           "who": "robot"
         }
       ]
@@ -553,6 +577,10 @@
         {
           "what": "Pin: After The Diagnosis → #digital",
           "who": "robot"
+        },
+        {
+          "what": "Claude: Pinterest ad test built (two pins, 14 days) — needs your card in Pinterest Ads, your hands for that step",
+          "who": "robot"
         }
       ]
     },
@@ -579,6 +607,10 @@
       "items": [
         {
           "what": "Pin: The Handover Sheet → #digital",
+          "who": "robot"
+        },
+        {
+          "what": "Claude: approach list — 10 organisations with a short email each, in your voice, for you to send",
           "who": "robot"
         }
       ]
@@ -607,6 +639,10 @@
         {
           "what": "Pin: For The Sibling → #digital",
           "who": "robot"
+        },
+        {
+          "what": "Send the 10 organisation emails (or tell Claude which to drop)",
+          "who": "you"
         }
       ]
     },
@@ -662,9 +698,55 @@
           "who": "you"
         }
       ]
+    },
+    {
+      "date": "2026-11-04",
+      "items": [
+        {
+          "what": "Ad test results: what a click and a sale actually cost. Stop or continue — Claude will show the numbers",
+          "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "items": [
+        {
+          "what": "Claude: November Pinterest queue + Christmas last-order dates on the site and in the posts",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "items": [
+        {
+          "what": "Half-way check: orders so far vs target of ten. Claude writes the honest version",
+          "who": "note"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "items": [
+        {
+          "what": "Chase the organisations that didn't reply (one nudge each)",
+          "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2027-01-06",
+      "items": [
+        {
+          "what": "90-DAY REVIEW: orders, visits, ad cost per sale, organisation replies. Decide the £100k route from these numbers",
+          "who": "you"
+        }
+      ]
     }
   ],
   "whenever": [
+    "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
     "Etsy batch three — say the word and Claude makes the next five-listing kit (about 22 downloads still unlisted)",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
