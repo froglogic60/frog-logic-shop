@@ -127,7 +127,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ## 6. The Brain Charity (Liverpool)
 
-**To:** contact form at thebraincharity.org.uk (their listed inbox is communications@thebraincharity.org.uk)
+**To:** communications@thebraincharity.org.uk
 **Why them:** Practical support for people with neurological conditions including autism and ADHD, nationwide, with a resource library.
 **Subject:** Free plain-English neurotype guides for your resource library
 
