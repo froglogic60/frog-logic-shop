@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -466,6 +466,10 @@
         {
           "what": "Etsy batch three already posted on the 9th — nothing to do",
           "who": "note"
+        },
+        {
+          "what": "Outreach emails SENT (2): ADHD Embrace, Dyspraxia Foundation. Replies go to hello@froglogic.co.uk. Nudge the quiet ones 8 Dec",
+          "who": "robot"
         }
       ]
     },
