@@ -89,9 +89,21 @@ function energyRow(a) {
   return "";
 }
 
+// The things the customer said they lose track of every day, as a tick strip
+// on every daily page. Their words, not ours — that is the point of it.
+function nonNegotiables(a) {
+  if (!a.forgets || !a.forgets.length) return "";
+  const items = a.forgets.slice(0, 7).map((t) =>
+    `<span style="display:inline-flex;align-items:center;margin:0 5mm 1.5mm 0;white-space:nowrap;">
+      <span style="width:5mm;height:5mm;border:1.1pt solid ${INK};border-radius:1.2mm;margin-right:2mm;flex-shrink:0;"></span>${esc(t)}</span>`).join("");
+  return `<div style="border-top:0.7pt solid #b9b3a4;border-bottom:0.7pt solid #b9b3a4;padding:2.5mm 0 1mm;margin:3mm 0 2mm;font-size:${a.easyRead ? "11pt" : "10pt"};">
+    <span style="font-family:'Space Mono',monospace;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:${a.accent};margin-right:4mm;">don't forget</span>${items}</div>`;
+}
+
 function dailyTime(a) {
   const start = a.dayShape === "evening" ? 10 : 6;
-  const rows = Array.from({ length: 16 }, (_, i) => {
+  const strip = nonNegotiables(a);
+  const rows = Array.from({ length: strip ? 14 : 16 }, (_, i) => {
     const h = (start + i) % 24;
     const label = `${((h + 11) % 12) + 1}${h < 12 ? "am" : "pm"}`;
     return `<tr><td style="font-family:'Space Mono',monospace;font-size:8.5pt;color:#8a857a;width:14mm;padding:0 2mm;border-bottom:0.7pt solid #b9b3a4;height:${a.easyRead ? "10.2mm" : "8.6mm"};vertical-align:bottom;">${label}</td>
@@ -101,6 +113,7 @@ function dailyTime(a) {
     <div class="kicker">daily · time-blocked</div>
     <h1>Today</h1>
     ${energyRow(a)}
+    ${strip}
     <h2>The day, in blocks</h2>
     <table>${rows}</table>
     <p class="soft" style="margin-top:3mm;">Blocks are guesses, not promises. Moving one is planning, not failing.</p>
@@ -113,12 +126,14 @@ function dailyList(a) {
     `<div style="display:flex;align-items:flex-end;margin-bottom:4mm;">
       <span style="font-family:'Anton',sans-serif;font-size:16pt;color:${a.accent};width:10mm;">${n}</span>
       <div class="rule-line" style="flex:1;"></div></div>`).join("");
-  const maybe = Array.from({ length: 4 }, () => `<div class="rule-line"></div>`).join("");
-  const dump = Array.from({ length: 7 }, () => `<div class="rule-line"></div>`).join("");
+  const strip = nonNegotiables(a);
+  const maybe = Array.from({ length: strip ? 3 : 4 }, () => `<div class="rule-line"></div>`).join("");
+  const dump = Array.from({ length: strip ? 5 : 7 }, () => `<div class="rule-line"></div>`).join("");
   return `<div class="page">
     <div class="kicker">daily · list</div>
     <h1>Today</h1>
     ${energyRow(a)}
+    ${strip}
     <h2>The big three</h2>
     <p class="soft">If only these happen, today counted.</p>
     ${three}
@@ -244,6 +259,138 @@ function weeklyReview(a) {
   </div>`;
 }
 
+// Their own words: what a hard day looks like, what helps. Printed as written,
+// typos included — it is theirs. The lower half is made to be torn off or
+// photographed and handed to whoever is nearby.
+function hardDay(a) {
+  const looks = (a.hardDayLooks || "").trim();
+  const helps = (a.hardDayHelps || "").trim();
+  const words = (t, fallbackLines) => t
+    ? `<div class="box" style="border-color:${a.accent};padding:4mm 5mm;white-space:pre-wrap;">${esc(t)}</div>`
+    : Array.from({ length: fallbackLines }, () => `<div class="rule-line"></div>`).join("");
+  return `<div class="page">
+    <div class="kicker">hard days</div>
+    <h1>If today is one of those</h1>
+    <p class="soft">You wrote this on a better day, so present-you doesn't have to work it out from scratch.</p>
+    <h2>What a hard day looks like for me</h2>
+    ${words(looks, 4)}
+    <h2>What actually helps</h2>
+    ${words(helps, 4)}
+    <h2>Early signs, for me to spot</h2>
+    <div class="rule-line"></div><div class="rule-line"></div>
+    <div style="position:absolute;left:15mm;right:15mm;bottom:18mm;border-top:1.2pt dashed ${a.accent};padding-top:4mm;">
+      <div class="kicker" style="margin-bottom:2mm;">✂ hand this half to someone</div>
+      <h2 style="margin-top:0;">${esc(a.name)} is having a hard day. Here's what helps:</h2>
+      ${helps ? `<div style="white-space:pre-wrap;">${esc(helps)}</div>` : `<div class="rule-line"></div><div class="rule-line"></div><div class="rule-line"></div>`}
+      <h2>Today, specifically, I need</h2>
+      <div class="rule-line"></div><div class="rule-line"></div>
+      <p class="soft" style="margin-top:3mm;">Please don't ask what's wrong. Please don't fix it. One of the things above, then give it time.</p>
+    </div>
+    ${foot(a, "hard days — keep one where you'll find it")}
+  </div>`;
+}
+
+// Addressed to the person they said most needs to understand their brain,
+// pre-filled from the answers they already gave. Nothing on it is a secret
+// they didn't tell us.
+function helpMe(a) {
+  const who = a.helpWho || "";
+  const them = { partner: "my partner", manager: "my manager", teacher: "my teacher", parent: "my parent" }[who] || "the people around me";
+  const lines = [];
+  if (a.energy === "spoons") lines.push("I track my energy in spoons. If I say I'm on three today, that's the whole budget — not a mood, a number.");
+  if (a.energy === "battery") lines.push("I think of my energy as a battery. Low battery days get low battery plans; that isn't laziness, it's maths.");
+  if (a.dayShape === "evening") lines.push("My day starts later than most people's. Mornings are not when I'm at my best, and that's not going to change by trying harder.");
+  if (a.dayShape === "morning") lines.push("I'm at my best early. By the afternoon I've usually spent most of what I had.");
+  if (a.dayShape === "varies") lines.push("Which part of the day works for me changes. Asking \"is now a good time?\" genuinely helps.");
+  if (a.forgets && a.forgets.length) lines.push(`The things I lose track of every day: ${a.forgets.join(", ").toLowerCase()}. A reminder is a kindness, not a nag.`);
+  if (a.taskBreakdown) lines.push("A big task can be impossible to start even when I want to do it. Breaking it into the first tiny step helps more than encouragement.");
+  if ((a.hardDayHelps || "").trim()) lines.push(`On a hard day, what helps is: ${a.hardDayHelps.trim()}`);
+  if (a.easyRead) lines.push("Plain text, bigger type, more space. Walls of words cost me more than they cost you.");
+  const items = lines.map((t) => `<li style="margin-bottom:${a.easyRead ? "4mm" : "3mm"};">${esc(t)}</li>`).join("");
+  return `<div class="page">
+    <div class="kicker">how to help ${esc(a.name)}</div>
+    <h1>For ${esc(them)}</h1>
+    <p class="soft">${esc(a.name)} filled in a questionnaire about how their brain works. This page is the short version, for you.</p>
+    <ul style="margin:4mm 0 0 5mm;">${items}</ul>
+    <h2>Things I'd add</h2>
+    <div class="rule-line"></div><div class="rule-line"></div><div class="rule-line"></div>
+    <h2>Please don't say</h2>
+    <div class="rule-line"></div>
+    <h2>Try instead</h2>
+    <div class="rule-line"></div>
+    <h2>A good day for me looks like</h2>
+    <div class="rule-line"></div><div class="rule-line"></div>
+    <p class="caveat" style="margin-top:5mm;">thank you for reading this far — that's most of it</p>
+    ${foot(a, "how to help — give this one away")}
+  </div>`;
+}
+
+// Start-of-day and end-of-day as tick-lists, in the steps they chose.
+function routine(a) {
+  const col = (title, steps) => `<div style="flex:1;">
+    <h2 style="margin-top:0;">${title}</h2>
+    ${steps.length ? steps.map((t) => `<div style="display:flex;align-items:center;margin-bottom:${a.easyRead ? "5mm" : "4mm"};">
+      <span style="width:6mm;height:6mm;border:1.2pt solid ${INK};border-radius:1.5mm;margin-right:3.5mm;flex-shrink:0;"></span>${esc(t)}</div>`).join("")
+      : Array.from({ length: 6 }, () => `<div class="rule-line"></div>`).join("")}
+    <div class="rule-line"></div><div class="rule-line"></div>
+  </div>`;
+  return `<div class="page">
+    <div class="kicker">routines</div>
+    <h1>Start and finish</h1>
+    <p class="soft">The steps you said are yours, in a tickable order. Skip any of them. Half a routine is a routine.</p>
+    <div style="display:flex;gap:8mm;margin-top:5mm;">
+      ${col("Start of day", a.routineStart || [])}
+      ${col("End of day", a.routineEnd || [])}
+    </div>
+    <h2>The one step that makes the rest easier</h2>
+    <div class="rule-line"></div>
+    <p class="caveat" style="margin-top:6mm;">done is a feeling, not a checklist</p>
+    ${foot(a, "routines — stick this one on the wall")}
+  </div>`;
+}
+
+// A month at a glance. Undated, five weeks, three big rocks instead of thirty tasks.
+function month(a) {
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const head = days.map((d) => `<th style="font-family:'Space Mono',monospace;font-size:8pt;color:${a.accent};font-weight:400;padding-bottom:1.5mm;text-align:left;">${d}</th>`).join("");
+  const rows = Array.from({ length: 5 }, () => `<tr>${days.map(() =>
+    `<td style="border:0.9pt solid ${INK};height:23mm;vertical-align:top;padding:1.5mm;"><span style="display:inline-block;width:6mm;border-bottom:0.6pt solid #b9b3a4;font-size:7pt;">&nbsp;</span></td>`).join("")}</tr>`).join("");
+  return `<div class="page">
+    <div class="kicker">monthly</div>
+    <h1>The month, roughly</h1>
+    <h2 style="margin-top:0;">Three big rocks this month</h2>
+    ${[1,2,3].map((n)=>`<div style="display:flex;align-items:flex-end;margin-bottom:2.5mm;"><span style="font-family:'Anton',sans-serif;font-size:14pt;color:${a.accent};width:9mm;">${n}</span><div class="rule-line" style="flex:1;height:7mm;"></div></div>`).join("")}
+    <p class="soft" style="margin:2mm 0 3mm;">Write the dates in yourself. Thirty things is a wish list; three is a month.</p>
+    <table><tr>${head}</tr>${rows}</table>
+    ${foot(a, "monthly — print one per month")}
+  </div>`;
+}
+
+function brainDump(a) {
+  const lines = Array.from({ length: a.easyRead ? 20 : 24 }, () => `<div class="rule-line"></div>`).join("");
+  return `<div class="page">
+    <div class="kicker">brain dump</div>
+    <h1>Empty it here</h1>
+    <p class="soft">No order, no categories. Get it out of your head so the daily page stays clean. Sort it later, or never.</p>
+    <div style="margin-top:4mm;">${lines}</div>
+    ${foot(a, "brain dump — print as many as you like")}
+  </div>`;
+}
+
+function wins(a) {
+  const rows = Array.from({ length: a.easyRead ? 14 : 17 }, () =>
+    `<div style="display:flex;align-items:flex-end;margin-bottom:${a.easyRead ? "3.5mm" : "3mm"};">
+      <span style="width:18mm;border-bottom:0.7pt solid #b9b3a4;font-family:'Space Mono',monospace;font-size:7.5pt;color:#8a857a;height:${a.easyRead ? "10mm" : "8mm"};">date</span>
+      <div class="rule-line" style="flex:1;margin-left:3mm;height:${a.easyRead ? "10mm" : "8mm"};"></div></div>`).join("");
+  return `<div class="page">
+    <div class="kicker">wins</div>
+    <h1>Evidence I'm doing fine</h1>
+    <p class="soft">Not the Joy Log — that's for things that felt good. This is for things that went right, however small, so there's proof on the bad days.</p>
+    <div style="margin-top:4mm;">${rows}</div>
+    ${foot(a, "wins — a running list")}
+  </div>`;
+}
+
 function notes(a) {
   const dots = `<div style="height:225mm;background-image:radial-gradient(circle, #b9b3a4 0.45mm, transparent 0.45mm);background-size:6mm 6mm;"></div>`;
   return `<div class="page">
@@ -254,4 +401,4 @@ function notes(a) {
   </div>`;
 }
 
-module.exports = { COLOURS, css, cover, howTo, dailyTime, dailyList, weekly, taskBreakdown, sensoryReset, safeFoods, joyLog, appointmentPrep, weeklyReview, notes };
+module.exports = { COLOURS, css, cover, howTo, dailyTime, dailyList, weekly, month, taskBreakdown, routine, hardDay, helpMe, sensoryReset, safeFoods, joyLog, appointmentPrep, weeklyReview, brainDump, wins, notes };
