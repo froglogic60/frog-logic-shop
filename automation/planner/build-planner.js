@@ -11,6 +11,11 @@
 //   extras: ["sensory","safe-foods","joy","appointment","review"],
 //   easyRead: true|false,              // bigger, more spaced, no italics
 //   colour: "fern" | "night" | "rust" | "plum",
+//   // added 10 Oct 2026 — the answers that put the customer's own words on the page
+//   forgets: ["Meds", "Water"],        // tick strip on every daily page
+//   hardDayLooks: "...", hardDayHelps: "...",   // the Hard Day page, printed as written
+//   helpWho: "partner" | "manager" | "teacher" | "parent" | "nobody" | "",
+//   routineStart: ["Coffee", ...], routineEnd: ["Meds", ...],
 // }
 const fs = require("fs");
 const path = require("path");
@@ -29,6 +34,12 @@ function plannerHtml(answers) {
     extras: answers.extras || [],
     easyRead: !!answers.easyRead,
     colour: answers.colour || "fern",
+    forgets: (answers.forgets || []).map((t) => String(t).trim()).filter(Boolean),
+    hardDayLooks: String(answers.hardDayLooks || "").slice(0, 700),
+    hardDayHelps: String(answers.hardDayHelps || "").slice(0, 700),
+    helpWho: answers.helpWho || "",
+    routineStart: (answers.routineStart || []).map((t) => String(t).trim()).filter(Boolean),
+    routineEnd: (answers.routineEnd || []).map((t) => String(t).trim()).filter(Boolean),
   };
   a.accent = M.COLOURS[a.colour] || M.COLOURS.fern;
 
@@ -42,9 +53,14 @@ function plannerHtml(answers) {
   if (a.layout === "list" || a.layout === "both") {
     pages.push(M.dailyList(a)); contents.push("A list-style daily page — three things, then bonus room");
   }
+  if (a.forgets.length) contents.push("A don't-forget strip on every daily page: " + a.forgets.join(", ").toLowerCase());
   pages.push(M.weekly(a)); contents.push("A weekly spread (a shape, not a schedule)");
+  pages.push(M.month(a)); contents.push("A month at a glance — three big rocks, not thirty tasks");
   if (a.energy !== "none") contents.push(a.energy === "spoons" ? "Spoon tracking on every daily page" : "Battery tracking on every daily page");
+  if (a.routineStart.length || a.routineEnd.length) { pages.push(M.routine(a)); contents.push("Your start-of-day and end-of-day, as tick-lists"); }
   if (a.taskBreakdown) { pages.push(M.taskBreakdown(a)); contents.push("One Task, Broken Down — for the un-startable jobs"); }
+  if (a.hardDayLooks || a.hardDayHelps) { pages.push(M.hardDay(a)); contents.push("A Hard Day page, in your own words, with a half to hand to someone"); }
+  if (a.helpWho && a.helpWho !== "nobody") { pages.push(M.helpMe(a)); contents.push("How to help " + a.name + " — a page to give away"); }
   const EXTRA = {
     "sensory": [M.sensoryReset, "A sensory reset page for too-loud days"],
     "safe-foods": [M.safeFoods, "A safe foods list that treats sameness as a system"],
@@ -55,6 +71,8 @@ function plannerHtml(answers) {
   for (const key of a.extras) {
     if (EXTRA[key]) { pages.push(EXTRA[key][0](a)); contents.push(EXTRA[key][1]); }
   }
+  pages.push(M.brainDump(a)); contents.push("A brain dump page — empty it here, sort it never");
+  pages.push(M.wins(a)); contents.push("A running list of wins — evidence for the bad days");
   pages.push(M.notes(a)); contents.push("Dot-grid spare brain space");
   if (a.easyRead) contents.push("Set in clear, well-spaced easy-read type throughout");
 
