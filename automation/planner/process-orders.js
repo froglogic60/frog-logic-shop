@@ -66,10 +66,17 @@ function toAnswers(rec) {
   if (/appointment/i.test(rec.extras)) extras.push("appointment");
   if (/wind-?down/i.test(rec.extras)) extras.push("review");
   const colour = /night/i.test(rec.colour) ? "night" : /rust/i.test(rec.colour) ? "rust" : /plum/i.test(rec.colour) ? "plum" : "fern";
+  // Google Forms joins checkbox answers with ", " — and an "Other" answer is
+  // whatever they typed, which may itself contain a comma, so split carefully.
+  const ticks = (s) => String(s || "").split(/,\s(?=[A-Z])/).map((t) => t.trim()).filter(Boolean);
+  const w = rec.helpWho || "";
+  const helpWho = /partner/i.test(w) ? "partner" : /manager|boss|work/i.test(w) ? "manager" : /teacher|tutor|school/i.test(w) ? "teacher" : /parent|mum|dad/i.test(w) ? "parent" : /nobody/i.test(w) ? "nobody" : "";
   return {
     name: rec.name, layout, energy, dayShape,
     taskBreakdown: /^yes/i.test((rec.task || "").trim()),
     extras, easyRead: /^yes/i.test((rec.easyRead || "").trim()), colour,
+    forgets: ticks(rec.forgets), hardDayLooks: rec.hardDayLooks || "", hardDayHelps: rec.hardDayHelps || "",
+    helpWho, routineStart: ticks(rec.routineStart), routineEnd: ticks(rec.routineEnd),
   };
 }
 
@@ -134,13 +141,19 @@ async function sendPlanner(email, name, pdfPath) {
     ts: col(/timestamp/i), name: col(/name.*cover/i), email: col(/send it|email/i),
     layout: col(/day laid out/i), energy: col(/track energy/i), dayStart: col(/day actually start/i),
     task: col(/impossible to start/i), extras: col(/extra pages/i), easyRead: col(/easy-?read/i), colour: col(/cover colour/i),
+    // Added 10 Oct 2026. Optional: responses from before these questions
+    // existed have no such columns, and the builder treats a missing answer
+    // as "leave that page out".
+    forgets: col(/keep forgetting/i), hardDayLooks: col(/hard day look/i), hardDayHelps: col(/actually helps/i),
+    helpWho: col(/understand how your brain/i), routineStart: col(/start of day/i), routineEnd: col(/end of day/i),
   };
-  for (const [k, v] of Object.entries(idx)) if (v === -1) throw new Error("Column not found in sheet: " + k);
+  const OPTIONAL = new Set(["forgets", "hardDayLooks", "hardDayHelps", "helpWho", "routineStart", "routineEnd"]);
+  for (const [k, v] of Object.entries(idx)) if (v === -1 && !OPTIONAL.has(k)) throw new Error("Column not found in sheet: " + k);
 
   const paid = await paidEmails();
   let made = 0, waiting = 0;
   for (const r of rows.slice(1)) {
-    const rec = Object.fromEntries(Object.entries(idx).map(([k, i]) => [k, (r[i] || "").trim()]));
+    const rec = Object.fromEntries(Object.entries(idx).map(([k, i]) => [k, i === -1 ? "" : (r[i] || "").trim()]));
     if (!rec.email || !rec.name) continue;
     const key = (rec.ts + "|" + rec.email).toLowerCase();
     if (doneKeys.has(key)) continue;
