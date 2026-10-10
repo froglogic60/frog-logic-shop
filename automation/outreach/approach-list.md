@@ -167,7 +167,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ## 8. ADHD Embrace
 
-**To:** contact form at adhdembrace.org
+**To:** info@adhdembrace.org
 **Why them:** Supports parents and professionals working with children and teenagers with ADHD — the people photocopying worksheets.
 **Subject:** Free neurotype guides for parents, and printable sheets for the professionals you support
 
@@ -207,7 +207,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ## 10. Dyspraxia Foundation
 
-**To:** contact form at dyspraxiafoundation.co.uk
+**To:** information@dyspraxiafoundation.co.uk
 **Why them:** Local support groups and a helpline — and dyspraxia is one of the free guides, which is a reason to write that isn't a sales pitch.
 **Subject:** A free plain-English dyspraxia guide, if it's useful to your groups
 
