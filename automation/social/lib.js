@@ -53,6 +53,16 @@ async function prepareFonts(dir) {
 // Weekly mix follows the standing content rules: ~40% relatable (quote/art),
 // ~30% product showcase, ~20% educational, ~10% behind-the-scenes.
 const WEEK_MIX = ["q", "q", "q", "q", "q", "a", "a", "a", "a", "s", "s", "s", "s", "s", "s", "e", "e", "e", "e", "b", "b"];
+// From the week of 12 Oct 2026 (Sam, 13 Oct: "more planner posts ... and more
+// often"): four of the 21 weekly slots go to the Bespoke Planner ("p"), roughly
+// every other day. Before this the planner only came up when the download
+// rotation happened to land on it — about once a month. It takes three of the
+// six general download slots and one quote slot, so the feed is still mostly
+// not-an-advert. Earlier weeks keep the old mix so the rotations carry on from
+// where they were instead of jumping.
+const WEEK_MIX_V2 = ["q", "q", "q", "q", "a", "a", "a", "a", "s", "s", "s", "p", "p", "p", "p", "e", "e", "e", "e", "b", "b"];
+const V2_FROM_WEEK = 8; // week 8 = Mon 12 Oct 2026
+const PLANNER_SLOTS = [1, 7, 13, 19]; // day*3 + slot: Mon, Wed, Fri, Sun at 1pm
 const EPOCH = Date.UTC(2026, 7, 17); // Monday 17 Aug 2026
 
 function mulberry32(seed) {
@@ -66,11 +76,15 @@ function mulberry32(seed) {
 
 function weekTypes(weekIndex) {
   const rand = mulberry32(weekIndex + 1);
-  const arr = [...WEEK_MIX];
+  const v2 = weekIndex >= V2_FROM_WEEK;
+  const arr = v2 ? WEEK_MIX_V2.filter((t) => t !== "p") : [...WEEK_MIX];
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(rand() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
+  // A shuffle can stack three planner posts on one day, so the planner gets
+  // fixed slots instead: the 1pm post on Monday, Wednesday, Friday and Sunday.
+  if (v2) for (const pos of PLANNER_SLOTS) arr.splice(pos, 0, "p");
   return arr;
 }
 
@@ -120,7 +134,51 @@ const SHOWCASE_LINES = [
   `One of the calm tools from the pond. ${SHOP}`,
 ];
 
+// ---- the Bespoke Planner's own rotation.
+// Alternates two looks so four a week don't feel like the same advert: even
+// occurrences show the planner artwork with the price, odd ones a text card
+// about one thing the planner does. Every caption carries the price and
+// points at the planner on the page, not just the shop's front door.
+const PLANNER_LINK = `${SHOP}/#bespoke`;
+const PLANNER_NOTES = [
+  { title: "A planner that knows your hard days", body: "Tell it what a hard day looks like and what actually helps. It prints your own words back to you — with a tear-off half to hand to someone." },
+  { title: "Built for one brain", body: "Fifteen questions about how your days really run. Then a planner of up to eighteen pages, made for nobody but you." },
+  { title: "The page you give away", body: "Pick who most needs to understand you — a partner, a manager, a teacher, a parent. One page, addressed to them, in your words." },
+  { title: "Undated on purpose", body: "Skip a week, skip a month. Nothing is wasted. Print the pages you need, as often as you need them, forever." },
+  { title: "Your mornings, as a tick-list", body: "Tell it how your day starts and ends. The steps become boxes, so the routine lives on paper instead of in your head." },
+  { title: "The don't-forget strip", body: "Meds, water, keys, food — whatever you keep losing goes on every daily page. One glance. No app." },
+  { title: "Energy, counted your way", body: "Spoons, battery, or neither. Every daily page tracks it the way you already think about it." },
+  { title: "If it doesn't fit, it gets rebuilt", body: "Answer the questions again and a new one is built, free. That's what made for you means." },
+];
+const PLANNER_LINES = [
+  "Every planner I bought was built for someone else's brain. This one is built for yours.",
+  "Answer the questions, and a printable planner made around your days lands in your inbox.",
+  "Not a template with your name on it. A planner assembled from your answers, page by page.",
+  "For everyone who has abandoned a planner by February.",
+];
+
+function plannerPost(occurrence, site) {
+  const p = site.DIGITAL_PRODUCTS.find((x) => x.feature);
+  if (!p) throw new Error("Bespoke Planner (feature: true) missing from DIGITAL_PRODUCTS");
+  const n = Math.floor(occurrence / 2);
+  if (occurrence % 2 === 0) {
+    const line = PLANNER_LINES[n % PLANNER_LINES.length];
+    return {
+      // The site artwork still says "NINE QUESTIONS" until the next site deploy
+      // (it's fifteen since 10 Oct), so the posts swap in the pin's wording.
+      kind: "showcase", item: { ...p, sub: "made for you", svg: p.svg.replace("NINE QUESTIONS", "YOUR WORDS") },
+      caption: `${line} 🐸\n\nThe Bespoke Planner — ${p.price}. ${PLANNER_LINK}\n\n${tags(occurrence)}`,
+    };
+  }
+  const note = PLANNER_NOTES[n % PLANNER_NOTES.length];
+  return {
+    kind: "note", item: { tag: "the bespoke planner", ...note },
+    caption: `${note.title}. ${note.body} 🐸\n\nThe Bespoke Planner — ${p.price}. ${PLANNER_LINK}\n\n${tags(occurrence)}`,
+  };
+}
+
 function buildPost({ type, occurrence }, bank, site) {
+  if (type === "p") return plannerPost(occurrence, site);
   if (type === "q") {
     const q = bank.quotes[occurrence % bank.quotes.length];
     return {
@@ -136,7 +194,10 @@ function buildPost({ type, occurrence }, bank, site) {
     };
   }
   if (type === "s") {
-    const p = site.DIGITAL_PRODUCTS[(occurrence * 11) % site.DIGITAL_PRODUCTS.length];
+    // The planner has its own slots ("p") and isn't an instant download, so the
+    // general download rotation leaves it out.
+    const downloads = site.DIGITAL_PRODUCTS.filter((x) => !x.feature);
+    const p = downloads[(occurrence * 11) % downloads.length];
     const cta = SHOWCASE_LINES[occurrence % SHOWCASE_LINES.length];
     return {
       kind: "showcase", item: p,
