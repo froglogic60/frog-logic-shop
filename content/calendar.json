@@ -517,6 +517,14 @@
         {
           "what": "Engagement (last 28 days): planner posts 6 × 0 interactions each (reach 2) · other posts 163 × 0.17 (reach 3)",
           "who": "robot"
+        },
+        {
+          "what": "FIXED: the daily posts had been going out 2–3 times a day with the morning and lunchtime ones missing — GitHub ran the schedule hours late and the robot read the clock. Now the robot knows which slot it is regardless of lateness, refuses to post a slot twice, and the times moved to 9:17 / 1:17 / 6:17",
+          "who": "done"
+        },
+        {
+          "what": "New: engagement read-out every Monday (planner posts vs the rest, both platforms) — lands here as an 'Engagement' line. First read: ~0.2 interactions a post, Instagram reach 2–3 people a post",
+          "who": "done"
         }
       ]
     },
