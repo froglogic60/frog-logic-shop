@@ -1,0 +1,33 @@
+name: Weekly engagement read-out
+# Reads likes / comments / shares / reach for the last 28 days of Facebook and
+# Instagram posts, splits planner posts from the rest, and writes
+# automation/social/engagement.json + a line on the Desk. Read-only on Meta.
+on:
+  schedule:
+    - cron: "20 7 * * 1"   # Mondays 07:20 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pull the numbers
+        working-directory: automation/social
+        run: node engagement.js
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      - name: Commit the report
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/engagement.json content/calendar.json
+          git commit -m "Engagement read-out $(date -u +%F) [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
