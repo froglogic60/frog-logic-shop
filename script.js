@@ -1893,7 +1893,7 @@ function renderProducts(){
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
-        <h3>${p.word}</h3>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
         <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="physical">Get this piece</button>
@@ -2544,7 +2544,7 @@ const DIGITAL_PRODUCTS = [
     // Not a download — a questionnaire. The robot builds one planner per person
     // from the answers and emails it, so the button goes to the form, not the till.
     num: "D33 — Made to order", word: "The Bespoke Planner",
-    line: "Every planner you've bought was built for someone else's brain. Answer nine questions — how your day runs, how you track energy, what you need on the page and what you need gone — and a planner of up to ten pages is built for yours and emailed as a printable PDF, usually within a couple of hours. If it doesn't fit, answer again and it gets rebuilt free.",
+    line: "Every planner you've bought was built for someone else's brain. Answer fifteen questions — how your day runs, how you track energy, what you keep forgetting, what a hard day looks like and who needs to understand your brain — and a planner of up to eighteen pages is built for yours and emailed as a printable PDF, usually within a couple of hours. If it doesn't fit, answer again and it gets rebuilt free.",
     price: "£25.00", link: "https://forms.gle/GJjQ8rMSoqh7ffPx5", external: "Answer the questions", bg: "#5E4A8C", feature: true,
     // One page with the boxes still blank: it gets filled in for you.
     svg: `<svg viewBox="0 0 300 300">${grain("d33", 0.11)}
@@ -2564,7 +2564,7 @@ const DIGITAL_PRODUCTS = [
       <path d="M98,68 l3,3 l6,-7" fill="none" stroke="${GOLD}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
       <rect x="96" y="160" width="104" height="22" rx="2" fill="none" stroke="${GOLD}" stroke-width="1.6" stroke-dasharray="3 3"/>
       <text x="150" y="228" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="${CREAM}">MADE FOR ONE BRAIN</text>
-      <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">YOURS · NINE QUESTIONS · £25</text>
+      <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">YOURS · YOUR WORDS · £25</text>
       <rect width="300" height="300" fill="url(#d33)"/>${mark()}</svg>`
   },
   {
@@ -2624,7 +2624,7 @@ function renderDigital(){
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
-        <h3>${p.word}</h3>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
         ${p.external
@@ -2697,13 +2697,10 @@ const GUIDES = [
   { num: "Pond Guide", word: "Auditory Processing", line: "The hearing test is perfect and the pub is still impossible. The ears are fine; it's the sorting office.", price: "Free", link: "#", bg: "#6B4A2E", slug: "APD" },
 ];
 
-function renderGuides(){
-  const grid = document.getElementById('guides-grid');
-  if(!grid) return;
-  grid.innerHTML = GUIDES.map(g => `
-    <article class="card">
-      <div class="stage" style="background:${g.bg}">
-        <svg viewBox="0 0 300 300">
+// One guide cover, used by the guides grid here and by the product-page
+// builder (automation/site/build-pages.cjs) so the two can never drift.
+function guideSvg(g){
+  return `<svg viewBox="0 0 300 300">
           <defs><pattern id="pg${g.slug}" width="6" height="6" patternUnits="userSpaceOnUse">
             <circle cx="1.5" cy="1.5" r="1.5" fill="${INK}" opacity="0.11"/></pattern></defs>
           <text x="26" y="62" font-family="Space Mono, monospace" font-size="8.5"
@@ -2718,11 +2715,20 @@ function renderGuides(){
             font-size="24" fill="${GOLD}">take what fits, leave the rest</text>
           <rect width="300" height="300" fill="url(#pg${g.slug})"/>
           <image href="${LOGO}" x="240" y="16" width="46" height="40" preserveAspectRatio="xMidYMid meet"/>
-        </svg>
+        </svg>`;
+}
+
+function renderGuides(){
+  const grid = document.getElementById('guides-grid');
+  if(!grid) return;
+  grid.innerHTML = GUIDES.map(g => `
+    <article class="card">
+      <div class="stage" style="background:${g.bg}">
+        ${guideSvg(g)}
       </div>
       <div class="card-meta">
         <p class="card-num">${g.num}</p>
-        <h3>${g.word}</h3>
+        <h3><a href="/p/${pageSlug(g)}/">${g.word}</a></h3>
         <p class="card-line">${g.line}</p>
         <p class="card-price">${g.price}</p>
         <a class="btn btn-primary" href="/digital/Pond-Guide-${g.slug}.pdf" download>Download</a>
@@ -2746,7 +2752,7 @@ function renderHalloween(){
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
-        <h3>${p.word}</h3>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
         <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="physical">Get this piece</button>
@@ -2763,7 +2769,7 @@ function renderFrogs(){
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
-        <h3>${p.word}</h3>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
         <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="physical">Get this piece</button>
@@ -2877,7 +2883,7 @@ function renderProfessional(){
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
-        <h3>${p.word}</h3>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
         <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Buy the set</button>
@@ -2931,13 +2937,33 @@ function renderOrganisations(){
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
-        <h3>${p.word}</h3>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
         <p class="card-line">${p.line}</p>
         <p class="card-price">${p.price}</p>
         <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Buy the licence</button>
       </div>
     </article>
   `).join('');
+}
+
+// Every product, download and guide has its own page at /p/<slug>/ (built by
+// automation/site/build-pages.cjs from these same arrays). The slug is the word;
+// when two things share a word — Overstimulated is a tee and a bottle — the
+// kind is added. The three Organisation Pack tiers share one page.
+function slugify(s){ return String(s).toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+let PAGE_DUPES = null;
+function pageSlug(item){
+  if(!PAGE_DUPES){
+    const seen = {}; PAGE_DUPES = new Set();
+    [...PRODUCTS.filter(p => !p.retired), ...DIGITAL_PRODUCTS, ...GUIDES, ...PROFESSIONAL].forEach(p => {
+      const k = slugify(p.word); if(seen[k]) PAGE_DUPES.add(k); seen[k] = true;
+    });
+  }
+  const base = slugify(item.word);
+  if(/^O\d/.test(item.num)) return base;
+  if(!PAGE_DUPES.has(base)) return base;
+  const kind = item.num === 'Pond Guide' ? 'guide' : item.num.includes('\u2014') ? item.num.split('\u2014')[1].trim() : item.num;
+  return base + '-' + slugify(kind);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
