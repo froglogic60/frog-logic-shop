@@ -81,7 +81,7 @@ function makeRenderer({ logoFile }) {
   <g transform="translate(190,40) scale(2.33)">${inlineArt(product.svg)}</g>
   <rect x="0" y="${SIZE - 290}" width="${SIZE}" height="290" fill="${INK}"/>
   <text x="90" y="${SIZE - 200}" font-family="Fraunces" font-size="52" font-weight="600" fill="${CREAM}">${esc(product.word)}</text>
-  <text x="90" y="${SIZE - 136}" font-family="Space Mono" font-size="32" fill="${GOLD}">${esc(product.price)} · instant download</text>
+  <text x="90" y="${SIZE - 136}" font-family="Space Mono" font-size="32" fill="${GOLD}">${esc(product.price)} · ${esc(product.sub || "instant download")}</text>
   <text x="90" y="${SIZE - 74}" font-family="Space Mono" font-size="28" fill="${CREAM}" opacity="0.85">froglogic.co.uk</text>
 </svg>`;
   }
