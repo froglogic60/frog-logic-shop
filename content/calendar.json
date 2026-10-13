@@ -519,11 +519,11 @@
           "who": "robot"
         },
         {
-          "what": "Pinterest bulk upload done: 116 pins (one per product page, incl. the five printables that were never pinned), five a day 14 Oct – 6 Nov, each linking to its own page. Pinterest builds them within ~2 hours and emails if any row fails",
+          "what": "Pinterest bulk upload: 81 of the 116 product-page pins are scheduled (five a day, 14–29 Oct). Pinterest caps an account at 100 scheduled pins, so the last 35 (30 Oct–6 Nov) were refused — Claude re-uploads them on 21 Oct once there is room",
           "who": "done"
         },
         {
-          "what": "Etsy kits for all 18 unlisted downloads are built and on GitHub (automation/social/etsy-kits/, or etsy-kits.zip) — attach a folder's 7 files and Claude posts five at a time",
+          "what": "Etsy batch four LIVE: Access Needs Cards, Affirmation Cards, After The Diagnosis, Ask For It Properly (as Workplace Accommodations Request Builder), Finding My People — £3.50 each, shop now 21 listings. 13 kits still to post (in automation/social/etsy-kits/ on GitHub): attach a folder's 7 files and Claude lists it",
           "who": "done"
         },
         {
@@ -639,6 +639,15 @@
       ]
     },
     {
+      "date": "2026-10-21",
+      "items": [
+        {
+          "what": "Claude: re-upload the 35 refused Pinterest pins (pins-pages-retry.csv) — reminder set",
+          "who": "robot"
+        }
+      ]
+    },
+    {
       "date": "2026-10-24",
       "items": [
         {
@@ -730,7 +739,7 @@
           "who": "robot"
         },
         {
-          "what": "Old noon Pinterest queue ends today; the product-page batch keeps going to 6 Nov. Claude builds the next CSV (bulk upload — no 30-day limit) when told",
+          "what": "Old noon Pinterest queue ends today; the product-page batch runs to 6 Nov once the 21 Oct re-upload is in. Claude builds the next CSV (bulk upload, max 100 scheduled at a time) when told",
           "who": "you"
         }
       ]
@@ -791,7 +800,7 @@
     }
   ],
   "whenever": [
-    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — kits for all 18 remaining downloads are on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four drafts are written",
+    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — five more listed 13 Oct, 13 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four drafts are written",
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
