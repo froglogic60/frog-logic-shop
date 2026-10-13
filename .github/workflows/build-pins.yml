@@ -1,0 +1,37 @@
+name: Build the Pinterest pins
+# One pin per product page + the bulk-upload spreadsheet (pins-pages.csv) for
+# Pinterest's Settings → Import content. Images are served from
+# raw.githubusercontent.com, so no site deploy is needed. Commits [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "First publish date (YYYY-MM-DD, UTC). Five pins a day from here."
+        default: ""
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Build pins and spreadsheet
+        working-directory: automation/social
+        run: START="${{ github.event.inputs.start }}" node pins-pages.cjs
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/pins-pages
+          git commit -m "Pinterest pins rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
