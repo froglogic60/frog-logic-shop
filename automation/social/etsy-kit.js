@@ -74,6 +74,116 @@ const COPY = {
     why: "Small cards that say the thing you forget you're allowed to do.",
     tags: ["permission cards", "affirmation cards", "self compassion", "adhd printable", "autistic adults", "neurodivergent", "rest reminder", "burnout", "mental health cards", "printable cards", "printable pdf", "instant download", "neurodiversity"],
   },
+
+  // ---- batch four onwards (13 Oct 2026): everything still unlisted.
+  "When Words Go": {
+    title: "Non-Speaking Moment Cards | 22 Point-and-Show Cards for Autistic Adults, Shutdown & Situational Mutism | Printable PDF Lanyard Size",
+    inside: ["22 point-and-show cards: I can't speak right now, I need somewhere quieter, please don't touch me, help me find…", "Blanks to write your own, plus a contact card", "85 × 54 mm — fits a standard lanyard sleeve, wallet or phone case", "Three A4 pages, cut along the outlines; laminate to make them last"],
+    why: "For the moment speech goes and you're stood in a shop. The card says it so you don't have to.",
+    tags: ["non speaking cards", "situational mutism", "autism cards", "shutdown support", "communication cards", "neurodivergent", "lanyard cards", "aac cards", "autistic adults", "selective mutism", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "My Pond Plan": {
+    title: "Shutdown and Meltdown Support Plan | Early Signs, What Helps, What Makes It Worse | Printable PDF for Autistic & ADHD Adults",
+    inside: ["Early signs — what shows up before a shutdown or meltdown", "What helps: a place, a sound, an object, a person, being left alone", "What makes it harder, named plainly", "Afterwards, what helps you recover; two A4 pages, one to hand to someone"],
+    why: "A plan for hard moments, written on a calm one. Change it whenever you learn something new.",
+    tags: ["meltdown plan", "shutdown plan", "autism support plan", "sensory overload", "crisis plan", "neurodivergent", "adhd printable", "autistic adults", "self regulation", "care plan", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Access Needs Cards": {
+    title: "Access Needs Cards | 6 Cut-Out Cards: I Communicate Better in Writing, I Need a Moment to Process | Printable PDF for Neurodivergent Adults",
+    inside: ["Six ready-written cards to hand over instead of explaining out loud", "I communicate better in writing · I need a moment to process · please don't touch me", "A sheet of blanks to write your own", "Two A4 pages; print, cut, keep a few in your wallet"],
+    why: "For appointments, new workplaces, shops — any moment where saying it out loud is the hardest part.",
+    tags: ["access needs", "accommodation cards", "autism cards", "adhd cards", "communication cards", "neurodivergent", "disability cards", "self advocacy", "sensory needs", "wallet cards", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "What I'm Actually Good At": {
+    title: "What I'm Actually Good At | Strengths Worksheet After an Autism or ADHD Assessment | Printable PDF Reframing Sheet",
+    inside: ["Things I do better than most people — not modestly, accurately", "What people come to me for", "A time my brain worked exactly right", "A traits-reframed table: what you were criticised for, written the true way round. Two A4 pages"],
+    why: "Diagnostic paperwork is a list of deficits. This is the other half of the assessment.",
+    tags: ["adhd strengths", "autism strengths", "late diagnosed", "post diagnosis", "self esteem", "neurodivergent", "reframing", "strengths worksheet", "autistic adults", "adhd adults", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Good Day Blueprint": {
+    title: "Good Day Blueprint | Work Backwards From a Day That Felt Right | Printable PDF Planner for ADHD & Autistic Adults",
+    inside: ["Start from a day that actually felt right — recent or not", "What time it started, who was in it, how much was planned, what you ate, how noisy it was", "Pull out the ingredients you can repeat", "One A4 page"],
+    why: "Good days aren't luck — they have components. This finds yours.",
+    tags: ["good day planner", "adhd planner", "autism planner", "routine planner", "self care worksheet", "neurodivergent", "burnout prevention", "daily routine", "wellbeing printable", "reflection sheet", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Ask For It Properly": {
+    title: "Workplace Accommodations Request Builder | Reasonable Adjustments Sheet for ADHD & Autistic Adults | Printable PDF",
+    inside: ["Builds the request line by line: the situation, the effect on the work, the specific ask, what it costs them", "Ten common asks to tick", "No apology, no justifying your existence — just what happens and what fixes it", "Two A4 pages"],
+    why: "Requests land better when they name a specific problem and offer a specific fix. This writes it with you.",
+    tags: ["adjustments", "work accommodations", "adhd at work", "autism at work", "accommodation", "neurodivergent", "access to work", "self advocacy", "employment support", "hr letter", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "After The Diagnosis": {
+    title: "After The Diagnosis | Late-Diagnosed Autism & ADHD Reflection Sheet: Relief, Grief, What Made Sense, Who to Tell | Printable PDF",
+    inside: ["What you felt when you found out — tick freely, contradictions allowed", "Things that suddenly made sense", "Who you've told, and who doesn't need to know", "Two A4 pages; come back to it over months, not days"],
+    why: "Nobody hands you this part. Relief, grief and anger can all land in the same hour, and there's no right order.",
+    tags: ["late diagnosed", "adhd diagnosis", "autism diagnosis", "post diagnosis", "late diagnosis adult", "neurodivergent", "self discovery", "reflection worksheet", "autistic adults", "adhd adults", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Finding My People": {
+    title: "Finding My People | Friendship Without Small Talk, Shared Interests and Side-by-Side Time | Printable PDF for Autistic & ADHD Adults",
+    inside: ["What you actually want more of: one or two close people, someone to be quiet near, text-based contact", "Places organised around a thing, not around chat", "A low-effort contact list", "One small move. One A4 page"],
+    why: "Wanting friendship and finding the usual routes to it unbearable is not a contradiction.",
+    tags: ["making friends", "autism friendship", "adhd friendship", "social anxiety", "loneliness", "neurodivergent", "social skills", "connection", "adult friendship", "introvert", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "The Handover Sheet": {
+    title: "The Handover Sheet | Everything the Next Carer Needs to Know: Respite, Hospital, Sitter, School Trip | Autism & ADHD Printable PDF",
+    inside: ["How they communicate, and what changes when they're stressed", "What a good hour looks like; early warning signs", "A do / don't table", "Two A4 pages — fill in once, photocopy it, done. Written to be understood by someone who has never met them"],
+    why: "For respite, a hospital stay, a sitter, or the day you're ill. Everything the next person needs, on one sheet.",
+    tags: ["care handover", "respite care", "autism care plan", "all about me", "hospital passport", "neurodivergent", "sen parent", "carer sheet", "babysitter notes", "special needs", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Your Sheet, For Once": {
+    title: "Your Sheet, For Once | Carer & SEN Parent Check-In: Your Warning Signs, Respite Named Properly, Scripts for Asking | Printable PDF",
+    inside: ["Where you actually are today: running on empty → alright, actually", "Your own warning signs — you can spot theirs instantly; these are yours", "Twenty minutes of respite, named properly", "Scripts for asking without apologising. One A4 page, needs showing to nobody"],
+    why: "Every form you've filled in this year has been about someone else. This one isn't.",
+    tags: ["carer self care", "sen parent", "parent burnout", "carer burnout", "respite", "nd family", "autism parent", "adhd parent", "self care worksheet", "wellbeing check in", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "For The Sibling": {
+    title: "For The Sibling | A Sheet for the One Who Got Good at Being Fine, for Siblings of Autistic and ADHD People | Printable PDF",
+    inside: ["Things I got very good at: being fine, being quiet, sorting it myself", "Things I didn't ask for, but wanted", "What I love about them — both things allowed on the same page", "What I'd like more of now. One A4 page"],
+    why: "Houses like yours run on everyone adjusting, and you did your share early. That can be true at the same time as loving them.",
+    tags: ["sibling support", "autism sibling", "adhd sibling", "glass child", "sen sibling", "nd family", "family worksheet", "sibling worksheet", "young carer", "family therapy", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Lily Pad Planner": {
+    title: "Lily Pad Planner | Gentle Weekly Planner & Daily Tracker for ADHD Adults — 3 Big Rocks, Froggy Wins Column | Cute Frog Printable PDF",
+    inside: ["Weekly overview: Mon–Sun with your top three big rocks for the week", "A froggy wins column — anything counts, even the tiny hops", "A daily tracker page", "Three A4 pages, undated: print a fresh week whenever you need one"],
+    why: "No need to leap ahead — just hop to the next lily pad.",
+    tags: ["adhd planner", "weekly planner", "cute frog planner", "gentle planner", "undated planner", "neurodivergent", "executive function", "habit tracker", "daily tracker", "frog printable", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Hoppy Thoughts — Issue 01": {
+    title: "Hoppy Thoughts Zine Issue 01 | Frog Jokes, One-Liners and Gentle Truths for ADHD & Autistic Brains | 8-Page Printable Zine PDF",
+    inside: ["An eight-page zine of frog-themed jokes, one-liners and gentle truths", "Focus, executive function, sensory everything, social battery, rest", "Read front to back, or flip to whatever lily pad calls to you", "A4, prints as single pages or a booklet"],
+    why: "A little zine of frog logic, for brains that work sideways.",
+    tags: ["zine", "printable zine", "adhd humour", "autism humour", "neurodivergent gift", "frog zine", "cute frog", "mental health zine", "adhd gift", "autism gift", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Hoppy Thoughts — Issue 02": {
+    title: "Hoppy Thoughts Zine Issue 02, The Slow Season | Work & School Accommodations, Relationships, Holidays, Frog Horoscope | Printable Zine PDF",
+    inside: ["Work and school accommodations", "Relationships and communication; holidays and big gatherings", "Dear Frog — an advice column", "Your froggy horoscope. Eight A4 pages, prints as single pages or a booklet"],
+    why: "The slow season edition: work, love, holidays and hibernation.",
+    tags: ["zine", "printable zine", "adhd humour", "autism humour", "neurodivergent gift", "frog zine", "holiday survival", "accommodations", "adhd gift", "autism gift", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Affirmation Cards": {
+    title: "Affirmation Cards for Neurodivergent Adults | 24 Cut-Out Cards: My Pace Is Not a Flaw, Slow Days Are Still Days | Cute Frog Printable PDF",
+    inside: ["24 cards to cut out and keep where you'll actually see them", "“My pace is not a flaw. It's just my pace.” “Small hops still move me across the pond.”", "Nothing here needs to be earned first", "Two A4 pages, cut along the lines"],
+    why: "Twenty-four lines for the days the inner voice is unkind.",
+    tags: ["affirmation cards", "affirmations", "adhd affirmations", "autism affirmations", "self compassion", "neurodivergent", "cute frog", "positivity cards", "mental health cards", "self love cards", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Habit Stacking Cards": {
+    title: "Habit Stacking Cards | After I ___, I Will ___ — Fill-in Cards for ADHD Routines | Cute Frog Printable PDF",
+    inside: ["Fill-in cards: After I ______, I will drink one glass of water / take my meds / put one dish in the sink", "Attach one small habit to something you already do without thinking", "Then stop thinking about it", "Two A4 pages, cut out and stick where the habit happens"],
+    why: "Habits that hang off something you already do don't need remembering.",
+    tags: ["habit stacking", "adhd habits", "habit cards", "routine cards", "executive function", "neurodivergent", "adhd routine", "habit tracker", "cute frog", "productivity", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Translation Cards": {
+    title: "Translation Cards | 12 Self-Talk Swaps: 'I'm Lazy' → 'I'm Conserving Energy for What Matters' | Cute Frog Printable PDF for ADHD & Autism",
+    inside: ["Twelve harsh things you say about yourself, each with a truer sentence beside it", "“I'm too sensitive” → “I notice things at a different volume than most”", "“I can't focus” → “My attention free-ranges instead of staying fenced in”", "Two A4 pages, ready to use"],
+    why: "The harsh thing you say about yourself, and a truer sentence to put next to it.",
+    tags: ["self talk", "cognitive reframing", "adhd self esteem", "autism self esteem", "rsd", "neurodivergent", "cute frog", "mental health cards", "self compassion", "cbt cards", "printable pdf", "instant download", "neurodiversity"],
+  },
+  "Frog Logic Stickers": {
+    title: "Printable Neurodivergent Stickers | 18 Designs to Print at Home: Low Spoons, Touched Out, Do Not Perceive Me | ADHD & Autism Sticker PDF",
+    inside: ["Eighteen designs across two A4 sheets, 54 mm square", "Low spoons today, touched out, rejection sensitive, stimming, demand avoidant, do not perceive me, sensory seeking, recharging…", "Sticker paper from any stationers works; so does ordinary paper with a glue stick", "Cut along the dashed lines, or round the corners so they last on a water bottle"],
+    why: "Every design in the sticker collection, to print at home on whatever paper you already have.",
+    tags: ["printable stickers", "nd stickers", "adhd stickers", "autism stickers", "sticker sheet", "spoon theory", "sensory stickers", "laptop stickers", "bottle stickers", "digital stickers", "printable pdf", "instant download", "neurodiversity"],
+  },
 };
 
 function description(p, c, pages) {
@@ -180,7 +290,7 @@ function img5(p, c) { // why / voice
   await ensureFonts(fontDir);
   const css = fontFaceCSS(fontDir);
   const logoData = "data:image/png;base64," + fs.readFileSync(path.join(__dirname, "../../assets/frog-logic-mark-sm.png")).toString("base64");
-  const { chromium } = require("playwright-core");
+  let chromium; try { ({ chromium } = require("playwright")); } catch { ({ chromium } = require("playwright-core")); }
   const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
   fs.mkdirSync(OUT, { recursive: true });
 
