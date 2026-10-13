@@ -1,9 +1,12 @@
 name: Daily social posts
+# Off the hour on purpose: GitHub queues every repo's on-the-hour jobs together
+# and ours were starting 3–7 hours late (12 Oct 2026: all three runs landed
+# after 17:00 UTC). Quieter minutes start closer to time.
 on:
   schedule:
-    - cron: "0 8 * * *"
-    - cron: "0 12 * * *"
-    - cron: "0 17 * * *"
+    - cron: "17 8 * * *"
+    - cron: "17 12 * * *"
+    - cron: "17 17 * * *"
   workflow_dispatch:
     inputs:
       slot:
@@ -21,15 +24,23 @@ jobs:
           node-version: 20
       - name: Work out which slot this run is
         id: slot
+        # The slot comes from WHICH schedule fired, not from the clock. The old
+        # version read the clock, so when GitHub ran the 8am and noon jobs late
+        # in the afternoon they both counted as the 6pm slot: the same post went
+        # out two or three times a day and the morning and lunchtime posts were
+        # never made at all (11–12 Oct 2026).
         run: |
-          if [ -n "${{ github.event.inputs.slot }}" ]; then
-            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          if [ -n "${{ github.event.inputs.slot }}" ]; then SLOT="${{ github.event.inputs.slot }}"
           else
-            H=$(date -u +%H)
-            if [ "$H" -lt 10 ]; then echo "slot=0" >> "$GITHUB_OUTPUT"
-            elif [ "$H" -lt 15 ]; then echo "slot=1" >> "$GITHUB_OUTPUT"
-            else echo "slot=2" >> "$GITHUB_OUTPUT"; fi
+            case "${{ github.event.schedule }}" in
+              "17 8 * * *")  SLOT=0 ;;
+              "17 12 * * *") SLOT=1 ;;
+              "17 17 * * *") SLOT=2 ;;
+              *) echo "Unknown schedule '${{ github.event.schedule }}'"; exit 1 ;;
+            esac
           fi
+          echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
+          echo "This run is slot $SLOT"
       - name: Install renderer
         working-directory: automation/social
         run: npm install --no-audit --no-fund
@@ -54,3 +65,10 @@ jobs:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      - name: Record that it went out (so a re-run can never post it twice)
+        if: always()
+        run: |
+          git add automation/social/queue
+          git commit -m "Social posted $(date -u +%F) slot ${{ steps.slot.outputs.slot }} [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push || true
