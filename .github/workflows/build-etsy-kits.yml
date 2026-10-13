@@ -1,1 +1,56 @@
-
+name: Build the Etsy listing kits
+# Builds the ready-to-post Etsy kit for every download that has copy in
+# automation/social/etsy-kit.js and commits it as automation/social/etsy-kits/
+# plus one zip — so Sam can download it from GitHub when the app's own
+# download fails (13 Oct 2026). Commits [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "Comma-separated product names (blank = everything with copy)"
+        default: ""
+      price:
+        description: "Price for this batch, e.g. 3.50"
+        default: "3.50"
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: System tools (pdfinfo, pdftoppm, pikepdf)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils zip
+          pip install --quiet pikepdf
+      - name: Install renderer
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Build the kits
+        working-directory: automation/social
+        run: |
+          rm -rf .etsy etsy-kits
+          if [ -n "${{ github.event.inputs.batch }}" ]; then
+            BATCH="${{ github.event.inputs.batch }}" PRICE="${{ github.event.inputs.price }}" node etsy-kit.js
+          else
+            BATCH="My Pond Plan,Access Needs,Actually Good At,Good Day Blueprint,Ask For It,After The Diagnosis,Finding My People,Handover Sheet,Your Sheet,For The Sibling,Affirmation Cards,Habit Stacking,Translation Cards,Frog Logic Stickers" PRICE=3.50 node etsy-kit.js
+            BATCH="When Words Go,Lily Pad" PRICE=4.50 node etsy-kit.js
+            BATCH="Issue 01,Issue 02" PRICE=5.50 node etsy-kit.js
+          fi
+          mv .etsy etsy-kits
+          cp etsy-README.txt etsy-kits/README.txt
+          (cd etsy-kits && zip -qr ../etsy-kits.zip .)
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/etsy-kits automation/social/etsy-kits.zip
+          git commit -m "Etsy kits rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
