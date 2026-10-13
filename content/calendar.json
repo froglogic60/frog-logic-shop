@@ -525,6 +525,10 @@
         {
           "what": "New: engagement read-out every Monday (planner posts vs the rest, both platforms) — lands here as an 'Engagement' line. First read: ~0.2 interactions a post, Instagram reach 2–3 people a post",
           "who": "done"
+        },
+        {
+          "what": "LIVE: 125 product pages — every piece, download and free guide now has its own page at froglogic.co.uk/p/… with a search-friendly title, share image and buy button. Sitemap (129 URLs) resubmitted to Google. This is the 'get seen' foundation: Google can now find each thing by name",
+          "who": "done"
         }
       ]
     },
@@ -742,6 +746,15 @@
       ]
     },
     {
+      "date": "2026-11-17",
+      "items": [
+        {
+          "what": "Claude: check Search Console → Pages. How many of the 125 product pages has Google indexed, and which searches are they showing for? (Pages went live 13 Oct)",
+          "who": "robot"
+        }
+      ]
+    },
+    {
       "date": "2026-11-24",
       "items": [
         {
@@ -770,7 +783,7 @@
     }
   ],
   "whenever": [
-    "Bespoke Planner grew 10 Oct: six new questions (don't-forget list, hard day ×2, who needs to understand you, start/end of day) and seven new pages — up to 18 pages now. Site band still says \"up to ten pages\"; change it to \"up to eighteen\" on the NEXT deploy that happens anyway (not worth 15 credits alone)",
+    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — one pin per product page, not just downloads; the 5 unpinned printables need Sam to attach PNGs; (2) Etsy batch four (17 downloads still unlisted) — say the word; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day",
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
     "Etsy batch four — say the word and Claude makes the next five-listing kit (about 17 downloads still unlisted)",
