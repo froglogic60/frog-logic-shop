@@ -24,8 +24,8 @@ jobs:
           node-version: 20
       - name: System tools (pdfinfo, pdftoppm, pikepdf)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils zip
-          pip install --quiet pikepdf
+          # python3 -I ignores pip's user site, so pikepdf comes from apt (system site-packages)
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils zip python3-pikepdf
       - name: Install renderer
         working-directory: automation/social
         run: npm install --no-audit --no-fund
