@@ -513,6 +513,10 @@
         {
           "what": "Social: Bespoke Planner now posts 4× a week (Mon/Wed/Fri/Sun 1pm), alternating the planner picture and a feature card; captions link to froglogic.co.uk/#bespoke",
           "who": "done"
+        },
+        {
+          "what": "Engagement (last 28 days): planner posts 6 × 0 interactions each (reach 2) · other posts 163 × 0.17 (reach 3)",
+          "who": "robot"
         }
       ]
     },
