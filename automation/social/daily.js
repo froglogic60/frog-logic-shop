@@ -78,7 +78,13 @@ async function post() {
   const { iso } = today();
   const slot = slotNum();
   const name = `${iso}-${slot}`;
-  const meta = JSON.parse(fs.readFileSync(path.join(QUEUE, `${name}.json`), "utf8"));
+  const metaPath = path.join(QUEUE, `${name}.json`);
+  const meta = JSON.parse(fs.readFileSync(metaPath, "utf8"));
+  // Never post the same slot twice. On 11–12 Oct 2026 GitHub ran the morning
+  // and noon jobs hours late, they were mistaken for the evening slot, and the
+  // same post went out three times a day. The slot is now taken from the
+  // schedule that fired (see daily-social.yml); this is the second lock.
+  if (meta.postedAt) { console.log(`${name} already posted at ${meta.postedAt} — skipping`); return; }
   const imageUrl = `${RAW_BASE}/${meta.image}`;
   const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
 
@@ -124,6 +130,11 @@ async function post() {
   }).then((r) => r.json());
   if (!pub.id) throw new Error(`IG publish failed: ${JSON.stringify(pub)}`);
   console.log("Instagram post created:", pub.id);
+
+  meta.postedAt = new Date().toISOString();
+  meta.facebookId = fb.id;
+  meta.instagramId = pub.id;
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
 }
 
 const mode = process.argv[2];
