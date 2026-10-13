@@ -1,0 +1,38 @@
+name: Build the product pages
+# One page per product, download and free guide at /p/<slug>/, plus sitemap.xml,
+# all generated from script.js by automation/site/build-pages.cjs. Commits
+# [skip netlify]; run "Publish the shop" afterwards to put them live.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - script.js
+      - mockups.json
+      - automation/site/build-pages.cjs
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer (for the share images)
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Build pages, share images and sitemap
+        run: node automation/site/build-pages.cjs
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add p sitemap.xml
+          git commit -m "Product pages rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
