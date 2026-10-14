@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -550,6 +550,10 @@
         {
           "what": "Etsy batch five LIVE: When Words Go (£4.50), The Handover Sheet, Your Sheet For Once, For The Sibling, Good Day Blueprint — shop now 26 listings. 8 kits left (lily-pad-planner, habit-stacking-cards, translation-cards, my-pond-plan, what-i-m-actually-good-at, frog-logic-stickers, hoppy-thoughts 01 + 02): attach a folder's 7 files and Claude lists it",
           "who": "done"
+        },
+        {
+          "what": "Sam’s four weekly posts (her words, ‘with love Sam’) queued for Facebook + Instagram, Thursdays 11am: 16 Oct free guides, 23 Oct planner, 30 Oct honesty post, 6 Nov When Words Go. Same four made as TikTok photo slides (5 each, no face, no voice) — in the Claude chat on your phone",
+          "who": "done"
         }
       ]
     },
@@ -572,6 +576,14 @@
         {
           "what": "Pin: Safe Foods Planner → #digital",
           "who": "robot"
+        },
+        {
+          "what": "FB/IG post from Sam: free guides",
+          "who": "robot"
+        },
+        {
+          "what": "TikTok by hand: free guides (put froglogic.co.uk/#guides in bio first) — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
+          "who": "you"
         }
       ]
     },
@@ -621,6 +633,10 @@
         {
           "what": "Pin: After The Diagnosis → #digital",
           "who": "robot"
+        },
+        {
+          "what": "Claude: re-upload the 35 refused Pinterest pins (pins-pages-retry.csv) — reminder set",
+          "who": "robot"
         }
       ]
     },
@@ -639,15 +655,14 @@
         {
           "what": "Pin: When Words Go → #digital",
           "who": "robot"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-21",
-      "items": [
+        },
         {
-          "what": "Claude: re-upload the 35 refused Pinterest pins (pins-pages-retry.csv) — reminder set",
+          "what": "FB/IG post from Sam: the planner",
           "who": "robot"
+        },
+        {
+          "what": "TikTok by hand: the planner — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
+          "who": "you"
         }
       ]
     },
@@ -719,6 +734,14 @@
         {
           "what": "Pin: 30 Days at the Pond → #digital",
           "who": "robot"
+        },
+        {
+          "what": "FB/IG post from Sam: honesty post",
+          "who": "robot"
+        },
+        {
+          "what": "TikTok by hand: honesty post — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
+          "who": "you"
         }
       ]
     },
@@ -753,6 +776,19 @@
       "items": [
         {
           "what": "Ad test results: what a click and a sale actually cost. Stop or continue — Claude will show the numbers",
+          "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "items": [
+        {
+          "what": "FB/IG post from Sam: When Words Go",
+          "who": "robot"
+        },
+        {
+          "what": "TikTok by hand: When Words Go — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
           "who": "you"
         }
       ]
@@ -804,7 +840,7 @@
     }
   ],
   "whenever": [
-    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — ten more listed 13–14 Oct, 8 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four drafts are written",
+    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — ten more listed 13–14 Oct, 8 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four posts queued for FB/IG 16 Oct–6 Nov and made as TikTok slides for Sam to post by hand, one a week. TikTok posting API was refused, so TikTok stays manual",
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
