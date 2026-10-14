@@ -116,6 +116,46 @@ for (const file of ["printify-result.json", "printify-wave2-result.json", "print
   }
 }
 
+// ---- 2b. US twins, from printify-us-result.json ----
+// Tees, mugs, prints and notebooks also exist on a US maker (Printify Choice),
+// so an American order is made and posted inside the US. They sit on the entry
+// as `us`, and create-checkout.js swaps them in for a US address. Postage comes
+// from Printify in US cents and is turned into pence at USD_TO_GBP, which sits
+// a little above the market rate (0.754 on 14 Oct 2026) so a weaker pound does
+// not quietly eat the margin.
+const USD_TO_GBP = 0.77;
+// Sam, 14 Oct 2026: notebooks are £13 in the US, not £12 — the US maker costs
+// £8.26 and £12 left under her 25% rule. Everything else matches the UK price.
+const US_PRICE = { notebook: 13 };
+const usWired = [];
+for (const r of loadResults("printify-us-result.json")) {
+  if (RETIRED.has(r.id)) continue;
+  const entry = byId.get(r.id);
+  if (!entry) { orphans.push(r.id + " (in printify-us-result.json)"); continue; }
+  const ship = r.usShipping || {};
+  if (ship.currency !== "USD" || ship.first == null) {
+    orphans.push(r.id + " has no US postage in printify-us-result.json");
+    continue;
+  }
+  const toPence = (cents) => Math.ceil(cents * USD_TO_GBP);
+  entry.us = {
+    price: US_PRICE[r.kind] ?? r.price / 100,
+    printifyProductId: r.printifyProductId,
+    printifyVariantId: r.printifyVariantId,
+    ...(Array.isArray(r.sizes) && r.sizes.length
+      ? { sizes: r.sizes.map((s) => ({ size: s.size, variantId: s.variantId })) }
+      : {}),
+    shipping: {
+      provider: "us-" + r.providerId,
+      providerName: r.provider,
+      country: "US",
+      first: toPence(ship.first),
+      additional: toPence(ship.additional ?? ship.first),
+    },
+  };
+  usWired.push(r.id);
+}
+
 // Net moves only, worked out once everything has been applied.
 const moved = [];
 for (const x of catalog) {
@@ -158,6 +198,13 @@ for (const x of sellable) {
     problems.push(x.id + "'s default variant is not one of its sizes");
   }
 }
+for (const x of catalog.filter((c) => c.us)) {
+  const u = x.us;
+  if (!u.printifyProductId || !u.printifyVariantId) problems.push(x.id + "'s US twin has no product or variant id");
+  if (u.sizes && !u.sizes.some((s) => s.variantId === u.printifyVariantId)) problems.push(x.id + "'s US default variant is not one of its sizes");
+  if (!!u.sizes !== !!x.sizes) problems.push(x.id + " is sized in one country and not the other");
+  if (!(u.price > 0)) problems.push(x.id + " has no US price");
+}
 // Every price on the page must equal every price at the till. This is the check
 // that would have caught the £32 / £36.99 hoodie.
 for (const p of PRODUCTS) {
@@ -188,6 +235,7 @@ if (repriced.length) {
   console.log(`\ncorrected ${repriced.length} price/name mismatches against the page:`);
   repriced.forEach((r) => console.log("  " + r));
 }
+if (usWired.length) console.log(`\n${usWired.length} piece(s) also made in the US`);
 if (wired.length) {
   console.log(`\nnewly orderable (${wired.length}):`);
   wired.forEach((w) => console.log("  " + w));
