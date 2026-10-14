@@ -272,7 +272,10 @@
 
       var price = document.createElement("p");
       price.className = "bk-price";
-      price.textContent = money(l.price * l.qty);
+      // The server's price for the chosen country wins: a US notebook is made
+      // by a different maker at a different price.
+      var unit = quote && quote.prices && quote.prices[l.id] != null ? quote.prices[l.id] : l.price;
+      price.textContent = money(unit * l.qty);
 
       var remove = document.createElement("button");
       remove.type = "button";
@@ -350,11 +353,22 @@
       ? '<p class="bk-note">Posted from the UK — there may be an import charge to pay on delivery, which we don\'t collect and can\'t predict.</p>'
       : "";
 
+    // The US list is shorter than the UK one. When the basket holds something
+    // not made there, say what, but only to someone who looks American — a UK
+    // shopper does not need a paragraph about US postage.
+    var usNote = "";
+    if (quote && quote.notMadeInUs && (quote.askedFor === "US" || looksAmerican())) {
+      usNote = '<p class="bk-note">Posting to the US? Tees, mugs, prints and notebooks are made in the US. ' +
+        escapeHtml(quote.notMadeInUs.join(", ")) + (quote.notMadeInUs.length === 1 ? " isn't" : " aren't") +
+        " yet — take " + (quote.notMadeInUs.length === 1 ? "it" : "them") + " out and the United States appears under Deliver to.</p>";
+    }
+
     els.foot.innerHTML =
       picker +
       rows +
       (note ? '<p class="bk-note">' + note + "</p>" : "") +
       customs +
+      usNote +
       '<p class="bk-err" hidden></p>' +
       '<button class="btn btn-primary bk-go" type="button">Checkout</button>';
 
@@ -383,6 +397,13 @@
   // The server decides what can be sold; the browser only reports it.
   function isUnavailable(line) {
     return !!(quote && quote.unavailable && quote.unavailable.some(function (u) { return u.id === line.id; }));
+  }
+
+  function looksAmerican() {
+    try {
+      return /^America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Indiana|Kentucky|Boise|Adak)/.test(
+        Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+    } catch (e) { return false; }
   }
 
   function escapeHtml(s) {
@@ -441,7 +462,10 @@
         // by then the lines are already drawn. Redraw them when that set
         // changes — and only then, because a full redraw mid-typing would throw
         // away focus for no reason.
-        var sig = (q.unavailable || []).map(function (u) { return u.id; }).sort().join(",");
+        // Prices are part of the signature too: switching to the US changes a
+        // notebook's line price, and that line is already drawn.
+        var sig = (q.unavailable || []).map(function (u) { return u.id; }).sort().join(",") +
+          "|" + JSON.stringify(q.prices || {});
         if (sig !== lastUnavailable) { lastUnavailable = sig; render(); }
         else renderFoot();
       })
