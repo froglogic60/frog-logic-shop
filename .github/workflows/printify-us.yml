@@ -1,0 +1,43 @@
+name: Build the US products
+# Builds (or corrects in place) the US copies of the tees, mugs, wall prints and
+# notebooks on Printify Choice, reusing the UK artwork. Writes
+# automation/social/printify-us-result.json. Sells nothing by itself: run
+# "Rebuild the checkout catalogue" afterwards to wire them into the till, then
+# "Publish the shop". Tagged [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Lines (comma list, blank = all): tee,mug,print,notebook"
+        default: ""
+      dry_run:
+        description: "Report only, build nothing"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build the US products
+        working-directory: automation/social
+        run: node printify-us.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          ONLY: ${{ inputs.only }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+      - name: Commit the result
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-us-result.json || true
+          git commit -m "US products built [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
