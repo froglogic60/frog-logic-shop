@@ -1,0 +1,42 @@
+name: US makers check
+# Can the physical range be made and posted inside the US? For each product
+# line, finds US-based Printify makers (same blueprint first), builds a
+# throwaway product to read the real base cost, deletes it, and records US
+# domestic postage. Writes automation/social/us-maker-report.json. Touches no
+# live product and no catalogue; tagged [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Lines to check (comma list, blank = all): tee,mug,print,tote,notebook,bottle"
+        default: ""
+      per_kind:
+        description: "US makers to cost per line"
+        default: "4"
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Cost the US makers
+        working-directory: automation/social
+        run: node us-makers.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          ONLY: ${{ inputs.only }}
+          PER_KIND: ${{ inputs.per_kind }}
+      - name: Commit the report
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/us-maker-report.json || true
+          git commit -m "US maker report [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
