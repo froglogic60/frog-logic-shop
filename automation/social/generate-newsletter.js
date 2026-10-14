@@ -3,8 +3,11 @@
 // two digital tools you can actually buy today, one gentle sign-off line.
 // Runs inside the send-newsletter workflow just before sending.
 //
-// If newsletter.json contains "handwritten": true, this script leaves it
-// completely alone — that's the override for months Sam writes herself.
+// If newsletter.json contains "handwritten": true AND "month" is this month
+// ("2026-11"), this script leaves it alone — that's the override for months Sam
+// writes herself. A handwritten issue for any OTHER month is stale and gets
+// replaced. Before 14 Oct 2026 the flag alone was enough, nobody removed it
+// after September, and on 1 October the September issue went out a second time.
 const fs = require("fs");
 const path = require("path");
 const { loadSiteData } = require("./lib.js");
@@ -31,12 +34,16 @@ function esc(s) {
 
 function main() {
   const existing = JSON.parse(fs.readFileSync(TARGET, "utf8"));
-  if (existing.handwritten === true) {
-    console.log("newsletter.json is marked handwritten — leaving it untouched.");
+  const now = new Date();
+  const thisMonth = now.toISOString().slice(0, 7);
+  if (existing.handwritten === true && existing.month === thisMonth) {
+    console.log(`newsletter.json is handwritten for ${thisMonth} — leaving it untouched.`);
     return;
   }
+  if (existing.handwritten === true) {
+    console.log(`newsletter.json is handwritten for ${existing.month || "an unstated month"}, not ${thisMonth} — writing a fresh one instead of sending it again.`);
+  }
   const site = loadSiteData();
-  const now = new Date();
   const m = now.getUTCFullYear() * 12 + now.getUTCMonth(); // month counter
   const phys = site.PRODUCTS[(m * 7) % site.PRODUCTS.length];
   const dig1 = site.DIGITAL_PRODUCTS[(m * 5) % site.DIGITAL_PRODUCTS.length];
@@ -60,7 +67,7 @@ function main() {
     heading: "From the pond this month",
     body_html: body,
     cta_text: "See the collection",
-    cta_url: "https://shop.froglogic.co.uk/",
+    cta_url: "https://froglogic.co.uk/?ref=newsletter",
     generated: now.toISOString().slice(0, 7),
   };
   fs.writeFileSync(TARGET, JSON.stringify(out, null, 2) + "\n");
