@@ -56,6 +56,25 @@ const PHYSICAL = {
   "Sticker": { noun: "sticker", title: (w) => `${w} sticker`, how: "Printed to order." },
 };
 
+// Which pieces also have a US twin (made and posted inside the US). Read from
+// the checkout catalogue, because that is what decides whether a US address is
+// actually offered — the page must never promise more than the till allows.
+const CATALOG = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, "../../netlify/functions/catalog.json"), "utf8")); }
+  catch { return []; }
+})();
+let shopRef = null;
+function usLine(item, kind) {
+  if (!shopRef) return null;
+  const entry = CATALOG.find((c) => c.id === shopRef.checkoutId(item.num, item.word));
+  if (!entry || !entry.us) return null;
+  const ukPrice = Number(money(item.price));
+  const usPrice = entry.us.price;
+  const noun = (PHYSICAL[kind] && PHYSICAL[kind].noun) || "piece";
+  return `<strong>In the US?</strong> This ${esc(noun)} is also made and posted inside the US, so there's no import charge to pay on delivery. Choose the United States under "Deliver to" in the basket and the postage is shown before you pay.` +
+    (usPrice && usPrice !== ukPrice ? ` The US price is £${usPrice.toFixed(2).replace(/\.00$/, "")}.` : "");
+}
+
 function copyFor(item, group) {
   const kind = kindOf(item.num);
   if (group === "guide") return {
@@ -124,6 +143,7 @@ function copyFor(item, group) {
       item.line,
       item.frog ? "One of the Comfort & Chaos frogs — the Frog Logic frog living through it, drawn as a full-body character rather than a face with props." : "The word is the artwork: the letters scatter, spiral, sink or trail off unfinished depending on what the feeling actually does to you. Said by us, not about us.",
       k.how + " Change your mind within 14 days, or report a fault within 30 — see <a href=\"/returns.html\">returns</a>.",
+      ...[usLine(item, kind)].filter(Boolean),
     ],
     cta: { buy: true, label: "Get this piece" },
   };
@@ -349,6 +369,7 @@ function sitemap(pages) {
 
 (async () => {
   const shop = loadShop();
+  shopRef = shop;
   const pages = collect(shop);
   // Start clean so a renamed or retired product's page disappears.
   fs.rmSync(OUT, { recursive: true, force: true });
