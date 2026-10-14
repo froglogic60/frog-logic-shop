@@ -523,7 +523,7 @@
           "who": "done"
         },
         {
-          "what": "Etsy batch four LIVE: Access Needs Cards, Affirmation Cards, After The Diagnosis, Ask For It Properly (as Workplace Accommodations Request Builder), Finding My People — £3.50 each, shop now 21 listings. 13 kits still to post (in automation/social/etsy-kits/ on GitHub): attach a folder's 7 files and Claude lists it",
+          "what": "Etsy batch four LIVE: Access Needs Cards, Affirmation Cards, After The Diagnosis, Ask For It Properly (as Workplace Accommodations Request Builder), Finding My People — £3.50 each",
           "who": "done"
         },
         {
@@ -546,6 +546,10 @@
         {
           "what": "Pin: The Joy Log → #digital",
           "who": "robot"
+        },
+        {
+          "what": "Etsy batch five LIVE: When Words Go (£4.50), The Handover Sheet, Your Sheet For Once, For The Sibling, Good Day Blueprint — shop now 26 listings. 8 kits left (lily-pad-planner, habit-stacking-cards, translation-cards, my-pond-plan, what-i-m-actually-good-at, frog-logic-stickers, hoppy-thoughts 01 + 02): attach a folder's 7 files and Claude lists it",
+          "who": "done"
         }
       ]
     },
@@ -800,7 +804,7 @@
     }
   ],
   "whenever": [
-    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — five more listed 13 Oct, 13 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four drafts are written",
+    "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — ten more listed 13–14 Oct, 8 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four drafts are written",
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
     "Tell Claude to build the Printify clean-out robot — Replit is gone dark (confirmed 5 Sept), so the ~2,870 stray products can go. Not a hand job",
