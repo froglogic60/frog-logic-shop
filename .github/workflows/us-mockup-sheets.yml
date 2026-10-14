@@ -1,0 +1,23 @@
+name: US mockup contact sheets
+# Downloads the mockup of every US product made by "Build the US products" and
+# lays them out one sheet per line (automation/social/us-mockups/*.jpg) so they
+# can be checked by eye. Commit is tagged [skip netlify].
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sheets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet pillow
+      - run: python3 automation/social/us-mockup-sheets.py
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/us-mockups
+          git commit -m "US mockup contact sheets [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
