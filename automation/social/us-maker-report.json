@@ -1,0 +1,743 @@
+{
+  "sampledAt": "2026-10-14T20:56:00.125Z",
+  "kinds": {
+    "tee": {
+      "liveCount": 18,
+      "names": [
+        "Overstimulated",
+        "Time Blind",
+        "Parallel Play",
+        "Late Diagnosed",
+        "No Idea What My Face Is Doing",
+        "Ask Me About It",
+        "Enthusiasm, Unmasked",
+        "Nothing Needs Fixing",
+        "Enough",
+        "In Writing, Please",
+        "Guilt Is Not Evidence",
+        "Comfort Creature",
+        "Brain Full of Tabs",
+        "Neurospicy",
+        "Do Not Perceive Me",
+        "Chaos Gremlin Halloween",
+        "Social Battery: Undead",
+        "Sensory Witch"
+      ],
+      "ukPrice": 1900,
+      "ukCost": 936,
+      "liveTitles": [
+        "Charcoal / L",
+        "Charcoal / M",
+        "Charcoal / S",
+        "Charcoal / XL",
+        "Charcoal / 2XL"
+      ],
+      "makersFound": 10,
+      "rows": [
+        {
+          "blueprint": "Unisex Heavy Cotton Tee",
+          "blueprintId": 6,
+          "sameBlueprint": true,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 399,
+            "additional": 209,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 11873,
+              "title": "Charcoal / M",
+              "cost": 968
+            },
+            {
+              "id": 11872,
+              "title": "Charcoal / L",
+              "cost": 968
+            },
+            {
+              "id": 11875,
+              "title": "Charcoal / XL",
+              "cost": 968
+            },
+            {
+              "id": 11874,
+              "title": "Charcoal / S",
+              "cost": 968
+            },
+            {
+              "id": 11876,
+              "title": "Charcoal / 2XL",
+              "cost": 1177
+            }
+          ]
+        },
+        {
+          "blueprint": "Unisex Heavy Cotton Tee",
+          "blueprintId": 6,
+          "sameBlueprint": true,
+          "provider": "Underground Threads",
+          "providerId": 50,
+          "usShipping": {
+            "first": 449,
+            "additional": 209,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 11872,
+              "title": "Charcoal / L",
+              "cost": 1257
+            },
+            {
+              "id": 11873,
+              "title": "Charcoal / M",
+              "cost": 1257
+            },
+            {
+              "id": 11874,
+              "title": "Charcoal / S",
+              "cost": 1257
+            },
+            {
+              "id": 11875,
+              "title": "Charcoal / XL",
+              "cost": 1257
+            },
+            {
+              "id": 11876,
+              "title": "Charcoal / 2XL",
+              "cost": 1706
+            }
+          ]
+        },
+        {
+          "blueprint": "Unisex Heavy Cotton Tee",
+          "blueprintId": 6,
+          "sameBlueprint": true,
+          "provider": "Monster Digital",
+          "providerId": 29,
+          "usShipping": {
+            "first": 449,
+            "additional": 209,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 11872,
+              "title": "Charcoal / L",
+              "cost": 1005
+            },
+            {
+              "id": 11873,
+              "title": "Charcoal / M",
+              "cost": 1005
+            },
+            {
+              "id": 11874,
+              "title": "Charcoal / S",
+              "cost": 1005
+            },
+            {
+              "id": 11875,
+              "title": "Charcoal / XL",
+              "cost": 1005
+            },
+            {
+              "id": 11876,
+              "title": "Charcoal / 2XL",
+              "cost": 1190
+            }
+          ]
+        },
+        {
+          "blueprint": "Unisex Heavy Cotton Tee",
+          "blueprintId": 6,
+          "sameBlueprint": true,
+          "provider": "SwiftPOD",
+          "providerId": 39,
+          "usShipping": {
+            "first": 449,
+            "additional": 209,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 11812,
+              "title": "Antique Sapphire / L",
+              "cost": 998
+            },
+            {
+              "id": 11813,
+              "title": "Antique Sapphire / M",
+              "cost": 998
+            },
+            {
+              "id": 11814,
+              "title": "Antique Sapphire / S",
+              "cost": 998
+            },
+            {
+              "id": 11815,
+              "title": "Antique Sapphire / XL",
+              "cost": 998
+            },
+            {
+              "id": 11816,
+              "title": "Antique Sapphire / 2XL",
+              "cost": 1186
+            },
+            {
+              "id": 11817,
+              "title": "Antique Sapphire / 3XL",
+              "cost": 1307
+            },
+            {
+              "id": 11836,
+              "title": "Antique Irish Green / L",
+              "cost": 998
+            },
+            {
+              "id": 11837,
+              "title": "Antique Irish Green / M",
+              "cost": 998
+            },
+            {
+              "id": 11838,
+              "title": "Antique Irish Green / S",
+              "cost": 998
+            },
+            {
+              "id": 11839,
+              "title": "Antique Irish Green / XL",
+              "cost": 998
+            },
+            {
+              "id": 11840,
+              "title": "Antique Irish Green / 2XL",
+              "cost": 1186
+            },
+            {
+              "id": 11841,
+              "title": "Antique Irish Green / 3XL",
+              "cost": 1307
+            }
+          ]
+        }
+      ]
+    },
+    "mug": {
+      "liveCount": 14,
+      "names": [
+        "47 Things at Once",
+        "Object Permanence",
+        "Snacks and Spite",
+        "Interoception",
+        "Comfort Rewatch",
+        "The Right Amount of You",
+        "Shared Interest, Not Small Talk",
+        "Twenty Minutes Counts",
+        "Low Battery",
+        "Chaos Gremlin",
+        "Do Not Perceive Me",
+        "Chaos Gremlin Halloween",
+        "Social Battery: Undead",
+        "Sensory Witch"
+      ],
+      "ukPrice": 1350,
+      "ukCost": 534,
+      "liveTitles": [
+        "11oz"
+      ],
+      "makersFound": 23,
+      "rows": [
+        {
+          "blueprint": "Ceramic Mug, (11oz, 15oz)",
+          "blueprintId": 478,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 579,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 65216,
+              "title": "11oz",
+              "cost": 503
+            }
+          ]
+        },
+        {
+          "blueprint": "Black Mug (11oz, 15oz)",
+          "blueprintId": 479,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 579,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 65217,
+              "title": "11oz",
+              "cost": 711
+            }
+          ]
+        },
+        {
+          "blueprint": "Mug 11oz",
+          "blueprintId": 68,
+          "sameBlueprint": false,
+          "provider": "SPOKE Custom Products",
+          "providerId": 1,
+          "usShipping": {
+            "first": 669,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 33719,
+              "title": "11oz",
+              "cost": 644
+            }
+          ]
+        },
+        {
+          "blueprint": "Ceramic Mug, (11oz, 15oz)",
+          "blueprintId": 478,
+          "sameBlueprint": false,
+          "provider": "SwiftPOD",
+          "providerId": 39,
+          "usShipping": {
+            "first": 669,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 65216,
+              "title": "11oz",
+              "cost": 575
+            }
+          ]
+        }
+      ]
+    },
+    "print": {
+      "liveCount": 18,
+      "names": [
+        "Info Dump Incoming",
+        "Executive Dysfunction",
+        "Waiting Mode",
+        "Decision Paralysis",
+        "Autistic Joy",
+        "Justice Sensitive",
+        "Unreasonably Delighted",
+        "Found My People",
+        "Small Things, Enormous Joy",
+        "Never Too Much",
+        "Not Broken",
+        "You Were Paying Attention",
+        "I Accommodated You First",
+        "Recovery Is Part Of The Plan",
+        "Nobody Asked How You Were",
+        "A Different Route",
+        "Neurodivergent Household",
+        "Do Not Perceive Me"
+      ],
+      "ukPrice": 1200,
+      "ukCost": 696,
+      "liveTitles": [
+        "16″ x 16″ / Semi Glossy"
+      ],
+      "makersFound": 1,
+      "rows": [
+        {
+          "blueprint": "Indoor and Outdoor Silk Posters",
+          "blueprintId": 763,
+          "sameBlueprint": true,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 789,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 75271,
+              "title": "16″ x 16″ / Semi Glossy",
+              "cost": 693
+            }
+          ]
+        }
+      ]
+    },
+    "tote": {
+      "liveCount": 7,
+      "names": [
+        "Hyperfocused",
+        "Auditory Processing",
+        "Monotropic",
+        "I Notice Everything",
+        "It Was Precision",
+        "Yes, I Want Friends",
+        "I Learned Their Language"
+      ],
+      "ukPrice": 1600,
+      "ukCost": 1243,
+      "liveTitles": [
+        "One size / Grey"
+      ],
+      "makersFound": 9,
+      "rows": [
+        {
+          "blueprint": "Organic Canvas Tote Bag",
+          "blueprintId": 609,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 495,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 71925,
+              "title": "One size / Black",
+              "cost": 2153
+            },
+            {
+              "id": 71926,
+              "title": "One size / Natural",
+              "cost": 2069
+            },
+            {
+              "id": 71927,
+              "title": "One size / Navy",
+              "cost": 2153
+            }
+          ]
+        },
+        {
+          "blueprint": "Organic Canvas Tote Bag",
+          "blueprintId": 609,
+          "sameBlueprint": false,
+          "provider": "Ink Blot",
+          "providerId": 74,
+          "usShipping": {
+            "first": 509,
+            "additional": 239,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 71925,
+              "title": "One size / Black",
+              "cost": 2156
+            },
+            {
+              "id": 71926,
+              "title": "One size / Natural",
+              "cost": 2072
+            },
+            {
+              "id": 71927,
+              "title": "One size / Navy",
+              "cost": 2156
+            }
+          ]
+        },
+        {
+          "blueprint": "Wine Tote Bag",
+          "blueprintId": 707,
+          "sameBlueprint": false,
+          "provider": "Imagine Your Photos",
+          "providerId": 59,
+          "usShipping": {
+            "first": 579,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 75587,
+              "title": "White / One size / Without corkscrew",
+              "cost": 1555
+            }
+          ]
+        },
+        {
+          "blueprint": "Wine Tote Bag",
+          "blueprintId": 707,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 579,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 75587,
+              "title": "White / One size / Without corkscrew",
+              "cost": 1552
+            }
+          ]
+        }
+      ]
+    },
+    "notebook": {
+      "liveCount": 5,
+      "names": [
+        "Shutdown Mode",
+        "Regulation: Loading",
+        "Functioning As Designed",
+        "Asking Is Not Failing",
+        "You're Allowed To Find It Hard"
+      ],
+      "ukPrice": 1200,
+      "ukCost": 897,
+      "liveTitles": [
+        "A5 / Lined"
+      ],
+      "makersFound": 16,
+      "rows": [
+        {
+          "blueprint": "Spiral Notebook - Ruled Line",
+          "blueprintId": 74,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 549,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 34240,
+              "title": "One Size",
+              "cost": 826
+            }
+          ]
+        },
+        {
+          "blueprint": "Spiral Notebook - Ruled Line",
+          "blueprintId": 74,
+          "sameBlueprint": false,
+          "provider": "SPOKE Custom Products",
+          "providerId": 1,
+          "usShipping": {
+            "first": 549,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 34240,
+              "title": "One Size",
+              "cost": 829
+            }
+          ]
+        },
+        {
+          "blueprint": "Hardcover Bound Notebook",
+          "blueprintId": 1931,
+          "sameBlueprint": false,
+          "provider": "SPOKE Custom Products",
+          "providerId": 1,
+          "usShipping": {
+            "first": 549,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 119669,
+              "title": "5.5\" x 8.5\" / Black",
+              "cost": 1566
+            },
+            {
+              "id": 119670,
+              "title": "5.5\" x 8.5\" / Blue",
+              "cost": 1566
+            },
+            {
+              "id": 119671,
+              "title": "5.5\" x 8.5\" / Lime",
+              "cost": 1566
+            },
+            {
+              "id": 119672,
+              "title": "5.5\" x 8.5\" / Navy",
+              "cost": 1566
+            },
+            {
+              "id": 119673,
+              "title": "5.5\" x 8.5\" / Orange",
+              "cost": 1566
+            },
+            {
+              "id": 119674,
+              "title": "5.5\" x 8.5\" / Red",
+              "cost": 1566
+            }
+          ]
+        },
+        {
+          "blueprint": "Hardcover Bound Notebook",
+          "blueprintId": 1931,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 549,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 119669,
+              "title": "5.5\" x 8.5\" / Black",
+              "cost": 1563
+            },
+            {
+              "id": 119670,
+              "title": "5.5\" x 8.5\" / Blue",
+              "cost": 1563
+            },
+            {
+              "id": 119671,
+              "title": "5.5\" x 8.5\" / Lime",
+              "cost": 1563
+            },
+            {
+              "id": 119672,
+              "title": "5.5\" x 8.5\" / Navy",
+              "cost": 1563
+            },
+            {
+              "id": 119673,
+              "title": "5.5\" x 8.5\" / Orange",
+              "cost": 1563
+            },
+            {
+              "id": 119674,
+              "title": "5.5\" x 8.5\" / Red",
+              "cost": 1563
+            }
+          ]
+        }
+      ]
+    },
+    "bottle": {
+      "liveCount": 4,
+      "names": [
+        "Special Interest",
+        "Pattern Recognition",
+        "Trust Me With It",
+        "Overstimulated"
+      ],
+      "ukPrice": 1775,
+      "ukCost": 1225,
+      "liveTitles": [
+        "21.9oz / White"
+      ],
+      "makersFound": 13,
+      "rows": [
+        {
+          "blueprint": "CamelBak Eddy®  Water Bottle, 20oz\\25oz",
+          "blueprintId": 597,
+          "sameBlueprint": false,
+          "provider": "SwagRabbit",
+          "providerId": 75,
+          "usShipping": {
+            "first": 609,
+            "additional": 249,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 71946,
+              "title": "25oz / Charcoal",
+              "cost": 2463
+            }
+          ]
+        },
+        {
+          "blueprint": "Tritan Water Bottle",
+          "blueprintId": 953,
+          "sameBlueprint": false,
+          "provider": "WOYC",
+          "providerId": 23,
+          "usShipping": {
+            "first": 609,
+            "additional": 249,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 78266,
+              "title": "16.9oz / Transparent",
+              "cost": 1626
+            },
+            {
+              "id": 78267,
+              "title": "25oz / Transparent",
+              "cost": 1888
+            }
+          ]
+        },
+        {
+          "blueprint": "Stainless Steel Water Bottle With Straw, 20oz",
+          "blueprintId": 1139,
+          "sameBlueprint": false,
+          "provider": "Imagine Your Photos",
+          "providerId": 59,
+          "usShipping": {
+            "first": 669,
+            "additional": 329,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 87246,
+              "title": "20oz / Silver",
+              "cost": 1880
+            }
+          ]
+        },
+        {
+          "blueprint": "CamelBak Eddy®  Water Bottle, 20oz\\25oz",
+          "blueprintId": 597,
+          "sameBlueprint": false,
+          "provider": "Printify Choice",
+          "providerId": 99,
+          "usShipping": {
+            "first": 689,
+            "additional": 249,
+            "currency": "USD"
+          },
+          "costs": [
+            {
+              "id": 71946,
+              "title": "25oz / Charcoal",
+              "cost": 2460
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "undeleted": []
+}
