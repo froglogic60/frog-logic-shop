@@ -1,0 +1,1350 @@
+{
+  "createdAt": "2026-10-14T21:19:55.866Z",
+  "results": [
+    {
+      "id": "01-overstimulated",
+      "kind": "tee",
+      "name": "Overstimulated",
+      "printifyProductId": "6acff1543eab4e70cc0b1f82",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1543eab4e70cc0b1f82/11872/102005/overstimulated-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023d738b33dca6506edb9"
+    },
+    {
+      "id": "12-time-blind",
+      "kind": "tee",
+      "name": "Time Blind",
+      "printifyProductId": "6acff158813361622f0fe9bc",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff158813361622f0fe9bc/11872/102005/time-blind-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023dcffabf4bed40f3927"
+    },
+    {
+      "id": "18-parallel-play",
+      "kind": "tee",
+      "name": "Parallel Play",
+      "printifyProductId": "6acff15d813361622f0fe9c2",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff15d813361622f0fe9c2/11872/102005/parallel-play-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023e238b33dca6506edc0"
+    },
+    {
+      "id": "24-late-diagnosed",
+      "kind": "tee",
+      "name": "Late Diagnosed",
+      "printifyProductId": "6acff1613eab4e70cc0b1f92",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1613eab4e70cc0b1f92/11872/102005/late-diagnosed-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023e797e524423b00c8a5"
+    },
+    {
+      "id": "29-no-idea-what-my-face-is-doing",
+      "kind": "tee",
+      "name": "No Idea What My Face Is Doing",
+      "printifyProductId": "6acff1653920a8cdf60c5755",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1653920a8cdf60c5755/11872/102005/no-idea-what-my-face-is-doing-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023ecffabf4bed40f3932"
+    },
+    {
+      "id": "31-ask-me-about-it",
+      "kind": "tee",
+      "name": "Ask Me About It",
+      "printifyProductId": "6acff1692c5a682649091f47",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1692c5a682649091f47/11872/102005/ask-me-about-it-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023f297e524423b00c8b3"
+    },
+    {
+      "id": "39-enthusiasm-unmasked",
+      "kind": "tee",
+      "name": "Enthusiasm, Unmasked",
+      "printifyProductId": "6acff16ea99ea1afbd0f34ab",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff16ea99ea1afbd0f34ab/11872/102005/enthusiasm-unmasked-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023f71660304ab40b261a"
+    },
+    {
+      "id": "42-nothing-needs-fixing",
+      "kind": "tee",
+      "name": "Nothing Needs Fixing",
+      "printifyProductId": "6acff172bdc117b07b0b6eb8",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff172bdc117b07b0b6eb8/11872/102005/nothing-needs-fixing-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a9023fd97e524423b00c8bc"
+    },
+    {
+      "id": "45-enough",
+      "kind": "tee",
+      "name": "Enough",
+      "printifyProductId": "6acff176a99ea1afbd0f34b5",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff176a99ea1afbd0f34b5/11872/102005/enough-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a90240238b33dca6506edde"
+    },
+    {
+      "id": "51-in-writing-please",
+      "kind": "tee",
+      "name": "In Writing, Please",
+      "printifyProductId": "6acff17a5355f3762f0b2a94",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff17a5355f3762f0b2a94/11872/102005/in-writing-please-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a902407ffabf4bed40f393a"
+    },
+    {
+      "id": "63-guilt-is-not-evidence",
+      "kind": "tee",
+      "name": "Guilt Is Not Evidence",
+      "printifyProductId": "6acff17f3eab4e70cc0b1f9c",
+      "printifyVariantId": 11874,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 11874,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 11873,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 11872,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 11875,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 11876,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff17f3eab4e70cc0b1f9c/11872/102005/guilt-is-not-evidence-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a90240c97e524423b00c8c9"
+    },
+    {
+      "id": "f1-comfort-creature",
+      "kind": "tee",
+      "name": "Comfort Creature",
+      "printifyProductId": "6acff1833eab4e70cc0b1fa3",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1833eab4e70cc0b1fa3/12100/102005/comfort-creature-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a931bddc1f8509ec80326f5"
+    },
+    {
+      "id": "f2-brain-full-of-tabs",
+      "kind": "tee",
+      "name": "Brain Full of Tabs",
+      "printifyProductId": "6acff1873eab4e70cc0b1fa6",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1873eab4e70cc0b1fa6/12100/102005/brain-full-of-tabs-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a931be3c1f8509ec80326f8"
+    },
+    {
+      "id": "f3-neurospicy",
+      "kind": "tee",
+      "name": "Neurospicy",
+      "printifyProductId": "6acff18c72013e99f702906f",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff18c72013e99f702906f/12100/102005/neurospicy-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6a931beadb8c1bf77202f68b"
+    },
+    {
+      "id": "04-47-things-at-once",
+      "kind": "mug",
+      "name": "47 Things at Once",
+      "printifyProductId": "6acff1911e60de69b609d703",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1911e60de69b609d703/65216/6310/47-things-at-once-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f422aecea373cf90cecdf"
+    },
+    {
+      "id": "14-object-permanence",
+      "kind": "mug",
+      "name": "Object Permanence",
+      "printifyProductId": "6acff19490ab0eb26d0820bc",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff19490ab0eb26d0820bc/65216/6310/object-permanence-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f422b03b32619540a8277"
+    },
+    {
+      "id": "20-snacks-and-spite",
+      "kind": "mug",
+      "name": "Snacks and Spite",
+      "printifyProductId": "6acff197ed9d0d2d0107e791",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff197ed9d0d2d0107e791/65216/6310/snacks-and-spite-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f422c773c31dfa10f7b4c"
+    },
+    {
+      "id": "22-interoception",
+      "kind": "mug",
+      "name": "Interoception",
+      "printifyProductId": "6acff19b3eab4e70cc0b1fb6",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff19b3eab4e70cc0b1fb6/65216/6310/interoception-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f422effd89d136008de72"
+    },
+    {
+      "id": "36-comfort-rewatch",
+      "kind": "mug",
+      "name": "Comfort Rewatch",
+      "printifyProductId": "6acff19ea99ea1afbd0f34d2",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff19ea99ea1afbd0f34d2/65216/6310/comfort-rewatch-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f422feb95a088fa0a0316"
+    },
+    {
+      "id": "50-the-right-amount-of-you",
+      "kind": "mug",
+      "name": "The Right Amount of You",
+      "printifyProductId": "6acff1a190ab0eb26d0820c5",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1a190ab0eb26d0820c5/65216/6310/the-right-amount-of-you-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f4231ffd89d136008de78"
+    },
+    {
+      "id": "58-shared-interest-not-small-talk",
+      "kind": "mug",
+      "name": "Shared Interest, Not Small Talk",
+      "printifyProductId": "6acff1a572013e99f7029081",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1a572013e99f7029081/65216/6310/shared-interest-not-small-talk-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f4232ecea373cf90cece6"
+    },
+    {
+      "id": "62-twenty-minutes-counts",
+      "kind": "mug",
+      "name": "Twenty Minutes Counts",
+      "printifyProductId": "6acff1a83eab4e70cc0b1fc1",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1a83eab4e70cc0b1fc1/65216/6310/twenty-minutes-counts-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a8f4234773c31dfa10f7b50"
+    },
+    {
+      "id": "f4-low-battery",
+      "kind": "mug",
+      "name": "Low Battery",
+      "printifyProductId": "6acff1abb436a5db4d019abc",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1abb436a5db4d019abc/65216/6310/low-battery-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a931bf1c1f8509ec80326fb"
+    },
+    {
+      "id": "f5-chaos-gremlin",
+      "kind": "mug",
+      "name": "Chaos Gremlin",
+      "printifyProductId": "6acff1af5355f3762f0b2ab5",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6acff1af5355f3762f0b2ab5/65216/6310/chaos-gremlin-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6a931bf6ccc5b4b0cd05d9a2"
+    },
+    {
+      "id": "05-info-dump-incoming",
+      "kind": "print",
+      "name": "Info Dump Incoming",
+      "printifyProductId": "6acff1b3a99ea1afbd0f34e4",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1b3a99ea1afbd0f34e4/75271/20213/info-dump-incoming-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90037597e524423b00ae64"
+    },
+    {
+      "id": "10-executive-dysfunction",
+      "kind": "print",
+      "name": "Executive Dysfunction",
+      "printifyProductId": "6acff1b6b436a5db4d019ac1",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1b6b436a5db4d019ac1/75271/20213/executive-dysfunction-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a9003791660304ab40b0bc1"
+    },
+    {
+      "id": "11-waiting-mode",
+      "kind": "print",
+      "name": "Waiting Mode",
+      "printifyProductId": "6acff1ba72013e99f702908a",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1ba72013e99f702908a/75271/20213/waiting-mode-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90037d1660304ab40b0bc4"
+    },
+    {
+      "id": "17-decision-paralysis",
+      "kind": "print",
+      "name": "Decision Paralysis",
+      "printifyProductId": "6acff1bd90ab0eb26d0820df",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1bd90ab0eb26d0820df/75271/20213/decision-paralysis-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90038197e524423b00ae70"
+    },
+    {
+      "id": "21-autistic-joy",
+      "kind": "print",
+      "name": "Autistic Joy",
+      "printifyProductId": "6acff1c0ed9d0d2d0107e7a2",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1c0ed9d0d2d0107e7a2/75271/20213/autistic-joy-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90038638b33dca6506d335"
+    },
+    {
+      "id": "26-justice-sensitive",
+      "kind": "print",
+      "name": "Justice Sensitive",
+      "printifyProductId": "6acff1c3813361622f0fea00",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1c3813361622f0fea00/75271/20213/justice-sensitive-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90038a5db3b1358404be04"
+    },
+    {
+      "id": "32-unreasonably-delighted",
+      "kind": "print",
+      "name": "Unreasonably Delighted",
+      "printifyProductId": "6acff1c790ab0eb26d0820e3",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1c790ab0eb26d0820e3/75271/20213/unreasonably-delighted-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90038e5db3b1358404be06"
+    },
+    {
+      "id": "35-found-my-people",
+      "kind": "print",
+      "name": "Found My People",
+      "printifyProductId": "6acff1ca2c5a682649091f86",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1ca2c5a682649091f86/75271/20213/found-my-people-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a900392ffabf4bed40f1dda"
+    },
+    {
+      "id": "40-small-things-enormous-joy",
+      "kind": "print",
+      "name": "Small Things, Enormous Joy",
+      "printifyProductId": "6acff1ce3920a8cdf60c5792",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1ce3920a8cdf60c5792/75271/20213/small-things-enormous-joy-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90039638b33dca6506d340"
+    },
+    {
+      "id": "41-never-too-much",
+      "kind": "print",
+      "name": "Never Too Much",
+      "printifyProductId": "6acff1d190ab0eb26d0820f3",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1d190ab0eb26d0820f3/75271/20213/never-too-much-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90039b5ac057e0ae035728"
+    },
+    {
+      "id": "43-not-broken",
+      "kind": "print",
+      "name": "Not Broken",
+      "printifyProductId": "6acff1d490ab0eb26d0820fb",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1d490ab0eb26d0820fb/75271/20213/not-broken-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a90039f38b33dca6506d342"
+    },
+    {
+      "id": "47-you-were-paying-attention",
+      "kind": "print",
+      "name": "You Were Paying Attention",
+      "printifyProductId": "6acff1d8813361622f0fea0f",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1d8813361622f0fea0f/75271/20213/you-were-paying-attention-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a9003a31660304ab40b0bf2"
+    },
+    {
+      "id": "52-i-accommodated-you-first",
+      "kind": "print",
+      "name": "I Accommodated You First",
+      "printifyProductId": "6acff1dbe59f52a3c6049248",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1dbe59f52a3c6049248/75271/20213/i-accommodated-you-first-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a9003a81660304ab40b0c00"
+    },
+    {
+      "id": "60-recovery-is-part-of-the-plan",
+      "kind": "print",
+      "name": "Recovery Is Part Of The Plan",
+      "printifyProductId": "6acff1de813361622f0fea18",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1de813361622f0fea18/75271/20213/recovery-is-part-of-the-plan-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a9003ac38b33dca6506d366"
+    },
+    {
+      "id": "61-nobody-asked-how-you-were",
+      "kind": "print",
+      "name": "Nobody Asked How You Were",
+      "printifyProductId": "6acff1e12c5a682649091fa2",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1e12c5a682649091fa2/75271/20213/nobody-asked-how-you-were-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a9003b038b33dca6506d368"
+    },
+    {
+      "id": "65-a-different-route",
+      "kind": "print",
+      "name": "A Different Route",
+      "printifyProductId": "6acff1e5813361622f0fea1f",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1e5813361622f0fea1f/75271/20213/a-different-route-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a9003b45ac057e0ae03574d"
+    },
+    {
+      "id": "f7-neurodivergent-household",
+      "kind": "print",
+      "name": "Neurodivergent Household",
+      "printifyProductId": "6acff1e872013e99f70290b0",
+      "printifyVariantId": 75271,
+      "price": 1200,
+      "worstCost": 693,
+      "blueprintId": 763,
+      "blueprint": "Indoor and Outdoor Silk Posters",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 789,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1e872013e99f70290b0/75271/20213/neurodivergent-household-frog-logic-print-us.jpg?camera_label=front",
+      "ukProductId": "6a931c01db8c1bf77202f6a5"
+    },
+    {
+      "id": "03-shutdown-mode",
+      "kind": "notebook",
+      "name": "Shutdown Mode",
+      "printifyProductId": "6acff1ec813361622f0fea2b",
+      "printifyVariantId": 34240,
+      "price": 1200,
+      "worstCost": 826,
+      "blueprintId": 74,
+      "blueprint": "Spiral Notebook - Ruled Line",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 549,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1ec813361622f0fea2b/34240/3024/shutdown-mode-frog-logic-notebook-us.jpg?camera_label=front",
+      "ukProductId": "6a8cc1009178f085df05a1e0"
+    },
+    {
+      "id": "27-regulation-loading",
+      "kind": "notebook",
+      "name": "Regulation: Loading",
+      "printifyProductId": "6acff1ef72013e99f70290b4",
+      "printifyVariantId": 34240,
+      "price": 1200,
+      "worstCost": 826,
+      "blueprintId": 74,
+      "blueprint": "Spiral Notebook - Ruled Line",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 549,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1ef72013e99f70290b4/34240/3024/regulation-loading-frog-logic-notebook-us.jpg?camera_label=front",
+      "ukProductId": "6a8cc122b8c6212d72054fa2"
+    },
+    {
+      "id": "44-functioning-as-designed",
+      "kind": "notebook",
+      "name": "Functioning As Designed",
+      "printifyProductId": "6acff1f3e59f52a3c6049258",
+      "printifyVariantId": 34240,
+      "price": 1200,
+      "worstCost": 826,
+      "blueprintId": 74,
+      "blueprint": "Spiral Notebook - Ruled Line",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 549,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1f3e59f52a3c6049258/34240/3024/functioning-as-designed-frog-logic-notebook-us.jpg?camera_label=front",
+      "ukProductId": "6a8cc1482a3603eb2d0d5e50"
+    },
+    {
+      "id": "54-asking-is-not-failing",
+      "kind": "notebook",
+      "name": "Asking Is Not Failing",
+      "printifyProductId": "6acff1f672013e99f70290b8",
+      "printifyVariantId": 34240,
+      "price": 1200,
+      "worstCost": 826,
+      "blueprintId": 74,
+      "blueprint": "Spiral Notebook - Ruled Line",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 549,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1f672013e99f70290b8/34240/3024/asking-is-not-failing-frog-logic-notebook-us.jpg?camera_label=front",
+      "ukProductId": "6a8cc15cdbf9aebaf708a1ab"
+    },
+    {
+      "id": "67-you-re-allowed-to-find-it-hard",
+      "kind": "notebook",
+      "name": "You're Allowed To Find It Hard",
+      "printifyProductId": "6acff1f9813361622f0fea39",
+      "printifyVariantId": 34240,
+      "price": 1200,
+      "worstCost": 826,
+      "blueprintId": 74,
+      "blueprint": "Spiral Notebook - Ruled Line",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 549,
+        "additional": 199,
+        "currency": "USD"
+      },
+      "placement": "kept",
+      "mockup": "https://images-api.printify.com/mockup/6acff1f9813361622f0fea39/34240/3024/youre-allowed-to-find-it-hard-frog-logic-notebook-us.jpg?camera_label=front",
+      "ukProductId": "6a8cc174dbf9aebaf708a1d0"
+    }
+  ],
+  "errors": []
+}
