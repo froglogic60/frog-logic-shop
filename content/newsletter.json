@@ -1,10 +1,11 @@
 {
   "handwritten": true,
-  "note": "September 2026 — written by hand because the month actually had news. Delete the handwritten flag after this send so October generates itself again.",
-  "subject": "🐸 Big month at the pond (and something for you)",
+  "month": "2026-11",
+  "note": "November 2026 — handwritten for the US news. Only sent if this month matches; December writes itself.",
+  "subject": "🐸 The frogs can cross the Atlantic now",
   "heading": "From the pond this month",
-  "body_html": "<p>Hello. This is usually a quiet note, but September arrives with actual news, so just this once it is a slightly longer one.</p><p><strong>The frogs have moved in.</strong> There is a whole new range — the Comfort &amp; Chaos collection. One small green frog living through seven very relatable moods: wrapped in a blanket, battery at 3%, five tabs open and none responding. Tees, mugs, a water bottle, a wall print. The typographic pieces have not gone anywhere; the shop just has two doors now.</p><p><strong>The Pond Guides are free. All of them.</strong> The 23 plain-English guides — one per neurotype, written to be handed to a relative, a partner, a manager — used to cost money. Now they cost nothing: no email address, no catch. Download, print, pass on.</p><p><strong>And the Bespoke Planner exists.</strong> Every planner you have ever bought was designed for somebody else’s brain. This one asks nine questions and gets built for yours — emailed as a printable PDF, usually within a couple of hours. £10.</p><p><strong>Yours, because you signed up:</strong> the code <strong>POND10</strong> takes 10% off your first order — type it into the promotion-code box at checkout. That was always the promise for subscribers, and now the till understands it.</p><p>That's the lot. Go gently.</p>",
-  "cta_text": "Come and meet the frogs",
+  "body_html": "<p>Hello. A short one this month, with one bit of real news.</p><p><strong>Frog Logic now posts properly to the US.</strong> About half the people who visit the shop are in America, and until now the only thing they could really buy was a download — sending a tee across the Atlantic cost more than the tee. So I found US printers. Tees, mugs, prints and notebooks are now made and posted inside the US: no Atlantic postage, and no import charge on the doorstep. Choose the United States in the basket and the postage shows before you pay.</p><p>If you've got a friend over there who'd like something from the pond, this is the moment to send them the link.</p><p><strong>Still yours, because you signed up:</strong> <strong>POND10</strong> takes 10% off your first order. It works on US orders too.</p><p>One small apology: if September's note landed in your inbox twice, that was a glitch on my side, and it's fixed.</p><p>That's the lot. Go gently.</p>",
+  "cta_text": "Have a look",
   "cta_url": "https://froglogic.co.uk/?ref=newsletter",
-  "generated": "2026-09"
+  "generated": "2026-11"
 }
