@@ -1,1 +1,110 @@
-
+{
+  "free-guides": [
+    {
+      "tag": "hi, I'm Sam",
+      "big": "I'm neurodivergent, and I run a very small shop called Frog Logic from my lounge.",
+      "small": ""
+    },
+    {
+      "tag": "the thing I'm proudest of",
+      "big": "isn't for sale.",
+      "small": "Twenty-three short guides — autism, ADHD, AuDHD, dyslexia, dyspraxia, PDA, OCD and the rest — in plain English."
+    },
+    {
+      "tag": "written for",
+      "big": "The person it's about.\nAND the people around them.",
+      "small": "The partner. The manager. The mum who still says “but you don't look autistic.”"
+    },
+    {
+      "tag": "they're free",
+      "big": "No email address.\nNo sign-up.\nNothing to tick.",
+      "small": "Download the one you need and send it to whoever needs to read it. That's the whole idea."
+    },
+    {
+      "tag": "link in bio",
+      "big": "Free. Take the one you need.",
+      "small": "froglogic.co.uk/#guides\n\n(If one of them gets something wrong, tell me. I'd rather fix it than be right.)\n\nwith love\nSam"
+    }
+  ],
+  "planner": [
+    {
+      "tag": "the bespoke planner",
+      "big": "Every planner I've ever bought was built for someone else's brain.",
+      "small": ""
+    },
+    {
+      "tag": "sound familiar?",
+      "big": "Hourly grids I never filled in.\nHabit trackers that became a record of failure by February.",
+      "small": "“Just write it down” — yes, but where, and in what order, and why does the page assume my day starts at 6am?"
+    },
+    {
+      "tag": "so I built one that asks first",
+      "big": "Fifteen questions about how your day actually runs.",
+      "small": "What you keep forgetting. What a hard day looks like for you. What actually helps."
+    },
+    {
+      "tag": "then",
+      "big": "A planner is built from your answers and emailed to you as a PDF.",
+      "small": "Your own words are on the pages. There's a hard-day page you can tear in half and hand to someone."
+    },
+    {
+      "tag": "£25 · undated · print it forever",
+      "big": "If it doesn't fit, answer again and it gets rebuilt free.",
+      "small": "froglogic.co.uk/p/the-bespoke-planner/\n\nwith love\nSam"
+    }
+  ],
+  "honesty-post": [
+    {
+      "tag": "small-business honesty post",
+      "big": "Because I think people like to know.",
+      "small": ""
+    },
+    {
+      "tag": "frog logic",
+      "big": "Every bit of this shop was made by one neurodivergent person with a PC.",
+      "small": "And a lot of help from an AI that does the coding and gets overruled regularly."
+    },
+    {
+      "tag": "so far",
+      "big": "It has sold almost nothing.",
+      "small": "That's normal this early, apparently. I'm not going anywhere."
+    },
+    {
+      "tag": "but",
+      "big": "If you've ever thought\n“I wish someone made a ___ for brains like mine”",
+      "small": "I would really like to hear it. The best things in the shop came from exactly that sentence."
+    },
+    {
+      "tag": "comment or message me",
+      "big": "No idea is too small or too specific.",
+      "small": "with love\nSam\n\nfroglogic.co.uk"
+    }
+  ],
+  "when-words-go": [
+    {
+      "tag": "I made a card that says",
+      "big": "“I can't speak right now.\nI can hear you.\nPlease give me a minute.”",
+      "small": ""
+    },
+    {
+      "tag": "when words go",
+      "big": "Twenty-two point-and-show cards for the moment speech leaves.",
+      "small": "For when you're stood in a shop, or a GP's waiting room, and it's gone."
+    },
+    {
+      "tag": "sized for",
+      "big": "A standard lanyard holder.",
+      "small": "With blanks to write your own."
+    },
+    {
+      "tag": "why",
+      "big": "I made it because I needed it.",
+      "small": ""
+    },
+    {
+      "tag": "if you do too",
+      "big": "£3. Print it at home. Laminate it if you can.",
+      "small": "froglogic.co.uk/p/when-words-go/\n\nwith love\nSam"
+    }
+  ]
+}
