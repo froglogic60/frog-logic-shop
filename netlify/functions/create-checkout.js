@@ -61,8 +61,15 @@ const FREE_DELIVERY_OVER = 8000;
 // and Australia are all reachable and all left off, because postage there runs
 // £17 to £33 on a £16 tee and a price like that is not an offer, it is a
 // wasted click.
+//
+// The US is the exception, added 14 Oct 2026. About half the shop's visitors
+// are American, so tees, mugs, prints and notebooks now have a twin made by a
+// US maker (Printify Choice), stored on the catalogue entry as `us`. A US
+// address is only offered when EVERY physical piece in the basket has one, and
+// the order is made and posted inside the US — no Atlantic postage, no import
+// charge. Everything else in the range still can't go there.
 const DESTINATIONS = [
-  "GB",
+  "GB", "US",
   "IE", "FR", "DE", "NL", "BE", "ES", "IT", "PT", "AT", "LU",
   "DK", "SE", "FI", "PL", "CZ", "SK", "SI", "HR", "HU", "RO",
   "BG", "GR", "EE", "LV", "LT", "CY", "MT",
@@ -76,12 +83,27 @@ export const COUNTRY_NAMES = {
   LU: "Luxembourg", DK: "Denmark", SE: "Sweden", FI: "Finland", PL: "Poland",
   CZ: "Czechia", SK: "Slovakia", SI: "Slovenia", HR: "Croatia", HU: "Hungary",
   RO: "Romania", BG: "Bulgaria", GR: "Greece", EE: "Estonia", LV: "Latvia",
-  LT: "Lithuania", CY: "Cyprus", MT: "Malta",
+  LT: "Lithuania", CY: "Cyprus", MT: "Malta", US: "the United States",
 };
 
 // Countries where a parcel from the UK can attract import VAT or duty on
 // arrival. Said out loud in the basket rather than discovered on the doorstep.
-export const CUSTOMS_RISK = (c) => c !== "GB";
+// Not the US: a US order is made and posted inside the US.
+export const CUSTOMS_RISK = (c) => c !== "GB" && c !== "US";
+
+// The version of a catalogue entry that actually gets made for this country.
+// For the US that is the US maker's product — its own Printify ids, sizes,
+// postage and price. A physical piece with no US twin comes back with no
+// shipping at all, so rateFor() returns null and the US is simply not offered
+// for a basket containing it. Everywhere else the entry is used as it is.
+export function forCountry(item, country) {
+  if (country !== "US" || item.type !== "physical") return item;
+  if (!item.us) return { ...item, shipping: null, notMadeHere: true };
+  const v = { ...item, ...item.us, freeUkPost: false };
+  delete v.us;
+  if (!(Array.isArray(item.us.sizes) && item.us.sizes.length)) delete v.sizes;
+  return v;
+}
 
 const ZONES = zoneData.providers || {};
 
@@ -99,6 +121,13 @@ const json = (body, status) =>
 function rateFor(item, country) {
   const s = item.shipping;
   if (!s) return null;
+  // A maker that only posts to one country (the US twins) carries its rate
+  // directly rather than through the zone table.
+  if (s.country) {
+    return country === s.country && s.first != null
+      ? { first: s.first, additional: s.additional ?? s.first }
+      : null;
+  }
   const table = ZONES[s.zoneKey] || ZONES[String(s.provider)];
   if (table && Array.isArray(table.zones)) {
     const zone =
@@ -156,7 +185,7 @@ export function postageFor(lines, country = "GB") {
 export function destinationsFor(lines) {
   const physical = lines.filter((l) => l.item.type === "physical");
   if (!physical.length) return DESTINATIONS.slice();
-  return DESTINATIONS.filter((c) => physical.every((l) => rateFor(l.item, c)));
+  return DESTINATIONS.filter((c) => physical.every((l) => rateFor(forCountry(l.item, c), c)));
 }
 
 export default async (req) => {
@@ -188,10 +217,18 @@ export default async (req) => {
     return json({ error: "Your basket is empty." }, 400);
   }
 
+  // The country comes first now: for the US it decides which maker's product,
+  // sizes and price every line uses.
+  const country = String(body.country || "GB").toUpperCase();
+
   const lines = [];
   for (const raw of requested) {
-    const item = catalog.find((p) => p.id === raw.id);
-    if (!item) return json({ error: "Unknown product", id: raw.id }, 404);
+    const base = catalog.find((p) => p.id === raw.id);
+    if (!base) return json({ error: "Unknown product", id: raw.id }, 404);
+    const item = forCountry(base, country);
+    if (item.notMadeHere) {
+      return json({ error: `"${item.name}" isn't made in ${COUNTRY_NAMES[country] || country} yet, so it can't be posted there.`, id: item.id }, 400);
+    }
 
     if (item.type === "physical" && !item.printifyProductId) {
       // Real print-ready artwork hasn't been loaded into Printify for this
@@ -229,8 +266,7 @@ export default async (req) => {
   // basket therefore asks first, and the address form is then locked to that
   // one country — otherwise someone could pick the UK, pay UK postage and have
   // it sent to Dublin.
-  const allowed = destinationsFor(lines);
-  const country = String(body.country || "GB").toUpperCase();
+  const allowed = destinationsFor(lines.map((l) => ({ item: catalog.find((p) => p.id === l.item.id) })));
   if (physical.length && !allowed.includes(country)) {
     return json({ error: "We can't post this order to that country yet.", country, allowed }, 400);
   }
@@ -314,6 +350,9 @@ export default async (req) => {
       : undefined,
     metadata: {
       ...chunks,
+      // Which maker's products the variant ids above belong to. The webhook
+      // reads this rather than trusting the address alone.
+      dest: country,
       basket_count: String(lines.length),
       // Kept so a session created before this change, or a single-item basket,
       // still fulfils through the old path in the webhook.

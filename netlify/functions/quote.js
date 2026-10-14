@@ -13,7 +13,7 @@
 // basket change.
 
 import catalog from "./catalog.json";
-import { postageFor, destinationsFor, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
+import { postageFor, destinationsFor, forCountry, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
 
 // MUST match create-checkout.js. These were two separate 5000s until 27 Aug
 // 2026, so raising the threshold in one place alone would have had the basket
@@ -50,16 +50,29 @@ export default async (req) => {
     .filter((l) => l.item.type === "physical" && !l.item.printifyProductId)
     .map((l) => ({ id: l.item.id, name: l.item.name }));
 
-  const sellable = lines.filter((l) => !unavailable.some((u) => u.id === l.item.id));
-  const goods = sellable.reduce((sum, l) => sum + Math.round(l.item.price * 100) * l.qty, 0);
-  const physical = sellable.filter((l) => l.item.type === "physical");
-
   // Where this basket can go, and where it is going. An unservable choice falls
   // back to the UK rather than erroring: the basket is not the place to argue,
   // and create-checkout refuses properly if it is still wrong at payment.
   const destinations = destinationsFor(lines);
-  let country = String(body.country || "GB").toUpperCase();
+  const asked = String(body.country || "GB").toUpperCase();
+  let country = asked;
   if (!destinations.includes(country)) country = "GB";
+
+  // The US range is made by a US maker, at its own price. Every figure below
+  // uses the version that would actually be made for this country.
+  const sellable = lines
+    .filter((l) => !unavailable.some((u) => u.id === l.item.id))
+    .map((l) => ({ ...l, item: forCountry(l.item, country) }));
+  const goods = sellable.reduce((sum, l) => sum + Math.round(l.item.price * 100) * l.qty, 0);
+  const physical = sellable.filter((l) => l.item.type === "physical");
+
+  // Only tees, mugs, prints and notebooks are made in the US. When the US is
+  // off the list because of what is in the basket, name the pieces holding it
+  // back, so an American visitor knows what to take out rather than wondering
+  // why their country is missing.
+  const notMadeInUs = destinations.includes("US") ? [] : lines
+    .filter((l) => l.item.type === "physical" && forCountry(l.item, "US").notMadeHere)
+    .map((l) => l.item.name);
 
   const { total: rawPostage, parcels, unknown } = postageFor(physical, country);
   const overThreshold = country === "GB" && goods >= FREE_DELIVERY_OVER;
@@ -72,6 +85,10 @@ export default async (req) => {
     country,
     destinations: destinations.map((c) => ({ code: c, name: COUNTRY_NAMES[c] || c })),
     customsRisk: physical.length > 0 && CUSTOMS_RISK(country),
+    // Price per piece for this country, in pence, so the basket lines match
+    // the total (a US notebook costs more than a UK one).
+    prices: Object.fromEntries(sellable.map((l) => [l.item.id, Math.round(l.item.price * 100)])),
+    ...(notMadeInUs.length ? { notMadeInUs: [...new Set(notMadeInUs)], askedFor: asked } : {}),
     // The totals above EXCLUDE these, so the figure shown is what would
     // actually be charged once they are taken out.
     ...(unavailable.length ? { unavailable } : {}),

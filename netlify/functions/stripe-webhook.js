@@ -19,6 +19,7 @@
 
 import Stripe from "stripe";
 import catalog from "./catalog.json";
+import { forCountry } from "./create-checkout.js";
 
 // create-checkout.js writes the basket as "id~variant~qty~size|id~variant~qty~size",
 // split across basket_0, basket_1... because Stripe caps a metadata value at
@@ -88,8 +89,9 @@ async function sendDownloadEmail({ toEmail, items }) {
 async function createPrintifyOrder({ session, providerKey, lines }) {
   const shopId = process.env.PRINTIFY_SHOP_ID;
   const apiKey = process.env.PRINTIFY_API_KEY;
-  const addr = session.shipping_details?.address;
-  const name = session.shipping_details?.name || session.customer_details?.name || "";
+  const ship = session.shipping_details || session.collected_information?.shipping_details;
+  const addr = ship?.address;
+  const name = ship?.name || session.customer_details?.name || "";
   const [first_name, ...rest] = name.split(" ");
 
   const res = await fetch(`https://api.printify.com/v1/shops/${shopId}/orders.json`, {
@@ -156,9 +158,20 @@ export default async (req) => {
     return new Response("ok", { status: 200 }); // ack anyway, nothing more we can do
   }
 
+  // A US order is made by the US maker, so its product ids, variants and
+  // parcels all come from the entry's US twin. create-checkout records the
+  // country it priced for; the address is only the fallback for older sessions.
+  const dest = String(
+    session.metadata?.dest ||
+    session.shipping_details?.address?.country ||
+    session.collected_information?.shipping_details?.address?.country ||
+    "GB"
+  ).toUpperCase();
+
   const lines = [];
   for (const row of rows) {
-    const item = catalog.find((p) => p.id === row.id);
+    const base = catalog.find((p) => p.id === row.id);
+    const item = base && forCountry(base, dest);
     if (!item) { console.error("Webhook: unknown product id", row.id, "in session", session.id); continue; }
     if (Array.isArray(item.sizes) && !row.variantId) {
       console.error("Ordering", item.id, "with no size — check create-checkout");
