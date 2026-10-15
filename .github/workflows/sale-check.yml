@@ -1,0 +1,34 @@
+name: Check a sale
+# Read-only. Works out what an Etsy sale (default 10% off) would leave on each
+# listing, from Printify's current costs and postage. See sale-check.js.
+on:
+  workflow_dispatch:
+    inputs:
+      discounts:
+        description: "Discounts to test, in % (comma list)"
+        required: false
+        default: "10"
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Work it out
+        working-directory: automation/social
+        run: node sale-check.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          DISCOUNTS: ${{ inputs.discounts }}
+      - name: Commit the report
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/sale-check-report.json
+          git commit -m "Sale check [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
