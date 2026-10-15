@@ -46,10 +46,18 @@ def fetch_image(url):
 def font(name, size, weight=None):
     f = ImageFont.truetype(os.path.join(FONTS, name), size)
     if weight is not None:
-        try:
-            f.set_variation_by_axes([weight])
-        except Exception:
-            pass
+        # Variable fonts: set only the weight axis, leave the others (Fraunces
+        # also has optical size, softness, wonk) at their defaults.
+        axes = f.get_variation_axes()
+        values = [a.get("default", a["minimum"]) for a in axes]
+        for i, a in enumerate(axes):
+            n = a.get("name", "")
+            n = (n.decode() if isinstance(n, bytes) else str(n)).lower()
+            if "weight" in n:
+                values[i] = weight
+            elif "optical" in n:
+                values[i] = max(a["minimum"], min(a["maximum"], round(size * 0.75)))
+        f.set_variation_by_axes(values)
     return f
 
 
