@@ -24,7 +24,12 @@ const KINDS = {
   socks: { want: /socks/i, avoid: /kids|baby/i },
   mug: { want: /enamel mug|camping mug|christmas mug|color(ed)? mug|accent/i, avoid: /travel|tumbler/i },
   tote: { want: /christmas|gift bag/i, avoid: /card/i },
+  // Sam, 15 Oct 2026: a Christmas frog hoodie, tee and beanie bundle.
+  hoodie: { want: /hooded sweatshirt|hoodie/i, avoid: /kids|youth|toddler|baby|zip|dog|pet|crop|aop|all over|sublimat|vest|dress/i },
+  beanie: { want: /beanie|knit hat|cuffed hat|winter hat/i, avoid: /kids|youth|baby|toddler|dog|pet/i },
 };
+// ONLY=hoodie,beanie scans just those kinds and keeps the rest of the report.
+const ONLY = (process.env.ONLY || "").split(",").map((s) => s.trim()).filter(Boolean);
 const RETIRED = /(drukātava|drukatava|drive fulfillment|hft71|rogac|jams designs|\bc4\b)/i;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -74,11 +79,14 @@ async function shippingFor(bp, pr) {
   if (!SHOP) SHOP = (await api("/shops.json"))[0].id;
   const image = ((await api("/uploads.json?limit=1")).data || [])[0];
   const all = await cached("/catalog/blueprints.json");
-  const report = { scannedAt: new Date().toISOString(), kinds: {}, undeleted: [] };
+  const OUT = path.join(__dirname, "xmas-catalog.json");
+  const prior = ONLY.length && fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : null;
+  const report = { scannedAt: new Date().toISOString(), kinds: prior ? prior.kinds : {}, undeleted: [] };
   let probes = 0;
   const MAX_PROBES = Number(process.env.MAX_PROBES) || 40;
 
   for (const [kind, k] of Object.entries(KINDS)) {
+    if (ONLY.length && !ONLY.includes(kind)) continue;
     const bps = all.filter((b) => k.want.test(b.title) && !k.avoid.test(b.title));
     const rows = [];
     for (const bp of bps.slice(0, 25)) {
@@ -126,6 +134,6 @@ async function shippingFor(bp, pr) {
     }
     report.kinds[kind] = rows;
   }
-  fs.writeFileSync(path.join(__dirname, "xmas-catalog.json"), JSON.stringify(report, null, 2) + "\n");
+  fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + "\n");
   console.log(report.undeleted.length ? "NOT DELETED: " + report.undeleted.join(", ") : "All probes deleted.");
 })().catch((e) => { console.error(e); process.exit(1); });
