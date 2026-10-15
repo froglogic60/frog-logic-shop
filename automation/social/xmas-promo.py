@@ -120,7 +120,9 @@ def mug_two_sides(prod, out_path):
         by.setdefault(label(i["src"]), i)
     if "right" not in by or "left" not in by:
         sys.exit(f"mug: need right and left views for the black variant, have {sorted(by)}")
-    W, H = 2400, 1800
+    # Square: Etsy shows a square crop of the first photo in search, and a
+    # 4:3 picture lost the name and the frog at the edges (first try, 15 Oct).
+    W, H = 2000, 2000
     canvas = Image.new("RGB", (W, H), (255, 255, 255))
     for n, cam in enumerate(["right", "left"]):
         side = fetch_image(by[cam]["src"])
@@ -129,13 +131,13 @@ def mug_two_sides(prod, out_path):
         # The mug sits in the middle ~70% of Printify's square mockup; trim the
         # margin so the two mugs read large side by side.
         m = int(s * 0.10)
-        side = side.crop((m, m, s - m, s - m)).resize((1200, 1200), Image.LANCZOS)
-        canvas.paste(side, (n * 1200, 150))
+        side = side.crop((m, m, s - m, s - m)).resize((1000, 1000), Image.LANCZOS)
+        canvas.paste(side, (n * 1000, 380))
     d = ImageDraw.Draw(canvas)
-    f = font("Fraunces-var.ttf", 64, 600)
-    line = "Your name on one side \u00b7 the Christmas frog on the other"
-    tw = d.textlength(line, font=f)
-    d.text(((W - tw) / 2, 1500), line, font=f, fill=BROWN)
+    f = font("Fraunces-var.ttf", 72, 600)
+    for k, line in enumerate(["Your name on one side,", "the Christmas frog on the other"]):
+        tw = d.textlength(line, font=f)
+        d.text(((W - tw) / 2, 1480 + k * 100), line, font=f, fill=BROWN)
     canvas.save(out_path, quality=90, optimize=True)
 
 
