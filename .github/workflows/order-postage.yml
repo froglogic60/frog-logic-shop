@@ -1,0 +1,73 @@
+name: Check postage on new orders
+# Read-only. Every morning: for each new UK or US order in Printify (website and
+# Etsy), compares the postage the customer was charged with the shipping
+# Printify billed. Sam asked on 15 Oct 2026 for the first order to be checked,
+# after the postage was converted from dollars to pounds.
+# Any new order becomes a line on the Desk and an email; quiet days do nothing.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "53 7 * * *"
+permissions:
+  contents: write
+jobs:
+  orders:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Compare postage on new orders
+        working-directory: automation/social
+        run: node order-postage-check.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+      - name: Put it on the Desk
+        if: always()
+        run: |
+          test -f /tmp/order-notes.json || { echo "nothing new"; exit 0; }
+          node -e '
+            const fs = require("fs");
+            const notes = JSON.parse(fs.readFileSync("/tmp/order-notes.json", "utf8"));
+            const day = new Date().toISOString().slice(0, 10);
+            const cal = JSON.parse(fs.readFileSync("content/calendar.json", "utf8"));
+            cal.whenever = (cal.whenever || []).filter(w => !w.startsWith("Order postage " + day));
+            cal.whenever.unshift("Order postage " + day + " — " + notes.join("; "));
+            cal.updated = day;
+            fs.writeFileSync("content/calendar.json", JSON.stringify(cal, null, 2) + "\n");
+            console.log(notes.join("\n"));
+          '
+      - name: Email Sam
+        if: always()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+        run: |
+          test -f /tmp/order-notes.json || { echo "nothing to email"; exit 0; }
+          node -e '
+            const fs = require("fs");
+            const notes = JSON.parse(fs.readFileSync("/tmp/order-notes.json", "utf8"));
+            const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+            const short = notes.some(n => /SHORT|by hand|could not/.test(n));
+            const html = "<div style=\"font-family:-apple-system,sans-serif;max-width:560px;margin:0 auto;color:#1F3229;\">"
+              + "<h1 style=\"font-size:20px;\">" + (short ? "Postage needs a look" : "New order: postage covered") + "</h1>"
+              + "<ul>" + notes.map(n => "<li>" + esc(n) + "</li>").join("") + "</ul>"
+              + "<p>Nothing has been changed. The same note is on the Desk.</p>"
+              + "<p style=\"margin-top:28px;font-size:12px;color:#5a6b5f;\">Frog Logic robot · daily order postage check</p></div>";
+            fetch("https://api.resend.com/emails", {
+              method: "POST",
+              headers: { Authorization: "Bearer " + process.env.RESEND_API_KEY, "Content-Type": "application/json" },
+              body: JSON.stringify({ from: process.env.FROM_EMAIL, to: "hello@froglogic.co.uk", subject: (short ? "Postage check: needs a look" : "Postage check: new order covered"), html }),
+            }).then(async r => { if (!r.ok) throw new Error("Resend " + r.status + " " + (await r.text()).slice(0, 200)); console.log("emailed"); });
+          '
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/order-postage-report.json content/calendar.json || true
+          git status --short
+          git commit -m "Order postage check [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
