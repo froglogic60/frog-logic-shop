@@ -5,23 +5,15 @@
       "provider": 331,
       "zones": [
         {
-          "first": 349,
-          "additional": 199,
+          "first": 277,
+          "additional": 154,
           "countries": [
-            "GB",
-            "IM"
+            "GB"
           ]
         },
         {
-          "first": 1119,
-          "additional": 399,
-          "countries": [
-            "CA"
-          ]
-        },
-        {
-          "first": 1129,
-          "additional": 299,
+          "first": 870,
+          "additional": 231,
           "countries": [
             "AD",
             "AL",
@@ -72,22 +64,29 @@
           ]
         },
         {
-          "first": 1139,
-          "additional": 399,
+          "first": 901,
+          "additional": 308,
+          "countries": [
+            "CA"
+          ]
+        },
+        {
+          "first": 916,
+          "additional": 308,
           "countries": [
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 1249,
-          "additional": 399,
+          "first": 1001,
+          "additional": 308,
           "countries": [
             "AU"
           ]
         },
         {
-          "first": 1349,
-          "additional": 299,
+          "first": 1039,
+          "additional": 231,
           "countries": [
             "CH",
             "DK",
@@ -102,8 +101,8 @@
           ]
         },
         {
-          "first": 2299,
-          "additional": 399,
+          "first": 1848,
+          "additional": 308,
           "countries": [
             "US"
           ]
@@ -115,15 +114,15 @@
       "provider": 6,
       "zones": [
         {
-          "first": 359,
-          "additional": 199,
+          "first": 277,
+          "additional": 154,
           "countries": [
             "GB"
           ]
         },
         {
-          "first": 949,
-          "additional": 149,
+          "first": 731,
+          "additional": 115,
           "countries": [
             "AT",
             "BE",
@@ -155,15 +154,15 @@
           ]
         },
         {
-          "first": 2379,
-          "additional": 619,
+          "first": 1832,
+          "additional": 477,
           "countries": [
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 3419,
-          "additional": 619,
+          "first": 2633,
+          "additional": 477,
           "countries": [
             "US"
           ]
@@ -175,23 +174,23 @@
       "provider": 94,
       "zones": [
         {
-          "first": 459,
-          "additional": 129,
+          "first": 354,
+          "additional": 100,
           "countries": [
             "GB"
           ]
         },
         {
-          "first": 519,
-          "additional": 179,
+          "first": 400,
+          "additional": 138,
           "countries": [
             "CZ",
             "DE"
           ]
         },
         {
-          "first": 569,
-          "additional": 179,
+          "first": 439,
+          "additional": 138,
           "countries": [
             "AD",
             "AL",
@@ -240,8 +239,8 @@
           ]
         },
         {
-          "first": 879,
-          "additional": 239,
+          "first": 677,
+          "additional": 185,
           "countries": [
             "CH",
             "DK",
@@ -257,15 +256,15 @@
           ]
         },
         {
-          "first": 1789,
-          "additional": 399,
+          "first": 1378,
+          "additional": 308,
           "countries": [
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 2829,
-          "additional": 399,
+          "first": 2179,
+          "additional": 308,
           "countries": [
             "US"
           ]
@@ -277,15 +276,15 @@
       "provider": 6,
       "zones": [
         {
-          "first": 389,
-          "additional": 249,
+          "first": 300,
+          "additional": 192,
           "countries": [
             "GB"
           ]
         },
         {
-          "first": 1549,
-          "additional": 199,
+          "first": 1193,
+          "additional": 154,
           "countries": [
             "AT",
             "BE",
@@ -317,15 +316,15 @@
           ]
         },
         {
-          "first": 2379,
-          "additional": 619,
+          "first": 1832,
+          "additional": 477,
           "countries": [
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 3419,
-          "additional": 619,
+          "first": 2633,
+          "additional": 477,
           "countries": [
             "US"
           ]
@@ -337,16 +336,16 @@
       "provider": 72,
       "zones": [
         {
-          "first": 559,
-          "additional": 99,
+          "first": 431,
+          "additional": 77,
           "countries": [
             "GB",
             "IM"
           ]
         },
         {
-          "first": 1449,
-          "additional": 299,
+          "first": 1116,
+          "additional": 231,
           "countries": [
             "AD",
             "AL",
@@ -396,15 +395,15 @@
           ]
         },
         {
-          "first": 1529,
-          "additional": 299,
+          "first": 1178,
+          "additional": 231,
           "countries": [
             "IE"
           ]
         },
         {
-          "first": 1649,
-          "additional": 299,
+          "first": 1270,
+          "additional": 231,
           "countries": [
             "CH",
             "DK",
@@ -419,8 +418,8 @@
           ]
         },
         {
-          "first": 2079,
-          "additional": 609,
+          "first": 1601,
+          "additional": 469,
           "countries": [
             "AU",
             "CA",
@@ -428,8 +427,8 @@
           ]
         },
         {
-          "first": 3069,
-          "additional": 199,
+          "first": 2364,
+          "additional": 154,
           "countries": [
             "US"
           ]
@@ -441,15 +440,15 @@
       "provider": 6,
       "zones": [
         {
-          "first": 469,
-          "additional": 299,
+          "first": 362,
+          "additional": 231,
           "countries": [
             "GB"
           ]
         },
         {
-          "first": 1249,
-          "additional": 199,
+          "first": 962,
+          "additional": 154,
           "countries": [
             "AT",
             "BE",
@@ -481,15 +480,15 @@
           ]
         },
         {
-          "first": 2379,
-          "additional": 619,
+          "first": 1832,
+          "additional": 477,
           "countries": [
             "REST_OF_THE_WORLD"
           ]
         },
         {
-          "first": 3519,
-          "additional": 619,
+          "first": 2710,
+          "additional": 477,
           "countries": [
             "US"
           ]
