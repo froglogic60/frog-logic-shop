@@ -1,0 +1,41 @@
+name: Print photos
+# Makes three extra Etsy photos for each wall print design (close-up, size
+# guide, more from the collection) from the artwork in Printify. Read-only on
+# Printify; commits the pictures [skip netlify]. See print-photos.py.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Design slugs (comma list, blank = all)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Fonts
+        run: |
+          mkdir -p automation/social/.gfonts
+          curl -fsSL -o automation/social/.gfonts/Fraunces-var.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/fraunces/Fraunces%5BSOFT,WONK,opsz,wght%5D.ttf"
+          curl -fsSL -o automation/social/.gfonts/Caveat-var.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/Caveat%5Bwght%5D.ttf"
+      - name: Make the photos
+        run: python automation/social/print-photos.py
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          ONLY: ${{ inputs.only }}
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/print-photos
+          git status --short | head
+          git commit -m "Print photos [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
