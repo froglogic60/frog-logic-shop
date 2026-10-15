@@ -1,0 +1,7306 @@
+{
+  "checkedAt": "2026-10-15T21:22:50.160Z",
+  "usdToGbp": 0.78,
+  "discounts": [
+    10,
+    15
+  ],
+  "rule": 0.25,
+  "rows": [
+    {
+      "title": "Personalized Christmas Frog Candle, Custom Name Scented Candle in Amber Jar, Cute Frog in Santa Hat Gift",
+      "id": "6ad105d202e855b98e01242f",
+      "etsyId": "4596136952",
+      "country": "US",
+      "kind": "other",
+      "blueprint": 1488,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 919,
+      "prices": [
+        1550,
+        2250
+      ],
+      "worst": {
+        "price": 1550,
+        "makeCostUsdCents": 933,
+        "makeCostP": 728,
+        "shipCostP": 717,
+        "off0": {
+          "sale": 1550,
+          "keep": 221,
+          "share": 0.143
+        },
+        "off10": {
+          "sale": 1395,
+          "keep": 90,
+          "share": 0.065
+        },
+        "off15": {
+          "sale": 1318,
+          "keep": 24,
+          "share": 0.018
+        }
+      }
+    },
+    {
+      "title": "Personalized Frog Christmas Ornament, Custom Name Ceramic Ornament, Cute Frog in Santa Hat, Round Tree Decoration Gift",
+      "id": "6ad101c8990b6571cf0de7e2",
+      "etsyId": "4596126028",
+      "country": "US",
+      "kind": "other",
+      "blueprint": 531,
+      "provider": 99,
+      "postageP": 448,
+      "shipCostUsdCents": 589,
+      "prices": [
+        1000
+      ],
+      "worst": {
+        "price": 1000,
+        "makeCostUsdCents": 631,
+        "makeCostP": 492,
+        "shipCostP": 459,
+        "off0": {
+          "sale": 1000,
+          "keep": 247,
+          "share": 0.247
+        },
+        "off10": {
+          "sale": 900,
+          "keep": 162,
+          "share": 0.18
+        },
+        "off15": {
+          "sale": 850,
+          "keep": 119,
+          "share": 0.14
+        }
+      },
+      "variants": [
+        {
+          "price": 1000,
+          "makeCostUsdCents": 631,
+          "makeCostP": 492,
+          "shipCostP": 459,
+          "off0": {
+            "sale": 1000,
+            "keep": 247,
+            "share": 0.247
+          },
+          "off10": {
+            "sale": 900,
+            "keep": 162,
+            "share": 0.18
+          },
+          "off15": {
+            "sale": 850,
+            "keep": 119,
+            "share": 0.14
+          }
+        }
+      ]
+    },
+    {
+      "title": "Personalised Frog Christmas Ornament, Custom Name Tree Decoration, Cute Frog in Santa Hat, Aluminium Hanging Bauble Gift",
+      "id": "6ad0fe895308e53979003397",
+      "etsyId": "4596100263",
+      "country": "GB",
+      "kind": "other",
+      "blueprint": 813,
+      "provider": 94,
+      "postageP": 235,
+      "shipCostUsdCents": 309,
+      "prices": [
+        1000
+      ],
+      "worst": {
+        "price": 1000,
+        "makeCostUsdCents": 762,
+        "makeCostP": 594,
+        "shipCostP": 241,
+        "off0": {
+          "sale": 1000,
+          "keep": 178,
+          "share": 0.178
+        },
+        "off10": {
+          "sale": 900,
+          "keep": 93,
+          "share": 0.103
+        },
+        "off15": {
+          "sale": 850,
+          "keep": 50,
+          "share": 0.059
+        }
+      },
+      "variants": [
+        {
+          "price": 1000,
+          "makeCostUsdCents": 762,
+          "makeCostP": 594,
+          "shipCostP": 241,
+          "off0": {
+            "sale": 1000,
+            "keep": 178,
+            "share": 0.178
+          },
+          "off10": {
+            "sale": 900,
+            "keep": 93,
+            "share": 0.103
+          },
+          "off15": {
+            "sale": 850,
+            "keep": 50,
+            "share": 0.059
+          }
+        }
+      ]
+    },
+    {
+      "title": "Personalised Christmas Frog Mug, Custom Name Mug, Cute Frog Gift for ADHD and Autistic Adults, Neurodivergent Christmas Gift",
+      "id": "6ad0e00497db1f1b0d0e7aa7",
+      "etsyId": "4596035492",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 635,
+      "provider": 94,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1600
+      ],
+      "worst": {
+        "price": 1600,
+        "makeCostUsdCents": 791,
+        "makeCostP": 617,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1600,
+          "keep": 656,
+          "share": 0.41
+        },
+        "off10": {
+          "sale": 1440,
+          "keep": 520,
+          "share": 0.361
+        },
+        "off15": {
+          "sale": 1360,
+          "keep": 452,
+          "share": 0.332
+        }
+      }
+    },
+    {
+      "title": "Neurospicy Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0b17f5dd864d0a90ff83b",
+      "etsyId": "4595913885",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Neurospicy Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0b13e4fdcde14c009edaf",
+      "etsyId": "4595934994",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Brain Full of Tabs Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0b0fdcfd848fd8e06d209",
+      "etsyId": "4595913783",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Brain Full of Tabs Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0b0bdcfd848fd8e06d1f3",
+      "etsyId": "4595934846",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Comfort Creature Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0b07c9145a2da850303ea",
+      "etsyId": "4595934778",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Comfort Creature Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0b03b8da49f60c20fb4f3",
+      "etsyId": "4595934704",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Guilt Is Not Evidence T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0affb4fdcde14c009ecff",
+      "etsyId": "4595934646",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Guilt Is Not Evidence T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0afba1808260f4c00a85e",
+      "etsyId": "4595934556",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "In Writing, Please T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0af795dd864d0a90ff716",
+      "etsyId": "4595913319",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "In Writing, Please T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0af399145a2da850302c0",
+      "etsyId": "4595934354",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enough T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aef64fdcde14c009ec18",
+      "etsyId": "4595913167",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enough T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aef24fdcde14c009ec0f",
+      "etsyId": "4595922264",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Nothing Needs Fixing T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aeee9145a2da8503027d",
+      "etsyId": "4595922192",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Nothing Needs Fixing T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aeea4fdcde14c009ec05",
+      "etsyId": "4595922136",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enthusiasm, Unmasked T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aee6b3ac3446f50eaaa9",
+      "etsyId": "4595922074",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enthusiasm, Unmasked T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aee141a1253d3f09c9e8",
+      "etsyId": "4595900515",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Ask Me About It T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aeddcfd848fd8e06d0b7",
+      "etsyId": "4595921946",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Ask Me About It T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aed99145a2da8503026e",
+      "etsyId": "4595921890",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "No Idea What My Face Is Doing T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aed5cfd848fd8e06d0b0",
+      "etsyId": "4595921834",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "No Idea What My Face Is Doing T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aed19145a2da85030266",
+      "etsyId": "4595900237",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Late Diagnosed T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aecd41a1253d3f09c9d3",
+      "etsyId": "4595900167",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Late Diagnosed T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aec9acc7ef505107daef",
+      "etsyId": "4595921630",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Parallel Play T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aec58da49f60c20fb3aa",
+      "etsyId": "4595921550",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Parallel Play T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aec1acc7ef505107dae9",
+      "etsyId": "4595899973",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Time Blind T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aebc41a1253d3f09c9ca",
+      "etsyId": "4595899907",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Time Blind T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aeb88da49f60c20fb3a1",
+      "etsyId": "4595899845",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Overstimulated T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "id": "6ad0aeb4acc7ef505107dadc",
+      "etsyId": "4595899751",
+      "country": "US",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 99,
+      "postageP": 377,
+      "shipCostUsdCents": 799,
+      "prices": [
+        2200
+      ],
+      "worst": {
+        "price": 2200,
+        "makeCostUsdCents": 1177,
+        "makeCostP": 918,
+        "shipCostP": 623,
+        "off0": {
+          "sale": 2200,
+          "keep": 549,
+          "share": 0.25
+        },
+        "off10": {
+          "sale": 1980,
+          "keep": 369,
+          "share": 0.186
+        },
+        "off15": {
+          "sale": 1870,
+          "keep": 279,
+          "share": 0.149
+        }
+      },
+      "variants": [
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 968,
+          "makeCostP": 755,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 712,
+            "share": 0.324
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 532,
+            "share": 0.269
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 442,
+            "share": 0.236
+          }
+        },
+        {
+          "price": 2200,
+          "makeCostUsdCents": 1177,
+          "makeCostP": 918,
+          "shipCostP": 623,
+          "off0": {
+            "sale": 2200,
+            "keep": 549,
+            "share": 0.25
+          },
+          "off10": {
+            "sale": 1980,
+            "keep": 369,
+            "share": 0.186
+          },
+          "off15": {
+            "sale": 1870,
+            "keep": 279,
+            "share": 0.149
+          }
+        }
+      ]
+    },
+    {
+      "title": "Overstimulated T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "id": "6ad0aeb08da49f60c20fb39a",
+      "etsyId": "4595899621",
+      "country": "GB",
+      "kind": "tee",
+      "blueprint": 6,
+      "provider": 331,
+      "postageP": 273,
+      "shipCostUsdCents": 359,
+      "prices": [
+        1900
+      ],
+      "worst": {
+        "price": 1900,
+        "makeCostUsdCents": 936,
+        "makeCostP": 730,
+        "shipCostP": 280,
+        "off0": {
+          "sale": 1900,
+          "keep": 744,
+          "share": 0.392
+        },
+        "off10": {
+          "sale": 1710,
+          "keep": 588,
+          "share": 0.344
+        },
+        "off15": {
+          "sale": 1615,
+          "keep": 510,
+          "share": 0.316
+        }
+      },
+      "variants": [
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        },
+        {
+          "price": 1900,
+          "makeCostUsdCents": 936,
+          "makeCostP": 730,
+          "shipCostP": 280,
+          "off0": {
+            "sale": 1900,
+            "keep": 744,
+            "share": 0.392
+          },
+          "off10": {
+            "sale": 1710,
+            "keep": 588,
+            "share": 0.344
+          },
+          "off15": {
+            "sale": 1615,
+            "keep": 510,
+            "share": 0.316
+          }
+        }
+      ]
+    },
+    {
+      "title": "Neurodivergent Household Cute Frog Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae584fdcde14c009eb6b",
+      "etsyId": "4595920922",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Neurodivergent Household Cute Frog Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae5441a1253d3f09c95f",
+      "etsyId": "4595920834",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "A Different Route Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae505dd864d0a90ff631",
+      "etsyId": "4595899247",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "A Different Route Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae4d8da49f60c20fb333",
+      "etsyId": "4595920696",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Nobody Asked How You Were Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae498da49f60c20fb32a",
+      "etsyId": "4595899087",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Nobody Asked How You Were Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae465dd864d0a90ff626",
+      "etsyId": "4595898999",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Recovery Is Part Of The Plan Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae4241a1253d3f09c953",
+      "etsyId": "4595920482",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Recovery Is Part Of The Plan Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae3f5dd864d0a90ff61e",
+      "etsyId": "4595898891",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "I Accommodated You First Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae3b41a1253d3f09c950",
+      "etsyId": "4595898839",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "I Accommodated You First Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae37acc7ef505107da66",
+      "etsyId": "4595898773",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "You Were Paying Attention Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae349145a2da850301b9",
+      "etsyId": "4595898701",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "You Were Paying Attention Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae30acc7ef505107da63",
+      "etsyId": "4595920180",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Not Broken Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae2d41a1253d3f09c932",
+      "etsyId": "4595898561",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Not Broken Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae2941a1253d3f09c92a",
+      "etsyId": "4595920044",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Never Too Much Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae265dd864d0a90ff5fc",
+      "etsyId": "4595919990",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Never Too Much Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae2241a1253d3f09c920",
+      "etsyId": "4595919946",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Small Things, Enormous Joy Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae1e5dd864d0a90ff5f8",
+      "etsyId": "4595898303",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Small Things, Enormous Joy Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae1b5dd864d0a90ff5f6",
+      "etsyId": "4595898201",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Found My People Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae179145a2da8503019c",
+      "etsyId": "4595898159",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Found My People Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae149145a2da85030198",
+      "etsyId": "4595898095",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Unreasonably Delighted Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae104fdcde14c009eb2b",
+      "etsyId": "4595919644",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Unreasonably Delighted Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae0d9145a2da85030192",
+      "etsyId": "4595919578",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Justice Sensitive Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae0941a1253d3f09c90b",
+      "etsyId": "4595897915",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Justice Sensitive Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ae069145a2da8503018b",
+      "etsyId": "4595919434",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Autistic Joy Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ae02acc7ef505107da3f",
+      "etsyId": "4595919360",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Autistic Joy Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0adff41a1253d3f09c8fe",
+      "etsyId": "4595919292",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Decision Paralysis Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0adfb9145a2da85030188",
+      "etsyId": "4595919240",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Decision Paralysis Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0adf7cfd848fd8e06cfe0",
+      "etsyId": "4595897575",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Waiting Mode Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0adf4acc7ef505107da32",
+      "etsyId": "4595897519",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Waiting Mode Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0adf09145a2da85030172",
+      "etsyId": "4595919084",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Executive Dysfunction Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0aded9145a2da8503016c",
+      "etsyId": "4595919002",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Executive Dysfunction Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ade9acc7ef505107da24",
+      "etsyId": "4595918938",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Info Dump Incoming Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch, Ships from the US",
+      "id": "6ad0ade641a1253d3f09c8dd",
+      "etsyId": "4595918866",
+      "country": "US",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 3069,
+      "prices": [
+        1566
+      ],
+      "worst": {
+        "price": 1566,
+        "makeCostUsdCents": 693,
+        "makeCostP": 541,
+        "shipCostP": 2394,
+        "off0": {
+          "sale": 1566,
+          "keep": -1255,
+          "share": -0.801
+        },
+        "off10": {
+          "sale": 1409,
+          "keep": -1388,
+          "share": -0.985
+        },
+        "off15": {
+          "sale": 1331,
+          "keep": -1455,
+          "share": -1.093
+        }
+      },
+      "variants": [
+        {
+          "price": 1566,
+          "makeCostUsdCents": 693,
+          "makeCostP": 541,
+          "shipCostP": 2394,
+          "off0": {
+            "sale": 1566,
+            "keep": -1255,
+            "share": -0.801
+          },
+          "off10": {
+            "sale": 1409,
+            "keep": -1388,
+            "share": -0.985
+          },
+          "off15": {
+            "sale": 1331,
+            "keep": -1455,
+            "share": -1.093
+          }
+        }
+      ]
+    },
+    {
+      "title": "Info Dump Incoming Wall Print — Neurodivergent ADHD and Autism Art Poster, 16x16 Inch",
+      "id": "6ad0ade28da49f60c20fb2ba",
+      "etsyId": "4595918782",
+      "country": "GB",
+      "kind": "print",
+      "blueprint": 763,
+      "provider": 72,
+      "postageP": 395,
+      "shipCostUsdCents": 559,
+      "prices": [
+        1400
+      ],
+      "worst": {
+        "price": 1400,
+        "makeCostUsdCents": 696,
+        "makeCostP": 543,
+        "shipCostP": 436,
+        "off0": {
+          "sale": 1400,
+          "keep": 513,
+          "share": 0.366
+        },
+        "off10": {
+          "sale": 1260,
+          "keep": 394,
+          "share": 0.313
+        },
+        "off15": {
+          "sale": 1190,
+          "keep": 334,
+          "share": 0.281
+        }
+      },
+      "variants": [
+        {
+          "price": 1400,
+          "makeCostUsdCents": 696,
+          "makeCostP": 543,
+          "shipCostP": 436,
+          "off0": {
+            "sale": 1400,
+            "keep": 513,
+            "share": 0.366
+          },
+          "off10": {
+            "sale": 1260,
+            "keep": 394,
+            "share": 0.313
+          },
+          "off15": {
+            "sale": 1190,
+            "keep": 334,
+            "share": 0.281
+          }
+        }
+      ]
+    },
+    {
+      "title": "Chaos Gremlin Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0addf8da49f60c20fb2ad",
+      "etsyId": "4595918588",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Chaos Gremlin Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0addbcfd848fd8e06cf9f",
+      "etsyId": "4595897003",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Low Battery Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0add841a1253d3f09c8b0",
+      "etsyId": "4595896955",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Low Battery Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0add49145a2da85030115",
+      "etsyId": "4595918422",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Twenty Minutes Counts Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0add18da49f60c20fb27b",
+      "etsyId": "4595896851",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Twenty Minutes Counts Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0adcd9145a2da85030105",
+      "etsyId": "4595918274",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Shared Interest, Not Small Talk Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0adca9145a2da850300ff",
+      "etsyId": "4595896717",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Shared Interest, Not Small Talk Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0adc641a1253d3f09c886",
+      "etsyId": "4595896625",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "The Right Amount of You Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0adc341a1253d3f09c882",
+      "etsyId": "4595896567",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "The Right Amount of You Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0adbf4fdcde14c009ea9d",
+      "etsyId": "4595896497",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Comfort Rewatch Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0adbb4fdcde14c009ea8f",
+      "etsyId": "4595917928",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Comfort Rewatch Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0adb84fdcde14c009ea8a",
+      "etsyId": "4595896357",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Interoception Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0adb44fdcde14c009ea87",
+      "etsyId": "4595917786",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Interoception Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0adb14fdcde14c009ea82",
+      "etsyId": "4595896215",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Snacks and Spite Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0adae9145a2da850300db",
+      "etsyId": "4595896137",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Snacks and Spite Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0adaa41a1253d3f09c850",
+      "etsyId": "4595917594",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "Object Permanence Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0ada78da49f60c20fb249",
+      "etsyId": "4595895877",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "Object Permanence Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0ada441a1253d3f09c83a",
+      "etsyId": "4595917384",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    },
+    {
+      "title": "47 Things at Once Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
+      "id": "6ad0ada01808260f4c00a659",
+      "etsyId": "4595915834",
+      "country": "US",
+      "kind": "mug",
+      "blueprint": 478,
+      "provider": 99,
+      "postageP": 449,
+      "shipCostUsdCents": 939,
+      "prices": [
+        1456
+      ],
+      "worst": {
+        "price": 1456,
+        "makeCostUsdCents": 503,
+        "makeCostP": 392,
+        "shipCostP": 732,
+        "off0": {
+          "sale": 1456,
+          "keep": 463,
+          "share": 0.318
+        },
+        "off10": {
+          "sale": 1310,
+          "keep": 338,
+          "share": 0.258
+        },
+        "off15": {
+          "sale": 1238,
+          "keep": 277,
+          "share": 0.224
+        }
+      },
+      "variants": [
+        {
+          "price": 1456,
+          "makeCostUsdCents": 503,
+          "makeCostP": 392,
+          "shipCostP": 732,
+          "off0": {
+            "sale": 1456,
+            "keep": 463,
+            "share": 0.318
+          },
+          "off10": {
+            "sale": 1310,
+            "keep": 338,
+            "share": 0.258
+          },
+          "off15": {
+            "sale": 1238,
+            "keep": 277,
+            "share": 0.224
+          }
+        }
+      ]
+    },
+    {
+      "title": "47 Things at Once Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "id": "6ad0ad9d4fdcde14c009ea51",
+      "etsyId": "4595915784",
+      "country": "GB",
+      "kind": "mug",
+      "blueprint": 535,
+      "provider": 6,
+      "postageP": 296,
+      "shipCostUsdCents": 389,
+      "prices": [
+        1350
+      ],
+      "worst": {
+        "price": 1350,
+        "makeCostUsdCents": 534,
+        "makeCostP": 417,
+        "shipCostP": 303,
+        "off0": {
+          "sale": 1350,
+          "keep": 643,
+          "share": 0.476
+        },
+        "off10": {
+          "sale": 1215,
+          "keep": 529,
+          "share": 0.435
+        },
+        "off15": {
+          "sale": 1148,
+          "keep": 472,
+          "share": 0.411
+        }
+      },
+      "variants": [
+        {
+          "price": 1350,
+          "makeCostUsdCents": 534,
+          "makeCostP": 417,
+          "shipCostP": 303,
+          "off0": {
+            "sale": 1350,
+            "keep": 643,
+            "share": 0.476
+          },
+          "off10": {
+            "sale": 1215,
+            "keep": 529,
+            "share": 0.435
+          },
+          "off15": {
+            "sale": 1148,
+            "keep": 472,
+            "share": 0.411
+          }
+        }
+      ]
+    }
+  ]
+}
