@@ -70,10 +70,10 @@ def shadowed(canvas, art, x, y, blur=18, offset=(0, 14), alpha=90):
 
 
 def closeup(art, out):
-    # The middle 55% of the artwork, so the lettering and texture read at
-    # thumbnail size. Square artwork, square crop.
+    # The middle 72% of the artwork: close enough for the lettering and paper
+    # texture to read, loose enough not to cut words in half (55% did).
     w, h = art.size
-    c = 0.55
+    c = 0.72
     box = (int(w * (1 - c) / 2), int(h * (1 - c) / 2), int(w * (1 + c) / 2), int(h * (1 + c) / 2))
     img = art.crop(box).resize((S, S), Image.LANCZOS)
     d = ImageDraw.Draw(img)
