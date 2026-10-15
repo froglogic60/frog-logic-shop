@@ -111,8 +111,13 @@ def mug_two_sides(prod, out_path):
     black = [v["id"] for v in prod.get("variants", []) if v.get("is_enabled") and "black" in v.get("title", "").lower()]
     if not black:
         sys.exit("mug: no enabled black variant")
-    imgs = [i for i in prod.get("images") or [] if black[0] in (i.get("variant_ids") or [])]
-    by = {label(i["src"]): i for i in imgs}
+    # Each mockup's URL names the variant it shows (/mockup/<product>/<variant>/...).
+    # variant_ids alone isn't enough: one mockup can list every colour, which
+    # put a red and a pink mug side by side on the first run.
+    imgs = [i for i in prod.get("images") or [] if f"/{black[0]}/" in i["src"]]
+    by = {}
+    for i in imgs:
+        by.setdefault(label(i["src"]), i)
     if "right" not in by or "left" not in by:
         sys.exit(f"mug: need right and left views for the black variant, have {sorted(by)}")
     W, H = 2400, 1800
@@ -123,7 +128,7 @@ def mug_two_sides(prod, out_path):
         side = side.crop(((side.width - s) // 2, (side.height - s) // 2, (side.width + s) // 2, (side.height + s) // 2))
         # The mug sits in the middle ~70% of Printify's square mockup; trim the
         # margin so the two mugs read large side by side.
-        m = int(s * 0.14)
+        m = int(s * 0.10)
         side = side.crop((m, m, s - m, s - m)).resize((1200, 1200), Image.LANCZOS)
         canvas.paste(side, (n * 1200, 150))
     d = ImageDraw.Draw(canvas)
