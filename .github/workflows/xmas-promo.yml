@@ -15,6 +15,13 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pillow
+      - name: Fonts
+        # Same upstream files gfonts.js fetches for the other robots; they
+        # aren't kept in the repo.
+        run: |
+          mkdir -p automation/social/.gfonts
+          curl -fsSL -o automation/social/.gfonts/Fraunces-var.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/fraunces/Fraunces%5BSOFT,WONK,opsz,wght%5D.ttf"
+          curl -fsSL -o automation/social/.gfonts/Caveat-var.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/Caveat%5Bwght%5D.ttf"
       - name: Make the pictures
         run: python automation/social/xmas-promo.py
         env:
