@@ -196,11 +196,13 @@ function keeps(price, cost, kind) {
         variants: ids.map((id) => ({ id, price, is_enabled: true })),
         print_areas: (src.print_areas || []).map((a) => ({
           variant_ids: a.variant_ids.filter((id) => ids.includes(id)),
-          placeholders: (a.placeholders || []).map((ph) => ({
+          // Only placeholders that carry artwork: the tees have empty back and
+          // sleeve areas, and Printify refuses a placeholder with no image.
+          placeholders: (a.placeholders || []).filter((ph) => (ph.images || []).length).map((ph) => ({
             position: ph.position,
-            images: (ph.images || []).map((im) => ({ id: im.id, x: im.x, y: im.y, scale: im.scale, angle: im.angle || 0 })),
+            images: ph.images.map((im) => ({ id: im.id, x: im.x, y: im.y, scale: im.scale, angle: im.angle || 0 })),
           })),
-        })).filter((a) => a.variant_ids.length),
+        })).filter((a) => a.variant_ids.length && a.placeholders.length),
       };
       if (DRY) { console.log(`  would ${existing.has(title) ? "correct" : "create"}: ${title} — £${(price / 100).toFixed(2)}, keeps ${Math.round(keep)}p, ${ids.length} variant(s), tags: ${payload.tags.join(", ")}`); continue; }
       const already = existing.get(title);
