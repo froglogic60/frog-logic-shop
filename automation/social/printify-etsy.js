@@ -223,7 +223,12 @@ function keeps(price, cost, kind) {
       if (PUBLISH) {
         await sleep(1500);
         await api(`/shops/${ETSY}/products/${prod.id}/publish.json`, "POST", {
-          title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
+          // shipping_template stays false: on 15 Oct 2026 the Etsy delivery
+          // profiles were cut to UK-only (UK makers) and US-only (US makers),
+          // because EU product-safety rules (GPSR) need an EU representative
+          // Frog Logic does not have. Letting Printify re-push its templates
+          // would quietly reopen the EU.
+          title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: false,
         });
         published = true;
         await sleep(6000);
