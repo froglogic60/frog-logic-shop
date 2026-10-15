@@ -1,0 +1,48 @@
+name: Put tees, mugs and prints on Etsy
+# Copies every live tee, mug and wall print (UK maker, plus its US twin) into
+# the Printify Etsy store with Etsy titles, tags and prices, and publishes them
+# to Etsy when "publish" is ticked. Refuses anything under Sam's 25% rule.
+# Writes automation/social/printify-etsy-result.json [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Lines (comma list, blank = tee,mug,print)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Report only, build nothing"
+        type: boolean
+        default: true
+      publish:
+        description: "Publish to Etsy (creates live listings)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  etsy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build the Etsy products
+        working-directory: automation/social
+        run: node printify-etsy.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          ONLY: ${{ inputs.only }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          PUBLISH: ${{ inputs.publish && '1' || '0' }}
+      - name: Commit the result
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-etsy-result.json
+          git commit -m "Etsy products built [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
