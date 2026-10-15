@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-15T11:00:29.345Z",
+  "ranAt": "2026-10-15T11:17:52.115Z",
   "etsyStore": 29335686,
   "results": [
     {
@@ -782,149 +782,129 @@
       "worstCost": 936,
       "keeps": 580,
       "published": true
+    },
+    {
+      "id": "45-enough",
+      "kind": "tee",
+      "where": "us",
+      "title": "Enough T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "printifyProductId": "6ad0aef64fdcde14c009ec18",
+      "price": 2200,
+      "worstCost": 1177,
+      "keeps": 585,
+      "published": true
+    },
+    {
+      "id": "51-in-writing-please",
+      "kind": "tee",
+      "where": "uk",
+      "title": "In Writing, Please T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6ad0af399145a2da850302c0",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": true
+    },
+    {
+      "id": "51-in-writing-please",
+      "kind": "tee",
+      "where": "us",
+      "title": "In Writing, Please T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "printifyProductId": "6ad0af795dd864d0a90ff716",
+      "price": 2200,
+      "worstCost": 1177,
+      "keeps": 585,
+      "published": true
+    },
+    {
+      "id": "63-guilt-is-not-evidence",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Guilt Is Not Evidence T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6ad0afba1808260f4c00a85e",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": true
+    },
+    {
+      "id": "63-guilt-is-not-evidence",
+      "kind": "tee",
+      "where": "us",
+      "title": "Guilt Is Not Evidence T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "printifyProductId": "6ad0affb4fdcde14c009ecff",
+      "price": 2200,
+      "worstCost": 1177,
+      "keeps": 585,
+      "published": true
+    },
+    {
+      "id": "f1-comfort-creature",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Comfort Creature Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6ad0b03b8da49f60c20fb4f3",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": true
+    },
+    {
+      "id": "f1-comfort-creature",
+      "kind": "tee",
+      "where": "us",
+      "title": "Comfort Creature Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "printifyProductId": "6ad0b07c9145a2da850303ea",
+      "price": 2200,
+      "worstCost": 1177,
+      "keeps": 585,
+      "published": true
+    },
+    {
+      "id": "f2-brain-full-of-tabs",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Brain Full of Tabs Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6ad0b0bdcfd848fd8e06d1f3",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": true
+    },
+    {
+      "id": "f2-brain-full-of-tabs",
+      "kind": "tee",
+      "where": "us",
+      "title": "Brain Full of Tabs Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "printifyProductId": "6ad0b0fdcfd848fd8e06d209",
+      "price": 2200,
+      "worstCost": 1177,
+      "keeps": 585,
+      "published": true
+    },
+    {
+      "id": "f3-neurospicy",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Neurospicy Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6ad0b13e4fdcde14c009edaf",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": true
+    },
+    {
+      "id": "f3-neurospicy",
+      "kind": "tee",
+      "where": "us",
+      "title": "Neurospicy Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee, Ships from the US",
+      "printifyProductId": "6ad0b17f5dd864d0a90ff83b",
+      "price": 2200,
+      "worstCost": 1177,
+      "keeps": 585,
+      "published": true
     }
   ],
   "held": [],
-  "errors": [
-    {
-      "id": "01-overstimulated",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aeb08da49f60c20fb39a.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "01-overstimulated",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aeb4acc7ef505107dadc.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "12-time-blind",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aeb88da49f60c20fb3a1.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "12-time-blind",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aebc41a1253d3f09c9ca.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "18-parallel-play",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aec1acc7ef505107dae9.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "18-parallel-play",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aec58da49f60c20fb3aa.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "24-late-diagnosed",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aec9acc7ef505107daef.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "24-late-diagnosed",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aecd41a1253d3f09c9d3.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "29-no-idea-what-my-face-is-doing",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aed19145a2da85030266.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "29-no-idea-what-my-face-is-doing",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aed5cfd848fd8e06d0b0.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "31-ask-me-about-it",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aed99145a2da8503026e.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "31-ask-me-about-it",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aeddcfd848fd8e06d0b7.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "39-enthusiasm-unmasked",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aee141a1253d3f09c9e8.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "39-enthusiasm-unmasked",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aee6b3ac3446f50eaaa9.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "42-nothing-needs-fixing",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aeea4fdcde14c009ec05.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "42-nothing-needs-fixing",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aeee9145a2da8503027d.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "45-enough",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0aef24fdcde14c009ec0f.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "45-enough",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0aef64fdcde14c009ec18.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "51-in-writing-please",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0af399145a2da850302c0.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "51-in-writing-please",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0af795dd864d0a90ff716.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "63-guilt-is-not-evidence",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0afba1808260f4c00a85e.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "63-guilt-is-not-evidence",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0affb4fdcde14c009ecff.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "f1-comfort-creature",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0b03b8da49f60c20fb4f3.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "f1-comfort-creature",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0b07c9145a2da850303ea.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "f2-brain-full-of-tabs",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0b0bdcfd848fd8e06d1f3.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "f2-brain-full-of-tabs",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0b0fdcfd848fd8e06d209.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "f3-neurospicy",
-      "where": "uk",
-      "error": "PUT /shops/29335686/products/6ad0b13e4fdcde14c009edaf.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    },
-    {
-      "id": "f3-neurospicy",
-      "where": "us",
-      "error": "PUT /shops/29335686/products/6ad0b17f5dd864d0a90ff83b.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
-    }
-  ]
+  "errors": []
 }
