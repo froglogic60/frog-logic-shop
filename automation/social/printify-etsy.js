@@ -17,7 +17,9 @@
 // listing a design twice.
 //
 //   DRY_RUN=1 node printify-etsy.js   report only, nothing created
-//   PUBLISH=1 node printify-etsy.js   create/correct AND publish to Etsy
+//   PUBLISH=1 node printify-etsy.js   create/correct; push corrections to Etsy.
+//                                     New products are NOT published: their
+//                                     photos must be chosen in Printify first.
 //   ONLY=mug node printify-etsy.js    one line
 const fs = require("fs");
 const path = require("path");
@@ -174,7 +176,7 @@ function keeps(price, cost, kind) {
   // part-way, must not wipe the record of the products already on Etsy.
   const prior = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { results: [] };
   const keepPrior = new Map((prior.results || []).map((r) => [r.where + ":" + r.id, r]));
-  const results = [], errors = [], held = [];
+  const results = [], errors = [], held = [], photoStep = [];
 
   for (const j of jobs) {
     const frog = /^f\d/.test(j.id);
@@ -219,8 +221,18 @@ function keeps(price, cost, kind) {
       const prod = already
         ? await api(`/shops/${ETSY}/products/${already.id}.json`, "PUT", { title: _t, description, tags, variants })
         : await api(`/shops/${ETSY}/products.json`, "POST", payload);
+      // A NEW product is never published from here. The API gives a new
+      // product one mockup and cannot choose more: it lists only mockups
+      // already chosen, and accepts but ignores an images change (tested twice
+      // by mockup-probe.js, 15 Oct 2026). Publishing straight away is how 82
+      // listings reached Etsy with one photo each. New products wait for the
+      // photo step in Printify's mockup library (links printed at the end),
+      // and are published from there.
+      //
+      // An EXISTING product already has its photos chosen, so a words-and-price
+      // correction may still be pushed, with images left alone.
       let published = false;
-      if (PUBLISH) {
+      if (PUBLISH && already) {
         await sleep(1500);
         await api(`/shops/${ETSY}/products/${prod.id}/publish.json`, "POST", {
           // shipping_template stays false: on 15 Oct 2026 the Etsy delivery
@@ -228,14 +240,16 @@ function keeps(price, cost, kind) {
           // because EU product-safety rules (GPSR) need an EU representative
           // Frog Logic does not have. Letting Printify re-push its templates
           // would quietly reopen the EU.
-          title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: false,
+          title: true, description: true, images: false, variants: true, tags: true, keyFeatures: true, shipping_template: false,
         });
         published = true;
         await sleep(6000);
       }
+      const needsPhotos = !already;
+      if (needsPhotos) photoStep.push({ title, kind: j.kind, url: `https://printify.com/app/mockup-library/shops/${ETSY}/products/${prod.id}` });
       keepPrior.delete(j.where + ":" + j.id);
-      results.push({ id: j.id, kind: j.kind, where: j.where, title, printifyProductId: prod.id, price, worstCost: worst, keeps: Math.round(keep), published });
-      console.log(`  ${already ? "corrected" : "created"}${published ? " + published" : ""}: ${title} -> ${prod.id}`);
+      results.push({ id: j.id, kind: j.kind, where: j.where, title, printifyProductId: prod.id, price, worstCost: worst, keeps: Math.round(keep), published, needsPhotos });
+      console.log(`  ${already ? "corrected" : "created"}${published ? " + pushed (words/prices)" : ""}${needsPhotos ? " — NOT on Etsy until photos are chosen" : ""}: ${title} -> ${prod.id}`);
     } catch (e) {
       console.error(`  FAILED ${title}: ${e.message}`);
       errors.push({ id: j.id, where: j.where, error: e.message });
@@ -243,6 +257,14 @@ function keeps(price, cost, kind) {
   }
   if (DRY) { console.log("\nDRY_RUN — nothing created or changed."); return; }
   const all = [...keepPrior.values(), ...results];
-  fs.writeFileSync(OUT, JSON.stringify({ ranAt: new Date().toISOString(), etsyStore: ETSY, results: all, held, errors }, null, 2) + "\n");
+  fs.writeFileSync(OUT, JSON.stringify({ ranAt: new Date().toISOString(), etsyStore: ETSY, results: all, held, errors, photoStep }, null, 2) + "\n");
   console.log(`\ndone: ${results.length} built, ${held.length} held for price, ${errors.length} failed -> printify-etsy-result.json`);
+  if (photoStep.length) {
+    // What the 82 got on 15 Oct 2026: tees 10 (front, people, lifestyle,
+    // folded, hanging, duo, size chart), mugs every view offered up to 8,
+    // prints all 3. Before the first publish, check the Etsy delivery profile
+    // it will use is UK-only or US-only (see the shipping_template note above).
+    console.log(`\n${photoStep.length} new product(s) are NOT on Etsy yet. Choose photos for each, then publish from Printify:`);
+    for (const p of photoStep) console.log(`  [${p.kind}] ${p.title}\n      ${p.url}`);
+  }
 })().catch((e) => { console.error(e); process.exit(1); });
