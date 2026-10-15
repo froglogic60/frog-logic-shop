@@ -30,7 +30,9 @@ PRODUCTS = [
 
 
 def api(path):
-    req = urllib.request.Request("https://api.printify.com/v1" + path, headers={"Authorization": "Bearer " + KEY})
+    # Printify's firewall refuses Python's default "Python-urllib" user agent
+    # (403 on the first run, 15 Oct 2026), so name the bot like the others.
+    req = urllib.request.Request("https://api.printify.com/v1" + path, headers={"Authorization": "Bearer " + KEY, "User-Agent": "frog-logic-bot/1.0"})
     with urllib.request.urlopen(req, timeout=60) as r:
         return json.load(r)
 
