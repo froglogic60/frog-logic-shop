@@ -212,8 +212,12 @@ function keeps(price, cost, kind) {
       };
       if (DRY) { console.log(`  would ${existing.has(title) ? "correct" : "create"}: ${title} — £${(price / 100).toFixed(2)}, keeps ${Math.round(keep)}p, ${ids.length} variant(s), tags: ${payload.tags.join(", ")}`); continue; }
       const already = existing.get(title);
+      // An update must not re-send print areas or the blueprint: Printify
+      // rejects that ("variants do not match", 15 Oct 2026). Words and prices
+      // are all that can change on a product that already exists.
+      const { title: _t, description, tags, variants } = payload;
       const prod = already
-        ? await api(`/shops/${ETSY}/products/${already.id}.json`, "PUT", payload)
+        ? await api(`/shops/${ETSY}/products/${already.id}.json`, "PUT", { title: _t, description, tags, variants })
         : await api(`/shops/${ETSY}/products.json`, "POST", payload);
       let published = false;
       if (PUBLISH) {
