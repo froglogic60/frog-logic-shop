@@ -60,7 +60,9 @@ async function api(p, method = "GET", body) {
       body: body ? JSON.stringify(body) : undefined,
     });
     if (r.ok) return r.status === 204 ? {} : r.json();
-    if ((r.status === 429 || r.status >= 500) && attempt < 5) { await sleep(Math.min(30000, 2000 * 2 ** attempt)); continue; }
+    // Publishing to Etsy is rate-limited hard (429 "Too Many Attempts" after
+    // ~17 in a row on 15 Oct 2026), so back off for minutes, not seconds.
+    if ((r.status === 429 || r.status >= 500) && attempt < 6) { await sleep(Math.min(180000, (r.status === 429 ? 20000 : 2000) * 2 ** attempt)); continue; }
     throw new Error(method + " " + p + " -> " + r.status + " " + (await r.text()).slice(0, 400));
   }
 }
@@ -168,6 +170,10 @@ function keeps(price, cost, kind) {
 
   const existing = new Map((await shopProducts(ETSY)).map((x) => [x.title, x]));
   const OUT = path.join(__dirname, "printify-etsy-result.json");
+  // Keep what earlier runs built: a run limited with ONLY, or one that failed
+  // part-way, must not wipe the record of the products already on Etsy.
+  const prior = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { results: [] };
+  const keepPrior = new Map((prior.results || []).map((r) => [r.where + ":" + r.id, r]));
   const results = [], errors = [], held = [];
 
   for (const j of jobs) {
@@ -216,7 +222,9 @@ function keeps(price, cost, kind) {
           title: true, description: true, images: true, variants: true, tags: true, keyFeatures: true, shipping_template: true,
         });
         published = true;
+        await sleep(6000);
       }
+      keepPrior.delete(j.where + ":" + j.id);
       results.push({ id: j.id, kind: j.kind, where: j.where, title, printifyProductId: prod.id, price, worstCost: worst, keeps: Math.round(keep), published });
       console.log(`  ${already ? "corrected" : "created"}${published ? " + published" : ""}: ${title} -> ${prod.id}`);
     } catch (e) {
@@ -225,6 +233,7 @@ function keeps(price, cost, kind) {
     }
   }
   if (DRY) { console.log("\nDRY_RUN — nothing created or changed."); return; }
-  fs.writeFileSync(OUT, JSON.stringify({ ranAt: new Date().toISOString(), etsyStore: ETSY, results, held, errors }, null, 2) + "\n");
+  const all = [...keepPrior.values(), ...results];
+  fs.writeFileSync(OUT, JSON.stringify({ ranAt: new Date().toISOString(), etsyStore: ETSY, results: all, held, errors }, null, 2) + "\n");
   console.log(`\ndone: ${results.length} built, ${held.length} held for price, ${errors.length} failed -> printify-etsy-result.json`);
 })().catch((e) => { console.error(e); process.exit(1); });
