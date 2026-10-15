@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -849,6 +849,7 @@
     }
   ],
   "whenever": [
+    "Christmas frog ornament (Etsy, UK + US versions, live 15 Oct at £10): can be put up to £11. At £11 the UK one is back inside the 25% rule (at £10 it keeps about £2.90 a sale, counting the postage).",
     "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — ten more listed 13–14 Oct, 8 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four posts queued for FB/IG 16 Oct–6 Nov and made as TikTok slides for Sam to post by hand, one a week. TikTok posting API was refused, so TikTok stays manual",
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
