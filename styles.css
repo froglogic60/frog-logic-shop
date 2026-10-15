@@ -117,6 +117,12 @@ a{ color: var(--ink); }
 .collection.halloween h2{ color:#3E3452; }
 .collection.halloween .count{ color:#5E4A8C; }
 body.low-stim .collection.halloween{ background:var(--bg); }
+/* Personalised Christmas range (Etsy-only). Warm cream with the frog's red. */
+.collection.christmas{ background:#F4EFE3; }
+.collection.christmas .section-head{ border-bottom-color:#6B4A32; }
+.collection.christmas h2{ color:#6B4A32; }
+.collection.christmas .count{ color:#B5443A; }
+body.low-stim .collection.christmas{ background:var(--bg); }
 
 .bespoke-band{
   display:grid; grid-template-columns:minmax(230px,340px) 1fr;
