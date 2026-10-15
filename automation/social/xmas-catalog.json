@@ -1,0 +1,7913 @@
+{
+  "scannedAt": "2026-10-15T13:46:26.411Z",
+  "kinds": {
+    "candle": [
+      {
+        "blueprint": "Scented Candle - Full Glass, 11oz",
+        "blueprintId": 727,
+        "brand": "Seventh Avenue Apothecary",
+        "provider": "SwagRabbit",
+        "providerId": 75,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "White Tea and Fig",
+            "Ocean Mist and Moss"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 869,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2791,
+          "max": 2791
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candles with White Lid, 9oz",
+        "blueprintId": 755,
+        "brand": "Candle Builders",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 8,
+        "options": [
+          [
+            "Comfort Spice",
+            "Sea Breeze",
+            "Vanilla Bean",
+            "Fresh Balsam",
+            "Spiced Pumpkin Ginger",
+            "Unscented",
+            "Eucalyptus Lavender Herb",
+            "Pink Grapefruit"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 829,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1146,
+          "max": 1187
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candles with White Lid, 9oz",
+        "blueprintId": 755,
+        "brand": "Candle Builders",
+        "provider": "Candle Builders",
+        "providerId": 91,
+        "makerCountry": "US",
+        "variants": 8,
+        "options": [
+          [
+            "Comfort Spice",
+            "Sea Breeze",
+            "Vanilla Bean",
+            "Fresh Balsam",
+            "Spiced Pumpkin Ginger",
+            "Unscented",
+            "Eucalyptus Lavender Herb",
+            "Pink Grapefruit"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 829,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1149,
+          "max": 1190
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candles, 13.75oz",
+        "blueprintId": 805,
+        "brand": "Candle Builders",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "Comfort Spice",
+            "Sea Breeze",
+            "Vanilla Bean"
+          ],
+          [
+            "13.75oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 339,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1803,
+          "max": 1803
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candles, 13.75oz",
+        "blueprintId": 805,
+        "brand": "Candle Builders",
+        "provider": "Candle Builders",
+        "providerId": 91,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "Comfort Spice",
+            "Sea Breeze",
+            "Vanilla Bean"
+          ],
+          [
+            "13.75oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 339,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1806,
+          "max": 1806
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candle, 9oz",
+        "blueprintId": 1048,
+        "brand": "Lumient",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 9,
+        "options": [
+          [
+            "Clean Cotton",
+            "Sea Salt + Orchid",
+            "White Sage and Lavender",
+            "Apple Harvest",
+            "Cinnamon Vanilla",
+            "Christmas Warmth",
+            "Coconut Cream + Cardamom",
+            "Peppered Passionfruit",
+            "Unscented"
+          ],
+          [
+            "9oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 829,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1355,
+          "max": 1355
+        }
+      },
+      {
+        "blueprint": "Tin Candles",
+        "blueprintId": 1379,
+        "brand": "Printed Mint",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 30,
+        "options": [
+          [
+            "4oz",
+            "8oz"
+          ],
+          [
+            "Black",
+            "Gold",
+            "Silver"
+          ],
+          [
+            "Evergreen",
+            "Fresh Coffee",
+            "Mango Coconut",
+            "Spa Retreat",
+            "Vanilla Bean"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 549,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 897,
+          "max": 1182
+        }
+      },
+      {
+        "blueprint": "Tin Candles",
+        "blueprintId": 1379,
+        "brand": "Printed Mint",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 30,
+        "options": [
+          [
+            "4oz",
+            "8oz"
+          ],
+          [
+            "Black",
+            "Gold",
+            "Silver"
+          ],
+          [
+            "Evergreen",
+            "Fresh Coffee",
+            "Mango Coconut",
+            "Spa Retreat",
+            "Vanilla Bean"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 649,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 894,
+          "max": 1179
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candle (Multi-Size, Amber Jar)",
+        "blueprintId": 1468,
+        "brand": "Lumient",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 12,
+        "options": [
+          [
+            "4oz",
+            "9oz"
+          ],
+          [
+            "Amber"
+          ],
+          [
+            "Christmas Warmth",
+            "Peppered Passionfruit",
+            "Unscented",
+            "White Sage and Lavender",
+            "Cinnamon Vanilla",
+            "Coconut Cream + Cardamom",
+            "Clean Cotton",
+            "Sea Salt + Orchid",
+            "Ocean Water"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 829,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 985,
+          "max": 1355
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candle (Multi-Size, Amber Jar)",
+        "blueprintId": 1468,
+        "brand": "Lumient",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 12,
+        "options": [
+          [
+            "4oz",
+            "9oz"
+          ],
+          [
+            "Amber"
+          ],
+          [
+            "Christmas Warmth",
+            "Peppered Passionfruit",
+            "Unscented",
+            "White Sage and Lavender",
+            "Cinnamon Vanilla",
+            "Coconut Cream + Cardamom",
+            "Clean Cotton",
+            "Sea Salt + Orchid",
+            "Ocean Water"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 982,
+          "max": 1352
+        }
+      },
+      {
+        "blueprint": "Scented Candles, Coconut Apricot Wax (4oz, 9oz)",
+        "blueprintId": 1488,
+        "brand": "Printed Mint",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 37,
+        "options": [
+          [
+            "4oz",
+            "9oz"
+          ],
+          [
+            "Clear",
+            "Amber"
+          ],
+          [
+            "Beachwood",
+            "Cashmere Musk",
+            "Cinnamon Chai",
+            "Fraser Fir",
+            "Lavender",
+            "Mango Coconut",
+            "Unscented",
+            "Vanilla Bean",
+            "Midnight Blackberry",
+            "Blackberry Vanilla"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 919,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 936,
+          "max": 936
+        }
+      },
+      {
+        "blueprint": "Scented Candles, Coconut Apricot Wax (4oz, 9oz)",
+        "blueprintId": 1488,
+        "brand": "Printed Mint",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 37,
+        "options": [
+          [
+            "4oz",
+            "9oz"
+          ],
+          [
+            "Clear",
+            "Amber"
+          ],
+          [
+            "Beachwood",
+            "Cashmere Musk",
+            "Cinnamon Chai",
+            "Fraser Fir",
+            "Lavender",
+            "Mango Coconut",
+            "Unscented",
+            "Vanilla Bean",
+            "Midnight Blackberry",
+            "Blackberry Vanilla"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 933,
+          "max": 933
+        }
+      },
+      {
+        "blueprint": "Frosted Glass Candle, 11oz",
+        "blueprintId": 1657,
+        "brand": "Printed Mint",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 9,
+        "options": [
+          [
+            "Vanilla",
+            "Mango Coconut",
+            "Fraser Fir",
+            "Cinnamon Chai",
+            "Lavender",
+            "Blackberry Vanilla",
+            "Oakmoss and Amber",
+            "Sea Minerals",
+            "Fragrance Free"
+          ],
+          [
+            "11oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 939,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2115,
+          "max": 2115
+        }
+      },
+      {
+        "blueprint": "Frosted Glass Candle, 11oz",
+        "blueprintId": 1657,
+        "brand": "Printed Mint",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 9,
+        "options": [
+          [
+            "Vanilla",
+            "Mango Coconut",
+            "Fraser Fir",
+            "Cinnamon Chai",
+            "Lavender",
+            "Blackberry Vanilla",
+            "Oakmoss and Amber",
+            "Sea Minerals",
+            "Fragrance Free"
+          ],
+          [
+            "11oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 939,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2112,
+          "max": 2112
+        }
+      },
+      {
+        "blueprint": "Glass Candle, 11oz",
+        "blueprintId": 1695,
+        "brand": "Lumient",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 12,
+        "options": [
+          [
+            "Clear",
+            "Frosted"
+          ],
+          [
+            "Cinnamon Vanilla",
+            "Fizz and Glitz",
+            "Ocean Water",
+            "Unscented",
+            "White Sage and Lavender",
+            "Beach Rose"
+          ],
+          [
+            "11oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 989,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1560,
+          "max": 1560
+        }
+      },
+      {
+        "blueprint": "Glass Candle, 11oz",
+        "blueprintId": 1695,
+        "brand": "Lumient",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 12,
+        "options": [
+          [
+            "Clear",
+            "Frosted"
+          ],
+          [
+            "Cinnamon Vanilla",
+            "Fizz and Glitz",
+            "Ocean Water",
+            "Unscented",
+            "White Sage and Lavender",
+            "Beach Rose"
+          ],
+          [
+            "11oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 989,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1557,
+          "max": 1557
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candles with Black Lid, (4 and 9oz)",
+        "blueprintId": 1943,
+        "brand": "Candle Builders",
+        "provider": "Candle Builders",
+        "providerId": 91,
+        "makerCountry": "US",
+        "variants": 36,
+        "options": [
+          [
+            "4oz",
+            "9oz"
+          ],
+          [
+            "Amber Jar + Black Lid",
+            "Clear Jar + Black Lid"
+          ],
+          [
+            "Vanilla Bean",
+            "Comfort Spice",
+            "Sea Breeze",
+            "Honeysuckle",
+            "Eucalyptus Lavender Herb",
+            "Spiced Pumpkin Ginger",
+            "Fresh Balsam",
+            "Pink Grapefruit",
+            "Unscented"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 679,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1028,
+          "max": 1028
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candles with Black Lid, (4 and 9oz)",
+        "blueprintId": 1943,
+        "brand": "Candle Builders",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 36,
+        "options": [
+          [
+            "4oz",
+            "9oz"
+          ],
+          [
+            "Amber Jar + Black Lid",
+            "Clear Jar + Black Lid"
+          ],
+          [
+            "Vanilla Bean",
+            "Comfort Spice",
+            "Sea Breeze",
+            "Honeysuckle",
+            "Eucalyptus Lavender Herb",
+            "Spiced Pumpkin Ginger",
+            "Fresh Balsam",
+            "Pink Grapefruit",
+            "Unscented"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 679,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1025,
+          "max": 1025
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candle, 14oz (Engraving)",
+        "blueprintId": 2664,
+        "brand": "Lumient",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 30,
+        "options": [
+          [
+            "Deep Pacific",
+            "Cranberry Glow",
+            "Opal Iris",
+            "Peachy Nude",
+            "True Noir (Matte)"
+          ],
+          [
+            "White Sage and Lavender",
+            "Beach Rose",
+            "Christmas Warmth",
+            "Ocean Water",
+            "Sea Salt + Orchid",
+            "Unscented"
+          ],
+          [
+            "14oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1129,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2138,
+          "max": 2138
+        }
+      },
+      {
+        "blueprint": "Scented Soy Candle, 14oz (Engraving)",
+        "blueprintId": 2664,
+        "brand": "Lumient",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 30,
+        "options": [
+          [
+            "14oz"
+          ],
+          [
+            "Deep Pacific",
+            "Cranberry Glow",
+            "Opal Iris",
+            "Peachy Nude",
+            "True Noir (Matte)"
+          ],
+          [
+            "White Sage and Lavender",
+            "Beach Rose",
+            "Christmas Warmth",
+            "Ocean Water",
+            "Sea Salt + Orchid",
+            "Unscented"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1129,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2135,
+          "max": 2135
+        }
+      },
+      {
+        "blueprint": "Soy Wax Candle in Jar, 9oz",
+        "blueprintId": 2665,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "9oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage Lavender",
+            "Cinnamon Vanilla",
+            "Clean Cotton"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 1009,
+            "additional": 369,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 829,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 955,
+          "max": 955
+        }
+      },
+      {
+        "blueprint": "Soy Wax Candle in Jar, 9oz",
+        "blueprintId": 2665,
+        "brand": "Generic brand",
+        "provider": "M.i.A Merchandise",
+        "providerId": 80,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "9oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage Lavender",
+            "Cinnamon Vanilla",
+            "Clean Cotton"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 1009,
+            "additional": 369,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 829,
+            "additional": 349,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 958,
+          "max": 958
+        }
+      },
+      {
+        "blueprint": "Soy Wax Candle & Eye Mask Gift Set",
+        "blueprintId": 10660,
+        "brand": "Printonic",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "4oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1129,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1635,
+          "max": 1635
+        }
+      },
+      {
+        "blueprint": "Soy Wax Candle & Eye Mask Gift Set",
+        "blueprintId": 10660,
+        "brand": "Printonic",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "4oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1129,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1638,
+          "max": 1638
+        }
+      },
+      {
+        "blueprint": "4-Piece Blush & Bloom Gift Set (Candle, Blanket, Crochet Bouquet, Bow Clip)",
+        "blueprintId": 10670,
+        "brand": "Printonic",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "4oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1359,
+            "additional": 579,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3288,
+          "max": 3288
+        }
+      },
+      {
+        "blueprint": "4-Piece Blush & Bloom Gift Set (Candle, Blanket, Crochet Bouquet, Bow Clip)",
+        "blueprintId": 10670,
+        "brand": "Printonic",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "4oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1359,
+            "additional": 579,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3285,
+          "max": 3285
+        }
+      },
+      {
+        "blueprint": "2-Piece Candle Set",
+        "blueprintId": 11385,
+        "brand": "Generic brand",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "9oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender",
+            "Cinnamon Vanilla",
+            "Ocean Water",
+            "Clean Cotton",
+            "Christmas Hearth"
+          ]
+        ],
+        "placeholders": [
+          "candle_1_digital-printing",
+          "candle_2_digital-printing"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1359,
+            "additional": 579,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2293,
+          "max": 2293
+        }
+      },
+      {
+        "blueprint": "Blush Calm Gift Set (Candle, Crochet Bouquet, Sleep Mask)",
+        "blueprintId": 12584,
+        "brand": "Printonic",
+        "provider": "Lumient",
+        "providerId": 219,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "4oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1129,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2048,
+          "max": 2048
+        }
+      },
+      {
+        "blueprint": "Blush Calm Gift Set (Candle, Crochet Bouquet, Sleep Mask)",
+        "blueprintId": 12584,
+        "brand": "Printonic",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "4oz"
+          ],
+          [
+            "Clear"
+          ],
+          [
+            "White Sage and Lavender"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1129,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2045,
+          "max": 2045
+        }
+      }
+    ],
+    "ornament": [
+      {
+        "blueprint": "Pewter Snowflake Ornament",
+        "blueprintId": 530,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "Snowflake"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1026,
+          "max": 1026
+        }
+      },
+      {
+        "blueprint": "Ceramic Ornament, 4 Shapes",
+        "blueprintId": 531,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Star",
+            "Circle",
+            "Heart",
+            "Snowflake"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 634,
+          "max": 634
+        }
+      },
+      {
+        "blueprint": "Ceramic Ornament, 4 Shapes",
+        "blueprintId": 531,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Star",
+            "Circle",
+            "Heart",
+            "Snowflake"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 631,
+          "max": 631
+        }
+      },
+      {
+        "blueprint": "Christmas Ball Ornament",
+        "blueprintId": 681,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "Bells",
+            "Tree"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "2.5\" × 3\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1155,
+          "max": 1155
+        }
+      },
+      {
+        "blueprint": "Christmas Ball Ornament",
+        "blueprintId": 681,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "Bells",
+            "Tree"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "2.5\" × 3\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1158,
+          "max": 1158
+        }
+      },
+      {
+        "blueprint": "Wooden Ornaments",
+        "blueprintId": 697,
+        "brand": "Generic brand",
+        "provider": "WOYC",
+        "providerId": 23,
+        "makerCountry": "US",
+        "variants": 6,
+        "options": [
+          [
+            "Christmas Stocking",
+            "Heart",
+            "Oval",
+            "Tree",
+            "Bell",
+            "Star"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 309,
+            "additional": 99,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 479,
+            "additional": 49,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 854,
+          "max": 854
+        }
+      },
+      {
+        "blueprint": "Aluminum Ornaments, 1pc",
+        "blueprintId": 813,
+        "brand": "Generic brand",
+        "provider": "Harrier",
+        "providerId": 94,
+        "makerCountry": "GB",
+        "variants": 2,
+        "options": [
+          [
+            "Rectangle",
+            "Square"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 309,
+            "additional": 99,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 2479,
+            "additional": 359,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 762,
+          "max": 762
+        }
+      },
+      {
+        "blueprint": "Metal Plaque Ornament",
+        "blueprintId": 824,
+        "brand": "Generic brand",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Vintage Petal"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 309,
+            "additional": 99,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 2079,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1089,
+          "max": 1089
+        }
+      },
+      {
+        "blueprint": "Metal Ornaments",
+        "blueprintId": 1182,
+        "brand": "Generic brand",
+        "provider": "Pic The Gift",
+        "providerId": 92,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Bell",
+            "Oval",
+            "Round",
+            "Tree"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 475,
+          "max": 475
+        }
+      },
+      {
+        "blueprint": "Acrylic Ornament with Ribbon",
+        "blueprintId": 1310,
+        "brand": "Generic brand",
+        "provider": "Acrylic Idea Factory",
+        "providerId": 104,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "Round"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1246,
+          "max": 1246
+        }
+      },
+      {
+        "blueprint": "Acrylic Ornament with Ribbon",
+        "blueprintId": 1310,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "Round"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1243,
+          "max": 1243
+        }
+      },
+      {
+        "blueprint": "Aluminum Ornaments (1pc, 5pcs, 10pcs, 20pcs)",
+        "blueprintId": 1359,
+        "brand": "Generic brand",
+        "provider": "District Photo",
+        "providerId": 28,
+        "makerCountry": "US",
+        "variants": 12,
+        "options": [
+          [
+            "Medallion",
+            "Scalloped",
+            "Square"
+          ],
+          [
+            "1 pc",
+            "5 pcs",
+            "10 pcs",
+            "20 pcs"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 779,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Glass Ornaments",
+        "blueprintId": 1362,
+        "brand": "Generic brand",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "5 pcs",
+            "10 pcs",
+            "50 pcs",
+            "25 pcs",
+            "1 pc"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1669,
+            "additional": 1599,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Acrylic Ornaments",
+        "blueprintId": 1363,
+        "brand": "Generic brand",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "1 pc",
+            "5 pcs",
+            "10 pcs",
+            "25 pcs",
+            "50 pcs"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 829,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Acrylic Ornaments",
+        "blueprintId": 1363,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "1 pc",
+            "5 pcs",
+            "10 pcs",
+            "25 pcs",
+            "50 pcs"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 729,
+            "additional": 699,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Ornaments, 2-Side Print, (1pc, 3pcs, 5pcs, 10pcs)",
+        "blueprintId": 1370,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 16,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Star",
+            "Snowflake"
+          ],
+          [
+            "1 pc",
+            "3 pcs",
+            "5 pcs",
+            "10 pcs"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 199,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Ornaments, 2-Side Print, (1pc, 3pcs, 5pcs, 10pcs)",
+        "blueprintId": 1370,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 16,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Star",
+            "Snowflake"
+          ],
+          [
+            "1 pc",
+            "3 pcs",
+            "5 pcs",
+            "10 pcs"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1149,
+            "additional": 1099,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sled Ornaments",
+        "blueprintId": 1469,
+        "brand": "Generic brand",
+        "provider": "District Photo",
+        "providerId": 28,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "2.1'' × 4.6''"
+          ],
+          [
+            "1 pc",
+            "5 pcs",
+            "10 pcs",
+            "20 pcs"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 779,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sled Ornaments",
+        "blueprintId": 1469,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "2.1'' × 4.6''"
+          ],
+          [
+            "1 pc",
+            "5 pcs",
+            "10 pcs",
+            "20 pcs"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 479,
+            "additional": 49,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Ornaments, 2-Side Print",
+        "blueprintId": 1599,
+        "brand": "Generic brand",
+        "provider": "Colorway",
+        "providerId": 48,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Oval",
+            "Star"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 399,
+            "additional": 99,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Ornaments, 2-Side Print",
+        "blueprintId": 1599,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Oval",
+            "Star"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Ornaments, 1-Side Print",
+        "blueprintId": 1600,
+        "brand": "Generic brand",
+        "provider": "Colorway",
+        "providerId": 48,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Oval",
+            "Star"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 399,
+            "additional": 99,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Ornaments, 1-Side Print",
+        "blueprintId": 1600,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Oval",
+            "Star"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Custom Cut Acrylic Ornament",
+        "blueprintId": 1621,
+        "brand": "Generic brand",
+        "provider": "Chill",
+        "providerId": 86,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "3'' × 3''"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 1359,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 479,
+            "additional": 49,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Decorative Ceramic Ornaments, Double-Sided (1pc, 3pcs, 5pcs, 10pcs)",
+        "blueprintId": 1623,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 16,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Star",
+            "Snowflake"
+          ],
+          [
+            "1 pc",
+            "3 pcs",
+            "5 pcs",
+            "10 pcs"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 199,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Decorative Ceramic Ornaments, Double-Sided (1pc, 3pcs, 5pcs, 10pcs)",
+        "blueprintId": 1623,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 16,
+        "options": [
+          [
+            "Circle",
+            "Heart",
+            "Star",
+            "Snowflake"
+          ],
+          [
+            "1 pc",
+            "3 pcs",
+            "5 pcs",
+            "10 pcs"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 619,
+            "additional": 199,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "stocking": [
+      {
+        "blueprint": "Christmas Stockings",
+        "blueprintId": 380,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 659,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Stockings",
+        "blueprintId": 380,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 659,
+            "additional": 259,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Stocking",
+        "blueprintId": 734,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Red and Black",
+            "White and Black"
+          ],
+          [
+            "Natural"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 879,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Stocking",
+        "blueprintId": 734,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Red and Black",
+            "White and Black"
+          ],
+          [
+            "Natural"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 879,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Santa Stocking",
+        "blueprintId": 850,
+        "brand": "Generic brand",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 1,
+        "options": [
+          [
+            "13\" × 19.3''"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 159,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 2399,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "blanket": [
+      {
+        "blueprint": "Sherpa Fleece Blanket",
+        "blueprintId": 238,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\"",
+            "30\" × 40\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 689,
+            "additional": 329,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sherpa Fleece Blanket",
+        "blueprintId": 238,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\"",
+            "30\" × 40\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Plush Blanket",
+        "blueprintId": 522,
+        "brand": "Generic brand",
+        "provider": "Miami Sublimation",
+        "providerId": 47,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30\" × 40\"",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Plush Blanket",
+        "blueprintId": 522,
+        "brand": "Generic brand",
+        "provider": "SPOKE Custom Products",
+        "providerId": 1,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30\" × 40\"",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1079,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Plush Blanket",
+        "blueprintId": 522,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30\" × 40\"",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 839,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Hooded Sherpa Fleece Blanket",
+        "blueprintId": 736,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Cream"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1339,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Hooded Sherpa Fleece Blanket",
+        "blueprintId": 736,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Cream"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1339,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Throw Blanket",
+        "blueprintId": 744,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "White base"
+          ],
+          [
+            "50\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Throw Blanket",
+        "blueprintId": 744,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "White base"
+          ],
+          [
+            "50\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Tan Sherpa Blanket",
+        "blueprintId": 918,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "60\" × 50\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1539,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Tan Sherpa Blanket",
+        "blueprintId": 918,
+        "brand": "Generic brand",
+        "provider": "Miami Sublimation",
+        "providerId": 47,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "60\" × 50\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1439,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Minky Blanket",
+        "blueprintId": 927,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "30\" × 40\"",
+            "50\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1399,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Minky Blanket",
+        "blueprintId": 927,
+        "brand": "Generic brand",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "30\" × 40\"",
+            "50\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 749,
+            "additional": 559,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Microfiber Blanket",
+        "blueprintId": 1044,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "40\" × 30\"",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Microfiber Blanket",
+        "blueprintId": 1044,
+        "brand": "Generic brand",
+        "provider": "Pic The Gift",
+        "providerId": 92,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "40\" × 30\"",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sweatshirt Blanket",
+        "blueprintId": 1105,
+        "brand": "Terry Town",
+        "provider": "Pic The Gift",
+        "providerId": 92,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sweatshirt Blanket",
+        "blueprintId": 1105,
+        "brand": "Terry Town",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sherpa Blanket",
+        "blueprintId": 1120,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 9,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ],
+          [
+            "Beige",
+            "Grey",
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sherpa Blanket",
+        "blueprintId": 1120,
+        "brand": "Generic brand",
+        "provider": "Pic The Gift",
+        "providerId": 92,
+        "makerCountry": "US",
+        "variants": 9,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ],
+          [
+            "Beige",
+            "Grey",
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Picnic Blanket",
+        "blueprintId": 1124,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "61\" × 51\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 869,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Picnic Blanket",
+        "blueprintId": 1124,
+        "brand": "Generic brand",
+        "provider": "District Photo",
+        "providerId": 28,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "61\" × 51\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 869,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Microfiber Blanket (Two-sided print)",
+        "blueprintId": 1133,
+        "brand": "Generic brand",
+        "provider": "Pic The Gift",
+        "providerId": 92,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "40\" × 30\"",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Velveteen Microfiber Blanket (Two-sided print)",
+        "blueprintId": 1133,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "40\" × 30\"",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Arctic Fleece Blanket",
+        "blueprintId": 1328,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 599,
+            "additional": 279,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Arctic Fleece Blanket",
+        "blueprintId": 1328,
+        "brand": "Generic brand",
+        "provider": "District Photo",
+        "providerId": 28,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 869,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Arctic Fleece Blanket",
+        "blueprintId": 1328,
+        "brand": "Generic brand",
+        "provider": "Harrier",
+        "providerId": 94,
+        "makerCountry": "GB",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 579,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4159,
+            "additional": 359,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Soft Polyester Blanket",
+        "blueprintId": 1337,
+        "brand": "Generic brand",
+        "provider": "Colorway",
+        "providerId": 48,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 829,
+            "additional": 499,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Soft Polyester Blanket",
+        "blueprintId": 1337,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Fleece Sherpa Blanket",
+        "blueprintId": 1385,
+        "brand": "Generic brand",
+        "provider": "SPOKE Custom Products",
+        "providerId": 1,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\""
+          ],
+          [
+            "Grey",
+            "Beige"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1079,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Fleece Sherpa Blanket",
+        "blueprintId": 1385,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\""
+          ],
+          [
+            "Grey",
+            "Beige"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1079,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sherpa Blankets",
+        "blueprintId": 1500,
+        "brand": "Generic brand",
+        "provider": "Harrier",
+        "providerId": 94,
+        "makerCountry": "GB",
+        "variants": 2,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\""
+          ],
+          [
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 579,
+            "additional": 199,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4159,
+            "additional": 359,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Throw Pillow",
+        "blueprintId": 1572,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "25'' × 18''",
+            "26'' × 26''"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1769,
+            "additional": 1699,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Quilted Throw",
+        "blueprintId": 1573,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "50'' × 60''"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Quilted Throw",
+        "blueprintId": 1573,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "50'' × 60''"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Woven Blanket",
+        "blueprintId": 1626,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 6,
+        "options": [
+          [
+            "Artwork",
+            "Photo"
+          ],
+          [
+            "52'' × 37''",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Woven Blanket",
+        "blueprintId": 1626,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 10,
+        "options": [
+          [
+            "Artwork",
+            "Photo"
+          ],
+          [
+            "52'' × 37''",
+            "60\" × 50\"",
+            "80\" × 60\"",
+            "54\" × 70\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Woven Blanket",
+        "blueprintId": 1626,
+        "brand": "Generic brand",
+        "provider": "Pure Country, Inc.",
+        "providerId": 453,
+        "makerCountry": "US",
+        "variants": 8,
+        "options": [
+          [
+            "Artwork",
+            "Photo"
+          ],
+          [
+            "52'' × 37''",
+            "60\" × 50\"",
+            "54\" × 70\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Pixel Fleece Blanket (AOP)",
+        "blueprintId": 1911,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Pixel Fleece Blanket (AOP)",
+        "blueprintId": 1911,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "sweatshirt": [
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 249,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Antique Cherry Red",
+            "Ash",
+            "Carolina Blue",
+            "Charcoal",
+            "Dark Chocolate",
+            "Dark Heather",
+            "Garnet",
+            "Heliconia",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "…+24"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 136,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ],
+          [
+            "Ash",
+            "Carolina Blue",
+            "Charcoal",
+            "Dark Chocolate",
+            "Dark Heather",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "Navy",
+            "Orange",
+            "Red",
+            "…+13"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 143,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Ash",
+            "Dark Chocolate",
+            "Dark Heather",
+            "Heliconia",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "Navy",
+            "Purple",
+            "Red",
+            "Sand",
+            "…+8"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "large_center_embroidery",
+          "front_center_chest",
+          "front_left_chest",
+          "right_wrist",
+          "left_wrist",
+          "front_dtf",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 729,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Dimona Tee",
+        "providerId": 61,
+        "makerCountry": "US",
+        "variants": 81,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Dark Chocolate",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Navy",
+            "Red",
+            "Sand",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green",
+            "Gold",
+            "…+3"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_center_chest",
+          "front_left_chest",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Shirt Monkey",
+        "providerId": 331,
+        "makerCountry": "GB",
+        "variants": 85,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Charcoal",
+            "Dark Heather",
+            "Heliconia",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "Navy",
+            "Purple",
+            "Red",
+            "Sand",
+            "Sport Grey",
+            "…+5"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Underground Threads",
+        "providerId": 50,
+        "makerCountry": "US",
+        "variants": 72,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Ash",
+            "Dark Heather",
+            "Light Blue",
+            "Light Pink",
+            "Navy",
+            "Red",
+            "Sand",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green",
+            "Royal"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 257,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Antique Cherry Red",
+            "Ash",
+            "Carolina Blue",
+            "Charcoal",
+            "Dark Chocolate",
+            "Dark Heather",
+            "Garnet",
+            "Heliconia",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "…+24"
+          ]
+        ],
+        "placeholders": [
+          "left_sleeve",
+          "neck",
+          "back",
+          "right_sleeve",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 129,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Ash",
+            "Carolina Blue",
+            "Charcoal",
+            "Dark Heather",
+            "Heliconia",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "Navy",
+            "Purple",
+            "Red",
+            "Sport Grey",
+            "…+8"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 120,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Ash",
+            "Dark Heather",
+            "Heliconia",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "Navy",
+            "Orange",
+            "Purple",
+            "Red",
+            "Sand",
+            "…+8"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 41,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Dark Heather",
+            "Navy",
+            "Red",
+            "Sand",
+            "Sport Grey",
+            "White",
+            "Black"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+        "blueprintId": 49,
+        "brand": "Gildan",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 172,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Ash",
+            "Carolina Blue",
+            "Charcoal",
+            "Dark Chocolate",
+            "Dark Heather",
+            "Heliconia",
+            "Irish Green",
+            "Light Blue",
+            "Light Pink",
+            "Maroon",
+            "Navy",
+            "Orange",
+            "…+15"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_center_chest",
+          "front_left_chest",
+          "right_wrist_dtf",
+          "left_wrist_dtf",
+          "front_puff",
+          "back_puff",
+          "left_sleeve_puff",
+          "right_sleeve_puff",
+          "front_metallic",
+          "back_metallic",
+          "left_sleeve_metallic",
+          "right_sleeve_metallic",
+          "front_glitter",
+          "back_glitter",
+          "left_sleeve_glitter",
+          "right_sleeve_glitter",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 274,
+        "options": [
+          [
+            "Ash",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+24"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "left_sleeve",
+          "back",
+          "neck",
+          "front",
+          "right_sleeve"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 149,
+        "options": [
+          [
+            "Ash",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+19"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Underground Threads",
+        "providerId": 50,
+        "makerCountry": "US",
+        "variants": 66,
+        "options": [
+          [
+            "Dark Heather",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Heliconia",
+            "Red",
+            "Royal",
+            "Sand",
+            "Gold",
+            "Azalea"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 176,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Ash",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+10"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 55,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Red",
+            "Light Pink",
+            "Orange",
+            "Light Blue"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 166,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Ash",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+9"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Ash",
+            "Purple",
+            "Royal",
+            "Forest Green",
+            "Military Green",
+            "Light Pink",
+            "…+3"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 141,
+        "options": [
+          [
+            "Ash",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Irish Green",
+            "Red",
+            "Royal",
+            "Forest Green",
+            "Military Green",
+            "…+8"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "large_center_embroidery",
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_center_chest",
+          "front_left_chest",
+          "left_wrist",
+          "right_wrist",
+          "front_dtf",
+          "back_dtf",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 729,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 237,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "Royal",
+            "…+20"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_center_chest",
+          "front_left_chest",
+          "left_wrist_dtf",
+          "right_wrist_dtf",
+          "front_glitter",
+          "back_glitter",
+          "left_sleeve_glitter",
+          "right_sleeve_glitter",
+          "front_metallic",
+          "back_metallic",
+          "left_sleeve_metallic",
+          "right_sleeve_metallic",
+          "front_puff",
+          "back_puff",
+          "left_sleeve_puff",
+          "right_sleeve_puff",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Dimona Tee",
+        "providerId": 61,
+        "makerCountry": "US",
+        "variants": 128,
+        "options": [
+          [
+            "Dark Heather",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "Royal",
+            "Forest Green",
+            "Light Pink",
+            "Sand",
+            "…+5"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_left_chest",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sweatshirt",
+        "blueprintId": 95,
+        "brand": "AWDIS",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 306,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Fire Red",
+            "Heather Grey",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Royal Blue",
+            "Sky Blue",
+            "Steel Grey",
+            "Sun Yellow",
+            "Baby Pink",
+            "…+38"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "XS",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sweatshirt",
+        "blueprintId": 95,
+        "brand": "AWDIS",
+        "provider": "Shirt Monkey",
+        "providerId": 331,
+        "makerCountry": "GB",
+        "variants": 69,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Fire Red",
+            "Heather Grey",
+            "Sky Blue",
+            "Burgundy",
+            "Candyfloss Pink",
+            "Charcoal",
+            "Deep Black",
+            "Dusty Pink",
+            "New French Navy"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sweatshirt",
+        "blueprintId": 95,
+        "brand": "AWDIS",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 120,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Chocolate",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Royal Blue",
+            "Sky Blue",
+            "Steel Grey",
+            "Sun Yellow",
+            "…+11"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sweatshirt",
+        "blueprintId": 95,
+        "brand": "AWDIS",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 120,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Chocolate",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Royal Blue",
+            "Sky Blue",
+            "Steel Grey",
+            "Sun Yellow",
+            "…+11"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sweatshirt",
+        "blueprintId": 95,
+        "brand": "AWDIS",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 60,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Chocolate",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Royal Blue",
+            "Sky Blue",
+            "Steel Grey",
+            "Sun Yellow"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crewneck Sweatshirt",
+        "blueprintId": 446,
+        "brand": "Lane Seven",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 48,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "XS"
+          ],
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue",
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crewneck Sweatshirt",
+        "blueprintId": 446,
+        "brand": "Lane Seven",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 30,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crewneck Sweatshirt",
+        "blueprintId": 446,
+        "brand": "Lane Seven",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "S",
+            "M",
+            "2XL"
+          ],
+          [
+            "Navy",
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crewneck Sweatshirt",
+        "blueprintId": 446,
+        "brand": "Lane Seven",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 49,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue",
+            "White",
+            "Pale Pink",
+            "Chestnut",
+            "Sandshell"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crewneck Sweatshirt",
+        "blueprintId": 446,
+        "brand": "Lane Seven",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 43,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue",
+            "White",
+            "Pale Pink",
+            "Chestnut"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex EcoSmart® Crewneck Sweatshirt",
+        "blueprintId": 533,
+        "brand": "Hanes",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 103,
+        "options": [
+          [
+            "Black",
+            "Deep Red",
+            "Kelly Green",
+            "White",
+            "Deep Royal",
+            "Deep Forest",
+            "Light Steel",
+            "Navy",
+            "Army Brown",
+            "Ash",
+            "Carolina Blue",
+            "Charcoal Heather",
+            "…+10"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Drop Shoulder Sweatshirt",
+        "blueprintId": 579,
+        "brand": "Bella+Canvas",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "White",
+            "Black"
+          ],
+          [
+            "S",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt",
+        "blueprintId": 696,
+        "brand": "Independent Trading Company",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 33,
+        "options": [
+          [
+            "Black",
+            "Blue Aqua",
+            "Bone",
+            "Classic Navy",
+            "Light Pink",
+            "Mint",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt",
+        "blueprintId": 696,
+        "brand": "Independent Trading Company",
+        "provider": "Ink Blot",
+        "providerId": 74,
+        "makerCountry": "US",
+        "variants": 140,
+        "options": [
+          [
+            "Army",
+            "Black",
+            "Blue Aqua",
+            "Bone",
+            "Classic Navy",
+            "Gold",
+            "Grey Heather",
+            "Lavender",
+            "Light Pink",
+            "Maroon",
+            "Mint",
+            "Red",
+            "…+4"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt",
+        "blueprintId": 696,
+        "brand": "Independent Trading Company",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 120,
+        "options": [
+          [
+            "Army",
+            "Black",
+            "Blue Aqua",
+            "Bone",
+            "Classic Navy",
+            "Gold",
+            "Grey Heather",
+            "Lavender",
+            "Light Pink",
+            "Maroon",
+            "Mint",
+            "Red",
+            "…+11"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "XS"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "right_sleeve",
+          "left_sleeve",
+          "neck",
+          "neck_outer"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crew Neck Sweatshirt",
+        "blueprintId": 723,
+        "brand": "Independent Trading Company",
+        "provider": "Ink Blot",
+        "providerId": 74,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Black",
+            "Classic Navy",
+            "Grey Heather",
+            "Light Pink",
+            "Maroon",
+            "Mint",
+            "White",
+            "Army",
+            "Army Heather",
+            "Bone",
+            "Classic Navy Heather",
+            "Lavender",
+            "…+4"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crew Neck Sweatshirt",
+        "blueprintId": 723,
+        "brand": "Independent Trading Company",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Black",
+            "Classic Navy",
+            "Grey Heather",
+            "Light Pink",
+            "Maroon",
+            "Mint",
+            "White",
+            "Army",
+            "Army Heather",
+            "Bone",
+            "Classic Navy Heather",
+            "Lavender",
+            "…+4"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 879,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Crew Sweatshirt",
+        "blueprintId": 795,
+        "brand": "Cotton Heritage",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 16,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Black",
+            "White",
+            "Carbon Grey",
+            "Charcoal Heather",
+            "Bone"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex DryBlend® Hooded Sweatshirt",
+        "blueprintId": 946,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 50,
+        "options": [
+          [
+            "Ash",
+            "Maroon",
+            "Navy",
+            "Red",
+            "Royal",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green"
+          ],
+          [
+            "S",
+            "XL",
+            "2XL",
+            "3XL",
+            "M",
+            "L"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex DryBlend® Hooded Sweatshirt",
+        "blueprintId": 946,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 49,
+        "options": [
+          [
+            "Ash",
+            "Maroon",
+            "Navy",
+            "Red",
+            "Royal",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green"
+          ],
+          [
+            "S",
+            "XL",
+            "2XL",
+            "3XL",
+            "M",
+            "L"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex DryBlend® Crewneck Sweatshirt",
+        "blueprintId": 958,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 41,
+        "options": [
+          [
+            "Ash",
+            "Navy",
+            "Royal",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex DryBlend® Crewneck Sweatshirt",
+        "blueprintId": 958,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 41,
+        "options": [
+          [
+            "Ash",
+            "Navy",
+            "Royal",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex NuBlend® Crewneck Sweatshirt",
+        "blueprintId": 981,
+        "brand": "JERZEES",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 108,
+        "options": [
+          [
+            "Ash",
+            "Athletic Heather",
+            "Black",
+            "Black Heather",
+            "Chocolate",
+            "Classic Pink",
+            "Cyber Pink",
+            "Forest Green",
+            "Gold",
+            "Kelly",
+            "Khaki",
+            "Light Blue",
+            "…+6"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex NuBlend® Crewneck Sweatshirt",
+        "blueprintId": 981,
+        "brand": "JERZEES",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 108,
+        "options": [
+          [
+            "Ash",
+            "Athletic Heather",
+            "Black",
+            "Black Heather",
+            "Chocolate",
+            "Classic Pink",
+            "Cyber Pink",
+            "Forest Green",
+            "Gold",
+            "Kelly",
+            "Khaki",
+            "Light Blue",
+            "…+6"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Color Blast Crewneck Sweatshirt",
+        "blueprintId": 1257,
+        "brand": "Comfort Colors®",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 36,
+        "options": [
+          [
+            "Amethyst",
+            "Clay",
+            "Ocean",
+            "Smoke",
+            "Citrine",
+            "Fern"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "right_sleeve",
+          "left_sleeve"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Garment-Dyed Sweatshirt",
+        "blueprintId": 1296,
+        "brand": "Comfort Colors®",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 108,
+        "options": [
+          [
+            "Blue Jean",
+            "Blue Spruce",
+            "Butter",
+            "Chalky Mint",
+            "Chambray",
+            "Crimson",
+            "Denim",
+            "Flo Blue",
+            "Grey",
+            "Light Green",
+            "Orchid",
+            "Pepper",
+            "…+6"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Garment-Dyed Sweatshirt",
+        "blueprintId": 1296,
+        "brand": "Comfort Colors®",
+        "provider": "Dimona Tee",
+        "providerId": 61,
+        "makerCountry": "US",
+        "variants": 15,
+        "options": [
+          [
+            "Butter",
+            "True Navy",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Garment-Dyed Sweatshirt",
+        "blueprintId": 1296,
+        "brand": "Comfort Colors®",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 80,
+        "options": [
+          [
+            "Blue Jean",
+            "Blue Spruce",
+            "Butter",
+            "Chalky Mint",
+            "Chambray",
+            "Crimson",
+            "Denim",
+            "Grey",
+            "Light Green",
+            "Orchid",
+            "Pepper",
+            "Watermelon",
+            "…+2"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "front_center_chest",
+          "front_left_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Garment-Dyed Sweatshirt",
+        "blueprintId": 1296,
+        "brand": "Comfort Colors®",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 108,
+        "options": [
+          [
+            "Blue Jean",
+            "Blue Spruce",
+            "Butter",
+            "Chalky Mint",
+            "Chambray",
+            "Crimson",
+            "Denim",
+            "Flo Blue",
+            "Grey",
+            "Light Green",
+            "Orchid",
+            "Pepper",
+            "…+6"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt, Made in US",
+        "blueprintId": 1401,
+        "brand": "Bayside",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Black",
+            "Bright Orange",
+            "Caramel Brown",
+            "Cardinal",
+            "Charcoal",
+            "Charcoal Heather",
+            "Cream",
+            "Dark Ash",
+            "Hunter Green",
+            "Lime Green",
+            "Navy",
+            "Olive",
+            "…+5"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt, Made in US",
+        "blueprintId": 1401,
+        "brand": "Bayside",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Black",
+            "Bright Orange",
+            "Caramel Brown",
+            "Cardinal",
+            "Charcoal",
+            "Charcoal Heather",
+            "Cream",
+            "Dark Ash",
+            "Hunter Green",
+            "Lime Green",
+            "Navy",
+            "Olive",
+            "…+5"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Crewneck Sweatshirt",
+        "blueprintId": 1405,
+        "brand": "Comfort Colors®",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 84,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Butter",
+            "Chalky Mint",
+            "Crimson",
+            "Espresso",
+            "Grey",
+            "Ivory",
+            "Peachy",
+            "Pepper",
+            "White",
+            "Yam",
+            "…+2"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "right_sleeve",
+          "left_sleeve"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Crewneck Sweatshirt",
+        "blueprintId": 1405,
+        "brand": "Comfort Colors®",
+        "provider": "Dimona Tee",
+        "providerId": 61,
+        "makerCountry": "US",
+        "variants": 48,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Butter",
+            "Chalky Mint",
+            "Crimson",
+            "Grey",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Crewneck Sweatshirt",
+        "blueprintId": 1436,
+        "brand": "Gildan",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 43,
+        "options": [
+          [
+            "Charcoal",
+            "Dark Heather",
+            "Navy",
+            "Sand",
+            "White",
+            "Sport Grey",
+            "Black",
+            "Military Green",
+            "Stone Blue",
+            "Paragon"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Crewneck Sweatshirt",
+        "blueprintId": 1436,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 112,
+        "options": [
+          [
+            "Charcoal",
+            "Dark Heather",
+            "Navy",
+            "Red",
+            "Royal",
+            "Sand",
+            "White",
+            "Sky",
+            "Sport Grey",
+            "Black",
+            "Forest Green",
+            "Military Green",
+            "…+4"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Crewneck Sweatshirt",
+        "blueprintId": 1436,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 112,
+        "options": [
+          [
+            "Charcoal",
+            "Dark Heather",
+            "Navy",
+            "Red",
+            "Royal",
+            "Sand",
+            "White",
+            "Sky",
+            "Sport Grey",
+            "Black",
+            "Forest Green",
+            "Military Green",
+            "…+4"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Hooded Sweatshirt",
+        "blueprintId": 1528,
+        "brand": "Comfort Colors®",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 60,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Butter",
+            "Grey",
+            "Hydrangea",
+            "Ivory",
+            "Neon Violet",
+            "Peachy",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Hooded Sweatshirt",
+        "blueprintId": 1528,
+        "brand": "Comfort Colors®",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 42,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Grey",
+            "Hydrangea",
+            "Ivory",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Hooded Sweatshirt",
+        "blueprintId": 1528,
+        "brand": "Comfort Colors®",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 60,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Butter",
+            "Grey",
+            "Hydrangea",
+            "Ivory",
+            "Neon Violet",
+            "Peachy",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex ComfortWash® Garment Dyed Crewneck Sweatshirt",
+        "blueprintId": 1570,
+        "brand": "Hanes",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 76,
+        "options": [
+          [
+            "Anchor Slate",
+            "Black",
+            "Cayenne",
+            "Concrete Grey",
+            "Crimson Fall",
+            "Cypress Green",
+            "Deep Forte Blue",
+            "Mint",
+            "New Railroad Grey",
+            "Parchment",
+            "Saltwater",
+            "Spanish Moss",
+            "…+1"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front_dtf",
+          "back_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Urban Crewneck Sweatshirt",
+        "blueprintId": 1675,
+        "brand": "Lane Seven",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 14,
+        "options": [
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "White",
+            "Black"
+          ]
+        ],
+        "placeholders": [
+          "front_dtf",
+          "back_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Urban Crewneck Sweatshirt",
+        "blueprintId": 1675,
+        "brand": "Lane Seven",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 14,
+        "options": [
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "White",
+            "Black"
+          ]
+        ],
+        "placeholders": [
+          "front_dtf",
+          "back_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Nantucket Crewneck Sweatshirt (Embroidery)",
+        "blueprintId": 1687,
+        "brand": "Lane Seven",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 27,
+        "options": [
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Ice Purple",
+            "Navy Blue",
+            "Salt and Pepper",
+            "Terra Brown"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Nantucket Crewneck Sweatshirt (Embroidery)",
+        "blueprintId": 1687,
+        "brand": "Lane Seven",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 27,
+        "options": [
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Ice Purple",
+            "Navy Blue",
+            "Salt and Pepper",
+            "Terra Brown"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Raglan Sweatshirt",
+        "blueprintId": 1706,
+        "brand": "Bella+Canvas",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 32,
+        "options": [
+          [
+            "L",
+            "M",
+            "S",
+            "XL",
+            "XS",
+            "2XL"
+          ],
+          [
+            "Athletic Heather",
+            "Black",
+            "Grey TriBlend",
+            "Navy TriBlend",
+            "True Royal",
+            "Heather Navy"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Raglan Sweatshirt",
+        "blueprintId": 1706,
+        "brand": "Bella+Canvas",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 32,
+        "options": [
+          [
+            "L",
+            "M",
+            "S",
+            "XL",
+            "XS",
+            "2XL"
+          ],
+          [
+            "Athletic Heather",
+            "Black",
+            "Grey TriBlend",
+            "Navy TriBlend",
+            "True Royal",
+            "Heather Navy"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "socks": [
+      {
+        "blueprint": "Sublimation Socks",
+        "blueprintId": 376,
+        "brand": "Generic brand",
+        "provider": "SPOKE Custom Products",
+        "providerId": 1,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "L",
+            "M",
+            "S"
+          ]
+        ],
+        "placeholders": [
+          "front_left_leg",
+          "front_right_leg",
+          "back_left_leg",
+          "back_right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Recycled Poly Socks",
+        "blueprintId": 452,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "right_leg",
+          "left_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 529,
+            "additional": 75,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Recycled Poly Socks",
+        "blueprintId": 452,
+        "brand": "Generic brand",
+        "provider": "Tribe Socks",
+        "providerId": 33,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "right_leg",
+          "left_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 529,
+            "additional": 75,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Cushioned Crew Socks",
+        "blueprintId": 574,
+        "brand": "Generic brand",
+        "provider": "ThreadStudio",
+        "providerId": 64,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "White"
+          ],
+          [
+            "One size"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4 Crew"
+          ]
+        ],
+        "placeholders": [
+          "left_leg",
+          "right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 499,
+            "additional": 190,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Cushioned Crew Socks",
+        "blueprintId": 574,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "White"
+          ],
+          [
+            "One size"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4 Crew"
+          ]
+        ],
+        "placeholders": [
+          "left_leg",
+          "right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 499,
+            "additional": 190,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Mid-length Socks",
+        "blueprintId": 871,
+        "brand": "Generic brand",
+        "provider": "Colorway",
+        "providerId": 48,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4 Crew"
+          ]
+        ],
+        "placeholders": [
+          "left_side",
+          "right_side"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 599,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 499,
+            "additional": 149,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Mid-length Socks",
+        "blueprintId": 871,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4 Crew"
+          ]
+        ],
+        "placeholders": [
+          "left_side",
+          "right_side"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 499,
+            "additional": 149,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sublimation Crew Socks",
+        "blueprintId": 1433,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front_left_leg",
+          "back_left_leg",
+          "front_right_leg",
+          "back_right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 529,
+            "additional": 75,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Sublimation Crew Socks",
+        "blueprintId": 1433,
+        "brand": "Generic brand",
+        "provider": "Pic The Gift",
+        "providerId": 92,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One Size"
+          ]
+        ],
+        "placeholders": [
+          "front_left_leg",
+          "back_left_leg",
+          "front_right_leg",
+          "back_right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 529,
+            "additional": 75,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Padded Crew Socks (DTG)",
+        "blueprintId": 2941,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "left_leg",
+          "right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Padded Crew Socks (DTG)",
+        "blueprintId": 2941,
+        "brand": "Generic brand",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "left_leg",
+          "right_leg"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "mug": [
+      {
+        "blueprint": "Enamel Camping Mug",
+        "blueprintId": 483,
+        "brand": "Generic brand",
+        "provider": "District Photo",
+        "providerId": 28,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "12oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 649,
+            "additional": 199,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Enamel Camping Mug",
+        "blueprintId": 483,
+        "brand": "Generic brand",
+        "provider": "Colorway",
+        "providerId": 48,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "12oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 549,
+            "additional": 249,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 729,
+            "additional": 309,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Enamel Camping Mug",
+        "blueprintId": 483,
+        "brand": "Generic brand",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "12oz"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 459,
+            "additional": 150,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 479,
+            "additional": 200,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "11oz Accent Mug",
+        "blueprintId": 583,
+        "brand": "ORCA Coatings",
+        "provider": "SunFrog Solutions",
+        "providerId": 77,
+        "makerCountry": "US",
+        "variants": 4,
+        "options": [
+          [
+            "11oz"
+          ],
+          [
+            "Blue",
+            "Green",
+            "Pink",
+            "Red"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 669,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Mugs",
+        "blueprintId": 595,
+        "brand": "ORCA Coatings",
+        "provider": "Printed Mint",
+        "providerId": 70,
+        "makerCountry": "US",
+        "variants": 6,
+        "options": [
+          [
+            "11oz",
+            "15oz"
+          ],
+          [
+            "Pink",
+            "Red",
+            "Black"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 729,
+            "additional": 309,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Mugs",
+        "blueprintId": 595,
+        "brand": "ORCA Coatings",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 6,
+        "options": [
+          [
+            "11oz",
+            "15oz"
+          ],
+          [
+            "Pink",
+            "Red",
+            "Black"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 729,
+            "additional": 309,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Coffee Mug (11, 15oz)",
+        "blueprintId": 635,
+        "brand": "Generic brand",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 18,
+        "options": [
+          [
+            "11oz",
+            "15oz"
+          ],
+          [
+            "Black",
+            "Blue",
+            "Pink",
+            "Red",
+            "Light Blue",
+            "Orange",
+            "Yellow",
+            "Light Green",
+            "Maroon"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 669,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Coffee Mug (11, 15oz)",
+        "blueprintId": 635,
+        "brand": "Generic brand",
+        "provider": "District Photo",
+        "providerId": 28,
+        "makerCountry": "US",
+        "variants": 16,
+        "options": [
+          [
+            "11oz",
+            "15oz"
+          ],
+          [
+            "Black",
+            "Navy",
+            "Pink",
+            "Red",
+            "Light Blue",
+            "Orange",
+            "Purple",
+            "Yellow"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 869,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Coffee Mug (11, 15oz)",
+        "blueprintId": 635,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 21,
+        "options": [
+          [
+            "11oz",
+            "15oz"
+          ],
+          [
+            "Black",
+            "Navy",
+            "Pink",
+            "Red",
+            "Light Blue",
+            "Orange",
+            "Purple",
+            "Yellow",
+            "Blue",
+            "Light Green",
+            "Maroon"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 579,
+            "additional": 299,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Coffee Mug (11, 15oz)",
+        "blueprintId": 635,
+        "brand": "Generic brand",
+        "provider": "Harrier",
+        "providerId": 94,
+        "makerCountry": "GB",
+        "variants": 9,
+        "options": [
+          [
+            "11oz"
+          ],
+          [
+            "Black",
+            "Navy",
+            "Pink",
+            "Red",
+            "Light Blue",
+            "Orange",
+            "Purple",
+            "Yellow",
+            "Light Green"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 389,
+            "additional": 129,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4159,
+            "additional": 359,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Rim & Handle Mug (11oz, 15oz)",
+        "blueprintId": 2692,
+        "brand": "ORCA Coatings",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 17,
+        "options": [
+          [
+            "15oz",
+            "11oz"
+          ],
+          [
+            "Black",
+            "Blue",
+            "Maroon",
+            "Green",
+            "Cambridge Blue",
+            "Yellow",
+            "Red",
+            "Light Blue",
+            "Orange",
+            "Light Green",
+            "Pink"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 939,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Accent Rim & Handle Mug (11oz, 15oz)",
+        "blueprintId": 2692,
+        "brand": "ORCA Coatings",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 17,
+        "options": [
+          [
+            "15oz",
+            "11oz"
+          ],
+          [
+            "Black",
+            "Blue",
+            "Maroon",
+            "Green",
+            "Cambridge Blue",
+            "Yellow",
+            "Red",
+            "Light Blue",
+            "Orange",
+            "Light Green",
+            "Pink"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 729,
+            "additional": 309,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Two-Tone Accent Mug (11oz, 15oz)",
+        "blueprintId": 2693,
+        "brand": "ORCA Coatings",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 18,
+        "options": [
+          [
+            "15oz",
+            "11oz"
+          ],
+          [
+            "Black",
+            "Blue",
+            "Maroon",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Light Blue",
+            "Orange",
+            "Cambridge Blue",
+            "Light Green",
+            "Red"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 729,
+            "additional": 309,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Two-Tone Accent Mug (11oz, 15oz)",
+        "blueprintId": 2693,
+        "brand": "ORCA Coatings",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 18,
+        "options": [
+          [
+            "15oz",
+            "11oz"
+          ],
+          [
+            "Black",
+            "Blue",
+            "Maroon",
+            "Green",
+            "Yellow",
+            "Pink",
+            "Light Blue",
+            "Orange",
+            "Cambridge Blue",
+            "Light Green",
+            "Red"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 939,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Women's Dry Zone Raglan Accent Polo",
+        "blueprintId": 3398,
+        "brand": "Sport-Tek",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 63,
+        "options": [
+          [
+            "XS",
+            "XXL",
+            "S",
+            "3XL",
+            "M",
+            "4XL",
+            "L",
+            "XL"
+          ],
+          [
+            "Black",
+            "Forest Green",
+            "Maroon",
+            "Purple",
+            "True Navy",
+            "True Red",
+            "True Royal",
+            "White",
+            "Kelly Green"
+          ]
+        ],
+        "placeholders": [
+          "left_chest_dtf",
+          "right_chest_dtf",
+          "left_sleeve_dtf",
+          "right_sleeve_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 399,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Women's Dry Zone Raglan Accent Polo",
+        "blueprintId": 3398,
+        "brand": "Sport-Tek",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 63,
+        "options": [
+          [
+            "XS",
+            "XXL",
+            "S",
+            "3XL",
+            "M",
+            "4XL",
+            "L",
+            "XL"
+          ],
+          [
+            "Black",
+            "Forest Green",
+            "Maroon",
+            "Purple",
+            "True Navy",
+            "True Red",
+            "True Royal",
+            "White",
+            "Kelly Green"
+          ]
+        ],
+        "placeholders": [
+          "left_chest_dtf",
+          "right_chest_dtf",
+          "left_sleeve_dtf",
+          "right_sleeve_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 449,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "tote": [
+      {
+        "blueprint": "Christmas Stockings",
+        "blueprintId": 380,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 659,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Stockings",
+        "blueprintId": 380,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 659,
+            "additional": 259,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Tree Skirts",
+        "blueprintId": 381,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 659,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Tree Skirts",
+        "blueprintId": 381,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 659,
+            "additional": 259,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Ball Ornament",
+        "blueprintId": 681,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "Bells",
+            "Tree"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "2.5\" × 3\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Ball Ornament",
+        "blueprintId": 681,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "Bells",
+            "Tree"
+          ],
+          [
+            "Round"
+          ],
+          [
+            "2.5\" × 3\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Stocking",
+        "blueprintId": 734,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Red and Black",
+            "White and Black"
+          ],
+          [
+            "Natural"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 879,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Christmas Stocking",
+        "blueprintId": 734,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Red and Black",
+            "White and Black"
+          ],
+          [
+            "Natural"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 879,
+            "additional": 399,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Gift Bag",
+        "blueprintId": 735,
+        "brand": "Generic brand",
+        "provider": "Imagine Your Photos",
+        "providerId": 59,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "19.7\" x 26\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1359,
+            "additional": 199,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Gift Bag",
+        "blueprintId": 735,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "19.7\" x 26\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1359,
+            "additional": 199,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ceramic Christmas Ornaments (Double-Sided)",
+        "blueprintId": 1747,
+        "brand": "Generic brand",
+        "provider": "M.i.A Merchandise",
+        "providerId": 80,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "Round"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 519,
+            "additional": 99,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 589,
+            "additional": 69,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Paper Gift Bag",
+        "blueprintId": 2729,
+        "brand": "Generic brand",
+        "provider": "Taylor",
+        "providerId": 228,
+        "makerCountry": "US",
+        "variants": 8,
+        "options": [
+          [
+            "5.5'' x 8.375\"",
+            "8'' x 10.25\"",
+            "10'' x 13\"",
+            "6.25'' x 12.5\""
+          ],
+          [
+            "Kraft",
+            "White"
+          ],
+          [
+            "Paper"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 599,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Paper Gift Bag",
+        "blueprintId": 2729,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 8,
+        "options": [
+          [
+            "5.5'' x 8.375\"",
+            "8'' x 10.25\"",
+            "10'' x 13\"",
+            "6.25'' x 12.5\""
+          ],
+          [
+            "Kraft",
+            "White"
+          ],
+          [
+            "Paper"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 599,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Paper Gift Bags",
+        "blueprintId": 12680,
+        "brand": "Generic brand",
+        "provider": "Taylor",
+        "providerId": 228,
+        "makerCountry": "US",
+        "variants": 95,
+        "options": [
+          [
+            "5.5'' x 8.375\"",
+            "8\" x 10.25\"",
+            "10\" x 13\"",
+            "6.25'' x 12.5\""
+          ],
+          [
+            "Kraft",
+            "White"
+          ],
+          [
+            "1 pc",
+            "5 pcs",
+            "10 pcs",
+            "25 pcs",
+            "50 pcs",
+            "75 pcs",
+            "100 pcs",
+            "150 pcs",
+            "200 pcs",
+            "250 pcs",
+            "500 pcs",
+            "1000 pcs"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 599,
+            "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ]
+  },
+  "undeleted": []
+}
