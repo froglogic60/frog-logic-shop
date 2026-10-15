@@ -177,6 +177,20 @@ function plannerPost(occurrence, site) {
   };
 }
 
+// Etsy, since 15 Oct 2026: the tees, mugs and prints are listed there too
+// (UK and US makers), and the whole shop is in Etsy's Share & Save, so any
+// sale that comes through a froglogic.etsy.com link costs 4% less in fees
+// (6.5% until 29 Oct). The map is written by hand from the Etsy shop after
+// the "Put tees, mugs and prints on Etsy" workflow runs.
+const ETSY_SHOP = "froglogic.etsy.com";
+let ETSY_LISTINGS = {};
+try { ETSY_LISTINGS = JSON.parse(fs.readFileSync(path.join(__dirname, "etsy-listings.json"), "utf8")); } catch { /* none yet */ }
+function etsyLine(p) {
+  const id = p && p.num ? (() => { const n = p.num.includes("—") ? p.num.split("—")[0].trim() : p.num; return (n + "-" + p.word).replace(/[^A-Za-z0-9]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase(); })() : null;
+  const l = id && ETSY_LISTINGS[id];
+  return l && l.uk ? `Also on Etsy: ${ETSY_SHOP}/listing/${l.uk}` : `Also on Etsy: ${ETSY_SHOP}`;
+}
+
 function buildPost({ type, occurrence }, bank, site) {
   if (type === "p") return plannerPost(occurrence, site);
   if (type === "q") {
@@ -190,7 +204,7 @@ function buildPost({ type, occurrence }, bank, site) {
     const p = site.PRODUCTS[(occurrence * 7) % site.PRODUCTS.length];
     return {
       kind: "art", item: p,
-      caption: `${p.word}. ${p.line} 🐸\n\nFrom the feelings collection at ${SHOP} — the word is the artwork.\n\n${tags(occurrence)}`,
+      caption: `${p.word}. ${p.line} 🐸\n\nFrom the feelings collection at ${SHOP} — the word is the artwork.\n${etsyLine(p)}\n\n${tags(occurrence)}`,
     };
   }
   if (type === "s") {
@@ -201,7 +215,7 @@ function buildPost({ type, occurrence }, bank, site) {
     const cta = SHOWCASE_LINES[occurrence % SHOWCASE_LINES.length];
     return {
       kind: "showcase", item: p,
-      caption: `${p.word} — ${p.price}. ${cta} 🐸\n\n${tags(occurrence)}`,
+      caption: `${p.word} — ${p.price}. ${cta} 🐸\n${etsyLine(null)}\n\n${tags(occurrence)}`,
     };
   }
   if (type === "e") {
