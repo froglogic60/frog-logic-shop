@@ -19,8 +19,11 @@
 //
 //   "shipping": { "provider": 99, "first": 349, "additional": 199 }
 //
-// Rates are in pence, read from Printify's own catalogue. Run it again whenever
-// Printify changes prices.
+// Rates are in pence. Printify quotes postage in US DOLLARS (its catalogue says
+// "currency": "USD", even for UK makers), so cents are converted to pence at
+// USD_TO_GBP and rounded up. Until 15 Oct 2026 the cents were used as pence,
+// which charged UK buyers about a third too much postage. Run it again
+// whenever Printify changes prices.
 //
 // EVERYWHERE ELSE
 // ---------------
@@ -90,12 +93,25 @@ const gbp = (p) => (p == null ? "?" : "£" + (p / 100).toFixed(2));
 //
 // Countries that end up on the same pair of rates are then grouped, which turns
 // forty near-identical rows into three or four real zones.
+// Same rate as wire-catalog.js uses for the US twins, kept a touch above the
+// market rate (Printify's own conversion was 0.758 on 15 Oct 2026) so a
+// small currency move doesn't leave postage under-covered.
+const USD_TO_GBP = 0.77;
+function toPence(cents, currency) {
+  if (cents == null) return null;
+  if (currency === "GBP") return cents;
+  if (currency === "USD") return Math.ceil(cents * USD_TO_GBP);
+  // Anything else is a surprise worth stopping for, not guessing at.
+  throw new Error("postage quoted in " + currency);
+}
+
 function zonesFrom(shipping) {
   const byCountry = new Map();
   for (const p of shipping.profiles || []) {
-    const first = p.first_item?.cost;
+    const currency = p.first_item?.currency || "USD";
+    const first = toPence(p.first_item?.cost, currency);
     if (first == null) continue;
-    const additional = p.additional_items?.cost ?? first;
+    const additional = toPence(p.additional_items?.cost, p.additional_items?.currency || currency) ?? first;
     for (const c of p.countries || []) {
       const prev = byCountry.get(c);
       if (!prev || first > prev.first) byCountry.set(c, { first, additional });
