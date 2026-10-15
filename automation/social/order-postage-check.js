@@ -31,10 +31,16 @@ const FREE_DELIVERY_OVER = 8000; // the website's free UK delivery threshold, in
 
 // Etsy delivery profiles as set by hand on 15 Oct 2026, in pence, by
 // country and Printify blueprint: [first item, each additional].
+// US first-item rates cut to £4.49 on 15 Oct 2026 with Etsy's postage tool
+// (Etsy ranks US listings lower when postage is US$6+), and the cut was added
+// to each item's price instead — Sam: "Move it into price".
 const ETSY = {
   GB: { 6: [273, 152], 535: [296, 190], 763: [395, 53], 804: [395, 53], 813: [235, 76], 479: [296, 99], 635: [296, 99], 1125: [296, 99] },
-  US: { 6: [377, 183], 478: [555, 235], 479: [555, 235], 635: [555, 235], 763: [615, 152], 804: [615, 152], 531: [448, 53], 1488: [699, 304] },
+  US: { 6: [377, 183], 478: [449, 235], 479: [449, 235], 635: [449, 235], 763: [449, 152], 804: [449, 152], 531: [448, 53], 1488: [449, 304] },
 };
+// Postage moved into the US item price on 15 Oct 2026, in pence per item.
+// It pays towards Printify's shipping, so it counts as postage collected.
+const MOVED_INTO_PRICE = { US: { 478: 106, 479: 106, 635: 106, 763: 166, 804: 166, 1488: 250 } };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function api(p) {
@@ -113,12 +119,13 @@ function postage(lines) {
         const qty = Number(li.quantity) || 1;
         if (isEtsy) {
           const bp = li.blueprint_id ?? li.metadata?.blueprint_id;
-          return { qty, group: String(li.print_provider_id ?? bp), rate: ETSY[country][bp] || null, bp };
+          return { qty, group: String(li.print_provider_id ?? bp), rate: ETSY[country][bp] || null, bp, moved: (MOVED_INTO_PRICE[country]?.[bp] || 0) * qty };
         }
         const s = site.get(li.product_id);
         return { qty, group: s?.group, rate: s?.[country] || null, price: s?.price || 0 };
       });
       let charged = postage(lines);
+      if (charged != null) charged += lines.reduce((t, l) => t + (l.moved || 0), 0);
       const billedGbp = Math.round(o.total_shipping * USD_TO_GBP);
       entry.billedCents = o.total_shipping;
       entry.billedGbpPence = billedGbp;
@@ -135,7 +142,7 @@ function postage(lines) {
       entry.chargedPence = charged;
       const diff = charged - billedGbp;
       entry.result = diff >= 0 ? "covered" : "short";
-      notes.push(`${label}: customer paid ${gbp(charged)} postage, Printify billed $${(o.total_shipping / 100).toFixed(2)} (~${gbp(billedGbp)}) — ${diff >= 0 ? "covered, " + gbp(diff) + " spare" : "SHORT by " + gbp(-diff)}${charged === 0 ? " (free-delivery order)" : ""}`);
+      notes.push(`${label}: customer paid ${gbp(charged)} postage${lines.some((l) => l.moved) ? " (including the part moved into the item price)" : ""},Printify billed $${(o.total_shipping / 100).toFixed(2)} (~${gbp(billedGbp)}) — ${diff >= 0 ? "covered, " + gbp(diff) + " spare" : "SHORT by " + gbp(-diff)}${charged === 0 ? " (free-delivery order)" : ""}`);
     }
   }
 
