@@ -103,6 +103,37 @@ def text_block(draw, x, y, w, title, line, where, big):
     return y + int(big * 0.5)
 
 
+def mug_two_sides(prod, out_path):
+    """Etsy's first photo for the personalised mug (Sam, 15 Oct 2026): the
+    name side and the frog side next to each other, because no single mockup
+    shows both and a buyer needs to see "it's personalised" in a thumbnail.
+    Uses the black-handle variant's "right" (name) and "left" (frog) views."""
+    black = [v["id"] for v in prod.get("variants", []) if v.get("is_enabled") and "black" in v.get("title", "").lower()]
+    if not black:
+        sys.exit("mug: no enabled black variant")
+    imgs = [i for i in prod.get("images") or [] if black[0] in (i.get("variant_ids") or [])]
+    by = {label(i["src"]): i for i in imgs}
+    if "right" not in by or "left" not in by:
+        sys.exit(f"mug: need right and left views for the black variant, have {sorted(by)}")
+    W, H = 2400, 1800
+    canvas = Image.new("RGB", (W, H), (255, 255, 255))
+    for n, cam in enumerate(["right", "left"]):
+        side = fetch_image(by[cam]["src"])
+        s = min(side.size)
+        side = side.crop(((side.width - s) // 2, (side.height - s) // 2, (side.width + s) // 2, (side.height + s) // 2))
+        # The mug sits in the middle ~70% of Printify's square mockup; trim the
+        # margin so the two mugs read large side by side.
+        m = int(s * 0.14)
+        side = side.crop((m, m, s - m, s - m)).resize((1200, 1200), Image.LANCZOS)
+        canvas.paste(side, (n * 1200, 150))
+    d = ImageDraw.Draw(canvas)
+    f = font("Fraunces-var.ttf", 64, 600)
+    line = "Your name on one side \u00b7 the Christmas frog on the other"
+    tw = d.textlength(line, font=f)
+    d.text(((W - tw) / 2, 1500), line, font=f, fill=BROWN)
+    canvas.save(out_path, quality=90, optimize=True)
+
+
 def main():
     shops = api("/shops.json")
     etsy = next(s for s in shops if "etsy" in (s.get("sales_channel") or "").lower())
@@ -145,6 +176,8 @@ def main():
         text_block(d, 0, 1030, 1080, spec["title"].replace("\n", " "), spec["line"], spec["where"], 62)
         post.save(os.path.join(HERE, "xmas", spec["slug"] + "-post.jpg"), quality=88, optimize=True)
 
+        if spec["slug"] == "xmas-mug":
+            mug_two_sides(prod, os.path.join(HERE, "xmas", "xmas-mug-two-sides.jpg"))
         made.append({"slug": spec["slug"], "printifyProductId": prod["id"], "title": prod["title"], "photo": label(hero["src"])})
         print(f"{spec['slug']}: {prod['title'][:60]} — photo '{label(hero['src'])}'")
 
