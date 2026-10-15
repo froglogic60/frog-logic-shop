@@ -1,0 +1,30 @@
+name: Christmas product scan
+# Read-only: which winter products UK and US Printify makers offer (sizes,
+# colours, scents), what they cost and post. Writes
+# automation/social/xmas-catalog.json [skip netlify].
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Scan the catalogue
+        working-directory: automation/social
+        run: node xmas-catalog.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/xmas-catalog.json
+          git commit -m "Christmas product scan [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
