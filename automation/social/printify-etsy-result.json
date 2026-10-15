@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-15T10:58:06.813Z",
+  "ranAt": "2026-10-15T11:00:29.345Z",
   "etsyStore": 29335686,
   "results": [
     {
@@ -787,59 +787,144 @@
   "held": [],
   "errors": [
     {
+      "id": "01-overstimulated",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aeb08da49f60c20fb39a.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "01-overstimulated",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aeb4acc7ef505107dadc.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "12-time-blind",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aeb88da49f60c20fb3a1.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "12-time-blind",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aebc41a1253d3f09c9ca.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "18-parallel-play",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aec1acc7ef505107dae9.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "18-parallel-play",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aec58da49f60c20fb3aa.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "24-late-diagnosed",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aec9acc7ef505107daef.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "24-late-diagnosed",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aecd41a1253d3f09c9d3.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "29-no-idea-what-my-face-is-doing",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aed19145a2da85030266.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "29-no-idea-what-my-face-is-doing",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aed5cfd848fd8e06d0b0.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "31-ask-me-about-it",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aed99145a2da8503026e.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "31-ask-me-about-it",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aeddcfd848fd8e06d0b7.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "39-enthusiasm-unmasked",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aee141a1253d3f09c9e8.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "39-enthusiasm-unmasked",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aee6b3ac3446f50eaaa9.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "42-nothing-needs-fixing",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aeea4fdcde14c009ec05.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "42-nothing-needs-fixing",
+      "where": "us",
+      "error": "PUT /shops/29335686/products/6ad0aeee9145a2da8503027d.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
+      "id": "45-enough",
+      "where": "uk",
+      "error": "PUT /shops/29335686/products/6ad0aef24fdcde14c009ec0f.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
+    },
+    {
       "id": "45-enough",
       "where": "us",
-      "error": "POST /shops/29335686/products/6ad0aef64fdcde14c009ec18/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061238@91d28ba4-4fde-46ae-bdf1-565fee91e29f\"}"
+      "error": "PUT /shops/29335686/products/6ad0aef64fdcde14c009ec18.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "51-in-writing-please",
       "where": "uk",
-      "error": "POST /shops/29335686/products/6ad0af399145a2da850302c0/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061304@69af1ec0-0a57-4e8a-b7dc-79dc108a1a41\"}"
+      "error": "PUT /shops/29335686/products/6ad0af399145a2da850302c0.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "51-in-writing-please",
       "where": "us",
-      "error": "POST /shops/29335686/products/6ad0af795dd864d0a90ff716/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061369@74013b22-aa77-4437-a337-7af9a4e15134\"}"
+      "error": "PUT /shops/29335686/products/6ad0af795dd864d0a90ff716.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "63-guilt-is-not-evidence",
       "where": "uk",
-      "error": "POST /shops/29335686/products/6ad0afba1808260f4c00a85e/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061433@c265acc3-f20f-4871-b1c3-d6bd333b5d72\"}"
+      "error": "PUT /shops/29335686/products/6ad0afba1808260f4c00a85e.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "63-guilt-is-not-evidence",
       "where": "us",
-      "error": "POST /shops/29335686/products/6ad0affb4fdcde14c009ecff/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061498@5234d6fb-c554-4a7e-8908-e864b1aa0c84\"}"
+      "error": "PUT /shops/29335686/products/6ad0affb4fdcde14c009ecff.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "f1-comfort-creature",
       "where": "uk",
-      "error": "POST /shops/29335686/products/6ad0b03b8da49f60c20fb4f3/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061562@ad6bc6a5-c5da-4226-af57-2bbbf6349e64\"}"
+      "error": "PUT /shops/29335686/products/6ad0b03b8da49f60c20fb4f3.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "f1-comfort-creature",
       "where": "us",
-      "error": "POST /shops/29335686/products/6ad0b07c9145a2da850303ea/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061627@040bc23a-857f-402d-bc51-385b1eeebf8b\"}"
+      "error": "PUT /shops/29335686/products/6ad0b07c9145a2da850303ea.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "f2-brain-full-of-tabs",
       "where": "uk",
-      "error": "POST /shops/29335686/products/6ad0b0bdcfd848fd8e06d1f3/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061692@092d49e5-2e39-4498-a133-84e1bf026701\"}"
+      "error": "PUT /shops/29335686/products/6ad0b0bdcfd848fd8e06d1f3.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "f2-brain-full-of-tabs",
       "where": "us",
-      "error": "POST /shops/29335686/products/6ad0b0fdcfd848fd8e06d209/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061757@656e2319-3d80-48eb-b6e5-b2cd4dbfeee9\"}"
+      "error": "PUT /shops/29335686/products/6ad0b0fdcfd848fd8e06d209.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "f3-neurospicy",
       "where": "uk",
-      "error": "POST /shops/29335686/products/6ad0b13e4fdcde14c009edaf/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061821@067bcf25-d872-44bc-b192-44736f7dd4be\"}"
+      "error": "PUT /shops/29335686/products/6ad0b13e4fdcde14c009edaf.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     },
     {
       "id": "f3-neurospicy",
       "where": "us",
-      "error": "POST /shops/29335686/products/6ad0b17f5dd864d0a90ff83b/publish.json -> 429 {\"error\":\"Too Many Attempts.\",\"request_id\":\"1792061886@692e98e1-2498-49ee-8bf8-c268a1536be8\"}"
+      "error": "PUT /shops/29335686/products/6ad0b17f5dd864d0a90ff83b.json -> 400 {\"status\":\"error\",\"code\":8251,\"message\":\"Validation failed.\",\"errors\":{\"reason\":\"Variants do not match selected blueprint and print provider. Please make sure that all product variants are present in the `print_areas.*.variant_ids` field\",\"code\":8251}}"
     }
   ]
 }
