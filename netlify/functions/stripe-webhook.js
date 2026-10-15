@@ -168,6 +168,16 @@ export default async (req) => {
     "GB"
   ).toUpperCase();
 
+  // Northern Ireland follows EU product-safety rules, which Frog Logic can't
+  // meet yet, so printed pieces aren't posted to BT postcodes. The checkout
+  // says so; if one gets through anyway, shout in the log so it is refunded
+  // rather than quietly made.
+  const postcode = String((session.shipping_details || session.collected_information?.shipping_details)?.address?.postal_code || "").trim().toUpperCase();
+  if (dest === "GB" && /^BT\d/.test(postcode)) {
+    console.error(`NORTHERN IRELAND ADDRESS on ${session.id} (${postcode}) — printed pieces NOT sent to Printify. Refund them in Stripe and email the customer.`);
+  }
+  const blockNI = dest === "GB" && /^BT\d/.test(postcode);
+
   const lines = [];
   for (const row of rows) {
     const base = catalog.find((p) => p.id === row.id);
@@ -180,7 +190,7 @@ export default async (req) => {
   }
 
   const digital = lines.filter((l) => l.item.type === "digital").map((l) => l.item);
-  const physical = lines.filter((l) => l.item.type === "physical");
+  const physical = blockNI ? [] : lines.filter((l) => l.item.type === "physical");
 
   // Grouped by provider, because that is one parcel and one Printify order.
   const byProvider = new Map();

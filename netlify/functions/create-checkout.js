@@ -68,12 +68,16 @@ const FREE_DELIVERY_OVER = 8000;
 // address is only offered when EVERY physical piece in the basket has one, and
 // the order is made and posted inside the US — no Atlantic postage, no import
 // charge. Everything else in the range still can't go there.
-const DESTINATIONS = [
-  "GB", "US",
-  "IE", "FR", "DE", "NL", "BE", "ES", "IT", "PT", "AT", "LU",
-  "DK", "SE", "FI", "PL", "CZ", "SK", "SI", "HR", "HU", "RO",
-  "BG", "GR", "EE", "LV", "LT", "CY", "MT",
-];
+//
+// The EU came OFF the list on 15 Oct 2026 (Sam's call). The EU's General
+// Product Safety Regulation needs every physical product sold to EU shoppers
+// to name a "responsible person" based in the EU, and Frog Logic has none.
+// Downloads are not physical products and still sell everywhere. Northern
+// Ireland follows the EU rules for goods, so the checkout tells UK buyers it
+// can't post physical pieces to BT postcodes. To reopen the EU later: appoint
+// an EU representative, add their details to the listings, and put the
+// countries back here.
+const DESTINATIONS = ["GB", "US"];
 
 // Only for what the customer sees. Kept next to the list so adding a country
 // to one without the other shows a bare code rather than the wrong name.
@@ -330,6 +334,9 @@ export default async (req) => {
     // one that is always there.
     consent_collection: { terms_of_service: "required" },
     custom_text: {
+      ...(physical.length && country === "GB"
+        ? { shipping_address: { message: "We can't post printed pieces to Northern Ireland (BT postcodes) at the moment. Downloads are fine." } }
+        : {}),
       terms_of_service_acceptance: {
         message:
           "I agree to the terms and returns policy. For downloads, I want them straight away and accept that means giving up the 14-day right to cancel those files. Physical pieces keep the full 14 days.",
