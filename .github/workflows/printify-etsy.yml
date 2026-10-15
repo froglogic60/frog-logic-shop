@@ -15,7 +15,7 @@ on:
         type: boolean
         default: true
       publish:
-        description: "Publish to Etsy (creates live listings)"
+        description: "Push corrections to Etsy (new products wait for photos in Printify)"
         type: boolean
         default: false
 permissions:
