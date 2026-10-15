@@ -35,9 +35,13 @@ const ONLY = (process.env.ONLY || "").split(",").map((s) => s.trim()).filter(Boo
 // Etsy prices in pence, before postage (Printify's Etsy shipping profile adds
 // the maker's own postage at checkout). UK rows use the UK maker, US rows the
 // US maker. Kept beside the costs they were worked out from on 15 Oct 2026.
+// Later that day the US mug and print postage on Etsy was cut to £4.49 (Etsy
+// ranks US$6+ postage lower) and the cut moved into the price: mug +£1.06,
+// print +£1.66. Keep these in step with Etsy, or a pushed correction would
+// drop the price while the postage stays low.
 const PRICES = {
   uk: { tee: 1900, mug: 1350, print: 1400 },
-  us: { tee: 2200, mug: 1350, print: 1400 },
+  us: { tee: 2200, mug: 1456, print: 1566 },
 };
 const RETURNS = { tee: 0.05, mug: 0.02, print: 0.02 };
 // Etsy UK fees with 20% VAT on each: 6.5% transaction, 4% + 20p payment
