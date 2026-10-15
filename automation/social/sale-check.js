@@ -72,7 +72,8 @@ function keep(price, postage, makeCostP, shipCostP, kind) {
   const shipCache = {};
   // Shipping for one variant: Printify's profiles each list the variants they
   // cover, and a poster's 16x16 size posts for far less than its 24x36 (the
-  // first run took the dearest profile and showed a $30.69 poster rate).
+  // first run took the dearest profile across all sizes and showed a $30.69
+  // poster rate).
   async function ship(bp, pp, country, variantId) {
     const k = `${bp}:${pp}`;
     if (!(k in shipCache)) {
@@ -81,7 +82,11 @@ function keep(price, postage, makeCostP, shipCostP, kind) {
     const s = shipCache[k];
     const hits = (s.profiles || []).filter((p) => (p.countries || []).includes(country) && (p.variant_ids || []).includes(variantId));
     const costs = hits.map((p) => p.first_item?.cost).filter((c) => typeof c === "number");
-    return costs.length ? Math.max(...costs) : null;
+    // Some variants sit in more than one profile. Printify's own product page
+    // charges the cheapest: the white US tees list $4.95 and $7.99, and the
+    // product page shows $4.95 for every size (checked 15 Oct 2026), so the
+    // dearest one wrongly flagged them as losing money on postage.
+    return costs.length ? Math.min(...costs) : null;
   }
 
   const rows = [];
