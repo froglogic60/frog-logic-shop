@@ -22,7 +22,7 @@ CREAM, BROWN, GREEN, RED = (244, 239, 227), (107, 74, 50), (34, 51, 31), (196, 6
 
 # What each picture says. Matched to the Printify product by title.
 PRODUCTS = [
-    {"slug": "xmas-mug", "match": r"Christmas Frog Mug", "title": "Personalised\nChristmas Frog Mug", "line": "Any name, printed on", "where": "Made & posted in the UK"},
+    {"slug": "xmas-mug", "prefer": "context-2", "match": r"Christmas Frog Mug", "title": "Personalised\nChristmas Frog Mug", "line": "Any name, printed on", "where": "Made & posted in the UK"},
     {"slug": "xmas-ornament", "match": r"Personalised Frog Christmas Ornament", "title": "Personalised\nFrog Ornament", "line": "Their name, on the tree", "where": "UK & US versions"},
     {"slug": "xmas-ornament-us", "match": r"Personalized Frog Christmas Ornament", "title": "Personalized\nFrog Ornament", "line": "Their name, on the tree", "where": "Made & shipped in the US"},
     {"slug": "xmas-candle", "match": r"Christmas Frog Candle", "title": "Personalized\nFrog Candle", "line": "Pick the scent, add a name", "where": "Made & shipped in the US"},
@@ -66,10 +66,17 @@ def label(img_src):
     return m.group(1) if m else ""
 
 
-def pick(images):
+def pick(images, prefer=None):
     """Lifestyle shots sell a gift better than a plain front view, so a context
-    mockup first, then the front."""
+    mockup first, then the front. `prefer` names a camera when the first
+    context shot is the wrong one (the mug's context-1 shows only the name
+    side; context-2 shows the frog)."""
     chosen = [i for i in images if i.get("is_selected_for_publishing")] or images
+    if prefer:
+        hit = [i for i in chosen if label(i["src"]) == prefer]
+        if hit:
+            front = [i for i in chosen if label(i["src"]).startswith("front")]
+            return hit[0], (front or chosen)[0]
     ctx = [i for i in chosen if label(i["src"]).startswith("context")]
     front = [i for i in chosen if label(i["src"]).startswith("front")]
     return (ctx or front or chosen)[0], (front or chosen)[0]
@@ -115,7 +122,7 @@ def main():
         if len(hits) != 1:
             sys.exit(f"{spec['slug']}: expected one product matching {spec['match']!r}, found {len(hits)}")
         prod = api(f"/shops/{etsy['id']}/products/{hits[0]['id']}.json")
-        hero, front = pick(prod.get("images") or [])
+        hero, front = pick(prod.get("images") or [], spec.get("prefer"))
         photo = fetch_image(hero["src"])
 
         # Website card: the photo, square.
