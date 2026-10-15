@@ -70,13 +70,17 @@ function keep(price, postage, makeCostP, shipCostP, kind) {
     if ((r.data || []).length < 50) break;
   }
   const shipCache = {};
-  async function ship(bp, pp, country) {
+  // Shipping for one variant: Printify's profiles each list the variants they
+  // cover, and a poster's 16x16 size posts for far less than its 24x36 (the
+  // first run took the dearest profile and showed a $30.69 poster rate).
+  async function ship(bp, pp, country, variantId) {
     const k = `${bp}:${pp}`;
     if (!(k in shipCache)) {
       try { shipCache[k] = await api(`/catalog/blueprints/${bp}/print_providers/${pp}/shipping.json`); } catch (e) { shipCache[k] = { error: e.message }; }
     }
     const s = shipCache[k];
-    const costs = (s.profiles || []).filter((p) => (p.countries || []).includes(country)).map((p) => p.first_item?.cost).filter((c) => typeof c === "number");
+    const hits = (s.profiles || []).filter((p) => (p.countries || []).includes(country) && (p.variant_ids || []).includes(variantId));
+    const costs = hits.map((p) => p.first_item?.cost).filter((c) => typeof c === "number");
     return costs.length ? Math.max(...costs) : null;
   }
 
@@ -85,24 +89,25 @@ function keep(price, postage, makeCostP, shipCostP, kind) {
     const full = await api(`/shops/${etsy.id}/products/${p.id}.json`);
     const country = /ships from the us|personalized|personalize\b/i.test(full.title) && !/personalised/i.test(full.title) ? "US" : "GB";
     const kind = kindOf(full.title);
-    const shipC = await ship(full.blueprint_id, full.print_provider_id, country);
     const postage = ETSY_POSTAGE[country][full.blueprint_id];
     const vars = (full.variants || []).filter((v) => v.is_enabled && typeof v.cost === "number");
     if (!vars.length) continue;
-    const variants = vars.map((v) => {
+    const variants = [];
+    for (const v of vars) {
+      const shipC = await ship(full.blueprint_id, full.print_provider_id, country, v.id);
       const make = Math.round(v.cost * USD_TO_GBP);
       const shipP = shipC == null ? null : Math.round(shipC * USD_TO_GBP);
-      const out = { price: v.price, makeCostUsdCents: v.cost, makeCostP: make, shipCostP: shipP };
+      const out = { variantId: v.id, title: v.title, price: v.price, makeCostUsdCents: v.cost, shipCostUsdCents: shipC, makeCostP: make, shipCostP: shipP };
       for (const d of [0, ...DISCOUNTS]) {
         const sale = Math.round(v.price * (1 - d / 100));
         const k = postage == null || shipP == null ? null : Math.round(keep(sale, postage, make, shipP, kind));
         out["off" + d] = { sale, keep: k, share: k == null ? null : +(k / sale).toFixed(3) };
       }
-      return out;
-    });
+      variants.push(out);
+    }
     // Worst variant = the one that keeps the smallest share.
     const worst = variants.reduce((a, b) => ((a.off0.share ?? 9) <= (b.off0.share ?? 9) ? a : b));
-    rows.push({ title: full.title, id: full.id, etsyId: full.external?.id || null, country, kind, blueprint: full.blueprint_id, provider: full.print_provider_id, postageP: postage ?? null, shipCostUsdCents: shipC, prices: [...new Set(vars.map((v) => v.price))], worst, variants: variants.length > 6 ? undefined : variants });
+    rows.push({ title: full.title, id: full.id, etsyId: full.external?.id || null, country, kind, blueprint: full.blueprint_id, provider: full.print_provider_id, postageP: postage ?? null, prices: [...new Set(vars.map((v) => v.price))], worst, variants: variants.length > 6 ? undefined : variants });
     await sleep(300);
   }
   fs.writeFileSync(OUT, JSON.stringify({ checkedAt: new Date().toISOString(), usdToGbp: USD_TO_GBP, discounts: DISCOUNTS, rule: MIN_KEEP, rows }, null, 2) + "\n");
