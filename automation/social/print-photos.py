@@ -76,13 +76,7 @@ def closeup(art, out):
     c = 0.72
     box = (int(w * (1 - c) / 2), int(h * (1 - c) / 2), int(w * (1 + c) / 2), int(h * (1 + c) / 2))
     img = art.crop(box).resize((S, S), Image.LANCZOS)
-    d = ImageDraw.Draw(img)
-    f = font("Fraunces-var.ttf", 44, 500)
-    label = "Close-up · semi-gloss finish"
-    tw = d.textlength(label, font=f)
-    pad = 26
-    d.rounded_rectangle((S - tw - pad * 3, S - 120, S - pad, S - 120 + 80), radius=40, fill=CREAM)
-    d.text((S - tw - pad * 2, S - 108), label, font=f, fill=BROWN)
+    # No label: a pill in the corner covered lettering on some designs.
     img.save(out, quality=90, optimize=True)
 
 
