@@ -1,0 +1,30 @@
+name: Christmas pictures
+# Makes the website cards, Pinterest pins and Facebook/Instagram pictures for
+# the personalised Christmas range from the Printify mockups. Read-only on
+# Printify; commits the pictures [skip netlify]. See xmas-promo.py.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  pictures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Make the pictures
+        run: python automation/social/xmas-promo.py
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/xmas automation/social/xmas
+          git status --short
+          git commit -m "Christmas pictures [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
