@@ -44,6 +44,17 @@ function findDue() {
 }
 
 async function render(spec) {
+  // A post can carry a ready-made photo instead of the text card (added 15 Oct
+  // 2026 for the Christmas range: a product sells on its picture). `image` is
+  // a path from the repo root, e.g. "automation/social/xmas/xmas-mug-post.jpg".
+  if (spec.image) {
+    const src = path.join(__dirname, "..", "..", spec.image);
+    if (!fs.existsSync(src)) throw new Error(`image not found: ${spec.image}`);
+    fs.mkdirSync(QUEUE, { recursive: true });
+    fs.copyFileSync(src, path.join(QUEUE, `${spec.name}.jpg`));
+    console.log(`Using ${spec.image} for ${spec.name}.jpg`);
+    return;
+  }
   const renderer = makeRenderer({
     logoFile: path.join(__dirname, "..", "..", "assets", "frog-logic-mark-sm.png"),
   });
