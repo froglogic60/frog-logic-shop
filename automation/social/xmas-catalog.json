@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T13:46:26.411Z",
+  "scannedAt": "2026-10-15T21:49:31.856Z",
   "kinds": {
     "candle": [
       {
@@ -7902,6 +7902,3593 @@
           "US": {
             "first": 599,
             "additional": 99,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "hoodie": [
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 274,
+        "options": [
+          [
+            "Ash",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+24"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "left_sleeve",
+          "back",
+          "neck",
+          "front",
+          "right_sleeve"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2138,
+          "max": 2490
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 149,
+        "options": [
+          [
+            "Ash",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+19"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2924,
+          "max": 3474
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Underground Threads",
+        "providerId": 50,
+        "makerCountry": "US",
+        "variants": 66,
+        "options": [
+          [
+            "Dark Heather",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Heliconia",
+            "Red",
+            "Royal",
+            "Sand",
+            "Gold",
+            "Azalea"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2759,
+          "max": 4267
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 176,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Ash",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+10"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2267,
+          "max": 2608
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 55,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Red",
+            "Light Pink",
+            "Orange",
+            "Light Blue"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3254,
+          "max": 3254
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 166,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Ash",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "…+9"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2355,
+          "max": 2709
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Ash",
+            "Purple",
+            "Royal",
+            "Forest Green",
+            "Military Green",
+            "Light Pink",
+            "…+3"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3035,
+          "max": 3859
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 140,
+        "options": [
+          [
+            "Ash",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Irish Green",
+            "Red",
+            "Royal",
+            "Forest Green",
+            "Military Green",
+            "…+8"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "large_center_embroidery",
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_center_chest",
+          "front_left_chest",
+          "left_wrist",
+          "right_wrist",
+          "front_dtf",
+          "back_dtf",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 729,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3164,
+          "max": 3609
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 237,
+        "options": [
+          [
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Carolina Blue",
+            "Heliconia",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "Royal",
+            "…+20"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_center_chest",
+          "front_left_chest",
+          "left_wrist_dtf",
+          "right_wrist_dtf",
+          "front_glitter",
+          "back_glitter",
+          "left_sleeve_glitter",
+          "right_sleeve_glitter",
+          "front_metallic",
+          "back_metallic",
+          "left_sleeve_metallic",
+          "right_sleeve_metallic",
+          "front_puff",
+          "back_puff",
+          "left_sleeve_puff",
+          "right_sleeve_puff",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2492,
+          "max": 3294
+        }
+      },
+      {
+        "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+        "blueprintId": 77,
+        "brand": "Gildan",
+        "provider": "Dimona Tee",
+        "providerId": 61,
+        "makerCountry": "US",
+        "variants": 128,
+        "options": [
+          [
+            "Dark Heather",
+            "Navy",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Irish Green",
+            "Purple",
+            "Red",
+            "Royal",
+            "Forest Green",
+            "Light Pink",
+            "Sand",
+            "…+5"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "left_sleeve",
+          "right_sleeve",
+          "front_left_chest",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2281,
+          "max": 3469
+        }
+      },
+      {
+        "blueprint": "Unisex College Hoodie",
+        "blueprintId": 92,
+        "brand": "AWDIS",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 90,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Burgundy",
+            "Charcoal",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Chocolate",
+            "Hot Pink",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Purple",
+            "…+6"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2755,
+          "max": 2755
+        }
+      },
+      {
+        "blueprint": "Unisex College Hoodie",
+        "blueprintId": 92,
+        "brand": "AWDIS",
+        "provider": "Shirt Monkey",
+        "providerId": 331,
+        "makerCountry": "GB",
+        "variants": 65,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Burgundy",
+            "Charcoal",
+            "Fire Red",
+            "Heather Grey",
+            "Oxford Navy",
+            "Sky Blue",
+            "Royal Blue",
+            "Deep Black",
+            "Dusty Pink"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2865,
+          "max": 2865
+        }
+      },
+      {
+        "blueprint": "Unisex College Hoodie",
+        "blueprintId": 92,
+        "brand": "AWDIS",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 82,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Fire Red",
+            "Heather Grey",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Burgundy",
+            "Charcoal",
+            "Hot Chocolate",
+            "Hot Pink",
+            "Purple",
+            "…+3"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2718,
+          "max": 2829
+        }
+      },
+      {
+        "blueprint": "Unisex College Hoodie",
+        "blueprintId": 92,
+        "brand": "AWDIS",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 90,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Burgundy",
+            "Charcoal",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Chocolate",
+            "Hot Pink",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Purple",
+            "…+6"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2569,
+          "max": 2569
+        }
+      },
+      {
+        "blueprint": "Unisex College Hoodie",
+        "blueprintId": 92,
+        "brand": "AWDIS",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 449,
+        "options": [
+          [
+            "Arctic White",
+            "Bottle Green",
+            "Charcoal",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Chocolate",
+            "Hot Pink",
+            "Jet Black",
+            "Kelly Green",
+            "Oxford Navy",
+            "Purple",
+            "Sky Blue",
+            "…+65"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2982,
+          "max": 2982
+        }
+      },
+      {
+        "blueprint": "Girlie College Hoodie",
+        "blueprintId": 93,
+        "brand": "AWDIS",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 106,
+        "options": [
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Airforce Blue",
+            "Arctic White",
+            "Bottle Green",
+            "Burgundy",
+            "Candyfloss Pink",
+            "Charcoal",
+            "Fire Red",
+            "Heather Grey",
+            "Hot Pink",
+            "Jade",
+            "Jet Black",
+            "New French Navy",
+            "…+6"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3179,
+          "max": 3291
+        }
+      },
+      {
+        "blueprint": "Men's NUBLEND® Hooded Sweatshirt",
+        "blueprintId": 114,
+        "brand": "JERZEES",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 53,
+        "options": [
+          [
+            "Black",
+            "Athletic Heather",
+            "Navy Heather",
+            "Kelly",
+            "Royal",
+            "True Red",
+            "White",
+            "Charcoal Grey"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2709,
+          "max": 3046
+        }
+      },
+      {
+        "blueprint": "Men's NUBLEND® Hooded Sweatshirt",
+        "blueprintId": 114,
+        "brand": "JERZEES",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 13,
+        "options": [
+          [
+            "Athletic Heather",
+            "Royal",
+            "Classic Pink",
+            "Forest Green",
+            "Maroon"
+          ],
+          [
+            "S",
+            "M",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 4039,
+          "max": 4039
+        }
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Pullover Hoodie",
+        "blueprintId": 175,
+        "brand": "Bella+Canvas",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 334,
+        "options": [
+          [
+            "Athletic Heather",
+            "Black",
+            "Navy",
+            "Red",
+            "True Royal",
+            "White",
+            "Deep Heather",
+            "Heather Forest",
+            "Heather Navy",
+            "Heather Slate",
+            "Heather True Royal",
+            "Maroon",
+            "…+42"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "left_sleeve_dtf",
+          "right_sleeve_dtf",
+          "front_dtf",
+          "back_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3793,
+          "max": 3793
+        }
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Pullover Hoodie",
+        "blueprintId": 175,
+        "brand": "Bella+Canvas",
+        "provider": "Dimona Tee",
+        "providerId": 61,
+        "makerCountry": "US",
+        "variants": 54,
+        "options": [
+          [
+            "Athletic Heather",
+            "Black",
+            "Navy",
+            "True Royal",
+            "White",
+            "Maroon",
+            "Team Purple",
+            "Forest",
+            "Gold"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3833,
+          "max": 3833
+        }
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Pullover Hoodie",
+        "blueprintId": 175,
+        "brand": "Bella+Canvas",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 22,
+        "options": [
+          [
+            "Athletic Heather",
+            "Black",
+            "Navy",
+            "Red",
+            "True Royal",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 4345,
+          "max": 4345
+        }
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Pullover Hoodie",
+        "blueprintId": 175,
+        "brand": "Bella+Canvas",
+        "provider": "Ink Blot",
+        "providerId": 74,
+        "makerCountry": "US",
+        "variants": 42,
+        "options": [
+          [
+            "Black",
+            "Navy",
+            "White",
+            "Deep Heather",
+            "Gold",
+            "Poppy",
+            "Lilac"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3782,
+          "max": 3824
+        }
+      },
+      {
+        "blueprint": "Unisex Sponge Fleece Pullover Hoodie",
+        "blueprintId": 175,
+        "brand": "Bella+Canvas",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 54,
+        "options": [
+          [
+            "Athletic Heather",
+            "Black",
+            "Navy",
+            "True Royal",
+            "White",
+            "Maroon",
+            "Team Purple",
+            "Forest",
+            "Gold"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3755,
+          "max": 3755
+        }
+      },
+      {
+        "blueprint": "Three-Panel Fleece Hoodie",
+        "blueprintId": 439,
+        "brand": "Lane Seven",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 77,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Army Green",
+            "Burgundy",
+            "Pale Pink",
+            "White",
+            "Lilac",
+            "Blue Mist"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2611,
+          "max": 2736
+        }
+      },
+      {
+        "blueprint": "Three-Panel Fleece Hoodie",
+        "blueprintId": 439,
+        "brand": "Lane Seven",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 58,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue",
+            "Red",
+            "Pale Pink",
+            "White",
+            "Sports Green",
+            "Sandshell"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "front_center_chest",
+          "front_left_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2984,
+          "max": 3240
+        }
+      },
+      {
+        "blueprint": "Three-Panel Fleece Hoodie",
+        "blueprintId": 439,
+        "brand": "Lane Seven",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 96,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue",
+            "Army Green",
+            "Red",
+            "Burgundy",
+            "Pale Pink",
+            "White",
+            "Sports Green",
+            "…+3"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2551,
+          "max": 2686
+        }
+      },
+      {
+        "blueprint": "Three-Panel Fleece Hoodie",
+        "blueprintId": 439,
+        "brand": "Lane Seven",
+        "provider": "Marco Fine Arts",
+        "providerId": 3,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "Navy",
+            "White"
+          ],
+          [
+            "XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3018,
+          "max": 3202
+        }
+      },
+      {
+        "blueprint": "Three-Panel Fleece Hoodie",
+        "blueprintId": 439,
+        "brand": "Lane Seven",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 112,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Oatmeal Heather",
+            "Royal Blue",
+            "Army Green",
+            "Mustard",
+            "Red",
+            "Burgundy",
+            "Pale Pink",
+            "White",
+            "Navy",
+            "…+8"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "XS",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front_center_chest",
+          "front_left_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3046,
+          "max": 3218
+        }
+      },
+      {
+        "blueprint": "Three-Panel Fleece Hoodie",
+        "blueprintId": 439,
+        "brand": "Lane Seven",
+        "provider": "T Shirt and Sons",
+        "providerId": 6,
+        "makerCountry": "GB",
+        "variants": 30,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Grey",
+            "Navy",
+            "Oatmeal Heather",
+            "Royal Blue"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 4679,
+            "additional": 799,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3133,
+          "max": 3307
+        }
+      },
+      {
+        "blueprint": "Unisex Supply Hoodie",
+        "blueprintId": 499,
+        "brand": "AS Colour",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 50,
+        "options": [
+          [
+            "Black",
+            "Coal",
+            "Forest Green",
+            "Gold",
+            "Athletic Heather",
+            "Navy",
+            "Pink",
+            "White",
+            "White Heather",
+            "Red",
+            "Orange",
+            "Ecru",
+            "…+1"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3737,
+          "max": 3737
+        }
+      },
+      {
+        "blueprint": "Unisex Supply Hoodie",
+        "blueprintId": 499,
+        "brand": "AS Colour",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 50,
+        "options": [
+          [
+            "Black",
+            "Coal",
+            "Forest Green",
+            "Gold",
+            "Athletic Heather",
+            "Navy",
+            "Pink",
+            "White",
+            "White Heather",
+            "Red",
+            "Orange",
+            "Ecru",
+            "…+1"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3734,
+          "max": 3734
+        }
+      },
+      {
+        "blueprint": "Champion Hoodie",
+        "blueprintId": 528,
+        "brand": "Champion",
+        "provider": "Ink Blot",
+        "providerId": 74,
+        "makerCountry": "US",
+        "variants": 60,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Light Steel",
+            "Navy",
+            "Royal Blue",
+            "White",
+            "Dark Green",
+            "Gold",
+            "Maroon",
+            "Orange"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3599,
+          "max": 3642
+        }
+      },
+      {
+        "blueprint": "Champion Hoodie",
+        "blueprintId": 528,
+        "brand": "Champion",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 41,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Light Steel",
+            "Navy",
+            "Royal Blue",
+            "White",
+            "Stone Grey"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3836,
+          "max": 3836
+        }
+      },
+      {
+        "blueprint": "Champion Hoodie",
+        "blueprintId": 528,
+        "brand": "Champion",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 42,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Light Steel",
+            "Navy",
+            "Royal Blue",
+            "White",
+            "Stone Grey"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3721,
+          "max": 3721
+        }
+      },
+      {
+        "blueprint": "Unisex EcoSmart® Pullover Hoodie Sweatshirt",
+        "blueprintId": 536,
+        "brand": "Hanes",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 149,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Light Steel",
+            "Deep Forest",
+            "Deep Red",
+            "Deep Royal",
+            "Navy",
+            "Orange",
+            "Smoke Grey",
+            "Purple",
+            "Light Blue",
+            "White",
+            "…+29"
+          ],
+          [
+            "S",
+            "M",
+            "XL",
+            "2XL",
+            "3XL",
+            "L"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2383,
+          "max": 2383
+        }
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt",
+        "blueprintId": 696,
+        "brand": "Independent Trading Company",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 33,
+        "options": [
+          [
+            "Black",
+            "Blue Aqua",
+            "Bone",
+            "Classic Navy",
+            "Light Pink",
+            "Mint",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3222,
+          "max": 3222
+        }
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt",
+        "blueprintId": 696,
+        "brand": "Independent Trading Company",
+        "provider": "Ink Blot",
+        "providerId": 74,
+        "makerCountry": "US",
+        "variants": 140,
+        "options": [
+          [
+            "Army",
+            "Black",
+            "Blue Aqua",
+            "Bone",
+            "Classic Navy",
+            "Gold",
+            "Grey Heather",
+            "Lavender",
+            "Light Pink",
+            "Maroon",
+            "Mint",
+            "Red",
+            "…+4"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2527,
+          "max": 2567
+        }
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt",
+        "blueprintId": 696,
+        "brand": "Independent Trading Company",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 120,
+        "options": [
+          [
+            "Army",
+            "Black",
+            "Blue Aqua",
+            "Bone",
+            "Classic Navy",
+            "Gold",
+            "Grey Heather",
+            "Lavender",
+            "Light Pink",
+            "Maroon",
+            "Mint",
+            "Red",
+            "…+11"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "XS"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "right_sleeve",
+          "left_sleeve",
+          "neck",
+          "neck_outer"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2328,
+          "max": 2328
+        }
+      },
+      {
+        "blueprint": "Unisex Fleece Hoodie",
+        "blueprintId": 793,
+        "brand": "Cotton Heritage",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 35,
+        "options": [
+          [
+            "Black",
+            "White",
+            "Bone",
+            "Carbon Grey",
+            "Charcoal Heather",
+            "Maroon",
+            "Navy Blazer",
+            "Sky Blue",
+            "Team Royal"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest",
+          "front_center_chest",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 729,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3209,
+          "max": 3209
+        }
+      },
+      {
+        "blueprint": "Unisex Fleece Hoodie",
+        "blueprintId": 793,
+        "brand": "Cotton Heritage",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 35,
+        "options": [
+          [
+            "Black",
+            "White",
+            "Bone",
+            "Carbon Grey",
+            "Charcoal Heather",
+            "Maroon",
+            "Navy Blazer",
+            "Sky Blue",
+            "Team Royal"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest",
+          "front_center_chest",
+          "right_wrist",
+          "left_wrist"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 3209,
+          "max": 3209
+        }
+      },
+      {
+        "blueprint": "Unisex DryBlend® Hooded Sweatshirt",
+        "blueprintId": 946,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 50,
+        "options": [
+          [
+            "Ash",
+            "Maroon",
+            "Navy",
+            "Red",
+            "Royal",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green"
+          ],
+          [
+            "S",
+            "XL",
+            "2XL",
+            "3XL",
+            "M",
+            "L"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex DryBlend® Hooded Sweatshirt",
+        "blueprintId": 946,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 49,
+        "options": [
+          [
+            "Ash",
+            "Maroon",
+            "Navy",
+            "Red",
+            "Royal",
+            "Sport Grey",
+            "White",
+            "Black",
+            "Forest Green"
+          ],
+          [
+            "S",
+            "XL",
+            "2XL",
+            "3XL",
+            "M",
+            "L"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Garment-Dyed Hoodie",
+        "blueprintId": 1298,
+        "brand": "Comfort Colors®",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 46,
+        "options": [
+          [
+            "Crimson",
+            "Denim",
+            "Flo Blue",
+            "Grey",
+            "Pepper",
+            "Seafoam",
+            "True Navy",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Garment-Dyed Hoodie",
+        "blueprintId": 1298,
+        "brand": "Comfort Colors®",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 66,
+        "options": [
+          [
+            "Blue Jean",
+            "Crimson",
+            "Denim",
+            "Flo Blue",
+            "Grey",
+            "Pepper",
+            "Seafoam",
+            "True Navy",
+            "White",
+            "Blue Spruce",
+            "Light Green"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt, Made in US",
+        "blueprintId": 1401,
+        "brand": "Bayside",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Black",
+            "Bright Orange",
+            "Caramel Brown",
+            "Cardinal",
+            "Charcoal",
+            "Charcoal Heather",
+            "Cream",
+            "Dark Ash",
+            "Hunter Green",
+            "Lime Green",
+            "Navy",
+            "Olive",
+            "…+5"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Hooded Sweatshirt, Made in US",
+        "blueprintId": 1401,
+        "brand": "Bayside",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 119,
+        "options": [
+          [
+            "Black",
+            "Bright Orange",
+            "Caramel Brown",
+            "Cardinal",
+            "Charcoal",
+            "Charcoal Heather",
+            "Cream",
+            "Dark Ash",
+            "Hunter Green",
+            "Lime Green",
+            "Navy",
+            "Olive",
+            "…+5"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Hoodie",
+        "blueprintId": 1525,
+        "brand": "Gildan",
+        "provider": "Print Clever",
+        "providerId": 72,
+        "makerCountry": "GB",
+        "variants": 20,
+        "options": [
+          [
+            "Military Green",
+            "Charcoal",
+            "Sand",
+            "White",
+            "Light Pink",
+            "Navy",
+            "Red",
+            "Black",
+            "Stone Blue",
+            "Yellow Haze",
+            "Sport Grey"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 469,
+            "additional": 299,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 3119,
+            "additional": 999,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Hoodie",
+        "blueprintId": 1525,
+        "brand": "Gildan",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 175,
+        "options": [
+          [
+            "Cocoa",
+            "Paragon",
+            "Pink Lemonade",
+            "Charcoal",
+            "Daisy",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Pistachio",
+            "Purple",
+            "Red",
+            "Royal",
+            "…+13"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "right_wrist_dtf",
+          "left_wrist_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Hoodie",
+        "blueprintId": 1525,
+        "brand": "Gildan",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 181,
+        "options": [
+          [
+            "Cocoa",
+            "Paragon",
+            "Pink Lemonade",
+            "Charcoal",
+            "Daisy",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Pistachio",
+            "Purple",
+            "Red",
+            "Royal",
+            "…+13"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Hoodie",
+        "blueprintId": 1525,
+        "brand": "Gildan",
+        "provider": "Ink Blot",
+        "providerId": 74,
+        "makerCountry": "US",
+        "variants": 267,
+        "options": [
+          [
+            "Cocoa",
+            "Paragon",
+            "Pink Lemonade",
+            "Charcoal",
+            "Daisy",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Pistachio",
+            "Purple",
+            "Red",
+            "Royal",
+            "…+25"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 249,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Midweight Softstyle Fleece Hoodie",
+        "blueprintId": 1525,
+        "brand": "Gildan",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 181,
+        "options": [
+          [
+            "Cocoa",
+            "Paragon",
+            "Pink Lemonade",
+            "Charcoal",
+            "Daisy",
+            "Dark Heather",
+            "Maroon",
+            "Navy",
+            "Pistachio",
+            "Purple",
+            "Red",
+            "Royal",
+            "…+13"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Hooded Sweatshirt",
+        "blueprintId": 1528,
+        "brand": "Comfort Colors®",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 60,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Butter",
+            "Grey",
+            "Hydrangea",
+            "Ivory",
+            "Neon Violet",
+            "Peachy",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Hooded Sweatshirt",
+        "blueprintId": 1528,
+        "brand": "Comfort Colors®",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 42,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Grey",
+            "Hydrangea",
+            "Ivory",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Lightweight Hooded Sweatshirt",
+        "blueprintId": 1528,
+        "brand": "Comfort Colors®",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 60,
+        "options": [
+          [
+            "Black",
+            "Blue Jean",
+            "Butter",
+            "Grey",
+            "Hydrangea",
+            "Ivory",
+            "Neon Violet",
+            "Peachy",
+            "Pepper",
+            "White"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Cruiser 2.0 Hoodie",
+        "blueprintId": 1576,
+        "brand": "Stanley Stella",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 42,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL",
+            "5XL"
+          ],
+          [
+            "Black",
+            "French Navy",
+            "Heather Grey",
+            "White",
+            "Desert Dust",
+            "India Ink Grey"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "front",
+          "left_sleeve",
+          "right_sleeve",
+          "neck_outer",
+          "neck"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Relaxed Hoodie",
+        "blueprintId": 1684,
+        "brand": "AS Colour",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 78,
+        "options": [
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Athletic Heather",
+            "Black",
+            "Bone",
+            "Butter",
+            "Carolina Blue",
+            "Chestnut",
+            "Clay",
+            "Cypress",
+            "Pine Green",
+            "Powder",
+            "Seafoam",
+            "White Heather"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Relaxed Hoodie",
+        "blueprintId": 1684,
+        "brand": "AS Colour",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 23,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ],
+          [
+            "Athletic Heather",
+            "Black",
+            "Pine Green",
+            "Cobalt"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "neck_outer",
+          "sleeve_left",
+          "sleeve_right",
+          "front_left_chest",
+          "large_center_embroidery",
+          "front_center_chest",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex French Terry Hoodie",
+        "blueprintId": 1707,
+        "brand": "Lane Seven",
+        "provider": "Monster Digital",
+        "providerId": 29,
+        "makerCountry": "US",
+        "variants": 41,
+        "options": [
+          [
+            "Black",
+            "Charcoal Heather",
+            "Heather Denim",
+            "Graphite Heather",
+            "Heather Royal",
+            "Navy"
+          ],
+          [
+            "2XL",
+            "3XL",
+            "L",
+            "M",
+            "S",
+            "XL",
+            "XS"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Eco Raglan Hoodie (Embroidery)",
+        "blueprintId": 1733,
+        "brand": "Sol's",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 35,
+        "options": [
+          [
+            "Bottle Green",
+            "Burgundy",
+            "Burnt Orange",
+            "Charcoal Melange",
+            "Black",
+            "White"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "left_wrist",
+          "right_wrist",
+          "front_left_chest",
+          "front_center_chest"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Eco Raglan Hoodie (Embroidery)",
+        "blueprintId": 1733,
+        "brand": "Sol's",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 35,
+        "options": [
+          [
+            "Bottle Green",
+            "Burgundy",
+            "Burnt Orange",
+            "Charcoal Melange",
+            "Black",
+            "White"
+          ],
+          [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest",
+          "front_center_chest",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 729,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Pigment-Dyed Hoodie",
+        "blueprintId": 1908,
+        "brand": "Independent Trading Company",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 33,
+        "options": [
+          [
+            "Pigment Alpine Green",
+            "Pigment Black",
+            "Pigment Light Blue",
+            "Pigment Maroon",
+            "Pigment Pink",
+            "Pigment Slate Blue"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "front_center_chest",
+          "left_wrist",
+          "right_wrist",
+          "front_left_chest",
+          "large_center_embroidery"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Pigment-Dyed Hoodie",
+        "blueprintId": 1908,
+        "brand": "Independent Trading Company",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 33,
+        "options": [
+          [
+            "Pigment Alpine Green",
+            "Pigment Black",
+            "Pigment Light Blue",
+            "Pigment Maroon",
+            "Pigment Pink",
+            "Pigment Slate Blue"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        ],
+        "placeholders": [
+          "large_center_embroidery",
+          "front_left_chest",
+          "front_center_chest",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 729,
+            "additional": 240,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Pigment-Dyed Hoodie",
+        "blueprintId": 1908,
+        "brand": "Independent Trading Company",
+        "provider": "SwiftPOD",
+        "providerId": 39,
+        "makerCountry": "US",
+        "variants": 40,
+        "options": [
+          [
+            "Pigment Alpine Green",
+            "Pigment Black",
+            "Pigment Light Blue",
+            "Pigment Maroon",
+            "Pigment Slate Blue",
+            "Pigment Sandstone",
+            "Pigment Mint",
+            "Pigment Dusty Pink"
+          ],
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        ],
+        "placeholders": [
+          "front",
+          "back",
+          "right_sleeve",
+          "left_sleeve"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Unisex Drummer 2.0 Organic Mid-Weight Hoodie",
+        "blueprintId": 1949,
+        "brand": "Stanley Stella",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 35,
+        "options": [
+          [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ],
+          [
+            "Anthracite",
+            "Black",
+            "Dark Heather Grey",
+            "Desert Dust",
+            "French Navy",
+            "Heather Grey",
+            "White"
+          ]
+        ],
+        "placeholders": [
+          "back",
+          "left_sleeve",
+          "front",
+          "right_sleeve",
+          "neck_outer"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 739,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "District® V.I.T.™ Men's Fleece Hoodie",
+        "blueprintId": 1979,
+        "brand": "District",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 275,
+        "options": [
+          [
+            "2XL",
+            "3XL",
+            "4XL",
+            "L",
+            "M",
+            "S",
+            "XL",
+            "XS"
+          ],
+          [
+            "Black",
+            "Charcoal",
+            "Classic Red",
+            "Dark Fuchsia",
+            "Deep Royal",
+            "Desert Rose",
+            "Desert Tan",
+            "Duck Brown",
+            "Eucalyptus Blue",
+            "Fiery Red",
+            "Forest Green",
+            "Gardenia",
+            "…+24"
+          ]
+        ],
+        "placeholders": [
+          "front_left_chest_dtf",
+          "front_right_chest_dtf",
+          "back_dtf",
+          "left_wrist_dtf",
+          "right_wrist_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 799,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      }
+    ],
+    "beanie": [
+      {
+        "blueprint": "Cuff Beanie",
+        "blueprintId": 1689,
+        "brand": "AS Colour",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 13,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Army",
+            "Athletic Heather",
+            "Black",
+            "Coal",
+            "Cypress",
+            "Ecru",
+            "Eucalyptus",
+            "Gold",
+            "Navy",
+            "Petrol Blue",
+            "Plum",
+            "Red",
+            "…+1"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Classic Cuffed Beanie (Embroidery)",
+        "blueprintId": 1691,
+        "brand": "Yupoong",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 11,
+        "options": [
+          [
+            "Black",
+            "Brown",
+            "Dark Grey",
+            "Gold",
+            "Navy",
+            "Olive",
+            "Red",
+            "Royal",
+            "Spruce",
+            "White",
+            "Heather Grey"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Classic Cuffed Beanie (Embroidery)",
+        "blueprintId": 1691,
+        "brand": "Yupoong",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 11,
+        "options": [
+          [
+            "Black",
+            "Brown",
+            "Dark Grey",
+            "Gold",
+            "Navy",
+            "Olive",
+            "Red",
+            "Royal",
+            "Spruce",
+            "White",
+            "Heather Grey"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 459,
+            "additional": 159,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Knit Beanie (Embroidery)",
+        "blueprintId": 1728,
+        "brand": "OTTO Cap",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "Red",
+            "Black",
+            "Dark Navy",
+            "Gray",
+            "Dark Green"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Knit Beanie (Embroidery)",
+        "blueprintId": 1728,
+        "brand": "OTTO Cap",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "Red",
+            "Black",
+            "Dark Navy",
+            "Gray",
+            "Dark Green"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 459,
+            "additional": 159,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ribbed Knit Beanie (Embroidery)",
+        "blueprintId": 1922,
+        "brand": "Atlantis Headwear",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 7,
+        "options": [
+          [
+            "Acid Green",
+            "Beige",
+            "Black",
+            "Light Blue",
+            "Light Grey Melange",
+            "Navy",
+            "Olive"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Ribbed Knit Beanie (Embroidery)",
+        "blueprintId": 1922,
+        "brand": "Atlantis Headwear",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 7,
+        "options": [
+          [
+            "Acid Green",
+            "Beige",
+            "Black",
+            "Light Blue",
+            "Light Grey Melange",
+            "Navy",
+            "Olive"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 459,
+            "additional": 159,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "100% Cotton Beanie",
+        "blueprintId": 5254,
+        "brand": "Port Authority",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "One size"
+          ],
+          [
+            "Black",
+            "Graphite",
+            "Navy"
+          ]
+        ],
+        "placeholders": [
+          "front_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Halftime Heather Pom Beanie",
+        "blueprintId": 5293,
+        "brand": "Sport-Tek",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 6,
+        "options": [
+          [
+            "OSFA"
+          ],
+          [
+            "True Navy",
+            "True Royal",
+            "Black",
+            "Deep Red",
+            "Forest Green",
+            "Maroon"
+          ],
+          [
+            "Silver",
+            "Black"
+          ]
+        ],
+        "placeholders": [
+          "front_dtf"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Cuff Beanie",
+        "blueprintId": 5385,
+        "brand": "AS Colour",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 17,
+        "options": [
+          [
+            "Army",
+            "Asphalt Marle",
+            "Black",
+            "Bone",
+            "Camel",
+            "Cobalt",
+            "Ecru",
+            "Gold",
+            "Grey Marle",
+            "Mushroom",
+            "Navy",
+            "Orchid",
+            "…+5"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Cuff Beanie",
+        "blueprintId": 5385,
+        "brand": "AS Colour",
+        "provider": "Fulfill Engine",
+        "providerId": 217,
+        "makerCountry": "US",
+        "variants": 17,
+        "options": [
+          [
+            "Army",
+            "Asphalt Marle",
+            "Black",
+            "Bone",
+            "Camel",
+            "Cobalt",
+            "Ecru",
+            "Gold",
+            "Grey Marle",
+            "Mushroom",
+            "Navy",
+            "Orchid",
+            "…+5"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 459,
+            "additional": 209,
             "currency": "USD"
           }
         },
