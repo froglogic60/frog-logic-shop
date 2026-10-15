@@ -90,6 +90,21 @@ function describe(label, prod) {
     }
     const after = await api(`/shops/${etsy.id}/products/${probe.id}.json`);
     describe("throwaway after PUT (re-read)", after);
+
+    // Run 1 (15 Oct 2026) showed the API lists only chosen mockups, so the
+    // unchosen ones can't be picked from it. A mockup_id is
+    // "<productId>_<n>_<cameraId>_<label>". Test 2: copy the hand-fixed tee's
+    // ten ids with this product's id swapped in.
+    const swap = (s) => String(s).split(FIXED_TEE).join(probe.id);
+    const copied = (fixed.images || []).map((i) => ({ ...i, mockup_id: swap(i.mockup_id), src: swap(i.src), variant_ids: (after.variants || []).filter((v) => v.is_enabled).map((v) => v.id) }));
+    try {
+      await api(`/shops/${etsy.id}/products/${probe.id}.json`, "PUT", { images: copied });
+      console.log("\nPUT copied ids accepted");
+    } catch (e) {
+      console.log("\nPUT copied ids REFUSED:", e.message);
+    }
+    await new Promise((r) => setTimeout(r, 5000));
+    describe("throwaway after copied-id PUT (re-read)", await api(`/shops/${etsy.id}/products/${probe.id}.json`));
   } finally {
     if (probe) {
       try { await api(`/shops/${etsy.id}/products/${probe.id}.json`, "DELETE"); console.log("\nthrowaway deleted:", probe.id); }
