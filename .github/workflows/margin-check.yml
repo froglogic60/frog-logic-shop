@@ -29,6 +29,18 @@ jobs:
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+      - name: Watch Etsy postage
+        if: always()
+        # Printify writes its dollar postage into Etsy's pound delivery
+        # profiles; they were converted by hand on 15 Oct 2026. This flags a
+        # Printify postage change or a new Etsy product, either of which can
+        # put dollar figures back. See etsy-postage-check.js.
+        working-directory: automation/social
+        run: |
+          git show HEAD:automation/social/etsy-postage-report.json > /tmp/postage-previous.json 2>/dev/null || rm -f /tmp/postage-previous.json
+          node etsy-postage-check.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
       - name: Flag anything that changed on the Desk
         if: always()
         # Compares this report with the last committed one. A product Printify
@@ -48,6 +60,7 @@ jobs:
               if (o && o.cost !== r.cost) notes.push(r.id + " cost moved £" + (o.cost/100).toFixed(2) + " → £" + (r.cost/100).toFixed(2) + " (keeps £" + (r.keeps/100).toFixed(2) + " at £" + (r.price/100).toFixed(2) + ")");
               if (r.keeps < 0) notes.push(r.id + " LOSES £" + (-r.keeps/100).toFixed(2) + " a sale");
             }
+            if (fs.existsSync("/tmp/postage-notes.json")) notes.push(...JSON.parse(fs.readFileSync("/tmp/postage-notes.json", "utf8")));
             if (!notes.length) { console.log("Printify check: nothing changed"); process.exit(0); }
             const day = now.checkedAt.slice(0, 10);
             fs.writeFileSync("/tmp/notes.json", JSON.stringify({ day, notes }));
@@ -87,7 +100,7 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/margin-report.json content/calendar.json || true
+          git add automation/social/margin-report.json automation/social/etsy-postage-report.json content/calendar.json || true
           git status --short
           git commit -m "Margin report [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
