@@ -1,6 +1,7 @@
 name: Build the product pages
 # One page per product, download and free guide at /p/<slug>/, plus sitemap.xml,
-# all generated from script.js by automation/site/build-pages.cjs. Commits
+# all generated from script.js by automation/site/build-pages.cjs, plus
+# google-feed.xml for Google Merchant Center (16 Oct 2026). Commits
 # [skip netlify]; run "Publish the shop" afterwards to put them live.
 on:
   workflow_dispatch:
@@ -32,7 +33,7 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add p sitemap.xml
+          git add p sitemap.xml google-feed.xml
           git commit -m "Product pages rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
