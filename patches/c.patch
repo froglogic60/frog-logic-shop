@@ -1,0 +1,675 @@
+# Christmas sets on the website: one price each, delivery included
+diff --git a/basket.js b/basket.js
+index b376440..d752795 100644
+--- a/basket.js
++++ b/basket.js
+@@ -257,7 +257,8 @@
+       if (l.size) {
+         var s = document.createElement("p");
+         s.className = "bk-size";
+-        s.textContent = "Size " + l.size;
++        // A Christmas set's "size" is its three picks ("Hoodie: Navy, L · …").
++        s.textContent = l.size.indexOf(":") !== -1 ? l.size : "Size " + l.size;
+         left.appendChild(s);
+       }
+ 
+@@ -572,6 +573,9 @@
+     document.addEventListener("click", interceptBuy, true);
+   }
+ 
++  // christmas-set.js adds its sets through this.
++  window.FrogBasket = { add: add };
++
+   if (document.readyState === "loading") {
+     document.addEventListener("DOMContentLoaded", start);
+   } else {
+diff --git a/christmas-set.js b/christmas-set.js
+new file mode 100644
+index 0000000..5a51049
+--- /dev/null
++++ b/christmas-set.js
+@@ -0,0 +1,196 @@
++// ===== Frog Logic — the Socially Hibernating Christmas sets =====
++//
++// Three pieces for one price, delivery included (Sam, 16 Oct 2026: "Can each
++// bundle of three just have one price"). The UK set is a hoodie, a tee and a
++// fleece throw, made in the UK; the US set is a hoodie, a tee and an
++// embroidered beanie, made in the US.
++//
++// The colours and sizes come from /api/sets, the same bundles.json the
++// checkout prices from, so the page can't offer a combination the till would
++// refuse. Each piece has its own colour and size, chosen here; basket.js holds
++// the set as one line, and the Stripe webhook sends each piece to its maker.
++(function () {
++  "use strict";
++
++  var CSS = [
++    ".set-card .set-part{margin:0 0 10px}",
++    ".set-card .set-part-name{font-family:var(--ui);font-weight:700;font-size:.66rem;letter-spacing:.14em;",
++    "text-transform:uppercase;color:var(--muted);margin:0 0 6px}",
++    ".set-card .set-row{display:flex;gap:8px}",
++    ".set-card .set-row select{flex:1;min-width:0;padding:9px 10px;font:inherit;font-size:.9rem;color:var(--ink);",
++    "background:transparent;border:1px solid var(--line);border-radius:6px;cursor:pointer}",
++    ".set-card .set-row select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}",
++    ".set-card .set-row select[data-empty=\"1\"]{color:var(--muted)}",
++    ".set-card .set-loading{font-size:.82rem;color:var(--muted);margin:0 0 12px}",
++  ].join("");
++
++  var money = function (pounds) {
++    return "£" + (Math.round(pounds * 100) % 100 ? pounds.toFixed(2) : String(Math.round(pounds)));
++  };
++
++  function el(tag, cls, text) {
++    var e = document.createElement(tag);
++    if (cls) e.className = cls;
++    if (text != null) e.textContent = text;
++    return e;
++  }
++
++  function select(placeholder, values) {
++    var s = el("select");
++    s.dataset.empty = "1";
++    var p = el("option", null, placeholder);
++    p.value = "";
++    s.appendChild(p);
++    values.forEach(function (v) {
++      var o = el("option", null, v);
++      o.value = v;
++      s.appendChild(o);
++    });
++    s.addEventListener("change", function () { s.dataset.empty = s.value ? "0" : "1"; });
++    return s;
++  }
++
++  function unique(list) {
++    var out = [];
++    list.forEach(function (v) { if (v && out.indexOf(v) === -1) out.push(v); });
++    return out;
++  }
++
++  // One part (hoodie, tee, beanie): a colour list, and a size list that only
++  // offers the sizes that colour comes in. No defaults, so nobody is sent a
++  // Small they never chose.
++  function buildPart(part, n) {
++    var wrap = el("div", "set-part");
++    var name = el("p", "set-part-name", part.label);
++    wrap.appendChild(name);
++    var row = el("div", "set-row");
++    var colours = unique(part.options.map(function (o) { return o.colour; }));
++    var sizes = unique(part.options.map(function (o) { return o.size; }));
++    var c = colours.length ? select("Colour", colours) : null;
++    var s = sizes.length ? select("Size", sizes) : null;
++    if (c) { c.setAttribute("aria-label", part.label + " colour"); row.appendChild(c); }
++    if (s) { s.setAttribute("aria-label", part.label + " size"); row.appendChild(s); }
++    if (c && s) {
++      c.addEventListener("change", function () {
++        var ok = part.options.filter(function (o) { return o.colour === c.value; }).map(function (o) { return o.size; });
++        Array.prototype.forEach.call(s.options, function (o) {
++          if (!o.value) return;
++          o.disabled = !!c.value && ok.indexOf(o.value) === -1;
++          o.textContent = o.value + (o.disabled ? " (not in " + c.value + ")" : "");
++        });
++        if (s.value && s.selectedOptions[0].disabled) { s.value = ""; s.dataset.empty = "1"; }
++      });
++    }
++    wrap.appendChild(row);
++    return {
++      node: wrap,
++      // "Hoodie: Navy, L" — the exact text the checkout reads back. Null
++      // until both are chosen.
++      value: function () {
++        if ((c && !c.value) || (s && !s.value)) return null;
++        var bits = [c && c.value, s && s.value].filter(Boolean).join(", ");
++        return part.label + ": " + bits;
++      },
++      focus: function () { ((c && !c.value) ? c : s || c).focus(); },
++    };
++  }
++
++  function buildCard(card, sets) {
++    var ids = card.dataset.sets.split(",");
++    var mine = ids.map(function (id) { return sets.filter(function (x) { return x.id === id; })[0]; }).filter(Boolean);
++    var slot = card.querySelector(".set-pickers");
++    var priceEl = card.querySelector(".card-price");
++    var btn = card.querySelector(".set-add");
++    var warn = card.querySelector(".sg-warn");
++    if (!mine.length || !slot) return;
++    slot.innerHTML = "";
++
++    var current = mine[0];
++    var parts = [];
++
++    // The UK set comes with a choice of throw size, which is a different set
++    // (and price) rather than an option, so the price stays one number.
++    if (mine.length > 1) {
++      var wrap = el("div", "set-part");
++      wrap.appendChild(el("p", "set-part-name", "Throw size"));
++      var row = el("div", "set-row");
++      var t = el("select");
++      t.setAttribute("aria-label", "Throw size");
++      mine.forEach(function (x) {
++        var o = el("option", null, x.choice + " · " + money(x.price));
++        o.value = x.id;
++        t.appendChild(o);
++      });
++      t.addEventListener("change", function () {
++        current = mine.filter(function (x) { return x.id === t.value; })[0];
++        showPrice();
++      });
++      row.appendChild(t);
++      wrap.appendChild(row);
++      slot.appendChild(wrap);
++    }
++
++    // The parts with choices are the same across a card's sets (only the
++    // throw differs), so they are drawn once from the first.
++    mine[0].parts.forEach(function (p, i) {
++      if (p.options.length < 2) return;
++      var built = buildPart(p, i);
++      parts.push(built);
++      slot.appendChild(built.node);
++    });
++
++    function showPrice() {
++      priceEl.textContent = money(current.price) + " for all three, delivery included";
++    }
++    showPrice();
++    btn.disabled = false;
++
++    btn.addEventListener("click", function () {
++      warn.hidden = true;
++      for (var i = 0; i < parts.length; i++) {
++        if (!parts[i].value()) {
++          warn.textContent = "Pick a colour and size for each piece, then add the set.";
++          warn.hidden = false;
++          parts[i].focus();
++          return;
++        }
++      }
++      if (!window.FrogBasket) {
++        warn.textContent = "Sorry, the basket didn't load. Please refresh the page.";
++        warn.hidden = false;
++        return;
++      }
++      window.FrogBasket.add({
++        id: current.id,
++        name: current.name,
++        size: parts.map(function (p) { return p.value(); }).join(" · "),
++        qty: 1,
++        price: Math.round(current.price * 100),
++      });
++      var original = btn.dataset.label || btn.textContent;
++      btn.dataset.label = original;
++      btn.textContent = "Added ✓";
++      window.setTimeout(function () { btn.textContent = original; }, 1400);
++    });
++  }
++
++  function start() {
++    var cards = document.querySelectorAll(".set-card[data-sets]");
++    if (!cards.length) return;
++    var s = document.createElement("style");
++    s.textContent = CSS;
++    document.head.appendChild(s);
++    fetch("/api/sets")
++      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
++      .then(function (sets) { Array.prototype.forEach.call(cards, function (c) { buildCard(c, sets); }); })
++      .catch(function () {
++        Array.prototype.forEach.call(cards, function (c) {
++          var slot = c.querySelector(".set-pickers");
++          if (slot) slot.textContent = "The colour and size options didn't load. Please refresh the page.";
++        });
++      });
++  }
++
++  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
++  else start();
++})();
+diff --git a/index.html b/index.html
+index bc6b4cd..fc15751 100644
+--- a/index.html
++++ b/index.html
+@@ -124,6 +124,42 @@
+        no equivalent of, so every button opens the Etsy listing. Linking out
+        to Etsy is fine; Etsy listings never link back here. Pictures come from
+        the "Christmas pictures" workflow (assets/xmas/). -->
++  <section class="collection christmas" id="christmas-set">
++    <div class="wrap">
++      <div class="section-head">
++        <h2>The Socially Hibernating set</h2>
++        <p class="count">Three pieces &#183; one price</p>
++      </div>
++      <p class="section-sub">The frog has put on a Santa hat, got under a blanket, tangled itself in the fairy lights, and is not coming out until January. A hoodie, a tee and something cosy, for one price with delivery included. Pick the colour and size of each piece. Made to order, so earlier is safer for Christmas.</p>
++      <div class="pad-grid">
++        <article class="card set-card" data-sets="xmas-set-uk,xmas-set-uk-lap">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/set-uk.jpg" alt="Socially Hibernating hoodie, tee and fleece throw, each printed with the sleepy Christmas frog in a Santa hat" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Hoodie, tee &amp; fleece throw</h3>
++            <p class="card-line">Gildan Heavy Blend hoodie, Gildan cotton tee and an Arctic fleece throw. Three UK makers, so it can arrive as up to three parcels.</p>
++            <div class="set-pickers"><p class="set-loading">Loading colours and sizes&hellip;</p></div>
++            <p class="card-price">&nbsp;</p>
++            <button type="button" class="btn btn-primary set-add" disabled>Add the set to basket</button>
++            <p class="sg-warn" role="status" hidden></p>
++          </div>
++        </article>
++        <article class="card set-card" data-sets="xmas-set-us">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/set-us.jpg" alt="Socially Hibernating hoodie and tee printed with the Christmas frog, and a beanie with the frog embroidered on the cuff" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Hoodie, tee &amp; beanie (US)</h3>
++            <p class="card-line">Gildan Heavy Blend hoodie, Gildan cotton tee and a cuffed beanie with the frog embroidered on it. For US addresses: made in the US, so no import fees.</p>
++            <div class="set-pickers"><p class="set-loading">Loading colours and sizes&hellip;</p></div>
++            <p class="card-price">&nbsp;</p>
++            <button type="button" class="btn btn-primary set-add" disabled>Add the set to basket</button>
++            <p class="sg-warn" role="status" hidden></p>
++          </div>
++        </article>
++      </div>
++    </div>
++  </section>
++
+   <section class="collection christmas" id="christmas">
+     <div class="wrap">
+       <div class="section-head">
+@@ -347,6 +383,7 @@
+ <script src="script.js"></script>
+ <script src="size-guide.js"></script>
+ <script src="basket.js"></script>
++<script src="christmas-set.js"></script>
+ 
+ <!-- GoatCounter: counts the visit and the page, nothing else. No cookies,
+      no profile, no following anyone across the internet. The privacy page
+diff --git a/netlify/functions/bundles.json b/netlify/functions/bundles.json
+new file mode 100644
+index 0000000..68d96b7
+--- /dev/null
++++ b/netlify/functions/bundles.json
+@@ -0,0 +1,169 @@
++[
++ {"id": "xmas-set-uk", "name": "Socially Hibernating Christmas set, sofa throw", "choice": "Sofa size, 50×60 in", "type": "physical", "currency": "gbp", "price": 106, "country": "GB", "parts": [
++  {"key": "hoodie", "label": "Hoodie", "printifyProductId": "6ad205938368c0a023030148", "provider": 72, "options": [
++   {"colour": "Sport Grey", "size": "S", "variantId": 32902},
++   {"colour": "Sport Grey", "size": "M", "variantId": 32903},
++   {"colour": "Sport Grey", "size": "L", "variantId": 32904},
++   {"colour": "Sport Grey", "size": "XL", "variantId": 32905},
++   {"colour": "Sport Grey", "size": "2XL", "variantId": 32906},
++   {"colour": "Ash", "size": "S", "variantId": 32870},
++   {"colour": "Ash", "size": "M", "variantId": 32871},
++   {"colour": "Ash", "size": "L", "variantId": 32872},
++   {"colour": "Ash", "size": "XL", "variantId": 32873},
++   {"colour": "Ash", "size": "2XL", "variantId": 32874},
++   {"colour": "White", "size": "S", "variantId": 32910},
++   {"colour": "White", "size": "M", "variantId": 32911},
++   {"colour": "White", "size": "L", "variantId": 32912},
++   {"colour": "White", "size": "XL", "variantId": 32913},
++   {"colour": "White", "size": "2XL", "variantId": 32914},
++   {"colour": "Navy", "size": "S", "variantId": 32894},
++   {"colour": "Navy", "size": "M", "variantId": 32895},
++   {"colour": "Navy", "size": "L", "variantId": 32896},
++   {"colour": "Navy", "size": "XL", "variantId": 32897},
++   {"colour": "Navy", "size": "2XL", "variantId": 32898},
++   {"colour": "Maroon", "size": "S", "variantId": 32886},
++   {"colour": "Maroon", "size": "M", "variantId": 32887},
++   {"colour": "Maroon", "size": "L", "variantId": 32888},
++   {"colour": "Maroon", "size": "XL", "variantId": 32889},
++   {"colour": "Maroon", "size": "2XL", "variantId": 32890}
++  ]},
++  {"key": "tee", "label": "Tee", "printifyProductId": "6ad205968368c0a02303014a", "provider": 331, "options": [
++   {"colour": "Sport Grey", "size": "S", "variantId": 12072},
++   {"colour": "Sport Grey", "size": "M", "variantId": 12071},
++   {"colour": "Sport Grey", "size": "L", "variantId": 12070},
++   {"colour": "Sport Grey", "size": "XL", "variantId": 12073},
++   {"colour": "Sport Grey", "size": "2XL", "variantId": 12074},
++   {"colour": "White", "size": "S", "variantId": 12102},
++   {"colour": "White", "size": "M", "variantId": 12101},
++   {"colour": "White", "size": "L", "variantId": 12100},
++   {"colour": "White", "size": "XL", "variantId": 12103},
++   {"colour": "White", "size": "2XL", "variantId": 12104},
++   {"colour": "Navy", "size": "S", "variantId": 11988},
++   {"colour": "Navy", "size": "M", "variantId": 11987},
++   {"colour": "Navy", "size": "L", "variantId": 11986},
++   {"colour": "Navy", "size": "XL", "variantId": 11989},
++   {"colour": "Navy", "size": "2XL", "variantId": 11990},
++   {"colour": "Maroon", "size": "M", "variantId": 11975},
++   {"colour": "Maroon", "size": "L", "variantId": 11974},
++   {"colour": "Maroon", "size": "XL", "variantId": 11977},
++   {"colour": "Maroon", "size": "2XL", "variantId": 11978}
++  ]},
++  {"key": "throw", "label": "Throw", "printifyProductId": "6ad2059b250dce5be60010da", "provider": 94, "options": [
++   {"size": "50\" × 60\"", "variantId": 100926}
++  ]}
++ ]},
++ {"id": "xmas-set-uk-lap", "name": "Socially Hibernating Christmas set, lap throw", "choice": "Lap size, 30×40 in", "type": "physical", "currency": "gbp", "price": 90, "country": "GB", "parts": [
++  {"key": "hoodie", "label": "Hoodie", "printifyProductId": "6ad205938368c0a023030148", "provider": 72, "options": [
++   {"colour": "Sport Grey", "size": "S", "variantId": 32902},
++   {"colour": "Sport Grey", "size": "M", "variantId": 32903},
++   {"colour": "Sport Grey", "size": "L", "variantId": 32904},
++   {"colour": "Sport Grey", "size": "XL", "variantId": 32905},
++   {"colour": "Sport Grey", "size": "2XL", "variantId": 32906},
++   {"colour": "Ash", "size": "S", "variantId": 32870},
++   {"colour": "Ash", "size": "M", "variantId": 32871},
++   {"colour": "Ash", "size": "L", "variantId": 32872},
++   {"colour": "Ash", "size": "XL", "variantId": 32873},
++   {"colour": "Ash", "size": "2XL", "variantId": 32874},
++   {"colour": "White", "size": "S", "variantId": 32910},
++   {"colour": "White", "size": "M", "variantId": 32911},
++   {"colour": "White", "size": "L", "variantId": 32912},
++   {"colour": "White", "size": "XL", "variantId": 32913},
++   {"colour": "White", "size": "2XL", "variantId": 32914},
++   {"colour": "Navy", "size": "S", "variantId": 32894},
++   {"colour": "Navy", "size": "M", "variantId": 32895},
++   {"colour": "Navy", "size": "L", "variantId": 32896},
++   {"colour": "Navy", "size": "XL", "variantId": 32897},
++   {"colour": "Navy", "size": "2XL", "variantId": 32898},
++   {"colour": "Maroon", "size": "S", "variantId": 32886},
++   {"colour": "Maroon", "size": "M", "variantId": 32887},
++   {"colour": "Maroon", "size": "L", "variantId": 32888},
++   {"colour": "Maroon", "size": "XL", "variantId": 32889},
++   {"colour": "Maroon", "size": "2XL", "variantId": 32890}
++  ]},
++  {"key": "tee", "label": "Tee", "printifyProductId": "6ad205968368c0a02303014a", "provider": 331, "options": [
++   {"colour": "Sport Grey", "size": "S", "variantId": 12072},
++   {"colour": "Sport Grey", "size": "M", "variantId": 12071},
++   {"colour": "Sport Grey", "size": "L", "variantId": 12070},
++   {"colour": "Sport Grey", "size": "XL", "variantId": 12073},
++   {"colour": "Sport Grey", "size": "2XL", "variantId": 12074},
++   {"colour": "White", "size": "S", "variantId": 12102},
++   {"colour": "White", "size": "M", "variantId": 12101},
++   {"colour": "White", "size": "L", "variantId": 12100},
++   {"colour": "White", "size": "XL", "variantId": 12103},
++   {"colour": "White", "size": "2XL", "variantId": 12104},
++   {"colour": "Navy", "size": "S", "variantId": 11988},
++   {"colour": "Navy", "size": "M", "variantId": 11987},
++   {"colour": "Navy", "size": "L", "variantId": 11986},
++   {"colour": "Navy", "size": "XL", "variantId": 11989},
++   {"colour": "Navy", "size": "2XL", "variantId": 11990},
++   {"colour": "Maroon", "size": "M", "variantId": 11975},
++   {"colour": "Maroon", "size": "L", "variantId": 11974},
++   {"colour": "Maroon", "size": "XL", "variantId": 11977},
++   {"colour": "Maroon", "size": "2XL", "variantId": 11978}
++  ]},
++  {"key": "throw", "label": "Throw", "printifyProductId": "6ad2059b250dce5be60010da", "provider": 94, "options": [
++   {"size": "30'' × 40''", "variantId": 100925}
++  ]}
++ ]},
++ {"id": "xmas-set-us", "name": "Socially Hibernating Christmas set (US)", "type": "physical", "currency": "gbp", "price": 88, "country": "US", "parts": [
++  {"key": "hoodie", "label": "Hoodie", "printifyProductId": "6ad205876e32083ae50fd7e8", "provider": "us-99", "options": [
++   {"colour": "Sport Grey", "size": "S", "variantId": 32902},
++   {"colour": "Sport Grey", "size": "M", "variantId": 32903},
++   {"colour": "Sport Grey", "size": "L", "variantId": 32904},
++   {"colour": "Sport Grey", "size": "XL", "variantId": 32905},
++   {"colour": "Sport Grey", "size": "2XL", "variantId": 32906},
++   {"colour": "Ash", "size": "S", "variantId": 32870},
++   {"colour": "Ash", "size": "M", "variantId": 32871},
++   {"colour": "Ash", "size": "L", "variantId": 32872},
++   {"colour": "Ash", "size": "XL", "variantId": 32873},
++   {"colour": "Ash", "size": "2XL", "variantId": 32874},
++   {"colour": "White", "size": "S", "variantId": 32910},
++   {"colour": "White", "size": "M", "variantId": 32911},
++   {"colour": "White", "size": "L", "variantId": 32912},
++   {"colour": "White", "size": "XL", "variantId": 32913},
++   {"colour": "White", "size": "2XL", "variantId": 32914},
++   {"colour": "Navy", "size": "S", "variantId": 32894},
++   {"colour": "Navy", "size": "M", "variantId": 32895},
++   {"colour": "Navy", "size": "L", "variantId": 32896},
++   {"colour": "Navy", "size": "XL", "variantId": 32897},
++   {"colour": "Navy", "size": "2XL", "variantId": 32898},
++   {"colour": "Maroon", "size": "S", "variantId": 32886},
++   {"colour": "Maroon", "size": "M", "variantId": 32887},
++   {"colour": "Maroon", "size": "L", "variantId": 32888},
++   {"colour": "Maroon", "size": "XL", "variantId": 32889},
++   {"colour": "Maroon", "size": "2XL", "variantId": 32890}
++  ]},
++  {"key": "tee", "label": "Tee", "printifyProductId": "6ad2058b067604a3850d18ae", "provider": "us-99", "options": [
++   {"colour": "Sport Grey", "size": "S", "variantId": 12072},
++   {"colour": "Sport Grey", "size": "M", "variantId": 12071},
++   {"colour": "Sport Grey", "size": "L", "variantId": 12070},
++   {"colour": "Sport Grey", "size": "XL", "variantId": 12073},
++   {"colour": "Sport Grey", "size": "2XL", "variantId": 12074},
++   {"colour": "Ash", "size": "S", "variantId": 11850},
++   {"colour": "Ash", "size": "M", "variantId": 11849},
++   {"colour": "Ash", "size": "L", "variantId": 11848},
++   {"colour": "Ash", "size": "XL", "variantId": 11851},
++   {"colour": "Ash", "size": "2XL", "variantId": 11852},
++   {"colour": "White", "size": "S", "variantId": 12102},
++   {"colour": "White", "size": "M", "variantId": 12101},
++   {"colour": "White", "size": "L", "variantId": 12100},
++   {"colour": "White", "size": "XL", "variantId": 12103},
++   {"colour": "White", "size": "2XL", "variantId": 12104},
++   {"colour": "Navy", "size": "S", "variantId": 11988},
++   {"colour": "Navy", "size": "M", "variantId": 11987},
++   {"colour": "Navy", "size": "L", "variantId": 11986},
++   {"colour": "Navy", "size": "XL", "variantId": 11989},
++   {"colour": "Navy", "size": "2XL", "variantId": 11990},
++   {"colour": "Maroon", "size": "S", "variantId": 11976},
++   {"colour": "Maroon", "size": "M", "variantId": 11975},
++   {"colour": "Maroon", "size": "L", "variantId": 11974},
++   {"colour": "Maroon", "size": "XL", "variantId": 11977},
++   {"colour": "Maroon", "size": "2XL", "variantId": 11978}
++  ]},
++  {"key": "beanie", "label": "Beanie", "printifyProductId": "6ad2058f8368c0a023030145", "provider": "us-99", "options": [
++   {"colour": "Navy", "variantId": 116425},
++   {"colour": "Black", "variantId": 116417},
++   {"colour": "Dark Grey", "variantId": 116421}
++  ]}
++ ]}
++]
+diff --git a/netlify/functions/create-checkout.js b/netlify/functions/create-checkout.js
+index 97664fc..f9e848c 100644
+--- a/netlify/functions/create-checkout.js
++++ b/netlify/functions/create-checkout.js
+@@ -30,9 +30,16 @@
+ // (Site settings → Environment variables). Nothing else.
+ 
+ import Stripe from "stripe";
+-import catalog from "./catalog.json";
++import shopCatalog from "./catalog.json";
++import bundles from "./bundles.json";
+ import zoneData from "./shipping-zones.json";
+ 
++// The one-price Christmas sets (Sam, 16 Oct 2026) live in bundles.json, not
++// catalog.json, because wire-catalog.js rewrites catalog.json from Printify and
++// would drop them. Each set has `parts` (hoodie, tee, beanie or throw), each
++// part its own Printify product and the colour/size options it comes in.
++export const catalog = [...shopCatalog, ...bundles];
++
+ // Goods total, in pence, above which UK delivery is free.
+ //
+ // Raised from £50 to £80 on 27 Aug 2026. At £50 the threshold was working
+@@ -101,6 +108,9 @@ export const CUSTOMS_RISK = (c) => c !== "GB" && c !== "US";
+ // shipping at all, so rateFor() returns null and the US is simply not offered
+ // for a basket containing it. Everywhere else the entry is used as it is.
+ export function forCountry(item, country) {
++  // A set is made in one country only: the UK set by UK makers, the US set by
++  // a US maker. It isn't offered anywhere else.
++  if (item.parts) return item.country === country ? item : { ...item, shipping: null, notMadeHere: true };
+   if (country !== "US" || item.type !== "physical") return item;
+   if (!item.us) return { ...item, shipping: null, notMadeHere: true };
+   const v = { ...item, ...item.us, freeUkPost: false };
+@@ -158,6 +168,9 @@ export function postageFor(lines, country = "GB") {
+   const unknown = [];
+   for (const { item, qty } of lines) {
+     if (item.type !== "physical") continue;
++    // A set's price includes its own delivery (one price, Sam's ask), so it
++    // adds nothing to the postage.
++    if (item.parts) continue;
+     // Tees and mugs carry their UK postage in the price (Sam, 5 Oct 2026:
+     // "free UK delivery built in"), so they add nothing to a UK parcel. The
+     // flag is set by wire-catalog.js from the product kind. Everything else —
+@@ -189,7 +202,40 @@ export function postageFor(lines, country = "GB") {
+ export function destinationsFor(lines) {
+   const physical = lines.filter((l) => l.item.type === "physical");
+   if (!physical.length) return DESTINATIONS.slice();
+-  return DESTINATIONS.filter((c) => physical.every((l) => rateFor(forCountry(l.item, c), c)));
++  return DESTINATIONS.filter((c) => physical.every((l) => {
++    const v = forCountry(l.item, c);
++    return v.parts ? !v.notMadeHere : rateFor(v, c);
++  }));
++}
++
++// What a set's options are called, in the basket and on the Stripe receipt:
++// "Navy, L", "Black", or "" for a part with only one option.
++export const optionLabel = (o) => [o.colour, o.size].filter(Boolean).join(", ");
++
++// The picks for a set, from the text the page sends as its "size":
++//   "Hoodie: Navy, L · Tee: Ash, M · Beanie: Black"
++// Every part with a choice must be named, with an option it really comes in.
++// A part with only one option (the throw) is filled in. Refuses rather than
++// guesses, for the same reason sizes do: a wrong size is a return.
++export function resolveSet(item, text) {
++  const given = new Map();
++  for (const piece of String(text || "").split("·")) {
++    const i = piece.indexOf(":");
++    if (i > 0) given.set(piece.slice(0, i).trim().toLowerCase(), piece.slice(i + 1).trim().toLowerCase());
++  }
++  const picks = [];
++  for (const part of item.parts) {
++    let option = part.options.length === 1 ? part.options[0] : null;
++    if (!option) {
++      const want = given.get(part.label.toLowerCase());
++      if (!want) return { error: `Please choose the ${part.label.toLowerCase()} colour and size for "${item.name}".` };
++      option = part.options.find((o) => optionLabel(o).toLowerCase() === want);
++      if (!option) return { error: `The ${part.label.toLowerCase()} in "${item.name}" doesn't come in ${want}.` };
++    }
++    picks.push({ part, option });
++  }
++  const label = picks.filter((p) => p.part.options.length > 1).map((p) => `${p.part.label}: ${optionLabel(p.option)}`).join(" · ");
++  return { picks, label };
+ }
+ 
+ export default async (req) => {
+@@ -234,7 +280,7 @@ export default async (req) => {
+       return json({ error: `"${item.name}" isn't made in ${COUNTRY_NAMES[country] || country} yet, so it can't be posted there.`, id: item.id }, 400);
+     }
+ 
+-    if (item.type === "physical" && !item.printifyProductId) {
++    if (item.type === "physical" && !item.printifyProductId && !item.parts) {
+       // Real print-ready artwork hasn't been loaded into Printify for this
+       // piece yet, so there's nothing to fulfil an order with. Fail clearly
+       // rather than taking money for something that can't ship.
+@@ -247,7 +293,14 @@ export default async (req) => {
+     // Small to someone who wanted a 2XL is a return, a refund and a lost customer.
+     let variantId = item.printifyVariantId;
+     let chosenSize = null;
+-    if (Array.isArray(item.sizes) && item.sizes.length) {
++    if (item.parts) {
++      // A set: one variant per part, written "v1.v2.v3" in the basket record
++      // in the order of item.parts; the webhook splits it back out.
++      const set = resolveSet(item, raw.size);
++      if (set.error) return json({ error: set.error, id: item.id }, 400);
++      variantId = set.picks.map((p) => p.option.variantId).join(".");
++      chosenSize = set.label;
++    } else if (Array.isArray(item.sizes) && item.sizes.length) {
+       if (!raw.size) {
+         return json({ error: `Please choose a size for "${item.name}".`, id: item.id, needsSize: item.sizes.map((s) => s.size) }, 400);
+       }
+@@ -351,7 +404,9 @@ export default async (req) => {
+               ? "Free UK delivery (over £80)"
+               : freeDelivery
+                 ? "Free UK delivery"
+-                : "Delivery to " + (COUNTRY_NAMES[country] || country),
++                : postage === 0
++                  ? "Delivery included"
++                  : "Delivery to " + (COUNTRY_NAMES[country] || country),
+           },
+         }]
+       : undefined,
+diff --git a/netlify/functions/quote.js b/netlify/functions/quote.js
+index 3a03511..10fba75 100644
+--- a/netlify/functions/quote.js
++++ b/netlify/functions/quote.js
+@@ -12,8 +12,7 @@
+ // Reads nothing, writes nothing, takes no payment. Safe to call on every
+ // basket change.
+ 
+-import catalog from "./catalog.json";
+-import { postageFor, destinationsFor, forCountry, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
++import { catalog, postageFor, destinationsFor, forCountry, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
+ 
+ // MUST match create-checkout.js. These were two separate 5000s until 27 Aug
+ // 2026, so raising the threshold in one place alone would have had the basket
+@@ -47,7 +46,7 @@ export default async (req) => {
+   // click — one unavailable sticker taking six good items down with it, at the
+   // last possible moment. Say it here instead, while it can still be removed.
+   const unavailable = lines
+-    .filter((l) => l.item.type === "physical" && !l.item.printifyProductId)
++    .filter((l) => l.item.type === "physical" && !l.item.printifyProductId && !l.item.parts)
+     .map((l) => ({ id: l.item.id, name: l.item.name }));
+ 
+   // Where this basket can go, and where it is going. An unservable choice falls
+@@ -56,7 +55,8 @@ export default async (req) => {
+   const destinations = destinationsFor(lines);
+   const asked = String(body.country || "GB").toUpperCase();
+   let country = asked;
+-  if (!destinations.includes(country)) country = "GB";
++  // A basket holding only the US Christmas set can only go to the US.
++  if (!destinations.includes(country)) country = destinations.includes("GB") || !destinations.length ? "GB" : destinations[0];
+ 
+   // The US range is made by a US maker, at its own price. Every figure below
+   // uses the version that would actually be made for this country.
+diff --git a/netlify/functions/set-options.js b/netlify/functions/set-options.js
+new file mode 100644
+index 0000000..0444409
+--- /dev/null
++++ b/netlify/functions/set-options.js
+@@ -0,0 +1,13 @@
++// The Christmas sets' colours, sizes and prices, for christmas-set.js on the
++// page. Read from the same bundles.json the checkout prices from, so the page
++// can only offer what the till will accept. Printify ids are left out: the
++// page doesn't need them.
++import bundles from "./bundles.json";
++
++export default async () =>
++  new Response(JSON.stringify(bundles.map((b) => ({
++    id: b.id, name: b.name, choice: b.choice, price: b.price, country: b.country,
++    parts: b.parts.map((p) => ({ key: p.key, label: p.label, options: p.options.map((o) => ({ colour: o.colour, size: o.size })) })),
++  }))), { status: 200, headers: { "content-type": "application/json", "cache-control": "public, max-age=300" } });
++
++export const config = { path: "/api/sets" };
+diff --git a/netlify/functions/stripe-webhook.js b/netlify/functions/stripe-webhook.js
+index a057e22..7aae5b7 100644
+--- a/netlify/functions/stripe-webhook.js
++++ b/netlify/functions/stripe-webhook.js
+@@ -18,8 +18,7 @@
+ // Stripe -> Developers -> Webhooks, listening for checkout.session.completed.
+ 
+ import Stripe from "stripe";
+-import catalog from "./catalog.json";
+-import { forCountry } from "./create-checkout.js";
++import { catalog, forCountry } from "./create-checkout.js";
+ 
+ // create-checkout.js writes the basket as "id~variant~qty~size|id~variant~qty~size",
+ // split across basket_0, basket_1... because Stripe caps a metadata value at
+@@ -45,7 +44,8 @@ function readBasket(metadata = {}) {
+     const [id, variantId, qty, size] = row.split("~");
+     return {
+       id,
+-      variantId: Number(variantId) || null,
++      // A Christmas set carries one variant per part, "v1.v2.v3"; kept as text.
++      variantId: String(variantId || "").includes(".") ? variantId : Number(variantId) || null,
+       qty: Math.max(1, Number(qty) || 1),
+       size: size || null,
+     };
+@@ -183,6 +183,21 @@ export default async (req) => {
+     const base = catalog.find((p) => p.id === row.id);
+     const item = base && forCountry(base, dest);
+     if (!item) { console.error("Webhook: unknown product id", row.id, "in session", session.id); continue; }
++    if (item.parts) {
++      // A Christmas set: one line per part, each its own Printify product
++      // (and, in the UK, its own maker and parcel). Variants are "v1.v2.v3"
++      // in the order of item.parts, as create-checkout wrote them.
++      if (item.notMadeHere) { console.error(`Set ${item.id} paid for delivery to ${dest}, where it isn't made — NOT sent to Printify. Refund it in Stripe.`); continue; }
++      const ids = String(row.variantId || "").split(".").map(Number);
++      item.parts.forEach((part, i) => {
++        const option = part.options.find((o) => o.variantId === ids[i]);
++        if (!option) { console.error(`Set ${item.id}: no ${part.label} variant ${ids[i]} on session ${session.id} — that part NOT ordered`); return; }
++        const size = [option.colour, option.size].filter(Boolean).join(", ") || null;
++        lines.push({ id: `${item.id}:${part.key}`, variantId: option.variantId, qty: row.qty, size,
++          item: { id: `${item.id}-${part.key}`, type: "physical", printifyProductId: part.printifyProductId, shipping: { provider: part.provider } } });
++      });
++      continue;
++    }
+     if (Array.isArray(item.sizes) && !row.variantId) {
+       console.error("Ordering", item.id, "with no size — check create-checkout");
+     }
