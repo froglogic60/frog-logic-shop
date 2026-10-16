@@ -25,7 +25,7 @@ OUT = os.path.join(HERE, "xmas-pins")
 RAW = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/xmas-pins/"
 SITE = "https://shop.froglogic.co.uk/?ref=pinterest#christmas"
 ETSY = "https://froglogic.etsy.com/listing/"
-BOARD = "Christmas gifts for introverts and neurodivergent people"
+BOARD = "Neurodivergent & introvert Christmas gifts"  # created 16 Oct 2026 (50-character limit)
 START = os.environ.get("START", "2026-10-17")
 SLOTS = ["13:00:00", "21:00:00"]  # UTC; clear of the pins-pages queue's times
 
