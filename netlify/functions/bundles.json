@@ -1,5 +1,5 @@
 [
- {"id": "xmas-set-uk", "name": "Socially Hibernating Christmas set, sofa throw", "choice": "Sofa size, 50×60 in", "type": "physical", "currency": "gbp", "price": 106, "country": "GB", "parts": [
+ {"id": "xmas-set-uk", "name": "Socially Hibernating Christmas set, sofa throw", "choice": "Sofa size, 50×60 in", "type": "physical", "currency": "gbp", "price": 110, "country": "GB", "parts": [
   {"key": "hoodie", "label": "Hoodie", "printifyProductId": "6ad205938368c0a023030148", "provider": 72, "options": [
    {"colour": "Sport Grey", "size": "S", "variantId": 32902},
    {"colour": "Sport Grey", "size": "M", "variantId": 32903},
@@ -52,7 +52,7 @@
    {"size": "50\" × 60\"", "variantId": 100926}
   ]}
  ]},
- {"id": "xmas-set-uk-lap", "name": "Socially Hibernating Christmas set, lap throw", "choice": "Lap size, 30×40 in", "type": "physical", "currency": "gbp", "price": 90, "country": "GB", "parts": [
+ {"id": "xmas-set-uk-lap", "name": "Socially Hibernating Christmas set, lap throw", "choice": "Lap size, 30×40 in", "type": "physical", "currency": "gbp", "price": 93, "country": "GB", "parts": [
   {"key": "hoodie", "label": "Hoodie", "printifyProductId": "6ad205938368c0a023030148", "provider": 72, "options": [
    {"colour": "Sport Grey", "size": "S", "variantId": 32902},
    {"colour": "Sport Grey", "size": "M", "variantId": 32903},

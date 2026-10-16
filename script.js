@@ -210,7 +210,7 @@ const PRODUCTS = [
   {
     num: "02 — Tote", word: "Hyperfocused",
     line: "Four hours gone. Worth it, probably.",
-    price: "£16.00", link: "#", bg: "#0E4F4F",
+    price: "£17.00", link: "#", bg: "#0E4F4F",
     // The word spirals inward and disappears into a single point.
     svg: `<svg viewBox="0 0 300 300">${grain("g2", 0.12)}
       <defs><path id="sp2" fill="none" d="M 150,32 A 118,118 0 1 1 149,32
@@ -226,7 +226,7 @@ const PRODUCTS = [
   {
     num: "03 — Notebook", word: "Shutdown Mode",
     line: "Everything still on. Nothing responding.",
-    price: "£12.00", link: "#", bg: "#2F3A56",
+    price: "£13.00", link: "#", bg: "#2F3A56",
     // The word powers down letter by letter until it's gone.
     svg: `<svg viewBox="0 0 300 300">${grain("g3", 0.12)}
       <g font-family="Instrument Serif, serif" font-size="44" fill="${CREAM}">
@@ -490,7 +490,7 @@ const PRODUCTS = [
   {
     num: "15 — Tote", word: "Auditory Processing",
     line: "I heard you. Give me four seconds.",
-    price: "£16.00", link: "#", bg: "#B5541F",
+    price: "£17.00", link: "#", bg: "#B5541F",
     // The words arrive, then arrive again, slightly late.
     svg: `<svg viewBox="0 0 300 300">${grain("g15", 0.12)}
       <g font-family="Fraunces, serif" font-size="32">
@@ -701,7 +701,7 @@ const PRODUCTS = [
   {
     num: "25 — Tote", word: "Monotropic",
     line: "One channel, wide open. The rest, closed.",
-    price: "£16.00", link: "#", bg: "#175E75",
+    price: "£17.00", link: "#", bg: "#175E75",
     // Everything else fades out; one word runs the full depth of the page.
     svg: `<svg viewBox="0 0 300 300">${grain("g25", 0.12)}
       <g font-family="Syne, sans-serif" font-size="14" fill="${CREAM}" opacity="0.2">
@@ -741,7 +741,7 @@ const PRODUCTS = [
   {
     num: "27 — Notebook", word: "Regulation: Loading",
     line: "Please do not close this window.",
-    price: "£12.00", link: "#", bg: "#2E4A63",
+    price: "£13.00", link: "#", bg: "#2E4A63",
     // A progress bar that has been at 31% for some time.
     svg: `<svg viewBox="0 0 300 300">${grain("g27", 0.12)}
       <text x="150" y="110" text-anchor="middle" font-family="Space Mono, monospace" font-size="22" fill="${CREAM}">EMOTIONAL</text>
@@ -865,7 +865,7 @@ const PRODUCTS = [
   {
     num: "33 — Tote", word: "I Notice Everything",
     line: "The detail you missed? I have it.",
-    price: "£16.00", link: "#", bg: "#1E6B8C",
+    price: "£17.00", link: "#", bg: "#1E6B8C",
     // A field of near-identical marks — and the one that isn't.
     svg: `<svg viewBox="0 0 300 300">${grain("g33", 0.11)}
       <g font-family="Space Grotesk, sans-serif" font-size="13" fill="${CREAM}" opacity="0.4">
@@ -1082,7 +1082,7 @@ const PRODUCTS = [
   {
     num: "44 — Notebook", word: "Functioning As Designed",
     line: "Checked against spec. No defects found.",
-    price: "£12.00", link: "#", bg: "#4A6E33",
+    price: "£13.00", link: "#", bg: "#4A6E33",
     // A technical spec sheet that comes back clean.
     svg: `<svg viewBox="0 0 300 300">${grain("a4", 0.11)}
       <g stroke="${CREAM}" stroke-width="1" opacity="0.5">
@@ -1118,7 +1118,7 @@ const PRODUCTS = [
   {
     num: "46 — Tote", word: "It Was Precision",
     line: "They called it difficult. They were wrong.",
-    price: "£16.00", link: "#", bg: "#1F5F6B",
+    price: "£17.00", link: "#", bg: "#1F5F6B",
     // The old word struck out, the accurate one underneath.
     svg: `<svg viewBox="0 0 300 300">${grain("a6", 0.11)}
       <text x="150" y="86" text-anchor="middle" font-family="Space Grotesk, sans-serif"
@@ -1295,7 +1295,7 @@ const PRODUCTS = [
   {
     num: "54 — Notebook", word: "Asking Is Not Failing",
     line: "Support isn't a probation period you graduate from.",
-    price: "£12.00", link: "#", bg: "#345E45",
+    price: "£13.00", link: "#", bg: "#345E45",
     // A false equation, corrected.
     svg: `<svg viewBox="0 0 300 300">${grain("n4", 0.11)}
       <text x="150" y="112" text-anchor="middle" font-family="Fraunces, serif" font-size="27" fill="${CREAM}" opacity="0.5">asking for help</text>
@@ -1331,7 +1331,7 @@ const PRODUCTS = [
   {
     num: "56 — Tote", word: "Yes, I Want Friends",
     line: "Wanting them was never the difficult part.",
-    price: "£16.00", link: "#", bg: "#B03F55",
+    price: "£17.00", link: "#", bg: "#B03F55",
     // The stereotype, struck out; the truth, plain.
     svg: `<svg viewBox="0 0 300 300">${grain("n6", 0.11)}
       <text x="150" y="76" text-anchor="middle" font-family="Space Grotesk, sans-serif"
@@ -1479,7 +1479,7 @@ const PRODUCTS = [
   {
     num: "64 — Tote", word: "I Learned Their Language",
     line: "Fluent in one person. No qualification for it.",
-    price: "£16.00", link: "#", bg: "#2E5F5A",
+    price: "£17.00", link: "#", bg: "#2E5F5A",
     // The dictionary only you have.
     svg: `<svg viewBox="0 0 300 300">${grain("c4", 0.11)}
       <g font-family="Space Mono, monospace" font-size="9.5" fill="${CREAM}" opacity="0.75">
@@ -1537,7 +1537,7 @@ const PRODUCTS = [
   {
     num: "67 — Notebook", word: "You're Allowed To Find It Hard",
     line: "Loving them and struggling are not opposites.",
-    price: "£12.00", link: "#", bg: "#B5432F",
+    price: "£13.00", link: "#", bg: "#B5432F",
     // Two things held at once, with nothing crossed out.
     svg: `<svg viewBox="0 0 300 300">${grain("c7", 0.11)}
       <text x="150" y="104" text-anchor="middle" font-family="Instrument Serif, serif" font-size="40" fill="${CREAM}">I love them</text>

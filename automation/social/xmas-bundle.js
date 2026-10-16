@@ -19,6 +19,9 @@
 // +£0.60 ($5.09) -> £38.30 / £41.30, £22.46, £22.60
 //   UK hoodie £42 (Print Clever charges the same for 2XL), UK tee £19,
 //   UK fleece £25 30x40 / £41 50x60
+// then (16 Oct 2026) UK pieces raised for the 20% VAT Printify adds to UK
+// orders (found on the test order; margin-vat.js): hoodie £48, fleece £27.75
+// / £47 — Sam: "All prices need to cover ALL expenses with 23-25% profit".
 //
 // Light garments (Sport Grey, Ash, White) carry the brown-text artwork; dark
 // ones (Navy, Maroon) the cream-text version.
@@ -83,7 +86,7 @@ const PRODUCTS = [
   {
     key: "uk-hoodie", where: "uk", blueprint: 77, provider: 72, position: "front",
     colours: [...LIGHT, ...DARK], sizes: SIZES,
-    price: () => 4200,
+    price: () => 4800,
     title: "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Jumper, Neurodivergent Gift, Made in the UK",
     description: [STORY, "A Gildan Heavy Blend hoodie: soft, warm, unisex fit, with a front pouch pocket. The design is printed on the front.", SET_UK, UK_NOTE, "Sizes run unisex, so check the size chart in the photos."],
     tags: ["christmas hoodie", "frog hoodie", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "cosy christmas", "christmas jumper", "frog lover gift", "socially hibernating", "uk made gift"],
@@ -99,7 +102,7 @@ const PRODUCTS = [
   {
     key: "uk-blanket", where: "uk", blueprint: 1328, provider: 94, position: "front",
     colours: null, sizes: ["30'' × 40''", '50" × 60"'], art: { light: "socially-hibernating-blanket.png", dark: "socially-hibernating-blanket.png" }, cover: true,
-    price: (size) => (/50/.test(size) ? 4100 : 2500),
+    price: (size) => (/50/.test(size) ? 4700 : 2775),
     title: "Socially Hibernating Christmas Frog Fleece Blanket — Cute Frog in Santa Hat, Cosy Throw, Introvert Christmas Gift, Made in the UK",
     description: [STORY, "A soft Arctic fleece throw, printed edge to edge with the Socially Hibernating frog. Two sizes: 30 × 40 inches (lap or cot size) or 50 × 60 inches (sofa throw).", SET_UK, UK_NOTE],
     tags: ["fleece blanket", "frog blanket", "christmas blanket", "cosy throw", "cute frog gift", "santa frog", "introvert gift", "neurodivergent gift", "christmas gift", "frog lover gift", "socially hibernating", "sofa throw", "uk made gift"],
