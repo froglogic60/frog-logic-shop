@@ -1,0 +1,35 @@
+name: Christmas pins
+# Builds the Socially Hibernating Pinterest pins and their bulk-upload
+# spreadsheet (automation/social/xmas-pins/xmas-pins.csv). See xmas-pins.py.
+# Commits [skip netlify]: the images are served from raw.githubusercontent.com.
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "First publish date (YYYY-MM-DD, UTC). Two pins a day from here."
+        default: "2026-10-17"
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fonts
+        working-directory: automation/social
+        run: node -e "require('./gfonts.js').ensureFonts('.gfonts').then(()=>console.log('fonts ok'))"
+      - run: pip install pillow
+      - name: Build pins
+        working-directory: automation/social
+        run: START="${{ github.event.inputs.start }}" python xmas-pins.py .gfonts
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/xmas-pins
+          git commit -m "Christmas pins [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
