@@ -1,0 +1,23 @@
+name: Christmas set pictures
+# Builds the website's two set pictures from the website store's mockups.
+# See automation/social/xmas-set-images.py. Commits assets/xmas/set-*.jpg
+# [skip netlify]: they go live with the next site deploy.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow
+      - run: python automation/social/xmas-set-images.py
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/xmas/set-uk.jpg assets/xmas/set-us.jpg
+          git commit -m "Christmas set pictures [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
