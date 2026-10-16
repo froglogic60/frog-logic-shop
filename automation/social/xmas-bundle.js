@@ -219,7 +219,15 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
         // Already built: only the prices are brought up to date (artwork and
         // words are left as they are, so chosen photos aren't disturbed).
         const update = { variants: priced.map((v) => ({ id: v.id, price: v.price, is_enabled: true })) };
-        if (REPRINT) update.print_areas = areas;
+        if (REPRINT) {
+          // Printify keeps every variant of the blank on the product (disabled
+          // ones too) and refuses a print update that doesn't list them all
+          // (code 8251, 16 Oct 2026), so the rest join the first print area.
+          const cur = await api(`/shops/${etsy.id}/products/${already.id}.json`);
+          const listed = new Set(areas.flatMap((a) => a.variant_ids));
+          const rest = (cur.variants || []).map((v) => v.id).filter((id) => !listed.has(id));
+          update.print_areas = areas.map((a, i) => (i === 0 ? { ...a, variant_ids: [...a.variant_ids, ...rest] } : a));
+        }
         await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", update);
         const fresh = await api(`/shops/${etsy.id}/products/${already.id}.json`);
         const vs = (fresh.variants || []).filter((v) => v.is_enabled).map((v) => ({ title: v.title, price: v.price, costUsdCents: v.cost }));
