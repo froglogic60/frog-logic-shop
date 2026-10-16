@@ -147,35 +147,48 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
       const missingS = spec.sizes ? found(spec.sizes) : [];
       if (missingC.length || missingS.length) console.log(`  NOTE missing from this maker: ${[...missingC, ...missingS].join(", ")}`);
       if (!picked.length) throw new Error("no matching variants");
-      const ph = (picked[0].placeholders || []).find((p) => p.position === spec.position);
-      if (!ph) throw new Error(`no ${spec.position} print area (has ${(picked[0].placeholders || []).map((p) => p.position).join(", ")})`);
-      console.log(`  ${picked.length} variants, ${spec.position} print area ${ph.width}x${ph.height}`);
-
+      const phOf = (v) => (v.placeholders || []).find((p) => p.position === spec.position);
+      if (picked.some((v) => !phOf(v))) throw new Error(`a variant has no ${spec.position} print area`);
+      const dims = [...new Set(picked.map((v) => `${phOf(v).width}x${phOf(v).height}`))];
+      console.log(`  ${picked.length} variants, ${spec.position} print area ${dims.join(" / ")}`);
+      const ph = phOf(picked[0]);
       const priced = picked.map((v) => {
         const parts = String(v.title).split("/").map((s) => s.trim());
         const size = spec.sizes ? spec.sizes.find((s) => parts.includes(s)) : null;
         const colour = spec.colours ? spec.colours.find((c) => parts.includes(c)) : null;
-        return { id: v.id, title: v.title, colour, size, price: spec.price(size || ""), dark: colour ? DARK.includes(colour) : false };
+        return { id: v.id, title: v.title, colour, size, price: spec.price(size || ""), dark: colour ? DARK.includes(colour) : false, ph: phOf(v) };
       });
       if (DRY) {
         const byPrice = {};
         for (const v of priced) (byPrice[v.price] = byPrice[v.price] || []).push(v.size || v.title);
         console.log(`  would ${existing.has(spec.title) ? "update" : "create"}; prices: ${Object.entries(byPrice).map(([p, s]) => `£${(p / 100).toFixed(2)} (${[...new Set(s)].join(", ")})`).join("; ")}`);
-        results.push({ key: spec.key, dry: true, variants: priced.length, printArea: { w: ph.width, h: ph.height } });
+        console.log(`  variants: ${priced.map((v) => v.title).join(" | ")}`);
+        results.push({ key: spec.key, dry: true, variants: priced.length, titles: priced.map((v) => v.title), printAreas: dims });
         continue;
       }
 
       const art = spec.art || { light: "socially-hibernating.png", dark: "socially-hibernating-dark.png" };
       const areas = [];
       for (const tone of ["light", "dark"]) {
-        const ids = priced.filter((v) => (tone === "dark") === v.dark).map((v) => v.id);
-        if (!ids.length) continue;
+        const group = priced.filter((v) => (tone === "dark") === v.dark);
+        if (!group.length) continue;
         const img = await upload(art[tone]);
-        // Square garment art fits inside the area; the blanket art covers it.
-        const fit = Math.min(1, (ph.height / ph.width) / (img.height / img.width));
-        const cover = Math.max(1, (ph.height / ph.width) / (img.height / img.width));
-        const scale = spec.cover ? cover : fit * (spec.key.includes("beanie") ? 1 : 0.9);
-        areas.push({ variant_ids: ids, placeholders: [{ position: spec.position, images: [{ id: img.id, x: 0.5, y: 0.5, scale, angle: 0 }] }] });
+        const ratio = img.height / img.width;
+        if (spec.cover) {
+          // Edge-to-edge art (the blanket): each size has its own print area,
+          // so each gets the scale that covers it with no gaps.
+          const bySize = new Map();
+          for (const v of group) { const k = `${v.ph.width}x${v.ph.height}`; (bySize.get(k) || bySize.set(k, []).get(k)).push(v); }
+          for (const [, vs] of bySize) {
+            const scale = Math.max(1, (vs[0].ph.height / vs[0].ph.width) / ratio);
+            areas.push({ variant_ids: vs.map((v) => v.id), placeholders: [{ position: spec.position, images: [{ id: img.id, x: 0.5, y: 0.5, scale, angle: 0 }] }] });
+          }
+        } else {
+          // Square garment art: one scale that fits the tightest size's area.
+          const tight = Math.min(...group.map((v) => v.ph.height / v.ph.width));
+          const scale = Math.min(1, tight / ratio) * (spec.key.includes("beanie") ? 1 : 0.9);
+          areas.push({ variant_ids: group.map((v) => v.id), placeholders: [{ position: spec.position, images: [{ id: img.id, x: 0.5, y: 0.5, scale, angle: 0 }] }] });
+        }
       }
       const payload = {
         title: spec.title,
@@ -194,7 +207,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
       const costs = (fresh.variants || []).filter((v) => v.is_enabled).map((v) => [v.title, v.price, v.cost]);
       console.log(`  created ${prod.id}`);
       results.push({
-        key: spec.key, where: spec.where, title: spec.title, printifyProductId: prod.id, printArea: { w: ph.width, h: ph.height },
+        key: spec.key, where: spec.where, title: spec.title, printifyProductId: prod.id, printAreas: dims,
         variants: costs.map(([t, p, c]) => ({ title: t, price: p, costUsdCents: c })),
         mockupLibrary: `https://printify.com/app/mockup-library/shops/${etsy.id}/products/${prod.id}`,
       });
