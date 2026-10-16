@@ -111,17 +111,19 @@ def font(name, size, weight=None):
         f.set_variation_by_axes(vals)
     return f
 
-def words(img, colour):
+def words(img, colour, k=1.0):
+    # k scales the 3000px layout (the blanket renders larger).
     d = ImageDraw.Draw(img)
-    t = font("Fraunces-var.ttf", 250, 600)
+    S = int(3000 * k)
+    t = font("Fraunces-var.ttf", int(250 * k), 600)
     title = "Socially Hibernating"
-    d.text(((3000 - d.textlength(title, font=t)) / 2, 150), title, font=t, fill=colour)
-    c = font("Caveat-var.ttf", 230, 600)
+    d.text(((S - d.textlength(title, font=t)) / 2, 150 * k), title, font=t, fill=colour)
+    c = font("Caveat-var.ttf", int(230 * k), 600)
     cap = "see you in January"
-    d.text(((3000 - d.textlength(cap, font=c)) / 2, 2560), cap, font=c, fill=colour)
-    z = font("Caveat-var.ttf", 150, 700)
+    d.text(((S - d.textlength(cap, font=c)) / 2, 2560 * k), cap, font=c, fill=colour)
+    z = font("Caveat-var.ttf", int(150 * k), 700)
     for i, (x, y) in enumerate([(2150, 1140), (2250, 1020), (2340, 890)]):
-        d.text((x, y), "z", font=z, fill=colour)
+        d.text((x * k, y * k), "z", font=z, fill=colour)
     return img
 
 if __name__ == "__main__":
