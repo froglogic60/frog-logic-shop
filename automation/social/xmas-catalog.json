@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-16T09:41:11.027Z",
+  "scannedAt": "2026-10-16T09:57:08.949Z",
   "kinds": {
     "candle": [
       {
@@ -2240,37 +2240,6 @@
         "blueprint": "Sherpa Fleece Blanket",
         "blueprintId": 238,
         "brand": "Generic brand",
-        "provider": "MWW On Demand",
-        "providerId": 10,
-        "makerCountry": "US",
-        "variants": 3,
-        "options": [
-          [
-            "50\" × 60\"",
-            "60\" × 80\"",
-            "30\" × 40\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1249,
-            "additional": 629,
-            "currency": "USD"
-          }
-        },
-        "cost": {
-          "min": 2481,
-          "max": 4926
-        }
-      },
-      {
-        "blueprint": "Sherpa Fleece Blanket",
-        "blueprintId": 238,
-        "brand": "Generic brand",
         "provider": "Printify Choice",
         "providerId": 99,
         "makerCountry": "US",
@@ -2296,6 +2265,47 @@
         "cost": {
           "min": 2479,
           "max": 4921
+        },
+        "costs": {
+          "50\" × 60\"": 3425,
+          "60\" × 80\"": 4921,
+          "30\" × 40\"": 2479
+        }
+      },
+      {
+        "blueprint": "Sherpa Fleece Blanket",
+        "blueprintId": 238,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\"",
+            "30\" × 40\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2481,
+          "max": 4926
+        },
+        "costs": {
+          "50\" × 60\"": 3429,
+          "60\" × 80\"": 4926,
+          "30\" × 40\"": 2481
         }
       },
       {
@@ -2327,6 +2337,11 @@
         "cost": {
           "min": 1364,
           "max": 3072
+        },
+        "costs": {
+          "60\" × 80\"": 3072,
+          "50\" × 60\"": 2091,
+          "30\" × 40\"": 1364
         }
       },
       {
@@ -2358,6 +2373,11 @@
         "cost": {
           "min": 1478,
           "max": 3251
+        },
+        "costs": {
+          "30\" × 40\"": 1478,
+          "50\" × 60\"": 2368,
+          "60\" × 80\"": 3251
         }
       },
       {
@@ -2389,6 +2409,11 @@
         "cost": {
           "min": 1373,
           "max": 3207
+        },
+        "costs": {
+          "30\" × 40\"": 1373,
+          "50\" × 60\"": 2036,
+          "60\" × 80\"": 3207
         }
       },
       {
@@ -2421,6 +2446,9 @@
         "cost": {
           "min": 6010,
           "max": 6010
+        },
+        "costs": {
+          "One size / Cream": 6010
         }
       },
       {
@@ -2453,38 +2481,9 @@
         "cost": {
           "min": 6013,
           "max": 6013
-        }
-      },
-      {
-        "blueprint": "Throw Blanket",
-        "blueprintId": 744,
-        "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 1,
-        "options": [
-          [
-            "White base"
-          ],
-          [
-            "50\" × 60\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1249,
-            "additional": 629,
-            "currency": "USD"
-          }
         },
-        "cost": {
-          "min": 2780,
-          "max": 2780
+        "costs": {
+          "One size / Cream": 6013
         }
       },
       {
@@ -2517,6 +2516,44 @@
         "cost": {
           "min": 2783,
           "max": 2783
+        },
+        "costs": {
+          "White base / 50\" × 60\"": 2783
+        }
+      },
+      {
+        "blueprint": "Throw Blanket",
+        "blueprintId": 744,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "White base"
+          ],
+          [
+            "50\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2780,
+          "max": 2780
+        },
+        "costs": {
+          "White base / 50\" × 60\"": 2780
         }
       },
       {
@@ -2547,6 +2584,10 @@
         "cost": {
           "min": 2986,
           "max": 4496
+        },
+        "costs": {
+          "60\" × 50\"": 2986,
+          "60\" × 80\"": 4496
         }
       },
       {
@@ -2577,6 +2618,10 @@
         "cost": {
           "min": 2989,
           "max": 4499
+        },
+        "costs": {
+          "60\" × 50\"": 2989,
+          "60\" × 80\"": 4499
         }
       },
       {
@@ -2607,6 +2652,10 @@
         "cost": {
           "min": 2255,
           "max": 3938
+        },
+        "costs": {
+          "30\" × 40\"": 2255,
+          "50\" × 60\"": 3938
         }
       },
       {
@@ -2637,37 +2686,10 @@
         "cost": {
           "min": 2258,
           "max": 3941
-        }
-      },
-      {
-        "blueprint": "Velveteen Microfiber Blanket",
-        "blueprintId": 1044,
-        "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 3,
-        "options": [
-          [
-            "40\" × 30\"",
-            "60\" × 50\"",
-            "80\" × 60\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1039,
-            "additional": 499,
-            "currency": "USD"
-          }
         },
-        "cost": {
-          "min": 1352,
-          "max": 3199
+        "costs": {
+          "30\" × 40\"": 2258,
+          "50\" × 60\"": 3941
         }
       },
       {
@@ -2699,6 +2721,47 @@
         "cost": {
           "min": 1355,
           "max": 3202
+        },
+        "costs": {
+          "40\" × 30\"": 1355,
+          "60\" × 50\"": 2209,
+          "80\" × 60\"": 3202
+        }
+      },
+      {
+        "blueprint": "Velveteen Microfiber Blanket",
+        "blueprintId": 1044,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "40\" × 30\"",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1352,
+          "max": 3199
+        },
+        "costs": {
+          "40\" × 30\"": 1352,
+          "60\" × 50\"": 2206,
+          "80\" × 60\"": 3199
         }
       },
       {
@@ -2729,6 +2792,10 @@
         "cost": {
           "min": 3634,
           "max": 4967
+        },
+        "costs": {
+          "60\" × 50\"": 3634,
+          "80\" × 60\"": 4967
         }
       },
       {
@@ -2759,6 +2826,10 @@
         "cost": {
           "min": 3631,
           "max": 4964
+        },
+        "costs": {
+          "60\" × 50\"": 3631,
+          "80\" × 60\"": 4964
         }
       },
       {
@@ -2795,6 +2866,14 @@
         "cost": {
           "min": 2031,
           "max": 4353
+        },
+        "costs": {
+          "30'' × 40'' / Beige": 2031,
+          "30'' × 40'' / Grey": 2031,
+          "50\" × 60\" / Beige": 3353,
+          "50\" × 60\" / Grey": 3353,
+          "60\" × 80\" / Beige": 4353,
+          "60\" × 80\" / Grey": 4353
         }
       },
       {
@@ -2831,6 +2910,14 @@
         "cost": {
           "min": 2028,
           "max": 4350
+        },
+        "costs": {
+          "30'' × 40'' / Beige": 2028,
+          "30'' × 40'' / Grey": 2028,
+          "50\" × 60\" / Beige": 3350,
+          "50\" × 60\" / Grey": 3350,
+          "60\" × 80\" / Beige": 4350,
+          "60\" × 80\" / Grey": 4350
         }
       },
       {
@@ -2860,6 +2947,9 @@
         "cost": {
           "min": 4053,
           "max": 4053
+        },
+        "costs": {
+          "61\" × 51\"": 4053
         }
       },
       {
@@ -2889,6 +2979,9 @@
         "cost": {
           "min": 4050,
           "max": 4050
+        },
+        "costs": {
+          "61\" × 51\"": 4050
         }
       },
       {
@@ -2921,6 +3014,11 @@
         "cost": {
           "min": 2456,
           "max": 5332
+        },
+        "costs": {
+          "40\" × 30\"": 2456,
+          "60\" × 50\"": 4144,
+          "80\" × 60\"": 5332
         }
       },
       {
@@ -2953,6 +3051,11 @@
         "cost": {
           "min": 2453,
           "max": 5329
+        },
+        "costs": {
+          "40\" × 30\"": 2453,
+          "60\" × 50\"": 4141,
+          "80\" × 60\"": 5329
         }
       },
       {
@@ -2984,6 +3087,11 @@
         "cost": {
           "min": 1379,
           "max": 3793
+        },
+        "costs": {
+          "30'' × 40''": 1379,
+          "50\" × 60\"": 2463,
+          "60\" × 80\"": 3793
         }
       },
       {
@@ -3019,6 +3127,11 @@
         "cost": {
           "min": 1777,
           "max": 4227
+        },
+        "costs": {
+          "30'' × 40''": 1777,
+          "50\" × 60\"": 2997,
+          "60\" × 80\"": 4227
         }
       },
       {
@@ -3050,6 +3163,11 @@
         "cost": {
           "min": 1376,
           "max": 3785
+        },
+        "costs": {
+          "30'' × 40''": 1376,
+          "50\" × 60\"": 2458,
+          "60\" × 80\"": 3785
         }
       },
       {
@@ -3081,6 +3199,11 @@
         "cost": {
           "min": 1790,
           "max": 3519
+        },
+        "costs": {
+          "30'' × 40''": 1790,
+          "50\" × 60\"": 2800,
+          "60\" × 80\"": 3519
         }
       },
       {
@@ -3116,6 +3239,11 @@
         "cost": {
           "min": 1793,
           "max": 3522
+        },
+        "costs": {
+          "30'' × 40''": 1793,
+          "50\" × 60\"": 2803,
+          "60\" × 80\"": 3522
         }
       },
       {
@@ -3150,6 +3278,12 @@
         "cost": {
           "min": 3251,
           "max": 3905
+        },
+        "costs": {
+          "50\" × 60\" / Grey": 3251,
+          "60\" × 80\" / Grey": 3905,
+          "50\" × 60\" / Beige": 3251,
+          "60\" × 80\" / Beige": 3905
         }
       },
       {
@@ -3184,6 +3318,12 @@
         "cost": {
           "min": 3248,
           "max": 3902
+        },
+        "costs": {
+          "50\" × 60\" / Grey": 3248,
+          "60\" × 80\" / Grey": 3902,
+          "50\" × 60\" / Beige": 3248,
+          "60\" × 80\" / Beige": 3902
         }
       },
       {
@@ -3221,6 +3361,10 @@
         "cost": {
           "min": 4736,
           "max": 7473
+        },
+        "costs": {
+          "50\" × 60\" / White": 4736,
+          "60\" × 80\" / White": 7473
         }
       },
       {
@@ -3252,35 +3396,10 @@
         "cost": {
           "min": 3539,
           "max": 4236
-        }
-      },
-      {
-        "blueprint": "Quilted Throw",
-        "blueprintId": 1573,
-        "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 1,
-        "options": [
-          [
-            "50'' × 60''"
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1039,
-            "additional": 499,
-            "currency": "USD"
-          }
         },
-        "cost": {
-          "min": 4948,
-          "max": 4948
+        "costs": {
+          "25'' × 18''": 3539,
+          "26'' × 26''": 4236
         }
       },
       {
@@ -3310,26 +3429,22 @@
         "cost": {
           "min": 4951,
           "max": 4951
+        },
+        "costs": {
+          "50'' × 60''": 4951
         }
       },
       {
-        "blueprint": "Woven Blanket",
-        "blueprintId": 1626,
+        "blueprint": "Quilted Throw",
+        "blueprintId": 1573,
         "brand": "Generic brand",
-        "provider": "Pure Country, Inc.",
-        "providerId": 453,
+        "provider": "Printify Choice",
+        "providerId": 99,
         "makerCountry": "US",
-        "variants": 8,
+        "variants": 1,
         "options": [
           [
-            "Artwork",
-            "Photo"
-          ],
-          [
-            "52'' × 37''",
-            "60\" × 50\"",
-            "54\" × 70\"",
-            "60\" × 80\""
+            "50'' × 60''"
           ]
         ],
         "placeholders": [
@@ -3344,8 +3459,54 @@
           }
         },
         "cost": {
-          "min": 2786,
-          "max": 5926
+          "min": 4948,
+          "max": 4948
+        },
+        "costs": {
+          "50'' × 60''": 4948
+        }
+      },
+      {
+        "blueprint": "Woven Blanket",
+        "blueprintId": 1626,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 6,
+        "options": [
+          [
+            "Artwork",
+            "Photo"
+          ],
+          [
+            "52'' × 37''",
+            "60\" × 50\"",
+            "80\" × 60\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2889,
+          "max": 6094
+        },
+        "costs": {
+          "Artwork / 52'' × 37''": 2889,
+          "Artwork / 60\" × 50\"": 3973,
+          "Artwork / 80\" × 60\"": 6094,
+          "Photo / 52'' × 37''": 2889,
+          "Photo / 60\" × 50\"": 3973,
+          "Photo / 80\" × 60\"": 6094
         }
       },
       {
@@ -3383,16 +3544,24 @@
         "cost": {
           "min": 2885,
           "max": 6089
+        },
+        "costs": {
+          "Artwork / 60\" × 50\"": 3967,
+          "Photo / 60\" × 50\"": 3967,
+          "Photo / 80\" × 60\"": 6089,
+          "Artwork / 80\" × 60\"": 6089,
+          "Photo / 52'' × 37''": 2885,
+          "Artwork / 52'' × 37''": 2885
         }
       },
       {
         "blueprint": "Woven Blanket",
         "blueprintId": 1626,
         "brand": "Generic brand",
-        "provider": "MWW On Demand",
-        "providerId": 10,
+        "provider": "Pure Country, Inc.",
+        "providerId": 453,
         "makerCountry": "US",
-        "variants": 6,
+        "variants": 8,
         "options": [
           [
             "Artwork",
@@ -3401,36 +3570,7 @@
           [
             "52'' × 37''",
             "60\" × 50\"",
-            "80\" × 60\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1249,
-            "additional": 629,
-            "currency": "USD"
-          }
-        },
-        "cost": {
-          "min": 2889,
-          "max": 6094
-        }
-      },
-      {
-        "blueprint": "Pixel Fleece Blanket (AOP)",
-        "blueprintId": 1911,
-        "brand": "Generic brand",
-        "provider": "MWW On Demand",
-        "providerId": 10,
-        "makerCountry": "US",
-        "variants": 2,
-        "options": [
-          [
-            "50\" × 60\"",
+            "54\" × 70\"",
             "60\" × 80\""
           ]
         ],
@@ -3440,14 +3580,22 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 1249,
-            "additional": 629,
+            "first": 1039,
+            "additional": 499,
             "currency": "USD"
           }
         },
         "cost": {
-          "min": 5785,
-          "max": 8146
+          "min": 2786,
+          "max": 5926
+        },
+        "costs": {
+          "Artwork / 52'' × 37''": 2786,
+          "Artwork / 60\" × 50\"": 3752,
+          "Photo / 52'' × 37''": 2786,
+          "Photo / 60\" × 50\"": 3752,
+          "Artwork / 54\" × 70\"": 4631,
+          "Artwork / 60\" × 80\"": 5926
         }
       },
       {
@@ -3478,6 +3626,44 @@
         "cost": {
           "min": 5782,
           "max": 8143
+        },
+        "costs": {
+          "50\" × 60\"": 5782,
+          "60\" × 80\"": 8143
+        }
+      },
+      {
+        "blueprint": "Pixel Fleece Blanket (AOP)",
+        "blueprintId": 1911,
+        "brand": "Generic brand",
+        "provider": "MWW On Demand",
+        "providerId": 10,
+        "makerCountry": "US",
+        "variants": 2,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1249,
+            "additional": 629,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 5785,
+          "max": 8146
+        },
+        "costs": {
+          "50\" × 60\"": 5785,
+          "60\" × 80\"": 8146
         }
       }
     ],
