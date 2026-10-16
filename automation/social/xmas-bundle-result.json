@@ -1,175 +1,583 @@
 {
-  "ranAt": "2026-10-16T10:13:50.042Z",
-  "dryRun": true,
+  "ranAt": "2026-10-16T10:15:32.685Z",
+  "dryRun": false,
   "etsyStore": 29335686,
   "results": [
     {
       "key": "us-hoodie",
-      "dry": true,
-      "variants": 25,
-      "titles": [
-        "Ash / S",
-        "Ash / M",
-        "Ash / L",
-        "Ash / XL",
-        "Ash / 2XL",
-        "Maroon / S",
-        "Maroon / M",
-        "Maroon / L",
-        "Maroon / XL",
-        "Maroon / 2XL",
-        "Navy / S",
-        "Navy / M",
-        "Navy / L",
-        "Navy / XL",
-        "Navy / 2XL",
-        "Sport Grey / S",
-        "Sport Grey / M",
-        "Sport Grey / L",
-        "Sport Grey / XL",
-        "Sport Grey / 2XL",
-        "White / S",
-        "White / M",
-        "White / L",
-        "White / XL",
-        "White / 2XL"
-      ],
+      "where": "us",
+      "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Neurodivergent Gift, Ships from the US",
+      "printifyProductId": "6ad1f92db7243250ec0835e2",
       "printAreas": [
         "2919x1944",
         "3273x2180",
         "3531x2352"
-      ]
+      ],
+      "variants": [
+        {
+          "title": "White / M",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Navy / S",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Navy / M",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "White / XL",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Sport Grey / M",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Navy / XL",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "White / S",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Maroon / M",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Sport Grey / S",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Sport Grey / XL",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Maroon / L",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "White / L",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Maroon / S",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Sport Grey / L",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Navy / L",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Maroon / XL",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "White / 2XL",
+          "price": 3900,
+          "costUsdCents": 2377
+        },
+        {
+          "title": "Navy / 2XL",
+          "price": 3900,
+          "costUsdCents": 2377
+        },
+        {
+          "title": "Maroon / 2XL",
+          "price": 3900,
+          "costUsdCents": 2377
+        },
+        {
+          "title": "Sport Grey / 2XL",
+          "price": 3900,
+          "costUsdCents": 2377
+        },
+        {
+          "title": "Ash / S",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Ash / L",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Ash / M",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Ash / XL",
+          "price": 3400,
+          "costUsdCents": 2158
+        },
+        {
+          "title": "Ash / 2XL",
+          "price": 3900,
+          "costUsdCents": 2377
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f92db7243250ec0835e2"
     },
     {
       "key": "us-tee",
-      "dry": true,
-      "variants": 25,
-      "titles": [
-        "Ash / L",
-        "Ash / M",
-        "Ash / S",
-        "Ash / XL",
-        "Ash / 2XL",
-        "Maroon / L",
-        "Maroon / M",
-        "Maroon / S",
-        "Maroon / XL",
-        "Maroon / 2XL",
-        "Navy / L",
-        "Navy / M",
-        "Navy / S",
-        "Navy / XL",
-        "Navy / 2XL",
-        "Sport Grey / L",
-        "Sport Grey / M",
-        "Sport Grey / S",
-        "Sport Grey / XL",
-        "Sport Grey / 2XL",
-        "White / L",
-        "White / M",
-        "White / S",
-        "White / XL",
-        "White / 2XL"
-      ],
+      "where": "us",
+      "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Shirt, Neurodivergent Gift, Ships from the US",
+      "printifyProductId": "6ad1f931b7243250ec0835e9",
       "printAreas": [
         "3951x4919",
         "3591x4472",
         "3232x4024"
-      ]
+      ],
+      "variants": [
+        {
+          "title": "Maroon / S",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Navy / XL",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Navy / L",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "White / S",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "White / XL",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Sport Grey / XL",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Navy / M",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Maroon / L",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Sport Grey / M",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Maroon / XL",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Navy / S",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Sport Grey / L",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Maroon / M",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "White / L",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "White / M",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Sport Grey / S",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Ash / S",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Ash / XL",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Ash / M",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Ash / L",
+          "price": 2200,
+          "costUsdCents": 968
+        },
+        {
+          "title": "Maroon / 2XL",
+          "price": 2200,
+          "costUsdCents": 1177
+        },
+        {
+          "title": "White / 2XL",
+          "price": 2200,
+          "costUsdCents": 1177
+        },
+        {
+          "title": "Sport Grey / 2XL",
+          "price": 2200,
+          "costUsdCents": 1177
+        },
+        {
+          "title": "Navy / 2XL",
+          "price": 2200,
+          "costUsdCents": 1177
+        },
+        {
+          "title": "Ash / 2XL",
+          "price": 2200,
+          "costUsdCents": 1177
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f931b7243250ec0835e9"
     },
     {
       "key": "us-beanie",
-      "dry": true,
-      "variants": 3,
-      "titles": [
-        "Black / One size",
-        "Dark Grey / One size",
-        "Navy / One size"
-      ],
+      "where": "us",
+      "title": "Socially Hibernating Christmas Frog Beanie — Embroidered Cute Frog in Santa Hat, Cuffed Winter Hat, Neurodivergent Gift, Ships from the US",
+      "printifyProductId": "6ad1f93620886a0bc203b9ce",
       "printAreas": [
         "1500x525"
-      ]
+      ],
+      "variants": [
+        {
+          "title": "Black / One size",
+          "price": 2200,
+          "costUsdCents": 1526
+        },
+        {
+          "title": "Dark Grey / One size",
+          "price": 2200,
+          "costUsdCents": 1526
+        },
+        {
+          "title": "Navy / One size",
+          "price": 2200,
+          "costUsdCents": 1526
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f93620886a0bc203b9ce"
     },
     {
       "key": "uk-hoodie",
-      "dry": true,
-      "variants": 25,
-      "titles": [
-        "Ash / S",
-        "Ash / M",
-        "Ash / L",
-        "Ash / XL",
-        "Ash / 2XL",
-        "Maroon / S",
-        "Maroon / M",
-        "Maroon / L",
-        "Maroon / XL",
-        "Maroon / 2XL",
-        "Navy / S",
-        "Navy / M",
-        "Navy / L",
-        "Navy / XL",
-        "Navy / 2XL",
-        "Sport Grey / S",
-        "Sport Grey / M",
-        "Sport Grey / L",
-        "Sport Grey / XL",
-        "Sport Grey / 2XL",
-        "White / S",
-        "White / M",
-        "White / L",
-        "White / XL",
-        "White / 2XL"
-      ],
+      "where": "uk",
+      "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Jumper, Neurodivergent Gift, Made in the UK",
+      "printifyProductId": "6ad1f9398ed12a970600ce7a",
       "printAreas": [
         "3319x2212",
         "3909x2606",
         "4500x3000"
-      ]
+      ],
+      "variants": [
+        {
+          "title": "Ash / S",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Ash / M",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Ash / L",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Ash / XL",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Ash / 2XL",
+          "price": 5000,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Maroon / S",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Maroon / M",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Maroon / L",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Maroon / XL",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Maroon / 2XL",
+          "price": 5000,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Navy / S",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Navy / M",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Navy / L",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Navy / XL",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Navy / 2XL",
+          "price": 5000,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Sport Grey / S",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Sport Grey / M",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Sport Grey / L",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Sport Grey / XL",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "Sport Grey / 2XL",
+          "price": 5000,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "White / S",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "White / M",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "White / L",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "White / XL",
+          "price": 4200,
+          "costUsdCents": 2924
+        },
+        {
+          "title": "White / 2XL",
+          "price": 5000,
+          "costUsdCents": 2924
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f9398ed12a970600ce7a"
     },
     {
       "key": "uk-tee",
-      "dry": true,
-      "variants": 19,
-      "titles": [
-        "Maroon / L",
-        "Maroon / M",
-        "Maroon / XL",
-        "Maroon / 2XL",
-        "Navy / L",
-        "Navy / M",
-        "Navy / S",
-        "Navy / XL",
-        "Navy / 2XL",
-        "Sport Grey / L",
-        "Sport Grey / M",
-        "Sport Grey / S",
-        "Sport Grey / XL",
-        "Sport Grey / 2XL",
-        "White / L",
-        "White / M",
-        "White / S",
-        "White / XL",
-        "White / 2XL"
-      ],
+      "where": "uk",
+      "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Top, Neurodivergent Gift, Made in the UK",
+      "printifyProductId": "6ad1f93db7243250ec0835ef",
       "printAreas": [
         "4500x5100",
         "4110x4658",
         "3709x4203"
-      ]
+      ],
+      "variants": [
+        {
+          "title": "Maroon / L",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Maroon / M",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Maroon / XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Maroon / 2XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Navy / L",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Navy / M",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Navy / S",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Navy / XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Navy / 2XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Sport Grey / L",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Sport Grey / M",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Sport Grey / S",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Sport Grey / XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "Sport Grey / 2XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "White / L",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "White / M",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "White / S",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "White / XL",
+          "price": 1900,
+          "costUsdCents": 936
+        },
+        {
+          "title": "White / 2XL",
+          "price": 1900,
+          "costUsdCents": 936
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f93db7243250ec0835ef"
     },
     {
       "key": "uk-blanket",
-      "dry": true,
-      "variants": 2,
-      "titles": [
-        "30'' × 40''",
-        "50\" × 60\""
-      ],
+      "where": "uk",
+      "title": "Socially Hibernating Christmas Frog Fleece Blanket — Cute Frog in Santa Hat, Cosy Throw, Introvert Christmas Gift, Made in the UK",
+      "printifyProductId": "6ad1f942b7243250ec0835f6",
       "printAreas": [
         "5025x6525",
         "8025x9525"
-      ]
+      ],
+      "variants": [
+        {
+          "title": "30'' × 40''",
+          "price": 2500,
+          "costUsdCents": 1777
+        },
+        {
+          "title": "50\" × 60\"",
+          "price": 4100,
+          "costUsdCents": 2997
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f942b7243250ec0835f6"
     }
   ],
   "errors": []
