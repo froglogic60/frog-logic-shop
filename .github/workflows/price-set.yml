@@ -1,0 +1,36 @@
+name: Set Etsy prices in Printify
+# One-off price changes listed in automation/social/price-set.js. Changes
+# Printify only; republish each product in Printify (prices ticked) for Etsy.
+# Commits price-set-result.json [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report only, change nothing"
+        type: boolean
+        default: true
+permissions:
+  contents: write
+jobs:
+  set:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Set prices
+        working-directory: automation/social
+        run: node price-set.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+      - name: Commit the result
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/price-set-result.json || true
+          git commit -m "Etsy prices set [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
