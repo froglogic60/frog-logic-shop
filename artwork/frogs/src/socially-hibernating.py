@@ -7,6 +7,7 @@
 #   artwork/frogs/socially-hibernating.png        brown text, for light garments
 #   artwork/frogs/socially-hibernating-dark.png   cream text, for dark garments
 #   artwork/frogs/socially-hibernating-art.png    the frog alone, no words
+#   ...-tight.png versions of the two above, trimmed to the drawing, for garments
 # Usage: python socially-hibernating.py <fonts dir>
 import io, os, sys
 import cairosvg
@@ -129,6 +130,12 @@ def words(img, colour, k=1.0):
 if __name__ == "__main__":
     art = render(svg())
     art.save(os.path.join(OUT, "socially-hibernating-art.png"))
-    words(art.copy(), BROWN).save(os.path.join(OUT, "socially-hibernating.png"))
-    words(art.copy(), CREAM).save(os.path.join(OUT, "socially-hibernating-dark.png"))
+    for colour, name in ((BROWN, "socially-hibernating"), (CREAM, "socially-hibernating-dark")):
+        img = words(art.copy(), colour)
+        img.save(os.path.join(OUT, name + ".png"))
+        # Garment versions trimmed to the drawing (small margin), so the design
+        # fills a hoodie's short print area instead of carrying 10% empty edges.
+        x0, y0, x1, y1 = img.getbbox()
+        m = 40
+        img.crop((max(0, x0 - m), max(0, y0 - m), min(3000, x1 + m), min(3000, y1 + m))).save(os.path.join(OUT, name + "-tight.png"))
     print("written")
