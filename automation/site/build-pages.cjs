@@ -150,7 +150,7 @@ function copyFor(item, group) {
 }
 
 // ---- page shell: the shop's own header and footer, links made absolute.
-function shell({ title, description, url, image, imageAlt, body, jsonld, sizeGuide }) {
+function shell({ title, description, url, image, imageAlt, body, jsonld, sizeGuide, scripts = [] }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -237,7 +237,7 @@ ${body}
 })();
 </script>
 ${sizeGuide ? '<script src="/size-guide.js"></script>' : ""}
-<script src="/basket.js"></script>
+<script src="/basket.js"></script>${scripts.map((x) => `\n<script src="${x}"></script>`).join("")}
 <script data-goatcounter="https://froglogic.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
@@ -308,6 +308,72 @@ function buildPage(entry, related, shop) {
   return shell({ title: c.title, description, url, image, imageAlt: `${item.word} — ${kind}`, body, jsonld, sizeGuide: isTee });
 }
 
+// ---- the Christmas sets (16 Oct 2026): one page per set card on the home
+// page, so search (and Google's own crawl for Shopping) can land straight on
+// them. Same markup and script as the home page's cards, so the pickers and
+// prices come live from /api/sets and can't disagree with the till.
+const BUNDLES = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(ROOT, "netlify", "functions", "bundles.json"), "utf8")); }
+  catch { return []; }
+})();
+const SETS = [
+  { slug: "christmas-set-uk", ids: ["xmas-set-uk", "xmas-set-uk-lap"], img: "/assets/xmas/set-uk.jpg", where: "Made & posted in the UK",
+    h1: "Socially Hibernating Christmas set: hoodie, tee and fleece throw",
+    title: "Socially Hibernating Christmas gift set — frog hoodie, tee and fleece throw, UK delivery included",
+    alt: "Socially Hibernating hoodie, tee and fleece throw, each printed with the sleepy Christmas frog in a Santa hat",
+    line: "Gildan Heavy Blend hoodie, Gildan cotton tee and an Arctic fleece throw. Three UK makers, so it can arrive as up to three parcels.",
+    paras: [
+      "The frog has put on a Santa hat, got under a blanket, tangled itself in the fairy lights, and is not coming out until January. A matching hoodie, tee and fleece throw for one price, with UK delivery included.",
+      "Pick the colour and size of each piece below. Choose the sofa-size throw (50 × 60 in) or the lap-size throw (30 × 40 in). Everything is printed to order in the UK, so earlier is safer for Christmas. Change your mind within 14 days, or report a fault within 30 — see <a href=\"/returns.html\">returns</a>.",
+    ] },
+  { slug: "christmas-set-us", ids: ["xmas-set-us"], img: "/assets/xmas/set-us.jpg", where: "Made & shipped in the US",
+    h1: "Socially Hibernating Christmas set: hoodie, tee and embroidered beanie (US)",
+    title: "Socially Hibernating Christmas gift set — frog hoodie, tee and embroidered beanie, made and shipped in the US",
+    alt: "Socially Hibernating hoodie and tee printed with the Christmas frog, and a beanie with the frog embroidered on the cuff",
+    line: "Gildan Heavy Blend hoodie, Gildan cotton tee and a cuffed beanie with the frog embroidered on it. For US addresses: made in the US, so no import fees.",
+    paras: [
+      "The frog has put on a Santa hat, got under a blanket, tangled itself in the fairy lights, and is not coming out until January. A matching hoodie, tee and embroidered beanie for one price, with US delivery included.",
+      "For US addresses only: all three pieces are made and shipped inside the US, so there are no import fees. Pick the colour and size of each piece below. Printed to order, so earlier is safer for Christmas.",
+    ] },
+];
+function buildSetPage(entry) {
+  const s = entry.set;
+  const url = `${SITE}/p/${s.slug}/`;
+  const image = SITE + s.img;
+  const sets = BUNDLES.filter((b) => s.ids.includes(b.id));
+  const description = s.paras[0].slice(0, 155);
+  const jsonld = { "@context": "https://schema.org", "@type": "Product", name: s.h1, description, url, image, brand: { "@type": "Brand", name: "Frog Logic" },
+    offers: sets.map((b) => ({ "@type": "Offer", name: b.name, url, priceCurrency: "GBP", price: Number(b.price).toFixed(2), availability: "https://schema.org/InStock", itemCondition: "https://schema.org/NewCondition",
+      shippingDetails: { "@type": "OfferShippingDetails", shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "GBP" }, shippingDestination: { "@type": "DefinedRegion", addressCountry: b.country === "US" ? "US" : "GB" } },
+      seller: { "@type": "Organization", name: "Frog Logic" } })) };
+  const body = `
+<section class="collection product-page christmas" id="product">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Frog Logic</a> › <a href="/#christmas">Christmas</a> › ${esc(s.h1)}</p>
+    <div class="product-grid-wrap" id="product-grid">
+      <article class="card set-card product-card" data-sets="${attr(s.ids.join(","))}">
+        <div class="stage"><img class="stage-photo" src="${attr(s.img)}" alt="${attr(s.alt)}"></div>
+        <div class="card-meta">
+          <p class="card-num">${esc(s.where)}</p>
+          <h1>${esc(s.h1)}</h1>
+          ${s.paras.map((p) => `<p class="product-para">${p}</p>`).join("\n          ")}
+          <p class="card-line">${esc(s.line)}</p>
+          <div class="set-pickers"><p class="set-loading">Loading colours and sizes&hellip;</p></div>
+          <p class="card-price">&nbsp;</p>
+          <button type="button" class="btn btn-primary set-add" disabled>Add the set to basket</button>
+          <p class="sg-warn" role="status" hidden></p>
+        </div>
+      </article>
+    </div>
+    <div class="product-about">
+      <h2>About the shop</h2>
+      <p>${BRAND} <a href="/#why">Why this exists.</a></p>
+    </div>
+  </div>
+</section>`;
+  return shell({ title: s.title, description, url, image, imageAlt: s.alt, body, jsonld, scripts: ["/christmas-set.js"] });
+}
+
 // ---- assemble the list of pages
 function collect(shop) {
   const mockups = JSON.parse(fs.readFileSync(path.join(ROOT, "mockups.json"), "utf8"));
@@ -328,6 +394,7 @@ function collect(shop) {
   }
   const org = shop.ORGANISATION;
   if (org.length) pages.push({ item: org[0], group: "org", slug: shop.pageSlug(org[0]), svg: absSvg(org[0].svg), photo: null, section: "Organisations", anchor: "#organisations", tiers: org });
+  for (const set of SETS) pages.push({ item: { word: set.h1 }, group: "xset", set, slug: set.slug, photo: { src: SITE + set.img }, section: "Christmas", anchor: "#christmas" });
   const seen = new Set();
   for (const p of pages) { if (seen.has(p.slug)) throw new Error("Duplicate page slug: " + p.slug); seen.add(p.slug); }
   return pages;
@@ -335,7 +402,7 @@ function collect(shop) {
 
 function pickRelated(page, pages) {
   const same = pages.filter((p) => p !== page && p.group === page.group);
-  const pool = same.length >= 3 ? same : pages.filter((p) => p !== page);
+  const pool = same.length >= 3 ? same : pages.filter((p) => p !== page && p.group !== "xset");
   // Deterministic: start from the page's own position so neighbours vary.
   const i = pages.indexOf(page);
   const out = [];
@@ -460,7 +527,7 @@ ${items.join("\n")}
   fs.rmSync(OUT, { recursive: true, force: true });
   for (const p of pages) {
     fs.mkdirSync(path.join(OUT, p.slug), { recursive: true });
-    fs.writeFileSync(path.join(OUT, p.slug, "index.html"), buildPage(p, pickRelated(p, pages), shop));
+    fs.writeFileSync(path.join(OUT, p.slug, "index.html"), p.group === "xset" ? buildSetPage(p) : buildPage(p, pickRelated(p, pages.filter((q) => q.group !== "xset")), shop));
   }
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages));
   const gf = feed(pages, shop);
