@@ -11,3 +11,4 @@ index 8448139..7a7a0a4 100644
 +BOARD = "Neurodivergent & introvert Christmas gifts"  # created 16 Oct 2026 (50-character limit)
  START = os.environ.get("START", "2026-10-17")
  SLOTS = ["13:00:00", "21:00:00"]  # UTC; clear of the pins-pages queue's times
+ 
