@@ -8,8 +8,11 @@ const path = require("path");
 
 const KEY = process.env.PRINTIFY_API_KEY;
 if (!KEY) { console.error("Missing PRINTIFY_API_KEY"); process.exit(1); }
-const OUT = path.join(__dirname, "xmas-bundle-mockups");
-const result = JSON.parse(fs.readFileSync(path.join(__dirname, "xmas-bundle-result.json"), "utf8"));
+// STORE=site: the copies in the website's store, into xmas-bundle-mockups/site/.
+const SITE = process.env.STORE === "site";
+const OUT = path.join(__dirname, "xmas-bundle-mockups", SITE ? "site" : "");
+const result = JSON.parse(fs.readFileSync(path.join(__dirname, SITE ? "xmas-bundle-site-result.json" : "xmas-bundle-result.json"), "utf8"));
+const STORE_ID = SITE ? result.siteStore : result.etsyStore;
 
 async function api(p) {
   const r = await fetch("https://api.printify.com/v1" + p, { headers: { Authorization: "Bearer " + KEY, "User-Agent": "frog-logic-bot/1.0" } });
@@ -22,7 +25,7 @@ const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   for (const r of result.results) {
-    const prod = await api(`/shops/${result.etsyStore}/products/${r.printifyProductId}.json`);
+    const prod = await api(`/shops/${STORE_ID}/products/${r.printifyProductId}.json`);
     // Only enabled variants: an image lists every variant it fits, disabled
     // ones included, so the first id isn't necessarily a colour on sale.
     const byVariant = new Map((prod.variants || []).filter((v) => v.is_enabled).map((v) => [v.id, v.title]));
