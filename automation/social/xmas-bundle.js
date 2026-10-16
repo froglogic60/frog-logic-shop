@@ -12,8 +12,9 @@
 // discount (Sam). Prices keep at least 25% on every size after making, Etsy
 // fees with VAT, postage and a returns allowance (worked out 16 Oct 2026 with
 // Printify's dollar costs at 0.78):
-//   US hoodie £34 S–XL / £39 2XL, US tee £22, US beanie £22
-//   UK hoodie £42 S–XL / £50 2XL, UK tee £19, UK fleece £25 30x40 / £41 50x60
+//   US hoodie £34 S–XL / £37 2XL, US tee £22, US beanie £22
+//   UK hoodie £42 (Print Clever charges the same for 2XL), UK tee £19,
+//   UK fleece £25 30x40 / £41 50x60
 //
 // Light garments (Sport Grey, Ash, White) carry the brown-text artwork; dark
 // ones (Navy, Maroon) the cream-text version.
@@ -46,7 +47,7 @@ const PRODUCTS = [
   {
     key: "us-hoodie", where: "us", blueprint: 77, provider: 99, position: "front",
     colours: [...LIGHT, ...DARK], sizes: SIZES,
-    price: (size) => (size === "2XL" ? 3900 : 3400),
+    price: (size) => (size === "2XL" ? 3700 : 3400),
     title: "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Neurodivergent Gift, Ships from the US",
     description: [STORY, "A Gildan Heavy Blend hooded sweatshirt: soft, warm, unisex fit, with a front pouch pocket. The design is printed on the front.", SET_US, US_NOTE, "Sizes run unisex, so check the size chart in the photos."],
     tags: ["christmas hoodie", "frog hoodie", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "cozy christmas", "funny xmas hoodie", "frog lover gift", "socially hibernating", "holiday sweatshirt"],
@@ -70,7 +71,7 @@ const PRODUCTS = [
   {
     key: "uk-hoodie", where: "uk", blueprint: 77, provider: 72, position: "front",
     colours: [...LIGHT, ...DARK], sizes: SIZES,
-    price: (size) => (size === "2XL" ? 5000 : 4200),
+    price: () => 4200,
     title: "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Jumper, Neurodivergent Gift, Made in the UK",
     description: [STORY, "A Gildan Heavy Blend hoodie: soft, warm, unisex fit, with a front pouch pocket. The design is printed on the front.", SET_UK, UK_NOTE, "Sizes run unisex, so check the size chart in the photos."],
     tags: ["christmas hoodie", "frog hoodie", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "cosy christmas", "christmas jumper", "frog lover gift", "socially hibernating", "uk made gift"],
@@ -207,7 +208,17 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
         print_areas: areas,
       };
       const already = existing.get(spec.title);
-      if (already) { console.log(`  already exists (${already.id}) — left alone`); results.push({ key: spec.key, printifyProductId: already.id, existed: true }); continue; }
+      if (already) {
+        // Already built: only the prices are brought up to date (artwork and
+        // words are left as they are, so chosen photos aren't disturbed).
+        await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", { variants: priced.map((v) => ({ id: v.id, price: v.price, is_enabled: true })) });
+        const fresh = await api(`/shops/${etsy.id}/products/${already.id}.json`);
+        const vs = (fresh.variants || []).filter((v) => v.is_enabled).map((v) => ({ title: v.title, price: v.price, costUsdCents: v.cost }));
+        console.log(`  exists (${already.id}) — prices updated`);
+        results.push({ key: spec.key, where: spec.where, title: spec.title, printifyProductId: already.id, existed: true, variants: vs,
+          mockupLibrary: `https://printify.com/app/mockup-library/shops/${etsy.id}/products/${already.id}` });
+        continue;
+      }
       const prod = await api(`/shops/${etsy.id}/products.json`, "POST", payload);
       await sleep(1500);
       const fresh = await api(`/shops/${etsy.id}/products/${prod.id}.json`);
