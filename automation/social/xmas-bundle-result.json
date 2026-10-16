@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-16T12:08:11.867Z",
+  "ranAt": "2026-10-16T16:17:03.541Z",
   "dryRun": false,
   "etsyStore": 29335686,
   "results": [
@@ -575,7 +575,7 @@
           "title": "Ash / S",
           "colour": "Ash",
           "size": "S",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -585,7 +585,7 @@
           "title": "Ash / M",
           "colour": "Ash",
           "size": "M",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -595,7 +595,7 @@
           "title": "Ash / L",
           "colour": "Ash",
           "size": "L",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -605,7 +605,7 @@
           "title": "Ash / XL",
           "colour": "Ash",
           "size": "XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -615,7 +615,7 @@
           "title": "Ash / 2XL",
           "colour": "Ash",
           "size": "2XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -625,7 +625,7 @@
           "title": "Maroon / S",
           "colour": "Maroon",
           "size": "S",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -635,7 +635,7 @@
           "title": "Maroon / M",
           "colour": "Maroon",
           "size": "M",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -645,7 +645,7 @@
           "title": "Maroon / L",
           "colour": "Maroon",
           "size": "L",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -655,7 +655,7 @@
           "title": "Maroon / XL",
           "colour": "Maroon",
           "size": "XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -665,7 +665,7 @@
           "title": "Maroon / 2XL",
           "colour": "Maroon",
           "size": "2XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -675,7 +675,7 @@
           "title": "Navy / S",
           "colour": "Navy",
           "size": "S",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -685,7 +685,7 @@
           "title": "Navy / M",
           "colour": "Navy",
           "size": "M",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -695,7 +695,7 @@
           "title": "Navy / L",
           "colour": "Navy",
           "size": "L",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -705,7 +705,7 @@
           "title": "Navy / XL",
           "colour": "Navy",
           "size": "XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -715,7 +715,7 @@
           "title": "Navy / 2XL",
           "colour": "Navy",
           "size": "2XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -725,7 +725,7 @@
           "title": "Sport Grey / S",
           "colour": "Sport Grey",
           "size": "S",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -735,7 +735,7 @@
           "title": "Sport Grey / M",
           "colour": "Sport Grey",
           "size": "M",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -745,7 +745,7 @@
           "title": "Sport Grey / L",
           "colour": "Sport Grey",
           "size": "L",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -755,7 +755,7 @@
           "title": "Sport Grey / XL",
           "colour": "Sport Grey",
           "size": "XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -765,7 +765,7 @@
           "title": "Sport Grey / 2XL",
           "colour": "Sport Grey",
           "size": "2XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -775,7 +775,7 @@
           "title": "White / S",
           "colour": "White",
           "size": "S",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -785,7 +785,7 @@
           "title": "White / M",
           "colour": "White",
           "size": "M",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -795,7 +795,7 @@
           "title": "White / L",
           "colour": "White",
           "size": "L",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -805,7 +805,7 @@
           "title": "White / XL",
           "colour": "White",
           "size": "XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -815,7 +815,7 @@
           "title": "White / 2XL",
           "colour": "White",
           "size": "2XL",
-          "price": 4200,
+          "price": 4800,
           "costUsdCents": 2924,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 299
@@ -1035,7 +1035,7 @@
           "title": "30'' × 40''",
           "colour": null,
           "size": "30'' × 40''",
-          "price": 2500,
+          "price": 2775,
           "costUsdCents": 1777,
           "shipFirstUsdCents": 469,
           "shipAdditionalUsdCents": 129
@@ -1045,7 +1045,7 @@
           "title": "50\" × 60\"",
           "colour": null,
           "size": "50\" × 60\"",
-          "price": 4100,
+          "price": 4700,
           "costUsdCents": 2997,
           "shipFirstUsdCents": 519,
           "shipAdditionalUsdCents": 129
