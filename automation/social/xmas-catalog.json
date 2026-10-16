@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T21:49:31.856Z",
+  "scannedAt": "2026-10-16T09:41:11.027Z",
   "kinds": {
     "candle": [
       {
@@ -2240,34 +2240,6 @@
         "blueprint": "Sherpa Fleece Blanket",
         "blueprintId": 238,
         "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 3,
-        "options": [
-          [
-            "50\" × 60\"",
-            "60\" × 80\"",
-            "30\" × 40\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 689,
-            "additional": 329,
-            "currency": "USD"
-          }
-        },
-        "cost": null
-      },
-      {
-        "blueprint": "Sherpa Fleece Blanket",
-        "blueprintId": 238,
-        "brand": "Generic brand",
         "provider": "MWW On Demand",
         "providerId": 10,
         "makerCountry": "US",
@@ -2290,14 +2262,48 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2481,
+          "max": 4926
+        }
+      },
+      {
+        "blueprint": "Sherpa Fleece Blanket",
+        "blueprintId": 238,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "50\" × 60\"",
+            "60\" × 80\"",
+            "30\" × 40\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 1039,
+            "additional": 499,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 2479,
+          "max": 4921
+        }
       },
       {
         "blueprint": "Velveteen Plush Blanket",
         "blueprintId": 522,
         "brand": "Generic brand",
-        "provider": "Miami Sublimation",
-        "providerId": 47,
+        "provider": "Printify Choice",
+        "providerId": 99,
         "makerCountry": "US",
         "variants": 3,
         "options": [
@@ -2313,12 +2319,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 1039,
-            "additional": 499,
+            "first": 569,
+            "additional": 279,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1364,
+          "max": 3072
+        }
       },
       {
         "blueprint": "Velveteen Plush Blanket",
@@ -2346,14 +2355,17 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1478,
+          "max": 3251
+        }
       },
       {
         "blueprint": "Velveteen Plush Blanket",
         "blueprintId": 522,
         "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
+        "provider": "Miami Sublimation",
+        "providerId": 47,
         "makerCountry": "US",
         "variants": 3,
         "options": [
@@ -2369,12 +2381,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 839,
-            "additional": 269,
+            "first": 1039,
+            "additional": 499,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1373,
+          "max": 3207
+        }
       },
       {
         "blueprint": "Hooded Sherpa Fleece Blanket",
@@ -2403,7 +2418,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 6010,
+          "max": 6010
+        }
       },
       {
         "blueprint": "Hooded Sherpa Fleece Blanket",
@@ -2432,7 +2450,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 6013,
+          "max": 6013
+        }
       },
       {
         "blueprint": "Throw Blanket",
@@ -2461,7 +2482,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2780,
+          "max": 2780
+        }
       },
       {
         "blueprint": "Throw Blanket",
@@ -2490,7 +2514,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2783,
+          "max": 2783
+        }
       },
       {
         "blueprint": "Tan Sherpa Blanket",
@@ -2512,12 +2539,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 1539,
+            "first": 1439,
             "additional": 499,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2986,
+          "max": 4496
+        }
       },
       {
         "blueprint": "Tan Sherpa Blanket",
@@ -2544,7 +2574,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2989,
+          "max": 4499
+        }
       },
       {
         "blueprint": "Minky Blanket",
@@ -2566,12 +2599,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 1399,
+            "first": 1449,
             "additional": 499,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2255,
+          "max": 3938
+        }
       },
       {
         "blueprint": "Minky Blanket",
@@ -2598,7 +2634,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2258,
+          "max": 3941
+        }
       },
       {
         "blueprint": "Velveteen Microfiber Blanket",
@@ -2626,7 +2665,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1352,
+          "max": 3199
+        }
       },
       {
         "blueprint": "Velveteen Microfiber Blanket",
@@ -2654,7 +2696,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1355,
+          "max": 3202
+        }
       },
       {
         "blueprint": "Sweatshirt Blanket",
@@ -2681,7 +2726,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 3634,
+          "max": 4967
+        }
       },
       {
         "blueprint": "Sweatshirt Blanket",
@@ -2708,40 +2756,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
-      },
-      {
-        "blueprint": "Sherpa Blanket",
-        "blueprintId": 1120,
-        "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 9,
-        "options": [
-          [
-            "30'' × 40''",
-            "50\" × 60\"",
-            "60\" × 80\""
-          ],
-          [
-            "Beige",
-            "Grey",
-            "White"
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1039,
-            "additional": 499,
-            "currency": "USD"
-          }
-        },
-        "cost": null
+        "cost": {
+          "min": 3631,
+          "max": 4964
+        }
       },
       {
         "blueprint": "Sherpa Blanket",
@@ -2774,19 +2792,29 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2031,
+          "max": 4353
+        }
       },
       {
-        "blueprint": "Picnic Blanket",
-        "blueprintId": 1124,
+        "blueprint": "Sherpa Blanket",
+        "blueprintId": 1120,
         "brand": "Generic brand",
         "provider": "Printify Choice",
         "providerId": 99,
         "makerCountry": "US",
-        "variants": 1,
+        "variants": 9,
         "options": [
           [
-            "61\" × 51\""
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ],
+          [
+            "Beige",
+            "Grey",
+            "White"
           ]
         ],
         "placeholders": [
@@ -2795,12 +2823,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 869,
-            "additional": 269,
+            "first": 1039,
+            "additional": 499,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2028,
+          "max": 4350
+        }
       },
       {
         "blueprint": "Picnic Blanket",
@@ -2826,7 +2857,39 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 4053,
+          "max": 4053
+        }
+      },
+      {
+        "blueprint": "Picnic Blanket",
+        "blueprintId": 1124,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 1,
+        "options": [
+          [
+            "61\" × 51\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 869,
+            "additional": 269,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 4050,
+          "max": 4050
+        }
       },
       {
         "blueprint": "Velveteen Microfiber Blanket (Two-sided print)",
@@ -2855,7 +2918,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2456,
+          "max": 5332
+        }
       },
       {
         "blueprint": "Velveteen Microfiber Blanket (Two-sided print)",
@@ -2884,35 +2950,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
-      },
-      {
-        "blueprint": "Arctic Fleece Blanket",
-        "blueprintId": 1328,
-        "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 3,
-        "options": [
-          [
-            "30'' × 40''",
-            "50\" × 60\"",
-            "60\" × 80\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 599,
-            "additional": 279,
-            "currency": "USD"
-          }
-        },
-        "cost": null
+        "cost": {
+          "min": 2453,
+          "max": 5329
+        }
       },
       {
         "blueprint": "Arctic Fleece Blanket",
@@ -2940,7 +2981,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1379,
+          "max": 3793
+        }
       },
       {
         "blueprint": "Arctic Fleece Blanket",
@@ -2972,7 +3016,72 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 1777,
+          "max": 4227
+        }
+      },
+      {
+        "blueprint": "Arctic Fleece Blanket",
+        "blueprintId": 1328,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 599,
+            "additional": 279,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1376,
+          "max": 3785
+        }
+      },
+      {
+        "blueprint": "Soft Polyester Blanket",
+        "blueprintId": 1337,
+        "brand": "Generic brand",
+        "provider": "Printify Choice",
+        "providerId": 99,
+        "makerCountry": "US",
+        "variants": 3,
+        "options": [
+          [
+            "30'' × 40''",
+            "50\" × 60\"",
+            "60\" × 80\""
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": null,
+          "US": {
+            "first": 759,
+            "additional": 329,
+            "currency": "USD"
+          }
+        },
+        "cost": {
+          "min": 1790,
+          "max": 3519
+        }
       },
       {
         "blueprint": "Soft Polyester Blanket",
@@ -3004,35 +3113,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
-      },
-      {
-        "blueprint": "Soft Polyester Blanket",
-        "blueprintId": 1337,
-        "brand": "Generic brand",
-        "provider": "Printify Choice",
-        "providerId": 99,
-        "makerCountry": "US",
-        "variants": 3,
-        "options": [
-          [
-            "30'' × 40''",
-            "50\" × 60\"",
-            "60\" × 80\""
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": null,
-          "US": {
-            "first": 1249,
-            "additional": 629,
-            "currency": "USD"
-          }
-        },
-        "cost": null
+        "cost": {
+          "min": 1793,
+          "max": 3522
+        }
       },
       {
         "blueprint": "Fleece Sherpa Blanket",
@@ -3063,7 +3147,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 3251,
+          "max": 3905
+        }
       },
       {
         "blueprint": "Fleece Sherpa Blanket",
@@ -3094,7 +3181,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 3248,
+          "max": 3902
+        }
       },
       {
         "blueprint": "Sherpa Blankets",
@@ -3128,7 +3218,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 4736,
+          "max": 7473
+        }
       },
       {
         "blueprint": "Throw Pillow",
@@ -3156,7 +3249,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 3539,
+          "max": 4236
+        }
       },
       {
         "blueprint": "Quilted Throw",
@@ -3182,7 +3278,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 4948,
+          "max": 4948
+        }
       },
       {
         "blueprint": "Quilted Throw",
@@ -3208,16 +3307,19 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 4951,
+          "max": 4951
+        }
       },
       {
         "blueprint": "Woven Blanket",
         "blueprintId": 1626,
         "brand": "Generic brand",
-        "provider": "MWW On Demand",
-        "providerId": 10,
+        "provider": "Pure Country, Inc.",
+        "providerId": 453,
         "makerCountry": "US",
-        "variants": 6,
+        "variants": 8,
         "options": [
           [
             "Artwork",
@@ -3226,7 +3328,8 @@
           [
             "52'' × 37''",
             "60\" × 50\"",
-            "80\" × 60\""
+            "54\" × 70\"",
+            "60\" × 80\""
           ]
         ],
         "placeholders": [
@@ -3235,12 +3338,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 1249,
-            "additional": 629,
+            "first": 1039,
+            "additional": 499,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2786,
+          "max": 5926
+        }
       },
       {
         "blueprint": "Woven Blanket",
@@ -3274,16 +3380,19 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2885,
+          "max": 6089
+        }
       },
       {
         "blueprint": "Woven Blanket",
         "blueprintId": 1626,
         "brand": "Generic brand",
-        "provider": "Pure Country, Inc.",
-        "providerId": 453,
+        "provider": "MWW On Demand",
+        "providerId": 10,
         "makerCountry": "US",
-        "variants": 8,
+        "variants": 6,
         "options": [
           [
             "Artwork",
@@ -3292,8 +3401,7 @@
           [
             "52'' × 37''",
             "60\" × 50\"",
-            "54\" × 70\"",
-            "60\" × 80\""
+            "80\" × 60\""
           ]
         ],
         "placeholders": [
@@ -3302,12 +3410,15 @@
         "shipping": {
           "GB": null,
           "US": {
-            "first": 1039,
-            "additional": 499,
+            "first": 1249,
+            "additional": 629,
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2889,
+          "max": 6094
+        }
       },
       {
         "blueprint": "Pixel Fleece Blanket (AOP)",
@@ -3334,7 +3445,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 5785,
+          "max": 8146
+        }
       },
       {
         "blueprint": "Pixel Fleece Blanket (AOP)",
@@ -3361,7 +3475,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 5782,
+          "max": 8143
+        }
       }
     ],
     "sweatshirt": [
@@ -11115,7 +11232,10 @@
             "currency": "USD"
           }
         },
-        "cost": null
+        "cost": {
+          "min": 2323,
+          "max": 2323
+        }
       },
       {
         "blueprint": "Classic Cuffed Beanie (Embroidery)",
@@ -11124,9 +11244,10 @@
         "provider": "Printify Choice",
         "providerId": 99,
         "makerCountry": "US",
-        "variants": 11,
+        "variants": 12,
         "options": [
           [
+            "Baby Pink",
             "Black",
             "Brown",
             "Dark Grey",
@@ -11163,9 +11284,10 @@
         "provider": "Printful",
         "providerId": 410,
         "makerCountry": "US",
-        "variants": 11,
+        "variants": 12,
         "options": [
           [
+            "Baby Pink",
             "Black",
             "Brown",
             "Dark Grey",
@@ -11177,6 +11299,43 @@
             "Spruce",
             "White",
             "Heather Grey"
+          ],
+          [
+            "One size"
+          ]
+        ],
+        "placeholders": [
+          "front"
+        ],
+        "shipping": {
+          "GB": {
+            "first": 459,
+            "additional": 159,
+            "currency": "USD"
+          },
+          "US": {
+            "first": 469,
+            "additional": 209,
+            "currency": "USD"
+          }
+        },
+        "cost": null
+      },
+      {
+        "blueprint": "Knit Beanie (Embroidery)",
+        "blueprintId": 1728,
+        "brand": "OTTO Cap",
+        "provider": "Printful",
+        "providerId": 410,
+        "makerCountry": "US",
+        "variants": 5,
+        "options": [
+          [
+            "Red",
+            "Black",
+            "Dark Navy",
+            "Gray",
+            "Dark Green"
           ],
           [
             "One size"
@@ -11224,43 +11383,6 @@
         ],
         "shipping": {
           "GB": null,
-          "US": {
-            "first": 469,
-            "additional": 209,
-            "currency": "USD"
-          }
-        },
-        "cost": null
-      },
-      {
-        "blueprint": "Knit Beanie (Embroidery)",
-        "blueprintId": 1728,
-        "brand": "OTTO Cap",
-        "provider": "Printful",
-        "providerId": 410,
-        "makerCountry": "US",
-        "variants": 5,
-        "options": [
-          [
-            "Red",
-            "Black",
-            "Dark Navy",
-            "Gray",
-            "Dark Green"
-          ],
-          [
-            "One size"
-          ]
-        ],
-        "placeholders": [
-          "front"
-        ],
-        "shipping": {
-          "GB": {
-            "first": 459,
-            "additional": 159,
-            "currency": "USD"
-          },
           "US": {
             "first": 469,
             "additional": 209,
