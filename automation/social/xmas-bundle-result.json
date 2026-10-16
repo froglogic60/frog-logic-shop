@@ -1,0 +1,62 @@
+{
+  "ranAt": "2026-10-16T10:06:23.300Z",
+  "dryRun": true,
+  "etsyStore": 29335686,
+  "results": [
+    {
+      "key": "us-hoodie",
+      "dry": true,
+      "variants": 30,
+      "printArea": {
+        "w": 2919,
+        "h": 1944
+      }
+    },
+    {
+      "key": "us-tee",
+      "dry": true,
+      "variants": 30,
+      "printArea": {
+        "w": 3951,
+        "h": 4919
+      }
+    },
+    {
+      "key": "us-beanie",
+      "dry": true,
+      "variants": 3,
+      "printArea": {
+        "w": 1500,
+        "h": 525
+      }
+    },
+    {
+      "key": "uk-hoodie",
+      "dry": true,
+      "variants": 25,
+      "printArea": {
+        "w": 3319,
+        "h": 2212
+      }
+    },
+    {
+      "key": "uk-tee",
+      "dry": true,
+      "variants": 19,
+      "printArea": {
+        "w": 4500,
+        "h": 5100
+      }
+    },
+    {
+      "key": "uk-blanket",
+      "dry": true,
+      "variants": 2,
+      "printArea": {
+        "w": 5025,
+        "h": 6525
+      }
+    }
+  ],
+  "errors": []
+}
