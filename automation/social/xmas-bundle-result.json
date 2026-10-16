@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-16T10:15:32.685Z",
+  "ranAt": "2026-10-16T10:17:44.865Z",
   "dryRun": false,
   "etsyStore": 29335686,
   "results": [
@@ -8,11 +8,7 @@
       "where": "us",
       "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Neurodivergent Gift, Ships from the US",
       "printifyProductId": "6ad1f92db7243250ec0835e2",
-      "printAreas": [
-        "2919x1944",
-        "3273x2180",
-        "3531x2352"
-      ],
+      "existed": true,
       "variants": [
         {
           "title": "White / M",
@@ -96,22 +92,22 @@
         },
         {
           "title": "White / 2XL",
-          "price": 3900,
+          "price": 3700,
           "costUsdCents": 2377
         },
         {
           "title": "Navy / 2XL",
-          "price": 3900,
+          "price": 3700,
           "costUsdCents": 2377
         },
         {
           "title": "Maroon / 2XL",
-          "price": 3900,
+          "price": 3700,
           "costUsdCents": 2377
         },
         {
           "title": "Sport Grey / 2XL",
-          "price": 3900,
+          "price": 3700,
           "costUsdCents": 2377
         },
         {
@@ -136,7 +132,7 @@
         },
         {
           "title": "Ash / 2XL",
-          "price": 3900,
+          "price": 3700,
           "costUsdCents": 2377
         }
       ],
@@ -147,11 +143,7 @@
       "where": "us",
       "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Shirt, Neurodivergent Gift, Ships from the US",
       "printifyProductId": "6ad1f931b7243250ec0835e9",
-      "printAreas": [
-        "3951x4919",
-        "3591x4472",
-        "3232x4024"
-      ],
+      "existed": true,
       "variants": [
         {
           "title": "Maroon / S",
@@ -286,9 +278,7 @@
       "where": "us",
       "title": "Socially Hibernating Christmas Frog Beanie — Embroidered Cute Frog in Santa Hat, Cuffed Winter Hat, Neurodivergent Gift, Ships from the US",
       "printifyProductId": "6ad1f93620886a0bc203b9ce",
-      "printAreas": [
-        "1500x525"
-      ],
+      "existed": true,
       "variants": [
         {
           "title": "Black / One size",
@@ -313,11 +303,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Jumper, Neurodivergent Gift, Made in the UK",
       "printifyProductId": "6ad1f9398ed12a970600ce7a",
-      "printAreas": [
-        "3319x2212",
-        "3909x2606",
-        "4500x3000"
-      ],
+      "existed": true,
       "variants": [
         {
           "title": "Ash / S",
@@ -341,7 +327,7 @@
         },
         {
           "title": "Ash / 2XL",
-          "price": 5000,
+          "price": 4200,
           "costUsdCents": 2924
         },
         {
@@ -366,7 +352,7 @@
         },
         {
           "title": "Maroon / 2XL",
-          "price": 5000,
+          "price": 4200,
           "costUsdCents": 2924
         },
         {
@@ -391,7 +377,7 @@
         },
         {
           "title": "Navy / 2XL",
-          "price": 5000,
+          "price": 4200,
           "costUsdCents": 2924
         },
         {
@@ -416,7 +402,7 @@
         },
         {
           "title": "Sport Grey / 2XL",
-          "price": 5000,
+          "price": 4200,
           "costUsdCents": 2924
         },
         {
@@ -441,7 +427,7 @@
         },
         {
           "title": "White / 2XL",
-          "price": 5000,
+          "price": 4200,
           "costUsdCents": 2924
         }
       ],
@@ -452,11 +438,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Top, Neurodivergent Gift, Made in the UK",
       "printifyProductId": "6ad1f93db7243250ec0835ef",
-      "printAreas": [
-        "4500x5100",
-        "4110x4658",
-        "3709x4203"
-      ],
+      "existed": true,
       "variants": [
         {
           "title": "Maroon / L",
@@ -561,10 +543,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog Fleece Blanket — Cute Frog in Santa Hat, Cosy Throw, Introvert Christmas Gift, Made in the UK",
       "printifyProductId": "6ad1f942b7243250ec0835f6",
-      "printAreas": [
-        "5025x6525",
-        "8025x9525"
-      ],
+      "existed": true,
       "variants": [
         {
           "title": "30'' × 40''",
