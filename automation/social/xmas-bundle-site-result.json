@@ -1,0 +1,1079 @@
+{
+  "ranAt": "2026-10-16T11:08:13.818Z",
+  "dryRun": false,
+  "siteStore": 28035653,
+  "results": [
+    {
+      "key": "us-hoodie",
+      "where": "us",
+      "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Neurodivergent Gift, Ships from the US",
+      "printifyProductId": "6ad205876e32083ae50fd7e8",
+      "printAreas": [
+        "2919x1944",
+        "3273x2180",
+        "3531x2352"
+      ],
+      "variants": [
+        {
+          "id": 32911,
+          "title": "White / M",
+          "colour": "White",
+          "size": "M",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32894,
+          "title": "Navy / S",
+          "colour": "Navy",
+          "size": "S",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32895,
+          "title": "Navy / M",
+          "colour": "Navy",
+          "size": "M",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32913,
+          "title": "White / XL",
+          "colour": "White",
+          "size": "XL",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32903,
+          "title": "Sport Grey / M",
+          "colour": "Sport Grey",
+          "size": "M",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32897,
+          "title": "Navy / XL",
+          "colour": "Navy",
+          "size": "XL",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32910,
+          "title": "White / S",
+          "colour": "White",
+          "size": "S",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32887,
+          "title": "Maroon / M",
+          "colour": "Maroon",
+          "size": "M",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32902,
+          "title": "Sport Grey / S",
+          "colour": "Sport Grey",
+          "size": "S",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32905,
+          "title": "Sport Grey / XL",
+          "colour": "Sport Grey",
+          "size": "XL",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32888,
+          "title": "Maroon / L",
+          "colour": "Maroon",
+          "size": "L",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32912,
+          "title": "White / L",
+          "colour": "White",
+          "size": "L",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32886,
+          "title": "Maroon / S",
+          "colour": "Maroon",
+          "size": "S",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32904,
+          "title": "Sport Grey / L",
+          "colour": "Sport Grey",
+          "size": "L",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32896,
+          "title": "Navy / L",
+          "colour": "Navy",
+          "size": "L",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32889,
+          "title": "Maroon / XL",
+          "colour": "Maroon",
+          "size": "XL",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32914,
+          "title": "White / 2XL",
+          "colour": "White",
+          "size": "2XL",
+          "price": 3700,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32898,
+          "title": "Navy / 2XL",
+          "colour": "Navy",
+          "size": "2XL",
+          "price": 3700,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32890,
+          "title": "Maroon / 2XL",
+          "colour": "Maroon",
+          "size": "2XL",
+          "price": 3700,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32906,
+          "title": "Sport Grey / 2XL",
+          "colour": "Sport Grey",
+          "size": "2XL",
+          "price": 3700,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32870,
+          "title": "Ash / S",
+          "colour": "Ash",
+          "size": "S",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32872,
+          "title": "Ash / L",
+          "colour": "Ash",
+          "size": "L",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32871,
+          "title": "Ash / M",
+          "colour": "Ash",
+          "size": "M",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32873,
+          "title": "Ash / XL",
+          "colour": "Ash",
+          "size": "XL",
+          "price": 3400,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 32874,
+          "title": "Ash / 2XL",
+          "colour": "Ash",
+          "size": "2XL",
+          "price": 3700,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/28035653/products/6ad205876e32083ae50fd7e8"
+    },
+    {
+      "key": "us-tee",
+      "where": "us",
+      "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Shirt, Neurodivergent Gift, Ships from the US",
+      "printifyProductId": "6ad2058b067604a3850d18ae",
+      "printAreas": [
+        "3951x4919",
+        "3591x4472",
+        "3232x4024"
+      ],
+      "variants": [
+        {
+          "id": 11976,
+          "title": "Maroon / S",
+          "colour": "Maroon",
+          "size": "S",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11989,
+          "title": "Navy / XL",
+          "colour": "Navy",
+          "size": "XL",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11986,
+          "title": "Navy / L",
+          "colour": "Navy",
+          "size": "L",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12102,
+          "title": "White / S",
+          "colour": "White",
+          "size": "S",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12103,
+          "title": "White / XL",
+          "colour": "White",
+          "size": "XL",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12073,
+          "title": "Sport Grey / XL",
+          "colour": "Sport Grey",
+          "size": "XL",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11987,
+          "title": "Navy / M",
+          "colour": "Navy",
+          "size": "M",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11974,
+          "title": "Maroon / L",
+          "colour": "Maroon",
+          "size": "L",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12071,
+          "title": "Sport Grey / M",
+          "colour": "Sport Grey",
+          "size": "M",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11977,
+          "title": "Maroon / XL",
+          "colour": "Maroon",
+          "size": "XL",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11988,
+          "title": "Navy / S",
+          "colour": "Navy",
+          "size": "S",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12070,
+          "title": "Sport Grey / L",
+          "colour": "Sport Grey",
+          "size": "L",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11975,
+          "title": "Maroon / M",
+          "colour": "Maroon",
+          "size": "M",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12100,
+          "title": "White / L",
+          "colour": "White",
+          "size": "L",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12101,
+          "title": "White / M",
+          "colour": "White",
+          "size": "M",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12072,
+          "title": "Sport Grey / S",
+          "colour": "Sport Grey",
+          "size": "S",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11850,
+          "title": "Ash / S",
+          "colour": "Ash",
+          "size": "S",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11851,
+          "title": "Ash / XL",
+          "colour": "Ash",
+          "size": "XL",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11849,
+          "title": "Ash / M",
+          "colour": "Ash",
+          "size": "M",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11848,
+          "title": "Ash / L",
+          "colour": "Ash",
+          "size": "L",
+          "price": 2200,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11978,
+          "title": "Maroon / 2XL",
+          "colour": "Maroon",
+          "size": "2XL",
+          "price": 2200,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12104,
+          "title": "White / 2XL",
+          "colour": "White",
+          "size": "2XL",
+          "price": 2200,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 12074,
+          "title": "Sport Grey / 2XL",
+          "colour": "Sport Grey",
+          "size": "2XL",
+          "price": 2200,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11990,
+          "title": "Navy / 2XL",
+          "colour": "Navy",
+          "size": "2XL",
+          "price": 2200,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 11852,
+          "title": "Ash / 2XL",
+          "colour": "Ash",
+          "size": "2XL",
+          "price": 2200,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/28035653/products/6ad2058b067604a3850d18ae"
+    },
+    {
+      "key": "us-beanie",
+      "where": "us",
+      "title": "Socially Hibernating Christmas Frog Beanie — Embroidered Cute Frog in Santa Hat, Cuffed Winter Hat, Neurodivergent Gift, Ships from the US",
+      "printifyProductId": "6ad2058f8368c0a023030145",
+      "printAreas": [
+        "1500x525"
+      ],
+      "variants": [
+        {
+          "id": 116417,
+          "title": "Black / One size",
+          "colour": "Black",
+          "size": null,
+          "price": 2200,
+          "costUsdCents": 1526,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 116421,
+          "title": "Dark Grey / One size",
+          "colour": "Dark Grey",
+          "size": null,
+          "price": 2200,
+          "costUsdCents": 1526,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 209
+        },
+        {
+          "id": 116425,
+          "title": "Navy / One size",
+          "colour": "Navy",
+          "size": null,
+          "price": 2200,
+          "costUsdCents": 1526,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 209
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/28035653/products/6ad2058f8368c0a023030145"
+    },
+    {
+      "key": "uk-hoodie",
+      "where": "uk",
+      "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Jumper, Neurodivergent Gift, Made in the UK",
+      "printifyProductId": "6ad205938368c0a023030148",
+      "printAreas": [
+        "3319x2212",
+        "3909x2606",
+        "4500x3000"
+      ],
+      "variants": [
+        {
+          "id": 32870,
+          "title": "Ash / S",
+          "colour": "Ash",
+          "size": "S",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32871,
+          "title": "Ash / M",
+          "colour": "Ash",
+          "size": "M",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32872,
+          "title": "Ash / L",
+          "colour": "Ash",
+          "size": "L",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32873,
+          "title": "Ash / XL",
+          "colour": "Ash",
+          "size": "XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32874,
+          "title": "Ash / 2XL",
+          "colour": "Ash",
+          "size": "2XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32886,
+          "title": "Maroon / S",
+          "colour": "Maroon",
+          "size": "S",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32887,
+          "title": "Maroon / M",
+          "colour": "Maroon",
+          "size": "M",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32888,
+          "title": "Maroon / L",
+          "colour": "Maroon",
+          "size": "L",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32889,
+          "title": "Maroon / XL",
+          "colour": "Maroon",
+          "size": "XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32890,
+          "title": "Maroon / 2XL",
+          "colour": "Maroon",
+          "size": "2XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32894,
+          "title": "Navy / S",
+          "colour": "Navy",
+          "size": "S",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32895,
+          "title": "Navy / M",
+          "colour": "Navy",
+          "size": "M",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32896,
+          "title": "Navy / L",
+          "colour": "Navy",
+          "size": "L",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32897,
+          "title": "Navy / XL",
+          "colour": "Navy",
+          "size": "XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32898,
+          "title": "Navy / 2XL",
+          "colour": "Navy",
+          "size": "2XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32902,
+          "title": "Sport Grey / S",
+          "colour": "Sport Grey",
+          "size": "S",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32903,
+          "title": "Sport Grey / M",
+          "colour": "Sport Grey",
+          "size": "M",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32904,
+          "title": "Sport Grey / L",
+          "colour": "Sport Grey",
+          "size": "L",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32905,
+          "title": "Sport Grey / XL",
+          "colour": "Sport Grey",
+          "size": "XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32906,
+          "title": "Sport Grey / 2XL",
+          "colour": "Sport Grey",
+          "size": "2XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32910,
+          "title": "White / S",
+          "colour": "White",
+          "size": "S",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32911,
+          "title": "White / M",
+          "colour": "White",
+          "size": "M",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32912,
+          "title": "White / L",
+          "colour": "White",
+          "size": "L",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32913,
+          "title": "White / XL",
+          "colour": "White",
+          "size": "XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        },
+        {
+          "id": 32914,
+          "title": "White / 2XL",
+          "colour": "White",
+          "size": "2XL",
+          "price": 4200,
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/28035653/products/6ad205938368c0a023030148"
+    },
+    {
+      "key": "uk-tee",
+      "where": "uk",
+      "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Top, Neurodivergent Gift, Made in the UK",
+      "printifyProductId": "6ad205968368c0a02303014a",
+      "printAreas": [
+        "4500x5100",
+        "4110x4658",
+        "3709x4203"
+      ],
+      "variants": [
+        {
+          "id": 11974,
+          "title": "Maroon / L",
+          "colour": "Maroon",
+          "size": "L",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11975,
+          "title": "Maroon / M",
+          "colour": "Maroon",
+          "size": "M",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11977,
+          "title": "Maroon / XL",
+          "colour": "Maroon",
+          "size": "XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11978,
+          "title": "Maroon / 2XL",
+          "colour": "Maroon",
+          "size": "2XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11986,
+          "title": "Navy / L",
+          "colour": "Navy",
+          "size": "L",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11987,
+          "title": "Navy / M",
+          "colour": "Navy",
+          "size": "M",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11988,
+          "title": "Navy / S",
+          "colour": "Navy",
+          "size": "S",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11989,
+          "title": "Navy / XL",
+          "colour": "Navy",
+          "size": "XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 11990,
+          "title": "Navy / 2XL",
+          "colour": "Navy",
+          "size": "2XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12070,
+          "title": "Sport Grey / L",
+          "colour": "Sport Grey",
+          "size": "L",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12071,
+          "title": "Sport Grey / M",
+          "colour": "Sport Grey",
+          "size": "M",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12072,
+          "title": "Sport Grey / S",
+          "colour": "Sport Grey",
+          "size": "S",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12073,
+          "title": "Sport Grey / XL",
+          "colour": "Sport Grey",
+          "size": "XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12074,
+          "title": "Sport Grey / 2XL",
+          "colour": "Sport Grey",
+          "size": "2XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12100,
+          "title": "White / L",
+          "colour": "White",
+          "size": "L",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12101,
+          "title": "White / M",
+          "colour": "White",
+          "size": "M",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12102,
+          "title": "White / S",
+          "colour": "White",
+          "size": "S",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12103,
+          "title": "White / XL",
+          "colour": "White",
+          "size": "XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        },
+        {
+          "id": 12104,
+          "title": "White / 2XL",
+          "colour": "White",
+          "size": "2XL",
+          "price": 1900,
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/28035653/products/6ad205968368c0a02303014a"
+    },
+    {
+      "key": "uk-blanket",
+      "where": "uk",
+      "title": "Socially Hibernating Christmas Frog Fleece Blanket — Cute Frog in Santa Hat, Cosy Throw, Introvert Christmas Gift, Made in the UK",
+      "printifyProductId": "6ad2059b250dce5be60010da",
+      "printAreas": [
+        "5025x6525",
+        "8025x9525"
+      ],
+      "variants": [
+        {
+          "id": 100925,
+          "title": "30'' × 40''",
+          "colour": null,
+          "size": "30'' × 40''",
+          "price": 2500,
+          "costUsdCents": 1777,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 129
+        },
+        {
+          "id": 100926,
+          "title": "50\" × 60\"",
+          "colour": null,
+          "size": "50\" × 60\"",
+          "price": 4100,
+          "costUsdCents": 2997,
+          "shipFirstUsdCents": 519,
+          "shipAdditionalUsdCents": 129
+        }
+      ],
+      "mockupLibrary": "https://printify.com/app/mockup-library/shops/28035653/products/6ad2059b250dce5be60010da"
+    }
+  ],
+  "errors": []
+}
