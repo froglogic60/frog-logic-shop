@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-16T10:29:35.036Z",
+  "ranAt": "2026-10-16T12:08:11.867Z",
   "dryRun": false,
   "etsyStore": 29335686,
   "results": [
@@ -11,129 +11,254 @@
       "existed": true,
       "variants": [
         {
+          "id": 32911,
           "title": "White / M",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "White",
+          "size": "M",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32894,
           "title": "Navy / S",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Navy",
+          "size": "S",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32895,
           "title": "Navy / M",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Navy",
+          "size": "M",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32913,
           "title": "White / XL",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "White",
+          "size": "XL",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32903,
           "title": "Sport Grey / M",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Sport Grey",
+          "size": "M",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32897,
           "title": "Navy / XL",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Navy",
+          "size": "XL",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32910,
           "title": "White / S",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "White",
+          "size": "S",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32887,
           "title": "Maroon / M",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Maroon",
+          "size": "M",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32902,
           "title": "Sport Grey / S",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Sport Grey",
+          "size": "S",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32905,
           "title": "Sport Grey / XL",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Sport Grey",
+          "size": "XL",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32888,
           "title": "Maroon / L",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Maroon",
+          "size": "L",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32912,
           "title": "White / L",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "White",
+          "size": "L",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32886,
           "title": "Maroon / S",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Maroon",
+          "size": "S",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32904,
           "title": "Sport Grey / L",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Sport Grey",
+          "size": "L",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32896,
           "title": "Navy / L",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Navy",
+          "size": "L",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32889,
           "title": "Maroon / XL",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Maroon",
+          "size": "XL",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32914,
           "title": "White / 2XL",
-          "price": 3700,
-          "costUsdCents": 2377
+          "colour": "White",
+          "size": "2XL",
+          "price": 4130,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32898,
           "title": "Navy / 2XL",
-          "price": 3700,
-          "costUsdCents": 2377
+          "colour": "Navy",
+          "size": "2XL",
+          "price": 4130,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32890,
           "title": "Maroon / 2XL",
-          "price": 3700,
-          "costUsdCents": 2377
+          "colour": "Maroon",
+          "size": "2XL",
+          "price": 4130,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32906,
           "title": "Sport Grey / 2XL",
-          "price": 3700,
-          "costUsdCents": 2377
+          "colour": "Sport Grey",
+          "size": "2XL",
+          "price": 4130,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32870,
           "title": "Ash / S",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Ash",
+          "size": "S",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32872,
           "title": "Ash / L",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Ash",
+          "size": "L",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32871,
           "title": "Ash / M",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Ash",
+          "size": "M",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32873,
           "title": "Ash / XL",
-          "price": 3400,
-          "costUsdCents": 2158
+          "colour": "Ash",
+          "size": "XL",
+          "price": 3830,
+          "costUsdCents": 2158,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 32874,
           "title": "Ash / 2XL",
-          "price": 3700,
-          "costUsdCents": 2377
+          "colour": "Ash",
+          "size": "2XL",
+          "price": 4130,
+          "costUsdCents": 2377,
+          "shipFirstUsdCents": 739,
+          "shipAdditionalUsdCents": 209
         }
       ],
       "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f92db7243250ec0835e2"
@@ -146,129 +271,254 @@
       "existed": true,
       "variants": [
         {
+          "id": 11976,
           "title": "Maroon / S",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Maroon",
+          "size": "S",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11989,
           "title": "Navy / XL",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Navy",
+          "size": "XL",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11986,
           "title": "Navy / L",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Navy",
+          "size": "L",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12102,
           "title": "White / S",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "White",
+          "size": "S",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12103,
           "title": "White / XL",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "White",
+          "size": "XL",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12073,
           "title": "Sport Grey / XL",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Sport Grey",
+          "size": "XL",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11987,
           "title": "Navy / M",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Navy",
+          "size": "M",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11974,
           "title": "Maroon / L",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Maroon",
+          "size": "L",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12071,
           "title": "Sport Grey / M",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Sport Grey",
+          "size": "M",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11977,
           "title": "Maroon / XL",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Maroon",
+          "size": "XL",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11988,
           "title": "Navy / S",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Navy",
+          "size": "S",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12070,
           "title": "Sport Grey / L",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Sport Grey",
+          "size": "L",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11975,
           "title": "Maroon / M",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Maroon",
+          "size": "M",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12100,
           "title": "White / L",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "White",
+          "size": "L",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12101,
           "title": "White / M",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "White",
+          "size": "M",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12072,
           "title": "Sport Grey / S",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Sport Grey",
+          "size": "S",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11850,
           "title": "Ash / S",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Ash",
+          "size": "S",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11851,
           "title": "Ash / XL",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Ash",
+          "size": "XL",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11849,
           "title": "Ash / M",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Ash",
+          "size": "M",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11848,
           "title": "Ash / L",
-          "price": 2200,
-          "costUsdCents": 968
+          "colour": "Ash",
+          "size": "L",
+          "price": 2246,
+          "costUsdCents": 968,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11978,
           "title": "Maroon / 2XL",
-          "price": 2200,
-          "costUsdCents": 1177
+          "colour": "Maroon",
+          "size": "2XL",
+          "price": 2246,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12104,
           "title": "White / 2XL",
-          "price": 2200,
-          "costUsdCents": 1177
+          "colour": "White",
+          "size": "2XL",
+          "price": 2246,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 12074,
           "title": "Sport Grey / 2XL",
-          "price": 2200,
-          "costUsdCents": 1177
+          "colour": "Sport Grey",
+          "size": "2XL",
+          "price": 2246,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11990,
           "title": "Navy / 2XL",
-          "price": 2200,
-          "costUsdCents": 1177
+          "colour": "Navy",
+          "size": "2XL",
+          "price": 2246,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 11852,
           "title": "Ash / 2XL",
-          "price": 2200,
-          "costUsdCents": 1177
+          "colour": "Ash",
+          "size": "2XL",
+          "price": 2246,
+          "costUsdCents": 1177,
+          "shipFirstUsdCents": 399,
+          "shipAdditionalUsdCents": 209
         }
       ],
       "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f931b7243250ec0835e9"
@@ -281,19 +531,34 @@
       "existed": true,
       "variants": [
         {
+          "id": 116417,
           "title": "Black / One size",
-          "price": 2200,
-          "costUsdCents": 1526
+          "colour": "Black",
+          "size": null,
+          "price": 2260,
+          "costUsdCents": 1526,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 116421,
           "title": "Dark Grey / One size",
-          "price": 2200,
-          "costUsdCents": 1526
+          "colour": "Dark Grey",
+          "size": null,
+          "price": 2260,
+          "costUsdCents": 1526,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 209
         },
         {
+          "id": 116425,
           "title": "Navy / One size",
-          "price": 2200,
-          "costUsdCents": 1526
+          "colour": "Navy",
+          "size": null,
+          "price": 2260,
+          "costUsdCents": 1526,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 209
         }
       ],
       "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f93620886a0bc203b9ce"
@@ -306,129 +571,254 @@
       "existed": true,
       "variants": [
         {
+          "id": 32870,
           "title": "Ash / S",
+          "colour": "Ash",
+          "size": "S",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32871,
           "title": "Ash / M",
+          "colour": "Ash",
+          "size": "M",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32872,
           "title": "Ash / L",
+          "colour": "Ash",
+          "size": "L",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32873,
           "title": "Ash / XL",
+          "colour": "Ash",
+          "size": "XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32874,
           "title": "Ash / 2XL",
+          "colour": "Ash",
+          "size": "2XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32886,
           "title": "Maroon / S",
+          "colour": "Maroon",
+          "size": "S",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32887,
           "title": "Maroon / M",
+          "colour": "Maroon",
+          "size": "M",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32888,
           "title": "Maroon / L",
+          "colour": "Maroon",
+          "size": "L",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32889,
           "title": "Maroon / XL",
+          "colour": "Maroon",
+          "size": "XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32890,
           "title": "Maroon / 2XL",
+          "colour": "Maroon",
+          "size": "2XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32894,
           "title": "Navy / S",
+          "colour": "Navy",
+          "size": "S",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32895,
           "title": "Navy / M",
+          "colour": "Navy",
+          "size": "M",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32896,
           "title": "Navy / L",
+          "colour": "Navy",
+          "size": "L",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32897,
           "title": "Navy / XL",
+          "colour": "Navy",
+          "size": "XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32898,
           "title": "Navy / 2XL",
+          "colour": "Navy",
+          "size": "2XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32902,
           "title": "Sport Grey / S",
+          "colour": "Sport Grey",
+          "size": "S",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32903,
           "title": "Sport Grey / M",
+          "colour": "Sport Grey",
+          "size": "M",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32904,
           "title": "Sport Grey / L",
+          "colour": "Sport Grey",
+          "size": "L",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32905,
           "title": "Sport Grey / XL",
+          "colour": "Sport Grey",
+          "size": "XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32906,
           "title": "Sport Grey / 2XL",
+          "colour": "Sport Grey",
+          "size": "2XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32910,
           "title": "White / S",
+          "colour": "White",
+          "size": "S",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32911,
           "title": "White / M",
+          "colour": "White",
+          "size": "M",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32912,
           "title": "White / L",
+          "colour": "White",
+          "size": "L",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32913,
           "title": "White / XL",
+          "colour": "White",
+          "size": "XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         },
         {
+          "id": 32914,
           "title": "White / 2XL",
+          "colour": "White",
+          "size": "2XL",
           "price": 4200,
-          "costUsdCents": 2924
+          "costUsdCents": 2924,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 299
         }
       ],
       "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f9398ed12a970600ce7a"
@@ -441,99 +831,194 @@
       "existed": true,
       "variants": [
         {
+          "id": 11974,
           "title": "Maroon / L",
+          "colour": "Maroon",
+          "size": "L",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11975,
           "title": "Maroon / M",
+          "colour": "Maroon",
+          "size": "M",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11977,
           "title": "Maroon / XL",
+          "colour": "Maroon",
+          "size": "XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11978,
           "title": "Maroon / 2XL",
+          "colour": "Maroon",
+          "size": "2XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11986,
           "title": "Navy / L",
+          "colour": "Navy",
+          "size": "L",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11987,
           "title": "Navy / M",
+          "colour": "Navy",
+          "size": "M",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11988,
           "title": "Navy / S",
+          "colour": "Navy",
+          "size": "S",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11989,
           "title": "Navy / XL",
+          "colour": "Navy",
+          "size": "XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 11990,
           "title": "Navy / 2XL",
+          "colour": "Navy",
+          "size": "2XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12070,
           "title": "Sport Grey / L",
+          "colour": "Sport Grey",
+          "size": "L",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12071,
           "title": "Sport Grey / M",
+          "colour": "Sport Grey",
+          "size": "M",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12072,
           "title": "Sport Grey / S",
+          "colour": "Sport Grey",
+          "size": "S",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12073,
           "title": "Sport Grey / XL",
+          "colour": "Sport Grey",
+          "size": "XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12074,
           "title": "Sport Grey / 2XL",
+          "colour": "Sport Grey",
+          "size": "2XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12100,
           "title": "White / L",
+          "colour": "White",
+          "size": "L",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12101,
           "title": "White / M",
+          "colour": "White",
+          "size": "M",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12102,
           "title": "White / S",
+          "colour": "White",
+          "size": "S",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12103,
           "title": "White / XL",
+          "colour": "White",
+          "size": "XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         },
         {
+          "id": 12104,
           "title": "White / 2XL",
+          "colour": "White",
+          "size": "2XL",
           "price": 1900,
-          "costUsdCents": 936
+          "costUsdCents": 936,
+          "shipFirstUsdCents": 359,
+          "shipAdditionalUsdCents": 199
         }
       ],
       "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f93db7243250ec0835ef"
@@ -546,14 +1031,24 @@
       "existed": true,
       "variants": [
         {
+          "id": 100925,
           "title": "30'' × 40''",
+          "colour": null,
+          "size": "30'' × 40''",
           "price": 2500,
-          "costUsdCents": 1777
+          "costUsdCents": 1777,
+          "shipFirstUsdCents": 469,
+          "shipAdditionalUsdCents": 129
         },
         {
+          "id": 100926,
           "title": "50\" × 60\"",
+          "colour": null,
+          "size": "50\" × 60\"",
           "price": 4100,
-          "costUsdCents": 2997
+          "costUsdCents": 2997,
+          "shipFirstUsdCents": 519,
+          "shipAdditionalUsdCents": 129
         }
       ],
       "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad1f942b7243250ec0835f6"
