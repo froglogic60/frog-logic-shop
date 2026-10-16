@@ -12,8 +12,7 @@
 // Reads nothing, writes nothing, takes no payment. Safe to call on every
 // basket change.
 
-import catalog from "./catalog.json";
-import { postageFor, destinationsFor, forCountry, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
+import { catalog, postageFor, destinationsFor, forCountry, COUNTRY_NAMES, CUSTOMS_RISK } from "./create-checkout.js";
 
 // MUST match create-checkout.js. These were two separate 5000s until 27 Aug
 // 2026, so raising the threshold in one place alone would have had the basket
@@ -47,7 +46,7 @@ export default async (req) => {
   // click — one unavailable sticker taking six good items down with it, at the
   // last possible moment. Say it here instead, while it can still be removed.
   const unavailable = lines
-    .filter((l) => l.item.type === "physical" && !l.item.printifyProductId)
+    .filter((l) => l.item.type === "physical" && !l.item.printifyProductId && !l.item.parts)
     .map((l) => ({ id: l.item.id, name: l.item.name }));
 
   // Where this basket can go, and where it is going. An unservable choice falls
@@ -56,7 +55,8 @@ export default async (req) => {
   const destinations = destinationsFor(lines);
   const asked = String(body.country || "GB").toUpperCase();
   let country = asked;
-  if (!destinations.includes(country)) country = "GB";
+  // A basket holding only the US Christmas set can only go to the US.
+  if (!destinations.includes(country)) country = destinations.includes("GB") || !destinations.length ? "GB" : destinations[0];
 
   // The US range is made by a US maker, at its own price. Every figure below
   // uses the version that would actually be made for this country.

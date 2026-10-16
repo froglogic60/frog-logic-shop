@@ -18,8 +18,7 @@
 // Stripe -> Developers -> Webhooks, listening for checkout.session.completed.
 
 import Stripe from "stripe";
-import catalog from "./catalog.json";
-import { forCountry } from "./create-checkout.js";
+import { catalog, forCountry } from "./create-checkout.js";
 
 // create-checkout.js writes the basket as "id~variant~qty~size|id~variant~qty~size",
 // split across basket_0, basket_1... because Stripe caps a metadata value at
@@ -45,7 +44,8 @@ function readBasket(metadata = {}) {
     const [id, variantId, qty, size] = row.split("~");
     return {
       id,
-      variantId: Number(variantId) || null,
+      // A Christmas set carries one variant per part, "v1.v2.v3"; kept as text.
+      variantId: String(variantId || "").includes(".") ? variantId : Number(variantId) || null,
       qty: Math.max(1, Number(qty) || 1),
       size: size || null,
     };
@@ -183,6 +183,21 @@ export default async (req) => {
     const base = catalog.find((p) => p.id === row.id);
     const item = base && forCountry(base, dest);
     if (!item) { console.error("Webhook: unknown product id", row.id, "in session", session.id); continue; }
+    if (item.parts) {
+      // A Christmas set: one line per part, each its own Printify product
+      // (and, in the UK, its own maker and parcel). Variants are "v1.v2.v3"
+      // in the order of item.parts, as create-checkout wrote them.
+      if (item.notMadeHere) { console.error(`Set ${item.id} paid for delivery to ${dest}, where it isn't made — NOT sent to Printify. Refund it in Stripe.`); continue; }
+      const ids = String(row.variantId || "").split(".").map(Number);
+      item.parts.forEach((part, i) => {
+        const option = part.options.find((o) => o.variantId === ids[i]);
+        if (!option) { console.error(`Set ${item.id}: no ${part.label} variant ${ids[i]} on session ${session.id} — that part NOT ordered`); return; }
+        const size = [option.colour, option.size].filter(Boolean).join(", ") || null;
+        lines.push({ id: `${item.id}:${part.key}`, variantId: option.variantId, qty: row.qty, size,
+          item: { id: `${item.id}-${part.key}`, type: "physical", printifyProductId: part.printifyProductId, shipping: { provider: part.provider } } });
+      });
+      continue;
+    }
     if (Array.isArray(item.sizes) && !row.variantId) {
       console.error("Ordering", item.id, "with no size — check create-checkout");
     }

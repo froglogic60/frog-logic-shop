@@ -30,8 +30,15 @@
 // (Site settings → Environment variables). Nothing else.
 
 import Stripe from "stripe";
-import catalog from "./catalog.json";
+import shopCatalog from "./catalog.json";
+import bundles from "./bundles.json";
 import zoneData from "./shipping-zones.json";
+
+// The one-price Christmas sets (Sam, 16 Oct 2026) live in bundles.json, not
+// catalog.json, because wire-catalog.js rewrites catalog.json from Printify and
+// would drop them. Each set has `parts` (hoodie, tee, beanie or throw), each
+// part its own Printify product and the colour/size options it comes in.
+export const catalog = [...shopCatalog, ...bundles];
 
 // Goods total, in pence, above which UK delivery is free.
 //
@@ -101,6 +108,9 @@ export const CUSTOMS_RISK = (c) => c !== "GB" && c !== "US";
 // shipping at all, so rateFor() returns null and the US is simply not offered
 // for a basket containing it. Everywhere else the entry is used as it is.
 export function forCountry(item, country) {
+  // A set is made in one country only: the UK set by UK makers, the US set by
+  // a US maker. It isn't offered anywhere else.
+  if (item.parts) return item.country === country ? item : { ...item, shipping: null, notMadeHere: true };
   if (country !== "US" || item.type !== "physical") return item;
   if (!item.us) return { ...item, shipping: null, notMadeHere: true };
   const v = { ...item, ...item.us, freeUkPost: false };
@@ -158,6 +168,9 @@ export function postageFor(lines, country = "GB") {
   const unknown = [];
   for (const { item, qty } of lines) {
     if (item.type !== "physical") continue;
+    // A set's price includes its own delivery (one price, Sam's ask), so it
+    // adds nothing to the postage.
+    if (item.parts) continue;
     // Tees and mugs carry their UK postage in the price (Sam, 5 Oct 2026:
     // "free UK delivery built in"), so they add nothing to a UK parcel. The
     // flag is set by wire-catalog.js from the product kind. Everything else —
@@ -189,7 +202,40 @@ export function postageFor(lines, country = "GB") {
 export function destinationsFor(lines) {
   const physical = lines.filter((l) => l.item.type === "physical");
   if (!physical.length) return DESTINATIONS.slice();
-  return DESTINATIONS.filter((c) => physical.every((l) => rateFor(forCountry(l.item, c), c)));
+  return DESTINATIONS.filter((c) => physical.every((l) => {
+    const v = forCountry(l.item, c);
+    return v.parts ? !v.notMadeHere : rateFor(v, c);
+  }));
+}
+
+// What a set's options are called, in the basket and on the Stripe receipt:
+// "Navy, L", "Black", or "" for a part with only one option.
+export const optionLabel = (o) => [o.colour, o.size].filter(Boolean).join(", ");
+
+// The picks for a set, from the text the page sends as its "size":
+//   "Hoodie: Navy, L · Tee: Ash, M · Beanie: Black"
+// Every part with a choice must be named, with an option it really comes in.
+// A part with only one option (the throw) is filled in. Refuses rather than
+// guesses, for the same reason sizes do: a wrong size is a return.
+export function resolveSet(item, text) {
+  const given = new Map();
+  for (const piece of String(text || "").split("·")) {
+    const i = piece.indexOf(":");
+    if (i > 0) given.set(piece.slice(0, i).trim().toLowerCase(), piece.slice(i + 1).trim().toLowerCase());
+  }
+  const picks = [];
+  for (const part of item.parts) {
+    let option = part.options.length === 1 ? part.options[0] : null;
+    if (!option) {
+      const want = given.get(part.label.toLowerCase());
+      if (!want) return { error: `Please choose the ${part.label.toLowerCase()} colour and size for "${item.name}".` };
+      option = part.options.find((o) => optionLabel(o).toLowerCase() === want);
+      if (!option) return { error: `The ${part.label.toLowerCase()} in "${item.name}" doesn't come in ${want}.` };
+    }
+    picks.push({ part, option });
+  }
+  const label = picks.filter((p) => p.part.options.length > 1).map((p) => `${p.part.label}: ${optionLabel(p.option)}`).join(" · ");
+  return { picks, label };
 }
 
 export default async (req) => {
@@ -234,7 +280,7 @@ export default async (req) => {
       return json({ error: `"${item.name}" isn't made in ${COUNTRY_NAMES[country] || country} yet, so it can't be posted there.`, id: item.id }, 400);
     }
 
-    if (item.type === "physical" && !item.printifyProductId) {
+    if (item.type === "physical" && !item.printifyProductId && !item.parts) {
       // Real print-ready artwork hasn't been loaded into Printify for this
       // piece yet, so there's nothing to fulfil an order with. Fail clearly
       // rather than taking money for something that can't ship.
@@ -247,7 +293,14 @@ export default async (req) => {
     // Small to someone who wanted a 2XL is a return, a refund and a lost customer.
     let variantId = item.printifyVariantId;
     let chosenSize = null;
-    if (Array.isArray(item.sizes) && item.sizes.length) {
+    if (item.parts) {
+      // A set: one variant per part, written "v1.v2.v3" in the basket record
+      // in the order of item.parts; the webhook splits it back out.
+      const set = resolveSet(item, raw.size);
+      if (set.error) return json({ error: set.error, id: item.id }, 400);
+      variantId = set.picks.map((p) => p.option.variantId).join(".");
+      chosenSize = set.label;
+    } else if (Array.isArray(item.sizes) && item.sizes.length) {
       if (!raw.size) {
         return json({ error: `Please choose a size for "${item.name}".`, id: item.id, needsSize: item.sizes.map((s) => s.size) }, 400);
       }
@@ -351,7 +404,9 @@ export default async (req) => {
               ? "Free UK delivery (over £80)"
               : freeDelivery
                 ? "Free UK delivery"
-                : "Delivery to " + (COUNTRY_NAMES[country] || country),
+                : postage === 0
+                  ? "Delivery included"
+                  : "Delivery to " + (COUNTRY_NAMES[country] || country),
           },
         }]
       : undefined,

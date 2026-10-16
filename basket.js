@@ -257,7 +257,8 @@
       if (l.size) {
         var s = document.createElement("p");
         s.className = "bk-size";
-        s.textContent = "Size " + l.size;
+        // A Christmas set's "size" is its three picks ("Hoodie: Navy, L · …").
+        s.textContent = l.size.indexOf(":") !== -1 ? l.size : "Size " + l.size;
         left.appendChild(s);
       }
 
@@ -571,6 +572,9 @@
     render();
     document.addEventListener("click", interceptBuy, true);
   }
+
+  // christmas-set.js adds its sets through this.
+  window.FrogBasket = { add: add };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
