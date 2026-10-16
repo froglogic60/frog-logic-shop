@@ -10,6 +10,10 @@ on:
         description: "Report only, create nothing"
         type: boolean
         default: true
+      reprint:
+        description: "Also replace artwork/placement on products already built"
+        type: boolean
+        default: false
       mockups_only:
         description: "Only download mockups of the built products for checking"
         type: boolean
@@ -31,6 +35,7 @@ jobs:
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          REPRINT: ${{ inputs.reprint && '1' || '0' }}
       - name: Download mockups for checking
         if: ${{ inputs.mockups_only }}
         working-directory: automation/social
