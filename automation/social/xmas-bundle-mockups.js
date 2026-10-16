@@ -23,10 +23,13 @@ const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(
   fs.mkdirSync(OUT, { recursive: true });
   for (const r of result.results) {
     const prod = await api(`/shops/${result.etsyStore}/products/${r.printifyProductId}.json`);
-    const byVariant = new Map((prod.variants || []).map((v) => [v.id, v.title]));
+    // Only enabled variants: an image lists every variant it fits, disabled
+    // ones included, so the first id isn't necessarily a colour on sale.
+    const byVariant = new Map((prod.variants || []).filter((v) => v.is_enabled).map((v) => [v.id, v.title]));
     const seen = new Set();
     for (const img of prod.images || []) {
-      const vt = byVariant.get(img.variant_ids[0]) || "";
+      const vid = img.variant_ids.find((id) => byVariant.has(id));
+      const vt = byVariant.get(vid) || "";
       const colour = vt.split("/")[0].trim();
       const key = `${camera(img.src)}-${colour}`;
       if (seen.has(key)) continue;

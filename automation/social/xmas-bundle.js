@@ -30,6 +30,9 @@ const path = require("path");
 const KEY = process.env.PRINTIFY_API_KEY;
 if (!KEY) { console.error("Missing PRINTIFY_API_KEY"); process.exit(1); }
 const DRY = process.env.DRY_RUN === "1";
+// REPRINT=1: on products that already exist, also replace the artwork and
+// placement (only safe before photos are chosen in the mockup library).
+const REPRINT = process.env.REPRINT === "1";
 const OUT = path.join(__dirname, "xmas-bundle-result.json");
 const RAW = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/artwork/frogs/";
 
@@ -175,7 +178,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
         continue;
       }
 
-      const art = spec.art || { light: "socially-hibernating.png", dark: "socially-hibernating-dark.png" };
+      const art = spec.art || { light: "socially-hibernating-tight.png", dark: "socially-hibernating-dark-tight.png" };
       const areas = [];
       for (const tone of ["light", "dark"]) {
         const group = priced.filter((v) => (tone === "dark") === v.dark);
@@ -194,7 +197,11 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
         } else {
           // Square garment art: one scale that fits the tightest size's area.
           const tight = Math.min(...group.map((v) => v.ph.height / v.ph.width));
-          const scale = Math.min(1, tight / ratio) * (spec.key.includes("beanie") ? 1 : 0.9);
+          // Hoodies: fill the short print area's height. Tees: 75% (a full-height
+          // tee print would run from collar to hem). First mockups, 16 Oct 2026,
+          // showed the hoodie print far too small with untrimmed art at 90%.
+          const share = spec.key.includes("tee") ? 0.75 : 1;
+          const scale = Math.min(1, tight / ratio) * share;
           areas.push({ variant_ids: group.map((v) => v.id), placeholders: [{ position: spec.position, images: [{ id: img.id, x: 0.5, y: 0.5, scale, angle: 0 }] }] });
         }
       }
@@ -211,10 +218,12 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
       if (already) {
         // Already built: only the prices are brought up to date (artwork and
         // words are left as they are, so chosen photos aren't disturbed).
-        await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", { variants: priced.map((v) => ({ id: v.id, price: v.price, is_enabled: true })) });
+        const update = { variants: priced.map((v) => ({ id: v.id, price: v.price, is_enabled: true })) };
+        if (REPRINT) update.print_areas = areas;
+        await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", update);
         const fresh = await api(`/shops/${etsy.id}/products/${already.id}.json`);
         const vs = (fresh.variants || []).filter((v) => v.is_enabled).map((v) => ({ title: v.title, price: v.price, costUsdCents: v.cost }));
-        console.log(`  exists (${already.id}) — prices updated`);
+        console.log(`  exists (${already.id}) — prices${REPRINT ? " and artwork" : ""} updated`);
         results.push({ key: spec.key, where: spec.where, title: spec.title, printifyProductId: already.id, existed: true, variants: vs,
           mockupLibrary: `https://printify.com/app/mockup-library/shops/${etsy.id}/products/${already.id}` });
         continue;
