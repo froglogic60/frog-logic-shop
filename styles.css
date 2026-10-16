@@ -60,6 +60,10 @@ a{ color: var(--ink); }
 
 /* ===== Header ===== */
 .site-header{ padding:16px 0; position:sticky; top:0; background:rgba(237,231,219,.94); backdrop-filter:blur(8px); z-index:20; border-bottom:2px solid var(--ink); }
+/* The sticky header covers the top of whatever a menu link jumps to (on a phone
+   it is over 200px tall), so the section's heading ended up hidden behind it.
+   --header-h is measured on the page (index.html); 150px is the fallback. */
+section[id]{ scroll-margin-top:calc(var(--header-h, 150px) + 8px); }
 .header-row{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
 .wordmark{ display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:600; font-size:1.3rem; color:var(--ink); text-decoration:none; letter-spacing:-0.02em; }
 .wordmark img{ width:34px; height:auto; display:block; }
