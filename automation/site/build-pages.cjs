@@ -367,6 +367,91 @@ function sitemap(pages) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows.join("\n")}\n</urlset>\n`;
 }
 
+// ---- Google Merchant Center product feed (16 Oct 2026, "back to getting
+// seen"): free listings put the physical pieces in Google's Shopping tab and
+// image results. Physical pieces only, UK only, for now: Google's policy is
+// unclear on downloadable files, and US listings would need USD prices.
+// Halloween is left out (retires 31 Oct). Shipping is the one-item UK rate the
+// till charges; tees and mugs post free. Served at /google-feed.xml.
+const FEED = {
+  "Tee": { name: "T-Shirt", tail: "Unisex Heavy Cotton Tee", cat: "Apparel & Accessories > Clothing > Shirts & Tops", apparel: true },
+  "Mug": { name: "Mug", tail: "11oz Ceramic Mug", cat: "Home & Garden > Kitchen & Dining > Tableware > Drinkware > Mugs" },
+  "Wall print": { name: "Wall Print", tail: "16x16 inch Art Poster", cat: "Home & Garden > Decor > Artwork > Posters, Prints & Visual Artwork" },
+  "Tote": { name: "Tote Bag", tail: "Cotton Tote", cat: "Luggage & Bags > Shopping Totes" },
+  "Notebook": { name: "Notebook", tail: "A5 Wirobound Notebook", cat: "Office Supplies > General Office Supplies > Paper Products > Notebooks & Notepads" },
+  "Water bottle": { name: "Water Bottle", tail: "Printed Water Bottle", cat: "Home & Garden > Kitchen & Dining > Food & Beverage Carriers > Water Bottles" },
+};
+function ukPostage(entry) {
+  if (!entry || entry.freeUkPost) return 0;
+  const s = entry.shipping || {};
+  let zones = {};
+  try { zones = JSON.parse(fs.readFileSync(path.join(ROOT, "netlify", "functions", "shipping-zones.json"), "utf8")).providers || {}; } catch {}
+  const table = zones[s.zoneKey] || zones[String(s.provider)];
+  const z = table && (table.zones || []).find((x) => x.countries.includes("GB"));
+  const pence = z && z.first != null ? z.first : s.first;
+  return pence == null ? null : pence / 100;
+}
+function feed(pages, shop) {
+  const x = (s) => esc(String(s).replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
+  const items = [];
+  for (const p of pages) {
+    if (p.group !== "physical" || p.item.halloween || !p.photo) continue;
+    const kind = kindOf(p.item.num);
+    const f = FEED[kind];
+    if (!f) continue;
+    const id = shop.checkoutId(p.item.num, p.item.word);
+    const entry = CATALOG.find((c) => c.id === id);
+    if (!entry) continue; // not orderable at the till, so not listed
+    const post = ukPostage(entry);
+    if (post == null) continue;
+    const title = `${p.item.word}${p.item.frog ? " Cute Frog" : ""} ${f.name} – Neurodivergent ADHD & Autism Gift, ${f.tail}`.slice(0, 150);
+    const desc = [p.item.line, copyFor(p.item, "physical").paras[1], PHYSICAL[kind].how, "Made by Frog Logic, a small UK shop run by one neurodivergent person."].join(" ");
+    const base = {
+      link: `${SITE}/p/${p.slug}/`, image: p.photo.src, price: `${Number(entry.price).toFixed(2)} GBP`,
+      cat: f.cat, type: `Frog Logic > ${p.item.frog ? "The frogs" : "The words"} > ${kind}`,
+    };
+    const common = (extra) => `    <item>
+${extra}
+      <title>${x(title)}</title>
+      <description>${x(desc).slice(0, 5000)}</description>
+      <link>${x(base.link)}</link>
+      <g:image_link>${x(base.image)}</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>${base.price}</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Frog Logic</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>${x(base.cat)}</g:google_product_category>
+      <g:product_type>${x(base.type)}</g:product_type>
+      <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>${post.toFixed(2)} GBP</g:price></g:shipping>
+    </item>`;
+    if (f.apparel && Array.isArray(entry.sizes) && entry.sizes.length) {
+      const colour = p.item.frog ? "White" : "Charcoal";
+      for (const s of entry.sizes) {
+        items.push(common(`      <g:id>${x(id + "-" + s.size)}</g:id>
+      <g:item_group_id>${x(id)}</g:item_group_id>
+      <g:size>${x(s.size)}</g:size>
+      <g:size_system>UK</g:size_system>
+      <g:color>${colour}</g:color>
+      <g:gender>unisex</g:gender>
+      <g:age_group>adult</g:age_group>`));
+      }
+    } else {
+      items.push(common(`      <g:id>${x(id)}</g:id>`));
+    }
+  }
+  return { count: items.length, xml: `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Frog Logic</title>
+    <link>${SITE}/</link>
+    <description>Words for how it actually feels — tees, mugs, prints and more for neurodivergent adults.</description>
+${items.join("\n")}
+  </channel>
+</rss>
+` };
+}
+
 (async () => {
   const shop = loadShop();
   shopRef = shop;
@@ -378,6 +463,9 @@ function sitemap(pages) {
     fs.writeFileSync(path.join(OUT, p.slug, "index.html"), buildPage(p, pickRelated(p, pages), shop));
   }
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages));
+  const gf = feed(pages, shop);
+  fs.writeFileSync(path.join(ROOT, "google-feed.xml"), gf.xml);
+  console.log(`google-feed.xml: ${gf.count} items`);
   let imgs = 0;
   if (process.env.SKIP_IMAGES !== "1") imgs = await renderOg(pages);
   console.log(`${pages.length} pages written to /p/, ${imgs} share images rendered, sitemap.xml has ${pages.length + 4} URLs`);
