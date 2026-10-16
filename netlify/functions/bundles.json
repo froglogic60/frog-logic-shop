@@ -105,7 +105,7 @@
    {"size": "30'' × 40''", "variantId": 100925}
   ]}
  ]},
- {"id": "xmas-set-us", "name": "Socially Hibernating Christmas set (US)", "type": "physical", "currency": "gbp", "price": 88, "country": "US", "parts": [
+ {"id": "xmas-set-us", "name": "Socially Hibernating Christmas set (US)", "type": "physical", "currency": "gbp", "price": 92, "country": "US", "parts": [
   {"key": "hoodie", "label": "Hoodie", "printifyProductId": "6ad205876e32083ae50fd7e8", "provider": "us-99", "options": [
    {"colour": "Sport Grey", "size": "S", "variantId": 32902},
    {"colour": "Sport Grey", "size": "M", "variantId": 32903},
