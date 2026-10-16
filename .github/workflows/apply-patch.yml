@@ -1,0 +1,31 @@
+name: Apply a patch
+# Claude can't push to this repo, and typing whole files into GitHub's upload
+# page is slow and error-prone for big ones like catalog.json. Instead a small
+# patch file is uploaded to patches/; this applies it, deletes it and commits
+# the change. The patch's first line ("# <commit message>") is the message, so
+# it can carry [skip netlify] when nothing on the site changes.
+on:
+  push:
+    branches: [main]
+    paths: ["patches/*.patch"]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          shopt -s nullglob
+          for p in patches/*.patch; do
+            msg=$(head -1 "$p" | sed 's/^# //')
+            git apply --verbose "$p"
+            git rm -q "$p"
+            git add -A
+            git commit -m "$msg"
+          done
+          git pull --rebase origin main
+          git push

@@ -14,6 +14,11 @@ on:
         description: "Also replace artwork/placement on products already built"
         type: boolean
         default: false
+      store:
+        description: "Which Printify store: etsy, or site (the website's store, for the one-price sets)"
+        type: choice
+        options: [etsy, site]
+        default: etsy
       mockups_only:
         description: "Only download mockups of the built products for checking"
         type: boolean
@@ -36,6 +41,8 @@ jobs:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
           REPRINT: ${{ inputs.reprint && '1' || '0' }}
+          STORE: ${{ inputs.store }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
       - name: Download mockups for checking
         if: ${{ inputs.mockups_only }}
         working-directory: automation/social
@@ -47,7 +54,7 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/xmas-bundle-result.json automation/social/xmas-bundle-mockups || true
+          for f in automation/social/xmas-bundle-result.json automation/social/xmas-bundle-site-result.json automation/social/xmas-bundle-mockups; do git add "$f" 2>/dev/null || true; done
           git commit -m "Christmas bundle products [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
