@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-16T10:06:23.300Z",
+  "ranAt": "2026-10-16T10:10:24.643Z",
   "dryRun": true,
   "etsyStore": 29335686,
   "results": [
@@ -7,55 +7,179 @@
       "key": "us-hoodie",
       "dry": true,
       "variants": 30,
-      "printArea": {
-        "w": 2919,
-        "h": 1944
-      }
+      "titles": [
+        "Ash / S",
+        "Ash / M",
+        "Ash / L",
+        "Ash / XL",
+        "Ash / 2XL",
+        "Maroon / S",
+        "Maroon / M",
+        "Maroon / L",
+        "Maroon / XL",
+        "Maroon / 2XL",
+        "Navy / S",
+        "Navy / M",
+        "Navy / L",
+        "Navy / XL",
+        "Navy / 2XL",
+        "Sport Grey / S",
+        "Sport Grey / M",
+        "Sport Grey / L",
+        "Sport Grey / XL",
+        "Sport Grey / 2XL",
+        "White / S",
+        "White / M",
+        "White / L",
+        "White / XL",
+        "White / 2XL",
+        "Ash / S",
+        "Ash / M",
+        "Ash / L",
+        "Ash / XL",
+        "Ash / 2XL"
+      ],
+      "printAreas": [
+        "2919x1944",
+        "3273x2180",
+        "3531x2352"
+      ]
     },
     {
       "key": "us-tee",
       "dry": true,
       "variants": 30,
-      "printArea": {
-        "w": 3951,
-        "h": 4919
-      }
+      "titles": [
+        "Ash / L",
+        "Ash / M",
+        "Ash / S",
+        "Ash / XL",
+        "Ash / 2XL",
+        "Maroon / L",
+        "Maroon / M",
+        "Maroon / S",
+        "Maroon / XL",
+        "Maroon / 2XL",
+        "Navy / L",
+        "Navy / M",
+        "Navy / S",
+        "Navy / XL",
+        "Navy / 2XL",
+        "Sport Grey / L",
+        "Sport Grey / M",
+        "Sport Grey / S",
+        "Sport Grey / XL",
+        "Sport Grey / 2XL",
+        "White / L",
+        "White / M",
+        "White / S",
+        "White / XL",
+        "White / 2XL",
+        "Ash / S",
+        "Ash / M",
+        "Ash / L",
+        "Ash / XL",
+        "Ash / 2XL"
+      ],
+      "printAreas": [
+        "3951x4919",
+        "3591x4472",
+        "3232x4024"
+      ]
     },
     {
       "key": "us-beanie",
       "dry": true,
       "variants": 3,
-      "printArea": {
-        "w": 1500,
-        "h": 525
-      }
+      "titles": [
+        "Black / One size",
+        "Dark Grey / One size",
+        "Navy / One size"
+      ],
+      "printAreas": [
+        "1500x525"
+      ]
     },
     {
       "key": "uk-hoodie",
       "dry": true,
       "variants": 25,
-      "printArea": {
-        "w": 3319,
-        "h": 2212
-      }
+      "titles": [
+        "Ash / S",
+        "Ash / M",
+        "Ash / L",
+        "Ash / XL",
+        "Ash / 2XL",
+        "Maroon / S",
+        "Maroon / M",
+        "Maroon / L",
+        "Maroon / XL",
+        "Maroon / 2XL",
+        "Navy / S",
+        "Navy / M",
+        "Navy / L",
+        "Navy / XL",
+        "Navy / 2XL",
+        "Sport Grey / S",
+        "Sport Grey / M",
+        "Sport Grey / L",
+        "Sport Grey / XL",
+        "Sport Grey / 2XL",
+        "White / S",
+        "White / M",
+        "White / L",
+        "White / XL",
+        "White / 2XL"
+      ],
+      "printAreas": [
+        "3319x2212",
+        "3909x2606",
+        "4500x3000"
+      ]
     },
     {
       "key": "uk-tee",
       "dry": true,
       "variants": 19,
-      "printArea": {
-        "w": 4500,
-        "h": 5100
-      }
+      "titles": [
+        "Maroon / L",
+        "Maroon / M",
+        "Maroon / XL",
+        "Maroon / 2XL",
+        "Navy / L",
+        "Navy / M",
+        "Navy / S",
+        "Navy / XL",
+        "Navy / 2XL",
+        "Sport Grey / L",
+        "Sport Grey / M",
+        "Sport Grey / S",
+        "Sport Grey / XL",
+        "Sport Grey / 2XL",
+        "White / L",
+        "White / M",
+        "White / S",
+        "White / XL",
+        "White / 2XL"
+      ],
+      "printAreas": [
+        "4500x5100",
+        "4110x4658",
+        "3709x4203"
+      ]
     },
     {
       "key": "uk-blanket",
       "dry": true,
       "variants": 2,
-      "printArea": {
-        "w": 5025,
-        "h": 6525
-      }
+      "titles": [
+        "30'' × 40''",
+        "50\" × 60\""
+      ],
+      "printAreas": [
+        "5025x6525",
+        "8025x9525"
+      ]
     }
   ],
   "errors": []
