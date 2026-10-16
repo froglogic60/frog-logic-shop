@@ -10,6 +10,10 @@ on:
         description: "Report only, create nothing"
         type: boolean
         default: true
+      mockups_only:
+        description: "Only download mockups of the built products for checking"
+        type: boolean
+        default: false
 permissions:
   contents: write
 jobs:
@@ -21,17 +25,24 @@ jobs:
         with:
           node-version: 20
       - name: Build the products
+        if: ${{ !inputs.mockups_only }}
         working-directory: automation/social
         run: node xmas-bundle.js
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+      - name: Download mockups for checking
+        if: ${{ inputs.mockups_only }}
+        working-directory: automation/social
+        run: node xmas-bundle-mockups.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
       - name: Commit the result
         if: always()
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/xmas-bundle-result.json || true
+          git add automation/social/xmas-bundle-result.json automation/social/xmas-bundle-mockups || true
           git commit -m "Christmas bundle products [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
