@@ -49,6 +49,7 @@ jobs:
         run: node xmas-bundle-mockups.js
         env:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          STORE: ${{ inputs.store }}
       - name: Commit the result
         if: always()
         run: |
