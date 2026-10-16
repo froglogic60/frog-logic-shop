@@ -1,0 +1,36 @@
+name: Margins with VAT
+# Read-only: what every product keeps once Printify's 20% VAT on UK orders is
+# counted, on Etsy and the website, and the lowest price that would keep 25%.
+# See margin-vat.js. Commits margin-vat-report.json [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      us_tax:
+        description: "Assumed tax on US orders, e.g. 0.08 (default none)"
+        default: "0"
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check margins
+        working-directory: automation/social
+        run: node margin-vat.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          US_TAX: ${{ github.event.inputs.us_tax }}
+      - name: Commit the report
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/margin-vat-report.json || true
+          git commit -m "Margins with VAT [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
