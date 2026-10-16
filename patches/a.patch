@@ -1,0 +1,93 @@
+# Bundle builder: website store mode [skip netlify]
+diff --git a/automation/social/xmas-bundle.js b/automation/social/xmas-bundle.js
+index 1b69a31..aed327f 100644
+--- a/automation/social/xmas-bundle.js
++++ b/automation/social/xmas-bundle.js
+@@ -33,7 +33,12 @@ const DRY = process.env.DRY_RUN === "1";
+ // REPRINT=1: on products that already exist, also replace the artwork and
+ // placement (only safe before photos are chosen in the mockup library).
+ const REPRINT = process.env.REPRINT === "1";
+-const OUT = path.join(__dirname, "xmas-bundle-result.json");
++// STORE=site builds the same six in the website's own Printify store
++// (PRINTIFY_SHOP_ID), which is where the site's Stripe webhook places orders,
++// for the one-price sets sold on the website (Sam, 16 Oct 2026: "yes build the
++// website bundles"). It also records each variant's postage, for the margins.
++const SITE = process.env.STORE === "site";
++const OUT = path.join(__dirname, SITE ? "xmas-bundle-site-result.json" : "xmas-bundle-result.json");
+ const RAW = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/artwork/frogs/";
+ 
+ const LIGHT = ["Sport Grey", "Ash", "White"];
+@@ -114,8 +119,40 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+ 
+ (async () => {
+   const shops = await api("/shops.json");
+-  const etsy = shops.find((s) => /etsy/i.test(s.sales_channel || ""));
+-  if (!etsy) throw new Error("No Etsy store in Printify");
++  console.log("Printify stores: " + shops.map((s) => `${s.id} ${s.title} (${s.sales_channel})`).join("; "));
++  const etsyStore = shops.find((s) => /etsy/i.test(s.sales_channel || ""));
++  if (!etsyStore) throw new Error("No Etsy store in Printify");
++  // "etsy" below is simply the store being built in.
++  let etsy = etsyStore;
++  if (SITE) {
++    const want = process.env.PRINTIFY_SHOP_ID;
++    etsy = want ? shops.find((s) => String(s.id) === String(want)) : shops.find((s) => !/etsy/i.test(s.sales_channel || ""));
++    if (!etsy || etsy.id === etsyStore.id) throw new Error("Website store not found (or it is the Etsy store)");
++    console.log(`Building in the website store ${etsy.id} ${etsy.title}`);
++  }
++  // Cheapest matching postage profile per variant, for the country the piece
++  // is sold in (Printify's product page charges the cheapest; see sale-check.js).
++  const shipCache = {};
++  async function postage(spec, variantId) {
++    const k = `${spec.blueprint}:${spec.provider}`;
++    if (!(k in shipCache)) shipCache[k] = await api(`/catalog/blueprints/${spec.blueprint}/print_providers/${spec.provider}/shipping.json`);
++    const country = spec.where === "us" ? "US" : "GB";
++    const hits = (shipCache[k].profiles || []).filter((p) => (p.countries || []).includes(country) && (p.variant_ids || []).includes(variantId));
++    const first = hits.map((p) => p.first_item?.cost).filter((c) => typeof c === "number");
++    const add = hits.map((p) => p.additional_items?.cost).filter((c) => typeof c === "number");
++    return first.length ? { first: Math.min(...first), additional: add.length ? Math.min(...add) : null } : null;
++  }
++  async function describe(spec, fresh) {
++    const out = [];
++    for (const v of (fresh.variants || []).filter((x) => x.is_enabled)) {
++      const parts = String(v.title).split("/").map((x) => x.trim());
++      const ship = await postage(spec, v.id);
++      out.push({ id: v.id, title: v.title, colour: spec.colours ? spec.colours.find((c) => parts.includes(c)) || null : null,
++        size: spec.sizes ? spec.sizes.find((z) => parts.includes(z)) || null : null, price: v.price, costUsdCents: v.cost,
++        shipFirstUsdCents: ship?.first ?? null, shipAdditionalUsdCents: ship?.additional ?? null });
++    }
++    return out;
++  }
+   const existing = new Map();
+   for (let page = 1; page <= 20; page++) {
+     const r = await api(`/shops/${etsy.id}/products.json?limit=50&page=${page}`);
+@@ -230,7 +267,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+         }
+         await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", update);
+         const fresh = await api(`/shops/${etsy.id}/products/${already.id}.json`);
+-        const vs = (fresh.variants || []).filter((v) => v.is_enabled).map((v) => ({ title: v.title, price: v.price, costUsdCents: v.cost }));
++        const vs = await describe(spec, fresh);
+         console.log(`  exists (${already.id}) — prices${REPRINT ? " and artwork" : ""} updated`);
+         results.push({ key: spec.key, where: spec.where, title: spec.title, printifyProductId: already.id, existed: true, variants: vs,
+           mockupLibrary: `https://printify.com/app/mockup-library/shops/${etsy.id}/products/${already.id}` });
+@@ -239,11 +276,10 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+       const prod = await api(`/shops/${etsy.id}/products.json`, "POST", payload);
+       await sleep(1500);
+       const fresh = await api(`/shops/${etsy.id}/products/${prod.id}.json`);
+-      const costs = (fresh.variants || []).filter((v) => v.is_enabled).map((v) => [v.title, v.price, v.cost]);
+       console.log(`  created ${prod.id}`);
+       results.push({
+         key: spec.key, where: spec.where, title: spec.title, printifyProductId: prod.id, printAreas: dims,
+-        variants: costs.map(([t, p, c]) => ({ title: t, price: p, costUsdCents: c })),
++        variants: await describe(spec, fresh),
+         mockupLibrary: `https://printify.com/app/mockup-library/shops/${etsy.id}/products/${prod.id}`,
+       });
+     } catch (e) {
+@@ -251,7 +287,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+       errors.push({ key: spec.key, error: e.message });
+     }
+   }
+-  fs.writeFileSync(OUT, JSON.stringify({ ranAt: new Date().toISOString(), dryRun: DRY, etsyStore: etsy.id, results, errors }, null, 2) + "\n");
++  fs.writeFileSync(OUT, JSON.stringify({ ranAt: new Date().toISOString(), dryRun: DRY, ...(SITE ? { siteStore: etsy.id } : { etsyStore: etsy.id }), results, errors }, null, 2) + "\n");
+   console.log(`\n${DRY ? "DRY RUN — " : ""}${results.length} ok, ${errors.length} failed`);
+   if (errors.length) process.exit(1);
+ })().catch((e) => { console.error(e); process.exit(1); });
