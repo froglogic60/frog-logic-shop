@@ -120,8 +120,11 @@ async function shippingFor(bp, pr) {
               print_areas: [{ variant_ids: ids, placeholders: [{ position: ph.position, images: [{ id: image.id, x: 0.5, y: 0.5, scale: 1, angle: 0 }] }] }],
             });
             pid = created.id;
-            const cs = (created.variants || []).filter((v) => ids.includes(v.id)).map((v) => v.cost).filter((c) => c != null);
+            const got = (created.variants || []).filter((v) => ids.includes(v.id) && v.cost != null);
+            const cs = got.map((v) => v.cost);
             row.cost = cs.length ? { min: Math.min(...cs), max: Math.max(...cs) } : null;
+            // Per variant too: min/max hides the middle size (the 50x60 blanket, 16 Oct 2026).
+            row.costs = Object.fromEntries(got.map((v) => [v.title, v.cost]));
           } catch (e) {
             row.costError = e.message.slice(0, 160);
           } finally {
