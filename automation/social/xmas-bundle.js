@@ -136,12 +136,19 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
       const vres = await api(`/catalog/blueprints/${spec.blueprint}/print_providers/${spec.provider}/variants.json`);
       const all = vres.variants || [];
       // Match colour and size from the variant title, whatever order Printify uses.
-      const picked = all.filter((v) => {
+      let picked = all.filter((v) => {
         const parts = String(v.title).split("/").map((s) => s.trim());
         const okC = !spec.colours || spec.colours.some((c) => parts.includes(c));
         const okS = !spec.sizes || spec.sizes.some((s) => parts.includes(s));
         return okC && okS;
       });
+      // Printify lists some colours twice under one name (US "Ash" on 16 Oct
+      // 2026: two blanks, both titled "Ash / S" ...). Etsy can't show two
+      // identical options, so keep the first of each title.
+      { const seen = new Set(); for (let i = picked.length - 1; i >= 0; i--) {} 
+        const uniq = []; for (const v of picked) { if (!seen.has(v.title)) { seen.add(v.title); uniq.push(v); } }
+        if (uniq.length !== picked.length) console.log(`  dropped ${picked.length - uniq.length} duplicate-named variant(s)`);
+        picked.length = 0; picked.push(...uniq); }
       const found = (list, partsOf) => list.filter((x) => !picked.some((v) => String(v.title).split("/").map((s) => s.trim()).includes(x)));
       const missingC = spec.colours ? found(spec.colours) : [];
       const missingS = spec.sizes ? found(spec.sizes) : [];
