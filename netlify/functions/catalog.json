@@ -75,7 +75,7 @@
   {
     "id": "02-hyperfocused",
     "name": "Hyperfocused",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc0fdb8c6212d72054f8b",
@@ -91,7 +91,7 @@
   {
     "id": "03-shutdown-mode",
     "name": "Shutdown Mode",
-    "price": 12,
+    "price": 13,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc1009178f085df05a1e0",
@@ -350,7 +350,7 @@
   {
     "id": "15-auditory-processing",
     "name": "Auditory Processing",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc10fb8c6212d72054f99",
@@ -626,7 +626,7 @@
   {
     "id": "25-monotropic",
     "name": "Monotropic",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc11ffdd5a017170fed1f",
@@ -670,7 +670,7 @@
   {
     "id": "27-regulation-loading",
     "name": "Regulation: Loading",
-    "price": 12,
+    "price": 13,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc122b8c6212d72054fa2",
@@ -872,7 +872,7 @@
   {
     "id": "33-i-notice-everything",
     "name": "I Notice Everything",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc132dbf9aebaf708a16a",
@@ -1191,7 +1191,7 @@
   {
     "id": "44-functioning-as-designed",
     "name": "Functioning As Designed",
-    "price": 12,
+    "price": 13,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc1482a3603eb2d0d5e50",
@@ -1292,7 +1292,7 @@
   {
     "id": "46-it-was-precision",
     "name": "It Was Precision",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc152dbf9aebaf708a18a",
@@ -1466,7 +1466,7 @@
   {
     "id": "54-asking-is-not-failing",
     "name": "Asking Is Not Failing",
-    "price": 12,
+    "price": 13,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc15cdbf9aebaf708a1ab",
@@ -1494,7 +1494,7 @@
   {
     "id": "56-yes-i-want-friends",
     "name": "Yes, I Want Friends",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc160b8c6212d72054fdd",
@@ -1713,7 +1713,7 @@
   {
     "id": "64-i-learned-their-language",
     "name": "I Learned Their Language",
-    "price": 16,
+    "price": 17,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc170f95fff6a1705fc91",
@@ -1757,7 +1757,7 @@
   {
     "id": "67-you-re-allowed-to-find-it-hard",
     "name": "You're Allowed To Find It Hard",
-    "price": 12,
+    "price": 13,
     "type": "physical",
     "currency": "gbp",
     "printifyProductId": "6a8cc174dbf9aebaf708a1d0",
