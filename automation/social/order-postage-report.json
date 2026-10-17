@@ -29,7 +29,31 @@
       "shop": "website",
       "created": "2026-06-25 19:46:16+00:00",
       "result": "already there on the first run"
+    },
+    "6ad2359bcd7ab3a0ad084d6c": {
+      "shop": "website",
+      "country": "UNITED KINGDOM",
+      "created": "2026-10-16 14:32:59+00:00",
+      "status": "canceled",
+      "keys": [
+        "id",
+        "app_order_id",
+        "shop_id",
+        "address_to",
+        "line_items",
+        "metadata",
+        "total_price",
+        "total_shipping",
+        "total_tax",
+        "status",
+        "shipping_method",
+        "created_at",
+        "fulfilment_type",
+        "printify_connect",
+        "sales_channel_type_id"
+      ],
+      "result": "not UK/US — skipped"
     }
   },
-  "updatedAt": "2026-10-16T12:47:33.231Z"
+  "updatedAt": "2026-10-17T11:48:17.858Z"
 }
