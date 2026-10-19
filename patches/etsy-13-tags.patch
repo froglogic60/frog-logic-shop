@@ -1,0 +1,18 @@
+# Etsy tags: always 13 per listing [skip netlify]
+diff --git a/automation/social/printify-etsy.js b/automation/social/printify-etsy.js
+index d008a11..452e180 100644
+--- a/automation/social/printify-etsy.js
++++ b/automation/social/printify-etsy.js
+@@ -124,9 +124,9 @@ function descriptionFor(kind, item, frog, where) {
+ 
+ function tagsFor(kind, item, frog) {
+   const base = {
+-    tee: ["neurodivergent shirt", "adhd shirt", "autism shirt", "audhd", "adhd gift", "autism gift", "actually autistic", "late diagnosed", "neurodivergent gift", "funny adhd shirt", "unisex tshirt"],
+-    mug: ["neurodivergent mug", "adhd mug", "autism mug", "audhd", "adhd gift", "autism gift", "actually autistic", "neurodivergent gift", "coffee mug gift", "stocking filler", "funny adhd mug"],
+-    print: ["neurodivergent art", "adhd wall art", "autism wall art", "audhd", "adhd gift", "autism gift", "neurodivergent gift", "typography print", "square poster", "office wall art", "late diagnosed"],
++    tee: ["neurodivergent shirt", "adhd shirt", "autism shirt", "audhd", "adhd gift", "autism gift", "actually autistic", "late diagnosed", "neurodivergent gift", "funny adhd shirt", "unisex tshirt", "neurodiversity shirt"],
++    mug: ["neurodivergent mug", "adhd mug", "autism mug", "audhd", "adhd gift", "autism gift", "actually autistic", "neurodivergent gift", "coffee mug gift", "stocking filler", "funny adhd mug", "neurodiversity mug"],
++    print: ["neurodivergent art", "adhd wall art", "autism wall art", "audhd", "adhd gift", "autism gift", "neurodivergent gift", "typography print", "square poster", "office wall art", "late diagnosed", "neurodiversity art"],
+   }[kind].slice();
+   const own = item.word.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+   const extra = [];
