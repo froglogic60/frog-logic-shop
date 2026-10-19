@@ -1,0 +1,155 @@
+# Desk: Small Business Sunday each Sunday to 20 Dec, November gift-guide tasks [skip netlify]
+diff --git a/content/calendar.json b/content/calendar.json
+index 955ac2a..efe2d6a 100644
+--- a/content/calendar.json
++++ b/content/calendar.json
+@@ -1,6 +1,6 @@
+ {
+   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
+-  "updated": "2026-10-15",
++  "updated": "2026-10-19",
+   "standing": [
+     {
+       "time": "9am, 1pm, 6pm",
+@@ -698,6 +698,10 @@
+         {
+           "what": "Pin: Your Sheet, For Once → #digital",
+           "who": "robot"
++        },
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
+         }
+       ]
+     },
+@@ -777,6 +781,23 @@
+         {
+           "what": "Old noon Pinterest queue ends today; the product-page batch runs to 6 Nov once the 21 Oct re-upload is in. Claude builds the next CSV (bulk upload, max 100 scheduled at a time) when told",
+           "who": "you"
++        },
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        },
++        {
++          "what": "Follow Martha Brook and Karen Haller on Instagram so you catch their gift-guide calls (usually November); enter as soon as a call opens",
++          "who": "you"
++        }
++      ]
++    },
++    {
++      "date": "2026-11-02",
++      "items": [
++        {
++          "what": "Gift guides, second wave: start sending the November emails from the pitches doc (Undivided, Emily Ladau, Autism Positive, NEST, Enna and the rest) — aim to finish by 13 Nov",
++          "who": "you"
+         }
+       ]
+     },
+@@ -802,6 +823,15 @@
+         }
+       ]
+     },
++    {
++      "date": "2026-11-08",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
+     {
+       "date": "2026-11-10",
+       "items": [
+@@ -811,6 +841,24 @@
+         }
+       ]
+     },
++    {
++      "date": "2026-11-13",
++      "items": [
++        {
++          "what": "Gift guides: last day for the second-wave emails; one follow-up to anyone from the first six who hasn't replied",
++          "who": "you"
++        }
++      ]
++    },
++    {
++      "date": "2026-11-15",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
+     {
+       "date": "2026-11-17",
+       "items": [
+@@ -820,6 +868,15 @@
+         }
+       ]
+     },
++    {
++      "date": "2026-11-22",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
+     {
+       "date": "2026-11-24",
+       "items": [
+@@ -829,6 +886,24 @@
+         }
+       ]
+     },
++    {
++      "date": "2026-11-29",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
++    {
++      "date": "2026-12-06",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
+     {
+       "date": "2026-12-08",
+       "items": [
+@@ -838,6 +913,24 @@
+         }
+       ]
+     },
++    {
++      "date": "2026-12-13",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
++    {
++      "date": "2026-12-20",
++      "items": [
++        {
++          "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
++          "who": "you"
++        }
++      ]
++    },
+     {
+       "date": "2027-01-06",
+       "items": [
