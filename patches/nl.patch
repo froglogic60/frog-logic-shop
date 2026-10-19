@@ -1,0 +1,26 @@
+# November newsletter: Christmas sets and the updated Bespoke Planner [skip netlify]
+diff --git a/content/newsletter.json b/content/newsletter.json
+index 34b07a3..2fb5480 100644
+--- a/content/newsletter.json
++++ b/content/newsletter.json
+@@ -1,11 +1,11 @@
+ {
+-  "handwritten": true,
+-  "month": "2026-11",
+-  "note": "November 2026 — handwritten for the US news. Only sent if this month matches; December writes itself.",
+-  "subject": "🐸 The frogs can cross the Atlantic now",
+-  "heading": "From the pond this month",
+-  "body_html": "<p>Hello. A short one this month, with one bit of real news.</p><p><strong>Frog Logic now posts properly to the US.</strong> About half the people who visit the shop are in America, and until now the only thing they could really buy was a download — sending a tee across the Atlantic cost more than the tee. So I found US printers. Tees, mugs, prints and notebooks are now made and posted inside the US: no Atlantic postage, and no import charge on the doorstep. Choose the United States in the basket and the postage shows before you pay.</p><p>If you've got a friend over there who'd like something from the pond, this is the moment to send them the link.</p><p><strong>Still yours, because you signed up:</strong> <strong>POND10</strong> takes 10% off your first order. It works on US orders too.</p><p>One small apology: if September's note landed in your inbox twice, that was a glitch on my side, and it's fixed.</p><p>That's the lot. Go gently.</p>",
+-  "cta_text": "Have a look",
+-  "cta_url": "https://froglogic.co.uk/?ref=newsletter",
+-  "generated": "2026-11"
++ "handwritten": true,
++ "month": "2026-11",
++ "note": "November 2026 — handwritten: US news, the Christmas sets and the updated Bespoke Planner. Only sent if this month matches; December writes itself.",
++ "subject": "🐸 Christmas at the pond, and the frogs can cross the Atlantic",
++ "heading": "From the pond this month",
++ "body_html": "<p>Hello. A bit more news than usual this month, so grab a cuppa.</p><p><strong>Frog Logic now posts properly to the US.</strong> About half the people who visit the shop are in America, and until now the only thing they could really buy was a download — sending a tee across the Atlantic cost more than the tee. So I found US printers. Tees, mugs, prints and notebooks are now made and posted inside the US: no Atlantic postage, and no import charge on the doorstep. Choose the United States in the basket and the postage shows before you pay.</p><p>If you've got a friend over there who'd like something from the pond, this is the moment to send them the link.</p><p><strong>Christmas has arrived at the pond.</strong> The frog has put on a Santa hat, got under a blanket, tangled itself in the fairy lights, and is not coming out until January. It's called Socially Hibernating, and it comes as a set for one price with delivery included: a hoodie, a tee and a fleece throw in the UK (£110 with the sofa-size throw, £93 with the lap-size one), or a hoodie, a tee and an embroidered beanie in the US (£92). You pick the colour and size of each piece. <a href=\"https://froglogic.co.uk/p/christmas-set-uk/?ref=newsletter\">UK set</a> · <a href=\"https://froglogic.co.uk/p/christmas-set-us/?ref=newsletter\">US set</a>. Everything is printed to order, so earlier is safer for Christmas.</p><p>There are personalised pieces too, with any name you like on them: a frog mug, a tree ornament and a candle, on the <a href=\"https://froglogic.etsy.com\">Etsy shop</a>.</p><p><strong>The Bespoke Planner has grown up.</strong> It now asks fifteen questions instead of nine, and builds up to eighteen pages from your answers. Four of them use your own words: a Hard Day page with a tear-off half to hand to someone, a page written to your partner, manager, teacher or parent, your start and end of day as tick-lists, and a don't-forget strip on every daily page. Because it does so much more, the price is now £25. If it doesn't fit, answer again and it gets rebuilt, free. <a href=\"https://froglogic.co.uk/p/the-bespoke-planner/?ref=newsletter\">Have a look at the planner</a>.</p><p><strong>Still yours, because you signed up:</strong> <strong>POND10</strong> takes 10% off your first order. It works on US orders too.</p><p>One small apology: if September's note landed in your inbox twice, that was a glitch on my side, and it's fixed.</p><p>That's the lot. Go gently.</p>",
++ "cta_text": "Have a look",
++ "cta_url": "https://froglogic.co.uk/?ref=newsletter",
++ "generated": "2026-11"
+ }
