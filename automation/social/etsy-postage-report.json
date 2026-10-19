@@ -1,7 +1,43 @@
 {
-  "checkedAt": "2026-10-15T17:31:13.985Z",
+  "checkedAt": "2026-10-19T13:57:30.963Z",
   "etsyStore": 29335686,
   "products": [
+    {
+      "id": "6ad1f942b7243250ec0835f6",
+      "title": "Socially Hibernating Christmas Frog Fleece Blanket — Cute Frog in Santa Hat, Cosy Throw, Introvert Christmas Gift, Made in the UK",
+      "bp": 1328,
+      "pp": 94
+    },
+    {
+      "id": "6ad1f93db7243250ec0835ef",
+      "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Top, Neurodivergent Gift, Made in the UK",
+      "bp": 6,
+      "pp": 331
+    },
+    {
+      "id": "6ad1f9398ed12a970600ce7a",
+      "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Jumper, Neurodivergent Gift, Made in the UK",
+      "bp": 77,
+      "pp": 72
+    },
+    {
+      "id": "6ad1f93620886a0bc203b9ce",
+      "title": "Socially Hibernating Christmas Frog Beanie — Embroidered Cute Frog in Santa Hat, Cuffed Winter Hat, Neurodivergent Gift, Ships from the US",
+      "bp": 1691,
+      "pp": 99
+    },
+    {
+      "id": "6ad1f931b7243250ec0835e9",
+      "title": "Socially Hibernating Christmas Frog T-Shirt — Cute Frog in Santa Hat, Introvert Christmas Shirt, Neurodivergent Gift, Ships from the US",
+      "bp": 6,
+      "pp": 99
+    },
+    {
+      "id": "6ad1f92db7243250ec0835e2",
+      "title": "Socially Hibernating Christmas Frog Hoodie — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Neurodivergent Gift, Ships from the US",
+      "bp": 77,
+      "pp": 99
+    },
     {
       "id": "6ad105d202e855b98e01242f",
       "title": "Personalized Christmas Frog Candle, Custom Name Scented Candle in Amber Jar, Cute Frog in Santa Hat Gift",
@@ -520,6 +556,114 @@
     }
   ],
   "rates": {
+    "1328:94": {
+      "GB": [
+        {
+          "first": 469,
+          "additional": 129,
+          "currency": "USD"
+        },
+        {
+          "first": 519,
+          "additional": 129,
+          "currency": "USD"
+        },
+        {
+          "first": 579,
+          "additional": 199,
+          "currency": "USD"
+        }
+      ],
+      "US": [
+        {
+          "first": 4159,
+          "additional": 359,
+          "currency": "USD"
+        }
+      ]
+    },
+    "6:331": {
+      "GB": [
+        {
+          "first": 359,
+          "additional": 199,
+          "currency": "USD"
+        }
+      ],
+      "US": [
+        {
+          "first": 2399,
+          "additional": 399,
+          "currency": "USD"
+        }
+      ]
+    },
+    "77:72": {
+      "GB": [
+        {
+          "first": 469,
+          "additional": 299,
+          "currency": "USD"
+        }
+      ],
+      "US": [
+        {
+          "first": 3119,
+          "additional": 999,
+          "currency": "USD"
+        }
+      ]
+    },
+    "1691:99": {
+      "GB": [],
+      "US": [
+        {
+          "first": 469,
+          "additional": 209,
+          "currency": "USD"
+        },
+        {
+          "first": 509,
+          "additional": 219,
+          "currency": "USD"
+        }
+      ]
+    },
+    "6:99": {
+      "GB": [],
+      "US": [
+        {
+          "first": 399,
+          "additional": 209,
+          "currency": "USD"
+        },
+        {
+          "first": 495,
+          "additional": 240,
+          "currency": "USD"
+        },
+        {
+          "first": 799,
+          "additional": 240,
+          "currency": "USD"
+        }
+      ]
+    },
+    "77:99": {
+      "GB": [],
+      "US": [
+        {
+          "first": 739,
+          "additional": 209,
+          "currency": "USD"
+        },
+        {
+          "first": 879,
+          "additional": 209,
+          "currency": "USD"
+        }
+      ]
+    },
     "1488:99": {
       "GB": [],
       "US": [
@@ -573,42 +717,6 @@
         {
           "first": 4159,
           "additional": 359,
-          "currency": "USD"
-        }
-      ]
-    },
-    "6:99": {
-      "GB": [],
-      "US": [
-        {
-          "first": 399,
-          "additional": 209,
-          "currency": "USD"
-        },
-        {
-          "first": 495,
-          "additional": 240,
-          "currency": "USD"
-        },
-        {
-          "first": 799,
-          "additional": 240,
-          "currency": "USD"
-        }
-      ]
-    },
-    "6:331": {
-      "GB": [
-        {
-          "first": 359,
-          "additional": 199,
-          "currency": "USD"
-        }
-      ],
-      "US": [
-        {
-          "first": 2399,
-          "additional": 399,
           "currency": "USD"
         }
       ]
