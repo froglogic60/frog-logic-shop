@@ -1,0 +1,37 @@
+name: Bespoke Planner pins
+# Draws four more Pinterest pins for the Bespoke Planner (automation/social/
+# bespoke-pins.py) and commits the PNGs and the bulk-upload CSV to
+# automation/social/bespoke-pins/ [skip netlify]. Pinterest fetches the images
+# from raw.githubusercontent.com.
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "First publish date in the CSV (YYYY-MM-DD, UTC), one a day from here"
+        default: "2026-10-22"
+permissions:
+  contents: write
+jobs:
+  pins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Fonts
+        run: node -e 'require("./automation/social/gfonts.js").ensureFonts("automation/social/.gfonts").then(()=>console.log("fonts ok"))'
+      - name: Draw
+        run: python automation/social/bespoke-pins.py automation/social/.gfonts "${{ inputs.start }}"
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/bespoke-pins
+          git commit -m "Bespoke Planner pins [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
