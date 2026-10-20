@@ -10,8 +10,9 @@
 //     so nothing the shop sells or has ever wired up can go;
 //   - anything created on or after 24 Aug 2026 (when this repo started) — those
 //     are listed separately for Sam to decide on, never deleted here;
-//   - anything published to a sales channel (visible / external link) — listed
-//     separately too.
+//   - anything published to a sales channel (visible / external link) AND made
+//     on/after 24 Aug 2026. (Sam, 20 Oct 2026: the 2,818 older ones were still
+//     marked published to the dead Replit site — "delete them".)
 //
 //   MODE=list   (default) read-only: writes printify-cleanout-report.json
 //   MODE=delete deletes exactly the "delete" list from a fresh list run, and
@@ -73,7 +74,7 @@ function repoIds() {
     const published = p.visible || (p.external && p.external.id);
     if (keep.has(p.id)) groups.kept_in_repo.push(row);
     else if (row.created >= CUTOFF) groups.recent_ask_sam.push(row);
-    else if (published) groups.published_ask_sam.push(row);
+    else if (published && row.created >= CUTOFF) groups.published_ask_sam.push(row);
     else groups.delete.push(row);
   }
 
