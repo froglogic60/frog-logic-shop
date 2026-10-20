@@ -1,0 +1,14 @@
+# Desk: Christmas cards live on Etsy [skip netlify]
+diff --git a/content/calendar.json b/content/calendar.json
+index 751c1d1..bd7514d 100644
+--- a/content/calendar.json
++++ b/content/calendar.json
+@@ -682,7 +682,7 @@
+           "who": "note"
+         },
+         {
+-          "what": "LIVE on Etsy: Socially Hibernating in Bright Colours and in Black and White (from the group poll) — tee and hoodie (UK and US makers), mug (UK and US), fleece throw (UK). 14 listings, white and black garments, same prices as the original set, 13 tags each. Etsy needed Closure = Pullover on the hoodies. Printable Christmas cards in both colourways still to make",
++          "what": "LIVE on Etsy: Socially Hibernating in Bright Colours and in Black and White (from the group poll) — tee and hoodie (UK and US makers), mug (UK and US), fleece throw (UK). 14 listings, white and black garments, same prices as the original set, 13 tags each. Etsy needed Closure = Pullover on the hoodies. Also LIVE: printable Christmas cards (3 designs, A4 + US Letter) in each colourway, £4.50, Etsy 4599585971 (bright) and 4599612950 (black and white, doubles as colour-in). PDFs in digital/Christmas-Cards-*.pdf — not on the site yet",
+           "who": "note"
+         }
+       ]
