@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-10-20T15:09:11.198Z",
+ "checkedAt": "2026-10-20T15:27:08.703Z",
  "shop": "28035653",
  "total": 2992,
  "counts": {
@@ -17083,5 +17083,8 @@
    "created": "2026-06-28",
    "blueprint": 314
   }
- ]
+ ],
+ "deleted": 2814,
+ "failedDeletes": 4,
+ "deletedAt": "2026-10-20T16:04:23.210Z"
 }
