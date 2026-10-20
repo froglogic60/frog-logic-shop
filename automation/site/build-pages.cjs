@@ -121,6 +121,21 @@ function copyFor(item, group) {
     ],
     cta: { buy: true, label: "Buy the licence", tiers: true },
   };
+  if (group === "digital" && item.xmas) return {
+    title: `${item.word} — three printable Socially Hibernating Christmas cards, A4 and US Letter`,
+    h1: item.word,
+    eyebrow: `Printable Christmas cards · ${item.price}`,
+    paras: [
+      item.line,
+      "Three fronts: “Socially Hibernating — see you in January”, “Merry Christmas — from the pond” and “Thinking of you (from under a blanket)”. Each card is one landscape sheet folded in half: the front on the right, a small frog and the Frog Logic mark on the back, and the inside left blank for your own words.",
+      "You get two PDFs the moment you pay, A4 and US Letter, six pages each. Print on card (160–250gsm works well) at 100%, fold along the marks, and write inside. Print as many as you need, for as long as you like.",
+      item.xmas === "bright"
+        ? "This is the bright version, for people who like their Christmas loud. The same cards are also in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>."
+        : "This is the black and white version: crisp line art that prints on any printer, and colours in nicely if you want it to. The same cards are also in <a href=\"/p/bright-christmas-cards/\">bright colours</a>.",
+      "Personal use: print as many as you like for yourself and your household; please don't resell or share the files.",
+    ],
+    cta: { buy: true, label: "Download" },
+  };
   if (group === "digital") return {
     title: `${item.word} — printable PDF for ADHD, autistic and neurodivergent adults`,
     h1: item.word,
@@ -384,7 +399,12 @@ function collect(shop) {
     pages.push({ item: p, group: "physical", slug: shop.pageSlug(p), svg: absSvg(p.svg), photo: mockups[shop.checkoutId(p.num, p.word)] || null, section: section[0], anchor: section[1] });
   }
   for (const p of shop.DIGITAL_PRODUCTS) {
-    pages.push({ item: p, group: p.feature ? "bespoke" : "digital", slug: shop.pageSlug(p), svg: absSvg(p.svg), photo: null, section: "Digital", anchor: "#digital" });
+    // The Christmas card downloads carry a real picture of the cards and sit
+    // on their own tab (20 Oct 2026).
+    const xmasPhoto = p.xmas ? { src: `${SITE}/assets/xmas/cw-${p.xmas}-cards-page.jpg`, alt: `${p.word}: the three printed cards` } : null;
+    pages.push({ item: p, group: p.feature ? "bespoke" : "digital", slug: shop.pageSlug(p), svg: absSvg(p.svg), photo: xmasPhoto,
+      section: p.xmas === "bright" ? "Christmas: bright" : p.xmas === "mono" ? "Christmas: black & white" : "Digital",
+      anchor: p.xmas === "bright" ? "#christmas-bright" : p.xmas === "mono" ? "#christmas-mono" : "#digital" });
   }
   for (const g of shop.GUIDES) {
     pages.push({ item: g, group: "guide", slug: shop.pageSlug(g), svg: absSvg(shop.guideSvg(g)), photo: null, section: "The Pond Guides", anchor: "#guides" });

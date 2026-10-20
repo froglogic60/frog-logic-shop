@@ -30,6 +30,8 @@ PICKS = {  # output name -> source
     "cw-mono-us-mug": "mono/mono-us-mug-front-11oz.jpg",
 }
 CARD_PICKS = {"cw-bright-cards": "bright-listing-3.png", "cw-mono-cards": "black-and-white-listing-3.png"}
+# The product page shows all three cards (the hero listing image, squared).
+PAGE_PICKS = {"cw-bright-cards-page": "bright-listing-1.png", "cw-mono-cards-page": "black-and-white-listing-1.png"}
 
 def square(img, size=800, bg=(255, 255, 255)):
     img = img.convert("RGB")
@@ -56,4 +58,8 @@ if __name__ == "__main__":
         # holds the card and its caption.
         side = h; x0 = (w - side) // 2
         square(im.crop((x0, 0, x0 + side, h)), bg=(244, 239, 227)).save(os.path.join(OUT, name + ".jpg"), quality=86, optimize=True)
+        print("written", name)
+    for name, src in PAGE_PICKS.items():
+        im = Image.open(os.path.join(CARDS, src))
+        square(im, bg=(244, 239, 227)).save(os.path.join(OUT, name + ".jpg"), quality=86, optimize=True)
         print("written", name)
