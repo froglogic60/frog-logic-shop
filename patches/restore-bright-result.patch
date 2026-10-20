@@ -1,0 +1,627 @@
+# Restore bright colourway result [skip netlify]
+diff --git a/automation/social/xmas-colourway-bright-result.json b/automation/social/xmas-colourway-bright-result.json
+index 20d03bf..793f31d 100644
+--- a/automation/social/xmas-colourway-bright-result.json
++++ b/automation/social/xmas-colourway-bright-result.json
+@@ -1,130 +1,540 @@
+ {
+-  "ranAt": "2026-10-20T16:15:57.003Z",
+-  "dryRun": true,
++  "ranAt": "2026-10-20T16:09:58.827Z",
++  "dryRun": false,
+   "etsyStore": 29335686,
+   "results": [
+     {
+       "key": "bright-us-hoodie",
+-      "dry": true,
+-      "variants": 10,
+-      "titles": [
+-        "White / S",
+-        "White / M",
+-        "White / L",
+-        "White / XL",
+-        "White / 2XL",
+-        "Black / S",
+-        "Black / M",
+-        "Black / L",
+-        "Black / XL",
+-        "Black / 2XL"
+-      ],
++      "where": "us",
++      "title": "Socially Hibernating Christmas Frog Hoodie in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Ships from the US",
++      "printifyProductId": "6ad79238ff714daae20c48e4",
+       "printAreas": [
+         "2919x1944",
+         "3273x2180",
+         "3531x2352"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 32911,
++          "title": "White / M",
++          "colour": "White",
++          "size": "M",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32919,
++          "title": "Black / M",
++          "colour": "Black",
++          "size": "M",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32913,
++          "title": "White / XL",
++          "colour": "White",
++          "size": "XL",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32920,
++          "title": "Black / L",
++          "colour": "Black",
++          "size": "L",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32921,
++          "title": "Black / XL",
++          "colour": "Black",
++          "size": "XL",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32910,
++          "title": "White / S",
++          "colour": "White",
++          "size": "S",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32918,
++          "title": "Black / S",
++          "colour": "Black",
++          "size": "S",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32912,
++          "title": "White / L",
++          "colour": "White",
++          "size": "L",
++          "price": 3830,
++          "costUsdCents": 2158,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32914,
++          "title": "White / 2XL",
++          "colour": "White",
++          "size": "2XL",
++          "price": 4130,
++          "costUsdCents": 2377,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 32922,
++          "title": "Black / 2XL",
++          "colour": "Black",
++          "size": "2XL",
++          "price": 4130,
++          "costUsdCents": 2377,
++          "shipFirstUsdCents": 739,
++          "shipAdditionalUsdCents": 209
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad79238ff714daae20c48e4"
+     },
+     {
+       "key": "bright-us-tee",
+-      "dry": true,
+-      "variants": 10,
+-      "titles": [
+-        "White / L",
+-        "White / M",
+-        "White / S",
+-        "White / XL",
+-        "White / 2XL",
+-        "Black / L",
+-        "Black / M",
+-        "Black / S",
+-        "Black / XL",
+-        "Black / 2XL"
+-      ],
++      "where": "us",
++      "title": "Socially Hibernating Christmas Frog T-Shirt in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Shirt, Ships from the US",
++      "printifyProductId": "6ad7923cd30770188201586d",
+       "printAreas": [
+         "3951x4919",
+         "3591x4472",
+         "3232x4024"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 12125,
++          "title": "Black / M",
++          "colour": "Black",
++          "size": "M",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12102,
++          "title": "White / S",
++          "colour": "White",
++          "size": "S",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12103,
++          "title": "White / XL",
++          "colour": "White",
++          "size": "XL",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12126,
++          "title": "Black / S",
++          "colour": "Black",
++          "size": "S",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12124,
++          "title": "Black / L",
++          "colour": "Black",
++          "size": "L",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12127,
++          "title": "Black / XL",
++          "colour": "Black",
++          "size": "XL",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12100,
++          "title": "White / L",
++          "colour": "White",
++          "size": "L",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12101,
++          "title": "White / M",
++          "colour": "White",
++          "size": "M",
++          "price": 2246,
++          "costUsdCents": 968,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12104,
++          "title": "White / 2XL",
++          "colour": "White",
++          "size": "2XL",
++          "price": 2246,
++          "costUsdCents": 1177,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        },
++        {
++          "id": 12128,
++          "title": "Black / 2XL",
++          "colour": "Black",
++          "size": "2XL",
++          "price": 2246,
++          "costUsdCents": 1177,
++          "shipFirstUsdCents": 399,
++          "shipAdditionalUsdCents": 209
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad7923cd30770188201586d"
+     },
+     {
+       "key": "bright-uk-hoodie",
+-      "dry": true,
+-      "variants": 10,
+-      "titles": [
+-        "White / S",
+-        "White / M",
+-        "White / L",
+-        "White / XL",
+-        "White / 2XL",
+-        "Black / S",
+-        "Black / M",
+-        "Black / L",
+-        "Black / XL",
+-        "Black / 2XL"
+-      ],
++      "where": "uk",
++      "title": "Socially Hibernating Christmas Frog Hoodie in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Jumper, Made in the UK",
++      "printifyProductId": "6ad79240c087d2314b0fa449",
+       "printAreas": [
+         "3319x2212",
+         "3909x2606",
+         "4500x3000"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 32910,
++          "title": "White / S",
++          "colour": "White",
++          "size": "S",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32911,
++          "title": "White / M",
++          "colour": "White",
++          "size": "M",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32912,
++          "title": "White / L",
++          "colour": "White",
++          "size": "L",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32913,
++          "title": "White / XL",
++          "colour": "White",
++          "size": "XL",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32914,
++          "title": "White / 2XL",
++          "colour": "White",
++          "size": "2XL",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32918,
++          "title": "Black / S",
++          "colour": "Black",
++          "size": "S",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32919,
++          "title": "Black / M",
++          "colour": "Black",
++          "size": "M",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32920,
++          "title": "Black / L",
++          "colour": "Black",
++          "size": "L",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32921,
++          "title": "Black / XL",
++          "colour": "Black",
++          "size": "XL",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        },
++        {
++          "id": 32922,
++          "title": "Black / 2XL",
++          "colour": "Black",
++          "size": "2XL",
++          "price": 4800,
++          "costUsdCents": 2924,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 299
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad79240c087d2314b0fa449"
+     },
+     {
+       "key": "bright-uk-tee",
+-      "dry": true,
+-      "variants": 10,
+-      "titles": [
+-        "White / L",
+-        "White / M",
+-        "White / S",
+-        "White / XL",
+-        "White / 2XL",
+-        "Black / L",
+-        "Black / M",
+-        "Black / S",
+-        "Black / XL",
+-        "Black / 2XL"
+-      ],
++      "where": "uk",
++      "title": "Socially Hibernating Christmas Frog T-Shirt in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Top, Made in the UK",
++      "printifyProductId": "6ad79245b0c1203caf059074",
+       "printAreas": [
+         "4500x5100",
+         "4110x4658",
+         "3709x4203"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 12100,
++          "title": "White / L",
++          "colour": "White",
++          "size": "L",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12101,
++          "title": "White / M",
++          "colour": "White",
++          "size": "M",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12102,
++          "title": "White / S",
++          "colour": "White",
++          "size": "S",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12103,
++          "title": "White / XL",
++          "colour": "White",
++          "size": "XL",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12104,
++          "title": "White / 2XL",
++          "colour": "White",
++          "size": "2XL",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12124,
++          "title": "Black / L",
++          "colour": "Black",
++          "size": "L",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12125,
++          "title": "Black / M",
++          "colour": "Black",
++          "size": "M",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12126,
++          "title": "Black / S",
++          "colour": "Black",
++          "size": "S",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12127,
++          "title": "Black / XL",
++          "colour": "Black",
++          "size": "XL",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        },
++        {
++          "id": 12128,
++          "title": "Black / 2XL",
++          "colour": "Black",
++          "size": "2XL",
++          "price": 1900,
++          "costUsdCents": 936,
++          "shipFirstUsdCents": 359,
++          "shipAdditionalUsdCents": 199
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad79245b0c1203caf059074"
+     },
+     {
+       "key": "bright-uk-blanket",
+-      "dry": true,
+-      "variants": 2,
+-      "titles": [
+-        "30'' × 40''",
+-        "50\" × 60\""
+-      ],
++      "where": "uk",
++      "title": "Socially Hibernating Christmas Frog Fleece Blanket in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, Made in the UK",
++      "printifyProductId": "6ad7924ac087d2314b0fa45b",
+       "printAreas": [
+         "5025x6525",
+         "8025x9525"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 100925,
++          "title": "30'' × 40''",
++          "colour": null,
++          "size": "30'' × 40''",
++          "price": 2775,
++          "costUsdCents": 1777,
++          "shipFirstUsdCents": 469,
++          "shipAdditionalUsdCents": 129
++        },
++        {
++          "id": 100926,
++          "title": "50\" × 60\"",
++          "colour": null,
++          "size": "50\" × 60\"",
++          "price": 4700,
++          "costUsdCents": 2997,
++          "shipFirstUsdCents": 519,
++          "shipAdditionalUsdCents": 129
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad7924ac087d2314b0fa45b"
+     },
+     {
+       "key": "bright-uk-mug",
+-      "dry": true,
+-      "variants": 1,
+-      "titles": [
+-        "11oz"
+-      ],
++      "where": "uk",
++      "title": "Socially Hibernating Christmas Frog Mug in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Made in the UK",
++      "printifyProductId": "6ad79250b0c1203caf059085",
+       "printAreas": [
+         "2582x1120"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 69010,
++          "title": "11oz",
++          "colour": null,
++          "size": null,
++          "price": 1350,
++          "costUsdCents": 534,
++          "shipFirstUsdCents": 389,
++          "shipAdditionalUsdCents": 249
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad79250b0c1203caf059085"
+     },
+     {
+       "key": "bright-us-mug",
+-      "dry": true,
+-      "variants": 1,
+-      "titles": [
+-        "11oz"
+-      ],
++      "where": "us",
++      "title": "Socially Hibernating Christmas Frog Mug in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Ships from the US",
++      "printifyProductId": "6ad79254cfe9581c8b066690",
+       "printAreas": [
+         "2475x1155"
+-      ]
++      ],
++      "variants": [
++        {
++          "id": 65216,
++          "title": "11oz",
++          "colour": null,
++          "size": null,
++          "price": 1456,
++          "costUsdCents": 503,
++          "shipFirstUsdCents": 579,
++          "shipAdditionalUsdCents": 299
++        }
++      ],
++      "mockupLibrary": "https://printify.com/app/mockup-library/shops/29335686/products/6ad79254cfe9581c8b066690"
+     }
+   ],
+   "errors": []
