@@ -1,0 +1,165 @@
+# Christmas colourways: bright + black-and-white pieces in xmas-bundle.js, mug/throw art [skip netlify]
+diff --git a/artwork/frogs/src/socially-hibernating-colourways.py b/artwork/frogs/src/socially-hibernating-colourways.py
+index e073111..c3ac9b7 100644
+--- a/artwork/frogs/src/socially-hibernating-colourways.py
++++ b/artwork/frogs/src/socially-hibernating-colourways.py
+@@ -10,9 +10,14 @@
+ # Writes to artwork/frogs/:
+ #   socially-hibernating-bright(.png|-dark.png|-tight.png|-dark-tight.png)
+ #   socially-hibernating-mono(.png|-dark.png|-tight.png|-dark-tight.png)
++#   socially-hibernating-{bright,mono}-mug.png       2700x1200 wrap, the frog
++#                                                    on both sides of the mug
++#   socially-hibernating-{bright,mono}-blanket.png   8025x10425 edge-to-edge
++#                                                    throw, like the original
+ # Usage: python socially-hibernating-colourways.py <fonts dir>
+ import importlib.util, os, sys
+-from PIL import Image, ImageOps
++import random
++from PIL import Image, ImageDraw, ImageOps
+ 
+ HERE = os.path.dirname(os.path.abspath(__file__))
+ OUT = os.path.abspath(os.path.join(HERE, ".."))
+@@ -67,6 +72,36 @@ def invert_keep_alpha(img):
+     rgb = ImageOps.invert(Image.merge("RGB", (r, g, b)))
+     return Image.merge("RGBA", (*rgb.split(), a))
+ 
++def mug(art, name):
++    # A 2700x1200 wrap: the design twice, centred on each half, so it shows on
++    # both sides of the mug. xmas-bundle.js fits it to the mug's print area.
++    W, H = 2700, 1200
++    a = tight(art)
++    a.thumbnail((W // 2 - 80, H - 60))
++    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
++    for cx in (W // 4, 3 * W // 4):
++        img.alpha_composite(a, (cx - a.width // 2, (H - a.height) // 2))
++    img.save(os.path.join(OUT, name + "-mug.png"))
++
++def blanket(svgtext, words_colour, bg, snow, name, invert=False):
++    # Same layout as socially-hibernating-blanket.py, in the new colours.
++    W, H = 8025, 10425
++    img = Image.new("RGBA", (W, H), bg + (255,))
++    d = ImageDraw.Draw(img)
++    rnd = random.Random(16102026)
++    for _ in range(1050):
++        x, y, r = rnd.randrange(W), rnd.randrange(H), rnd.choice([16, 22, 29, 38])
++        d.ellipse((x - r, y - r, x + r, y + r), fill=snow + (rnd.choice([70, 100, 140]),))
++    size = int(W * 0.86)
++    art = sh.words(sh.render(svgtext, size), words_colour, k=size / 3000)
++    if invert:
++        art = invert_keep_alpha(art)
++    pad = Image.new("RGBA", (W, H), (0, 0, 0, 0))
++    ImageDraw.Draw(pad).ellipse(((W - size) // 2 + 190, (H - size) // 2 + 190, (W + size) // 2 - 190, (H + size) // 2 - 190), fill=bg + (255,))
++    img.alpha_composite(pad)
++    img.alpha_composite(art, ((W - size) // 2, (H - size) // 2))
++    img.convert("RGB").save(os.path.join(OUT, name + "-blanket.png"), optimize=True)
++
+ if __name__ == "__main__":
+     # Bright: magenta words on light garments, sunshine-yellow words on dark ones.
+     art = sh.render(recolour(sh.svg(), BRIGHT))
+@@ -76,4 +111,10 @@ if __name__ == "__main__":
+     light = sh.words(sh.render(recolour(sh.svg(), MONO)), "#111111")
+     save(light, "socially-hibernating-mono")
+     save(invert_keep_alpha(light), "socially-hibernating-mono-dark")
++    # Mugs (white mugs, so the light versions).
++    mug(sh.words(art.copy(), "#e0187a"), "socially-hibernating-bright")
++    mug(light, "socially-hibernating-mono")
++    # Throws: bright on deep purple with yellow snow; black and white on black.
++    blanket(recolour(sh.svg(), BRIGHT), "#ffd400", (42, 20, 112), (255, 212, 0), "socially-hibernating-bright")
++    blanket(recolour(sh.svg(), MONO), "#111111", (17, 17, 17), (255, 255, 255), "socially-hibernating-mono", invert=True)
+     print("written")
+diff --git a/automation/social/xmas-bundle.js b/automation/social/xmas-bundle.js
+index a3898a8..db263c2 100644
+--- a/automation/social/xmas-bundle.js
++++ b/automation/social/xmas-bundle.js
+@@ -45,11 +45,18 @@ const REPRINT = process.env.REPRINT === "1";
+ // for the one-price sets sold on the website (Sam, 16 Oct 2026: "yes build the
+ // website bundles"). It also records each variant's postage, for the margins.
+ const SITE = process.env.STORE === "site";
+-const OUT = path.join(__dirname, SITE ? "xmas-bundle-site-result.json" : "xmas-bundle-result.json");
++// COLOURWAY=bright|mono builds the Socially Hibernating colourways instead
++// (Sam, 20 Oct 2026, after a poll in her groups: many prefer bright colours,
++// some only black and white). Same blanks, makers and prices as the originals;
++// white and black garments only; no beanie; adds an 11oz mug (UK and US) built
++// on the same blank and maker as the shop's existing Etsy mugs.
++const CW = process.env.COLOURWAY || "";
++if (CW && !["bright", "mono"].includes(CW)) { console.error("COLOURWAY must be bright or mono"); process.exit(1); }
++const OUT = path.join(__dirname, CW ? `xmas-colourway-${CW}-result.json` : SITE ? "xmas-bundle-site-result.json" : "xmas-bundle-result.json");
+ const RAW = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/artwork/frogs/";
+ 
+ const LIGHT = ["Sport Grey", "Ash", "White"];
+-const DARK = ["Navy", "Maroon"];
++const DARK = ["Navy", "Maroon", "Black"]; // Black: the colourway pieces (20 Oct 2026)
+ const SIZES = ["S", "M", "L", "XL", "2XL"];
+ 
+ const US_NOTE = "Made and shipped in the US, so there are no import fees.";
+@@ -109,6 +116,42 @@ const PRODUCTS = [
+   },
+ ];
+ 
++// Etsy-store mugs the colourway mugs copy their blank and maker from
++// (47 Things at Once, printify-etsy-result.json).
++const MUG_SOURCE = { uk: "6ad0ad9d4fdcde14c009ea51", us: "6ad0ada01808260f4c00a659" };
++const CW_WORD = { bright: "Bright Colours", mono: "Black and White" };
++const CW_TAG = { bright: "bright christmas", mono: "black and white" };
++function colourwayList(cw) {
++  const art = (kind) => ({ light: `socially-hibernating-${cw}-${kind}.png`, dark: `socially-hibernating-${cw}-${kind}.png` });
++  const garmentArt = { light: `socially-hibernating-${cw}-tight.png`, dark: `socially-hibernating-${cw}-dark-tight.png` };
++  const retitle = (t) => {
++    // "Socially Hibernating Christmas Frog Hoodie — ..." -> "... Hoodie in Bright Colours — ..."
++    let out = t.replace(/^(.*?) — /, `$1 in ${CW_WORD[cw]} — `);
++    if (out.length > 140) out = out.replace(", Neurodivergent Gift", "");
++    if (out.length > 140) out = out.replace(", Cosy Throw", "");
++    return out;
++  };
++  const retag = (tags) => [CW_TAG[cw], ...tags.filter((x) => x !== "frog lover gift")].slice(0, 13);
++  const list = [];
++  for (const base of PRODUCTS.filter((p) => p.key !== "us-beanie")) {
++    const spec = { ...base, key: `${cw}-${base.key}`, title: retitle(base.title), tags: retag(base.tags) };
++    if (base.key === "uk-blanket") spec.art = art("blanket");
++    else { spec.colours = ["White", "Black"]; spec.art = garmentArt; }
++    list.push(spec);
++  }
++  for (const where of ["uk", "us"]) {
++    list.push({
++      key: `${cw}-${where}-mug`, where, source: MUG_SOURCE[where], colours: null, sizes: null, art: art("mug"),
++      price: () => (where === "us" ? 1456 : 1350),
++      title: retitle(`Socially Hibernating Christmas Frog Mug — Cute Frog in Santa Hat, Introvert Christmas Gift, Neurodivergent Gift, 11oz Mug${where === "us" ? ", Ships from the US" : ", Made in the UK"}`),
++      description: [STORY, "An 11oz white ceramic mug with the frog printed on both sides. Dishwasher and microwave safe.", where === "us" ? US_NOTE : UK_NOTE],
++      tags: [CW_TAG[cw], "christmas mug", "frog mug", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "stocking filler", "socially hibernating", "coffee mug gift", "christmas frog"],
++    });
++  }
++  return list;
++}
++const LIST = CW ? colourwayList(CW) : PRODUCTS;
++
+ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+ async function api(p, method = "GET", body) {
+   for (let attempt = 0; ; attempt++) {
+@@ -178,9 +221,18 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+   }
+ 
+   const results = [], errors = [];
+-  for (const spec of PRODUCTS) {
++  for (const spec of LIST) {
+     console.log(`\n${spec.key}: ${spec.title.split(" —")[0]}`);
+     try {
++      if (spec.source) {
++        // Copy the blank, maker, enabled variants and print position from an
++        // existing Etsy-store product.
++        const src = await api(`/shops/${etsyStore.id}/products/${spec.source}.json`);
++        spec.blueprint = src.blueprint_id; spec.provider = src.print_provider_id;
++        spec.only = (src.variants || []).filter((v) => v.is_enabled).map((v) => v.id);
++        spec.position = src.print_areas?.[0]?.placeholders?.[0]?.position || "front";
++        console.log(`  copying blueprint ${spec.blueprint}, maker ${spec.provider}, ${spec.only.length} variant(s), position ${spec.position}`);
++      }
+       const vres = await api(`/catalog/blueprints/${spec.blueprint}/print_providers/${spec.provider}/variants.json`);
+       const all = vres.variants || [];
+       // Match colour and size from the variant title, whatever order Printify uses.
+@@ -190,6 +242,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+         const okS = !spec.sizes || spec.sizes.some((s) => parts.includes(s));
+         return okC && okS;
+       });
++      if (spec.only) picked = picked.filter((v) => spec.only.includes(v.id));
+       // Printify lists some colours twice under one name (US "Ash" on 16 Oct
+       // 2026: two blanks, both titled "Ash / S" ...). Etsy can't show two
+       // identical options, so keep the first of each title.
