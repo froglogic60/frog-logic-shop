@@ -1,0 +1,27 @@
+name: Christmas colourway site pictures
+# Makes the 800x800 site pictures for the bright and black-and-white tabs from
+# the Printify mockups and card previews already in the repo
+# (automation/social/xmas-colourway-site-pictures.py) and commits them to
+# assets/xmas/ [skip netlify]; the deploy that shows them is a separate commit.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  pictures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python automation/social/xmas-colourway-site-pictures.py
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/xmas/cw-*.jpg
+          git commit -m "Christmas colourway site pictures [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
