@@ -1808,7 +1808,7 @@
   },
   {
     "id": "d3-say-it-communication-scripts",
-    "name": "Say It — Communication Scripts",
+    "name": "Say It \u2014 Communication Scripts",
     "price": 2,
     "type": "digital",
     "currency": "gbp",
@@ -1976,7 +1976,7 @@
   },
   {
     "id": "d25-hoppy-thoughts-issue-01",
-    "name": "Hoppy Thoughts — Issue 01",
+    "name": "Hoppy Thoughts \u2014 Issue 01",
     "price": 4,
     "type": "digital",
     "currency": "gbp",
@@ -1984,7 +1984,7 @@
   },
   {
     "id": "d26-hoppy-thoughts-issue-02",
-    "name": "Hoppy Thoughts — Issue 02",
+    "name": "Hoppy Thoughts \u2014 Issue 02",
     "price": 4,
     "type": "digital",
     "currency": "gbp",
@@ -2040,7 +2040,7 @@
   },
   {
     "id": "p1-the-pond-guides",
-    "name": "The Pond Guides — Complete Set",
+    "name": "The Pond Guides \u2014 Complete Set",
     "price": 8,
     "type": "digital",
     "currency": "gbp",
@@ -2616,8 +2616,44 @@
     "file": "Halloween-Stickers.pdf"
   },
   {
+    "id": "d35-bright-christmas-cards",
+    "name": "Bright Christmas Cards",
+    "price": 3,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Christmas-Cards-Bright.pdf",
+    "files": [
+      {
+        "name": "Bright Christmas Cards (A4)",
+        "file": "Christmas-Cards-Bright.pdf"
+      },
+      {
+        "name": "Bright Christmas Cards (US Letter)",
+        "file": "Christmas-Cards-Bright-Letter.pdf"
+      }
+    ]
+  },
+  {
+    "id": "d36-black-and-white-christmas-cards",
+    "name": "Black and White Christmas Cards",
+    "price": 3,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Christmas-Cards-Black-and-White.pdf",
+    "files": [
+      {
+        "name": "Black and White Christmas Cards (A4)",
+        "file": "Christmas-Cards-Black-and-White.pdf"
+      },
+      {
+        "name": "Black and White Christmas Cards (US Letter)",
+        "file": "Christmas-Cards-Black-and-White-Letter.pdf"
+      }
+    ]
+  },
+  {
     "id": "o1-the-organisation-pack",
-    "name": "The Organisation Pack — Team licence",
+    "name": "The Organisation Pack \u2014 Team licence",
     "price": 95,
     "type": "digital",
     "currency": "gbp",
@@ -2626,7 +2662,7 @@
   },
   {
     "id": "o2-the-organisation-pack",
-    "name": "The Organisation Pack — Service licence",
+    "name": "The Organisation Pack \u2014 Service licence",
     "price": 195,
     "type": "digital",
     "currency": "gbp",
@@ -2635,7 +2671,7 @@
   },
   {
     "id": "o3-the-organisation-pack",
-    "name": "The Organisation Pack — Organisation licence",
+    "name": "The Organisation Pack \u2014 Organisation licence",
     "price": 395,
     "type": "digital",
     "currency": "gbp",

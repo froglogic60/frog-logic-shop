@@ -2582,6 +2582,42 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOUR FROGS · TWO OF EACH · ONE SHEET</text>
       <rect width="300" height="300" fill="url(#d34)"/>${mark()}</svg>`
   },
+  {
+    // Christmas colourways (20 Oct 2026, Sam's group poll): sold on their own
+    // tabs (#christmas-bright, #christmas-mono), not in the digital grid.
+    num: "D35 — Printable PDF", word: "Bright Christmas Cards",
+    line: "Three printable Christmas cards with the Socially Hibernating frog in bright colours: see you in January, Merry Christmas from the pond, and thinking of you from under a blanket. A4 and US Letter, fold in half, blank inside.",
+    price: "£3.00", link: "#", bg: "#5E4A8C", xmas: "bright",
+    files: [{ name: "Bright Christmas Cards (A4)", file: "Christmas-Cards-Bright.pdf" }, { name: "Bright Christmas Cards (US Letter)", file: "Christmas-Cards-Bright-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d35", 0.1)}
+      <rect x="70" y="40" width="160" height="200" rx="4" fill="#ffffff"/>
+      <rect x="92" y="60" width="116" height="152" rx="3" fill="none" stroke="#111111" stroke-width="1.2" opacity="0.5"/>
+      <circle cx="100" cy="70" r="3" fill="#ff2438"/><circle cx="190" cy="66" r="2.5" fill="#1f6bff"/><circle cx="120" cy="98" r="2" fill="#18e06f"/><circle cx="204" cy="110" r="3" fill="#ff3fd2"/><circle cx="98" cy="160" r="2.5" fill="#ffd400"/><circle cx="196" cy="170" r="2" fill="#ff2438"/><circle cx="108" cy="200" r="3" fill="#1f6bff"/><circle cx="186" cy="206" r="2.5" fill="#18e06f"/>
+      <circle cx="150" cy="128" r="34" fill="#ffe94a" stroke="#111111" stroke-width="0"/>
+      <path d="M 128 128 C 128 110 172 110 172 128 C 172 150 128 150 128 128 Z" fill="#3fd25a" stroke="#111111" stroke-width="2.2"/>
+      <path d="M 134 118 C 136 108 148 102 160 104 L 172 100" fill="none" stroke="#ff2438" stroke-width="7" stroke-linecap="round"/>
+      <text x="150" y="196" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#e0187a">Socially Hibernating</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
+      <rect width="300" height="300" fill="url(#d35)"/>${mark()}</svg>`
+  },
+  {
+    // Christmas colourways (20 Oct 2026, Sam's group poll): sold on their own
+    // tabs (#christmas-bright, #christmas-mono), not in the digital grid.
+    num: "D36 — Printable PDF", word: "Black and White Christmas Cards",
+    line: "The same three Socially Hibernating cards in crisp black and white: print them as they are, or colour them in. A4 and US Letter, fold in half, blank inside.",
+    price: "£3.00", link: "#", bg: "#1A1A1A", xmas: "mono",
+    files: [{ name: "Black and White Christmas Cards (A4)", file: "Christmas-Cards-Black-and-White.pdf" }, { name: "Black and White Christmas Cards (US Letter)", file: "Christmas-Cards-Black-and-White-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d36", 0.1)}
+      <rect x="70" y="40" width="160" height="200" rx="4" fill="#ffffff"/>
+      <rect x="92" y="60" width="116" height="152" rx="3" fill="none" stroke="#111111" stroke-width="1.2" opacity="0.5"/>
+      <circle cx="100" cy="70" r="3" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="190" cy="66" r="2.5" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="120" cy="98" r="2" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="204" cy="110" r="3" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="98" cy="160" r="2.5" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="196" cy="170" r="2" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="108" cy="200" r="3" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="186" cy="206" r="2.5" fill="none" stroke="#111111" stroke-width="0.8"/>
+      <circle cx="150" cy="128" r="34" fill="#ffffff" stroke="#111111" stroke-width="1.4"/>
+      <path d="M 128 128 C 128 110 172 110 172 128 C 172 150 128 150 128 128 Z" fill="#ffffff" stroke="#111111" stroke-width="2.2"/>
+      <path d="M 134 118 C 136 108 148 102 160 104 L 172 100" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+      <text x="150" y="196" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#111111">Socially Hibernating</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
+      <rect width="300" height="300" fill="url(#d36)"/>${mark()}</svg>`
+  },
 ];
 
 // Any SVG text wider than the artboard gets scaled down until it fits.
@@ -2616,10 +2652,30 @@ function renderBespoke(){
   slot.innerHTML = p.svg;
 }
 
+// The two Christmas colourway tabs each carry their printable cards; the
+// slot is <div data-xmas-cards="bright|mono"> in index.html.
+function renderXmasCards(){
+  document.querySelectorAll('[data-xmas-cards]').forEach(slot => {
+    const p = DIGITAL_PRODUCTS.find(x => x.xmas === slot.dataset.xmasCards);
+    if(!p) return;
+    slot.outerHTML = `
+    <article class="card">
+      <div class="stage"><img class="stage-photo" src="assets/xmas/cw-${p.xmas}-cards.jpg" alt="${p.word}: a printed Christmas card with the Socially Hibernating frog" loading="lazy"></div>
+      <div class="card-meta">
+        <p class="card-num">${p.num}</p>
+        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
+        <p class="card-line">${p.line}</p>
+        <p class="card-price">${p.price}</p>
+        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Download</button>
+      </div>
+    </article>`;
+  });
+}
+
 function renderDigital(){
   const grid = document.getElementById('digital-grid');
   if(!grid) return;
-  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature).map(p => `
+  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature && !p.xmas).map(p => `
     <article class="card">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
@@ -2970,6 +3026,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
   renderDigital();
   renderBespoke();
+  renderXmasCards();
   renderGuides();
   renderProfessional();
   renderOrganisations();

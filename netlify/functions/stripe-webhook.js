@@ -54,8 +54,11 @@ function readBasket(metadata = {}) {
 
 async function sendDownloadEmail({ toEmail, items }) {
   const site = process.env.SITE_URL;
+  // An item can carry several files (the Christmas cards come in A4 and US
+  // Letter); otherwise it is the one file.
   const links = items
-    .map((item) => `<p><a href="${site}/digital/${item.file}">${item.name}</a></p>`)
+    .flatMap((item) => (item.files || [{ name: item.name, file: item.file }]))
+    .map((f) => `<p><a href="${site}/digital/${f.file}">${f.name}</a></p>`)
     .join("\n");
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
