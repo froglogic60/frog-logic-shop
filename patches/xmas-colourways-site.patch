@@ -1,0 +1,473 @@
+# Christmas colourways on the site: bright and black-and-white tabs, printable cards [skip netlify]
+diff --git a/automation/social/xmas-colourway-site-pictures.py b/automation/social/xmas-colourway-site-pictures.py
+new file mode 100644
+index 0000000..e7eaf2a
+--- /dev/null
++++ b/automation/social/xmas-colourway-site-pictures.py
+@@ -0,0 +1,59 @@
++# Site pictures for the Socially Hibernating colourways (Sam, 20 Oct 2026:
++# bright and black-and-white each get their own tab on the site). Takes the
++# Printify mockups already committed to automation/social/xmas-bundle-mockups/
++# and the card previews in automation/social/xmas-cards/, and writes 800x800
++# JPGs to assets/xmas/, the size the other Christmas cards on the site use.
++# Usage: python xmas-colourway-site-pictures.py
++import os
++from PIL import Image
++
++HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.path.abspath(os.path.join(HERE, "../.."))
++MOCK = os.path.join(HERE, "xmas-bundle-mockups")
++CARDS = os.path.join(HERE, "xmas-cards")
++OUT = os.path.join(ROOT, "assets/xmas")
++
++PICKS = {  # output name -> source
++    "cw-bright-uk-tee": "bright/bright-uk-tee-front-2-white.jpg",
++    "cw-bright-uk-hoodie": "bright/bright-uk-hoodie-front-black.jpg",
++    "cw-bright-uk-throw": "bright/bright-uk-blanket-context-1-30-40.jpg",
++    "cw-bright-uk-mug": "bright/bright-uk-mug-front-11oz.jpg",
++    "cw-bright-us-tee": "bright/bright-us-tee-front-2-black.jpg",
++    "cw-bright-us-hoodie": "bright/bright-us-hoodie-front-white.jpg",
++    "cw-bright-us-mug": "bright/bright-us-mug-front-11oz.jpg",
++    "cw-mono-uk-tee": "mono/mono-uk-tee-front-2-white.jpg",
++    "cw-mono-uk-hoodie": "mono/mono-uk-hoodie-front-black.jpg",
++    "cw-mono-uk-throw": "mono/mono-uk-blanket-context-1-30-40.jpg",
++    "cw-mono-uk-mug": "mono/mono-uk-mug-front-11oz.jpg",
++    "cw-mono-us-tee": "mono/mono-us-tee-front-2-black.jpg",
++    "cw-mono-us-hoodie": "mono/mono-us-hoodie-front-white.jpg",
++    "cw-mono-us-mug": "mono/mono-us-mug-front-11oz.jpg",
++}
++CARD_PICKS = {"cw-bright-cards": "bright-listing-3.png", "cw-mono-cards": "black-and-white-listing-3.png"}
++
++def square(img, size=800, bg=(255, 255, 255)):
++    img = img.convert("RGB")
++    w, h = img.size
++    s = max(w, h)
++    canvas = Image.new("RGB", (s, s), bg)
++    canvas.paste(img, ((s - w) // 2, (s - h) // 2))
++    return canvas.resize((size, size), Image.LANCZOS)
++
++if __name__ == "__main__":
++    os.makedirs(OUT, exist_ok=True)
++    for name, src in PICKS.items():
++        im = Image.open(os.path.join(MOCK, src))
++        # The mockups are square already; crop a little off the edges so the
++        # product sits larger in the card, like the original set pictures.
++        w, h = im.size; m = int(min(w, h) * 0.06)
++        im = im.crop((m, m, w - m, h - m))
++        square(im).save(os.path.join(OUT, name + ".jpg"), quality=86, optimize=True)
++        print("written", name)
++    for name, src in CARD_PICKS.items():
++        im = Image.open(os.path.join(CARDS, src))
++        w, h = im.size
++        # The single-card listing image is 4:3 on cream; its middle square
++        # holds the card and its caption.
++        side = h; x0 = (w - side) // 2
++        square(im.crop((x0, 0, x0 + side, h)), bg=(244, 239, 227)).save(os.path.join(OUT, name + ".jpg"), quality=86, optimize=True)
++        print("written", name)
+diff --git a/index.html b/index.html
+index 35c0d38..56be8fa 100644
+--- a/index.html
++++ b/index.html
+@@ -44,6 +44,8 @@
+     <nav class="site-nav" aria-label="Primary">
+       <a href="#collection">The words</a>
+       <a href="#christmas">Christmas</a>
++      <a href="#christmas-bright">Christmas: bright</a>
++      <a href="#christmas-mono">Christmas: black &amp; white</a>
+       <a href="#halloween">Halloween</a>
+       <a href="#frogs">The frogs</a>
+       <a href="#digital">Digital</a>
+@@ -224,6 +226,184 @@
+     </div>
+   </section>
+ 
++
++  <!-- Christmas colourways (20 Oct 2026): Sam's group poll wanted bright and
++       black-and-white versions, each on its own tab. The pieces are Etsy
++       listings (Printify's Etsy store); the printable cards are sold here
++       (D35/D36 in script.js, rendered into the data-xmas-cards slot).
++       Pictures: automation/social/xmas-colourway-site-pictures.py. -->
++  <section class="collection christmas" id="christmas-bright">
++    <div class="wrap">
++      <div class="section-head">
++        <h2>Christmas in bright colours</h2>
++        <p class="count">Seven pieces &#183; printable cards</p>
++      </div>
++      <p class="section-sub"><strong>A heads-up before you scroll: these are brightly coloured, on purpose.</strong> Hot pink, neon green, purple and yellow, for the people in our groups who asked for bright. If bright colours are a lot for you, the same frog is in <a href="#christmas-mono">black and white</a> just below, and in the original soft colours <a href="#christmas">above</a>.</p>
++      <p class="section-sub">The same Socially Hibernating frog, Santa hat on, tangled in the fairy lights, not coming out until January, now in colours that are hard to miss. White or black garments, a mug, a fleece throw, and three printable cards. The pieces are made to order through our Etsy shop; the cards download straight from here.</p>
++      <div class="pad-grid">
++        <div data-xmas-cards="bright"></div>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-uk-tee.jpg" alt="White tee printed with the Socially Hibernating Christmas frog in bright" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Tee, Bright Colours</h3>
++            <p class="card-line">Gildan cotton tee, white or black, S to 2XL.</p>
++            <p class="card-price">&pound;19 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599568228" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-uk-hoodie.jpg" alt="Black hoodie printed with the Socially Hibernating Christmas frog in bright" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Hoodie, Bright Colours</h3>
++            <p class="card-line">Gildan Heavy Blend, white or black, S to 2XL.</p>
++            <p class="card-price">&pound;48 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599571512" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-uk-mug.jpg" alt="White mug printed with the Socially Hibernating Christmas frog in bright" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Mug, Bright Colours</h3>
++            <p class="card-line">11oz ceramic mug, frog on the front. Dishwasher and microwave safe.</p>
++            <p class="card-price">&pound;13.50 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599550881" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-uk-throw.jpg" alt="Fleece throw printed edge to edge with the Socially Hibernating Christmas frog in bright, draped over a chair" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Fleece Throw, Bright Colours</h3>
++            <p class="card-line">Arctic fleece, 30 &times; 40 in or 50 &times; 60 in. Deep purple with yellow snow.</p>
++            <p class="card-price">from &pound;27.75 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599553173" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-us-tee.jpg" alt="Black tee printed with the Socially Hibernating Christmas frog in bright" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Socially Hibernating Tee, Bright Colours (US)</h3>
++            <p class="card-line">Gildan cotton tee, white or black, S to 2XL. For US addresses.</p>
++            <p class="card-price">&pound;22.46 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599568962" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-us-hoodie.jpg" alt="White hoodie printed with the Socially Hibernating Christmas frog in bright" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Socially Hibernating Hoodie, Bright Colours (US)</h3>
++            <p class="card-line">Gildan Heavy Blend, white or black, S to 2XL. For US addresses.</p>
++            <p class="card-price">from &pound;38.30 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599548863" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-bright-us-mug.jpg" alt="White mug printed with the Socially Hibernating Christmas frog in bright" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Socially Hibernating Mug, Bright Colours (US)</h3>
++            <p class="card-line">11oz ceramic mug, frog on the front. For US addresses.</p>
++            <p class="card-price">&pound;14.56 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599551293" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++      </div>
++    </div>
++  </section>
++
++  <!-- Christmas colourways (20 Oct 2026): Sam's group poll wanted bright and
++       black-and-white versions, each on its own tab. The pieces are Etsy
++       listings (Printify's Etsy store); the printable cards are sold here
++       (D35/D36 in script.js, rendered into the data-xmas-cards slot).
++       Pictures: automation/social/xmas-colourway-site-pictures.py. -->
++  <section class="collection christmas" id="christmas-mono">
++    <div class="wrap">
++      <div class="section-head">
++        <h2>Christmas in black and white</h2>
++        <p class="count">Seven pieces &#183; printable cards</p>
++      </div>
++      <p class="section-sub">The Socially Hibernating frog as crisp line art: black on white garments, white on black, and a throw in black with white snow. For the people who asked for no colour at all, and anyone who finds it easier on the eyes. The pieces are made to order through our Etsy shop; the printable cards download straight from here, and they colour in nicely if you want them to.</p>
++      <div class="pad-grid">
++        <div data-xmas-cards="mono"></div>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-uk-tee.jpg" alt="White tee printed with the Socially Hibernating Christmas frog in black and white" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Tee, Black and White</h3>
++            <p class="card-line">Gildan cotton tee, white or black, S to 2XL.</p>
++            <p class="card-price">&pound;19 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599569554" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-uk-hoodie.jpg" alt="Black hoodie printed with the Socially Hibernating Christmas frog in black and white" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Hoodie, Black and White</h3>
++            <p class="card-line">Gildan Heavy Blend, white or black, S to 2XL.</p>
++            <p class="card-price">&pound;48 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599573112" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-uk-mug.jpg" alt="White mug printed with the Socially Hibernating Christmas frog in black and white" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Mug, Black and White</h3>
++            <p class="card-line">11oz ceramic mug, frog on the front. Dishwasher and microwave safe.</p>
++            <p class="card-price">&pound;13.50 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599575380" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-uk-throw.jpg" alt="Fleece throw printed edge to edge with the Socially Hibernating Christmas frog in black and white, draped over a chair" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; posted in the UK</p>
++            <h3>Socially Hibernating Fleece Throw, Black and White</h3>
++            <p class="card-line">Arctic fleece, 30 &times; 40 in or 50 &times; 60 in. Black with white snow.</p>
++            <p class="card-price">from &pound;27.75 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599577116" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-us-tee.jpg" alt="Black tee printed with the Socially Hibernating Christmas frog in black and white" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Socially Hibernating Tee, Black and White (US)</h3>
++            <p class="card-line">Gildan cotton tee, white or black, S to 2XL. For US addresses.</p>
++            <p class="card-price">&pound;22.46 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599546685" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-us-hoodie.jpg" alt="White hoodie printed with the Socially Hibernating Christmas frog in black and white" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Socially Hibernating Hoodie, Black and White (US)</h3>
++            <p class="card-line">Gildan Heavy Blend, white or black, S to 2XL. For US addresses.</p>
++            <p class="card-price">from &pound;38.30 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599573332" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++        <article class="card">
++          <div class="stage"><img class="stage-photo" src="assets/xmas/cw-mono-us-mug.jpg" alt="White mug printed with the Socially Hibernating Christmas frog in black and white" loading="lazy"></div>
++          <div class="card-meta">
++            <p class="card-num">Made &amp; shipped in the US</p>
++            <h3>Socially Hibernating Mug, Black and White (US)</h3>
++            <p class="card-line">11oz ceramic mug, frog on the front. For US addresses.</p>
++            <p class="card-price">&pound;14.56 + postage</p>
++            <a class="btn btn-primary" href="https://froglogic.etsy.com/listing/4599552299" target="_blank" rel="noopener">View on Etsy</a>
++          </div>
++        </article>
++      </div>
++    </div>
++  </section>
++
+   <section class="collection christmas" id="christmas-personalised">
+     <div class="wrap">
+       <div class="section-head">
+diff --git a/netlify/functions/catalog.json b/netlify/functions/catalog.json
+index 5762499..8ffda05 100644
+--- a/netlify/functions/catalog.json
++++ b/netlify/functions/catalog.json
+@@ -1808,7 +1808,7 @@
+   },
+   {
+     "id": "d3-say-it-communication-scripts",
+-    "name": "Say It — Communication Scripts",
++    "name": "Say It \u2014 Communication Scripts",
+     "price": 2,
+     "type": "digital",
+     "currency": "gbp",
+@@ -1976,7 +1976,7 @@
+   },
+   {
+     "id": "d25-hoppy-thoughts-issue-01",
+-    "name": "Hoppy Thoughts — Issue 01",
++    "name": "Hoppy Thoughts \u2014 Issue 01",
+     "price": 4,
+     "type": "digital",
+     "currency": "gbp",
+@@ -1984,7 +1984,7 @@
+   },
+   {
+     "id": "d26-hoppy-thoughts-issue-02",
+-    "name": "Hoppy Thoughts — Issue 02",
++    "name": "Hoppy Thoughts \u2014 Issue 02",
+     "price": 4,
+     "type": "digital",
+     "currency": "gbp",
+@@ -2040,7 +2040,7 @@
+   },
+   {
+     "id": "p1-the-pond-guides",
+-    "name": "The Pond Guides — Complete Set",
++    "name": "The Pond Guides \u2014 Complete Set",
+     "price": 8,
+     "type": "digital",
+     "currency": "gbp",
+@@ -2615,9 +2615,45 @@
+     "currency": "gbp",
+     "file": "Halloween-Stickers.pdf"
+   },
++  {
++    "id": "d35-bright-christmas-cards",
++    "name": "Bright Christmas Cards",
++    "price": 3,
++    "type": "digital",
++    "currency": "gbp",
++    "file": "Christmas-Cards-Bright.pdf",
++    "files": [
++      {
++        "name": "Bright Christmas Cards (A4)",
++        "file": "Christmas-Cards-Bright.pdf"
++      },
++      {
++        "name": "Bright Christmas Cards (US Letter)",
++        "file": "Christmas-Cards-Bright-Letter.pdf"
++      }
++    ]
++  },
++  {
++    "id": "d36-black-and-white-christmas-cards",
++    "name": "Black and White Christmas Cards",
++    "price": 3,
++    "type": "digital",
++    "currency": "gbp",
++    "file": "Christmas-Cards-Black-and-White.pdf",
++    "files": [
++      {
++        "name": "Black and White Christmas Cards (A4)",
++        "file": "Christmas-Cards-Black-and-White.pdf"
++      },
++      {
++        "name": "Black and White Christmas Cards (US Letter)",
++        "file": "Christmas-Cards-Black-and-White-Letter.pdf"
++      }
++    ]
++  },
+   {
+     "id": "o1-the-organisation-pack",
+-    "name": "The Organisation Pack — Team licence",
++    "name": "The Organisation Pack \u2014 Team licence",
+     "price": 95,
+     "type": "digital",
+     "currency": "gbp",
+@@ -2626,7 +2662,7 @@
+   },
+   {
+     "id": "o2-the-organisation-pack",
+-    "name": "The Organisation Pack — Service licence",
++    "name": "The Organisation Pack \u2014 Service licence",
+     "price": 195,
+     "type": "digital",
+     "currency": "gbp",
+@@ -2635,7 +2671,7 @@
+   },
+   {
+     "id": "o3-the-organisation-pack",
+-    "name": "The Organisation Pack — Organisation licence",
++    "name": "The Organisation Pack \u2014 Organisation licence",
+     "price": 395,
+     "type": "digital",
+     "currency": "gbp",
+diff --git a/netlify/functions/stripe-webhook.js b/netlify/functions/stripe-webhook.js
+index 7aae5b7..e5c7c3a 100644
+--- a/netlify/functions/stripe-webhook.js
++++ b/netlify/functions/stripe-webhook.js
+@@ -54,8 +54,11 @@ function readBasket(metadata = {}) {
+ 
+ async function sendDownloadEmail({ toEmail, items }) {
+   const site = process.env.SITE_URL;
++  // An item can carry several files (the Christmas cards come in A4 and US
++  // Letter); otherwise it is the one file.
+   const links = items
+-    .map((item) => `<p><a href="${site}/digital/${item.file}">${item.name}</a></p>`)
++    .flatMap((item) => (item.files || [{ name: item.name, file: item.file }]))
++    .map((f) => `<p><a href="${site}/digital/${f.file}">${f.name}</a></p>`)
+     .join("\n");
+   const res = await fetch("https://api.resend.com/emails", {
+     method: "POST",
+diff --git a/script.js b/script.js
+index 4db3f27..c76e963 100644
+--- a/script.js
++++ b/script.js
+@@ -2582,6 +2582,42 @@ const DIGITAL_PRODUCTS = [
+       <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOUR FROGS · TWO OF EACH · ONE SHEET</text>
+       <rect width="300" height="300" fill="url(#d34)"/>${mark()}</svg>`
+   },
++  {
++    // Christmas colourways (20 Oct 2026, Sam's group poll): sold on their own
++    // tabs (#christmas-bright, #christmas-mono), not in the digital grid.
++    num: "D35 — Printable PDF", word: "Bright Christmas Cards",
++    line: "Three printable Christmas cards with the Socially Hibernating frog in bright colours: see you in January, Merry Christmas from the pond, and thinking of you from under a blanket. A4 and US Letter, fold in half, blank inside.",
++    price: "£3.00", link: "#", bg: "#5E4A8C", xmas: "bright",
++    files: [{ name: "Bright Christmas Cards (A4)", file: "Christmas-Cards-Bright.pdf" }, { name: "Bright Christmas Cards (US Letter)", file: "Christmas-Cards-Bright-Letter.pdf" }],
++    svg: `<svg viewBox="0 0 300 300">${grain("d35", 0.1)}
++      <rect x="70" y="40" width="160" height="200" rx="4" fill="#ffffff"/>
++      <rect x="92" y="60" width="116" height="152" rx="3" fill="none" stroke="#111111" stroke-width="1.2" opacity="0.5"/>
++      <circle cx="100" cy="70" r="3" fill="#ff2438"/><circle cx="190" cy="66" r="2.5" fill="#1f6bff"/><circle cx="120" cy="98" r="2" fill="#18e06f"/><circle cx="204" cy="110" r="3" fill="#ff3fd2"/><circle cx="98" cy="160" r="2.5" fill="#ffd400"/><circle cx="196" cy="170" r="2" fill="#ff2438"/><circle cx="108" cy="200" r="3" fill="#1f6bff"/><circle cx="186" cy="206" r="2.5" fill="#18e06f"/>
++      <circle cx="150" cy="128" r="34" fill="#ffe94a" stroke="#111111" stroke-width="0"/>
++      <path d="M 128 128 C 128 110 172 110 172 128 C 172 150 128 150 128 128 Z" fill="#3fd25a" stroke="#111111" stroke-width="2.2"/>
++      <path d="M 134 118 C 136 108 148 102 160 104 L 172 100" fill="none" stroke="#ff2438" stroke-width="7" stroke-linecap="round"/>
++      <text x="150" y="196" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#e0187a">Socially Hibernating</text>
++      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
++      <rect width="300" height="300" fill="url(#d35)"/>${mark()}</svg>`
++  },
++  {
++    // Christmas colourways (20 Oct 2026, Sam's group poll): sold on their own
++    // tabs (#christmas-bright, #christmas-mono), not in the digital grid.
++    num: "D36 — Printable PDF", word: "Black and White Christmas Cards",
++    line: "The same three Socially Hibernating cards in crisp black and white: print them as they are, or colour them in. A4 and US Letter, fold in half, blank inside.",
++    price: "£3.00", link: "#", bg: "#1A1A1A", xmas: "mono",
++    files: [{ name: "Black and White Christmas Cards (A4)", file: "Christmas-Cards-Black-and-White.pdf" }, { name: "Black and White Christmas Cards (US Letter)", file: "Christmas-Cards-Black-and-White-Letter.pdf" }],
++    svg: `<svg viewBox="0 0 300 300">${grain("d36", 0.1)}
++      <rect x="70" y="40" width="160" height="200" rx="4" fill="#ffffff"/>
++      <rect x="92" y="60" width="116" height="152" rx="3" fill="none" stroke="#111111" stroke-width="1.2" opacity="0.5"/>
++      <circle cx="100" cy="70" r="3" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="190" cy="66" r="2.5" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="120" cy="98" r="2" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="204" cy="110" r="3" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="98" cy="160" r="2.5" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="196" cy="170" r="2" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="108" cy="200" r="3" fill="none" stroke="#111111" stroke-width="0.8"/><circle cx="186" cy="206" r="2.5" fill="none" stroke="#111111" stroke-width="0.8"/>
++      <circle cx="150" cy="128" r="34" fill="#ffffff" stroke="#111111" stroke-width="1.4"/>
++      <path d="M 128 128 C 128 110 172 110 172 128 C 172 150 128 150 128 128 Z" fill="#ffffff" stroke="#111111" stroke-width="2.2"/>
++      <path d="M 134 118 C 136 108 148 102 160 104 L 172 100" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
++      <text x="150" y="196" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#111111">Socially Hibernating</text>
++      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
++      <rect width="300" height="300" fill="url(#d36)"/>${mark()}</svg>`
++  },
+ ];
+ 
+ // Any SVG text wider than the artboard gets scaled down until it fits.
+@@ -2616,10 +2652,30 @@ function renderBespoke(){
+   slot.innerHTML = p.svg;
+ }
+ 
++// The two Christmas colourway tabs each carry their printable cards; the
++// slot is <div data-xmas-cards="bright|mono"> in index.html.
++function renderXmasCards(){
++  document.querySelectorAll('[data-xmas-cards]').forEach(slot => {
++    const p = DIGITAL_PRODUCTS.find(x => x.xmas === slot.dataset.xmasCards);
++    if(!p) return;
++    slot.outerHTML = `
++    <article class="card">
++      <div class="stage"><img class="stage-photo" src="assets/xmas/cw-${p.xmas}-cards.jpg" alt="${p.word}: a printed Christmas card with the Socially Hibernating frog" loading="lazy"></div>
++      <div class="card-meta">
++        <p class="card-num">${p.num}</p>
++        <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
++        <p class="card-line">${p.line}</p>
++        <p class="card-price">${p.price}</p>
++        <button class="btn btn-primary" data-checkout-num="${p.num}" data-checkout-word="${p.word}" data-checkout-kind="digital">Download</button>
++      </div>
++    </article>`;
++  });
++}
++
+ function renderDigital(){
+   const grid = document.getElementById('digital-grid');
+   if(!grid) return;
+-  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature).map(p => `
++  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature && !p.xmas).map(p => `
+     <article class="card">
+       <div class="stage" style="background:${p.bg}">${p.svg}</div>
+       <div class="card-meta">
+@@ -2970,6 +3026,7 @@ document.addEventListener('DOMContentLoaded', () => {
+   renderProducts();
+   renderDigital();
+   renderBespoke();
++  renderXmasCards();
+   renderGuides();
+   renderProfessional();
+   renderOrganisations();
