@@ -48,7 +48,7 @@ const SITE = process.env.STORE === "site";
 // COLOURWAY=bright|mono builds the Socially Hibernating colourways instead
 // (Sam, 20 Oct 2026, after a poll in her groups: many prefer bright colours,
 // some only black and white). Same blanks, makers and prices as the originals;
-// white and black garments only; no beanie; adds an 11oz mug (UK and US) built
+// white and black garments only; no beanie; adds an 11oz mug (UK and US, frog on the front) built
 // on the same blank and maker as the shop's existing Etsy mugs.
 const CW = process.env.COLOURWAY || "";
 if (CW && !["bright", "mono"].includes(CW)) { console.error("COLOURWAY must be bright or mono"); process.exit(1); }
@@ -144,7 +144,7 @@ function colourwayList(cw) {
       key: `${cw}-${where}-mug`, where, source: MUG_SOURCE[where], colours: null, sizes: null, art: art("mug"),
       price: () => (where === "us" ? 1456 : 1350),
       title: retitle(`Socially Hibernating Christmas Frog Mug — Cute Frog in Santa Hat, Introvert Christmas Gift, Neurodivergent Gift, 11oz Mug${where === "us" ? ", Ships from the US" : ", Made in the UK"}`),
-      description: [STORY, "An 11oz white ceramic mug with the frog printed on both sides. Dishwasher and microwave safe.", where === "us" ? US_NOTE : UK_NOTE],
+      description: [STORY, "An 11oz white ceramic mug with the frog printed on the front. Dishwasher and microwave safe.", where === "us" ? US_NOTE : UK_NOTE],
       tags: [CW_TAG[cw], "christmas mug", "frog mug", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "stocking filler", "socially hibernating", "coffee mug gift", "christmas frog"],
     });
   }
@@ -324,6 +324,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
           const listed = new Set(areas.flatMap((a) => a.variant_ids));
           const rest = (cur.variants || []).map((v) => v.id).filter((id) => !listed.has(id));
           update.print_areas = areas.map((a, i) => (i === 0 ? { ...a, variant_ids: [...a.variant_ids, ...rest] } : a));
+          update.description = spec.description.map((p) => `<p>${p}</p>`).join("");
         }
         await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", update);
         const fresh = await api(`/shops/${etsy.id}/products/${already.id}.json`);

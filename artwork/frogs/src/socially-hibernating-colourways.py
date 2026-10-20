@@ -10,8 +10,8 @@
 # Writes to artwork/frogs/:
 #   socially-hibernating-bright(.png|-dark.png|-tight.png|-dark-tight.png)
 #   socially-hibernating-mono(.png|-dark.png|-tight.png|-dark-tight.png)
-#   socially-hibernating-{bright,mono}-mug.png       2700x1200 wrap, the frog
-#                                                    on both sides of the mug
+#   socially-hibernating-{bright,mono}-mug.png       2700x1200 wrap, one frog
+#                                                    centred on the front
 #   socially-hibernating-{bright,mono}-blanket.png   8025x10425 edge-to-edge
 #                                                    throw, like the original
 # Usage: python socially-hibernating-colourways.py <fonts dir>
@@ -73,14 +73,13 @@ def invert_keep_alpha(img):
     return Image.merge("RGBA", (*rgb.split(), a))
 
 def mug(art, name):
-    # A 2700x1200 wrap: the design twice, centred on each half, so it shows on
-    # both sides of the mug. xmas-bundle.js fits it to the mug's print area.
+    # A 2700x1200 wrap with one frog centred, so it sits square on the front of
+    # the mug (20 Oct: two copies at the quarters split across the front view).
     W, H = 2700, 1200
     a = tight(art)
-    a.thumbnail((W // 2 - 80, H - 60))
+    a.thumbnail((1150, H - 80))
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    for cx in (W // 4, 3 * W // 4):
-        img.alpha_composite(a, (cx - a.width // 2, (H - a.height) // 2))
+    img.alpha_composite(a, ((W - a.width) // 2, (H - a.height) // 2))
     img.save(os.path.join(OUT, name + "-mug.png"))
 
 def blanket(svgtext, words_colour, bg, snow, name, invert=False):
