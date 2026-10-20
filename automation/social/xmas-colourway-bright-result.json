@@ -1,0 +1,131 @@
+{
+  "ranAt": "2026-10-20T16:08:21.844Z",
+  "dryRun": true,
+  "etsyStore": 29335686,
+  "results": [
+    {
+      "key": "bright-us-hoodie",
+      "dry": true,
+      "variants": 10,
+      "titles": [
+        "White / S",
+        "White / M",
+        "White / L",
+        "White / XL",
+        "White / 2XL",
+        "Black / S",
+        "Black / M",
+        "Black / L",
+        "Black / XL",
+        "Black / 2XL"
+      ],
+      "printAreas": [
+        "2919x1944",
+        "3273x2180",
+        "3531x2352"
+      ]
+    },
+    {
+      "key": "bright-us-tee",
+      "dry": true,
+      "variants": 10,
+      "titles": [
+        "White / L",
+        "White / M",
+        "White / S",
+        "White / XL",
+        "White / 2XL",
+        "Black / L",
+        "Black / M",
+        "Black / S",
+        "Black / XL",
+        "Black / 2XL"
+      ],
+      "printAreas": [
+        "3951x4919",
+        "3591x4472",
+        "3232x4024"
+      ]
+    },
+    {
+      "key": "bright-uk-hoodie",
+      "dry": true,
+      "variants": 10,
+      "titles": [
+        "White / S",
+        "White / M",
+        "White / L",
+        "White / XL",
+        "White / 2XL",
+        "Black / S",
+        "Black / M",
+        "Black / L",
+        "Black / XL",
+        "Black / 2XL"
+      ],
+      "printAreas": [
+        "3319x2212",
+        "3909x2606",
+        "4500x3000"
+      ]
+    },
+    {
+      "key": "bright-uk-tee",
+      "dry": true,
+      "variants": 10,
+      "titles": [
+        "White / L",
+        "White / M",
+        "White / S",
+        "White / XL",
+        "White / 2XL",
+        "Black / L",
+        "Black / M",
+        "Black / S",
+        "Black / XL",
+        "Black / 2XL"
+      ],
+      "printAreas": [
+        "4500x5100",
+        "4110x4658",
+        "3709x4203"
+      ]
+    },
+    {
+      "key": "bright-uk-blanket",
+      "dry": true,
+      "variants": 2,
+      "titles": [
+        "30'' × 40''",
+        "50\" × 60\""
+      ],
+      "printAreas": [
+        "5025x6525",
+        "8025x9525"
+      ]
+    },
+    {
+      "key": "bright-uk-mug",
+      "dry": true,
+      "variants": 1,
+      "titles": [
+        "11oz"
+      ],
+      "printAreas": [
+        "2582x1120"
+      ]
+    },
+    {
+      "key": "bright-us-mug",
+      "dry": true,
+      "variants": 1,
+      "titles": [
+        "11oz"
+      ],
+      "printAreas": [
+        "2475x1155"
+      ]
+    }
+  ],
+  "errors": []
+}
