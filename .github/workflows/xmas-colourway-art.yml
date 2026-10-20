@@ -1,7 +1,9 @@
 name: Christmas colourway artwork
 # Draws the bright and black-and-white Socially Hibernating artwork
 # (artwork/frogs/src/socially-hibernating-colourways.py) and commits the PNGs
-# to artwork/frogs/ [skip netlify], where Printify fetches them from.
+# to artwork/frogs/ [skip netlify], where Printify fetches them from. Then the
+# printable Christmas cards in both colourways (socially-hibernating-cards.py)
+# into digital/, with their Etsy listing images in automation/social/xmas-cards/.
 on:
   workflow_dispatch:
 permissions:
@@ -23,11 +25,13 @@ jobs:
         run: node -e 'require("./automation/social/gfonts.js").ensureFonts("automation/social/.gfonts").then(()=>console.log("fonts ok"))'
       - name: Draw
         run: python artwork/frogs/src/socially-hibernating-colourways.py automation/social/.gfonts
+      - name: Cards
+        run: python artwork/frogs/src/socially-hibernating-cards.py automation/social/.gfonts
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add artwork/frogs/socially-hibernating-bright*.png artwork/frogs/socially-hibernating-mono*.png
+          git add artwork/frogs/socially-hibernating-bright*.png artwork/frogs/socially-hibernating-mono*.png digital/Christmas-Cards-*.pdf automation/social/xmas-cards
           git commit -m "Christmas colourway artwork [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
