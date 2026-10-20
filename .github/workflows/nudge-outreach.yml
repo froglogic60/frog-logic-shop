@@ -1,0 +1,28 @@
+name: Nudge the approach-list charities
+# One follow-up to each charity emailed on 9–10 Oct that hasn't replied
+# (automation/outreach/nudge.mjs). nudged.json stops anyone getting two.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  nudge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Nudge
+        run: node automation/outreach/nudge.mjs
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+      - name: Commit the log
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/outreach/nudged.json
+          git commit -m "Outreach: nudge log [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
