@@ -19,6 +19,11 @@ on:
         type: choice
         options: [etsy, site]
         default: etsy
+      colourway:
+        description: "original set, or the bright / mono colourway pieces"
+        type: choice
+        options: [original, bright, mono]
+        default: original
       mockups_only:
         description: "Only download mockups of the built products for checking"
         type: boolean
@@ -43,6 +48,7 @@ jobs:
           REPRINT: ${{ inputs.reprint && '1' || '0' }}
           STORE: ${{ inputs.store }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          COLOURWAY: ${{ inputs.colourway != 'original' && inputs.colourway || '' }}
       - name: Download mockups for checking
         if: ${{ inputs.mockups_only }}
         working-directory: automation/social
@@ -55,7 +61,7 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in automation/social/xmas-bundle-result.json automation/social/xmas-bundle-site-result.json automation/social/xmas-bundle-mockups; do git add "$f" 2>/dev/null || true; done
+          for f in automation/social/xmas-bundle-result.json automation/social/xmas-bundle-site-result.json automation/social/xmas-colourway-*-result.json automation/social/xmas-bundle-mockups; do git add "$f" 2>/dev/null || true; done
           git commit -m "Christmas bundle products [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
