@@ -53,6 +53,19 @@
         "every": "day",
         "from": "2026-10-15"
       }
+    },
+    {
+      "time": "Mondays and Thursdays",
+      "what": "Check the Junk folder in your live.co.uk email for replies from the charities and gift guides (replies to hello@froglogic.co.uk land there, and some go to junk). Move any you find to the inbox",
+      "who": "you",
+      "repeat": {
+        "every": [
+          "Mon",
+          "Thu"
+        ],
+        "from": "2026-10-22",
+        "until": "2026-12-15"
+      }
     }
   ],
   "days": [
@@ -924,8 +937,8 @@
       "date": "2026-12-08",
       "items": [
         {
-          "what": "Chase the organisations that didn't reply (one nudge each)",
-          "who": "you"
+          "what": "Charity nudges: DONE 20 Oct (all 7 emailed ones). Nothing more to send them unless they reply",
+          "who": "note"
         }
       ]
     },
