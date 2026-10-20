@@ -41,7 +41,7 @@ function repoIds() {
   const ids = new Set();
   const walk = (dir) => {
     for (const f of fs.readdirSync(dir, { withFileTypes: true })) {
-      if ([".git", "node_modules"].includes(f.name)) continue;
+      if ([".git", "node_modules", "printify-cleanout-report.json"].includes(f.name)) continue; // the report lists the strays themselves
       const p = path.join(dir, f.name);
       if (f.isDirectory()) walk(p);
       else if (/\.(json|js|cjs|mjs|html|yml|md|csv|txt)$/.test(f.name) && fs.statSync(p).size < 20e6) {
