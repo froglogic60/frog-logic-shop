@@ -676,6 +676,10 @@
         {
           "what": "Outreach emails SENT (10): Neurodiverging (gift guide), Alive with Chronic Illness (gift guide), Hester Grainger, Perfectly Autistic (gift guide), NeuroSpicy Nonsense (gift guide), Disability Horizons (gift guide), Undivided (gift guide), Emily Ladau (gift guide), Autism Positive, Talk Therapy UK (gift guide), NEST (gift guide), Enna Global (gift guide). Replies go to hello@froglogic.co.uk. Nudge the quiet ones 8 Dec",
           "who": "robot"
+        },
+        {
+          "what": "Checked the 6 Socially Hibernating Etsy listings: UK ones (tee, hoodie, throw) post to the UK only from UK makers; US ones (tee, hoodie, beanie) post to the US only from US makers; all priced in pounds with the right production partner; prices inside the profit rule",
+          "who": "note"
         }
       ]
     },
@@ -971,8 +975,6 @@
     }
   ],
   "whenever": [
-    "Printify check 2026-10-19 — Etsy: 6 new Printify product(s) (Socially Hibernating Christmas Frog Fleece Blanket; Socially Hibernating Christmas Frog T-Shirt; Socially Hibernating Christmas Frog Hoodie; Socially Hibernating Christmas Frog Beanie; Socially Hibernating Christmas Frog T-Shirt; Socially Hibernating Christmas Frog Hoodie) — check each delivery profile is UK-only or US-only, in pounds, with the production partner attached. Ask Claude what to do about it",
-    "Christmas frog ornament (Etsy, UK + US versions, live 15 Oct at £10): can be put up to £11. At £10 the UK one keeps about £2.30 a sale (23%, just under the 25% rule); £11 puts it back inside the rule.",
     "GET SEEN, next moves after the product pages (13 Oct): (1) Pinterest — DONE, 116 product-page pins uploaded in bulk; (2) Etsy — ten more listed 13–14 Oct, 8 kits left on GitHub, attach a folder and Claude lists it; (3) a face: one short honest post a week from Sam herself goes further than three robot posts a day — four posts queued for FB/IG 16 Oct–6 Nov and made as TikTok slides for Sam to post by hand, one a week. TikTok posting API was refused, so TikTok stays manual",
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "US section: when Sam is back, build a US range on US print makers (decided 5 Sept 2026) — separate section, US shipping, US pricing",
