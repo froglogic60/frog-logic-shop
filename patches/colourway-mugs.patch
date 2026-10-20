@@ -1,0 +1,65 @@
+# Colourway mugs: one frog centred on the front [skip netlify]
+diff --git a/artwork/frogs/src/socially-hibernating-colourways.py b/artwork/frogs/src/socially-hibernating-colourways.py
+index c3ac9b7..aaeaf40 100644
+--- a/artwork/frogs/src/socially-hibernating-colourways.py
++++ b/artwork/frogs/src/socially-hibernating-colourways.py
+@@ -10,8 +10,8 @@
+ # Writes to artwork/frogs/:
+ #   socially-hibernating-bright(.png|-dark.png|-tight.png|-dark-tight.png)
+ #   socially-hibernating-mono(.png|-dark.png|-tight.png|-dark-tight.png)
+-#   socially-hibernating-{bright,mono}-mug.png       2700x1200 wrap, the frog
+-#                                                    on both sides of the mug
++#   socially-hibernating-{bright,mono}-mug.png       2700x1200 wrap, one frog
++#                                                    centred on the front
+ #   socially-hibernating-{bright,mono}-blanket.png   8025x10425 edge-to-edge
+ #                                                    throw, like the original
+ # Usage: python socially-hibernating-colourways.py <fonts dir>
+@@ -73,14 +73,13 @@ def invert_keep_alpha(img):
+     return Image.merge("RGBA", (*rgb.split(), a))
+ 
+ def mug(art, name):
+-    # A 2700x1200 wrap: the design twice, centred on each half, so it shows on
+-    # both sides of the mug. xmas-bundle.js fits it to the mug's print area.
++    # A 2700x1200 wrap with one frog centred, so it sits square on the front of
++    # the mug (20 Oct: two copies at the quarters split across the front view).
+     W, H = 2700, 1200
+     a = tight(art)
+-    a.thumbnail((W // 2 - 80, H - 60))
++    a.thumbnail((1150, H - 80))
+     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+-    for cx in (W // 4, 3 * W // 4):
+-        img.alpha_composite(a, (cx - a.width // 2, (H - a.height) // 2))
++    img.alpha_composite(a, ((W - a.width) // 2, (H - a.height) // 2))
+     img.save(os.path.join(OUT, name + "-mug.png"))
+ 
+ def blanket(svgtext, words_colour, bg, snow, name, invert=False):
+diff --git a/automation/social/xmas-bundle.js b/automation/social/xmas-bundle.js
+index db263c2..9251dd5 100644
+--- a/automation/social/xmas-bundle.js
++++ b/automation/social/xmas-bundle.js
+@@ -48,7 +48,7 @@ const SITE = process.env.STORE === "site";
+ // COLOURWAY=bright|mono builds the Socially Hibernating colourways instead
+ // (Sam, 20 Oct 2026, after a poll in her groups: many prefer bright colours,
+ // some only black and white). Same blanks, makers and prices as the originals;
+-// white and black garments only; no beanie; adds an 11oz mug (UK and US) built
++// white and black garments only; no beanie; adds an 11oz mug (UK and US, frog on the front) built
+ // on the same blank and maker as the shop's existing Etsy mugs.
+ const CW = process.env.COLOURWAY || "";
+ if (CW && !["bright", "mono"].includes(CW)) { console.error("COLOURWAY must be bright or mono"); process.exit(1); }
+@@ -144,7 +144,7 @@ function colourwayList(cw) {
+       key: `${cw}-${where}-mug`, where, source: MUG_SOURCE[where], colours: null, sizes: null, art: art("mug"),
+       price: () => (where === "us" ? 1456 : 1350),
+       title: retitle(`Socially Hibernating Christmas Frog Mug — Cute Frog in Santa Hat, Introvert Christmas Gift, Neurodivergent Gift, 11oz Mug${where === "us" ? ", Ships from the US" : ", Made in the UK"}`),
+-      description: [STORY, "An 11oz white ceramic mug with the frog printed on both sides. Dishwasher and microwave safe.", where === "us" ? US_NOTE : UK_NOTE],
++      description: [STORY, "An 11oz white ceramic mug with the frog printed on the front. Dishwasher and microwave safe.", where === "us" ? US_NOTE : UK_NOTE],
+       tags: [CW_TAG[cw], "christmas mug", "frog mug", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "stocking filler", "socially hibernating", "coffee mug gift", "christmas frog"],
+     });
+   }
+@@ -324,6 +324,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
+           const listed = new Set(areas.flatMap((a) => a.variant_ids));
+           const rest = (cur.variants || []).map((v) => v.id).filter((id) => !listed.has(id));
+           update.print_areas = areas.map((a, i) => (i === 0 ? { ...a, variant_ids: [...a.variant_ids, ...rest] } : a));
++          update.description = spec.description.map((p) => `<p>${p}</p>`).join("");
+         }
+         await api(`/shops/${etsy.id}/products/${already.id}.json`, "PUT", update);
+         const fresh = await api(`/shops/${etsy.id}/products/${already.id}.json`);
