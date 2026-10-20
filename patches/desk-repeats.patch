@@ -1,0 +1,124 @@
+# Desk: repeating tasks show on every day they apply
+diff --git a/content/calendar.json b/content/calendar.json
+index a2826f9..350f61d 100644
+--- a/content/calendar.json
++++ b/content/calendar.json
+@@ -1,36 +1,58 @@
+ {
+-  "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
+-  "updated": "2026-10-19",
++  "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
++  "updated": "2026-10-20",
+   "standing": [
+     {
+       "time": "9am, 1pm, 6pm",
+       "what": "Three social posts to Facebook + Instagram (the 1pm one on Mon/Wed/Fri/Sun is the Bespoke Planner, from 12 Oct)",
+-      "who": "robot"
++      "who": "robot",
++      "repeat": {
++        "every": "day"
++      }
+     },
+     {
+       "time": "11am",
+       "what": "Announcement queue check — anything dated for today gets posted",
+-      "who": "robot"
++      "who": "robot",
++      "repeat": {
++        "every": "day"
++      }
+     },
+     {
+       "time": "every 2 hours",
+       "what": "Bespoke planner orders — checks for paid questionnaires, builds and emails the PDF",
+-      "who": "robot"
++      "who": "robot",
++      "repeat": {
++        "every": "day"
++      }
+     },
+     {
+       "time": "noon",
+       "what": "Pinterest pins publish themselves — one from the old queue at noon until 1 Nov, plus five a day from the product-page batch (14 Oct – 6 Nov)",
+-      "who": "robot"
++      "who": "robot",
++      "repeat": {
++        "every": "day",
++        "until": "2026-11-06"
++      }
+     },
+     {
+       "time": "Mondays, 7:40am",
+       "what": "Printify check — confirms every product is still made and what it costs; anything that changed appears below as YOURS",
+-      "who": "robot"
++      "who": "robot",
++      "repeat": {
++        "every": [
++          "Mon"
++        ]
++      }
+     },
+     {
+       "time": "one a day, from 15 Oct",
+       "what": "Post the free guides in ONE group a day (SEN parent groups, PDA groups, r/ADHDUK, autism subs, carers’ forums) — six posts in your voice are in the Claude chat (group-posts.md). Read the group’s rules first; link in the comments if posts can’t carry one; reply to every comment",
+-      "who": "you"
++      "who": "you",
++      "repeat": {
++        "every": "day",
++        "from": "2026-10-15"
++      }
+     }
+   ],
+   "days": [
+diff --git a/desk.html b/desk.html
+index 9f067f3..6d8eca2 100644
+--- a/desk.html
++++ b/desk.html
+@@ -50,7 +50,7 @@
+   <h1>The Desk</h1>
+   <p class="sub">What the shop is doing, what's coming, and the short list that needs your hands. Green means a robot does it; rust means you. Not linked from the shop — this page is yours.</p>
+ 
+-  <h2>Every day, without you</h2>
++  <h2>The routine (repeats, and shows on each day below)</h2>
+   <div class="card" id="standing"></div>
+ 
+   <h2>Coming up</h2>
+@@ -95,14 +95,35 @@ async function load() {
+     }
+   }
+ 
+-  const today = new Date().toISOString().slice(0, 10);
++  // Repeating tasks: every standing item with a "repeat" rule is copied into
++  // each day it applies to, so it shows in that day's list, not only up top.
++  // The next 14 days are always shown, plus any later day with something on it.
++  const iso = (dt) => dt.toISOString().slice(0, 10);
++  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/London" });
++  const start = new Date(today + "T12:00:00Z");
++  for (let n = 0; n < 14; n++) { const d = iso(new Date(start.getTime() + n * 864e5)); if (!byDate.has(d)) byDate.set(d, []); }
++  const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
++  const applies = (r, d) => {
++    if (!r) return false;
++    if (r.from && d < r.from) return false;
++    if (r.until && d > r.until) return false;
++    if (r.every === "day") return true;
++    return Array.isArray(r.every) && r.every.includes(DOW[new Date(d + "T12:00:00Z").getUTCDay()]);
++  };
+   const dates = [...byDate.keys()].filter(d => d >= today).sort();
++  for (const d of dates) {
++    const reps = cal.standing.filter(s => applies(s.repeat, d))
++      .map(s => ({ what: s.time + " — " + s.what, who: s.who }));
++    const mine = reps.filter(i => i.who === "you"), auto = reps.filter(i => i.who !== "you");
++    byDate.set(d, [...mine, ...byDate.get(d), ...auto]);
++  }
+   document.getElementById("agenda").innerHTML = dates.length ? dates.map(d => `
+     <div class="dayblock">
+       <p class="dayhead">${d === today ? "Today — " : ""}${fmt(d)}</p>
+       <div class="card${d === today ? " today" : ""}">
+-        ${byDate.get(d).map(i =>
+-          `<div class="row"><span class="what">${esc(i.what)}</span>${tagFor(i.who)}</div>`).join("")}
++        ${byDate.get(d).length ? byDate.get(d).map(i =>
++          `<div class="row"><span class="what">${esc(i.what)}</span>${tagFor(i.who)}</div>`).join("")
++          : '<p class="quiet">Nothing extra today.</p>'}
+       </div>
+     </div>`).join("")
+     : '<p class="quiet">Nothing dated ahead — the daily routine above still runs.</p>';
