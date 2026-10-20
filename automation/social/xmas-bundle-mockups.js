@@ -33,17 +33,22 @@ const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(
     const byVariant = new Map((prod.variants || []).filter((v) => v.is_enabled).map((v) => [v.id, v.title]));
     const seen = new Set();
     for (const img of prod.images || []) {
-      const vid = img.variant_ids.find((id) => byVariant.has(id));
-      const vt = byVariant.get(vid) || "";
-      const colour = vt.split("/")[0].trim();
-      const key = `${camera(img.src)}-${colour}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      const res = await fetch(img.src);
-      if (!res.ok) { console.log(`  skip ${key}: ${res.status}`); continue; }
-      const file = `${r.key}-${slug(camera(img.src))}-${slug(colour)}.jpg`;
-      fs.writeFileSync(path.join(OUT, file), Buffer.from(await res.arrayBuffer()));
-      console.log(`${file}  (${img.is_default ? "default" : ""} ${img.is_selected_for_publishing ? "selected" : ""})`);
+      // One photo per colour per camera (20 Oct: an image lists every colour
+      // it fits, so taking only the first id hid the black garments).
+      const colours = [...new Set(img.variant_ids.filter((id) => byVariant.has(id)).map((id) => byVariant.get(id).split("/")[0].trim()))];
+      for (const colour of colours.length ? colours : [""]) {
+        const key = `${camera(img.src)}-${colour}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        const vid = img.variant_ids.find((id) => byVariant.has(id) && byVariant.get(id).split("/")[0].trim() === colour);
+        const src = vid && colours.length > 1 ? img.src.replace(/\/mockup\/[^/]+\/(\d+)\//, (m, v) => m.replace(v, String(vid))) : img.src;
+        if (colours.length > 1 && vid && src === img.src && colour !== colours[0]) { console.log(`  no per-colour url for ${key}: ${img.src}`); continue; }
+        const res = await fetch(src);
+        if (!res.ok) { console.log(`  skip ${key}: ${res.status}`); continue; }
+        const file = `${r.key}-${slug(camera(img.src))}-${slug(colour)}.jpg`;
+        fs.writeFileSync(path.join(OUT, file), Buffer.from(await res.arrayBuffer()));
+        console.log(`${file}  (${img.is_default ? "default" : ""} ${img.is_selected_for_publishing ? "selected" : ""})`);
+      }
     }
   }
 })().catch((e) => { console.error(e); process.exit(1); });
