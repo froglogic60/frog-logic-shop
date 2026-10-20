@@ -1,36 +1,58 @@
 {
-  "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy.",
-  "updated": "2026-10-19",
+  "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
+  "updated": "2026-10-20",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
       "what": "Three social posts to Facebook + Instagram (the 1pm one on Mon/Wed/Fri/Sun is the Bespoke Planner, from 12 Oct)",
-      "who": "robot"
+      "who": "robot",
+      "repeat": {
+        "every": "day"
+      }
     },
     {
       "time": "11am",
       "what": "Announcement queue check — anything dated for today gets posted",
-      "who": "robot"
+      "who": "robot",
+      "repeat": {
+        "every": "day"
+      }
     },
     {
       "time": "every 2 hours",
       "what": "Bespoke planner orders — checks for paid questionnaires, builds and emails the PDF",
-      "who": "robot"
+      "who": "robot",
+      "repeat": {
+        "every": "day"
+      }
     },
     {
       "time": "noon",
       "what": "Pinterest pins publish themselves — one from the old queue at noon until 1 Nov, plus five a day from the product-page batch (14 Oct – 6 Nov)",
-      "who": "robot"
+      "who": "robot",
+      "repeat": {
+        "every": "day",
+        "until": "2026-11-06"
+      }
     },
     {
       "time": "Mondays, 7:40am",
       "what": "Printify check — confirms every product is still made and what it costs; anything that changed appears below as YOURS",
-      "who": "robot"
+      "who": "robot",
+      "repeat": {
+        "every": [
+          "Mon"
+        ]
+      }
     },
     {
       "time": "one a day, from 15 Oct",
       "what": "Post the free guides in ONE group a day (SEN parent groups, PDA groups, r/ADHDUK, autism subs, carers’ forums) — six posts in your voice are in the Claude chat (group-posts.md). Read the group’s rules first; link in the comments if posts can’t carry one; reply to every comment",
-      "who": "you"
+      "who": "you",
+      "repeat": {
+        "every": "day",
+        "from": "2026-10-15"
+      }
     }
   ],
   "days": [

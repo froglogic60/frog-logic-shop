@@ -50,7 +50,7 @@
   <h1>The Desk</h1>
   <p class="sub">What the shop is doing, what's coming, and the short list that needs your hands. Green means a robot does it; rust means you. Not linked from the shop — this page is yours.</p>
 
-  <h2>Every day, without you</h2>
+  <h2>The routine (repeats, and shows on each day below)</h2>
   <div class="card" id="standing"></div>
 
   <h2>Coming up</h2>
@@ -95,14 +95,35 @@ async function load() {
     }
   }
 
-  const today = new Date().toISOString().slice(0, 10);
+  // Repeating tasks: every standing item with a "repeat" rule is copied into
+  // each day it applies to, so it shows in that day's list, not only up top.
+  // The next 14 days are always shown, plus any later day with something on it.
+  const iso = (dt) => dt.toISOString().slice(0, 10);
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/London" });
+  const start = new Date(today + "T12:00:00Z");
+  for (let n = 0; n < 14; n++) { const d = iso(new Date(start.getTime() + n * 864e5)); if (!byDate.has(d)) byDate.set(d, []); }
+  const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const applies = (r, d) => {
+    if (!r) return false;
+    if (r.from && d < r.from) return false;
+    if (r.until && d > r.until) return false;
+    if (r.every === "day") return true;
+    return Array.isArray(r.every) && r.every.includes(DOW[new Date(d + "T12:00:00Z").getUTCDay()]);
+  };
   const dates = [...byDate.keys()].filter(d => d >= today).sort();
+  for (const d of dates) {
+    const reps = cal.standing.filter(s => applies(s.repeat, d))
+      .map(s => ({ what: s.time + " — " + s.what, who: s.who }));
+    const mine = reps.filter(i => i.who === "you"), auto = reps.filter(i => i.who !== "you");
+    byDate.set(d, [...mine, ...byDate.get(d), ...auto]);
+  }
   document.getElementById("agenda").innerHTML = dates.length ? dates.map(d => `
     <div class="dayblock">
       <p class="dayhead">${d === today ? "Today — " : ""}${fmt(d)}</p>
       <div class="card${d === today ? " today" : ""}">
-        ${byDate.get(d).map(i =>
-          `<div class="row"><span class="what">${esc(i.what)}</span>${tagFor(i.who)}</div>`).join("")}
+        ${byDate.get(d).length ? byDate.get(d).map(i =>
+          `<div class="row"><span class="what">${esc(i.what)}</span>${tagFor(i.who)}</div>`).join("")
+          : '<p class="quiet">Nothing extra today.</p>'}
       </div>
     </div>`).join("")
     : '<p class="quiet">Nothing dated ahead — the daily routine above still runs.</p>';
