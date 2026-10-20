@@ -45,11 +45,18 @@ const REPRINT = process.env.REPRINT === "1";
 // for the one-price sets sold on the website (Sam, 16 Oct 2026: "yes build the
 // website bundles"). It also records each variant's postage, for the margins.
 const SITE = process.env.STORE === "site";
-const OUT = path.join(__dirname, SITE ? "xmas-bundle-site-result.json" : "xmas-bundle-result.json");
+// COLOURWAY=bright|mono builds the Socially Hibernating colourways instead
+// (Sam, 20 Oct 2026, after a poll in her groups: many prefer bright colours,
+// some only black and white). Same blanks, makers and prices as the originals;
+// white and black garments only; no beanie; adds an 11oz mug (UK and US) built
+// on the same blank and maker as the shop's existing Etsy mugs.
+const CW = process.env.COLOURWAY || "";
+if (CW && !["bright", "mono"].includes(CW)) { console.error("COLOURWAY must be bright or mono"); process.exit(1); }
+const OUT = path.join(__dirname, CW ? `xmas-colourway-${CW}-result.json` : SITE ? "xmas-bundle-site-result.json" : "xmas-bundle-result.json");
 const RAW = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/artwork/frogs/";
 
 const LIGHT = ["Sport Grey", "Ash", "White"];
-const DARK = ["Navy", "Maroon"];
+const DARK = ["Navy", "Maroon", "Black"]; // Black: the colourway pieces (20 Oct 2026)
 const SIZES = ["S", "M", "L", "XL", "2XL"];
 
 const US_NOTE = "Made and shipped in the US, so there are no import fees.";
@@ -108,6 +115,42 @@ const PRODUCTS = [
     tags: ["fleece blanket", "frog blanket", "christmas blanket", "cosy throw", "cute frog gift", "santa frog", "introvert gift", "neurodivergent gift", "christmas gift", "frog lover gift", "socially hibernating", "sofa throw", "uk made gift"],
   },
 ];
+
+// Etsy-store mugs the colourway mugs copy their blank and maker from
+// (47 Things at Once, printify-etsy-result.json).
+const MUG_SOURCE = { uk: "6ad0ad9d4fdcde14c009ea51", us: "6ad0ada01808260f4c00a659" };
+const CW_WORD = { bright: "Bright Colours", mono: "Black and White" };
+const CW_TAG = { bright: "bright christmas", mono: "black and white" };
+function colourwayList(cw) {
+  const art = (kind) => ({ light: `socially-hibernating-${cw}-${kind}.png`, dark: `socially-hibernating-${cw}-${kind}.png` });
+  const garmentArt = { light: `socially-hibernating-${cw}-tight.png`, dark: `socially-hibernating-${cw}-dark-tight.png` };
+  const retitle = (t) => {
+    // "Socially Hibernating Christmas Frog Hoodie — ..." -> "... Hoodie in Bright Colours — ..."
+    let out = t.replace(/^(.*?) — /, `$1 in ${CW_WORD[cw]} — `);
+    if (out.length > 140) out = out.replace(", Neurodivergent Gift", "");
+    if (out.length > 140) out = out.replace(", Cosy Throw", "");
+    return out;
+  };
+  const retag = (tags) => [CW_TAG[cw], ...tags.filter((x) => x !== "frog lover gift")].slice(0, 13);
+  const list = [];
+  for (const base of PRODUCTS.filter((p) => p.key !== "us-beanie")) {
+    const spec = { ...base, key: `${cw}-${base.key}`, title: retitle(base.title), tags: retag(base.tags) };
+    if (base.key === "uk-blanket") spec.art = art("blanket");
+    else { spec.colours = ["White", "Black"]; spec.art = garmentArt; }
+    list.push(spec);
+  }
+  for (const where of ["uk", "us"]) {
+    list.push({
+      key: `${cw}-${where}-mug`, where, source: MUG_SOURCE[where], colours: null, sizes: null, art: art("mug"),
+      price: () => (where === "us" ? 1456 : 1350),
+      title: retitle(`Socially Hibernating Christmas Frog Mug — Cute Frog in Santa Hat, Introvert Christmas Gift, Neurodivergent Gift, 11oz Mug${where === "us" ? ", Ships from the US" : ", Made in the UK"}`),
+      description: [STORY, "An 11oz white ceramic mug with the frog printed on both sides. Dishwasher and microwave safe.", where === "us" ? US_NOTE : UK_NOTE],
+      tags: [CW_TAG[cw], "christmas mug", "frog mug", "introvert christmas", "cute frog gift", "santa frog", "neurodivergent gift", "adhd gift", "autism gift", "stocking filler", "socially hibernating", "coffee mug gift", "christmas frog"],
+    });
+  }
+  return list;
+}
+const LIST = CW ? colourwayList(CW) : PRODUCTS;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function api(p, method = "GET", body) {
@@ -178,9 +221,18 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
   }
 
   const results = [], errors = [];
-  for (const spec of PRODUCTS) {
+  for (const spec of LIST) {
     console.log(`\n${spec.key}: ${spec.title.split(" —")[0]}`);
     try {
+      if (spec.source) {
+        // Copy the blank, maker, enabled variants and print position from an
+        // existing Etsy-store product.
+        const src = await api(`/shops/${etsyStore.id}/products/${spec.source}.json`);
+        spec.blueprint = src.blueprint_id; spec.provider = src.print_provider_id;
+        spec.only = (src.variants || []).filter((v) => v.is_enabled).map((v) => v.id);
+        spec.position = src.print_areas?.[0]?.placeholders?.[0]?.position || "front";
+        console.log(`  copying blueprint ${spec.blueprint}, maker ${spec.provider}, ${spec.only.length} variant(s), position ${spec.position}`);
+      }
       const vres = await api(`/catalog/blueprints/${spec.blueprint}/print_providers/${spec.provider}/variants.json`);
       const all = vres.variants || [];
       // Match colour and size from the variant title, whatever order Printify uses.
@@ -190,6 +242,7 @@ const opt = (v, i) => String(v.title).split("/").map((s) => s.trim())[i];
         const okS = !spec.sizes || spec.sizes.some((s) => parts.includes(s));
         return okC && okS;
       });
+      if (spec.only) picked = picked.filter((v) => spec.only.includes(v.id));
       // Printify lists some colours twice under one name (US "Ash" on 16 Oct
       // 2026: two blanks, both titled "Ash / S" ...). Etsy can't show two
       // identical options, so keep the first of each title.
