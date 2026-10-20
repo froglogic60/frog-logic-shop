@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-20T16:09:58.827Z",
+  "ranAt": "2026-10-20T16:26:39.010Z",
   "dryRun": false,
   "etsyStore": 29335686,
   "results": [
@@ -8,11 +8,7 @@
       "where": "us",
       "title": "Socially Hibernating Christmas Frog Hoodie in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Ships from the US",
       "printifyProductId": "6ad79238ff714daae20c48e4",
-      "printAreas": [
-        "2919x1944",
-        "3273x2180",
-        "3531x2352"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 32911,
@@ -122,11 +118,7 @@
       "where": "us",
       "title": "Socially Hibernating Christmas Frog T-Shirt in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Shirt, Ships from the US",
       "printifyProductId": "6ad7923cd30770188201586d",
-      "printAreas": [
-        "3951x4919",
-        "3591x4472",
-        "3232x4024"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 12125,
@@ -236,11 +228,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog Hoodie in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Jumper, Made in the UK",
       "printifyProductId": "6ad79240c087d2314b0fa449",
-      "printAreas": [
-        "3319x2212",
-        "3909x2606",
-        "4500x3000"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 32910,
@@ -350,11 +338,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog T-Shirt in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Top, Made in the UK",
       "printifyProductId": "6ad79245b0c1203caf059074",
-      "printAreas": [
-        "4500x5100",
-        "4110x4658",
-        "3709x4203"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 12100,
@@ -464,10 +448,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog Fleece Blanket in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, Made in the UK",
       "printifyProductId": "6ad7924ac087d2314b0fa45b",
-      "printAreas": [
-        "5025x6525",
-        "8025x9525"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 100925,
@@ -497,9 +478,7 @@
       "where": "uk",
       "title": "Socially Hibernating Christmas Frog Mug in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Made in the UK",
       "printifyProductId": "6ad79250b0c1203caf059085",
-      "printAreas": [
-        "2582x1120"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 69010,
@@ -519,9 +498,7 @@
       "where": "us",
       "title": "Socially Hibernating Christmas Frog Mug in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Ships from the US",
       "printifyProductId": "6ad79254cfe9581c8b066690",
-      "printAreas": [
-        "2475x1155"
-      ],
+      "existed": true,
       "variants": [
         {
           "id": 65216,
