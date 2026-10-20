@@ -47,5 +47,75 @@
     "subject": "A free plain-English dyspraxia guide, if it's useful to your groups",
     "sentAt": "2026-10-10T00:14:01.397Z",
     "id": "01a12328-d65f-7d1b-a850-c028a3784f07"
+  },
+  {
+    "name": "Neurodiverging (gift guide)",
+    "to": "contact@neurodiverging.com",
+    "subject": "A neurodivergent-made shop for your gift guide",
+    "sentAt": "2026-10-20T11:19:34.277Z",
+    "id": "01a15909-c230-7eca-8bca-66eed0f96c6e"
+  },
+  {
+    "name": "Alive with Chronic Illness (gift guide)",
+    "to": "hello@alivewithchronicillness.com",
+    "subject": "Disabled-run shop for your Christmas gift guide",
+    "sentAt": "2026-10-20T11:19:34.445Z",
+    "id": "01a15909-c2dc-7382-867f-3dfcfda157b4"
+  },
+  {
+    "name": "Hester Grainger, Perfectly Autistic (gift guide)",
+    "to": "Hello@perfectlyautistic.co.uk",
+    "subject": "For your neurodivergent-friendly Christmas guide",
+    "sentAt": "2026-10-20T11:19:34.577Z",
+    "id": "01a15909-c362-7006-91f8-a15e252d3694"
+  },
+  {
+    "name": "NeuroSpicy Nonsense (gift guide)",
+    "to": "ari@neurospicynonsense.com",
+    "subject": "A small ND-run shop for your 2026 gift list",
+    "sentAt": "2026-10-20T11:19:34.747Z",
+    "id": "01a15909-c3eb-79f5-86c3-866954723096"
+  },
+  {
+    "name": "Disability Horizons (gift guide)",
+    "to": "editor@disabilityhorizons.com",
+    "subject": "Christmas gift guide: a neurodivergent-run UK shop",
+    "sentAt": "2026-10-20T11:19:34.881Z",
+    "id": "01a15909-c493-747b-b6e6-fa073d6665eb"
+  },
+  {
+    "name": "Undivided (gift guide)",
+    "to": "support@undivided.io",
+    "subject": "A small neurodivergent-run shop for your holiday guide",
+    "sentAt": "2026-10-20T11:19:35.052Z",
+    "id": "01a15909-c528-7523-83d2-6c92e4dd4ccc"
+  },
+  {
+    "name": "Emily Ladau (gift guide)",
+    "to": "emilyladau@gmail.com",
+    "subject": "A disabled maker for your holiday gift guide",
+    "sentAt": "2026-10-20T11:19:35.184Z",
+    "id": "01a15909-c5bf-7816-b2fa-9cfc9b433451"
+  },
+  {
+    "name": "Autism Positive, Talk Therapy UK (gift guide)",
+    "to": "autism@talktherapyuk.com",
+    "subject": "Printable planners for your autistic and AuDHD gift guide",
+    "sentAt": "2026-10-20T11:19:35.326Z",
+    "id": "01a15909-c64c-71e4-9d9d-af74d38cf071"
+  },
+  {
+    "name": "NEST (gift guide)",
+    "to": "Info@nest.scot",
+    "subject": "For your neurodivergent adults gift guide",
+    "sentAt": "2026-10-20T11:19:35.451Z",
+    "id": "01a15909-c6d1-7eaa-a17b-71e122ff4bf5"
+  },
+  {
+    "name": "Enna Global (gift guide)",
+    "to": "hello@enna.org",
+    "subject": "Planners for neurodivergent adults, for your Christmas guide",
+    "sentAt": "2026-10-20T11:19:35.586Z",
+    "id": "01a15909-c756-705d-ada5-8201f366bf1d"
   }
 ]
