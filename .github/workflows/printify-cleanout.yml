@@ -1,0 +1,41 @@
+name: Printify clean-out
+# Finds the leftover products in the site's Printify store (not the Etsy
+# store) and, only when asked with confirm = DELETE, deletes them. Anything the
+# repo references, anything made since 24 Aug 2026, and anything published is
+# never deleted. Writes automation/social/printify-cleanout-report.json.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "list (safe) or delete"
+        default: list
+      confirm:
+        description: "Type DELETE to allow deleting"
+        default: ""
+permissions:
+  contents: write
+jobs:
+  cleanout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run
+        run: node automation/social/printify-cleanout.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          MODE: ${{ github.event.inputs.mode }}
+          CONFIRM: ${{ github.event.inputs.confirm }}
+      - name: Commit the report
+        if: always()
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/printify-cleanout-report.json || true
+          git commit -m "Printify clean-out report [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
