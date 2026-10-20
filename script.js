@@ -2660,7 +2660,7 @@ function renderXmasCards(){
     if(!p) return;
     slot.outerHTML = `
     <article class="card">
-      <div class="stage"><img class="stage-photo" src="assets/xmas/cw-${p.xmas}-cards.jpg" alt="${p.word}: a printed Christmas card with the Socially Hibernating frog" loading="lazy"></div>
+      <a class="stage" href="/p/${pageSlug(p)}/" aria-label="See the ${p.word}"><img class="stage-photo" src="assets/xmas/cw-${p.xmas}-cards.jpg" alt="${p.word}: a printed Christmas card with the Socially Hibernating frog" loading="lazy"></a>
       <div class="card-meta">
         <p class="card-num">${p.num}</p>
         <h3><a href="/p/${pageSlug(p)}/">${p.word}</a></h3>
