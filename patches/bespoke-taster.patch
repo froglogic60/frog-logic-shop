@@ -1,0 +1,343 @@
+# Bespoke Planner taster: three questions, one free page, link by email [skip netlify]
+From d579fccde001e8f736023682cc6938666eec32b2 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 22 Oct 2026 18:33:08 +0100
+Subject: [PATCH] Bespoke Planner taster: three questions, one free page, link
+ by email [skip netlify]
+
+---
+ automation/planner/build-taster-page.js | 164 ++++++++++++++++++++++++
+ automation/site/build-pages.cjs         |   6 +-
+ index.html                              |   1 +
+ netlify/functions/taster.js             |  89 +++++++++++++
+ styles.css                              |   1 +
+ 5 files changed, 259 insertions(+), 2 deletions(-)
+ create mode 100644 automation/planner/build-taster-page.js
+ create mode 100644 netlify/functions/taster.js
+
+diff --git a/automation/planner/build-taster-page.js b/automation/planner/build-taster-page.js
+new file mode 100644
+index 0000000..c3ec38d
+--- /dev/null
++++ b/automation/planner/build-taster-page.js
+@@ -0,0 +1,164 @@
++// Writes /taster/index.html — the free one-page taste of the Bespoke Planner
++// (22 Oct 2026). The page draws itself in the browser from the answers in its
++// URL (?n=name&l=list|time&e=spoons|battery&f=a|b|c) using the SAME module
++// code as the £25 planner (modules.js is inlined below), so what people get
++// is a page of the real thing, not a mock-up. With no answers in the URL it
++// shows the three-question form instead, which posts to /api/taster
++// (netlify/functions/taster.js) — that sends the link by email and bounces
++// straight back here with the answers filled in.
++//
++// Run by build-pages.cjs; also: node build-taster-page.js
++const fs = require("fs");
++const path = require("path");
++
++const ROOT = path.resolve(__dirname, "..", "..");
++const MODULES = fs.readFileSync(path.join(__dirname, "modules.js"), "utf8");
++
++const FONTS = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&family=Anton&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&display=swap";
++
++function build() {
++  const html = `<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>A free page of the Bespoke Planner, built for your brain | Frog Logic</title>
++<meta name="description" content="Answer three questions and get one daily planner page built for your brain — list or time-blocked, spoons or battery, with the things you keep forgetting on it. Free, printable, yours.">
++<link rel="icon" href="/assets/frog-logic-mark-sm.png">
++<link rel="canonical" href="https://froglogic.co.uk/taster/">
++<meta property="og:title" content="A free page of the Bespoke Planner, built for your brain">
++<meta property="og:description" content="Three questions, one daily page made for how your brain works. Free, printable, yours.">
++<meta property="og:image" content="https://froglogic.co.uk/p/the-bespoke-planner/og.png">
++<meta property="og:url" content="https://froglogic.co.uk/taster/">
++<meta name="twitter:card" content="summary_large_image">
++<link rel="preconnect" href="https://fonts.googleapis.com">
++<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++<link href="${FONTS}" rel="stylesheet">
++<link rel="stylesheet" href="/styles.css">
++<style>
++  .taster-bar{ background:var(--ink); color:var(--cream); padding:14px 16px; }
++  .taster-bar .wrap{ display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; justify-content:space-between; }
++  .taster-bar p{ margin:0; max-width:60ch; font-size:.95rem; }
++  .taster-bar a{ color:var(--cream); }
++  .taster-bar .btn-primary{ background:var(--cream); color:var(--ink); white-space:nowrap; }
++  .taster-stage{ background:#DDD5C6; padding:24px 0 40px; overflow:auto; }
++  .taster-stage .sheet{ margin:0 auto; width:210mm; box-shadow:0 10px 30px rgba(0,0,0,.18); transform-origin:top center; }
++  .taster-form{ max-width:640px; margin:0 auto; padding:40px 16px 60px; }
++  .taster-form h1{ font-family:var(--display); font-size:clamp(1.6rem,3.5vw,2.3rem); margin:0 0 10px; }
++  .taster-form p{ color:var(--muted); }
++  .taster-form fieldset{ border:1px solid var(--line); padding:14px 16px; margin:0 0 16px; }
++  .taster-form legend{ font-weight:600; padding:0 6px; }
++  .taster-form label{ display:block; margin:6px 0; }
++  .taster-form input[type=text], .taster-form input[type=email]{ width:100%; padding:10px 12px; border:2px solid var(--ink); background:#fff; font:inherit; }
++  .taster-form .row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
++  .taster-form .small{ font-size:.85rem; }
++  @media (max-width:640px){ .taster-form .row{ grid-template-columns:1fr; } }
++  @media print{
++    body{ background:#fff; }
++    .site-header, .taster-bar, .site-footer, .taster-form{ display:none !important; }
++    .taster-stage{ padding:0; background:#fff; overflow:visible; }
++    .taster-stage .sheet{ box-shadow:none; transform:none !important; }
++  }
++</style>
++</head>
++<body>
++<a class="skip-link" href="#main">Skip to content</a>
++<header class="site-header">
++  <div class="wrap header-row">
++    <a class="wordmark" href="/"><img src="/assets/frog-logic-mark-sm.png" alt="">Frog Logic</a>
++    <nav class="site-nav" aria-label="Primary">
++      <a href="/#digital">Digital</a>
++      <a href="/#guides">Guides</a>
++      <a href="/p/the-bespoke-planner/">The Bespoke Planner</a>
++    </nav>
++  </div>
++</header>
++<main id="main">
++  <div class="taster-bar" id="bar" hidden>
++    <div class="wrap">
++      <p><strong>This is one page of your Bespoke Planner.</strong> The full one is up to eighteen pages, fifteen questions, your own words on the pages, £25. <a href="/p/the-bespoke-planner/">See what's in it</a>.</p>
++      <button class="btn btn-primary" type="button" onclick="window.print()">Print, or save as PDF</button>
++    </div>
++  </div>
++  <div class="taster-stage" id="stage" hidden><div class="sheet" id="sheet"></div></div>
++
++  <section class="taster-form" id="form-wrap">
++    <p class="eyebrow">Free · a taste of the Bespoke Planner</p>
++    <h1>Three questions. One page, built for your brain.</h1>
++    <p>The Bespoke Planner asks fifteen questions and builds a planner from the answers. This is three of them, and one page: your daily page, in your shape, with the things you keep forgetting already on it. Printable, free, yours. The link is emailed to you so you can find it again.</p>
++    <form method="POST" action="/api/taster">
++      <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
++      <div class="row">
++        <div><label for="t-name">Your first name (it goes on the page)</label><input type="text" id="t-name" name="name" maxlength="40" required autocomplete="given-name"></div>
++        <div><label for="t-email">Email, to send you the link</label><input type="email" id="t-email" name="email" required autocomplete="email"></div>
++      </div>
++      <fieldset><legend>1. How do you like a day laid out?</legend>
++        <label><input type="radio" name="layout" value="list" checked> As a list: three things that matter, then room for the rest</label>
++        <label><input type="radio" name="layout" value="time"> In time blocks, hour by hour</label>
++      </fieldset>
++      <fieldset><legend>2. How do you think about energy?</legend>
++        <label><input type="radio" name="energy" value="spoons" checked> Spoons: I count what I woke up with</label>
++        <label><input type="radio" name="energy" value="battery"> Battery: full, half, nearly flat</label>
++      </fieldset>
++      <fieldset><legend>3. What do you keep forgetting?</legend>
++        <label for="t-forgets" class="small">Up to five things, separated by commas. They become a tick strip on the page: meds, water, eat, keys, charge phone.</label>
++        <input type="text" id="t-forgets" name="forgets" maxlength="120" placeholder="meds, water, eat something">
++      </fieldset>
++      <label><input type="checkbox" name="newsletter" value="yes"> Also send me the Frog Logic newsletter (once a month, never more, 10% off your first order)</label>
++      <p style="margin-top:18px;"><button class="btn btn-primary" type="submit">Build my page</button></p>
++      <p class="small">Your email is used to send you the link, and for the newsletter only if you tick the box. The full planner, if you want it afterwards: <a href="/p/the-bespoke-planner/">The Bespoke Planner, £25</a>.</p>
++    </form>
++  </section>
++</main>
++<footer class="site-footer">
++  <div class="wrap footer-row">
++    <p>Frog Logic — made with care, printed to order</p>
++    <nav aria-label="Policies"><a href="/returns.html">Returns</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
++  </div>
++</footer>
++<script>
++// ---- the planner's own page modules (automation/planner/modules.js), inlined
++var module = { exports: {} };
++${MODULES}
++var M = module.exports;
++// ---- draw the page from the URL, or show the form
++(function(){
++  var q = new URLSearchParams(location.search);
++  var name = (q.get('n') || '').trim().slice(0, 40);
++  if (!name) return; // no answers: the form stays
++  var a = {
++    name: name, layout: q.get('l') === 'time' ? 'time' : 'list',
++    energy: q.get('e') === 'battery' ? 'battery' : 'spoons', dayShape: 'varies',
++    easyRead: false, colour: 'fern', accent: M.COLOURS.fern,
++    forgets: (q.get('f') || '').split('|').map(function(t){ return t.trim().slice(0, 30); }).filter(Boolean).slice(0, 5),
++  };
++  var style = document.createElement('style');
++  style.textContent = M.css(a) + ' .page{ page-break-after:auto; }';
++  document.head.appendChild(style);
++  var page = a.layout === 'time' ? M.dailyTime(a) : M.dailyList(a);
++  page = page.replace('daily page — print one per day', 'a taste of the Bespoke Planner · froglogic.co.uk/taster');
++  document.getElementById('sheet').innerHTML = page;
++  document.getElementById('form-wrap').hidden = true;
++  document.getElementById('bar').hidden = false;
++  document.getElementById('stage').hidden = false;
++  document.title = name + "'s page | Frog Logic";
++  function fit(){
++    var sheet = document.getElementById('sheet');
++    var w = Math.min(1, (document.documentElement.clientWidth - 24) / sheet.offsetWidth);
++    sheet.style.transform = 'scale(' + w + ')';
++    sheet.parentNode.style.height = (sheet.offsetHeight * w + 64) + 'px';
++  }
++  fit(); window.addEventListener('resize', fit);
++})();
++</script>
++<script data-goatcounter="https://froglogic.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
++</body>
++</html>
++`;
++  fs.mkdirSync(path.join(ROOT, "taster"), { recursive: true });
++  fs.writeFileSync(path.join(ROOT, "taster", "index.html"), html);
++  return path.join(ROOT, "taster", "index.html");
++}
++
++module.exports = { build };
++if (require.main === module) console.log("wrote", build());
+diff --git a/automation/site/build-pages.cjs b/automation/site/build-pages.cjs
+index d18b985..5937eb5 100644
+--- a/automation/site/build-pages.cjs
++++ b/automation/site/build-pages.cjs
+@@ -136,6 +136,7 @@ function copyFor(item, group) {
+       "Every planner you've ever bought was built for someone else's brain. This one is assembled for yours. You answer fifteen questions — how your day actually runs, how you track energy, what you keep forgetting, what a hard day looks like and what actually helps, who most needs to understand your brain — and a planner of up to eighteen pages is built from your answers and emailed to you as a printable PDF, usually within a couple of hours.",
+       "Four of the pages carry your own words: a Hard Day page with a tear-off half to hand to someone, a page addressed to your partner, manager, teacher or parent, your start-of-day and end-of-day as tick-lists, and a don't-forget strip on every daily page. Spoons or battery tracking, your choice. An easy-read option. Undated, so you print the pages you need as often as you need them, forever.",
+       "If it doesn't fit, answer the questions again and we'll rebuild it — free. That's what bespoke means.",
++      `Not sure yet? <a href="/taster/">Try one page first, free</a>: answer three of the fifteen questions and get your daily page, in your shape, with your name on it, straight away.`,
+     ],
+     cta: { href: item.link, label: "Answer the questions — £25", external: true },
+   };
+@@ -489,7 +490,7 @@ async function renderOg(pages) {
+ }
+ 
+ function sitemap(pages) {
+-  const fixed = [["/", "weekly", "1.0", TODAY], ["/returns.html", "yearly", "0.4", "2026-08-29"], ["/terms.html", "yearly", "0.3", "2026-08-29"], ["/privacy.html", "yearly", "0.3", "2026-08-29"]];
++  const fixed = [["/", "weekly", "1.0", TODAY], ["/taster/", "monthly", "0.7", "2026-10-22"], ["/returns.html", "yearly", "0.4", "2026-08-29"], ["/terms.html", "yearly", "0.3", "2026-08-29"], ["/privacy.html", "yearly", "0.3", "2026-08-29"]];
+   const rows = fixed.map(([u, f, pr, d]) => `  <url><loc>${SITE}${u}</loc><lastmod>${d}</lastmod><changefreq>${f}</changefreq><priority>${pr}</priority></url>`)
+     .concat(pages.map((p) => `  <url><loc>${SITE}/p/${p.slug}/</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>${p.group === "guide" ? "0.7" : "0.8"}</priority></url>`));
+   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows.join("\n")}\n</urlset>\n`;
+@@ -591,10 +592,11 @@ ${items.join("\n")}
+     fs.writeFileSync(path.join(OUT, p.slug, "index.html"), p.group === "xset" ? buildSetPage(p) : buildPage(p, pickRelated(p, pages.filter((q) => q.group !== "xset")), shop));
+   }
+   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages));
++  require("../planner/build-taster-page.js").build(); // /taster/ — the free one-page Bespoke Planner taste
+   const gf = feed(pages, shop);
+   fs.writeFileSync(path.join(ROOT, "google-feed.xml"), gf.xml);
+   console.log(`google-feed.xml: ${gf.count} items`);
+   let imgs = 0;
+   if (process.env.SKIP_IMAGES !== "1") imgs = await renderOg(pages);
+-  console.log(`${pages.length} pages written to /p/, ${imgs} share images rendered, sitemap.xml has ${pages.length + 4} URLs`);
++  console.log(`${pages.length} pages written to /p/, ${imgs} share images rendered, sitemap.xml has ${pages.length + 5} URLs`);
+ })().catch((e) => { console.error(e); process.exit(1); });
+diff --git a/index.html b/index.html
+index 56be8fa..f46cfbf 100644
+--- a/index.html
++++ b/index.html
+@@ -530,6 +530,7 @@
+             <a class="btn btn-primary" href="https://forms.gle/GJjQ8rMSoqh7ffPx5" target="_blank" rel="noopener">Answer the fifteen questions &mdash; &pound;25</a>
+           </div>
+           <p class="bespoke-note">Undated, so print it as often as you like. If it doesn&rsquo;t fit, answer again and we&rsquo;ll rebuild it &mdash; free.</p>
++          <p class="bespoke-note">Not sure yet? <a href="/taster/">Try one page first, free</a> &mdash; three questions, your daily page, your name on it, straight away.</p>
+         </div>
+       </div>
+       <div class="pad-grid" id="digital-grid"><!-- rendered from DIGITAL_PRODUCTS in script.js --></div>
+diff --git a/netlify/functions/taster.js b/netlify/functions/taster.js
+new file mode 100644
+index 0000000..f2aefa4
+--- /dev/null
++++ b/netlify/functions/taster.js
+@@ -0,0 +1,89 @@
++// The Bespoke Planner taster (22 Oct 2026). Three questions, one free page.
++//
++// The Bespoke Planner is the one thing on the shop people actually stop for
++// (Pinterest: 14.8k impressions, 35 clicks) and nobody buys unseen at £25.
++// So: a visitor answers three of the fifteen questions — how they like a day
++// laid out, how they track energy, the things they keep forgetting — and gets
++// one daily page built the same way the full planner is, with their name on
++// it, straight away. No PDF is generated here: the page lives at /taster/
++// and draws itself from the answers in the URL (same page modules as the £25
++// planner, so it IS a page of the real thing), and the browser's print
++// dialog saves it as a PDF. This function's job is the email: it sends the
++// link so they can find the page again, with the £25 one a sentence away,
++// and, if they ticked the box, adds them to the newsletter list the same way
++// the sign-up form does (a POST to the Google Form behind it).
++//
++// Env: RESEND_API_KEY, FROM_EMAIL, SITE_URL (all already set for the till).
++
++const SITE = (process.env.SITE_URL || "https://froglogic.co.uk").replace(/\/$/, "");
++const NEWSLETTER_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeZy3f1I3JB7L2wdGxzCMl1govvS6-mVotb5_MWXgFgJL1UIQ/formResponse";
++const NEWSLETTER_FIELD = "entry.1412839294";
++
++const clean = (s, n) => String(s ?? "").replace(/[\u0000-\u001f<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, n);
++const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
++
++function pageLink(a) {
++  const q = new URLSearchParams({ n: a.name, l: a.layout, e: a.energy, f: a.forgets.join("|") });
++  return `${SITE}/taster/?${q.toString()}`;
++}
++
++async function sendEmail(a, link) {
++  const r = await fetch("https://api.resend.com/emails", {
++    method: "POST",
++    headers: { Authorization: "Bearer " + process.env.RESEND_API_KEY, "Content-Type": "application/json" },
++    body: JSON.stringify({
++      from: process.env.FROM_EMAIL,
++      to: a.email,
++      reply_to: "hello@froglogic.co.uk",
++      subject: `🐸 ${a.name}, your page is ready`,
++      html: `<div style="font-family:-apple-system,sans-serif;max-width:560px;margin:0 auto;color:#1F3229;line-height:1.5;">
++        <h1 style="font-size:22px;">One page, built for your brain</h1>
++        <p>Here's your daily page — ${a.layout === "time" ? "time-blocked" : "list-style"}, ${a.energy === "battery" ? "battery" : "spoons"} at the top, and your don't-forget strip (${esc(a.forgets.join(", ") || "blank, for now")}) on every copy.</p>
++        <p><a href="${link}" style="display:inline-block;background:#3C5B45;color:#F4EFE3;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:600;">Open your page</a></p>
++        <p>It's a web page on purpose: open it, press print, and choose "Save as PDF" or print it straight onto paper. Print as many as you like — it's yours.</p>
++        <p>That page is one of up to eighteen in the Bespoke Planner. The full one asks you fifteen questions — including what a hard day looks like, what helps, and who most needs to understand your brain — and puts your own words on the pages: a hard-day page you can hand to someone, a page addressed to your partner, manager, teacher or parent, your routines as tick-lists. It's £25, undated, emailed as a PDF usually within a couple of hours, and rebuilt free if it doesn't fit.</p>
++        <p><a href="${SITE}/p/the-bespoke-planner/">The Bespoke Planner — £25</a></p>
++        <p style="margin-top:28px;font-size:12px;color:#5a6b5f;">Sam, Frog Logic · froglogic.co.uk · you're getting this because you asked for the page; ${a.newsletter ? "you also ticked the newsletter box, so you'll hear from me once a month, never more" : "nothing else will follow unless you ask"}.</p>
++      </div>`,
++    }),
++  });
++  if (!r.ok) throw new Error("Resend " + r.status + " " + (await r.text()).slice(0, 200));
++}
++
++async function addToNewsletter(email) {
++  try {
++    await fetch(NEWSLETTER_FORM, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ [NEWSLETTER_FIELD]: email }).toString() });
++  } catch (e) { console.error("newsletter add failed", e.message); }
++}
++
++export default async (req) => {
++  if (req.method !== "POST") return new Response("Method not allowed", { status: 405 });
++  let f;
++  const ct = req.headers.get("content-type") || "";
++  try {
++    if (ct.includes("application/json")) f = await req.json();
++    else f = Object.fromEntries(new URLSearchParams(await req.text()));
++  } catch { return new Response("Bad request", { status: 400 }); }
++
++  if (f["bot-field"]) return Response.redirect(`${SITE}/taster/`, 303); // honeypot
++  const email = clean(f.email, 120).toLowerCase();
++  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return new Response("Please give an email address the page can be sent to.", { status: 400 });
++  const a = {
++    email,
++    name: clean(f.name, 40) || "Your",
++    layout: /time/i.test(f.layout) ? "time" : "list",
++    energy: /batter/i.test(f.energy) ? "battery" : "spoons",
++    forgets: clean(f.forgets, 120).split(/[,|\n]/).map((t) => t.trim()).filter(Boolean).slice(0, 5),
++    newsletter: !!f.newsletter,
++  };
++  const link = pageLink(a);
++
++  // The page first, the email second: if Resend has a bad minute the visitor
++  // still gets what they came for.
++  const jobs = [sendEmail(a, link).catch((e) => console.error(e.message))];
++  if (a.newsletter) jobs.push(addToNewsletter(email));
++  await Promise.all(jobs);
++  return Response.redirect(link, 303);
++};
++
++export const config = { path: "/api/taster" };
+diff --git a/styles.css b/styles.css
+index 21f314b..7334922 100644
+--- a/styles.css
++++ b/styles.css
+@@ -146,6 +146,7 @@ body.low-stim .collection.christmas{ background:var(--bg); }
+ }
+ .bespoke-copy .btn-primary{ background:var(--cream); color:var(--ink); }
+ .bespoke-note{ font-size:.85rem; opacity:.75 !important; margin-top:14px !important; }
++.bespoke-note a{ color:var(--cream); }
+ @media (max-width:720px){
+   .bespoke-band{ grid-template-columns:1fr; }
+   .bespoke-art{ width:min(340px, calc(100% - 52px)); margin:26px auto 0; }
+-- 
+2.43.0
+
