@@ -1,0 +1,1451 @@
+{
+ "ADHD": {
+  "name": "ADHD",
+  "lede": "ADHD is one of the worst-named conditions going. It isn't a shortage of attention — it's attention that won't take instructions about where to point.",
+  "plain": "ADHD affects the brain's ability to regulate attention, activity and impulses. Attention isn't missing; it's driven by interest, urgency and novelty rather than by importance. That's why someone can lose six hours to something fascinating and be unable to start a two-minute task they genuinely care about.",
+  "inside": [
+   "Knowing exactly what needs doing, why it matters, and being completely unable to begin.",
+   "Time behaving strangely — five minutes and four hours feeling much the same from the inside.",
+   "Thoughts arriving faster than they can be said, so sentences get interrupted, including your own.",
+   "Emotions landing at full strength immediately, then passing just as fast.",
+   "Hyperfocus, where the world disappears and you forget to eat, drink, or move."
+  ],
+  "wrong": [
+   [
+    "“It's just laziness.”",
+    "It takes enormous effort to look this disorganised. The wanting was never the problem."
+   ],
+   [
+    "“Only hyperactive boys have it.”",
+    "Plenty of people are hyperactive only on the inside, and are diagnosed decades late."
+   ],
+   [
+    "“They could focus if they tried.”",
+    "They can focus, ferociously — just not reliably on demand."
+   ],
+   [
+    "“It's an excuse.”",
+    "It's an explanation. Those are different things, and only one of them helps."
+   ],
+   [
+    "“Everyone's forgetful.”",
+    "The difference is scale, consistency, and the cost it exacts over a lifetime."
+   ]
+  ],
+  "strengths": [
+   "Ideas nobody else in the room would have had.",
+   "Genuinely excellent in a crisis, when urgency finally matches the wiring.",
+   "Hyperfocus that produces a month of work in a weekend.",
+   "Warmth, humour, and a talent for making things less dull.",
+   "Spotting connections between things that appear unrelated."
+  ],
+  "helps": [
+   "Break tasks into first physical actions",
+   "Written instructions, not verbal",
+   "Don't take interruptions personally",
+   "Put deadlines on things that don't have them",
+   "Body doubling — work alongside someone",
+   "Externalise everything: lists, alarms, visible notes"
+  ],
+  "responses": [
+   [
+    "“What's the first step? I'll sit with you.”",
+    "“Shall I send that in a message?”",
+    "“Tell me about the thing you're into.”"
+   ],
+   [
+    "“Just make a list.”",
+    "“Everyone's a bit ADHD.”",
+    "“You managed it last time.”"
+   ]
+  ],
+  "closing": "Not a shortage of attention. A different set of rules about where it goes.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "APD": {
+  "name": "Auditory",
+  "lede": "Your hearing test comes back perfect, and yet you still can't follow a conversation in a pub. Both of those things can be true. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Auditory Processing Disorder affects how the brain interprets sound rather than how the ear detects it. Hearing is typically normal. What's difficult is separating speech from background noise, processing fast speech, and holding spoken instructions long enough to act on them. It commonly travels with ADHD, autism and dyslexia.",
+  "inside": [
+   "Hearing every word and assembling the meaning several seconds late.",
+   "A busy café turning speech into an unsortable wall of sound.",
+   "Saying 'what?' then answering before they repeat it.",
+   "Mishearing similar-sounding words constantly.",
+   "Being exhausted by a day of listening, because it's active work."
+  ],
+  "wrong": [
+   [
+    "“Get your ears tested.”",
+    "Already done. They're fine. That's rather the point."
+   ],
+   [
+    "“You weren't listening.”",
+    "Listening was happening at maximum effort the whole time."
+   ],
+   [
+    "“I'll just say it louder.”",
+    "Volume isn't the problem. Clarity, pace and background noise are."
+   ],
+   [
+    "“You heard me before.”",
+    "Quiet room versus noisy room is an enormous difference here."
+   ],
+   [
+    "“They're away with the fairies.”",
+    "They're two sentences behind, catching up."
+   ]
+  ],
+  "strengths": [
+   "Excellent visual and written comprehension.",
+   "Strong pattern-spotting in text.",
+   "Genuine empathy for anyone struggling to follow.",
+   "Highly developed strategies for checking and confirming.",
+   "Often unusually good at reading faces and body language."
+  ],
+  "helps": [
+   "Get their attention before speaking",
+   "Slower and clearer beats louder",
+   "Choose quiet places to talk",
+   "Face them, don't call from another room",
+   "Back it up in writing",
+   "Don't mind repeating"
+  ],
+  "responses": [
+   [
+    "“Shall I text you that?”",
+    "“Let's sit somewhere quieter.”",
+    "“No problem, I'll say it again.”"
+   ],
+   [
+    "“ARE YOU DEAF?”",
+    "“I've told you three times.”",
+    "“You only hear what you want to.”"
+   ]
+  ],
+  "closing": "The ears are fine. It's the sorting office that's under pressure.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Alexithymia": {
+  "name": "Alexithymia",
+  "lede": "Alexithymia isn't the absence of feelings. It's having them at full strength with no reliable way to identify or name them. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Alexithymia means difficulty identifying and describing your own emotions. Physical sensations are noticed; the label attached to them isn't. It's common alongside autism — roughly half of autistic people have it — and it often explains things wrongly attributed to coldness or a lack of empathy.",
+  "inside": [
+   "Knowing something is wrong and having absolutely no idea what.",
+   "Answering 'how do you feel?' with a description of your day instead.",
+   "Realising three days later that you were furious on Tuesday.",
+   "Feeling it in your stomach, your chest, your jaw — never in words.",
+   "Being called unemotional while feeling a great deal, silently."
+  ],
+  "wrong": [
+   [
+    "“They don't have feelings.”",
+    "They have them fully. The naming is what's missing."
+   ],
+   [
+    "“They lack empathy.”",
+    "Often the opposite — they absorb others' emotions and can't process their own."
+   ],
+   [
+    "“They're being evasive.”",
+    "“I don't know” is frequently the whole, honest truth."
+   ],
+   [
+    "“It's the same as being autistic.”",
+    "It commonly co-occurs but is separate, and plenty of non- autistic people have it."
+   ],
+   [
+    "“They just need to open up.”",
+    "The information isn't being withheld. It hasn't been decoded yet."
+   ]
+  ],
+  "strengths": [
+   "Steadiness in a crisis when others are overwhelmed.",
+   "Fair, unemotional judgement where that's needed.",
+   "Deep loyalty, shown in actions rather than words.",
+   "Strong observational skills about other people.",
+   "Honesty — no performance of feelings they can't locate."
+  ],
+  "helps": [
+   "Ask about the body, not the feeling",
+   "Give time — days, sometimes",
+   "Watch actions rather than words",
+   "Offer options: 'angry, or tired, or hungry?'",
+   "Accept 'I don't know' as complete",
+   "Don't demand emotional performance"
+  ],
+  "responses": [
+   [
+    "“Where do you feel it?”",
+    "“No rush — tell me when you know.”",
+    "“Is it more like A or B?”"
+   ],
+   [
+    "“You must know how you feel.”",
+    "“Why won't you open up?”",
+    "“You're so cold.”"
+   ]
+  ],
+  "closing": "The feelings are all there. It's the labels that didn't come with them.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Anxiety": {
+  "name": "Anxiety",
+  "lede": "Anxiety is often the *result* of being neurodivergent in a world that isn't built for you, rather than a separate thing. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Anxiety disorders involve worry and physical alarm that persist beyond the situation causing them. The body's threat system runs hot and doesn't switch off. Social anxiety specifically involves intense fear of judgement — and for a lot of neurodivergent people, it's a very reasonable response to years of getting it subtly wrong in public.",
+  "inside": [
+   "Your body reacting to danger while your mind knows perfectly well there isn't any.",
+   "Replaying a two-second interaction from four years ago at three in the morning.",
+   "Avoiding something small, then feeling ashamed of the avoidance.",
+   "Exhaustion — the alarm running all day takes real fuel.",
+   "Being told to relax, which has never once worked for anybody."
+  ],
+  "wrong": [
+   [
+    "“Just don't worry about it.”",
+    "If that worked, nobody would have anxiety. The worry isn't chosen."
+   ],
+   [
+    "“It's all in your head.”",
+    "It's substantially in your body — heart, gut, chest, muscles."
+   ],
+   [
+    "“Everyone gets nervous.”",
+    "Nervous passes. This doesn't, and it makes decisions for you."
+   ],
+   [
+    "“They're being antisocial.”",
+    "Social anxiety is usually wanting to be there and finding it unbearable."
+   ],
+   [
+    "“Avoiding it will help.”",
+    "Avoidance shrinks the world. Gradual, supported exposure is what actually works."
+   ]
+  ],
+  "strengths": [
+   "Excellent risk assessment — they've thought of the thing you missed.",
+   "Deep conscientiousness and preparation.",
+   "Empathy for anyone frightened or out of their depth.",
+   "Attention to detail and consequence.",
+   "Considerable courage, since they do things afraid rather than unafraid."
+  ],
+  "helps": [
+   "Give notice and detail in advance",
+   "Don't repeatedly reassure — support instead",
+   "Go with them the first time",
+   "Offer an exit route and mean it",
+   "Say what will happen, specifically",
+   "Never say 'just relax'"
+  ],
+  "responses": [
+   [
+    "“What would make this easier?”",
+    "“We can leave whenever.”",
+    "“Here's exactly what'll happen.”"
+   ],
+   [
+    "“Just relax.”",
+    "“There's nothing to worry about.”",
+    "“You're overthinking it.”"
+   ]
+  ],
+  "closing": "The alarm is real, even when the danger isn't. Turning it down takes support, not willpower.",
+  "disclaimer": "If you are struggling right now , you don't have to wait until it gets worse. In the UK you can call Samaritans free on 116 123, any time, or contact your GP. Elsewhere, your local crisis line or doctor is the place to start. A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Aphantasia": {
+  "name": "Aphantasia",
+  "lede": "Some people picture an apple and see an apple. Some see nothing at all, and only discover in adulthood that 'picture it in your mind' was never a figure of speech. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Aphantasia is the absence of voluntary visual imagery — no mental pictures. Around one to four percent of people have it. The opposite, hyperphantasia, means imagery as vivid as real seeing. Neither is a disorder; both are variations. Many people with aphantasia have excellent memory and imagination, just not in pictures.",
+  "inside": [
+   "Realising in your thirties that everyone else was being literal.",
+   "Remembering facts about a face perfectly without being able to see it.",
+   "Guided meditation being completely useless.",
+   "Reading a novel and building the world in concepts rather than images.",
+   "Being unable to conjure a lost person's face, which can hurt a great deal."
+  ],
+  "wrong": [
+   [
+    "“You must have a bad memory.”",
+    "Memory is often fine. It's stored as facts and relationships rather than pictures."
+   ],
+   [
+    "“You have no imagination.”",
+    "Plenty of aphantasic people are artists, writers and designers. Imagination isn't only visual."
+   ],
+   [
+    "“You just aren't trying.”",
+    "There's no effort that produces the picture. It isn't a skill being neglected."
+   ],
+   [
+    "“It's a disorder.”",
+    "It's a variation. Most people who have it are perfectly fine and often unaware."
+   ],
+   [
+    "“Then you don't dream.”",
+    "Many do dream in images. Voluntary imagery is the part that's absent."
+   ]
+  ],
+  "strengths": [
+   "Thinking in concepts and structure rather than pictures.",
+   "Often less troubled by intrusive visual memories.",
+   "Strong verbal and logical reasoning.",
+   "Precise, factual recall.",
+   "A very unusual perspective in creative work."
+  ],
+  "helps": [
+   "Describe things in words, not 'picture it'",
+   "Skip visualisation exercises",
+   "Use lists rather than mental walkthroughs",
+   "Give diagrams and written detail",
+   "Don't quiz them on what they can see",
+   "Take their word for it"
+  ],
+  "responses": [
+   [
+    "“That's fascinating — how do you do it instead?”",
+    "“I'll write it down.”",
+    "“Makes sense.”"
+   ],
+   [
+    "“Try harder, you'll see it.”",
+    "“That's so sad.”",
+    "“So what happens when you read?” *for the twentieth time*"
+   ]
+  ],
+  "closing": "Not a missing picture. A different filing system entirely.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "AuDHD": {
+  "name": "AuDHD",
+  "lede": "Being both autistic and ADHD isn't simply the two lists added together. It's two nervous systems asking for opposite things at the same time.",
+  "plain": "AuDHD describes people who are both autistic and ADHD — very common, and only formally recognised as possible since 2013. Where autism often seeks routine, sameness and depth, ADHD often seeks novelty, stimulation and change. Living with both means constantly negotiating between them.",
+  "inside": [
+   "Craving routine and being bored senseless by it, simultaneously.",
+   "Needing quiet to think, and needing background noise to start.",
+   "Planning obsessively, then abandoning the plan on impulse.",
+   "Deep special interests that rotate without warning and can't be summoned back.",
+   "Looking inconsistent to other people, and feeling inconsistent to yourself."
+  ],
+  "wrong": [
+   [
+    "“They cancel each other out.”",
+    "They don't. You get both sets of needs, often in direct conflict."
+   ],
+   [
+    "“You can't have both.”",
+    "You can, and many do. Diagnosing them together was only permitted from 2013."
+   ],
+   [
+    "“They seem fine — organised, even.”",
+    "The autistic systems can mask the ADHD chaos, at considerable cost."
+   ],
+   [
+    "“Just pick a strategy and stick to it.”",
+    "Strategies that suit one side often actively wind up the other."
+   ],
+   [
+    "“It's a trendy label.”",
+    "It's a late correction to decades of people getting only half an explanation."
+   ]
+  ],
+  "strengths": [
+   "Structure and spontaneity, available in the same person.",
+   "Deep expertise, arrived at unusually fast.",
+   "Creative problem-solving with genuine follow-through when interest holds.",
+   "Unusual range — comfortable in detail and in the big picture.",
+   "Real empathy for people who don't fit tidy categories."
+  ],
+  "helps": [
+   "Flexible routine, not rigid routine",
+   "Expect the interest to move — plan for it",
+   "Rest that doesn't require stillness",
+   "Several ways to do the same task",
+   "Reduce demands before adding strategies",
+   "Forgive the inconsistency, including your own"
+  ],
+  "responses": [
+   [
+    "“Which bit is loudest today?”",
+    "“Would a different way round help?”",
+    "“No pressure either way.”"
+   ],
+   [
+    "“You're contradicting yourself.”",
+    "“Pick one.”",
+    "“But you liked it last week.”"
+   ]
+  ],
+  "closing": "Two systems, one person, permanently negotiating. That's not inconsistency — it's arithmetic.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Autism": {
+  "name": "Autism",
+  "lede": "If you've picked this up because someone you love is autistic — or because you've started to wonder about yourself — welcome. There's nothing here that will make you feel got at.",
+  "plain": "Autism is a different way of being wired, present from birth and lasting for life. It shapes how someone communicates, how they process the world through their senses, and how much predictability they need to feel alright. It isn't an illness, it isn't caused by parenting, and it isn't something that gets cured or grown out of.",
+  "inside": [
+   "Conversation takes deliberate effort that other people seem to get for free.",
+   "Sounds, lights, textures and smells arrive at full volume, all at once, with no filter turning any of it down.",
+   "Sudden changes to plans genuinely hurt, because the old plan had already been built in your head.",
+   "A deep interest isn't a hobby — it's a place to go that reliably feels good.",
+   "Being social is possible, and often wanted, but it costs energy that has to be paid back later."
+  ],
+  "wrong": [
+   [
+    "“You don't look autistic.”",
+    "There's no look. Many people, especially women and girls, have spent decades learning to hide it."
+   ],
+   [
+    "“Everyone's a bit autistic.”",
+    "Everyone has a bad day with noise. Not everyone reorganises their whole life around it."
+   ],
+   [
+    "“They're in their own world.”",
+    "Usually they're in this one, receiving far more of it than you are."
+   ],
+   [
+    "“They don't want friends.”",
+    "Most do, very much. The usual routes to friendship are just exhausting."
+   ],
+   [
+    "“High or low functioning.”",
+    "Support needs move about depending on the day, the place and the energy left."
+   ]
+  ],
+  "strengths": [
+   "Noticing the detail everyone else walked past.",
+   "Deep, sustained knowledge of the things that matter to them.",
+   "Honesty you can rely on — you'll know where you stand.",
+   "Strong sense of fairness, and the nerve to say so.",
+   "Loyalty that doesn't need topping up with small talk."
+  ],
+  "helps": [
+   "Say what you mean, plainly",
+   "Send it in writing as well as saying it",
+   "Ask before touching",
+   "Give notice before plans change",
+   "Let them leave early without a fuss",
+   "Accept flat tone isn't rudeness"
+  ],
+  "responses": [
+   [
+    "“Thanks for telling me.”",
+    "“What would help?”",
+    "“I'll read up on it myself.”"
+   ],
+   [
+    "“But you're so normal!”",
+    "“Have you tried a special diet?”",
+    "“We all get overwhelmed.”"
+   ]
+  ],
+  "closing": "Nothing here needs fixing. Understanding is the whole job.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "BPD": {
+  "name": "BPD / EUPD",
+  "lede": "Few labels carry as much unfair stigma as this one, including from professionals who should know better. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you. Many people prefer 'emotional intensity' or 'emotionally unstable personality disorder', and some reject the label entirely.",
+  "plain": "BPD involves intense emotions that arrive fast, run hot, and take longer than usual to come down; a fear of abandonment; and an unstable sense of self. It often follows childhood trauma, though not in every case, and it overlaps heavily with autism and ADHD — many women in particular are given this label when autism would fit better.",
+  "inside": [
+   "Feeling everything at maximum volume, then being told you're overreacting.",
+   "A small change in someone's tone reading as certain rejection.",
+   "Loving people intensely and being terrified they'll leave.",
+   "Not being sure who you are when you're on your own.",
+   "Emotions passing eventually — and the shame afterwards lasting far longer."
+  ],
+  "wrong": [
+   [
+    "“They're manipulative.”",
+    "That word has done enormous damage. It's distress, communicated badly because nothing else worked."
+   ],
+   [
+    "“It's untreatable.”",
+    "It has one of the better recovery rates of any diagnosis, especially with DBT."
+   ],
+   [
+    "“They're attention seeking.”",
+    "Feeling a need for deep connection, showing as distress when nothing else has worked."
+   ],
+   [
+    "“It's a personality flaw.”",
+    "In some cases, though not all, an adaptation to an environment that wasn't safe."
+   ],
+   [
+    "“It is said that women get this, men get",
+    "PTSD.” A criticism raised from within the field itself, and one reason the label is so contested."
+   ]
+  ],
+  "strengths": [
+   "Emotional depth and honesty most people never reach.",
+   "Extraordinary empathy — they feel it with you.",
+   "Loyalty and passion in relationships.",
+   "Perceptiveness about what people are really feeling.",
+   "Real capacity for change — this is a diagnosis people genuinely recover from."
+  ],
+  "helps": [
+   "Be consistent — say what you'll do, then do it",
+   "Validate the feeling before the facts",
+   "Support DBT or similar therapy",
+   "Don't withdraw suddenly without explanation",
+   "Keep boundaries kind and predictable",
+   "Never use 'manipulative'"
+  ],
+  "responses": [
+   [
+    "“That sounds really painful.”",
+    "“I'm not going anywhere.”",
+    "“I'll message you at six, and I will.”"
+   ],
+   [
+    "“You're being manipulative.”",
+    "“Calm down.”",
+    "“Here we go again.”"
+   ]
+  ],
+  "closing": "Intensity is not a character defect. And this is one people do recover from.",
+  "disclaimer": "If you are struggling right now , you don't have to wait until it gets worse. In the UK you can call Samaritans free on 116 123, any time, or contact your GP. Elsewhere, your local crisis line or doctor is the place to start. A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Bipolar": {
+  "name": "Bipolar",
+  "lede": "Bipolar is a difference in how the brain regulates mood and energy — not moodiness, and not a personality flaw. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Bipolar involves episodes of elevated mood and energy (mania or the milder hypomania) alternating with periods of depression. Episodes last weeks or months, not hours, and they aren't triggered by ordinary good or bad days. It's lifelong, and is said to be manageable with the right treatment and support.",
+  "inside": [
+   "Energy and confidence arriving in a wave that feels wonderful and is genuinely dangerous.",
+   "Sleeping three hours and feeling brilliant — the earliest reliable warning sign.",
+   "Making plans and purchases during a high that make no sense afterwards.",
+   "Then a flatness that isn't sadness so much as everything being switched off.",
+   "Some people have described grieving the version of themselves that existed during the high."
+  ],
+  "wrong": [
+   [
+    "“Everyone has mood swings.”",
+    "Mood swings last hours. Episodes last weeks, and reorganise your whole life."
+   ],
+   [
+    "“Mania is just being happy.”",
+    "It impairs judgement, sleep and safety. Plenty of it is frightening rather than fun."
+   ],
+   [
+    "“They're fine now, so it's over.”",
+    "Stable is the goal and often achieved. It doesn't mean it's gone."
+   ],
+   [
+    "“They should come off the medication.”",
+    "Stopping is the most common route back to crisis. Never advise this."
+   ],
+   [
+    "“It's so bipolar of the weather.”",
+    "Using it as a synonym for changeable makes the real thing harder to disclose."
+   ]
+  ],
+  "strengths": [
+   "Genuine creativity and originality of thought.",
+   "Deep empathy for people at the bottom of things.",
+   "Considerable resilience — this takes real strength to manage.",
+   "Insight into their own mind that most people never develop.",
+   "Energy and drive that, well managed, achieves a great deal."
+  ],
+  "helps": [
+   "Learn their early warning signs with them",
+   "Support the treatment, don't second-guess it",
+   "Stay in touch during the low ones",
+   "Take sleep changes seriously",
+   "Don't make big decisions during a high",
+   "Treat stability as an achievement"
+  ],
+  "responses": [
+   [
+    "“I've noticed you're sleeping less — how are you doing?”",
+    "“I'm around either way.”",
+    "“What helps when it's like this?”"
+   ],
+   [
+    "“You seem manic!” (as a joke)",
+    "“Do you still need those tablets?”",
+    "“Snap out of it.”"
+   ]
+  ],
+  "closing": "Not moodiness. A different system for regulating energy, which can be managed well.",
+  "disclaimer": "If you are struggling right now , you don't have to wait until it gets worse. In the UK you can call Samaritans free on 116 123, any time, or contact your GP. Elsewhere, your local crisis line or doctor is the place to start. A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "CPTSD": {
+  "name": "CPTSD",
+  "lede": "Complex PTSD comes from harm that repeated over time, usually when you were too young or too trapped to leave. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "CPTSD develops after prolonged, repeated trauma rather than a single event. Alongside the usual trauma symptoms it involves difficulties with emotional regulation, a persistently negative self-view, and trouble in relationships. When it happens during childhood it shapes brain development — which is why many people describe it as a form of neurodivergence rather than simply an illness.",
+  "inside": [
+   "Reacting to something small with a force that surprises even you.",
+   "Scanning every room and every face for signs something's about to go wrong.",
+   "Apologising constantly, for existing as much as anything.",
+   "Going numb and distant when things get difficult, without choosing to.",
+   "Struggling to believe good things or kind people will stay."
+  ],
+  "wrong": [
+   [
+    "“That was years ago.”",
+    "Time doesn't undo how a developing brain adapted to survive."
+   ],
+   [
+    "“It wasn't that bad.”",
+    "CPTSD comes from repetition and inescapability, not from single dramatic events."
+   ],
+   [
+    "“They're being dramatic.”",
+    "A nervous system trained for danger reacts as if there's danger. That's not performance."
+   ],
+   [
+    "“They should just move on.”",
+    "Recovery is real and possible, but it's therapeutic work, not a decision."
+   ],
+   [
+    "“It's the same as PTSD.”",
+    "It overlaps, but adds lasting effects on self-image, emotions and relationships."
+   ]
+  ],
+  "strengths": [
+   "Extraordinary ability to read a room and its moods.",
+   "Deep empathy, often for people others overlook.",
+   "Practical competence built out of necessity, very young.",
+   "Fierce protectiveness of anyone vulnerable.",
+   "Real courage — recovery asks a great deal and people do it anyway."
+  ],
+  "helps": [
+   "Be consistent and predictable",
+   "Give warning before change",
+   "Let them leave any situation freely",
+   "Say what you mean, and mean it",
+   "Don't push for the story",
+   "Support trauma-informed therapy"
+  ],
+  "responses": [
+   [
+    "“That makes sense, given everything.”",
+    "“You're safe here.”",
+    "“Take as long as you need.”"
+   ],
+   [
+    "“But that was ages ago.”",
+    "“Other people had it worse.”",
+    "“Have you tried forgiving them?”"
+   ]
+  ],
+  "closing": "Your nervous system learned to keep you alive. It's allowed to take a while to unlearn it.",
+  "disclaimer": "If you are struggling right now , you don't have to wait until it gets worse. In the UK you can call Samaritans free on 116 123, any time, or contact your GP. Elsewhere, your local crisis line or doctor is the place to start. A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Depression": {
+  "name": "Depression",
+  "lede": "Depression among neurodivergent people is very often the accumulated cost of years of masking and unmet needs, rather than something arriving out of nowhere. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Depression is a persistent lowering of mood, energy, interest and self-worth that lasts weeks or longer and doesn't lift with rest or good news. It's a medical condition, not a mood or an attitude. For many neurodivergent people it's tangled up with burnout, and treating both matters.",
+  "inside": [
+   "Not sadness so much as the volume turned down on everything, including sadness.",
+   "Things you love feeling like admin.",
+   "Being tired in a way sleep doesn't touch.",
+   "Small tasks — a shower, a reply — becoming genuinely enormous.",
+   "Knowing exactly how irrational the self-criticism is, and believing it anyway."
+  ],
+  "wrong": [
+   [
+    "“Cheer up, it might never happen.”",
+    "Depression isn't about circumstances, which is what makes it so hard to argue with."
+   ],
+   [
+    "“They're being lazy.”",
+    "Effort is the thing depression removes. What you're seeing is the illness."
+   ],
+   [
+    "“Just get some exercise.”",
+    "Exercise genuinely helps and is also nearly impossible mid- episode. Both are true."
+   ],
+   [
+    "“They've got nothing to be depressed",
+    "about.” It doesn't require a reason. It isn't a response to your assessment of their life."
+   ],
+   [
+    "“It's just burnout.”",
+    "They overlap heavily for neurodivergent people. Worth treating both, not choosing."
+   ]
+  ],
+  "strengths": [
+   "Depth of thought and honesty about hard things.",
+   "Compassion for others struggling — no performance required.",
+   "Realism that can be genuinely useful.",
+   "Considerable endurance; getting through a day like this is not nothing.",
+   "Insight into their own mind, hard won."
+  ],
+  "helps": [
+   "Turn up without requiring anything",
+   "Keep inviting, even after refusals",
+   "Notice small things without praising loudly",
+   "Do the task with them, not for them",
+   "Support treatment — it works",
+   "Ask directly how bad it is"
+  ],
+  "responses": [
+   [
+    "“I'm coming round Tuesday, no need to tidy.”",
+    "“Shall we do it together?”",
+    "“How bad is it, honestly?”"
+   ],
+   [
+    "“Others have it worse.”",
+    "“You just need a holiday.”",
+    "“Have you tried being positive?”"
+   ]
+  ],
+  "closing": "You are not the illness. And this is treatable — genuinely, reliably treatable.",
+  "disclaimer": "If you are struggling right now , you don't have to wait until it gets worse. In the UK you can call Samaritans free on 116 123, any time, or contact your GP. Elsewhere, your local crisis line or doctor is the place to start. A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Dyscalculia": {
+  "name": "Dyscalculia",
+  "lede": "Dyscalculia is dyslexia's much less famous sibling, and it gets far less patience — because being bad at maths is treated as a personality quirk rather than a difference in wiring.",
+  "plain": "Dyscalculia affects the brain's basic sense of number and quantity. It isn't maths anxiety, though that usually follows, and it isn't a gap in teaching. Estimating amounts, remembering sequences of digits, judging time and handling money all stay difficult regardless of effort.",
+  "inside": [
+   "Looking at a number and it meaning nothing — no sense of how big it is.",
+   "Counting on your fingers as an adult and feeling ashamed of it.",
+   "Being unable to estimate how long something will take, at all.",
+   "Reading a phone number, then losing it between reading and dialling.",
+   "Panic at the till while trying to work out the change."
+  ],
+  "wrong": [
+   [
+    "“They're bad at maths.”",
+    "It's the underlying number sense, not the maths teaching."
+   ],
+   [
+    "“It's just anxiety.”",
+    "Anxiety is usually the result of years of struggle, not the cause."
+   ],
+   [
+    "“Everyone finds maths hard.”",
+    "Most people can tell that 40 is roughly double 20 without working it out."
+   ],
+   [
+    "“They'll manage with a calculator.”",
+    "Calculators help with sums, not with knowing which sum to do."
+   ],
+   [
+    "“It only affects maths lessons.”",
+    "It affects time, money, directions, cooking, and turning up when you said you would."
+   ]
+  ],
+  "strengths": [
+   "Strong verbal and language reasoning.",
+   "Creative and intuitive problem-solving.",
+   "Excellent at pattern and narrative thinking.",
+   "Highly developed workarounds and practical strategies.",
+   "Real empathy for anyone told they're just not trying."
+  ],
+  "helps": [
+   "Write numbers down, don't say them",
+   "Say clock times, not durations",
+   "Don't put them on the bill split",
+   "Allow calculators and apps without comment",
+   "Break instructions with numbers into steps",
+   "Give directions as landmarks, not distances"
+  ],
+  "responses": [
+   [
+    "“I'll text you the number.”",
+    "“Shall I sort the bill?”",
+    "“Use whatever helps.”"
+   ],
+   [
+    "“It's simple, look.”",
+    "“You're an adult!”",
+    "“Just do it in your head.”"
+   ]
+  ],
+  "closing": "Not carelessness with numbers. A different relationship with quantity altogether.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Dysgraphia": {
+  "name": "Dysgraphia",
+  "lede": "If writing by hand has always felt disproportionately hard — physically painful, slow, and never matching what's in your head — there's a name for that.",
+  "plain": "Dysgraphia affects handwriting and written expression. For some it's mainly motor: forming letters is effortful and uncomfortable. For others it's mainly about getting organised thought onto a page. Often it's both, and it frequently travels alongside dyslexia or dyspraxia.",
+  "inside": [
+   "Your hand aching after a page that took other people two minutes.",
+   "Handwriting you can't read back yourself.",
+   "A rich, well-organised idea arriving on paper as three flat sentences.",
+   "Gripping the pen so hard your fingers mark.",
+   "Avoiding anything handwritten — cards, forms, notes — for years."
+  ],
+  "wrong": [
+   [
+    "“Messy handwriting, that's all.”",
+    "The appearance is the visible bit. The effort and the lost content are the real cost."
+   ],
+   [
+    "“They should practise more.”",
+    "More handwriting mostly produces more pain and more avoidance."
+   ],
+   [
+    "“They're not trying.”",
+    "Look at the grip. That's what maximum effort looks like."
+   ],
+   [
+    "“Typing is cheating.”",
+    "Typing removes an obstacle that has nothing to do with the thinking being assessed."
+   ],
+   [
+    "“They can't write well.”",
+    "They often write beautifully. Getting it out of the hand is the problem."
+   ]
+  ],
+  "strengths": [
+   "Ideas that outstrip what makes it onto the page.",
+   "Strong verbal expression — ask them out loud.",
+   "Inventive with technology and workarounds.",
+   "Persistence, from years of doing the hard version.",
+   "Good editors of other people's work."
+  ],
+  "helps": [
+   "Let them type, always",
+   "Never mark on handwriting appearance",
+   "Offer forms digitally",
+   "Accept voice notes and dictation",
+   "Provide notes rather than expecting copying",
+   "Ask for it verbally if it's quicker"
+  ],
+  "responses": [
+   [
+    "“Type it if that's easier.”",
+    "“Just tell me and I'll write it.”",
+    "“I'll fill the form in.”"
+   ],
+   [
+    "“Slow down and be neat.”",
+    "“I can't read this.”",
+    "“Did you rush it?”"
+   ]
+  ],
+  "closing": "The thinking is all there. It's the last six inches, hand to paper, that costs.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Dyslexia": {
+  "name": "Dyslexia",
+  "lede": "Dyslexia has almost nothing to do with intelligence, and rather more to do with how the brain handles the sounds inside words.",
+  "plain": "Dyslexia is a difference in how the brain processes the sound structure of language, which makes decoding written words slow and effortful. Reading can be learned, and often is — but it stays costly in a way it isn't for other people. Spelling and getting words out on the page are usually harder still.",
+  "inside": [
+   "Reading a paragraph three times and retaining none of it, because all the effort went on decoding.",
+   "Knowing a word perfectly well and being unable to spell it, every single time.",
+   "Reading aloud being a genuine dread, not a mild preference.",
+   "Having the whole idea clearly in your head and losing it on the way to the page.",
+   "Being exhausted by tasks other people describe as light reading."
+  ],
+  "wrong": [
+   [
+    "“They see letters backwards.”",
+    "That's a myth. It's about processing sounds, not reversing shapes."
+   ],
+   [
+    "“They're not very bright.”",
+    "Dyslexia is unrelated to intelligence. Plenty of dyslexic people are exceptional thinkers."
+   ],
+   [
+    "“More reading practice will fix it.”",
+    "Unstructured practice mostly builds dread. Structured, phonics-based teaching helps."
+   ],
+   [
+    "“They're just careless.”",
+    "Proofreading your own work is precisely the thing dyslexia makes hardest."
+   ],
+   [
+    "“They'll grow out of it.”",
+    "It's lifelong. What changes is the strategies and the confidence."
+   ]
+  ],
+  "strengths": [
+   "Big-picture thinking, and spotting patterns others miss.",
+   "Strong spatial and visual reasoning.",
+   "Excellent verbal reasoning and storytelling.",
+   "Creative problem-solving, from years of finding workarounds.",
+   "Perseverance built by doing hard things daily since childhood."
+  ],
+  "helps": [
+   "Offer audio versions of anything long",
+   "Accept voice notes instead of written ones",
+   "Use clear fonts and generous spacing",
+   "Never ask someone to read aloud unprepared",
+   "Don't correct spelling in casual writing",
+   "Give extra time as standard, not as a favour"
+  ],
+  "responses": [
+   [
+    "“Want me to send that as a voice note?”",
+    "“Take whatever time you need.”",
+    "“I'll summarise the key bits.”"
+   ],
+   [
+    "“Just sound it out.”",
+    "“You spelled that wrong.”",
+    "“Can you read this out for us?”"
+   ]
+  ],
+  "closing": "The thinking was never the difficult part. Only the getting it in and out.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Dyspraxia": {
+  "name": "Dyspraxia",
+  "lede": "Dyspraxia is often reduced to clumsiness, which misses most of it. It affects planning and sequencing — of movement, and frequently of everything else too.",
+  "plain": "Dyspraxia, or Developmental Co-ordination Disorder, affects how the brain plans and co-ordinates movement. Actions that become automatic for most people stay effortful and conscious. It commonly comes with difficulties in organisation, sequencing and spatial judgement, and it doesn't go away in adulthood.",
+  "inside": [
+   "Having to think consciously about movements everyone else does without noticing.",
+   "Being genuinely tired by a day of ordinary physical tasks.",
+   "Knowing left from right, eventually, after working it out each time.",
+   "Bruises whose origin is a complete mystery.",
+   "Dreading anything with steps in a fixed order under time pressure."
+  ],
+  "wrong": [
+   [
+    "“They're just clumsy.”",
+    "Co-ordination is one part. Planning, sequencing and organisation are just as affected."
+   ],
+   [
+    "“Practice will sort it.”",
+    "Practice helps specific skills. It doesn't make the underlying planning automatic."
+   ],
+   [
+    "“It's a childhood thing.”",
+    "It's lifelong. Adults simply get better at hiding and routing around it."
+   ],
+   [
+    "“They're not trying.”",
+    "They're trying considerably harder than you are at the same task."
+   ],
+   [
+    "“They're bad at sport.”",
+    "Team sport especially. That says nothing about strength, fitness or willingness."
+   ]
+  ],
+  "strengths": [
+   "Determination built from doing hard things daily.",
+   "Creative workarounds nobody else would think to try.",
+   "Strong empathy for anyone struggling.",
+   "Excellent strategic thinking — planning ahead is a survival skill here.",
+   "Verbal and written strengths that often outpace peers."
+  ],
+  "helps": [
+   "Allow more time, without comment",
+   "Written or diagrammed steps beat demonstrated ones",
+   "Offer to carry the tray",
+   "Give instructions one step at a time",
+   "Don't rush or watch them closely",
+   "Choose seating with room to move"
+  ],
+  "responses": [
+   [
+    "“Take your time.”",
+    "“Shall I grab that?”",
+    "“Want the steps written down?”"
+   ],
+   [
+    "“Careful!” (as they're already doing it)",
+    "“Butterfingers.”",
+    "“How did you manage that?”"
+   ]
+  ],
+  "closing": "Not careless. Doing consciously what everyone else does on autopilot.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Misophonia": {
+  "name": "Misophonia",
+  "lede": "If certain small sounds provoke instant, disproportionate rage or panic in you, you are not being difficult and you are far from alone. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Misophonia is a strongly reduced tolerance to specific sounds — most often chewing, breathing, sniffing, tapping, pen-clicking. Triggers provoke immediate anger, panic or disgust that the person knows is out of proportion and cannot stop. Brain imaging suggests real differences in how these sounds are processed. It affects a substantial minority of people and commonly starts in childhood.",
+  "inside": [
+   "A sound arriving like an assault, with rage or panic before any thought.",
+   "Being unable to hear anything else once you've noticed it.",
+   "Feeling ridiculous and ashamed of a reaction you can't control.",
+   "Avoiding meals with people you love.",
+   "Being told you're overreacting by everyone, for years."
+  ],
+  "wrong": [
+   [
+    "“Everyone hates chewing sounds.”",
+    "Mild annoyance isn't the same as a full fight-or-flight response."
+   ],
+   [
+    "“You're being rude.”",
+    "The reaction arrives before any decision. Leaving the room is the polite version."
+   ],
+   [
+    "“Just ignore it.”",
+    "The difficulty disengaging attention is the core of the condition."
+   ],
+   [
+    "“It's not a real thing.”",
+    "It's increasingly well evidenced, including on brain imaging."
+   ],
+   [
+    "“They'll grow out of it.”",
+    "It usually starts in childhood and often persists. Management helps; growing out doesn't."
+   ]
+  ],
+  "strengths": [
+   "Exceptional attention to sound and detail.",
+   "Often musical, or acutely attuned to tone and rhythm.",
+   "Strong self-awareness about their own reactions.",
+   "Considerable self-control — most people mask this for years.",
+   "Empathy for anyone with an invisible difficulty."
+  ],
+  "helps": [
+   "Don't take the reaction personally",
+   "Eat with the telly or music on",
+   "Give them a seat furthest from noise",
+   "Let them wear headphones at meals",
+   "Don't tap, click or crunch deliberately",
+   "Believe them the first time"
+  ],
+  "responses": [
+   [
+    "“Tell me if I'm doing it.”",
+    "“Shall I put some music on?”",
+    "“Sit wherever's easiest.”"
+   ],
+   [
+    "“It's only eating.”",
+    "“You're so sensitive.”",
+    "*doing it on purpose to tease*"
+   ]
+  ],
+  "closing": "The rage isn't aimed at you. It arrives before anyone gets a say in it.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "OCD": {
+  "name": "OCD",
+  "lede": "OCD is probably the most misused word in this whole vocabulary. It isn't about liking things tidy — it's a distressing loop that the person desperately wants out of.",
+  "plain": "OCD involves obsessions — unwanted, intrusive thoughts that cause real distress — and compulsions, which are things done to relieve that distress. The relief never lasts, which is what makes it a loop. Crucially, the thoughts are the opposite of what the person wants, which is exactly why they're so frightening.",
+  "inside": [
+   "Thoughts arriving that horrify you, precisely because they're against everything you believe.",
+   "Knowing a fear is irrational and being entirely unable to let it go.",
+   "Checking something you already checked, because knowing isn't the same as feeling certain.",
+   "Rituals eating hours you'll never get back.",
+   "Relief lasting about ninety seconds before the doubt returns."
+  ],
+  "wrong": [
+   [
+    "“I'm so OCD about my desk.”",
+    "Enjoying tidiness is a preference. OCD is distress you'd pay anything to be rid of."
+   ],
+   [
+    "“It's about cleaning.”",
+    "Contamination is one theme. Many people have no cleaning compulsions whatsoever."
+   ],
+   [
+    "“Just stop doing the ritual.”",
+    "That's the treatment, roughly — but it takes structured therapy and considerable courage."
+   ],
+   [
+    "“The thoughts mean something.”",
+    "They mean the opposite. OCD attaches to whatever you'd least want to be true."
+   ],
+   [
+    "“Reassure them and they'll settle.”",
+    "Reassurance is a compulsion by proxy. It feeds the loop rather than starving it."
+   ]
+  ],
+  "strengths": [
+   "Extraordinary attention to detail and consequences.",
+   "Deep conscientiousness and care about doing right.",
+   "Considerable courage — treatment asks a lot and people do it.",
+   "Strong empathy for others in distress.",
+   "Sharp analytical thinking, when it isn't turned inward."
+  ],
+  "helps": [
+   "Don't provide repeated reassurance",
+   "Take the distress seriously",
+   "Be patient with slow progress",
+   "Don't join in with the rituals",
+   "Support professional help — it works",
+   "Never say 'I'm a bit OCD'"
+  ],
+  "responses": [
+   [
+    "“That sounds exhausting.”",
+    "“I'm not going to reassure you, but I'm here.”",
+    "“How can I help without feeding it?”"
+   ],
+   [
+    "“But is it definitely fine?”",
+    "“I'm so OCD too!”",
+    "“Just don't think about it.”"
+   ]
+  ],
+  "closing": "The thoughts are not you. They're the thing happening to you.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "PDA": {
+  "name": "PDA",
+  "lede": "PDA describes a profile where everyday demands feel genuinely threatening — including demands the person actually wants to meet. It's the one on this shelf where even the name is under active debate.",
+  "plain": "PDA usually stands for Pathological Demand Avoidance, though many people in the community prefer Persistent or Pervasive Drive for Autonomy, arguing that 'pathological' stigmatises. Others keep the original, saying it honestly conveys how far outside conscious control it sits. Both views come from people living it. It is not a standalone diagnosis in the DSM; in the UK it's sometimes noted as a demand-avoidant profile within autism.",
+  "inside": [
+   "A request landing like a threat, even a kind one, even one you agree with.",
+   "Wanting to do the thing and being unable to the moment it becomes expected.",
+   "Praise making it worse, because now it's expected again next time.",
+   "Negotiating, deflecting, or going quiet — anything to keep some control.",
+   "For some, none of this shows outwardly at all; it turns inward instead."
+  ],
+  "wrong": [
+   [
+    "“They're just defiant.”",
+    "Defiance is a choice. This is a nervous system reading demands as danger."
+   ],
+   [
+    "“Be firmer with them.”",
+    "Escalating demands escalates the threat. It reliably makes things worse."
+   ],
+   [
+    "“They manage at school, so it's parenting.”",
+    "Holding it together all day is why it collapses at home, where it's safe."
+   ],
+   [
+    "“They can't be, they're so easy-going.”",
+    "Internalised PDA is quieter and often missed entirely."
+   ],
+   [
+    "“It's not a real thing.”",
+    "It isn't a formal DSM diagnosis. It's still a useful description of a real pattern."
+   ]
+  ],
+  "strengths": [
+   "Strong sense of justice and personal autonomy.",
+   "Creative, imaginative, often socially perceptive.",
+   "Excellent negotiators, from constant practice.",
+   "Thrive genuinely when given real choice and control.",
+   "Question rules that deserve questioning."
+  ],
+  "helps": [
+   "Offer choices, not instructions",
+   "Reduce demands before adding strategies",
+   "Drop praise that raises expectation",
+   "Phrase things indirectly ('I wonder if…')",
+   "Give control over timing and order",
+   "Treat collapse as distress, not defiance"
+  ],
+  "responses": [
+   [
+    "“Whenever you're ready.”",
+    "“Would you rather A or B?”",
+    "“No pressure — genuinely.”"
+   ],
+   [
+    "“You need to do this now.”",
+    "“Because I said so.”",
+    "“See, you managed it!”"
+   ]
+  ],
+  "closing": "Autonomy isn't a luxury here. It's the thing that makes everything else possible.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Prosopagnosia": {
+  "name": "Face Blindness",
+  "lede": "If you've ever walked past your own colleague, or failed to recognise a friend out of context, and quietly built a life around covering for it — there's a name for that. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Prosopagnosia, or face blindness, is difficulty recognising faces, including very familiar ones. Developmental prosopagnosia is present from birth and affects around two percent of people. It has nothing to do with memory, attention or caring — the face-processing system simply works differently. Most people compensate using voice, hair, gait and context.",
+  "inside": [
+   "Recognising people by coat, voice or walk, and being lost when they change any of it.",
+   "Watching a film and losing track of which character is which.",
+   "Greeting everyone warmly as insurance, in case you know them.",
+   "Not recognising your own face in a group photograph.",
+   "Being thought rude or standoffish for years."
+  ],
+  "wrong": [
+   [
+    "“You're bad with names.”",
+    "Different thing. Names can be perfect; the face is what won't attach."
+   ],
+   [
+    "“You weren't paying attention.”",
+    "Attention doesn't help. The processing happens elsewhere."
+   ],
+   [
+    "“You don't care about people.”",
+    "Frequently the reverse — the anxiety about causing offence is constant."
+   ],
+   [
+    "“Everyone forgets faces sometimes.”",
+    "Not their own family's, reliably, forever."
+   ],
+   [
+    "“You recognised me last week!”",
+    "Context did that. Same person, different setting, different outcome."
+   ]
+  ],
+  "strengths": [
+   "Strong recognition of voice, gait and mannerism.",
+   "Excellent contextual and situational memory.",
+   "Judges people on behaviour rather than appearance.",
+   "Highly developed social workarounds.",
+   "Genuinely unbiased about looks."
+  ],
+  "helps": [
+   "Say your name when you greet them",
+   "Keep hair, glasses, coat predictable if you can",
+   "Don't take being missed personally",
+   "Don't test them or make it a joke",
+   "Introduce yourself again, cheerfully",
+   "Mention who's in the room quietly"
+  ],
+  "responses": [
+   [
+    "“Hi, it's me, Dave.”",
+    "“No bother at all.”",
+    "“Sarah's the one in blue.”"
+   ],
+   [
+    "“Guess who!”",
+    "“You don't remember me?”",
+    "“How can you not know my face?”"
+   ]
+  ],
+  "closing": "Not rudeness, not carelessness. A face-shaped gap in an otherwise fine memory.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "SelectiveMutism": {
+  "name": "Situational Mutism",
+  "lede": "Often still called selective mutism, which is unfortunate — nothing about it is selected. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Situational mutism is an inability to speak in certain settings despite speaking freely in others. It's an anxiety- based freeze response, not shyness, refusal or defiance. It usually begins in childhood and can persist into adult life. Many autistic people also lose speech temporarily during overload, which is related but distinct.",
+  "inside": [
+   "Wanting to answer, knowing the answer, and no sound coming out at all.",
+   "Your throat physically closing rather than choosing silence.",
+   "Speaking freely at home and being mute at the school gate.",
+   "Adults treating your silence as rudeness or stubbornness.",
+   "The pressure to speak making it categorically worse."
+  ],
+  "wrong": [
+   [
+    "“They're just shy.”",
+    "Shy people speak eventually. This is a freeze response with a physical component."
+   ],
+   [
+    "“They're being difficult.”",
+    "Nobody chooses this. It's frightening and isolating for the person in it."
+   ],
+   [
+    "“Make them answer.”",
+    "Pressure is the single most reliable way to make it worse."
+   ],
+   [
+    "“They can talk at home, so they can",
+    "here.” That's the definition, not a contradiction."
+   ],
+   [
+    "“They'll grow out of it.”",
+    "Some do; many need support. Waiting alone isn't a plan."
+   ]
+  ],
+  "strengths": [
+   "Exceptional listening and observation.",
+   "Rich inner life and often strong writing.",
+   "Deep loyalty to the people they can speak with.",
+   "Sensitivity to atmosphere and other people's discomfort.",
+   "Considerable courage every time they try."
+  ],
+  "helps": [
+   "Never insist on a verbal answer",
+   "Talk alongside them without requiring replies",
+   "Reduce audience size",
+   "Accept writing, typing, nodding, pointing",
+   "Don't announce or praise when they do speak",
+   "Give questions in advance"
+  ],
+  "responses": [
+   [
+    "“Nod if that's right.”",
+    "“Write it down if you'd rather.”",
+    "“No rush.”"
+   ],
+   [
+    "“Cat got your tongue?”",
+    "“She spoke! Everyone, listen!”",
+    "“Just say it.”"
+   ]
+  ],
+  "closing": "Not selected, not shyness, not rudeness. A freeze that needs patience, not pressure.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Sensory": {
+  "name": "Sensory",
+  "lede": "Most people know about the five senses. Sensory processing differences involve eight — and any of them can arrive far too loud, far too quiet, or unpredictably both.",
+  "plain": "Sensory processing describes how the brain receives and interprets information from the senses — including balance, body position, and internal signals like hunger or needing the loo. Some people are hypersensitive, receiving too much; some are hyposensitive, receiving too little and seeking more. Many are both, in different senses, on different days.",
+  "inside": [
+   "A supermarket being genuinely painful rather than mildly annoying.",
+   "A clothing label feeling like it's actively attacking you.",
+   "Craving deep pressure, loud music or strong flavours to feel switched on.",
+   "Not registering hunger, thirst or cold until it's become urgent.",
+   "The same environment being fine on Tuesday and unbearable on Thursday."
+  ],
+  "wrong": [
+   [
+    "“They're being fussy.”",
+    "The distress is real and physical. Nobody chooses this over a comfortable jumper."
+   ],
+   [
+    "“They'll get used to it.”",
+    "Forced exposure usually sensitises further rather than habituating."
+   ],
+   [
+    "“It's only about noise.”",
+    "Eight senses, including balance, body position and internal signals."
+   ],
+   [
+    "“They were fine last week.”",
+    "Sensory tolerance moves with tiredness, stress, hormones and illness."
+   ],
+   [
+    "“Ear defenders are antisocial.”",
+    "They're the reason the person can stay at all."
+   ]
+  ],
+  "strengths": [
+   "Noticing things nobody else registers.",
+   "Deep enjoyment of textures, sounds and tastes others find ordinary.",
+   "Excellent early warning for problems — the smell, the sound, the flicker.",
+   "Strong aesthetic sense and attention to environment.",
+   "Real skill at designing spaces that work for people."
+  ],
+  "helps": [
+   "Ask before changing the environment",
+   "Offer a quieter room as standard",
+   "Warn before loud or bright things",
+   "Let them wear the ear defenders",
+   "Don't comment on food or clothing choices",
+   "Believe them the first time"
+  ],
+  "responses": [
+   [
+    "“Is this alright in here?”",
+    "“Want the lights down?”",
+    "“We can go whenever.”"
+   ],
+   [
+    "“It's not that loud.”",
+    "“You'll get used to it.”",
+    "“Just try a bit.”"
+   ]
+  ],
+  "closing": "Not fussy. Receiving a different amount of the world than you are.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Synaesthesia": {
+  "name": "Synaesthesia",
+  "lede": "If Tuesday has always been yellow-green and you assumed everyone knew that, this one's for you. Whether this belongs under the neurodivergent umbrella is genuinely debated. Many people who have it identify as neurodivergent; some prefer not to. Both are reasonable, and nobody gets to decide it for you.",
+  "plain": "Synaesthesia is an automatic crossing of the senses — letters and numbers having colours, sounds having shapes, days of the week having positions in space, words having tastes. It's consistent over a lifetime, involuntary, and present in perhaps four percent of people. It isn't imagination and it isn't a symptom of anything.",
+  "inside": [
+   "Assuming until adulthood that everyone's alphabet was coloured.",
+   "Someone spelling a name wrong and it looking the wrong colour.",
+   "Music arriving with texture and shape as well as sound.",
+   "Being certain about associations you can't possibly justify.",
+   "Finding the whole thing pleasant, mostly — this one's rarely a burden."
+  ],
+  "wrong": [
+   [
+    "“You're imagining it.”",
+    "It's involuntary and remarkably consistent — testable across decades."
+   ],
+   [
+    "“It's drug related.”",
+    "Congenital synaesthesia has been there since childhood."
+   ],
+   [
+    "“Everyone associates things.”",
+    "Learned association is different from automatic perception."
+   ],
+   [
+    "“It must be distracting.”",
+    "Most synaesthetes wouldn't give it up. It often aids memory."
+   ],
+   [
+    "“It's a disorder.”",
+    "It's a perceptual variation, and generally a rather nice one."
+   ]
+  ],
+  "strengths": [
+   "Unusually strong memory — the extra channel helps.",
+   "Creative and artistic advantages.",
+   "Rich, textured experience of ordinary things.",
+   "Often excellent with names, dates and sequences.",
+   "A genuinely unusual perspective on how minds can work."
+  ],
+  "helps": [
+   "Take it seriously when they describe it",
+   "Ask what it's actually like",
+   "Don't tell them they're wrong about it",
+   "Don't test them like a party trick",
+   "Accept their associations are fixed",
+   "Enjoy it with them"
+  ],
+  "responses": [
+   [
+    "“What colour is my name?” *asked once, kindly*",
+    "“That sounds lovely.”",
+    "“How does that work?”"
+   ],
+   [
+    "“Prove it.”",
+    "“That's not a real thing.”",
+    "“Do it again for my friend.”"
+   ]
+  ],
+  "closing": "Extra channels, permanently on. Mostly a good deal.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ },
+ "Tourettes": {
+  "name": "Tourette's &",
+  "lede": "Almost everything most people think they know about Tourette's comes from one rare symptom being used as a punchline for forty years.",
+  "plain": "Tourette Syndrome involves both motor and vocal tics — sudden, repeated movements or sounds — present for over a year. Tics aren't voluntary, though many people can hold them briefly at a cost. Involuntary swearing is real but affects only a small minority, roughly one in ten.",
+  "inside": [
+   "A building pressure before a tic that only doing it will release.",
+   "Being able to suppress in public, then a much bigger wave the moment you're home.",
+   "Tics worsening when you're stressed, tired, excited — or being watched.",
+   "People assuming you're doing it deliberately, or for attention.",
+   "Exhaustion from managing something that never stops."
+  ],
+  "wrong": [
+   [
+    "“Tourette's is swearing.”",
+    "Coprolalia affects around 10%. Most tics are blinking, throat- clearing, shrugging, small sounds."
+   ],
+   [
+    "“They could stop if they wanted.”",
+    "Suppression is possible briefly, like holding a sneeze, and just as unsustainable."
+   ],
+   [
+    "“They're doing it for attention.”",
+    "Almost everyone with tics would very much prefer not to be noticed."
+   ],
+   [
+    "“It's just nerves.”",
+    "It's neurological. Stress worsens it; stress didn't cause it."
+   ],
+   [
+    "“It's funny.”",
+    "It's frequently painful, and it isn't a bit."
+   ]
+  ],
+  "strengths": [
+   "Humour, often sharp, and well-earned.",
+   "Resilience from managing something visible in public every day.",
+   "Genuine compassion for anyone who stands out.",
+   "Creativity — tics travel with a lot of creative minds.",
+   "Honesty about difficulty, having never had the option of hiding it."
+  ],
+  "helps": [
+   "Don't mention or count the tics",
+   "Carry on the conversation normally",
+   "Never mimic, even affectionately",
+   "Don't tell them to relax",
+   "Offer a quieter space if it helps",
+   "Let them leave and come back"
+  ],
+  "responses": [
+   [
+    "Nothing at all — just carry on.",
+    "“Want to sit somewhere quieter?”",
+    "“Doesn't bother me.”"
+   ],
+   [
+    "“Just relax.”",
+    "“You did it again.”",
+    "“Say something rude then!”"
+   ]
+  ],
+  "closing": "Not a joke, not a choice, and rarely what television told you it was.",
+  "disclaimer": "A friendly explainer written for the community — not a diagnostic tool and not medical advice. If you want an assessment, your GP is the place to start. Nobody experiences this identically, so take what fits and leave the rest. For your own personal use — print it as many times as you like, for yourself and your household. Please don't resell, redistribute, or share the file itself. © Frog Logic"
+ }
+}
