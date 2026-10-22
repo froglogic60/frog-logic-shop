@@ -136,6 +136,7 @@ function copyFor(item, group) {
       "Every planner you've ever bought was built for someone else's brain. This one is assembled for yours. You answer fifteen questions — how your day actually runs, how you track energy, what you keep forgetting, what a hard day looks like and what actually helps, who most needs to understand your brain — and a planner of up to eighteen pages is built from your answers and emailed to you as a printable PDF, usually within a couple of hours.",
       "Four of the pages carry your own words: a Hard Day page with a tear-off half to hand to someone, a page addressed to your partner, manager, teacher or parent, your start-of-day and end-of-day as tick-lists, and a don't-forget strip on every daily page. Spoons or battery tracking, your choice. An easy-read option. Undated, so you print the pages you need as often as you need them, forever.",
       "If it doesn't fit, answer the questions again and we'll rebuild it — free. That's what bespoke means.",
+      `Not sure yet? <a href="/taster/">Try one page first, free</a>: answer three of the fifteen questions and get your daily page, in your shape, with your name on it, straight away.`,
     ],
     cta: { href: item.link, label: "Answer the questions — £25", external: true },
   };
@@ -489,7 +490,7 @@ async function renderOg(pages) {
 }
 
 function sitemap(pages) {
-  const fixed = [["/", "weekly", "1.0", TODAY], ["/returns.html", "yearly", "0.4", "2026-08-29"], ["/terms.html", "yearly", "0.3", "2026-08-29"], ["/privacy.html", "yearly", "0.3", "2026-08-29"]];
+  const fixed = [["/", "weekly", "1.0", TODAY], ["/taster/", "monthly", "0.7", "2026-10-22"], ["/returns.html", "yearly", "0.4", "2026-08-29"], ["/terms.html", "yearly", "0.3", "2026-08-29"], ["/privacy.html", "yearly", "0.3", "2026-08-29"]];
   const rows = fixed.map(([u, f, pr, d]) => `  <url><loc>${SITE}${u}</loc><lastmod>${d}</lastmod><changefreq>${f}</changefreq><priority>${pr}</priority></url>`)
     .concat(pages.map((p) => `  <url><loc>${SITE}/p/${p.slug}/</loc><lastmod>${TODAY}</lastmod><changefreq>monthly</changefreq><priority>${p.group === "guide" ? "0.7" : "0.8"}</priority></url>`));
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows.join("\n")}\n</urlset>\n`;
@@ -591,10 +592,11 @@ ${items.join("\n")}
     fs.writeFileSync(path.join(OUT, p.slug, "index.html"), p.group === "xset" ? buildSetPage(p) : buildPage(p, pickRelated(p, pages.filter((q) => q.group !== "xset")), shop));
   }
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages));
+  require("../planner/build-taster-page.js").build(); // /taster/ — the free one-page Bespoke Planner taste
   const gf = feed(pages, shop);
   fs.writeFileSync(path.join(ROOT, "google-feed.xml"), gf.xml);
   console.log(`google-feed.xml: ${gf.count} items`);
   let imgs = 0;
   if (process.env.SKIP_IMAGES !== "1") imgs = await renderOg(pages);
-  console.log(`${pages.length} pages written to /p/, ${imgs} share images rendered, sitemap.xml has ${pages.length + 4} URLs`);
+  console.log(`${pages.length} pages written to /p/, ${imgs} share images rendered, sitemap.xml has ${pages.length + 5} URLs`);
 })().catch((e) => { console.error(e); process.exit(1); });

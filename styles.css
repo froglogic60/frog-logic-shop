@@ -146,6 +146,7 @@ body.low-stim .collection.christmas{ background:var(--bg); }
 }
 .bespoke-copy .btn-primary{ background:var(--cream); color:var(--ink); }
 .bespoke-note{ font-size:.85rem; opacity:.75 !important; margin-top:14px !important; }
+.bespoke-note a{ color:var(--cream); }
 @media (max-width:720px){
   .bespoke-band{ grid-template-columns:1fr; }
   .bespoke-art{ width:min(340px, calc(100% - 52px)); margin:26px auto 0; }
