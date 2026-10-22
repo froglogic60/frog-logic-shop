@@ -6,45 +6,13 @@ Subject: [PATCH] Pond Guides readable on their pages, with a read-online link
  [skip netlify]
 
 ---
- .github/workflows/build-pages.yml      |  7 ++-
  automation/site/build-pages.cjs        | 67 ++++++++++++++++----
  automation/site/pond-guides-extract.py | 85 ++++++++++++++++++++++++++
  script.js                              |  1 +
  styles.css                             | 23 +++++++
- 5 files changed, 169 insertions(+), 14 deletions(-)
+ 4 files changed, 163 insertions(+), 13 deletions(-)
  create mode 100644 automation/site/pond-guides-extract.py
 
-diff --git a/.github/workflows/build-pages.yml b/.github/workflows/build-pages.yml
-index 927b622..05ff543 100644
---- a/.github/workflows/build-pages.yml
-+++ b/.github/workflows/build-pages.yml
-@@ -11,6 +11,7 @@ on:
-       - script.js
-       - mockups.json
-       - automation/site/build-pages.cjs
-+      - automation/site/pond-guides-extract.py
- permissions:
-   contents: write
- jobs:
-@@ -27,13 +28,17 @@ jobs:
-       - name: Install Chromium
-         working-directory: automation/social
-         run: npx playwright install --with-deps chromium
-+      - name: Lift the Pond Guides' text out of their PDFs
-+        run: |
-+          pip install --quiet pdfplumber
-+          python automation/site/pond-guides-extract.py
-       - name: Build pages, share images and sitemap
-         run: node automation/site/build-pages.cjs
-       - name: Commit
-         run: |
-           git config user.name "frog-logic-bot"
-           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
--          git add p sitemap.xml google-feed.xml
-+          git add p sitemap.xml google-feed.xml automation/site/pond-guides.json
-           git commit -m "Product pages rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
-           git pull --rebase origin main
-           git push
 diff --git a/automation/site/build-pages.cjs b/automation/site/build-pages.cjs
 index 2299991..d18b985 100644
 --- a/automation/site/build-pages.cjs
