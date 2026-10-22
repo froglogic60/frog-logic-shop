@@ -75,19 +75,59 @@ function usLine(item, kind) {
     (usPrice && usPrice !== ukPrice ? ` The US price is £${usPrice.toFixed(2).replace(/\.00$/, "")}.` : "");
 }
 
+// The guides' own words (automation/site/pond-guides.json, lifted from the
+// PDFs on 22 Oct 2026) so every guide page carries the full guide as readable
+// HTML — before this the pages were a download card with nothing for search
+// engines to read, and Search Console showed seven clicks in two months.
+const GUIDE_TEXT = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, "pond-guides.json"), "utf8")); }
+  catch { return {}; }
+})();
+
+function guideBody(item, g) {
+  const li = (xs) => xs.map((x) => `<li>${esc(x)}</li>`).join("");
+  const [helpful, less] = g.responses;
+  const debated = /genuinely debated/.test(g.lede);
+  return `
+    <article class="guide-body">
+      <h2>In plain words</h2>
+      <p>${esc(g.plain)}</p>
+      <h2>What it can feel like from the inside</h2>
+      <ul>${li(g.inside)}</ul>
+      <h2>What people often get wrong</h2>
+      <dl class="guide-wrong">${g.wrong.map(([a, b]) => `<div><dt>${esc(a)}</dt><dd>${esc(b)}</dd></div>`).join("")}</dl>
+      <h2>What often comes with it</h2>
+      <p class="guide-note">Not compensation prizes — genuine, useful things.</p>
+      <ul>${li(g.strengths)}</ul>
+      <h2>What actually helps</h2>
+      <ul class="guide-helps">${li(g.helps)}</ul>
+      <h2>If someone tells you this is them</h2>
+      <div class="guide-responses">
+        <div><h3>Helpful</h3><ul>${li(helpful)}</ul></div>
+        <div><h3>Less helpful</h3><ul>${li(less)}</ul></div>
+      </div>
+      <p class="guide-closing">${esc(g.closing)}</p>
+      <p class="guide-next">Want something to hand over rather than explain? The <a href="/p/how-to-help-me/">How To Help Me</a> sheet and the <a href="/p/access-needs-cards/">Access Needs Cards</a> are printable, £2 each. If you support a lot of people — a SEN department, a service, a team — <a href="/#organisations">the Organisation Pack</a> licenses all of the sheets and all twenty-three guides.</p>
+      <p class="guide-disclaimer">${esc(g.disclaimer.replace(/ For your own personal use.*$/, ""))}</p>
+    </article>`;
+}
+
 function copyFor(item, group) {
   const kind = kindOf(item.num);
-  if (group === "guide") return {
-    title: `${item.word} explained — a free, plain-English guide | The Pond Guides`,
-    h1: `${item.word}, explained warmly`,
-    eyebrow: "Free guide · The Pond Guides",
-    paras: [
-      `A free guide to ${item.word}, written in plain English for the person it's about and for the people around them — partners, parents, teachers, managers, GPs. What it's like from inside, what people get wrong, and what actually helps.`,
-      "It's a PDF. Download it, print it, send it to someone who needs to read it. No email address, no sign-up, no catch — the guides are free so that they travel.",
-      `There are twenty-three Pond Guides, one per neurotype. If you work with a lot of different brains, <a href="/p/the-pond-guides/">the complete set</a> is all of them in one file.`,
-    ],
-    cta: { href: `/digital/Pond-Guide-${item.slug}.pdf`, label: "Download the guide — free", download: true },
-  };
+  if (group === "guide") {
+    const g = GUIDE_TEXT[item.slug];
+    return {
+      title: `${item.word} explained in plain English — what it feels like, what people get wrong, what helps`,
+      h1: `${item.word}, explained warmly`,
+      eyebrow: "Free guide · The Pond Guides",
+      paras: [
+        g ? esc(g.lede) : `A free guide to ${item.word}, written in plain English for the person it's about and for the people around them.`,
+        `The whole guide is on this page, free to read. It's also a two-page PDF: download it, print it, send it to someone who needs to read it. No email address, no sign-up, no catch — the guides are free so that they travel.`,
+        `There are twenty-three Pond Guides, one per neurotype. If you work with a lot of different brains, <a href="/p/the-pond-guides/">the complete set</a> is all of them in one file.`,
+      ],
+      cta: { href: `/digital/Pond-Guide-${item.slug}.pdf`, label: "Download the guide — free", download: true },
+    };
+  }
   if (group === "bespoke") return {
     title: "The Bespoke Planner — a printable planner built for your brain (ADHD, autism, AuDHD)",
     h1: "The Bespoke Planner",
@@ -272,7 +312,7 @@ function buildPage(entry, related, shop) {
   const c = copyFor(item, group);
   const url = `${SITE}/p/${slug}/`;
   const image = photo ? photo.src : `${SITE}/p/${slug}/og.png`;
-  const description = (c.paras[0] || item.line).replace(/<[^>]+>/g, "").slice(0, 155);
+  const description = (group === "guide" && GUIDE_TEXT[item.slug] ? GUIDE_TEXT[item.slug].lede : (c.paras[0] || item.line)).replace(/<[^>]+>/g, "").slice(0, 155);
   const kind = kindOf(item.num);
   const isTee = group === "physical" && kind === "Tee";
 
@@ -306,6 +346,7 @@ function buildPage(entry, related, shop) {
         </div>
       </article>
     </div>
+    ${group === "guide" && GUIDE_TEXT[item.slug] ? guideBody(item, GUIDE_TEXT[item.slug]) : ""}
     <div class="product-about">
       <h2>About the shop</h2>
       <p>${BRAND} <a href="/#why">Why this exists.</a></p>
@@ -316,7 +357,7 @@ function buildPage(entry, related, shop) {
 </section>`;
 
   const jsonld = group === "guide"
-    ? { "@context": "https://schema.org", "@type": "DigitalDocument", name: `${item.word} — a Pond Guide`, description, url, image, isAccessibleForFree: true, inLanguage: "en-GB", publisher: { "@type": "Organization", name: "Frog Logic", url: SITE }, encodingFormat: "application/pdf" }
+    ? { "@context": "https://schema.org", "@type": "Article", headline: c.title, name: `${item.word} — a Pond Guide`, description, url, image, isAccessibleForFree: true, inLanguage: "en-GB", author: { "@type": "Organization", name: "Frog Logic", url: SITE }, publisher: { "@type": "Organization", name: "Frog Logic", url: SITE }, dateModified: TODAY }
     : { "@context": "https://schema.org", "@type": "Product", name: c.h1, description, url, image, brand: { "@type": "Brand", name: "Frog Logic" },
         offers: (tiers || [item]).map((t) => ({ "@type": "Offer", url, priceCurrency: "GBP", price: money(t.price), availability: "https://schema.org/InStock", itemCondition: "https://schema.org/NewCondition", seller: { "@type": "Organization", name: "Frog Logic" } })) };
 

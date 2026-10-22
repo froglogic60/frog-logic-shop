@@ -2788,6 +2788,7 @@ function renderGuides(){
         <p class="card-line">${g.line}</p>
         <p class="card-price">${g.price}</p>
         <a class="btn btn-primary" href="/digital/Pond-Guide-${g.slug}.pdf" download>Download</a>
+        <a class="card-read" href="/p/${pageSlug(g)}/">Read it online</a>
       </div>
     </article>
   `).join('');
