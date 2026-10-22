@@ -11,6 +11,7 @@ on:
       - script.js
       - mockups.json
       - automation/site/build-pages.cjs
+      - automation/site/pond-guides-extract.py
 permissions:
   contents: write
 jobs:
@@ -27,13 +28,17 @@ jobs:
       - name: Install Chromium
         working-directory: automation/social
         run: npx playwright install --with-deps chromium
+      - name: Lift the Pond Guides' text out of their PDFs
+        run: |
+          pip install --quiet pdfplumber
+          python automation/site/pond-guides-extract.py
       - name: Build pages, share images and sitemap
         run: node automation/site/build-pages.cjs
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add p sitemap.xml google-feed.xml
+          git add p sitemap.xml google-feed.xml automation/site/pond-guides.json
           git commit -m "Product pages rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
