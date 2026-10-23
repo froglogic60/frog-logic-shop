@@ -29,9 +29,9 @@ PICKS = {  # output name -> source
     "cw-mono-us-hoodie": "mono/mono-us-hoodie-front-white.jpg",
     "cw-mono-us-mug": "mono/mono-us-mug-front-11oz.jpg",
 }
-CARD_PICKS = {"cw-bright-cards": "bright-listing-3.png", "cw-mono-cards": "black-and-white-listing-3.png"}
+CARD_PICKS = {"cw-original-cards": "original-listing-3.png", "cw-bright-cards": "bright-listing-3.png", "cw-mono-cards": "black-and-white-listing-3.png"}
 # The product page shows all three cards (the hero listing image, squared).
-PAGE_PICKS = {"cw-bright-cards-page": "bright-listing-1.png", "cw-mono-cards-page": "black-and-white-listing-1.png"}
+PAGE_PICKS = {"cw-original-cards-page": "original-listing-1.png", "cw-bright-cards-page": "bright-listing-1.png", "cw-mono-cards-page": "black-and-white-listing-1.png"}
 
 def square(img, size=800, bg=(255, 255, 255)):
     img = img.convert("RGB")

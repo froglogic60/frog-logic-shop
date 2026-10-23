@@ -2583,6 +2583,24 @@ const DIGITAL_PRODUCTS = [
       <rect width="300" height="300" fill="url(#d34)"/>${mark()}</svg>`
   },
   {
+    // The original soft-colour cards (24 Oct 2026: the muted voters in Sam's
+    // poll should have cards too). Lives in the #christmas section.
+    num: "D37 — Printable PDF", word: "Christmas Cards",
+    line: "Three printable Christmas cards with the Socially Hibernating frog in the original soft colours, the same as the hoodie: see you in January, Merry Christmas from the pond, and thinking of you from under a blanket. A4 and US Letter, fold in half, blank inside.",
+    price: "£3.00", link: "#", bg: "#3C5B45", xmas: "original",
+    files: [{ name: "Christmas Cards (A4)", file: "Christmas-Cards-Original.pdf" }, { name: "Christmas Cards (US Letter)", file: "Christmas-Cards-Original-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d37", 0.1)}
+      <rect x="70" y="40" width="160" height="200" rx="4" fill="#ffffff"/>
+      <rect x="92" y="60" width="116" height="152" rx="3" fill="none" stroke="#111111" stroke-width="1.2" opacity="0.5"/>
+      <circle cx="100" cy="70" r="3" fill="#c4453b"/><circle cx="190" cy="66" r="2.5" fill="#5b7fc4"/><circle cx="120" cy="98" r="2" fill="#7fb069"/><circle cx="204" cy="110" r="3" fill="#d46aa0"/><circle cx="98" cy="160" r="2.5" fill="#e8b63c"/><circle cx="196" cy="170" r="2" fill="#c4453b"/><circle cx="108" cy="200" r="3" fill="#5b7fc4"/><circle cx="186" cy="206" r="2.5" fill="#7fb069"/>
+      <circle cx="150" cy="128" r="34" fill="#ede4d0"/>
+      <path d="M 128 128 C 128 110 172 110 172 128 C 172 150 128 150 128 128 Z" fill="#8fb784" stroke="#22331f" stroke-width="2.2"/>
+      <path d="M 134 118 C 136 108 148 102 160 104 L 172 100" fill="none" stroke="#c4453b" stroke-width="7" stroke-linecap="round"/>
+      <text x="150" y="196" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#6b4a32">Socially Hibernating</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
+      <rect width="300" height="300" fill="url(#d37)"/>${mark()}</svg>`
+  },
+  {
     // Christmas colourways (20 Oct 2026, Sam's group poll): sold on their own
     // tabs (#christmas-bright, #christmas-mono), not in the digital grid.
     num: "D35 — Printable PDF", word: "Bright Christmas Cards",

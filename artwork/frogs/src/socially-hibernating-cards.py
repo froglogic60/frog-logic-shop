@@ -7,6 +7,8 @@
 # Three fronts per colourway, in A4 and US Letter.
 #
 # Writes to digital/:
+#   Christmas-Cards-Original.pdf            A4, 6 pages (3 cards), the soft colours
+#   Christmas-Cards-Original-Letter.pdf     US Letter
 #   Christmas-Cards-Bright.pdf              A4, 6 pages (3 cards)
 #   Christmas-Cards-Bright-Letter.pdf       US Letter
 #   Christmas-Cards-Black-and-White.pdf     A4
@@ -32,7 +34,11 @@ if len(sys.argv) > 1:
 DPI = 300
 SIZES = {"": (3508, 2480), "-Letter": (3300, 2550)}  # landscape, 300 dpi
 
+# Original (24 Oct 2026, Sam: the muted voters should have cards too): the
+# untouched soft colours, brown words like the hoodie, cream-and-gold snow.
+ORIGINAL = {}
 COLOURWAYS = {
+    "Original": dict(table=ORIGINAL, ink="#6b4a32", sub="#6b4a32", dots=["#e8b63c", "#c4453b", "#5b7fc4", "#7fb069", "#d46aa0"], outline=None),
     "Bright": dict(table=cw.BRIGHT, ink="#e0187a", sub="#1f6bff", dots=["#ffd400", "#ff2438", "#1f6bff", "#18e06f", "#ff3fd2"], outline=None),
     "Black-and-White": dict(table=cw.MONO, ink="#111111", sub="#111111", dots=[], outline="#111111"),
 }
@@ -128,7 +134,7 @@ def listing_images(name, c, fronts, outside, rnd):
     # Five 2000x1500 images for the Etsy listing (Etsy's 4:3 crop).
     W, H = 2000, 1500
     out = []
-    pretty = "Bright Colours" if name == "Bright" else "Black and White"
+    pretty = {"Bright": "Bright Colours", "Black-and-White": "Black and White"}.get(name, "the Original Colours")
     # 1: the three fronts fanned.
     img = Image.new("RGB", (W, H), CREAM)
     for i, f in enumerate(fronts):
@@ -150,7 +156,7 @@ def listing_images(name, c, fronts, outside, rnd):
         img = Image.new("RGB", (W, H), CREAM)
         t = f.convert("RGB").copy(); t.thumbnail((900, 1120))
         img.paste(t, ((W - t.width) // 2, 320))
-        caption(img, "Colour it in, or leave it crisp" if name != "Bright" else "Bright, for the ones who like bright", sub, c["ink"])
+        caption(img, {"Bright": "Bright, for the ones who like bright", "Black-and-White": "Colour it in, or leave it crisp"}.get(name, "The soft colours from the hoodie, on a card"), sub, c["ink"])
         out.append(img)
     for i, img in enumerate(out):
         img.save(os.path.join(PREVIEWS, f"{name.lower()}-listing-{i + 1}.png"))

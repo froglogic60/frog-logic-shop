@@ -171,8 +171,10 @@ function copyFor(item, group) {
       "Three fronts: “Socially Hibernating — see you in January”, “Merry Christmas — from the pond” and “Thinking of you (from under a blanket)”. Each card is one landscape sheet folded in half: the front on the right, a small frog and the Frog Logic mark on the back, and the inside left blank for your own words.",
       "You get two PDFs the moment you pay, A4 and US Letter, six pages each. Print on card (160–250gsm works well) at 100%, fold along the marks, and write inside. Print as many as you need, for as long as you like.",
       item.xmas === "bright"
-        ? "This is the bright version, for people who like their Christmas loud. The same cards are also in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>."
-        : "This is the black and white version: crisp line art that prints on any printer, and colours in nicely if you want it to. The same cards are also in <a href=\"/p/bright-christmas-cards/\">bright colours</a>.",
+        ? "This is the bright version, for people who like their Christmas loud. The same cards are also in the <a href=\"/p/christmas-cards/\">original soft colours</a> and in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>."
+        : item.xmas === "mono"
+        ? "This is the black and white version: crisp line art that prints on any printer, and colours in nicely if you want it to. The same cards are also in the <a href=\"/p/christmas-cards/\">original soft colours</a> and in <a href=\"/p/bright-christmas-cards/\">bright colours</a>."
+        : "These are the original soft colours, the same frog as on the hoodie, tee and throw. The same cards are also in <a href=\"/p/bright-christmas-cards/\">bright colours</a> and in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>.",
       "Personal use: print as many as you like for yourself and your household; please don't resell or share the files.",
     ],
     cta: { buy: true, label: "Download" },
@@ -445,8 +447,8 @@ function collect(shop) {
     // on their own tab (20 Oct 2026).
     const xmasPhoto = p.xmas ? { src: `${SITE}/assets/xmas/cw-${p.xmas}-cards-page.jpg`, alt: `${p.word}: the three printed cards` } : null;
     pages.push({ item: p, group: p.feature ? "bespoke" : "digital", slug: shop.pageSlug(p), svg: absSvg(p.svg), photo: xmasPhoto,
-      section: p.xmas === "bright" ? "Christmas: bright" : p.xmas === "mono" ? "Christmas: black & white" : "Digital",
-      anchor: p.xmas === "bright" ? "#christmas-bright" : p.xmas === "mono" ? "#christmas-mono" : "#digital" });
+      section: p.xmas === "bright" ? "Christmas: bright" : p.xmas === "mono" ? "Christmas: black & white" : p.xmas === "original" ? "Christmas" : "Digital",
+      anchor: p.xmas === "bright" ? "#christmas-bright" : p.xmas === "mono" ? "#christmas-mono" : p.xmas === "original" ? "#christmas" : "#digital" });
   }
   for (const g of shop.GUIDES) {
     pages.push({ item: g, group: "guide", slug: shop.pageSlug(g), svg: absSvg(shop.guideSvg(g)), photo: null, section: "The Pond Guides", anchor: "#guides" });

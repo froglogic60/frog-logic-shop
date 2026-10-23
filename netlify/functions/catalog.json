@@ -2616,6 +2616,24 @@
     "file": "Halloween-Stickers.pdf"
   },
   {
+    "id": "d37-christmas-cards",
+    "name": "Christmas Cards",
+    "price": 3,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Christmas-Cards-Original.pdf",
+    "files": [
+      {
+        "name": "Christmas Cards (A4)",
+        "file": "Christmas-Cards-Original.pdf"
+      },
+      {
+        "name": "Christmas Cards (US Letter)",
+        "file": "Christmas-Cards-Original-Letter.pdf"
+      }
+    ]
+  },
+  {
     "id": "d35-bright-christmas-cards",
     "name": "Bright Christmas Cards",
     "price": 3,
