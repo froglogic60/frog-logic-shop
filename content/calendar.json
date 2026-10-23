@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-10-20",
+  "updated": "2026-10-23",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -731,6 +731,10 @@
         {
           "what": "TikTok by hand: the planner — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
           "who": "you"
+        },
+        {
+          "what": "Taster sign-ups: 0 people (0 pages), 0 this week, last none yet",
+          "who": "robot"
         }
       ]
     },
