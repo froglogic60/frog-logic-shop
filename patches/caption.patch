@@ -1,0 +1,27 @@
+# Original cards: shorter listing caption so the site crop keeps it [skip netlify]
+From 1aa4eb5fbce06d94f9d2baa1b704e0dcdb8b3954 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 23 Oct 2026 11:20:34 +0100
+Subject: [PATCH] Original cards: shorter listing caption so the site crop
+ keeps it [skip netlify]
+
+---
+ artwork/frogs/src/socially-hibernating-cards.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/artwork/frogs/src/socially-hibernating-cards.py b/artwork/frogs/src/socially-hibernating-cards.py
+index 3097554..006bcf0 100644
+--- a/artwork/frogs/src/socially-hibernating-cards.py
++++ b/artwork/frogs/src/socially-hibernating-cards.py
+@@ -156,7 +156,7 @@ def listing_images(name, c, fronts, outside, rnd):
+         img = Image.new("RGB", (W, H), CREAM)
+         t = f.convert("RGB").copy(); t.thumbnail((900, 1120))
+         img.paste(t, ((W - t.width) // 2, 320))
+-        caption(img, {"Bright": "Bright, for the ones who like bright", "Black-and-White": "Colour it in, or leave it crisp"}.get(name, "The soft colours from the hoodie, on a card"), sub, c["ink"])
++        caption(img, {"Bright": "Bright, for the ones who like bright", "Black-and-White": "Colour it in, or leave it crisp"}.get(name, "The soft colours, on a card"), sub, c["ink"])
+         out.append(img)
+     for i, img in enumerate(out):
+         img.save(os.path.join(PREVIEWS, f"{name.lower()}-listing-{i + 1}.png"))
+-- 
+2.43.0
+
