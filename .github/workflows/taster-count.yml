@@ -19,6 +19,7 @@ jobs:
       - name: Count
         run: node automation/planner/taster-count.js
         env:
+          RESEND_READ_KEY: ${{ secrets.RESEND_READ_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       - name: Commit
         run: |
