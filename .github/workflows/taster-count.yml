@@ -1,0 +1,30 @@
+name: Count taster sign-ups
+# Reads Resend's send log (read-only) for the "your page is ready" emails the
+# Bespoke Planner taster sends, keeps them in automation/planner/taster-signups.json
+# and writes one "Taster sign-ups: …" line on today's Desk. Daily, and on demand.
+on:
+  schedule:
+    - cron: "50 6 * * *"   # 06:50 UTC, before Sam's morning
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Count
+        run: node automation/planner/taster-count.js
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/planner/taster-signups.json content/calendar.json
+          git commit -m "Taster sign-ups $(date -u +%F) [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
