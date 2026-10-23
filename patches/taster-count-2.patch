@@ -1,0 +1,36 @@
+# Taster counter: use a read-capable Resend key [skip netlify]
+From 6e731fec5958ac842a73d3b970a311705b8fa4f0 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 23 Oct 2026 09:09:30 +0100
+Subject: [PATCH] Taster counter: use a read-capable Resend key [skip netlify]
+
+---
+ automation/planner/taster-count.js | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/automation/planner/taster-count.js b/automation/planner/taster-count.js
+index 14d99fa..d0657f9 100644
+--- a/automation/planner/taster-count.js
++++ b/automation/planner/taster-count.js
+@@ -6,12 +6,15 @@
+ // line on the Desk: total, this week, last sign-up. Runs daily from
+ // .github/workflows/taster-count.yml.
+ //
+-// Env: RESEND_API_KEY
++// Env: RESEND_READ_KEY — a Resend key with "full access" (the shop's usual
++// RESEND_API_KEY is send-only and Resend answers 401 "restricted to only send
++// emails" when it is asked to list). Falls back to RESEND_API_KEY so the run
++// explains itself rather than failing silently.
+ const fs = require("fs");
+ const path = require("path");
+ 
+-const KEY = process.env.RESEND_API_KEY;
+-if (!KEY) { console.error("Missing env: RESEND_API_KEY"); process.exit(1); }
++const KEY = process.env.RESEND_READ_KEY || process.env.RESEND_API_KEY;
++if (!KEY) { console.error("Missing env: RESEND_READ_KEY"); process.exit(1); }
+ const STATE = path.join(__dirname, "taster-signups.json");
+ const CALENDAR = path.join(__dirname, "..", "..", "content", "calendar.json");
+ const SUBJECT = /your page is ready/i;
+-- 
+2.43.0
+
