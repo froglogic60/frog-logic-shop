@@ -156,7 +156,7 @@ def listing_images(name, c, fronts, outside, rnd):
         img = Image.new("RGB", (W, H), CREAM)
         t = f.convert("RGB").copy(); t.thumbnail((900, 1120))
         img.paste(t, ((W - t.width) // 2, 320))
-        caption(img, {"Bright": "Bright, for the ones who like bright", "Black-and-White": "Colour it in, or leave it crisp"}.get(name, "The soft colours from the hoodie, on a card"), sub, c["ink"])
+        caption(img, {"Bright": "Bright, for the ones who like bright", "Black-and-White": "Colour it in, or leave it crisp"}.get(name, "The soft colours, on a card"), sub, c["ink"])
         out.append(img)
     for i, img in enumerate(out):
         img.save(os.path.join(PREVIEWS, f"{name.lower()}-listing-{i + 1}.png"))
