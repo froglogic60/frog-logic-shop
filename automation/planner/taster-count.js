@@ -6,12 +6,15 @@
 // line on the Desk: total, this week, last sign-up. Runs daily from
 // .github/workflows/taster-count.yml.
 //
-// Env: RESEND_API_KEY
+// Env: RESEND_READ_KEY — a Resend key with "full access" (the shop's usual
+// RESEND_API_KEY is send-only and Resend answers 401 "restricted to only send
+// emails" when it is asked to list). Falls back to RESEND_API_KEY so the run
+// explains itself rather than failing silently.
 const fs = require("fs");
 const path = require("path");
 
-const KEY = process.env.RESEND_API_KEY;
-if (!KEY) { console.error("Missing env: RESEND_API_KEY"); process.exit(1); }
+const KEY = process.env.RESEND_READ_KEY || process.env.RESEND_API_KEY;
+if (!KEY) { console.error("Missing env: RESEND_READ_KEY"); process.exit(1); }
 const STATE = path.join(__dirname, "taster-signups.json");
 const CALENDAR = path.join(__dirname, "..", "..", "content", "calendar.json");
 const SUBJECT = /your page is ready/i;
