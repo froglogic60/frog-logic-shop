@@ -1,0 +1,179 @@
+# Christmas cards in the original colours (D37): art, section, catalog, page [skip netlify]
+From 29657444ddd0916ea5e4d00882848b8320ec8617 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 23 Oct 2026 11:05:23 +0100
+Subject: [PATCH] Christmas cards in the original colours (D37): art, section,
+ catalog, page [skip netlify]
+
+---
+ .../frogs/src/socially-hibernating-cards.py    | 10 ++++++++--
+ automation/site/build-pages.cjs                | 10 ++++++----
+ .../social/xmas-colourway-site-pictures.py     |  4 ++--
+ index.html                                     |  4 ++++
+ netlify/functions/catalog.json                 | 18 ++++++++++++++++++
+ script.js                                      | 18 ++++++++++++++++++
+ 6 files changed, 56 insertions(+), 8 deletions(-)
+
+diff --git a/artwork/frogs/src/socially-hibernating-cards.py b/artwork/frogs/src/socially-hibernating-cards.py
+index f8db10a..3097554 100644
+--- a/artwork/frogs/src/socially-hibernating-cards.py
++++ b/artwork/frogs/src/socially-hibernating-cards.py
+@@ -7,6 +7,8 @@
+ # Three fronts per colourway, in A4 and US Letter.
+ #
+ # Writes to digital/:
++#   Christmas-Cards-Original.pdf            A4, 6 pages (3 cards), the soft colours
++#   Christmas-Cards-Original-Letter.pdf     US Letter
+ #   Christmas-Cards-Bright.pdf              A4, 6 pages (3 cards)
+ #   Christmas-Cards-Bright-Letter.pdf       US Letter
+ #   Christmas-Cards-Black-and-White.pdf     A4
+@@ -32,7 +34,11 @@ if len(sys.argv) > 1:
+ DPI = 300
+ SIZES = {"": (3508, 2480), "-Letter": (3300, 2550)}  # landscape, 300 dpi
+ 
++# Original (24 Oct 2026, Sam: the muted voters should have cards too): the
++# untouched soft colours, brown words like the hoodie, cream-and-gold snow.
++ORIGINAL = {}
+ COLOURWAYS = {
++    "Original": dict(table=ORIGINAL, ink="#6b4a32", sub="#6b4a32", dots=["#e8b63c", "#c4453b", "#5b7fc4", "#7fb069", "#d46aa0"], outline=None),
+     "Bright": dict(table=cw.BRIGHT, ink="#e0187a", sub="#1f6bff", dots=["#ffd400", "#ff2438", "#1f6bff", "#18e06f", "#ff3fd2"], outline=None),
+     "Black-and-White": dict(table=cw.MONO, ink="#111111", sub="#111111", dots=[], outline="#111111"),
+ }
+@@ -128,7 +134,7 @@ def listing_images(name, c, fronts, outside, rnd):
+     # Five 2000x1500 images for the Etsy listing (Etsy's 4:3 crop).
+     W, H = 2000, 1500
+     out = []
+-    pretty = "Bright Colours" if name == "Bright" else "Black and White"
++    pretty = {"Bright": "Bright Colours", "Black-and-White": "Black and White"}.get(name, "the Original Colours")
+     # 1: the three fronts fanned.
+     img = Image.new("RGB", (W, H), CREAM)
+     for i, f in enumerate(fronts):
+@@ -150,7 +156,7 @@ def listing_images(name, c, fronts, outside, rnd):
+         img = Image.new("RGB", (W, H), CREAM)
+         t = f.convert("RGB").copy(); t.thumbnail((900, 1120))
+         img.paste(t, ((W - t.width) // 2, 320))
+-        caption(img, "Colour it in, or leave it crisp" if name != "Bright" else "Bright, for the ones who like bright", sub, c["ink"])
++        caption(img, {"Bright": "Bright, for the ones who like bright", "Black-and-White": "Colour it in, or leave it crisp"}.get(name, "The soft colours from the hoodie, on a card"), sub, c["ink"])
+         out.append(img)
+     for i, img in enumerate(out):
+         img.save(os.path.join(PREVIEWS, f"{name.lower()}-listing-{i + 1}.png"))
+diff --git a/automation/site/build-pages.cjs b/automation/site/build-pages.cjs
+index 5937eb5..c200cbb 100644
+--- a/automation/site/build-pages.cjs
++++ b/automation/site/build-pages.cjs
+@@ -171,8 +171,10 @@ function copyFor(item, group) {
+       "Three fronts: “Socially Hibernating — see you in January”, “Merry Christmas — from the pond” and “Thinking of you (from under a blanket)”. Each card is one landscape sheet folded in half: the front on the right, a small frog and the Frog Logic mark on the back, and the inside left blank for your own words.",
+       "You get two PDFs the moment you pay, A4 and US Letter, six pages each. Print on card (160–250gsm works well) at 100%, fold along the marks, and write inside. Print as many as you need, for as long as you like.",
+       item.xmas === "bright"
+-        ? "This is the bright version, for people who like their Christmas loud. The same cards are also in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>."
+-        : "This is the black and white version: crisp line art that prints on any printer, and colours in nicely if you want it to. The same cards are also in <a href=\"/p/bright-christmas-cards/\">bright colours</a>.",
++        ? "This is the bright version, for people who like their Christmas loud. The same cards are also in the <a href=\"/p/christmas-cards/\">original soft colours</a> and in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>."
++        : item.xmas === "mono"
++        ? "This is the black and white version: crisp line art that prints on any printer, and colours in nicely if you want it to. The same cards are also in the <a href=\"/p/christmas-cards/\">original soft colours</a> and in <a href=\"/p/bright-christmas-cards/\">bright colours</a>."
++        : "These are the original soft colours, the same frog as on the hoodie, tee and throw. The same cards are also in <a href=\"/p/bright-christmas-cards/\">bright colours</a> and in <a href=\"/p/black-and-white-christmas-cards/\">black and white</a>.",
+       "Personal use: print as many as you like for yourself and your household; please don't resell or share the files.",
+     ],
+     cta: { buy: true, label: "Download" },
+@@ -445,8 +447,8 @@ function collect(shop) {
+     // on their own tab (20 Oct 2026).
+     const xmasPhoto = p.xmas ? { src: `${SITE}/assets/xmas/cw-${p.xmas}-cards-page.jpg`, alt: `${p.word}: the three printed cards` } : null;
+     pages.push({ item: p, group: p.feature ? "bespoke" : "digital", slug: shop.pageSlug(p), svg: absSvg(p.svg), photo: xmasPhoto,
+-      section: p.xmas === "bright" ? "Christmas: bright" : p.xmas === "mono" ? "Christmas: black & white" : "Digital",
+-      anchor: p.xmas === "bright" ? "#christmas-bright" : p.xmas === "mono" ? "#christmas-mono" : "#digital" });
++      section: p.xmas === "bright" ? "Christmas: bright" : p.xmas === "mono" ? "Christmas: black & white" : p.xmas === "original" ? "Christmas" : "Digital",
++      anchor: p.xmas === "bright" ? "#christmas-bright" : p.xmas === "mono" ? "#christmas-mono" : p.xmas === "original" ? "#christmas" : "#digital" });
+   }
+   for (const g of shop.GUIDES) {
+     pages.push({ item: g, group: "guide", slug: shop.pageSlug(g), svg: absSvg(shop.guideSvg(g)), photo: null, section: "The Pond Guides", anchor: "#guides" });
+diff --git a/automation/social/xmas-colourway-site-pictures.py b/automation/social/xmas-colourway-site-pictures.py
+index 8f15220..7c5e0c3 100644
+--- a/automation/social/xmas-colourway-site-pictures.py
++++ b/automation/social/xmas-colourway-site-pictures.py
+@@ -29,9 +29,9 @@ PICKS = {  # output name -> source
+     "cw-mono-us-hoodie": "mono/mono-us-hoodie-front-white.jpg",
+     "cw-mono-us-mug": "mono/mono-us-mug-front-11oz.jpg",
+ }
+-CARD_PICKS = {"cw-bright-cards": "bright-listing-3.png", "cw-mono-cards": "black-and-white-listing-3.png"}
++CARD_PICKS = {"cw-original-cards": "original-listing-3.png", "cw-bright-cards": "bright-listing-3.png", "cw-mono-cards": "black-and-white-listing-3.png"}
+ # The product page shows all three cards (the hero listing image, squared).
+-PAGE_PICKS = {"cw-bright-cards-page": "bright-listing-1.png", "cw-mono-cards-page": "black-and-white-listing-1.png"}
++PAGE_PICKS = {"cw-original-cards-page": "original-listing-1.png", "cw-bright-cards-page": "bright-listing-1.png", "cw-mono-cards-page": "black-and-white-listing-1.png"}
+ 
+ def square(img, size=800, bg=(255, 255, 255)):
+     img = img.convert("RGB")
+diff --git a/index.html b/index.html
+index f46cfbf..22460a1 100644
+--- a/index.html
++++ b/index.html
+@@ -160,6 +160,10 @@
+           </div>
+         </article>
+       </div>
++      <p class="section-sub" style="margin-top:2.2em">And the same frog as a printable Christmas card, in these colours, &pound;3 for three.</p>
++      <div class="pad-grid">
++        <div data-xmas-cards="original"></div>
++      </div>
+       <p class="section-sub" style="margin-top:2.2em">Just want one piece? Each one is on our Etsy shop on its own.</p>
+       <div class="pad-grid">
+         <article class="card">
+diff --git a/netlify/functions/catalog.json b/netlify/functions/catalog.json
+index 8ffda05..a975d74 100644
+--- a/netlify/functions/catalog.json
++++ b/netlify/functions/catalog.json
+@@ -2615,6 +2615,24 @@
+     "currency": "gbp",
+     "file": "Halloween-Stickers.pdf"
+   },
++  {
++    "id": "d37-christmas-cards",
++    "name": "Christmas Cards",
++    "price": 3,
++    "type": "digital",
++    "currency": "gbp",
++    "file": "Christmas-Cards-Original.pdf",
++    "files": [
++      {
++        "name": "Christmas Cards (A4)",
++        "file": "Christmas-Cards-Original.pdf"
++      },
++      {
++        "name": "Christmas Cards (US Letter)",
++        "file": "Christmas-Cards-Original-Letter.pdf"
++      }
++    ]
++  },
+   {
+     "id": "d35-bright-christmas-cards",
+     "name": "Bright Christmas Cards",
+diff --git a/script.js b/script.js
+index 7aad825..9d0d257 100644
+--- a/script.js
++++ b/script.js
+@@ -2582,6 +2582,24 @@ const DIGITAL_PRODUCTS = [
+       <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOUR FROGS · TWO OF EACH · ONE SHEET</text>
+       <rect width="300" height="300" fill="url(#d34)"/>${mark()}</svg>`
+   },
++  {
++    // The original soft-colour cards (24 Oct 2026: the muted voters in Sam's
++    // poll should have cards too). Lives in the #christmas section.
++    num: "D37 — Printable PDF", word: "Christmas Cards",
++    line: "Three printable Christmas cards with the Socially Hibernating frog in the original soft colours, the same as the hoodie: see you in January, Merry Christmas from the pond, and thinking of you from under a blanket. A4 and US Letter, fold in half, blank inside.",
++    price: "£3.00", link: "#", bg: "#3C5B45", xmas: "original",
++    files: [{ name: "Christmas Cards (A4)", file: "Christmas-Cards-Original.pdf" }, { name: "Christmas Cards (US Letter)", file: "Christmas-Cards-Original-Letter.pdf" }],
++    svg: `<svg viewBox="0 0 300 300">${grain("d37", 0.1)}
++      <rect x="70" y="40" width="160" height="200" rx="4" fill="#ffffff"/>
++      <rect x="92" y="60" width="116" height="152" rx="3" fill="none" stroke="#111111" stroke-width="1.2" opacity="0.5"/>
++      <circle cx="100" cy="70" r="3" fill="#c4453b"/><circle cx="190" cy="66" r="2.5" fill="#5b7fc4"/><circle cx="120" cy="98" r="2" fill="#7fb069"/><circle cx="204" cy="110" r="3" fill="#d46aa0"/><circle cx="98" cy="160" r="2.5" fill="#e8b63c"/><circle cx="196" cy="170" r="2" fill="#c4453b"/><circle cx="108" cy="200" r="3" fill="#5b7fc4"/><circle cx="186" cy="206" r="2.5" fill="#7fb069"/>
++      <circle cx="150" cy="128" r="34" fill="#ede4d0"/>
++      <path d="M 128 128 C 128 110 172 110 172 128 C 172 150 128 150 128 128 Z" fill="#8fb784" stroke="#22331f" stroke-width="2.2"/>
++      <path d="M 134 118 C 136 108 148 102 160 104 L 172 100" fill="none" stroke="#c4453b" stroke-width="7" stroke-linecap="round"/>
++      <text x="150" y="196" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#6b4a32">Socially Hibernating</text>
++      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
++      <rect width="300" height="300" fill="url(#d37)"/>${mark()}</svg>`
++  },
+   {
+     // Christmas colourways (20 Oct 2026, Sam's group poll): sold on their own
+     // tabs (#christmas-bright, #christmas-mono), not in the digital grid.
+-- 
+2.43.0
+
