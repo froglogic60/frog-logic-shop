@@ -771,6 +771,14 @@
       "date": "2026-10-25",
       "items": [
         {
+          "what": "DONE: free taster link (froglogic.co.uk/taster/) added to every planner post from 26 Oct and to the Facebook bio. Watch the daily taster sign-up count",
+          "who": "note"
+        },
+        {
+          "what": "Instagram app: Edit profile → Links → Add external link → froglogic.co.uk/taster/, title 'Free planner page' (Meta won't let Claude edit the Instagram profile)",
+          "who": "you"
+        },
+        {
           "what": "Pin: Your Sheet, For Once → #digital",
           "who": "robot"
         },
