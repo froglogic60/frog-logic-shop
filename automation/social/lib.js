@@ -140,6 +140,10 @@ const SHOWCASE_LINES = [
 // about one thing the planner does. Every caption carries the price and
 // points at the planner on the page, not just the shop's front door.
 const PLANNER_LINK = `${SHOP}/#bespoke`;
+// Since 25 Oct 2026 (Sam: "do the bios and posts"): the free taster went live
+// 22 Oct with no sign-ups, so every planner post also offers the free page
+// for anyone not ready to spend £25.
+const TASTER_LINE = `Not ready for the full planner? Try a free page first: ${SHOP}/taster/`;
 const PLANNER_NOTES = [
   { title: "A planner that knows your hard days", body: "Tell it what a hard day looks like and what actually helps. It prints your own words back to you — with a tear-off half to hand to someone." },
   { title: "Built for one brain", body: "Fifteen questions about how your days really run. Then a planner of up to eighteen pages, made for nobody but you." },
@@ -167,13 +171,13 @@ function plannerPost(occurrence, site) {
       // The site artwork still says "NINE QUESTIONS" until the next site deploy
       // (it's fifteen since 10 Oct), so the posts swap in the pin's wording.
       kind: "showcase", item: { ...p, sub: "made for you", svg: p.svg.replace("NINE QUESTIONS", "YOUR WORDS") },
-      caption: `${line} 🐸\n\nThe Bespoke Planner — ${p.price}. ${PLANNER_LINK}\n\n${tags(occurrence)}`,
+      caption: `${line} 🐸\n\nThe Bespoke Planner — ${p.price}. ${PLANNER_LINK}\n\n${TASTER_LINE}\n\n${tags(occurrence)}`,
     };
   }
   const note = PLANNER_NOTES[n % PLANNER_NOTES.length];
   return {
     kind: "note", item: { tag: "the bespoke planner", ...note },
-    caption: `${note.title}. ${note.body} 🐸\n\nThe Bespoke Planner — ${p.price}. ${PLANNER_LINK}\n\n${tags(occurrence)}`,
+    caption: `${note.title}. ${note.body} 🐸\n\nThe Bespoke Planner — ${p.price}. ${PLANNER_LINK}\n\n${TASTER_LINE}\n\n${tags(occurrence)}`,
   };
 }
 
