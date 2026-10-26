@@ -164,6 +164,8 @@ customer-facing for "will this get found and bought?" before it goes up.
 - EU selling: only if EU demand appears and a paid EU representative is worth it.
 - Renaming the brand: discussed in July, not adopted. Frog Logic stays.
 - Package insert (Printify) is switched off; design kept.
+- Etsy is complete (26 Oct check: every download listed, 142 active). Listing the
+  23 Pond Guides singly on Etsy was offered; Sam: leave Etsy as it is for now.
 - A Tonbridge local-deals app idea (25 Oct) is not Frog Logic and is parked so
   Sam can focus on Frog Logic.
 
