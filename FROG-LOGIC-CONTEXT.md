@@ -135,7 +135,7 @@ customer-facing for "will this get found and bought?" before it goes up.
   donated instead). Small Business Sunday every Sunday 5–7:30pm
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
-  Neurodivergent Insights gift guide (form, needs Sam's captcha tick). A daily
+  Neurodivergent Insights gift guide (site form, sent). A daily
   7:59 scheduled task checks Outlook for replies and drafts answers.
   (Theo Paphitis, #SBS).
 - Halloween retires itself on 1 Nov (script.js marks every halloween entry
