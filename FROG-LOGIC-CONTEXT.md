@@ -140,7 +140,8 @@ customer-facing for "will this get found and bought?" before it goes up.
   (Theo Paphitis, #SBS).
 - Halloween retires itself on 1 Nov (script.js marks every halloween entry
   retired from that date; nothing to deploy). Christmas order-by dates are live
-  (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec; check Printify's
+  (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec (the 5 Dec one doubles
+  as the Small Business Saturday post); check Printify's
   2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
 - Pinterest is loaded to 16 Nov: 21 Christmas pins (28 Oct–7 Nov), then 3 taster
   and 15 Pond Guides pins (8–16 Nov). Built by the "Christmas pins" workflow
