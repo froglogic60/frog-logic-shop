@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add p sitemap.xml google-feed.xml taster automation/site/pond-guides.json
+          git add p sitemap.xml google-feed.xml taster feed-images automation/site/pond-guides.json
           git commit -m "Product pages rebuilt $(date -u +%F) [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
