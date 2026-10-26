@@ -800,6 +800,10 @@
       "date": "2026-10-26",
       "items": [
         {
+          "what": "DONE: Etsy Cyber Specials joined — 25% off 134 listings, 23 Nov–1 Dec. Left out (they'd lose money at 25%): UK hoodies, all fleece blankets, UK ornament, US candle. Existing 10% sale XMAS10PART1 runs to 14 Nov",
+          "who": "note"
+        },
+        {
           "what": "Pin: How To Help Me → #digital",
           "who": "robot"
         }
@@ -955,6 +959,15 @@
         {
           "what": "Small Business Sunday, 5–7:30pm: post to Theo Paphitis on X or Instagram with #SBS and the Christmas set picture (wording in the gift-guide pitches doc)",
           "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "items": [
+        {
+          "what": "Etsy Cyber Specials starts: 25% off until 1 Dec. Claude: put it in that week's posts and pins (froglogic.etsy.com link)",
+          "who": "robot"
         }
       ]
     },
