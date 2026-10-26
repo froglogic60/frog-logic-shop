@@ -8,6 +8,9 @@ on:
       start:
         description: "First publish date (YYYY-MM-DD, UTC). Two pins a day from here."
         default: "2026-10-17"
+      batch:
+        description: "1 = the original eight pins, 2 = colourways, personalised pieces and cards"
+        default: "1"
 permissions:
   contents: write
 jobs:
@@ -24,12 +27,12 @@ jobs:
       - run: pip install pillow
       - name: Build pins
         working-directory: automation/social
-        run: START="${{ github.event.inputs.start }}" python xmas-pins.py .gfonts
+        run: START="${{ github.event.inputs.start }}" BATCH="${{ github.event.inputs.batch }}" python xmas-pins.py .gfonts
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/xmas-pins
+          git add automation/social/xmas-pins automation/social/xmas-pins-*
           git commit -m "Christmas pins [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
