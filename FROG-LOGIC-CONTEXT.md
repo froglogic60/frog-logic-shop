@@ -129,7 +129,10 @@ customer-facing for "will this get found and bought?" before it goes up.
 - Reply to anyone who answers the group comments; draft replies for Sam.
 - Group and Reddit answers pointing to the free guides and taster (Claude
   drafts, Sam posts).
-- Gift-guide follow-ups 30 Oct; Small Business Sunday every Sunday 5–7:30pm
+- Gift-guide follow-ups DONE 26 Oct (8 nudged by robot, Alive with Chronic
+  Illness chased by Sam: they offered a newsletter/January pacing-event slot for a
+  pay-what-you-can donation; Sam offered free planners + a reader code with 10%
+  donated instead). Small Business Sunday every Sunday 5–7:30pm
   (Theo Paphitis, #SBS).
 - Halloween retires itself on 1 Nov (script.js marks every halloween entry
   retired from that date; nothing to deploy). Christmas order-by dates are live
