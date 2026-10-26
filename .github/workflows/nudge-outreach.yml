@@ -3,6 +3,13 @@ name: Nudge the approach-list charities
 # (automation/outreach/nudge.mjs). nudged.json stops anyone getting two.
 on:
   workflow_dispatch:
+    inputs:
+      wave:
+        description: "charities (9-10 Oct) or giftguides (20 Oct)"
+        default: charities
+      dry_run:
+        description: "1 = print only, send nothing"
+        default: "1"
 permissions:
   contents: write
 jobs:
@@ -18,6 +25,8 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          WAVE: ${{ github.event.inputs.wave }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
       - name: Commit the log
         run: |
           git config user.name "frog-logic-bot"
