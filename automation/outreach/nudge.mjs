@@ -11,9 +11,13 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const SENT = path.join(here, "sent.json");
 const NUDGED = path.join(here, "nudged.json");
 const REPLY_TO = "hello@froglogic.co.uk";
-// Only the charity wave (9–10 Oct); the gift-guide pitches get their own follow-up later.
-const WAVE = ["2026-10-09", "2026-10-10"];
-const SKIP = new Set([]); // addresses that have replied
+// Which batch to nudge (workflow input "wave"): the charities emailed 9–10 Oct,
+// or the gift-guide pitches of 20 Oct (nudged 26 Oct with the Christmas dates).
+const GIFT = process.env.WAVE === "giftguides";
+const WAVE = GIFT ? ["2026-10-20"] : ["2026-10-09", "2026-10-10"];
+// Addresses that replied (Neurodiverging said no; Alive with Chronic Illness is
+// an open conversation Sam answers herself).
+const SKIP = new Set(["contact@neurodiverging.com", "hello@alivewithchronicillness.com"]);
 
 const sent = JSON.parse(await readFile(SENT, "utf8"));
 let nudged = [];
@@ -21,11 +25,13 @@ try { nudged = JSON.parse(await readFile(NUDGED, "utf8")); } catch { /* first ru
 const done = new Set(nudged.map((n) => n.to.toLowerCase()));
 
 const day = (iso) => new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", timeZone: "Europe/London" });
-const targets = sent.filter((s) => WAVE.includes(s.sentAt.slice(0, 10)) && !SKIP.has(s.to.toLowerCase()) && !done.has(s.to.toLowerCase()));
+const targets = sent.filter((s) => WAVE.includes(s.sentAt.slice(0, 10)) && (!GIFT || /\(gift guide\)/.test(s.name)) && !SKIP.has(s.to.toLowerCase()) && !done.has(s.to.toLowerCase()));
 console.log(`${targets.length} to nudge`);
 
 for (const s of targets) {
-  const body = `Hi,\n\nJust floating my email from ${day(s.sentAt)} back up in case it got buried. In short: free plain-English guides to 23 neurotypes at https://froglogic.co.uk/#guides, yours to share with anyone they'd help.\n\nNo worries if it's not for you.\n\nSam, Frog Logic`;
+  const body = GIFT
+    ? `Hi,\n\nJust floating my email from ${day(s.sentAt)} back up in case it got buried in gift-guide season. If it helps your guide, the last order dates for Christmas are 10 December in the UK and 7 December in the US, and the printables can be bought right up to Christmas Eve.\n\nNo worries if it's not a fit.\n\nSam, Frog Logic`
+    : `Hi,\n\nJust floating my email from ${day(s.sentAt)} back up in case it got buried. In short: free plain-English guides to 23 neurotypes at https://froglogic.co.uk/#guides, yours to share with anyone they'd help.\n\nNo worries if it's not for you.\n\nSam, Frog Logic`;
   const subject = "Re: " + s.subject;
   if (process.env.DRY_RUN === "1") { console.log("would nudge:", s.to, "|", subject, "\n" + body + "\n"); continue; }
   const r = await fetch("https://api.resend.com/emails", {
