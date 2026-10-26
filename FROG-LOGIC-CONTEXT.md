@@ -1,263 +1,179 @@
 # Frog Logic — start here
 
-Single orientation file for any new Claude session. Read this first; it should
-be enough to start work without opening twenty other files. Keep it current —
-when a decision changes, edit the line here rather than leaving it to be
-rediscovered.
+Single orientation file for any Claude session working on Frog Logic. Read this
+first. When a decision changes, edit the line here, and keep the copies in step:
+this file on GitHub is the master; copies sit in `Downloads\frog-logic-shop`,
+`Downloads\Printify-Designer` and `OneDrive\Desktop\Frog Logic` on Sam's PC.
 
-Last updated: 21 August 2026.
+Last updated: 26 October 2026. (The previous version was frozen at 21 Aug and
+described the retired Replit store as live. Ignore any copy older than this.)
 
-## Where everything lives (on Sam's PC, device "jay")
-
-- `Downloads\Printify-Designer` — the main Replit store codebase.
-- `Downloads\frog-logic-shop` — **the current feelings-collection static site.
-  This is the one to work in.** Read on for why.
-- `OneDrive\Desktop\Frog Logic` — brand assets, social exports and the business
-  plan. The digital-product PDFs that used to live only here have now been
-  folded into `frog-logic-shop`'s Digital section (see below) — don't treat
-  the Desktop copies as the current version, the site's covers and copy have
-  since been redone to match.
-- **Ignore everything else Frog-Logic-shaped in `Downloads`.** There's a long
-  trail of earlier attempts and exports cluttering that folder root —
-  `frog-logic-shop_3` through `_10`, a dozen numbered `.zip`s, loose
-  `index.html` / `index_1.html` / `preview*.html` files, `files.zip`. All
-  superseded. `frog-logic-shop` (no suffix) is the merge of the best of that
-  trail and is what actually matters. Worth deleting the rest next time you're
-  in there — a session in future may otherwise repeat the same "wait, which
-  version is real?" investigation this one did on 20 Aug.
+**The number-one goal is Frog Logic making sales.** Check anything
+customer-facing for "will this get found and bought?" before it goes up.
 
 ---
 
-## The business
+## Where things live
 
-- Frog Logic — one-person print-on-demand shop run by Sammie, Tonbridge, Kent.
-- Live store: **froglogic.co.uk**, ~136 products, built on Replit + Printify + Stripe.
-- Audience: neurodivergent people. Tagline territory: *soft landings for busy brains*.
-- Voice is first person singular. **"I", never "we"** — it's one person, not a team.
-- Contact/from address: hello@froglogic.co.uk (display name "Sammie @ Frog Logic").
+- **The shop:** froglogic.co.uk (also shop.froglogic.co.uk). Static site on
+  Netlify, project `jade-arithmetic-2d2701`, Personal plan ($9/month, 1,000
+  credits, 15 per deploy, cycle runs 26th–25th).
+- **Code = GitHub `froglogic60/frog-logic-shop`.** It is the source of truth.
+  `Downloads\frog-logic-shop` on the PC is an old August copy; don't edit it.
+- **Etsy:** froglogic.etsy.com (shop name FrogLogic). Downloads plus tees, mugs,
+  prints and the Christmas range made through Printify.
+- **Printify:** API store 28035653 (the site's orders) and "My Etsy Store"
+  29335686. The API store also holds ~2,870 stray products from the old Replit
+  app; a clean-out robot is possible, not urgent.
+- **The Desk:** froglogic.co.uk/desk.html, reads `content/calendar.json` live.
+  It is the schedule. Anything dated or repeating goes there, and a repeating
+  task shows on every day it applies to.
+- **Brand assets, business plan:** `OneDrive\Desktop\Frog Logic`.
+- **Retired:** the Replit store and `Downloads\Printify-Designer`. The Replit
+  account is deleted and the app has been dark since 5 Sept. Nothing new goes to
+  Replit or its agent.
 
-## The label rule (refined 13 Aug — read this version, not an older one)
+## The business and the voice
 
-- Diagnostic labels (ADHD, autism, anxiety…) appear **only** in two places:
-  Sammie's own story (About page, personal emails), and the **Pond Guides** —
-  a dedicated reference section, one guide per neurotype, explicitly framed as
-  something to hand to a relative, partner or manager. Every guide says up
-  front whether that condition is contested ground.
-- **Everywhere else — product names, product copy, the questionnaire,
-  newsletter, social — feelings only, never the diagnosis.** "Overstimulated",
-  "Touched Out", "Low Spoons Today", not the underlying condition.
-- Labels stay in **backend tags** for search and discoverability regardless.
+- One person, Sam, running it from her lounge in Kent. **"I", never "we".**
+- Audience: neurodivergent adults and the people around them. Tagline:
+  *soft landings for busy brains*.
+- Label rule: diagnoses (ADHD, autism…) appear in Sam's own story and the Pond
+  Guides only. Product names and copy name feelings, not conditions. Labels stay
+  in tags and keywords for search.
+- Sam's own posts open "Hi, I'm Sam, I'm neurodivergent", say "from my lounge",
+  sign off "with love Sam". Don't date the shop's age ("only been open a short
+  while").
+- **No video of Sam, no voice.** TikTok is text slides, posted by hand.
+- Contact is email only: hello@froglogic.co.uk. Her phone number must never be
+  visible. Her trading address is on the privacy and terms pages (legal
+  requirement); not on the package insert.
+- Not VAT registered. Nothing should imply VAT is charged.
+- Honest signals only: no invented reviews, testimonials or urgency.
 
-## Standing content rules
+## Pricing (rule set 16 Oct 2026)
 
-- Social mix: 40% relatable memes/quotes, 30% product showcases, 20%
-  educational/community, 10% behind-the-scenes. Encoded in `planWeekTypes`.
-- Everything runs from the PC. No phone-based workflows — when suggesting a
-  routine, give the desktop/browser route.
-- Conversion UI uses honest signals only. No invented reviews or testimonials.
-- Nothing for the neurodivergent product line goes to the Replit agent.
+- Every price covers **all** costs (Printify cost and postage, Printify's 20%
+  VAT on UK orders, Stripe/Etsy fees, a returns allowance of 5% on clothing and
+  2% on everything else) and leaves **23–25% profit**.
+- Sam does not want prices pushed high ("people can't afford it"). Look for a
+  cheaper maker before raising a price.
+- **Sales and discount codes may go below the rule** ("a sale is a sale"), but
+  not below zero: leave out anything that would lose money.
+- Site prices: printables about £1 a page (£2 minimum: 1–2 pages £2, 3–4 £3,
+  5+ £4); tees £19 and mugs £13.50 with free UK post; prints £12; totes £17;
+  notebooks £13; Bespoke Planner £25; Organisation Pack £95 / £195 / £395.
+- Etsy prices sit above the site so the site stays the best deal (downloads
+  mostly £3.50–£5.50; tee £19 UK / £22 US; mug £13.50; print £14).
+- Printed pieces post to the **UK and US only** (no EU or Northern Ireland,
+  because of GPSR). Downloads sell everywhere. US orders are made in the US.
+- Newsletter code POND10 = 10% off a first order.
 
----
+## What's on sale
 
-## The two codebases
+- Typographic feelings range (tees, mugs, prints, totes, notebooks, bottles),
+  the Comfort & Chaos mascot frogs, Halloween (retire after 31 Oct), Christmas
+  "Socially Hibernating" in three colourways (soft, bright with a brightness
+  warning, black and white), personalised ornaments and US candle, printable
+  Christmas cards.
+- ~50+ printable downloads, 23 free Pond Guides (readable on their own pages).
+- **Bespoke Planner** £25: Google Form questionnaire → robot builds a 9–18 page
+  personal PDF, emails it. Free **taster** at froglogic.co.uk/taster/ (one free
+  page, live 22 Oct).
+- **Organisation Pack**: digital licence, 3 tiers. If one sells, build the
+  12-month update-sender (Sam asked).
+- 125 product pages at froglogic.co.uk/p/<slug>/, sitemap in Search Console.
 
-### 1. `Printify-Designer` — the main store (Replit)
+## What runs by itself (GitHub Actions)
 
-The real shop behind froglogic.co.uk. Internally called PRINT.AI.
+- 3 FB/IG posts a day (crons at :17). 1pm on Mon/Wed/Fri/Sun is the Bespoke
+  Planner, and since 25 Oct every planner post ends with the free taster link.
+- Dated posts from `automation/social/announce-queue.json`, daily 10:00 UTC.
+- Monthly newsletter on the 1st (writes itself unless marked handwritten).
+- Planner order robot every 2 hours; taster sign-up count daily 06:50.
+- Printify cost check Mondays 06:40 (emails hello@ only if something changed);
+  engagement report Mondays 07:20.
+- Pinterest: scheduled pins from bulk CSV uploads (max 100 scheduled at once).
 
-- pnpm monorepo, Node 24, TS 5.9. Express 5 API on :8080, React+Vite storefront,
-  PostgreSQL + Drizzle, OpenAPI → Orval codegen, Printify for fulfilment.
-- **Read `replit.md` for run commands, env vars, architecture and gotchas.**
-- **Read `.agents/memory/MEMORY.md`** — a one-line index of ~77 topic notes in
-  the same folder. Don't read them all; read the index, then only the notes
-  matching the task.
-- Hard rules worth knowing before touching anything: UK/EU print providers only;
-  a variants-only Printify PUT silently clears tags; run codegen after any
-  OpenAPI change; never `console.log` in server code.
+## Where things stand (25–26 Oct 2026)
 
-### 2. `frog-logic-shop` — the feelings collection (static)
+- **No sales from strangers yet.** Etsy, last 30 days: 12 visits, 0 orders,
+  0 favourites, 1 visit from Etsy search. Social reach is tiny. The shop works;
+  **getting seen is the problem**, so effort goes to visibility, not building.
+- Pinterest ad test (planner) finished 24 Oct: £24.72, 53 outbound clicks,
+  47p a click, no sale seen. **The £25 paid-ads cap is spent; don't suggest
+  more paid ads.** Full review on the Desk for 4 Nov.
+- 90-day target (to 6 Jan 2027): ten orders from strangers and one £100+ order,
+  then decide the bigger route from real numbers. Half-way check 24 Nov.
 
-Separate site on a different URL, zero hosting cost. Netlify (static files +
-two serverless functions) + Stripe Checkout + a fulfilment webhook that emails
-digital files via Resend and will order physical prints via the Printify API
-once artwork is mapped; newsletter and social run via GitHub Actions.
-**Full setup runbook is `README.md` in that folder — follow it, don't improvise.**
+### Done on 25–26 Oct
 
-Everything is in `index.html`, `styles.css`, `script.js`. Products live in
-three arrays at the top of `script.js`: `PRODUCTS`, `DIGITAL_PRODUCTS`,
-`GUIDES`. `preview-standalone.html` is a self-contained build (CSS and JS
-inlined, images as data URIs) — open it directly in a browser to see the
-whole site with no server needed; regenerate it from the other three files if
-you change them, don't hand-edit it.
+- Taster link added to every planner post and to the Facebook bio. Instagram
+  bio link is Sam's to add in the app (Meta won't let Claude edit it).
+- "Thank you for voting" results comment posted, as Frog Logic, on the colour
+  poll in 10 groups: Neurodivergent squad, Global Neurodivergent Community,
+  NeuroDiverseLink, Unmasking AuDHD Her, Autism Support Network, Let us talk
+  ADHD, The ADHD Revolution, Autism Parents Support & Resources, Neurodiversity
+  Forward, Everything Autism UK.
+- Global Neurodivergent Community: a Small Business Sunday comment (shop link
+  and the three-colourway picture) and an introduction comment. A post Sam made
+  there on 1 Aug is still waiting for admin approval, so standalone posts in that
+  group don't show; use the admin's threads.
+- Etsy: existing 10% sale XMAS10PART1 on 80 listings runs 15 Oct–14 Nov.
+  **Joined Etsy Cyber Specials: 25% off 134 listings, 23 Nov–1 Dec.** Left out
+  because they'd lose money at 25%: UK hoodies (all colourways), all fleece
+  blankets, UK ornament, US candle.
 
-**House style:** rotated/collage Fraunces serif lettering, halftone-dot grain
-texture over a solid background colour, Anton for the big headline word, Space
-Mono for the small kicker line, one small Frog Logic logo mark fixed top-right
-on every single piece — no per-mood frog expressions, no gradients. This
-superseded two earlier directions (a "quiet" flat-oat-background version and a
-"bold" gradient/expressive-frog version) that a previous session built before
-finding this one. Don't resurrect either.
+## Next up (see the Desk for dates)
 
-Three sections, as of 20 Aug 2026:
-- **68 physical designs** — tees, totes, pins, prints, mugs, stickers.
-- **30 digital downloads** — low-pressure planners and check-in tools,
-  deliberately calmer than the prints. The last 8 (D23–D30: Lily Pad Planner,
-  The Pocket Pond, Hoppy Thoughts Issues 01 & 02, 30 Days at the Pond,
-  Affirmation Cards, Habit Stacking Cards, Translation Cards) were added 20 Aug
-  — older products that existed as PDFs on the Desktop since July but had never
-  been brought into the site; their cover art was redesigned from scratch to
-  match the house style rather than reusing the old covers, and their copy was
-  rewritten tighter to match the site's current voice (the July originals were
-  softer and more pun-heavy).
-- **23 Pond Guides** — see the label rule above.
+- Reply to anyone who answers the group comments; draft replies for Sam.
+- Group and Reddit answers pointing to the free guides and taster (Claude
+  drafts, Sam posts).
+- Gift-guide follow-ups 30 Oct; Small Business Sunday every Sunday 5–7:30pm
+  (Theo Paphitis, #SBS).
+- Retire Halloween after 31 Oct; new Pinterest batch when the queue runs out
+  (1 Nov); Christmas last-order dates by 10 Nov.
+- Search Console check 17 Nov; put the Cyber Specials sale in posts from 23 Nov.
+- eBay insert cards in parcels from Sam's personal eBay account (card in the
+  box only; no links in eBay listings or messages).
 
-### 3. `Desktop\Frog Logic` — brand assets, business plan
+## Decided, parked or declined (don't re-raise unless Sam does)
 
-- **`Business Plan.docx`** — positioning, audience, pricing, roadmap, channel
-  strategy and real performance numbers. Read this before any marketing,
-  pricing or strategy work. Headlines: 2,741 SKUs across 37 collections on the
-  *main* store (froglogic.co.uk, not the static site); biggest collections are
-  ADHD Frog, Sensory Overload Frog, PTSD Frog, Zen Frog; early-stage traffic
-  and revenue; roadmap runs validate → seasonal drops → expand winners →
-  bundles and subscription boxes. It predates the label rule and still names
-  collections by diagnosis — fine internally, don't lift the wording straight
-  into customer-facing copy.
-- **Social assets:** `Frog_Logic_Caption_Pack.md` (20 captions, sorted into
-  promo / relatable / educational / CTA), three phone wallpapers, story
-  graphics, nine condition-frog videos exported for Meta/TikTok.
-- The digital-product PDFs that used to be the reason to open this folder are
-  now superseded — see above.
+- Replit store retired (26 Aug); Etsy is the second channel; Share & Save on.
+- Hoodies off the site; totes and notebooks stay; printed stickers retired
+  (printable sheet only); pins became stickers then retired.
+- Google Ads £400 credit: declined. Merchant Center free listings only.
+  Microsoft/Bing: parked (needs a card). eBay listings: no.
+- EU selling: only if EU demand appears and a paid EU representative is worth it.
+- Renaming the brand: discussed in July, not adopted. Frog Logic stays.
+- Package insert (Printify) is switched off; design kept.
+- A Tonbridge local-deals app idea (25 Oct) is not Frog Logic and is parked so
+  Sam can focus on Frog Logic.
 
----
+## Running costs (checked 25 Oct)
 
-## Decisions already made (don't re-litigate)
+Claude Max £90/month · Netlify $9/month · Porkbun domain ~$5.66/year ·
+Etsy and Stripe fees per sale. Free: GitHub, Resend, GoatCounter, Printify,
+Search Console, Merchant Center. Replit and Google Workspace: no longer charging.
+(ElevenLabs and OpenAI are Miranda's, not the shop's.)
 
-- **Art direction: the house style described above.** Chosen by finding and
-  adopting the 13 Aug build over two earlier, less-resolved sessions' worth of
-  gradient and flat-mark experiments.
-- Waiting-list early access is **7 days**, not 48 hours.
-- Package insert copy: descriptive paragraphs, no condition labels.
-- Store name: "Frog Logic" is still in use. A friendlier rename has been
-  discussed ("The Friendly Frog Co.") but not adopted.
+## How to work on it (the traps that have cost time or credits)
 
-## The feelings-collection shop is LIVE (21 Aug 2026)
-
-- URL: **https://shop.froglogic.co.uk** (custom domain added 21 Aug: Porkbun CNAME `shop` → `jade-arithmetic-2d2701.netlify.app`, Let's Encrypt cert auto-renews). The netlify.app URL still works and the Stripe webhooks deliberately still point at it — don't "fix" them, both hostnames serve the same functions. `SITE_URL` env var = https://shop.froglogic.co.uk (recreated as a plain variable). GitHub repo `froglogic60/frog-logic-shop` auto-deploys to Netlify project `jade-arithmetic-2d2701` on every commit.
-- **Digital sales work end to end in LIVE mode**: Stripe Checkout (live key) → `stripe-webhook` function → Resend download email from `hello@shop.froglogic.co.uk` (subdomain verified in Sam's own Resend account — the apex domain's Resend records belong to the main store's separate setup; don't touch either).
-- Live + test webhooks both exist in Stripe ("frog-logic-shop-live" / "charismatic-brilliance"); everything is in the Frog Logic account's sandbox/test + live environments.
-- **Netlify env-var gotcha that cost an hour (twice)**: EDITS to variables flagged "Contains secret values" silently never reach the functions — the UI shows the edit saved, but the runtime keeps the old value (secret vars created once and never edited work fine). Both `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` had to be deleted and recreated as plain (non-secret) variables. Never use the secret-values flag on this project, and if a config value mysteriously doesn't take effect, delete-and-recreate the variable rather than editing it.
-- Verified with a real £4 live purchase (21 Aug, ~02:19): payment → webhook 200 → download email received. A failed webhook delivery can be replayed from Stripe → the destination → Event deliveries → Resend.
-- Debugging entry point: Netlify → Logs → Functions → `stripe-webhook` (fulfilment errors log there; "where's my download?" complaints start there).
-- Physical products deliberately refuse checkout until mapped to Printify (see README Part 3b).
-- **Netlify free-plan credits ran out 21 Aug** (the day's ~15 deploys used the
-  month's allowance). The live site, functions, checkout and emails all keep
-  running on "operational credits" — only NEW production deploys are paused,
-  so commits to GitHub won't go live until the billing cycle resets on
-  **19 September 2026** or the plan is upgraded. After the reset, push a commit (or Trigger deploy)
-  to publish anything that queued up in the meantime.
-
-## Newsletter automation is LIVE (21 Aug 2026)
-
-- Monthly send: GitHub Actions workflow `.github/workflows/send-newsletter.yml`
-  (cron, 1st of each month 09:00 UTC; manual run via Actions → "Send monthly
-  newsletter" → Run workflow). Verified with a manual run: green, "Sent 0/0".
-- Repo secrets set: `RESEND_API_KEY` (Resend key "github-newsletter", created
-  21 Aug), `FROM_EMAIL` (Sammie @ Frog Logic <hello@shop.froglogic.co.uk>),
-  `SUBSCRIBERS_CSV_URL`.
-- Subscriber list: Google Form "The Frog Logic newsletter" (Sam's Google
-  account) → linked Sheet "The Frog Logic newsletter (Responses)" → sheet tab
-  "Form Responses 1" published to web as CSV; that pub CSV link is the
-  `SUBSCRIBERS_CSV_URL` secret. Column A is a timestamp, column B the email —
-  `send-newsletter.js` picks the first cell containing "@" per row, so column
-  order doesn't matter. Form responder link:
-  https://docs.google.com/forms/d/e/1FAIpQLSeZy3f1I3JB7L2wdGxzCMl1govvS6-mVotb5_MWXgFgJL1UIQ/viewform
-- The site's newsletter section (index.html) now POSTs straight into that
-  Google Form (`entry.1412839294`, hidden-iframe target) — signups on
-  shop.froglogic.co.uk land in the Sheet with no other service involved.
-- Content per issue: since 21 Aug the issue writes itself.
-  `automation/social/generate-newsletter.js` runs inside the send workflow on
-  the 1st, before sending: it rebuilds `content/newsletter.json` from the live
-  product data in `script.js` (1 physical + 2 digital picks, rotating subject
-  lines and sign-offs, deterministic by month so re-runs are identical). To
-  hand-write an issue instead, edit `content/newsletter.json` and add
-  `"handwritten": true` — the generator then leaves it alone for that month
-  (remove the flag afterwards to resume auto-writing). The old "Lilypad"
-  template leftovers in `send-newsletter.js` were renamed to Frog Logic 21 Aug.
-
-## Social automation is LIVE — three posts a day (21 Aug 2026)
-
-- Replaced the original once-a-month `post-social.yml`/`post-social.js`
-  (both deleted from the repo 21 Aug — do not restore them, they'd
-  double-post) with `.github/workflows/daily-social.yml`: crons at 08:00,
-  12:00 and 17:00 UTC = 9am, 1pm, 6pm UK in summer. Each run designs the
-  image, writes the caption, and publishes to the Frog Logic Facebook Page
-  and linked Instagram — no human step.
-- Engine lives in `automation/social/`: `lib.js` (loads products from
-  `script.js`, builds the deterministic schedule + captions), `render2.js`
-  (renders 1080×1080 JPEGs in the house style via resvg + sharp),
-  `daily.js` (generate + post), `bank.json` (the pre-written content bank:
-  60 quotes, 40 educational micro-posts, 16 behind-the-scenes notes — all in
-  Sam's voice, feelings-only, no diagnosis labels; hashtags allowed as
-  search keywords per Sam's 21 Aug decision).
-- Weekly mix per content rules: ~5 quote, ~4 product art, ~6 showcase
-  (digital products with price + "link in bio"), ~4 educational, ~2 BTS =
-  21 posts/week, shuffled deterministically (`EPOCH` = Mon 17 Aug 2026 in
-  `lib.js`; same date+slot always yields the same post, so re-runs are safe).
-- Instagram needs a public image URL: each run commits the JPEG to
-  `automation/social/queue/` with `[skip netlify]` and posts the
-  raw.githubusercontent.com URL; queue files older than 7 days are
-  auto-deleted. To refresh content: edit `bank.json` — nothing else to touch.
-- Manual run: Actions → "Daily social posts" → Run workflow (optional slot
-  input 0/1/2). Secrets (already set): `META_ACCESS_TOKEN` — long-lived
-  "never expires" USER token from Sam's "Frog Logic" Meta app; the script
-  exchanges it for a Page token itself each run and polls the IG media
-  container until FINISHED before publishing (publishing immediately fails
-  with code 9007). `FB_PAGE_ID` = 1261260813728337, `IG_USER_ID` =
-  17841416254592463. The first-ever test run half-failed (FB posted, IG hit
-  9007 pre-fix), so the Page briefly had a duplicate post — Sam was told to
-  delete one.
-
-## Printify wave 1 is mapped — physical sales staged for 19 Sept (21 Aug 2026)
-
-- 35 physical products now exist in Sam's Printify shop (id 28035653) with
-  print-ready files: 16 wall prints (Fine Art Posters, Print Clever GB,
-  16″×16″ matte), 8 mugs (Ceramic Mug (EU), OPT OnDemand CZ, 11oz white),
-  11 stickers (Vinyl Kiss-Cut, Sticky Products Europe NL, 4″×4″ matte).
-  All created by `automation/social/printify-setup.js` via the "Printify
-  product setup" workflow (workflow_dispatch; renders the site SVGs at 300 DPI
-  in CI, uploads, creates products; idempotent — re-runs skip existing and
-  delete/recreate any whose blueprint no longer matches the script's pick).
-  IDs live in `automation/social/printify-result.json`.
-- `netlify/functions/catalog.json` now carries `printifyProductId`/
-  `printifyVariantId` for those 35 — checkout for them switches on
-  automatically when Netlify deploys resume **19 Sept** (or the plan is
-  upgraded), because the catalog ships inside the functions bundle.
-- Still needed from Sam before physical fulfilment works end-to-end: add
-  `PRINTIFY_API_KEY` and `PRINTIFY_SHOP_ID` (= 28035653) as **plain** Netlify
-  environment variables (never the "secret values" flag — see the env-var
-  gotcha above). Repo secret `PRINTIFY_API_KEY` is already set for the
-  workflow.
-- Not yet mapped (wave 2, artwork decisions pending): 11 tees, 7 totes,
-  3 hoodies (Sam chose full colour-block panel printing 21 Aug), 5 notebooks,
-  7 pins. Extend `KINDS`/`kindOf` in printify-setup.js and re-run.
-- Worth a look before launch: open a couple of mugs in Printify to check how
-  the centred square panel sits on the wrap.
-
-## Open threads
-
-- The 30-design productisation plan for the *main* store (3 waves, ~107
-  products) is written but not executed. Brief is in
-  `Printify-Designer/attached_assets/`.
-- TikTok rejected the API audit — auto-posting is permanently off the table.
-  Manual upload or a third-party scheduler only.
-- `frog-logic-shop` checkout was rebuilt 20 Aug: one shared Stripe Checkout
-  function + fulfilment webhook (`netlify/functions/`) replaces the old
-  per-product Payment Links / Payhip / Zapier plan. Digital items are fully
-  wired (email delivery via Resend); physical items deliberately refuse
-  checkout until real artwork exists in Printify and the item gets
-  `printifyProductId`/`printifyVariantId` in `catalog.json` (README Parts 1–3
-  — repo, Netlify, env vars, webhook — were all completed 21 Aug; see the
-  LIVE sections above). `catalog.json` is generated from `script.js` —
-  regenerate it whenever a product or price changes.
-- Physical artwork: all 68 physical pieces are SVG mockups only — no
-  print-ready files exist yet (README Part 6).
+- Claude can read the repo but commits through the GitHub web editor in Sam's
+  Chrome. Every commit message carries `[skip netlify]`; one deliberate
+  "Publish the shop" run at the end carries site changes (15 credits a deploy).
+- Editor: replace content via the CodeMirror view, check the sha256, then commit
+  in a **separate** call; the message box is found by placeholder
+  `/^(Update|Rename|Create)/`; check `[skip netlify]` right before clicking.
+- Binary files can't go through the web editor: build them in a workflow.
+- Facebook groups: Sam's personal profile isn't a member. Switch Chrome's
+  Facebook to the Frog Logic profile, post, then switch back. Typing "Sam"
+  opens a tag list; end the line with a space and click the send arrow
+  (Escape triggers a "Leave page?" box).
+- Chrome `file_upload` refuses files from the cloud workspace and the PC. To
+  attach a picture: show it on a froglogic.co.uk page, screenshot it, use
+  `upload_image`. Etsy can also fetch files from raw.githubusercontent.com.
+- instagram.com is blocked for the Chrome extension; Business Suite edits
+  Facebook, and Instagram profile edits need Sam's app.
+- Logins, passwords, codes and identity checks are Sam's.
+- Fuller notes: Claude's memory files `frog-logic` and `frog-logic-ops`.
