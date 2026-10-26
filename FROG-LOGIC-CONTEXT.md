@@ -139,6 +139,18 @@ customer-facing for "will this get found and bought?" before it goes up.
   and 15 Pond Guides pins (8–16 Nov). Built by the "Christmas pins" workflow
   (batch 2 / batch guides). The account caps at 100 scheduled pins.
 - Search Console check 17 Nov; put the Cyber Specials sale in posts from 23 Nov.
+- **Google Shopping fix (26 Oct):** Merchant Center had 113 of 113 products
+  blocked ("unable to do quality & policy checks") because the feed's photos
+  sat on images-api.printify.com, whose robots.txt blocks every crawler. The
+  "Build the product pages" workflow now copies each physical product's photo
+  to froglogic.co.uk/feed-images/<slug>.jpg and the feed, og:image and schema
+  point there. Google re-checks over a few days; look at Merchant Center
+  (account 5875298214) again around 2 Nov.
+- Share images (p/<slug>/og.png) now shrink long titles to fit (the renderer
+  in automation/social/gfonts.js), so long Pond Guide titles no longer run off
+  the edge. Those guides can go back into Pinterest batches.
+- TikTok is off the dated days while Sam recovers: three slide posts are ready
+  under "whenever you have the spoons" on the Desk. Don't chase them.
 - eBay insert cards in parcels from Sam's personal eBay account (card in the
   box only; no links in eBay listings or messages).
 
