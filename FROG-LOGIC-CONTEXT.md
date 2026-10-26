@@ -137,6 +137,14 @@ customer-facing for "will this get found and bought?" before it goes up.
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
   7:59 scheduled task checks Outlook for replies and drafts answers.
+- 26 Oct evening: Kent Messenger pitched (local story, product photos only, no
+  photo of Sam) and 9 neurodivergent creators offered a free printable of their
+  choice (approach-list #22–31). 3 Dec post queued for International Day of
+  Persons with Disabilities (Disability History Month is 19 Nov–19 Dec).
+- Google Maps already shows a "Frog Logic" shop linking to froglogic.co.uk with a
+  wrong location (North America); the Google account in Sam's Chrome owns no
+  Business Profile, so it was made elsewhere (maybe her phone's Google login).
+  Fixing it is Sam's (Google verifies the owner).
   (Theo Paphitis, #SBS).
 - Halloween retires itself on 1 Nov (script.js marks every halloween entry
   retired from that date; nothing to deploy). Christmas order-by dates are live
