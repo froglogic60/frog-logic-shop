@@ -9,7 +9,7 @@ on:
         description: "First publish date (YYYY-MM-DD, UTC). Two pins a day from here."
         default: "2026-10-17"
       batch:
-        description: "1 = the original eight pins, 2 = colourways, personalised pieces and cards"
+        description: "1 = the original eight pins, 2 = colourways, personalised pieces and cards, guides = taster and Pond Guides"
         default: "1"
 permissions:
   contents: write
@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/social/xmas-pins automation/social/xmas-pins-*
+          for d in automation/social/xmas-pins automation/social/xmas-pins-* automation/social/pins-*; do [ -d "$d" ] && git add "$d"; done; true
           git commit -m "Christmas pins [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
