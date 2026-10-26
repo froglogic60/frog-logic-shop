@@ -64,6 +64,42 @@ const CATALOG = (() => {
   catch { return []; }
 })();
 let shopRef = null;
+
+// ---- Product pictures on our own domain (26 Oct 2026). Google Merchant Center
+// rejected 113 of the feed's products as "Unable to do quality & policy checks":
+// the photos were hotlinked from images-api.printify.com, whose robots.txt
+// disallows every crawler, so Googlebot-Image could never fetch them. Each
+// physical piece's photo is now copied (resized to 1000px) into /feed-images/
+// and used for the Google feed, og:image and schema.org image. The cards on the
+// pages still hotlink Printify, to keep visitors' image traffic off Netlify.
+const MIRROR_DIR = path.join(ROOT, "feed-images");
+const MIRRORED = new Set();
+async function mirrorPhotos(pages) {
+  const sharp = require(path.join(ROOT, "automation", "social", "node_modules", "sharp"));
+  fs.mkdirSync(MIRROR_DIR, { recursive: true });
+  const idxFile = path.join(MIRROR_DIR, "index.json");
+  let idx = {};
+  try { idx = JSON.parse(fs.readFileSync(idxFile, "utf8")); } catch {}
+  const keep = new Set(["index.json"]);
+  let fetched = 0, failed = 0;
+  for (const p of pages) {
+    if (p.group !== "physical" || !p.photo || !/^https?:/.test(p.photo.src)) continue;
+    const file = `${p.slug}.jpg`, dest = path.join(MIRROR_DIR, file);
+    keep.add(file);
+    if (idx[p.slug] === p.photo.src && fs.existsSync(dest)) { MIRRORED.add(p.slug); continue; }
+    try {
+      const res = await fetch(p.photo.src);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const buf = Buffer.from(await res.arrayBuffer());
+      await sharp(buf).resize(1000, 1000, { fit: "inside", withoutEnlargement: true }).flatten({ background: "#ffffff" }).jpeg({ quality: 82 }).toFile(dest);
+      idx[p.slug] = p.photo.src; MIRRORED.add(p.slug); fetched++;
+    } catch (e) { failed++; console.warn(`photo copy failed for ${p.slug}: ${e.message}`); }
+  }
+  for (const f of fs.readdirSync(MIRROR_DIR)) if (!keep.has(f)) { fs.rmSync(path.join(MIRROR_DIR, f)); delete idx[f.replace(/\.jpg$/, "")]; }
+  fs.writeFileSync(idxFile, JSON.stringify(idx, null, 2) + "\n");
+  console.log(`feed-images: ${MIRRORED.size} on our domain (${fetched} newly copied, ${failed} failed)`);
+}
+const ownPhoto = (slug, fallback) => (MIRRORED.has(slug) ? `${SITE}/feed-images/${slug}.jpg` : fallback);
 function usLine(item, kind) {
   if (!shopRef) return null;
   const entry = CATALOG.find((c) => c.id === shopRef.checkoutId(item.num, item.word));
@@ -314,7 +350,7 @@ function buildPage(entry, related, shop) {
   const { item, group, slug, svg, photo, tiers } = entry;
   const c = copyFor(item, group);
   const url = `${SITE}/p/${slug}/`;
-  const image = photo ? photo.src : `${SITE}/p/${slug}/og.png`;
+  const image = photo ? ownPhoto(slug, photo.src) : `${SITE}/p/${slug}/og.png`;
   const description = (group === "guide" && GUIDE_TEXT[item.slug] ? GUIDE_TEXT[item.slug].lede : (c.paras[0] || item.line)).replace(/<[^>]+>/g, "").slice(0, 155);
   const kind = kindOf(item.num);
   const isTee = group === "physical" && kind === "Tee";
@@ -538,7 +574,7 @@ function feed(pages, shop) {
     const title = `${p.item.word}${p.item.frog ? " Cute Frog" : ""} ${f.name} – Neurodivergent ADHD & Autism Gift, ${f.tail}`.slice(0, 150);
     const desc = [p.item.line, copyFor(p.item, "physical").paras[1], PHYSICAL[kind].how, "Made by Frog Logic, a small UK shop run by one neurodivergent person."].join(" ");
     const base = {
-      link: `${SITE}/p/${p.slug}/`, image: p.photo.src, price: `${Number(entry.price).toFixed(2)} GBP`,
+      link: `${SITE}/p/${p.slug}/`, image: ownPhoto(p.slug, p.photo.src), price: `${Number(entry.price).toFixed(2)} GBP`,
       cat: f.cat, type: `Frog Logic > ${p.item.frog ? "The frogs" : "The words"} > ${kind}`,
     };
     const common = (extra) => `    <item>
@@ -587,6 +623,7 @@ ${items.join("\n")}
   const shop = loadShop();
   shopRef = shop;
   const pages = collect(shop);
+  if (process.env.SKIP_IMAGES !== "1") await mirrorPhotos(pages);
   // Start clean so a renamed or retired product's page disappears.
   fs.rmSync(OUT, { recursive: true, force: true });
   for (const p of pages) {
