@@ -2638,6 +2638,15 @@ const DIGITAL_PRODUCTS = [
   },
 ];
 
+// Halloween retires itself (Sam, 26 Oct 2026: "retire Halloween after 31 Oct").
+// From 1 November (UK) every halloween entry counts as retired, here and in
+// every script that reads this file (social posts, catalogue, product pages),
+// so nothing has to be remembered or deployed on the day. The artwork stays.
+if (Date.now() >= Date.UTC(2026, 10, 1)) {
+  PRODUCTS.forEach((p) => { if (p.halloween) p.retired = true; });
+  DIGITAL_PRODUCTS.forEach((p) => { if (p.halloween) p.retired = true; });
+}
+
 // Any SVG text wider than the artboard gets scaled down until it fits.
 // Measured from the real rendering rather than estimated, so it works
 // across every typeface in the library.
@@ -2693,7 +2702,7 @@ function renderXmasCards(){
 function renderDigital(){
   const grid = document.getElementById('digital-grid');
   if(!grid) return;
-  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature && !p.xmas).map(p => `
+  grid.innerHTML = DIGITAL_PRODUCTS.filter(p => !p.feature && !p.xmas && !p.retired).map(p => `
     <article class="card">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
       <div class="card-meta">
@@ -2821,7 +2830,7 @@ function renderHalloween(){
   const section = document.getElementById('halloween');
   if(!grid) return;
   const items = PRODUCTS.filter(p => p.halloween && !p.retired);
-  if(!items.length){ if(section) section.hidden = true; return; }
+  if(!items.length){ if(section) section.hidden = true; document.querySelectorAll('a[href="#halloween"]').forEach(l => l.remove()); return; }
   grid.innerHTML = items.map(p => `
     <article class="card" data-id="${checkoutId(p.num, p.word)}">
       <div class="stage" style="background:${p.bg}">${p.svg}</div>
