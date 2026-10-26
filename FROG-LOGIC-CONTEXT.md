@@ -131,8 +131,12 @@ customer-facing for "will this get found and bought?" before it goes up.
   drafts, Sam posts).
 - Gift-guide follow-ups 30 Oct; Small Business Sunday every Sunday 5–7:30pm
   (Theo Paphitis, #SBS).
-- Retire Halloween after 31 Oct; new Pinterest batch when the queue runs out
-  (1 Nov); Christmas last-order dates by 10 Nov.
+- Halloween retires itself on 1 Nov (script.js marks every halloween entry
+  retired from that date; nothing to deploy). Christmas order-by dates are live
+  (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec; check Printify's
+  2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
+- Pinterest: 21 Christmas pins run 28 Oct–7 Nov; the next batch (taster and
+  free guides) is due before the queue runs out.
 - Search Console check 17 Nov; put the Cyber Specials sale in posts from 23 Nov.
 - eBay insert cards in parcels from Sam's personal eBay account (card in the
   box only; no links in eBay listings or messages).
