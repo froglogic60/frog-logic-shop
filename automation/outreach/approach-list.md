@@ -148,7 +148,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ## 7. ADHD Aware (Brighton & Sussex)
 
-**To:** contact form at adhdaware.org.uk/about-us/contact-us/
+**To:** training@adhdaware.org.uk
 **Why them:** Runs peer support sessions and workplace neurodiversity training — both the sheets' audience and the pack's buyer.
 **Subject:** Free guides for your peer groups, and a pack for your workplace training
 
@@ -419,6 +419,26 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Bespoke Planner: https://froglogic.co.uk/p/the-bespoke-planner/
 >
 > Happy to send examples or answer anything.
+>
+> Sam, Frog Logic
+
+---
+
+## 21. Crip Life (feature)
+
+**To:** emma@criplife.co.uk
+**Why them:** UK disabled-led magazine; writes about disabled-owned businesses in return for cross-promotion. Emma Purcell is the editor for content enquiries (added 26 Oct 2026).
+**Subject:** A disabled-run shop for neurodivergent adults, for a Crip Life feature?
+
+> Hi Emma,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: a one-person shop for neurodivergent adults and the people around them. I read that Crip Life writes about disabled-owned businesses in return for cross-promotion, and I'd love to be considered.
+>
+> What I make: printable planners for low-energy days, plain-words tees and mugs, a Bespoke Planner built from your own answers, and 23 free plain-English guides to different neurotypes (https://froglogic.co.uk/#guides). In return I'd happily share the feature on Frog Logic's Facebook, Instagram and Pinterest, and in my monthly newsletter.
+>
+> Shop: https://froglogic.co.uk
+>
+> Happy to answer questions, send photos, or write something myself if that suits you better.
 >
 > Sam, Frog Logic
 
