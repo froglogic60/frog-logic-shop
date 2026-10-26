@@ -135,8 +135,9 @@ customer-facing for "will this get found and bought?" before it goes up.
   retired from that date; nothing to deploy). Christmas order-by dates are live
   (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec; check Printify's
   2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
-- Pinterest: 21 Christmas pins run 28 Oct–7 Nov; the next batch (taster and
-  free guides) is due before the queue runs out.
+- Pinterest is loaded to 16 Nov: 21 Christmas pins (28 Oct–7 Nov), then 3 taster
+  and 15 Pond Guides pins (8–16 Nov). Built by the "Christmas pins" workflow
+  (batch 2 / batch guides). The account caps at 100 scheduled pins.
 - Search Console check 17 Nov; put the Cyber Specials sale in posts from 23 Nov.
 - eBay insert cards in parcels from Sam's personal eBay account (card in the
   box only; no links in eBay listings or messages).
