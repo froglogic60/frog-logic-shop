@@ -60,6 +60,19 @@ html,body{margin:0;padding:0}
     await p2.setContent(html, { waitUntil: "load" });
     await p2.evaluate(() => document.fonts.ready);
     await p2.waitForTimeout(150);
+    // Same rule the site applies in the browser: a line of artwork text wider
+    // than the 300-unit artboard (less margins) is shrunk to fit. Without it,
+    // long guide titles ran off the edge of their share pictures (26 Oct 2026).
+    await p2.evaluate(() => {
+      document.querySelectorAll(".stage svg text").forEach((t) => {
+        if (t.closest("svg[data-no-fit]")) return;
+        if (!(t.textContent || "").trim()) return;
+        let len; try { len = t.getComputedTextLength(); } catch (e) { return; }
+        if (len <= 272) return;
+        const cur = parseFloat(t.getAttribute("font-size") || getComputedStyle(t).fontSize) || 16;
+        t.setAttribute("font-size", Math.max(8, Math.floor(cur * (272 / len))));
+      });
+    });
     const el = await p2.$(".stage");
     const buf = await el.screenshot({ type: "png" });
     await ctx.close();
