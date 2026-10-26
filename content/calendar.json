@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -823,10 +823,6 @@
         {
           "what": "Pin: For The Sibling → #digital",
           "who": "robot"
-        },
-        {
-          "what": "TikTok by hand: Late Diagnosed tee (5 slides). Slides + caption in Downloads › \"TikTok this week\"",
-          "who": "you"
         }
       ]
     },
@@ -858,10 +854,6 @@
         {
           "what": "FB/IG post from Sam: honesty post",
           "who": "robot"
-        },
-        {
-          "what": "TikTok by hand: honesty post — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
-          "who": "you"
         },
         {
           "what": "Gift guides: send one follow-up to any of the 10 sent on 20 Oct who hasn’t replied (check hello@froglogic.co.uk; the follow-up line is in the pitches doc).",
@@ -918,10 +910,6 @@
         {
           "what": "FB/IG post from Sam: When Words Go",
           "who": "robot"
-        },
-        {
-          "what": "TikTok by hand: When Words Go — photo mode, 5 slides in order, any quiet sound, caption = the matching post",
-          "who": "you"
         }
       ]
     },
@@ -1044,6 +1032,7 @@
     }
   ],
   "whenever": [
+    "TIKTOK — WHENEVER YOU HAVE THE SPOONS (moved off the dated days 26 Oct 2026, Sam not well enough yet; no pressure, nothing breaks if they wait): three photo-slide posts are ready to go by hand, in any order — Late Diagnosed tee (5 slides, in Downloads › \"TikTok this week\"), the honesty post and When Words Go (5 slides each; caption = the matching Facebook post). Photo mode, any quiet sound, no face, no voice.",
     "EBAY INSERT CARDS (24 Oct 2026): a printable A6 card for every parcel Sam sends from her personal eBay account — Comfort Creature on the front, thank-you + the free guides + POND10 + a QR code to froglogic.co.uk/?ref=ebay on the back (GoatCounter shows 'ebay' as the source, so we can see if it works). PDF: Frog-Logic-eBay-Insert-Cards.pdf (sent in the chat 24 Oct; 4 cards per A4 sheet, page 1 fronts, page 2 backs, flip on the long edge, cut on the grey lines, 160–250gsm). RULE: the card goes in the box only — eBay bans off-eBay links or addresses in listings, descriptions, messages and feedback, and that's how accounts get restricted.",
     "ETSY AI POLICY (22 Oct 2026): Etsy now bans AI-generated functional instructions (patterns, recipes, manuals, how-to e-books) and wants an unedited real photo on most listings — but print-on-demand may use the maker's stock mockups and digital downloads only need a preview of the pages, so the 106 Printify listings and the printables are fine. The two Claude AI Guides were the banned category, so they are Inactive on Etsy (still on the site); the 23 Guides Bundle got a 'reading, not instructions' line. RULE FROM NOW: nothing on Etsy that teaches a task step by step, and keep the 'made with AI' disclosure on the printables (it is required, not a risk). Bot-generated listings are also banned, so every Etsy listing stays hand-checked before Publish.",
     "GET SEEN, round two (22 Oct): the groups that ran the colourway poll — post the cards (text in the chat); Reddit/forum answers using the free guides (Claude drafts, Sam posts); first Etsy sale + review from anyone honest, so listings rank; link the taster (froglogic.co.uk/taster/) from the Bespoke pins and the planner story post. The guide pages and the taster are built; the rest needs Sam's hands",
