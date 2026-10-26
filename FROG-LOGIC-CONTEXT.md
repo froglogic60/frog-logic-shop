@@ -132,7 +132,8 @@ customer-facing for "will this get found and bought?" before it goes up.
 - Gift-guide follow-ups DONE 26 Oct (8 nudged by robot, Alive with Chronic
   Illness chased by Sam: they offered a newsletter/January pacing-event slot for a
   pay-what-you-can donation; Sam offered free planners + a reader code with 10%
-  donated instead). Small Business Sunday every Sunday 5–7:30pm
+  donated instead).
+- Small Business Sunday every Sunday 5–7:30pm (Theo Paphitis, #SBS).
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
@@ -141,14 +142,12 @@ customer-facing for "will this get found and bought?" before it goes up.
   photo of Sam) and 9 neurodivergent creators offered a free printable of their
   choice (approach-list #22–31). 3 Dec post queued for International Day of
   Persons with Disabilities (Disability History Month is 19 Nov–19 Dec).
-- Google Maps already shows a "Frog Logic" shop linking to froglogic.co.uk with a
-  wrong location (North America). Sam set this Business Profile up herself
-  around 16 Oct (the same flow offered Google Ads, which she skipped); it isn't
-  under the Google account in her Chrome. It says "Google will verify", i.e.
-  verification is already submitted and waiting on Google. Once verified: category Gift shop
-  (+ Clothing store, Stationery store), service area Tonbridge with the address
-  hidden, and the description drafted in chat on 26 Oct.
-  (Theo Paphitis, #SBS).
+- Google Business Profile: Sam set it up herself around 16 Oct (the same flow
+  offered Google Ads, which she skipped); it isn't under the Google account in
+  her Chrome. Verification is submitted and waiting on Google ("Google will
+  verify"). On 26 Oct Sam set the category (Gift shop), service area Tonbridge
+  with the address hidden, and the description; the Maps pin was showing North
+  America before that.
 - Halloween retires itself on 1 Nov (script.js marks every halloween entry
   retired from that date; nothing to deploy). Christmas order-by dates are live
   (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec (the 5 Dec one doubles
