@@ -144,7 +144,10 @@ customer-facing for "will this get found and bought?" before it goes up.
 - Google Maps already shows a "Frog Logic" shop linking to froglogic.co.uk with a
   wrong location (North America); the Google account in Sam's Chrome owns no
   Business Profile, so it was made elsewhere (maybe her phone's Google login).
-  Fixing it is Sam's (Google verifies the owner).
+  Sam checked 26 Oct: it says "Google will verify", i.e. verification is
+  already submitted and waiting on Google. Once verified: category Gift shop
+  (+ Clothing store, Stationery store), service area Tonbridge with the address
+  hidden, and the description drafted in chat on 26 Oct.
   (Theo Paphitis, #SBS).
 - Halloween retires itself on 1 Nov (script.js marks every halloween entry
   retired from that date; nothing to deploy). Christmas order-by dates are live
