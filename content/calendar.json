@@ -899,6 +899,10 @@
       "date": "2026-11-04",
       "items": [
         {
+          "what": "Google Shopping check: product photos moved to froglogic.co.uk on 26 Oct so Google can read them. Look in Merchant Center (Products) for how many of the 113 are now approved — Claude can check and fix anything still flagged",
+          "who": "robot"
+        },
+        {
           "what": "Ad test results: what a click and a sale actually cost. Stop or continue — Claude will show the numbers",
           "who": "you"
         }
