@@ -131,5 +131,75 @@
     "subject": "A disabled-run shop for neurodivergent adults, for a Crip Life feature?",
     "sentAt": "2026-10-26T16:35:10.505Z",
     "id": "01a17910-dbcb-7810-9b63-6a33fd7469a5"
+  },
+  {
+    "name": "Kent Messenger (local paper, Tonbridge & Malling)",
+    "to": "messengernews@thekmgroup.co.uk",
+    "subject": "Tonbridge shop for neurodivergent adults, run from a lounge",
+    "sentAt": "2026-10-26T17:28:09.206Z",
+    "id": "01a17941-5ca1-7b33-9c83-e4006e8e5a01"
+  },
+  {
+    "name": "Jeanie Gee (creator gift)",
+    "to": "hello@daisyconnections.co.uk",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:09.365Z",
+    "id": "01a17941-5d39-748f-99d2-8f655e0c327a"
+  },
+  {
+    "name": "The Autism Page (Jade) (creator gift)",
+    "to": "jade@theautismpage.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:09.535Z",
+    "id": "01a17941-5dcb-7064-be90-21120fd474e2"
+  },
+  {
+    "name": "Jade Farrington (creator gift)",
+    "to": "contact@jadefarrington.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:09.684Z",
+    "id": "01a17941-5e76-7a24-9f10-fe8fd2366772"
+  },
+  {
+    "name": "Dr Vikky Leaney (creator gift)",
+    "to": "info@vikkyleaney.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:09.822Z",
+    "id": "01a17941-5f10-7d9d-b113-532b40ed7e55"
+  },
+  {
+    "name": "Autistic Licence podcast (creator gift)",
+    "to": "autisticlicence@gmail.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:09.959Z",
+    "id": "01a17941-5f95-7169-bd62-b3f74b55b9e9"
+  },
+  {
+    "name": "Jesse J. Anderson (Extra Focus) (creator gift)",
+    "to": "jesse@adhdjesse.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:10.097Z",
+    "id": "01a17941-6021-70a1-937a-c7d44c7de8db"
+  },
+  {
+    "name": "Sarah Nannery (creator gift)",
+    "to": "sarahnannery@outlook.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:10.247Z",
+    "id": "01a17941-60a8-72a1-b60e-6b8f8ae3aecc"
+  },
+  {
+    "name": "Nicole Filippone (Sensory Stories) (creator gift)",
+    "to": "nicole@nicolefilipponeauthor.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:10.391Z",
+    "id": "01a17941-6149-7c9f-a17d-395d82ed7834"
+  },
+  {
+    "name": "Autistic Ang (creator gift)",
+    "to": "autisticang38@gmail.com",
+    "subject": "A free printable for you, no strings",
+    "sentAt": "2026-10-26T17:28:10.542Z",
+    "id": "01a17941-61d4-7785-b5b1-f12a5620fb14"
   }
 ]
