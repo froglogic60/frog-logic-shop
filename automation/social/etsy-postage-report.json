@@ -1,7 +1,91 @@
 {
-  "checkedAt": "2026-10-19T13:57:30.963Z",
+  "checkedAt": "2026-10-26T13:34:43.923Z",
   "etsyStore": 29335686,
   "products": [
+    {
+      "id": "6ad792a89ee8fe3cb304b895",
+      "title": "Socially Hibernating Christmas Frog Mug in Black and White — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Ships from the US",
+      "bp": 478,
+      "pp": 99
+    },
+    {
+      "id": "6ad792a4cfe9581c8b06671f",
+      "title": "Socially Hibernating Christmas Frog Mug in Black and White — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Made in the UK",
+      "bp": 535,
+      "pp": 6
+    },
+    {
+      "id": "6ad7929fdb8ebad1630f7f86",
+      "title": "Socially Hibernating Christmas Frog Fleece Blanket in Black and White — Cute Frog in Santa Hat, Introvert Christmas Gift, Made in the UK",
+      "bp": 1328,
+      "pp": 94
+    },
+    {
+      "id": "6ad7929ac087d2314b0fa4ff",
+      "title": "Socially Hibernating Christmas Frog T-Shirt in Black and White — Cute Frog in Santa Hat, Introvert Christmas Top, Made in the UK",
+      "bp": 6,
+      "pp": 331
+    },
+    {
+      "id": "6ad79296c087d2314b0fa4f8",
+      "title": "Socially Hibernating Christmas Frog Hoodie in Black and White — Cute Frog in Santa Hat, Introvert Christmas Jumper, Made in the UK",
+      "bp": 77,
+      "pp": 72
+    },
+    {
+      "id": "6ad79292ede79e690405e402",
+      "title": "Socially Hibernating Christmas Frog T-Shirt in Black and White — Cute Frog in Santa Hat, Introvert Christmas Shirt, Ships from the US",
+      "bp": 6,
+      "pp": 99
+    },
+    {
+      "id": "6ad7928edb8ebad1630f7f61",
+      "title": "Socially Hibernating Christmas Frog Hoodie in Black and White — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Ships from the US",
+      "bp": 77,
+      "pp": 99
+    },
+    {
+      "id": "6ad79254cfe9581c8b066690",
+      "title": "Socially Hibernating Christmas Frog Mug in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Ships from the US",
+      "bp": 478,
+      "pp": 99
+    },
+    {
+      "id": "6ad79250b0c1203caf059085",
+      "title": "Socially Hibernating Christmas Frog Mug in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, 11oz Mug, Made in the UK",
+      "bp": 535,
+      "pp": 6
+    },
+    {
+      "id": "6ad7924ac087d2314b0fa45b",
+      "title": "Socially Hibernating Christmas Frog Fleece Blanket in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Gift, Made in the UK",
+      "bp": 1328,
+      "pp": 94
+    },
+    {
+      "id": "6ad79245b0c1203caf059074",
+      "title": "Socially Hibernating Christmas Frog T-Shirt in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Top, Made in the UK",
+      "bp": 6,
+      "pp": 331
+    },
+    {
+      "id": "6ad79240c087d2314b0fa449",
+      "title": "Socially Hibernating Christmas Frog Hoodie in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Jumper, Made in the UK",
+      "bp": 77,
+      "pp": 72
+    },
+    {
+      "id": "6ad7923cd30770188201586d",
+      "title": "Socially Hibernating Christmas Frog T-Shirt in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Shirt, Ships from the US",
+      "bp": 6,
+      "pp": 99
+    },
+    {
+      "id": "6ad79238ff714daae20c48e4",
+      "title": "Socially Hibernating Christmas Frog Hoodie in Bright Colours — Cute Frog in Santa Hat, Introvert Christmas Sweatshirt, Ships from the US",
+      "bp": 77,
+      "pp": 99
+    },
     {
       "id": "6ad1f942b7243250ec0835f6",
       "title": "Socially Hibernating Christmas Frog Fleece Blanket — Cute Frog in Santa Hat, Cosy Throw, Introvert Christmas Gift, Made in the UK",
@@ -556,6 +640,47 @@
     }
   ],
   "rates": {
+    "478:99": {
+      "GB": [],
+      "US": [
+        {
+          "first": 579,
+          "additional": 299,
+          "currency": "USD"
+        },
+        {
+          "first": 709,
+          "additional": 299,
+          "currency": "USD"
+        },
+        {
+          "first": 729,
+          "additional": 309,
+          "currency": "USD"
+        },
+        {
+          "first": 939,
+          "additional": 399,
+          "currency": "USD"
+        }
+      ]
+    },
+    "535:6": {
+      "GB": [
+        {
+          "first": 389,
+          "additional": 249,
+          "currency": "USD"
+        }
+      ],
+      "US": [
+        {
+          "first": 3419,
+          "additional": 619,
+          "currency": "USD"
+        }
+      ]
+    },
     "1328:94": {
       "GB": [
         {
@@ -614,21 +739,6 @@
         }
       ]
     },
-    "1691:99": {
-      "GB": [],
-      "US": [
-        {
-          "first": 469,
-          "additional": 209,
-          "currency": "USD"
-        },
-        {
-          "first": 509,
-          "additional": 219,
-          "currency": "USD"
-        }
-      ]
-    },
     "6:99": {
       "GB": [],
       "US": [
@@ -660,6 +770,21 @@
         {
           "first": 879,
           "additional": 209,
+          "currency": "USD"
+        }
+      ]
+    },
+    "1691:99": {
+      "GB": [],
+      "US": [
+        {
+          "first": 469,
+          "additional": 209,
+          "currency": "USD"
+        },
+        {
+          "first": 509,
+          "additional": 219,
           "currency": "USD"
         }
       ]
@@ -798,47 +923,6 @@
         {
           "first": 3069,
           "additional": 199,
-          "currency": "USD"
-        }
-      ]
-    },
-    "478:99": {
-      "GB": [],
-      "US": [
-        {
-          "first": 579,
-          "additional": 299,
-          "currency": "USD"
-        },
-        {
-          "first": 709,
-          "additional": 299,
-          "currency": "USD"
-        },
-        {
-          "first": 729,
-          "additional": 309,
-          "currency": "USD"
-        },
-        {
-          "first": 939,
-          "additional": 399,
-          "currency": "USD"
-        }
-      ]
-    },
-    "535:6": {
-      "GB": [
-        {
-          "first": 389,
-          "additional": 249,
-          "currency": "USD"
-        }
-      ],
-      "US": [
-        {
-          "first": 3419,
-          "additional": 619,
           "currency": "USD"
         }
       ]
