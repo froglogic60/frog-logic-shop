@@ -142,10 +142,10 @@ customer-facing for "will this get found and bought?" before it goes up.
   choice (approach-list #22–31). 3 Dec post queued for International Day of
   Persons with Disabilities (Disability History Month is 19 Nov–19 Dec).
 - Google Maps already shows a "Frog Logic" shop linking to froglogic.co.uk with a
-  wrong location (North America); the Google account in Sam's Chrome owns no
-  Business Profile, so it was made elsewhere (maybe her phone's Google login).
-  Sam checked 26 Oct: it says "Google will verify", i.e. verification is
-  already submitted and waiting on Google. Once verified: category Gift shop
+  wrong location (North America). Sam set this Business Profile up herself
+  around 16 Oct (the same flow offered Google Ads, which she skipped); it isn't
+  under the Google account in her Chrome. It says "Google will verify", i.e.
+  verification is already submitted and waiting on Google. Once verified: category Gift shop
   (+ Clothing store, Stationery store), service area Tonbridge with the address
   hidden, and the description drafted in chat on 26 Oct.
   (Theo Paphitis, #SBS).
