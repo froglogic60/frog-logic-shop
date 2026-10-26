@@ -444,6 +444,178 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ---
 
+## 22. Kent Messenger (local paper, Tonbridge & Malling)
+
+**To:** messengernews@thekmgroup.co.uk
+**Why them:** KM Group's Kent Messenger series covers Tonbridge & Malling; their editorial page lists this address. Hook: Disability History Month (19 Nov–19 Dec) and International Day of Persons with Disabilities (3 Dec). Sam OK'd the local paper with product photos only (26 Oct 2026).
+**Subject:** Tonbridge shop for neurodivergent adults, run from a lounge
+
+> Hi,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a one-person online shop, from my home in Tonbridge. I make things for neurodivergent adults and the people around them: printable planners for low-energy days, cards for the moments words won't come, plain-words tees and mugs, and 23 free plain-English guides to different neurotypes for families, partners and employers.
+>
+> It started as things I made for myself. With Disability History Month starting on 19 November and International Day of Persons with Disabilities on 3 December, I wondered whether a local disabled-run small business might suit your pages, or a shop-local feature before Christmas.
+>
+> Shop: https://froglogic.co.uk
+> Free guides: https://froglogic.co.uk/#guides
+> Christmas range: https://froglogic.co.uk/p/christmas-set-uk/
+>
+> Product photos you're welcome to use:
+> https://froglogic.co.uk/feed-images/low-battery.jpg
+> https://froglogic.co.uk/feed-images/comfort-creature.jpg
+> https://froglogic.co.uk/feed-images/overstimulated-tee.jpg
+>
+> I'd rather not be photographed myself, but I'm happy to answer questions by email.
+>
+> Sam Hall
+> Frog Logic · froglogic.co.uk
+
+---
+
+## 23. Jeanie Gee (creator gift)
+
+**To:** hello@daisyconnections.co.uk
+**Why them:** ADHD Substack writer (50k+), London ND friendship group; email from daisyconnections.co.uk.
+**Subject:** A free printable for you, no strings
+
+> Hi Jeanie,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across your writing about ADHD and finding your people, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 24. The Autism Page (Jade) (creator gift)
+
+**To:** jade@theautismpage.com
+**Why them:** Autism blog, work-with-me page welcomes product posts (theautismpage.com/work-with-me).
+**Subject:** A free printable for you, no strings
+
+> Hi Jade,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across The Autism Page and your work-with-me page, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 25. Jade Farrington (creator gift)
+
+**To:** contact@jadefarrington.com
+**Why them:** Neurodivergent counsellor and Substack writer (jadefarrington.com/contact).
+**Subject:** A free printable for you, no strings
+
+> Hi Jade,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across your writing on neurodivergence, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 26. Dr Vikky Leaney (creator gift)
+
+**To:** info@vikkyleaney.com
+**Why them:** ADHD coach, Substack 'Tangled Thoughts', late-diagnosed ADHD women (vikkyleaney.com).
+**Subject:** A free printable for you, no strings
+
+> Hi Vikky,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across Tangled Thoughts, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 27. Autistic Licence podcast (creator gift)
+
+**To:** autisticlicence@gmail.com
+**Why them:** Two autistic therapists' podcast (autisticlicence.podbean.com).
+**Subject:** A free printable for you, no strings
+
+> Hi Siana and Leo,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across Autistic Licence, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 28. Jesse J. Anderson (Extra Focus) (creator gift)
+
+**To:** jesse@adhdjesse.com
+**Why them:** ADHD newsletter, 60k+ readers, time and energy (adhdjesse.com).
+**Subject:** A free printable for you, no strings
+
+> Hi Jesse,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across Extra Focus, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 29. Sarah Nannery (creator gift)
+
+**To:** sarahnannery@outlook.com
+**Why them:** Late-diagnosed autistic author/blogger (sarahnannery.com).
+**Subject:** A free printable for you, no strings
+
+> Hi Sarah,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across your writing about late-diagnosed autism, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 30. Nicole Filippone (Sensory Stories) (creator gift)
+
+**To:** nicole@nicolefilipponeauthor.com
+**Why them:** Autistic adult with sensory processing disorder, creator (nicolefilipponeauthor.com/about).
+**Subject:** A free printable for you, no strings
+
+> Hi Nicole,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across Sensory Stories, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
+## 31. Autistic Ang (creator gift)
+
+**To:** autisticang38@gmail.com
+**Why them:** Substack for late-identified autistic adults (autisticang38.substack.com).
+**Subject:** A free printable for you, no strings
+
+> Hi Ang,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in Kent: printables, tees and mugs for ADHD and autistic adults. I came across your Substack, and I'd like to send you a free printable of your choice as a thank you. There's no catch and no need to post about it.
+>
+> The printables are here: https://froglogic.co.uk/#digital (the Low Spoons Day Planner, the Weekly Spoon Tracker and the Access Needs Cards, for example). Just reply with the one you'd like and I'll email it over.
+>
+> Sam, Frog Logic
+
+---
+
 ## After sending
 
 Log who you sent to and when on the Desk (one line each is fine — "nasen sent 27 Oct"). The 8 Dec nudge is one short reply to your own email: "Just floating this back up in case it got buried — no worries if it's not for you."
