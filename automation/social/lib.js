@@ -16,6 +16,20 @@ function loadSiteData() {
   vm.createContext(ctx);
   vm.runInContext(src.slice(0, cut) + "\n;__out={PRODUCTS,DIGITAL_PRODUCTS};", ctx);
   const { PRODUCTS, DIGITAL_PRODUCTS } = ctx.__out;
+  // Each product's own page is /p/<slug>/, and the slug rule (pageSlug) sits
+  // below the data boundary in script.js. Load the whole file the way
+  // build-pages.cjs does so posts can link to the product itself rather than
+  // the home page; if that ever fails, posts fall back to the home page.
+  let pageSlug = null;
+  try {
+    const full = {
+      document: { getElementById: () => null, addEventListener() {}, querySelectorAll: () => [], body: { addEventListener() {}, classList: { toggle() {} } } },
+      window: {}, fetch: async () => ({ ok: false }), alert() {}, setTimeout, console,
+    };
+    vm.createContext(full);
+    vm.runInContext(src + "\n;__ps=pageSlug;", full);
+    pageSlug = full.__ps;
+  } catch (e) { console.warn("pageSlug unavailable, posts will link to the home page: " + e.message); }
   // A retired piece is off the page and out of the checkout, so it must also be
   // out of anything that quotes prices or points people at the shop — the
   // catalogue rebuild and the social posts both read PRODUCTS from here, and a
@@ -26,6 +40,7 @@ function loadSiteData() {
     PRODUCTS: PRODUCTS.filter((p) => !p.retired),
     DIGITAL_PRODUCTS,
     ALL_PRODUCTS: PRODUCTS,
+    pageSlug,
   };
 }
 
@@ -207,7 +222,7 @@ function buildPost({ type, occurrence }, bank, site) {
   if (type === "a") {
     const p = site.PRODUCTS[(occurrence * 7) % site.PRODUCTS.length];
     return {
-      kind: "art", item: p,
+      kind: "art", item: p, page: site.pageSlug ? site.pageSlug(p) : null,
       caption: `${p.word}. ${p.line} 🐸\n\nFrom the feelings collection at ${SHOP} — the word is the artwork.\n${etsyLine(p)}\n\n${tags(occurrence)}`,
     };
   }
@@ -218,7 +233,7 @@ function buildPost({ type, occurrence }, bank, site) {
     const p = downloads[(occurrence * 11) % downloads.length];
     const cta = SHOWCASE_LINES[occurrence % SHOWCASE_LINES.length];
     return {
-      kind: "showcase", item: p,
+      kind: "showcase", item: p, page: site.pageSlug ? site.pageSlug(p) : null,
       caption: `${p.word} — ${p.price}. ${cta} 🐸\n${etsyLine(null)}\n\n${tags(occurrence)}`,
     };
   }
