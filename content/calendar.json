@@ -47,8 +47,8 @@
     },
     {
       "time": "one a day, from 15 Oct",
-      "what": "Post the free guides in ONE group a day (SEN parent groups, PDA groups, r/ADHDUK, autism subs, carers’ forums) — six posts in your voice are in the Claude chat (group-posts.md). Read the group’s rules first; link in the comments if posts can’t carry one; reply to every comment",
-      "who": "you",
+      "what": "Group posts, 28 Oct – 20 Nov: Claude posts the free guides in one Facebook group a day as Frog Logic at 12:47 (scheduled task, needs your PC and Chrome on) and sends you drafted replies to any comments to approve. Autism Parents Support & Resources done 27 Oct.",
+      "who": "robot",
       "repeat": {
         "every": "day",
         "from": "2026-10-15"
