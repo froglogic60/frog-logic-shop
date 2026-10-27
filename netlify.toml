@@ -76,6 +76,10 @@
 # the pages moved rather than broke, so it drops them faster and passes any
 # link value to the live page. Nothing on the current site uses these paths.
 [[redirects]]
+  from = "/downloads/*"
+  to = "/#digital"
+  status = 301
+[[redirects]]
   from = "/products/*"
   to = "/#frogs"
   status = 301
