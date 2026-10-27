@@ -19,6 +19,7 @@
 
 import Stripe from "stripe";
 import { catalog, forCountry } from "./create-checkout.js";
+import { signedDownloadUrl, LINK_DAYS } from "./download.js";
 
 // create-checkout.js writes the basket as "id~variant~qty~size|id~variant~qty~size",
 // split across basket_0, basket_1... because Stripe caps a metadata value at
@@ -58,7 +59,7 @@ async function sendDownloadEmail({ toEmail, items }) {
   // Letter); otherwise it is the one file.
   const links = items
     .flatMap((item) => (item.files || [{ name: item.name, file: item.file }]))
-    .map((f) => `<p><a href="${site}/digital/${f.file}">${f.name}</a></p>`)
+    .map((f) => `<p><a href="${signedDownloadUrl(site, f.file)}">${f.name}</a></p>`)
     .join("\n");
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -75,6 +76,7 @@ async function sendDownloadEmail({ toEmail, items }) {
              ${items.some((i) => i.licence)
                ? `<p>Your pack is licensed for ${items.filter((i) => i.licence).map((i) => i.licence).join("; ")} — print as much as you need for the people you support. The full licence is on page two, in plain English. Updated files for the next twelve months come to this address.</p>`
                : `<p>For personal and household use — print freely, please don't resell or redistribute the files.</p>`}
+             <p>These links work for ${LINK_DAYS} days, so save the files somewhere safe. If you need them again after that, just ask.</p>
              <p>Trouble with a file — won't open, wrong one, didn't arrive? Reply to this email or write to
              <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a> and I'll sort it. The
              <a href="${site}/returns">returns page</a> has the detail.</p>
