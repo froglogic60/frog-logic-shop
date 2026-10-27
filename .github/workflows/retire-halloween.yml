@@ -1,0 +1,79 @@
+name: Retire Halloween (1 Nov 2026)
+# Sam, 27 Oct 2026: "Get rid of the Halloween ones Nov 1st."
+#
+# From 1 Nov script.js already marks every halloween item retired, so the shop
+# page hides the Halloween band and its menu link by itself. What it can't do is
+# rewrite the files built from it: the ten /p/ pages, the sitemap and the
+# checkout catalogue. This reruns those two builders once, after midnight on the
+# 1st, then makes ONE deploy (15 credits). The old /p/ addresses are sent to the
+# frogs by redirects in netlify.toml, so old pins don't hit a dead page.
+#
+# Runs itself at 00:20 UTC on 1 Nov; the date guard stops it doing anything
+# before then or in later years. Can also be run by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "20 0 1 11 *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  retire:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only on or after 1 Nov 2026, and only in 2026
+        id: when
+        run: |
+          d=$(date -u +%Y%m%d)
+          if [ "$d" -ge 20261101 ] && [ "$d" -lt 20270101 ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "Not yet ($d) - nothing to do"; fi
+      - uses: actions/checkout@v4
+        if: steps.when.outputs.go == '1'
+      - uses: actions/setup-node@v4
+        if: steps.when.outputs.go == '1'
+        with:
+          node-version: 20
+      - name: Rebuild catalog.json without the Halloween items
+        if: steps.when.outputs.go == '1'
+        run: |
+          node automation/social/wire-catalog.js
+          # wire-catalog never touches downloads, so the sticker sheet goes by hand
+          node -e '
+            const fs = require("fs"), f = "netlify/functions/catalog.json";
+            const cat = JSON.parse(fs.readFileSync(f, "utf8"));
+            const out = cat.filter((x) => x.id !== "d34-halloween-stickers");
+            console.log("removed", cat.length - out.length, "download(s)");
+            fs.writeFileSync(f, JSON.stringify(out, null, 2) + "\n");
+          '
+      - name: Install renderer (for the share images)
+        if: steps.when.outputs.go == '1'
+        working-directory: automation/social
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        if: steps.when.outputs.go == '1'
+        working-directory: automation/social
+        run: npx playwright install --with-deps chromium
+      - name: Lift the Pond Guides' text out of their PDFs
+        if: steps.when.outputs.go == '1'
+        run: |
+          pip install --quiet pdfplumber
+          python automation/site/pond-guides-extract.py
+      - name: Rebuild product pages and sitemap
+        if: steps.when.outputs.go == '1'
+        run: node automation/site/build-pages.cjs
+      - name: Check the Halloween pages are gone
+        if: steps.when.outputs.go == '1'
+        run: |
+          left=$(ls p | grep -E 'halloween|sensory-witch|social-battery-undead|do-not-perceive-me' || true)
+          if [ -n "$left" ]; then echo "Still there: $left"; exit 1; fi
+          if grep -qiE 'halloween|sensory-witch|undead|perceive' sitemap.xml; then echo "Sitemap still lists Halloween"; exit 1; fi
+          if grep -qi 'halloween\|sensory-witch\|undead\|perceive-me' netlify/functions/catalog.json; then echo "Catalogue still sells Halloween"; exit 1; fi
+          echo "All Halloween pages, sitemap entries and checkout items removed."
+      - name: Commit and publish (one deploy)
+        if: steps.when.outputs.go == '1'
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A p sitemap.xml google-feed.xml taster feed-images automation/site/pond-guides.json netlify/functions/catalog.json
+          git commit -m "Halloween retired: pages, sitemap and checkout [skip netlify]" || echo "nothing to commit"
+          git commit --allow-empty -m "Publish the shop"
+          git pull --rebase origin main
+          git push
