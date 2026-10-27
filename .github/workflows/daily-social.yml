@@ -4,9 +4,11 @@ name: Daily social posts
 # after 17:00 UTC). Quieter minutes start closer to time.
 on:
   schedule:
-    - cron: "17 8 * * *"
+    # 27 Oct 2026: down from three a day to one (Sam: "more engaging things
+    # rather than just the product pictures"). 186 posts in 28 days averaged
+    # 0.16 interactions and a reach of 2-3; the fun posts (fun-posts.yml, 7pm)
+    # now carry the page and this keeps one product post at lunchtime.
     - cron: "17 12 * * *"
-    - cron: "17 17 * * *"
   workflow_dispatch:
     inputs:
       slot:
