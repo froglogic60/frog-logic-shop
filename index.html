@@ -41,7 +41,8 @@
       <img src="assets/frog-logic-mark-sm.png" alt="">
       Frog Logic
     </a>
-    <nav class="site-nav" aria-label="Primary">
+    <button class="menu-toggle btn btn-ghost btn-small" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
       <a href="#collection">The words</a>
       <a href="#christmas">Christmas</a>
       <a href="#christmas-bright">Christmas: bright</a>
@@ -73,6 +74,21 @@
     </div>
   </section>
 
+  <!-- Phones only (27 Oct 2026): real products with prices on the first screen.
+       Most visitors are on phones and 82 of 105 in a month never scrolled past
+       the hero, so they never saw a single product. -->
+  <section class="mobile-picks" aria-label="Popular for Christmas">
+    <div class="wrap">
+      <p class="eyebrow">Popular for Christmas</p>
+      <div class="picks-grid">
+        <a class="pick" href="/p/christmas-set-uk/"><img src="/assets/xmas/set-uk.jpg" alt="" loading="lazy" width="300" height="300"><span class="pick-name">Socially Hibernating Christmas set</span><span class="pick-price">from £93</span></a>
+        <a class="pick" href="/p/overstimulated-tee/"><img src="/feed-images/overstimulated-tee.jpg" alt="" loading="lazy" width="300" height="300"><span class="pick-name">Overstimulated tee</span><span class="pick-price">£19 · free UK post</span></a>
+        <a class="pick" href="/p/low-battery/"><img src="/feed-images/low-battery.jpg" alt="" loading="lazy" width="300" height="300"><span class="pick-name">Low Battery mug</span><span class="pick-price">£13.50 · free UK post</span></a>
+        <a class="pick" href="/p/christmas-cards/"><img src="/assets/xmas/cw-original-cards-page.jpg" alt="" loading="lazy" width="300" height="300"><span class="pick-name">Printable Christmas cards</span><span class="pick-price">£3 · instant download</span></a>
+      </div>
+    </div>
+  </section>
+
   <section class="collection" id="ranges">
     <div class="wrap">
       <div class="section-head">
@@ -85,7 +101,7 @@
           <div class="stage" style="background:#1A1A1A">
             <svg viewBox="0 0 300 300">
               <text x="46" y="120" font-family="Fraunces, serif" font-size="52" fill="#F4EFE3" transform="rotate(-6 46 120)">The</text>
-              <text x="86" y="196" font-family="Anton, sans-serif" font-size="64" fill="#E8B63C" transform="rotate(3 86 196)">WORDS</text>
+              <text x="70" y="196" font-family="Anton, sans-serif" font-size="56" fill="#E8B63C" transform="rotate(3 70 196)">WORDS</text>
               <text x="150" y="252" text-anchor="middle" font-family="Space Mono, monospace" font-size="9" fill="#F4EFE3" opacity="0.65" letter-spacing="0.14em">FIFTY TYPOGRAPHIC PIECES</text>
             </svg>
           </div>
@@ -633,6 +649,17 @@
 <script src="script.js"></script>
 <script src="size-guide.js"></script>
 <script src="basket.js"></script>
+<script>
+/* Phone menu (27 Oct 2026): the full menu was four rows tall and stuck to the
+   top of the screen. On phones it now folds behind a Menu button. */
+(function () {
+  var head = document.querySelector(".site-header"), btn = document.querySelector(".menu-toggle");
+  if (!head || !btn) return;
+  function set(open) { head.classList.toggle("menu-open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); btn.textContent = open ? "Close" : "Menu"; }
+  btn.addEventListener("click", function () { set(!head.classList.contains("menu-open")); });
+  document.querySelectorAll(".site-nav a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+})();
+</script>
 <script src="christmas-set.js"></script>
 <script>
   // How tall the sticky header is right now, so a menu link lands with the
