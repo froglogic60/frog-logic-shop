@@ -191,7 +191,16 @@ customer-facing for "will this get found and bought?" before it goes up.
   Resources on 27 Oct; the "Frog Logic daily group post" scheduled task
   (trig_01XbDudv9ep5iLHhXRfoTNoT, 12:47 UK) posts one group a day 28 Oct–20 Nov
   from a dated list, reads rules first, drafts (never posts) comment replies.
-  The Frog Logic page is in ~30 ND groups; Sam's own profile isn't. Christmas order-by dates are live
+  The Frog Logic page is in ~30 ND groups; Sam's own profile isn't.
+- Search Console: indexing requested for all five gift guides (27 Oct).
+- November newsletter (sends 1 Nov 09:00) now also covers the bright and black &
+  white Christmas frogs (separate links), £3 cards, order-by dates and the gift
+  guides; US share corrected to "one in five" (GoatCounter).
+- Thank-you email for printed orders (stripe-webhook.js, 27 Oct): sent once a
+  Printify order goes through — what's being made, separate parcels, "reply if
+  not here in two weeks", free guides, POND10 for a friend. Chosen instead of a
+  Printify printed insert (T Shirt and Sons doesn't support inserts; routing
+  effect undocumented). eBay parcel cards ruled out: eBay's off-eBay sales policy. Christmas order-by dates are live
   (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec (the 5 Dec one doubles
   as the Small Business Saturday post); check Printify's
   2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
