@@ -616,6 +616,63 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ---
 
+## 32. Life Skills Advocate (gift guide)
+
+**To:** admin@lifeskillsadvocate.com
+**Subject:** For your gifts for autistic adults list
+
+> Hi Chris,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge in the UK. I came across your "12 Gifts for Autistic Adults" list and liked that it's about adult lives rather than children's toys.
+>
+> Everything in my shop uses the words autistic people use for themselves: an Info Dump Incoming print, a Special Interest water bottle, a Parallel Play tee, a Late Diagnosed tee. Tees, mugs, prints and notebooks are also made and shipped inside the US, so there are no import fees.
+>
+> I've put the autism pieces together on one page: https://froglogic.co.uk/p/autism-gifts-for-adults/
+>
+> Very happy to send photos or anything else you need, and no worries at all if it's not a fit.
+>
+> Sam, Frog Logic
+
+---
+
+## 33. SEN Resources Blog, Georgina Durrant (gift guide)
+
+**To:** Cheshiresentutor@gmail.com
+**Subject:** For your SEN Christmas gift guide
+
+> Hi Georgina,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge. I came across your SEN Christmas gift guide and thought a small range of mine might suit it.
+>
+> It's for the parents and carers rather than the children: a mug that says twenty minutes counts, a notebook that says you're allowed to find it hard, a print for when nobody asked how you were. They're all here: https://froglogic.co.uk/p/gifts-for-sen-parents/
+>
+> I also make free plain-English guides to autism, ADHD, PDA and more, written to hand to grandparents and teachers, with no sign-up: https://froglogic.co.uk/p/the-pond-guides/ Your readers are welcome to them whatever you decide.
+>
+> Very happy to send photos or anything else you need.
+>
+> Sam, Frog Logic
+
+---
+
+## 34. Sunday Woman, Martina Mercer (gift guide)
+
+**To:** martinamercer@me.com
+**Subject:** For your gifts for neurodivergent people guide
+
+> Hi Martina,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge. I came across your "Awesome Gifts for Neurodivergent People" guide and thought my frog might make you smile.
+>
+> The Socially Hibernating frog has put on a Santa hat, got under a blanket, tangled himself in the fairy lights and isn't coming out until January. He comes as a hoodie, tee and fleece throw set with UK delivery included, and there are mugs and prints for stocking fillers. Everything uses the words we use for ourselves, not labels.
+>
+> Christmas gifts, all on one page: https://froglogic.co.uk/p/neurodivergent-christmas-gifts/
+>
+> Very happy to send photos or anything else you need.
+>
+> Sam, Frog Logic
+
+---
+
 ## After sending
 
 Log who you sent to and when on the Desk (one line each is fine — "nasen sent 27 Oct"). The 8 Dec nudge is one short reply to your own email: "Just floating this back up in case it got buried — no worries if it's not for you."
