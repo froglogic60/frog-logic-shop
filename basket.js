@@ -25,6 +25,11 @@
   "use strict";
 
   var STORE_KEY = "froglogic.basket.v1";
+  // Counts basket steps in GoatCounter (no cookies, no personal data) so we can
+  // see where visitors stop between looking and paying.
+  function gcEvent(p) {
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: p, title: p, event: true }); } catch (e) {}
+  }
   var MAX_QTY = 20;
 
   var COUNTRY_KEY = "froglogic.country.v1";
@@ -197,6 +202,7 @@
   }
 
   function show() {
+    gcEvent("basket-open");
     lastFocus = document.activeElement;
     open = true;
     els.scrim.hidden = false;
@@ -427,6 +433,7 @@
   }
 
   function add(entry) {
+    gcEvent("basket-add");
     var existing = basket.find(function (l) { return lineKey(l) === lineKey(entry); });
     if (existing) existing.qty = Math.min(MAX_QTY, existing.qty + 1);
     else basket.push(entry);
@@ -481,6 +488,7 @@
   }
 
   function checkout() {
+    gcEvent("checkout-start");
     var go = els.foot.querySelector(".bk-go");
     var err = els.foot.querySelector(".bk-err");
     if (err) err.hidden = true;
