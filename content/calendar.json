@@ -885,7 +885,7 @@
           "who": "robot"
         },
         {
-          "what": "Halloween ends tonight. Nothing to do: from 1 Nov the site hides the Halloween section and stops posting it by itself (set up 26 Oct)",
+          "what": "Halloween ends tonight. Nothing to do: from 1 Nov the site hides the Halloween section and its menu link by itself, and the Retire Halloween robot removes the rest (set up 26–27 Oct)",
           "who": "note"
         }
       ]
@@ -893,6 +893,10 @@
     {
       "date": "2026-11-01",
       "items": [
+        {
+          "what": "00:20 Retire Halloween robot: removes the 10 Halloween product pages, their sitemap entries and checkout items, then publishes once (15 credits). Old links redirect to the frogs. Claude checks it worked when you next say morning.",
+          "who": "robot"
+        },
         {
           "what": "Pin: Hoppy Thoughts — Issue 02 → #digital",
           "who": "robot"
