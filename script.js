@@ -2911,6 +2911,7 @@ function wireCheckoutButtons(){
     e.preventDefault();
     const id = checkoutId(btn.dataset.checkoutNum, btn.dataset.checkoutWord);
     const original = btn.textContent;
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'checkout-start-buynow', title: 'checkout-start-buynow', event: true }); } catch (err) {}
     btn.textContent = 'One moment…';
     btn.disabled = true;
     try {
