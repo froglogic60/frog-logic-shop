@@ -285,6 +285,7 @@ body.low-stim .guide-closing{ border-left-color:var(--ink); }
    with prices straight under the hero. Computers are unchanged. */
 .menu-toggle{ display:none; }
 .mobile-picks{ display:none; }
+.hero-sub-mobile{ display:none; }
 @media (max-width:720px){
   .site-header{ padding:10px 0; }
   .header-row{ flex-direction:row; flex-wrap:nowrap; align-items:center; gap:10px; }
@@ -295,7 +296,16 @@ body.low-stim .guide-closing{ border-left-color:var(--ink); }
   .site-header.menu-open .site-nav{ order:3; flex-basis:100%; flex-wrap:wrap; gap:12px 18px; padding:8px 0 4px; }
   .site-header.menu-open .site-nav > a{ display:inline; font-size:.95rem; }
   .site-header.menu-open .site-nav #low-stim-toggle{ display:inline-flex; }
-  .hero{ padding:32px 0 20px; }
+  .hero{ padding:24px 0 12px; }
+  /* Phones (27 Oct 2026): 83 of 108 visits in a month left from the home page
+     without opening a product. Say plainly what is sold, keep the headline
+     smaller and the buttons tight, so the product picks start on screen one. */
+  .hero h1{ font-size:2.15rem; line-height:1.08; }
+  .hero .eyebrow{ margin-bottom:.8em; }
+  .hero-sub{ display:none; }
+  .hero-sub-mobile{ display:block; font-size:1rem; color:var(--muted); margin-top:.8em; }
+  .hero-actions{ margin-top:1em; gap:8px; }
+  .hero-actions .btn{ padding:10px 16px; font-size:.9rem; }
   .mobile-picks{ display:block; padding:4px 0 28px; }
   .picks-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
   .pick{ display:flex; flex-direction:column; text-decoration:none; color:var(--ink); background:#fff; border:2px solid var(--ink); }
