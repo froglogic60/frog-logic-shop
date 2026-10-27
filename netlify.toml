@@ -103,3 +103,49 @@
   from = "/api/sitemap.xml"
   to = "/sitemap.xml"
   status = 301
+
+# ---- Halloween, after it's gone ----
+# The Halloween pages are removed on 1 Nov 2026 (retire-halloween.yml). Pins and
+# shares still point at them, so each old address goes to the nearest thing
+# still on sale instead of a dead page. While a page still exists Netlify
+# serves the page and ignores the rule, so these sit harmlessly until the 1st.
+[[redirects]]
+  from = "/p/do-not-perceive-me-tee"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/chaos-gremlin-halloween-tee"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/social-battery-undead-tee"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/sensory-witch-tee"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/do-not-perceive-me-mug"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/chaos-gremlin-halloween-mug"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/social-battery-undead-mug"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/sensory-witch-mug"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/do-not-perceive-me-wall-print"
+  to = "/#frogs"
+  status = 301
+[[redirects]]
+  from = "/p/halloween-stickers"
+  to = "/#digital"
+  status = 301
