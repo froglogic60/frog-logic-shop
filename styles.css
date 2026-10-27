@@ -279,3 +279,27 @@ body.low-stim .guide-closing{ border-left-color:var(--ink); }
   .product-card{ grid-template-columns:1fr; }
   .product-card .card-meta{ border-left:none; border-top:2px solid var(--ink); }
 }
+
+/* ===== Phones (27 Oct 2026) =====
+   A slim header (logo, Menu, basket on one line) and a row of real products
+   with prices straight under the hero. Computers are unchanged. */
+.menu-toggle{ display:none; }
+.mobile-picks{ display:none; }
+@media (max-width:720px){
+  .site-header{ padding:10px 0; }
+  .header-row{ flex-direction:row; flex-wrap:nowrap; align-items:center; gap:10px; }
+  .menu-toggle{ display:inline-flex; margin-left:auto; }
+  .site-nav{ gap:10px; flex-wrap:nowrap; }
+  .site-nav > a, .site-nav #low-stim-toggle{ display:none; }
+  .site-header.menu-open .header-row{ flex-wrap:wrap; }
+  .site-header.menu-open .site-nav{ order:3; flex-basis:100%; flex-wrap:wrap; gap:12px 18px; padding:8px 0 4px; }
+  .site-header.menu-open .site-nav > a{ display:inline; font-size:.95rem; }
+  .site-header.menu-open .site-nav #low-stim-toggle{ display:inline-flex; }
+  .hero{ padding:32px 0 20px; }
+  .mobile-picks{ display:block; padding:4px 0 28px; }
+  .picks-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
+  .pick{ display:flex; flex-direction:column; text-decoration:none; color:var(--ink); background:#fff; border:2px solid var(--ink); }
+  .pick img{ width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; display:block; border-bottom:2px solid var(--ink); }
+  .pick-name{ font-family:var(--ui); font-weight:600; font-size:.88rem; line-height:1.25; padding:8px 10px 2px; }
+  .pick-price{ font-family:var(--ui); font-size:.8rem; color:var(--muted); padding:0 10px 10px; }
+}
