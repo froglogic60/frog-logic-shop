@@ -138,6 +138,15 @@ customer-facing for "will this get found and bought?" before it goes up.
   her gift guide (Sam thanked her). Netlify's card payment failed (27 Oct email):
   the shop is suspended after 28 days unpaid, so ~24 Nov. Sam will pay when her
   money comes in (on the Desk 30 Oct).
+- 27 Oct, Google Shopping: the photo fix worked (not approved 113 -> 5, those 5
+  just await image reprocessing; ~130 under review, 9 approved; Google also found
+  33 more products itself). Merchant Center now targets the UK AND the US: the
+  feed carries a US shipping rate for every piece with a US-made twin at the same
+  price (102 of 113 listings), shown to US shoppers in dollars via Google's
+  currency conversion. Customer service contact set (hello@ + returns page).
+- GoatCounter, 28 Sep-27 Oct: 105 visits (82 to the home page). From: Pinterest
+  33, unknown 29, Facebook 18, ChatGPT 3, Google 2. UK 64%, US 20%, Canada 7%.
+  54% on phones. Traffic, not the shop, is the bottleneck.
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
