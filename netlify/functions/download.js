@@ -56,6 +56,10 @@ const page = (status, text) =>
 
 export default async (req) => {
   const u = new URL(req.url);
+  // Health check (no file, no secrets): are the PDFs bundled and is a key set?
+  if (u.searchParams.get("check") === "1") {
+    return Response.json({ files: findFile("When-Words-Go.pdf") ? "ok" : "missing", key: !!(process.env.DOWNLOAD_KEY || process.env.STRIPE_SECRET_KEY) });
+  }
   const file = u.searchParams.get("f") || "";
   const expires = Number(u.searchParams.get("e") || 0);
   const sig = u.searchParams.get("s") || "";
