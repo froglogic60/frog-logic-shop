@@ -478,7 +478,7 @@ function collect(shop) {
     const section = p.halloween ? ["Halloween at the Pond", "#halloween"] : p.frog ? ["The frogs", "#frogs"] : ["The words", "#collection"];
     pages.push({ item: p, group: "physical", slug: shop.pageSlug(p), svg: absSvg(p.svg), photo: mockups[shop.checkoutId(p.num, p.word)] || null, section: section[0], anchor: section[1] });
   }
-  for (const p of shop.DIGITAL_PRODUCTS) {
+  for (const p of shop.DIGITAL_PRODUCTS.filter((x) => !x.retired)) {
     // The Christmas card downloads carry a real picture of the cards and sit
     // on their own tab (20 Oct 2026).
     const xmasPhoto = p.xmas ? { src: `${SITE}/assets/xmas/cw-${p.xmas}-cards-page.jpg`, alt: `${p.word}: the three printed cards` } : null;
