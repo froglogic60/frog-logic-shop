@@ -27,6 +27,17 @@
 [functions]
   node_bundler = "esbuild"
 
+# Paid PDFs reach buyers only through /api/download (signed, expiring links),
+# so that one function carries the files with it.
+[functions.download]
+  included_files = ["digital/**"]
+
+# Nothing under /digital/ should appear in search results.
+[[headers]]
+  for = "/digital/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 # sw.js removes the old Replit service worker still installed in people's
 # browsers on froglogic.co.uk and www.froglogic.co.uk. A browser will only pick
 # it up if it actually re-fetches it, so it must never be served from cache.
@@ -153,3 +164,228 @@
   from = "/p/halloween-stickers"
   to = "/#digital"
   status = 301
+
+# ---- Paid downloads are not public (27 Oct 2026) ----
+# Each paid PDF answers 404 at its old public address; buyers get a signed
+# /api/download link instead (netlify/functions/download.js). The free Pond
+# Guides (Pond-Guide-*.pdf) stay public. A NEW paid PDF needs a line here too.
+[[redirects]]
+  from = "/digital/30-Days-at-the-Pond.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Access-Needs-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Affirmation-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/After-The-Diagnosis.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Appointment-Prep.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Ask-For-It-Properly.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Cards-Black-and-White-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Cards-Black-and-White.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Cards-Bright-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Cards-Bright.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Cards-Original-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Cards-Original.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Finding-My-People.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/For-The-Sibling.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Frog-Logic-Stickers.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Good-Day-Blueprint.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Habit-Stacking-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Halloween-Stickers.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Hoppy-Thoughts-Issue-01.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Hoppy-Thoughts-Issue-02.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/How-To-Help-Me.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Lily-Pad-Planner.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Low-Spoons-Day-Planner.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/My-Pond-Plan.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/My-Sensory-Profile.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/One-Task-Broken-Down.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Organisation-Pack-Organisation.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Organisation-Pack-Service.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Organisation-Pack-Team.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Permission-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Safe-Foods-Planner.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Say-It-Scripts.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Say-What-You-Need.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Show-These-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/The-Handover-Sheet.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/The-Joy-Log.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/The-Pocket-Pond.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/The-Pond-Guides-Complete-Set.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Translation-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Unmasking-Recovery.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Weekly-Spoon-Tracker.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/What-Im-Actually-Good-At.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/When-Words-Go.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Your-Sheet-For-Once.pdf"
+  to = "/404"
+  status = 404
+  force = true
