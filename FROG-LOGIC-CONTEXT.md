@@ -153,6 +153,11 @@ customer-facing for "will this get found and bought?" before it goes up.
   hero (Christmas set, Overstimulated tee, Low Battery mug, printable cards;
   hand-picked in index.html .mobile-picks, update if prices change). Computer
   view unchanged. "WORDS" on the ranges card no longer runs off the edge.
+- 27 Oct full site check: 138 pages load, no broken links, no script errors,
+  nothing overflows on a phone, all 284 product photos load, every paid page
+  price matches the checkout, basket UK/US postage and the live Stripe page are
+  right. Fixed: UK Christmas ornament said £10 but Etsy charges £13.75. Etsy
+  shows US-made listings 20% dearer to UK viewers (import VAT) - not an error.
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
