@@ -22,6 +22,10 @@ customer-facing for "will this get found and bought?" before it goes up.
   `Downloads\frog-logic-shop` on the PC is an old August copy; don't edit it.
 - **Etsy:** froglogic.etsy.com (shop name FrogLogic). Downloads plus tees, mugs,
   prints and the Christmas range made through Printify.
+- **Tes (27 Oct):** account FrogLogic (teacher marketplace, Bronze 60% royalty).
+  Pond Guides Complete Set £8 (same as site) + all 23 single guides free
+  (NoDerivatives licence; Tes copies have their own small print). Tes reviews
+  new resources for up to 3 working days. TPT (US) not done: set-up fee, 55%.
 - **Printify:** API store 28035653 (the site's orders) and "My Etsy Store"
   29335686. The API store also holds ~2,870 stray products from the old Replit
   app; a clean-out robot is possible, not urgent.
