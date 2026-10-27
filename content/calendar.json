@@ -923,6 +923,10 @@
       "date": "2026-11-04",
       "items": [
         {
+          "what": "Crip Life (Emma Purcell) wants your answer by 6 Nov: they'll feature Frog Logic only through their pay-what-you-can advertising (criplife.co.uk/work-with-us). Your call whether to pay anything; Claude can draft the reply",
+          "who": "you"
+        },
+        {
           "what": "Google Shopping check: product photos moved to froglogic.co.uk on 26 Oct so Google can read them. Look in Merchant Center (Products) for how many of the 113 are now approved — Claude can check and fix anything still flagged",
           "who": "robot"
         },
