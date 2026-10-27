@@ -139,9 +139,9 @@ customer-facing for "will this get found and bought?" before it goes up.
   donated instead).
 - Small Business Sunday every Sunday 5–7:30pm (Theo Paphitis, #SBS).
 - 27 Oct: Emily Ladau replied she'll "hold onto your shop for consideration" for
-  her gift guide (Sam thanked her). Netlify's card payment failed (27 Oct email):
-  the shop is suspended after 28 days unpaid, so ~24 Nov. Sam will pay when her
-  money comes in (on the Desk 30 Oct).
+  her gift guide (Sam thanked her). Netlify's card payment failed (27 Oct email);
+  Sam PAID it 27 Oct with her Monzo business card. The same card is on Printify
+  as backup to the Printify balance (balance is used first).
 - 27 Oct, Google Shopping: the photo fix worked (not approved 113 -> 5, those 5
   just await image reprocessing; ~130 under review, 9 approved; Google also found
   33 more products itself). Merchant Center now targets the UK AND the US: the
