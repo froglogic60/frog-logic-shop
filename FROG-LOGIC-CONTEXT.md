@@ -147,6 +147,12 @@ customer-facing for "will this get found and bought?" before it goes up.
 - GoatCounter, 28 Sep-27 Oct: 105 visits (82 to the home page). From: Pinterest
   33, unknown 29, Facebook 18, ChatGPT 3, Google 2. UK 64%, US 20%, Canada 7%.
   54% on phones. Traffic, not the shop, is the bottleneck.
+- 27 Oct, phone layout (Sam: "yes go ahead"): on screens up to 720px the header
+  is one line (logo, Menu button, basket) instead of four sticky rows, and a
+  "Popular for Christmas" 2x2 grid of real products with prices sits under the
+  hero (Christmas set, Overstimulated tee, Low Battery mug, printable cards;
+  hand-picked in index.html .mobile-picks, update if prices change). Computer
+  view unchanged. "WORDS" on the ranges card no longer runs off the edge.
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
