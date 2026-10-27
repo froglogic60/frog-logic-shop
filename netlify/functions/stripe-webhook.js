@@ -86,6 +86,47 @@ async function sendDownloadEmail({ toEmail, items }) {
   }
 }
 
+// A thank-you for printed orders (27 Oct 2026, Sam: "put the card in Frog Logic
+// orders"). Printify can't put a printed card in every maker's parcels, so this
+// is the card, by email: what's being made, that parcels may arrive separately,
+// who to ask if it is slow, the free guides, and POND10 to pass on. Only
+// sent once at least one Printify order went through, so it never promises a
+// parcel that isn't coming.
+const escHtml = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+export function thankYouHtml({ firstName, items, parcels, site }) {
+  const list = items.map((i) => `<li>${escHtml(i.name)}${i.size ? ` (${escHtml(i.size)})` : ""}${i.qty > 1 ? ` &times; ${i.qty}` : ""}</li>`).join("");
+  return `<p>Hello${firstName ? ` ${escHtml(firstName)}` : ""},</p>
+             <p>Thank you so much for your order. It really does make my day: Frog Logic is just me, running it from my lounge.</p>
+             <p>Being made for you now:</p>
+             <ul>${list}</ul>
+             <p>Everything is printed to order, so please allow a little time${parcels > 1 ? `. Your pieces come from ${parcels} different makers, so they'll arrive as ${parcels} separate parcels` : ""}. If anything hasn't turned up within two weeks, reply to this email and I'll chase it.</p>
+             <p>While you wait: the <a href="${site}/p/the-pond-guides/?ref=thankyou">Pond Guides</a> are free, plain-English guides to autism, ADHD, AuDHD, PDA and more, written to hand to the people around you. Help yourself.</p>
+             <p>If a friend would like something from the pond, <strong>POND10</strong> takes 10% off their first order.</p>
+             <p>Anything wrong, or just want to say hello? Reply to this email or write to
+             <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a>. The
+             <a href="${site}/returns">returns page</a> has the detail.</p>
+             <p>with love Sam 🐸</p>`;
+}
+
+async function sendThankYouEmail({ toEmail, firstName, items, parcels }) {
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      from: process.env.FROM_EMAIL,
+      to: toEmail,
+      subject: "Thank you! Your Frog Logic order is being made",
+      html: thankYouHtml({ firstName, items, parcels, site: process.env.SITE_URL }),
+    }),
+  });
+  if (!res.ok) {
+    throw new Error(`Resend failed: ${res.status} ${await res.text()}`);
+  }
+}
+
 // One Printify order per print provider. Printify will not accept a single
 // order spanning two providers, and splitting is not optional — it is what is
 // physically happening, since each provider posts its own parcel.
@@ -182,10 +223,12 @@ export default async (req) => {
   const blockNI = dest === "GB" && /^BT\d/.test(postcode);
 
   const lines = [];
+  const madeForYou = []; // what the thank-you email lists, one row per basket line
   for (const row of rows) {
     const base = catalog.find((p) => p.id === row.id);
     const item = base && forCountry(base, dest);
     if (!item) { console.error("Webhook: unknown product id", row.id, "in session", session.id); continue; }
+    if ((item.parts && !item.notMadeHere) || item.type === "physical") madeForYou.push({ name: item.name || base.name || item.id, size: item.parts ? null : row.size, qty: row.qty });
     if (item.parts) {
       // A Christmas set: one line per part, each its own Printify product
       // (and, in the UK, its own maker and parcel). Variants are "v1.v2.v3"
@@ -230,11 +273,22 @@ export default async (req) => {
     }
   }
 
+  let parcelsOrdered = 0;
   for (const [providerKey, group] of byProvider) {
     try {
       await createPrintifyOrder({ session, providerKey, lines: group });
+      parcelsOrdered++;
     } catch (err) {
       failures.push(`printify ${providerKey} (${group.map((l) => l.item.id).join(", ")}): ${err.message}`);
+    }
+  }
+
+  if (parcelsOrdered && madeForYou.length) {
+    try {
+      const fullName = (session.shipping_details || session.collected_information?.shipping_details)?.name || session.customer_details?.name || "";
+      await sendThankYouEmail({ toEmail: session.customer_details?.email, firstName: fullName.split(" ")[0], items: madeForYou, parcels: parcelsOrdered });
+    } catch (err) {
+      failures.push(`thank-you email: ${err.message}`);
     }
   }
 
