@@ -1,0 +1,354 @@
+[
+  {
+    "postOn": "2026-11-02",
+    "name": "news-1",
+    "type": "news",
+    "card": {
+      "headline": "Local frog finishes one (1) task",
+      "sub": "Celebrations expected to last the rest of the afternoon",
+      "photo": "chaos-gremlin",
+      "pictured": "Pictured: the frog, mid-celebration"
+    },
+    "caption": "Breaking news from the pond 🐸 The frog did one whole thing today and is now having a well-earned sit down. We're all very proud.\n\nWhat was your one thing? (Getting dressed counts. It always counts.)\n\nwith love Sam\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/news-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-03",
+    "name": "slip-1",
+    "type": "slip",
+    "card": {
+      "text": "The bearer of this slip may have cereal for dinner.",
+      "small": "No questions will be asked.",
+      "no": "0001"
+    },
+    "caption": "Signed and stamped. Tag someone who needs this one tonight 🥣\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/slip-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-04",
+    "name": "pond-1",
+    "type": "pond",
+    "card": {
+      "scene": "tea",
+      "text": "The frog has made tea for Sid the snail. Sid said he'd be here at 3."
+    },
+    "caption": "Sid did say 3. He didn't say which day. The tea is on its second refill and everyone is fine about it.\n\nMeet the pond regulars this month: the frog, Sid the snail (always late, never sorry), Hermione the heron (a bit much) and Dot the dormouse (asleep since October).\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/pond-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-05",
+    "name": "fact-1",
+    "type": "fact",
+    "card": {
+      "no": 1,
+      "text": "Frogs, toads and hedgehogs love a pile of leaves and logs. To them, your bonfire looks like a lovely bed.",
+      "source": "Essex Wildlife Trust"
+    },
+    "caption": "If you're having a bonfire tonight, build it on the day if you can. If it's already built, move it bit by bit or have a good look through before you light it. The frog thanks you 🐸🔥\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/fact-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-06",
+    "name": "star-1",
+    "type": "star",
+    "card": {
+      "title": "Gold Star Friday",
+      "text": "Tell the frog one small thing you did this week. Every single one gets a gold star."
+    },
+    "caption": "Small counts. Replied to one email? Gold star. Ate something green? Gold star. Got up on a hard day? Big gold star.\n\nTell the frog below and he'll give you yours ⭐\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/star-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-07",
+    "name": "spot-1",
+    "type": "spot",
+    "card": {
+      "scene": "leaves",
+      "text": "He's hiding in the leaves."
+    },
+    "caption": "Autumn edition. He's very pleased with this spot. Don't give it away, just comment 🐸 when you've found him.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/spot-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-08",
+    "name": "frogs-1",
+    "type": "frogs",
+    "card": {
+      "text": "Garden frogs, frog mugs, frog slippers, the frog you drew when you were six. All frogs welcome."
+    },
+    "caption": "It's Sunday, so let's fill the comments with frogs 🐸 Pop a photo of any frog in your life below.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/frogs-1.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-09",
+    "name": "news-2",
+    "type": "news",
+    "card": {
+      "headline": "Snail arrives at party two days late",
+      "sub": "Is welcomed warmly anyway. “We saved you a crisp,” says frog",
+      "photo": "SNAIL",
+      "pictured": "Pictured: Sid, who was “on his way the whole time”"
+    },
+    "caption": "Sid would like everyone to know he was \"on his way the whole time\". The crisp was delicious. 🐌\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/news-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-10",
+    "name": "slip-2",
+    "type": "slip",
+    "card": {
+      "text": "The bearer may cancel the plans and feel nothing but relief.",
+      "small": "Valid all week.",
+      "no": "0002"
+    },
+    "caption": "Stamped and valid all week. Tag the friend who'll understand 🐸\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/slip-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-11",
+    "name": "pond-2",
+    "type": "pond",
+    "card": {
+      "scene": "heron",
+      "text": "Hermione has announced she is “absolutely fine”. They heard it three ponds away."
+    },
+    "caption": "The frog brought her a biscuit and sat with her for a bit. She was, it turns out, a little less fine than announced. The biscuit helped. It usually does.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/pond-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-12",
+    "name": "fact-2",
+    "type": "fact",
+    "card": {
+      "no": 2,
+      "text": "Wood frogs freeze almost solid in winter. Their heart stops. In spring they thaw out and carry on.",
+      "source": "US National Science Foundation"
+    },
+    "caption": "They make their own antifreeze out of sugar, stay frozen all winter, and thaw out in spring, heart and brain first. Back to normal within about ten hours.\n\nSo if you're planning to go quiet until March, you're in excellent company 🐸❄️\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/fact-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-13",
+    "name": "star-2",
+    "type": "star",
+    "card": {
+      "title": "Gold Star Friday",
+      "kicker": "World Kindness Day",
+      "text": "Tell the frog something kind someone did for you this week."
+    },
+    "caption": "Today the stars go to the kind people. Tell us who held the door, sent the text, made the tea. The frog will give them a gold star, and you one for noticing ⭐\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/star-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-14",
+    "name": "spot-2",
+    "type": "spot",
+    "card": {
+      "scene": "shelf",
+      "text": "He's having a sit down on the tea shelf."
+    },
+    "caption": "Kitchen edition. Comment 🐸 when you've found him, and no spoilers.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/spot-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-15",
+    "name": "frogs-2",
+    "type": "frogs",
+    "card": {
+      "text": "The frog things you use every day: mugs, keyrings, socks, phone cases."
+    },
+    "caption": "Everyday frogs this week 🐸 What frog thing do you reach for most? Photos very welcome.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/frogs-2.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-16",
+    "name": "news-3",
+    "type": "news",
+    "card": {
+      "headline": "Dormouse sleeps through entire week",
+      "sub": "Reports she “didn't miss much”. Pond agrees",
+      "photo": "DOT",
+      "pictured": "Pictured: Dot, unavailable for comment"
+    },
+    "caption": "Dot has the right idea, honestly. Back next week with more news, or none, depending on Dot. 🐭\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/news-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-17",
+    "name": "slip-3",
+    "type": "slip",
+    "card": {
+      "text": "The bearer may rewatch the same show for the fourth time.",
+      "small": "It's tradition now.",
+      "no": "0003"
+    },
+    "caption": "Valid for comfort films, comfort series and that one episode you know by heart. Tag your rewatch buddy 📺\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/slip-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-18",
+    "name": "pond-3",
+    "type": "pond",
+    "card": {
+      "scene": "dot",
+      "text": "The frog checked on Dot. Still asleep. He left her a note."
+    },
+    "caption": "Some friends you see every day. Some you see in spring. Both count 🐸\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/pond-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-19",
+    "name": "fact-3",
+    "type": "fact",
+    "card": {
+      "no": 3,
+      "text": "Glass frogs are see-through. When they nap, they tuck almost all their red blood cells away in their liver, so they're even harder to spot.",
+      "source": "Duke University / Science, 2022"
+    },
+    "caption": "Scientists found they hide nearly 90% of their red blood cells while they sleep, then let them back out when they wake.\n\nEven frogs need to go a bit invisible sometimes 🐸\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/fact-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-20",
+    "name": "star-3",
+    "type": "star",
+    "card": {
+      "title": "Gold Star Friday",
+      "kicker": "Skipped-it edition",
+      "text": "This week: gold stars for the things you skipped on purpose."
+    },
+    "caption": "Said no to something? Left the washing for tomorrow? Didn't go, and felt fine about it? That's a gold star too. Tell the frog ⭐\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/star-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-21",
+    "name": "spot-3",
+    "type": "spot",
+    "card": {
+      "scene": "frost",
+      "text": "He's found a warm spot."
+    },
+    "caption": "Frosty edition ❄️ Comment 🐸 when you find him, and no spoilers.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/spot-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-22",
+    "name": "frogs-3",
+    "type": "frogs",
+    "card": {
+      "text": "Frogs in hats, frogs in scarves, frogs in costumes. Dressed-up frogs only."
+    },
+    "caption": "Fancy dress Sunday 🎩🐸 Real, knitted, drawn or plastic, all dressed-up frogs welcome.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/frogs-3.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-23",
+    "name": "news-4",
+    "type": "news",
+    "card": {
+      "headline": "Frog attempts to put up fairy lights",
+      "sub": "Gets tangled. Decides this is the look now",
+      "photo": "socially-hibernating",
+      "pictured": "Pictured: the look"
+    },
+    "caption": "He's very warm and very sparkly and he's not coming out until January ✨🐸\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/news-4.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-24",
+    "name": "slip-4",
+    "type": "slip",
+    "card": {
+      "text": "The bearer may leave the party early.",
+      "small": "No speech required.",
+      "no": "0004"
+    },
+    "caption": "Christmas party season starts here. Screenshot it, keep it in your pocket, tag whoever's driving 🚗\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/slip-4.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-25",
+    "name": "pond-4",
+    "type": "pond",
+    "card": {
+      "scene": "cracker",
+      "text": "The pond is planning Christmas. Hermione wanted a big one. They've settled on one small cracker."
+    },
+    "caption": "Sid has promised to be on time. Nobody believes him. They're saving him a seat anyway 🐌🎄\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/pond-4.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-26",
+    "name": "fact-4",
+    "type": "fact",
+    "card": {
+      "no": 4,
+      "text": "Some male common frogs spend all winter at the bottom of a pond, breathing through their skin.",
+      "source": "Amphibian and Reptile Conservation"
+    },
+    "caption": "Most of our frogs spend winter tucked under logs, rocks or compost heaps. A few stay down in the pond mud till spring.\n\nLeave a pile of leaves in a corner of the garden and you've made someone a bedroom 🐸🍂\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/fact-4.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-27",
+    "name": "star-4",
+    "type": "star",
+    "card": {
+      "title": "Gold Star Friday",
+      "kicker": "No deals here. Just stars.",
+      "text": "Tell the frog one thing you got through this week."
+    },
+    "caption": "The internet is very loud today. Over here it's just the frog handing out gold stars. Tell him one thing you got through this week ⭐\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/star-4.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-28",
+    "name": "spot-4",
+    "type": "spot",
+    "card": {
+      "scene": "tree",
+      "text": "He's disguised himself as a decoration."
+    },
+    "caption": "Christmas tree edition 🎄 Comment 🐸 when you find him. He thinks he's very convincing.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/spot-4.jpg",
+    "posted": false
+  },
+  {
+    "postOn": "2026-11-29",
+    "name": "frogs-4",
+    "type": "frogs",
+    "card": {
+      "text": "Christmas edition: frog baubles, frog cards, frogs in Santa hats.",
+      "xmas": true
+    },
+    "caption": "Let's see the festive frogs 🎅🐸 If you haven't got one, a drawing absolutely counts.\n\n#FrogLogic #frogs",
+    "image": "automation/social/fun/frogs-4.jpg",
+    "posted": false
+  }
+]
