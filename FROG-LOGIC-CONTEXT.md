@@ -181,7 +181,17 @@ customer-facing for "will this get found and bought?" before it goes up.
   addresses to /#frogs (stickers to /#digital). Chaos Gremlin itself is a
   year-round frog and stays.
 - The three Christmas ranges (originals, bright, black & white) stay as three
-  separate menu links and sections; never group or mix them (Sam, 27 Oct). Christmas order-by dates are live
+  separate menu links and sections; never group or mix them (Sam, 27 Oct).
+- Christmas gift guides live 27 Oct: /p/adhd-gifts/, /p/autism-gifts-for-adults/,
+  /p/gifts-for-sen-parents/, /p/neurodivergent-stocking-fillers/ and the hub
+  /p/neurodivergent-christmas-gifts/. Built by automation/site/gift-guides.cjs
+  (called from build-pages.cjs; picks by "Word|Kind" or "slug:..."), linked from
+  the home page's Christmas section and the phone picks. In the sitemap.
+- Group posts: free guides posted as Frog Logic in Autism Parents Support &
+  Resources on 27 Oct; the "Frog Logic daily group post" scheduled task
+  (trig_01XbDudv9ep5iLHhXRfoTNoT, 12:47 UK) posts one group a day 28 Oct–20 Nov
+  from a dated list, reads rules first, drafts (never posts) comment replies.
+  The Frog Logic page is in ~30 ND groups; Sam's own profile isn't. Christmas order-by dates are live
   (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec (the 5 Dec one doubles
   as the Small Business Saturday post); check Printify's
   2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
