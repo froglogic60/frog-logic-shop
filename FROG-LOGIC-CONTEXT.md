@@ -200,7 +200,19 @@ customer-facing for "will this get found and bought?" before it goes up.
   Printify order goes through — what's being made, separate parcels, "reply if
   not here in two weeks", free guides, POND10 for a friend. Chosen instead of a
   Printify printed insert (T Shirt and Sons doesn't support inserts; routing
-  effect undocumented). eBay parcel cards ruled out: eBay's off-eBay sales policy. Christmas order-by dates are live
+  effect undocumented). eBay parcel cards ruled out: eBay's off-eBay sales policy.
+- Social, 27 Oct (Sam: "fun, light stuff that makes people feel good"): product
+  posts cut from 3 a day to 1 (daily-social.yml, 1pm) after 186 posts in 28 days
+  averaged 0.16 interactions. Fun posts at 7pm from 2 Nov (fun-posts.yml reading
+  automation/social/fun-queue.json; cards by fun-cards.cjs / fun-cards.yml in
+  automation/social/fun/): Mon Pond News, Tue permission slip, Wed the pond
+  regulars (the frog, Sid the snail, Hermione the heron, Dot the dormouse), Thu
+  frog fact (sources checked), Fri Gold Star Friday, Sat Spot the frog, Sun Show
+  us your frogs. Four weeks queued to 29 Nov; plan doc: Claude Docs "Frog Logic
+  page posts - four weeks of fun". Next batch needed before 30 Nov.
+- Pinterest 27 Oct: 7 gift-guide pins (xmas-pins.py BATCH=gifts) for 28-31 Oct;
+  5 pins with old prices replaced (images rebuilt). Pinterest's result email can
+  say "0 Pins were created" when they were; check the scheduled list instead. Christmas order-by dates are live
   (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec (the 5 Dec one doubles
   as the Small Business Saturday post); check Printify's
   2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
