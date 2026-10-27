@@ -134,6 +134,10 @@ customer-facing for "will this get found and bought?" before it goes up.
   pay-what-you-can donation; Sam offered free planners + a reader code with 10%
   donated instead).
 - Small Business Sunday every Sunday 5–7:30pm (Theo Paphitis, #SBS).
+- 27 Oct: Emily Ladau replied she'll "hold onto your shop for consideration" for
+  her gift guide (Sam thanked her). Netlify's card payment failed (27 Oct email):
+  the shop is suspended after 28 days unpaid, so ~24 Nov. Sam will pay when her
+  money comes in (on the Desk 30 Oct).
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
