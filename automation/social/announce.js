@@ -23,7 +23,9 @@ const { makeRenderer } = require("./render2.js");
 const GRAPH = "https://graph.facebook.com/v20.0";
 const RAW_BASE = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/queue";
 const QUEUE = path.join(__dirname, "queue");
-const QUEUE_FILE = path.join(__dirname, "announce-queue.json");
+// QUEUE_FILE picks the queue: announce-queue.json (default) or fun-queue.json
+// (the daily fun page posts, 27 Oct 2026, posted by fun-posts.yml).
+const QUEUE_FILE = path.join(__dirname, process.env.QUEUE_FILE || "announce-queue.json");
 const DUE_MARKER = path.join(__dirname, ".due");
 
 function readSpec() {
