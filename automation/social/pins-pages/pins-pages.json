@@ -3,812 +3,833 @@
     "file": "the-bespoke-planner.png",
     "slug": "the-bespoke-planner",
     "group": "bespoke",
-    "when": "2026-10-14T08:00:00",
+    "when": "2026-10-28T08:00:00",
     "title": "The Bespoke Planner | A printable planner built for your brain (ADHD, autism, AuDHD)"
   },
   {
     "file": "autism.png",
     "slug": "autism",
     "group": "guide",
-    "when": "2026-10-14T10:30:00",
+    "when": "2026-10-28T10:30:00",
     "title": "Autism explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "adhd.png",
     "slug": "adhd",
     "group": "guide",
-    "when": "2026-10-14T15:00:00",
+    "when": "2026-10-28T15:00:00",
     "title": "ADHD explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "audhd.png",
     "slug": "audhd",
     "group": "guide",
-    "when": "2026-10-14T18:00:00",
+    "when": "2026-10-28T18:00:00",
     "title": "AuDHD explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "dyslexia.png",
     "slug": "dyslexia",
     "group": "guide",
-    "when": "2026-10-14T20:30:00",
+    "when": "2026-10-28T20:30:00",
     "title": "Dyslexia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "dyspraxia.png",
     "slug": "dyspraxia",
     "group": "guide",
-    "when": "2026-10-15T08:00:00",
+    "when": "2026-10-29T08:00:00",
     "title": "Dyspraxia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "dyscalculia.png",
     "slug": "dyscalculia",
     "group": "guide",
-    "when": "2026-10-15T10:30:00",
+    "when": "2026-10-29T10:30:00",
     "title": "Dyscalculia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "dysgraphia.png",
     "slug": "dysgraphia",
     "group": "guide",
-    "when": "2026-10-15T15:00:00",
+    "when": "2026-10-29T15:00:00",
     "title": "Dysgraphia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "tourette-s-and-tics.png",
     "slug": "tourette-s-and-tics",
     "group": "guide",
-    "when": "2026-10-15T18:00:00",
+    "when": "2026-10-29T18:00:00",
     "title": "Tourette's & Tics explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "ocd.png",
     "slug": "ocd",
     "group": "guide",
-    "when": "2026-10-15T20:30:00",
+    "when": "2026-10-29T20:30:00",
     "title": "OCD explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "pda.png",
     "slug": "pda",
     "group": "guide",
-    "when": "2026-10-16T08:00:00",
+    "when": "2026-10-30T08:00:00",
     "title": "PDA explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "sensory-differences.png",
     "slug": "sensory-differences",
     "group": "guide",
-    "when": "2026-10-16T10:30:00",
+    "when": "2026-10-30T10:30:00",
     "title": "Sensory Differences explained — a free, plain-English guide for the person and the people around the"
   },
   {
     "file": "bipolar.png",
     "slug": "bipolar",
     "group": "guide",
-    "when": "2026-10-16T15:00:00",
+    "when": "2026-10-30T15:00:00",
     "title": "Bipolar explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "cptsd.png",
     "slug": "cptsd",
     "group": "guide",
-    "when": "2026-10-16T18:00:00",
+    "when": "2026-10-30T18:00:00",
     "title": "CPTSD explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "bpd-eupd.png",
     "slug": "bpd-eupd",
     "group": "guide",
-    "when": "2026-10-16T20:30:00",
+    "when": "2026-10-30T20:30:00",
     "title": "BPD / EUPD explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "anxiety.png",
     "slug": "anxiety",
     "group": "guide",
-    "when": "2026-10-17T08:00:00",
+    "when": "2026-10-31T08:00:00",
     "title": "Anxiety explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "depression.png",
     "slug": "depression",
     "group": "guide",
-    "when": "2026-10-17T10:30:00",
+    "when": "2026-10-31T10:30:00",
     "title": "Depression explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "misophonia.png",
     "slug": "misophonia",
     "group": "guide",
-    "when": "2026-10-17T15:00:00",
+    "when": "2026-10-31T15:00:00",
     "title": "Misophonia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "aphantasia.png",
     "slug": "aphantasia",
     "group": "guide",
-    "when": "2026-10-17T18:00:00",
+    "when": "2026-10-31T18:00:00",
     "title": "Aphantasia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "synaesthesia.png",
     "slug": "synaesthesia",
     "group": "guide",
-    "when": "2026-10-17T20:30:00",
+    "when": "2026-10-31T20:30:00",
     "title": "Synaesthesia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "alexithymia.png",
     "slug": "alexithymia",
     "group": "guide",
-    "when": "2026-10-18T08:00:00",
+    "when": "2026-11-01T08:00:00",
     "title": "Alexithymia explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "face-blindness.png",
     "slug": "face-blindness",
     "group": "guide",
-    "when": "2026-10-18T10:30:00",
+    "when": "2026-11-01T10:30:00",
     "title": "Face Blindness explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "situational-mutism.png",
     "slug": "situational-mutism",
     "group": "guide",
-    "when": "2026-10-18T15:00:00",
+    "when": "2026-11-01T15:00:00",
     "title": "Situational Mutism explained — a free, plain-English guide for the person and the people around them"
   },
   {
     "file": "auditory-processing-guide.png",
     "slug": "auditory-processing-guide",
     "group": "guide",
-    "when": "2026-10-18T18:00:00",
+    "when": "2026-11-01T18:00:00",
     "title": "Auditory Processing explained — a free, plain-English guide for the person and the people around the"
   },
   {
     "file": "when-words-go.png",
     "slug": "when-words-go",
     "group": "digital",
-    "when": "2026-10-18T20:30:00",
+    "when": "2026-11-01T20:30:00",
     "title": "When Words Go | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "low-spoons-day-planner.png",
     "slug": "low-spoons-day-planner",
     "group": "digital",
-    "when": "2026-10-19T08:00:00",
+    "when": "2026-11-02T08:00:00",
     "title": "Low Spoons Day Planner | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "my-pond-plan.png",
     "slug": "my-pond-plan",
     "group": "digital",
-    "when": "2026-10-19T10:30:00",
+    "when": "2026-11-02T10:30:00",
     "title": "My Pond Plan | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "say-it-communication-scripts.png",
     "slug": "say-it-communication-scripts",
     "group": "digital",
-    "when": "2026-10-19T15:00:00",
+    "when": "2026-11-02T15:00:00",
     "title": "Say It — Communication Scripts | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "weekly-spoon-tracker.png",
     "slug": "weekly-spoon-tracker",
     "group": "digital",
-    "when": "2026-10-19T18:00:00",
+    "when": "2026-11-02T18:00:00",
     "title": "Weekly Spoon Tracker | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "unmasking-recovery.png",
     "slug": "unmasking-recovery",
     "group": "digital",
-    "when": "2026-10-19T20:30:00",
+    "when": "2026-11-02T20:30:00",
     "title": "Unmasking Recovery | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "my-sensory-profile.png",
     "slug": "my-sensory-profile",
     "group": "digital",
-    "when": "2026-10-20T08:00:00",
+    "when": "2026-11-03T08:00:00",
     "title": "My Sensory Profile | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "appointment-prep.png",
     "slug": "appointment-prep",
     "group": "digital",
-    "when": "2026-10-20T10:30:00",
+    "when": "2026-11-03T10:30:00",
     "title": "Appointment Prep | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "permission-cards.png",
     "slug": "permission-cards",
     "group": "digital",
-    "when": "2026-10-20T15:00:00",
+    "when": "2026-11-03T15:00:00",
     "title": "Permission Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "the-joy-log.png",
     "slug": "the-joy-log",
     "group": "digital",
-    "when": "2026-10-20T18:00:00",
+    "when": "2026-11-03T18:00:00",
     "title": "The Joy Log | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "one-task-broken-down.png",
     "slug": "one-task-broken-down",
     "group": "digital",
-    "when": "2026-10-20T20:30:00",
+    "when": "2026-11-03T20:30:00",
     "title": "One Task, Broken Down | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "safe-foods-planner.png",
     "slug": "safe-foods-planner",
     "group": "digital",
-    "when": "2026-10-21T08:00:00",
+    "when": "2026-11-04T08:00:00",
     "title": "Safe Foods Planner | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "access-needs-cards.png",
     "slug": "access-needs-cards",
     "group": "digital",
-    "when": "2026-10-21T10:30:00",
+    "when": "2026-11-04T10:30:00",
     "title": "Access Needs Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "what-i-m-actually-good-at.png",
     "slug": "what-i-m-actually-good-at",
     "group": "digital",
-    "when": "2026-10-21T15:00:00",
+    "when": "2026-11-04T15:00:00",
     "title": "What I'm Actually Good At | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "good-day-blueprint.png",
     "slug": "good-day-blueprint",
     "group": "digital",
-    "when": "2026-10-21T18:00:00",
+    "when": "2026-11-04T18:00:00",
     "title": "Good Day Blueprint | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "ask-for-it-properly.png",
     "slug": "ask-for-it-properly",
     "group": "digital",
-    "when": "2026-10-21T20:30:00",
+    "when": "2026-11-04T20:30:00",
     "title": "Ask For It Properly | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "after-the-diagnosis.png",
     "slug": "after-the-diagnosis",
     "group": "digital",
-    "when": "2026-10-22T08:00:00",
+    "when": "2026-11-05T08:00:00",
     "title": "After The Diagnosis | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "finding-my-people.png",
     "slug": "finding-my-people",
     "group": "digital",
-    "when": "2026-10-22T10:30:00",
+    "when": "2026-11-05T10:30:00",
     "title": "Finding My People | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "the-handover-sheet.png",
     "slug": "the-handover-sheet",
     "group": "digital",
-    "when": "2026-10-22T15:00:00",
+    "when": "2026-11-05T15:00:00",
     "title": "The Handover Sheet | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "your-sheet-for-once.png",
     "slug": "your-sheet-for-once",
     "group": "digital",
-    "when": "2026-10-22T18:00:00",
+    "when": "2026-11-05T18:00:00",
     "title": "Your Sheet, For Once | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "how-to-help-me.png",
     "slug": "how-to-help-me",
     "group": "digital",
-    "when": "2026-10-22T20:30:00",
+    "when": "2026-11-05T20:30:00",
     "title": "How To Help Me | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "for-the-sibling.png",
     "slug": "for-the-sibling",
     "group": "digital",
-    "when": "2026-10-23T08:00:00",
+    "when": "2026-11-06T08:00:00",
     "title": "For The Sibling | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "lily-pad-planner.png",
     "slug": "lily-pad-planner",
     "group": "digital",
-    "when": "2026-10-23T10:30:00",
+    "when": "2026-11-06T10:30:00",
     "title": "Lily Pad Planner | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "the-pocket-pond.png",
     "slug": "the-pocket-pond",
     "group": "digital",
-    "when": "2026-10-23T15:00:00",
+    "when": "2026-11-06T15:00:00",
     "title": "The Pocket Pond | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "hoppy-thoughts-issue-01.png",
     "slug": "hoppy-thoughts-issue-01",
     "group": "digital",
-    "when": "2026-10-23T18:00:00",
+    "when": "2026-11-06T18:00:00",
     "title": "Hoppy Thoughts — Issue 01 | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "hoppy-thoughts-issue-02.png",
     "slug": "hoppy-thoughts-issue-02",
     "group": "digital",
-    "when": "2026-10-23T20:30:00",
+    "when": "2026-11-06T20:30:00",
     "title": "Hoppy Thoughts — Issue 02 | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "30-days-at-the-pond.png",
     "slug": "30-days-at-the-pond",
     "group": "digital",
-    "when": "2026-10-24T08:00:00",
+    "when": "2026-11-07T08:00:00",
     "title": "30 Days at the Pond | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "affirmation-cards.png",
     "slug": "affirmation-cards",
     "group": "digital",
-    "when": "2026-10-24T10:30:00",
+    "when": "2026-11-07T10:30:00",
     "title": "Affirmation Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "habit-stacking-cards.png",
     "slug": "habit-stacking-cards",
     "group": "digital",
-    "when": "2026-10-24T15:00:00",
+    "when": "2026-11-07T15:00:00",
     "title": "Habit Stacking Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "translation-cards.png",
     "slug": "translation-cards",
     "group": "digital",
-    "when": "2026-10-24T18:00:00",
+    "when": "2026-11-07T18:00:00",
     "title": "Translation Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "frog-logic-stickers.png",
     "slug": "frog-logic-stickers",
     "group": "digital",
-    "when": "2026-10-24T20:30:00",
+    "when": "2026-11-07T20:30:00",
     "title": "Frog Logic Stickers | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "say-what-you-need.png",
     "slug": "say-what-you-need",
     "group": "digital",
-    "when": "2026-10-25T08:00:00",
+    "when": "2026-11-08T08:00:00",
     "title": "Say What You Need | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "halloween-stickers.png",
     "slug": "halloween-stickers",
     "group": "digital",
-    "when": "2026-10-25T10:30:00",
+    "when": "2026-11-08T10:30:00",
     "title": "Halloween Stickers | Printable PDF for ADHD, autistic and neurodivergent adults"
+  },
+  {
+    "file": "christmas-cards.png",
+    "slug": "christmas-cards",
+    "group": "digital",
+    "when": "2026-11-08T15:00:00",
+    "title": "Christmas Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
+  },
+  {
+    "file": "bright-christmas-cards.png",
+    "slug": "bright-christmas-cards",
+    "group": "digital",
+    "when": "2026-11-08T18:00:00",
+    "title": "Bright Christmas Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
+  },
+  {
+    "file": "black-and-white-christmas-cards.png",
+    "slug": "black-and-white-christmas-cards",
+    "group": "digital",
+    "when": "2026-11-08T20:30:00",
+    "title": "Black and White Christmas Cards | Printable PDF for ADHD, autistic and neurodivergent adults"
   },
   {
     "file": "the-pond-guides.png",
     "slug": "the-pond-guides",
     "group": "set",
-    "when": "2026-10-25T15:00:00",
+    "when": "2026-11-09T08:00:00",
     "title": "The Pond Guides, complete set | 23 plain-English neurodivergence guides in one PDF"
   },
   {
     "file": "the-organisation-pack.png",
     "slug": "the-organisation-pack",
     "group": "org",
-    "when": "2026-10-25T18:00:00",
+    "when": "2026-11-09T10:30:00",
     "title": "The Organisation Pack | printable neurodivergence tools with a licence for your team or service"
   },
   {
     "file": "overstimulated-tee.png",
     "slug": "overstimulated-tee",
     "group": "physical",
-    "when": "2026-10-25T20:30:00",
+    "when": "2026-11-09T15:00:00",
     "title": "Overstimulated t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "hyperfocused.png",
     "slug": "hyperfocused",
     "group": "physical",
-    "when": "2026-10-26T08:00:00",
+    "when": "2026-11-09T18:00:00",
     "title": "Hyperfocused tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "shutdown-mode.png",
     "slug": "shutdown-mode",
     "group": "physical",
-    "when": "2026-10-26T10:30:00",
+    "when": "2026-11-09T20:30:00",
     "title": "Shutdown Mode notebook | neurodivergent-affirming notebook for ADHD and autistic adults"
   },
   {
     "file": "47-things-at-once.png",
     "slug": "47-things-at-once",
     "group": "physical",
-    "when": "2026-10-26T15:00:00",
+    "when": "2026-11-10T08:00:00",
     "title": "47 Things at Once mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "info-dump-incoming.png",
     "slug": "info-dump-incoming",
     "group": "physical",
-    "when": "2026-10-26T18:00:00",
+    "when": "2026-11-10T10:30:00",
     "title": "Info Dump Incoming wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "special-interest.png",
     "slug": "special-interest",
     "group": "physical",
-    "when": "2026-10-26T20:30:00",
+    "when": "2026-11-10T15:00:00",
     "title": "Special Interest water bottle | neurodivergent-affirming water bottle for ADHD and autistic adults"
   },
   {
     "file": "executive-dysfunction.png",
     "slug": "executive-dysfunction",
     "group": "physical",
-    "when": "2026-10-27T08:00:00",
+    "when": "2026-11-10T18:00:00",
     "title": "Executive Dysfunction wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "waiting-mode.png",
     "slug": "waiting-mode",
     "group": "physical",
-    "when": "2026-10-27T10:30:00",
+    "when": "2026-11-10T20:30:00",
     "title": "Waiting Mode wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "time-blind.png",
     "slug": "time-blind",
     "group": "physical",
-    "when": "2026-10-27T15:00:00",
+    "when": "2026-11-11T08:00:00",
     "title": "Time Blind t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "object-permanence.png",
     "slug": "object-permanence",
     "group": "physical",
-    "when": "2026-10-27T18:00:00",
+    "when": "2026-11-11T10:30:00",
     "title": "Object Permanence mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "auditory-processing-tote.png",
     "slug": "auditory-processing-tote",
     "group": "physical",
-    "when": "2026-10-27T20:30:00",
+    "when": "2026-11-11T15:00:00",
     "title": "Auditory Processing tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "decision-paralysis.png",
     "slug": "decision-paralysis",
     "group": "physical",
-    "when": "2026-10-28T08:00:00",
+    "when": "2026-11-11T18:00:00",
     "title": "Decision Paralysis wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "parallel-play.png",
     "slug": "parallel-play",
     "group": "physical",
-    "when": "2026-10-28T10:30:00",
+    "when": "2026-11-11T20:30:00",
     "title": "Parallel Play t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "snacks-and-spite.png",
     "slug": "snacks-and-spite",
     "group": "physical",
-    "when": "2026-10-28T15:00:00",
+    "when": "2026-11-12T08:00:00",
     "title": "Snacks and Spite mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "autistic-joy.png",
     "slug": "autistic-joy",
     "group": "physical",
-    "when": "2026-10-28T18:00:00",
+    "when": "2026-11-12T10:30:00",
     "title": "Autistic Joy wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "interoception.png",
     "slug": "interoception",
     "group": "physical",
-    "when": "2026-10-28T20:30:00",
+    "when": "2026-11-12T15:00:00",
     "title": "Interoception mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "late-diagnosed.png",
     "slug": "late-diagnosed",
     "group": "physical",
-    "when": "2026-10-29T08:00:00",
+    "when": "2026-11-12T18:00:00",
     "title": "Late Diagnosed t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "monotropic.png",
     "slug": "monotropic",
     "group": "physical",
-    "when": "2026-10-29T10:30:00",
+    "when": "2026-11-12T20:30:00",
     "title": "Monotropic tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "justice-sensitive.png",
     "slug": "justice-sensitive",
     "group": "physical",
-    "when": "2026-10-29T15:00:00",
+    "when": "2026-11-13T08:00:00",
     "title": "Justice Sensitive wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "regulation-loading.png",
     "slug": "regulation-loading",
     "group": "physical",
-    "when": "2026-10-29T18:00:00",
+    "when": "2026-11-13T10:30:00",
     "title": "Regulation: Loading notebook | neurodivergent-affirming notebook for ADHD and autistic adults"
   },
   {
     "file": "no-idea-what-my-face-is-doing.png",
     "slug": "no-idea-what-my-face-is-doing",
     "group": "physical",
-    "when": "2026-10-29T20:30:00",
+    "when": "2026-11-13T15:00:00",
     "title": "No Idea What My Face Is Doing t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adult"
   },
   {
     "file": "ask-me-about-it.png",
     "slug": "ask-me-about-it",
     "group": "physical",
-    "when": "2026-10-30T08:00:00",
+    "when": "2026-11-13T18:00:00",
     "title": "Ask Me About It t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "unreasonably-delighted.png",
     "slug": "unreasonably-delighted",
     "group": "physical",
-    "when": "2026-10-30T10:30:00",
+    "when": "2026-11-13T20:30:00",
     "title": "Unreasonably Delighted wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "i-notice-everything.png",
     "slug": "i-notice-everything",
     "group": "physical",
-    "when": "2026-10-30T15:00:00",
+    "when": "2026-11-14T08:00:00",
     "title": "I Notice Everything tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "found-my-people.png",
     "slug": "found-my-people",
     "group": "physical",
-    "when": "2026-10-30T18:00:00",
+    "when": "2026-11-14T10:30:00",
     "title": "Found My People wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "comfort-rewatch.png",
     "slug": "comfort-rewatch",
     "group": "physical",
-    "when": "2026-10-30T20:30:00",
+    "when": "2026-11-14T15:00:00",
     "title": "Comfort Rewatch mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "pattern-recognition.png",
     "slug": "pattern-recognition",
     "group": "physical",
-    "when": "2026-10-31T08:00:00",
+    "when": "2026-11-14T18:00:00",
     "title": "Pattern Recognition water bottle | neurodivergent-affirming water bottle for ADHD and autistic adult"
   },
   {
     "file": "enthusiasm-unmasked.png",
     "slug": "enthusiasm-unmasked",
     "group": "physical",
-    "when": "2026-10-31T10:30:00",
+    "when": "2026-11-14T20:30:00",
     "title": "Enthusiasm, Unmasked t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "small-things-enormous-joy.png",
     "slug": "small-things-enormous-joy",
     "group": "physical",
-    "when": "2026-10-31T15:00:00",
+    "when": "2026-11-15T08:00:00",
     "title": "Small Things, Enormous Joy wall print | neurodivergent-affirming wall print for ADHD and autistic ad"
   },
   {
     "file": "never-too-much.png",
     "slug": "never-too-much",
     "group": "physical",
-    "when": "2026-10-31T18:00:00",
+    "when": "2026-11-15T10:30:00",
     "title": "Never Too Much wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "nothing-needs-fixing.png",
     "slug": "nothing-needs-fixing",
     "group": "physical",
-    "when": "2026-10-31T20:30:00",
+    "when": "2026-11-15T15:00:00",
     "title": "Nothing Needs Fixing t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "not-broken.png",
     "slug": "not-broken",
     "group": "physical",
-    "when": "2026-11-01T08:00:00",
+    "when": "2026-11-15T18:00:00",
     "title": "Not Broken wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "functioning-as-designed.png",
     "slug": "functioning-as-designed",
     "group": "physical",
-    "when": "2026-11-01T10:30:00",
+    "when": "2026-11-15T20:30:00",
     "title": "Functioning As Designed notebook | neurodivergent-affirming notebook for ADHD and autistic adults"
   },
   {
     "file": "enough.png",
     "slug": "enough",
     "group": "physical",
-    "when": "2026-11-01T15:00:00",
+    "when": "2026-11-16T08:00:00",
     "title": "Enough t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "it-was-precision.png",
     "slug": "it-was-precision",
     "group": "physical",
-    "when": "2026-11-01T18:00:00",
+    "when": "2026-11-16T10:30:00",
     "title": "It Was Precision tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "you-were-paying-attention.png",
     "slug": "you-were-paying-attention",
     "group": "physical",
-    "when": "2026-11-01T20:30:00",
+    "when": "2026-11-16T15:00:00",
     "title": "You Were Paying Attention wall print | neurodivergent-affirming wall print for ADHD and autistic adu"
   },
   {
     "file": "the-right-amount-of-you.png",
     "slug": "the-right-amount-of-you",
     "group": "physical",
-    "when": "2026-11-02T08:00:00",
+    "when": "2026-11-16T18:00:00",
     "title": "The Right Amount of You mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "in-writing-please.png",
     "slug": "in-writing-please",
     "group": "physical",
-    "when": "2026-11-02T10:30:00",
+    "when": "2026-11-16T20:30:00",
     "title": "In Writing, Please t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "i-accommodated-you-first.png",
     "slug": "i-accommodated-you-first",
     "group": "physical",
-    "when": "2026-11-02T15:00:00",
+    "when": "2026-11-17T08:00:00",
     "title": "I Accommodated You First wall print | neurodivergent-affirming wall print for ADHD and autistic adul"
   },
   {
     "file": "asking-is-not-failing.png",
     "slug": "asking-is-not-failing",
     "group": "physical",
-    "when": "2026-11-02T18:00:00",
+    "when": "2026-11-17T10:30:00",
     "title": "Asking Is Not Failing notebook | neurodivergent-affirming notebook for ADHD and autistic adults"
   },
   {
     "file": "yes-i-want-friends.png",
     "slug": "yes-i-want-friends",
     "group": "physical",
-    "when": "2026-11-02T20:30:00",
+    "when": "2026-11-17T15:00:00",
     "title": "Yes, I Want Friends tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "trust-me-with-it.png",
     "slug": "trust-me-with-it",
     "group": "physical",
-    "when": "2026-11-03T08:00:00",
+    "when": "2026-11-17T18:00:00",
     "title": "Trust Me With It water bottle | neurodivergent-affirming water bottle for ADHD and autistic adults"
   },
   {
     "file": "shared-interest-not-small-talk.png",
     "slug": "shared-interest-not-small-talk",
     "group": "physical",
-    "when": "2026-11-03T10:30:00",
+    "when": "2026-11-17T20:30:00",
     "title": "Shared Interest, Not Small Talk mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "recovery-is-part-of-the-plan.png",
     "slug": "recovery-is-part-of-the-plan",
     "group": "physical",
-    "when": "2026-11-03T15:00:00",
+    "when": "2026-11-18T08:00:00",
     "title": "Recovery Is Part Of The Plan wall print | neurodivergent-affirming wall print for ADHD and autistic "
   },
   {
     "file": "nobody-asked-how-you-were.png",
     "slug": "nobody-asked-how-you-were",
     "group": "physical",
-    "when": "2026-11-03T18:00:00",
+    "when": "2026-11-18T10:30:00",
     "title": "Nobody Asked How You Were wall print | neurodivergent-affirming wall print for ADHD and autistic adu"
   },
   {
     "file": "twenty-minutes-counts.png",
     "slug": "twenty-minutes-counts",
     "group": "physical",
-    "when": "2026-11-03T20:30:00",
+    "when": "2026-11-18T15:00:00",
     "title": "Twenty Minutes Counts mug | neurodivergent-affirming mug for ADHD and autistic adults"
   },
   {
     "file": "guilt-is-not-evidence.png",
     "slug": "guilt-is-not-evidence",
     "group": "physical",
-    "when": "2026-11-04T08:00:00",
+    "when": "2026-11-18T18:00:00",
     "title": "Guilt Is Not Evidence t-shirt | neurodivergent-affirming t-shirt for ADHD and autistic adults"
   },
   {
     "file": "i-learned-their-language.png",
     "slug": "i-learned-their-language",
     "group": "physical",
-    "when": "2026-11-04T10:30:00",
+    "when": "2026-11-18T20:30:00",
     "title": "I Learned Their Language tote bag | neurodivergent-affirming tote bag for ADHD and autistic adults"
   },
   {
     "file": "a-different-route.png",
     "slug": "a-different-route",
     "group": "physical",
-    "when": "2026-11-04T15:00:00",
+    "when": "2026-11-19T08:00:00",
     "title": "A Different Route wall print | neurodivergent-affirming wall print for ADHD and autistic adults"
   },
   {
     "file": "you-re-allowed-to-find-it-hard.png",
     "slug": "you-re-allowed-to-find-it-hard",
     "group": "physical",
-    "when": "2026-11-04T18:00:00",
+    "when": "2026-11-19T10:30:00",
     "title": "You're Allowed To Find It Hard notebook | neurodivergent-affirming notebook for ADHD and autistic ad"
   },
   {
     "file": "comfort-creature.png",
     "slug": "comfort-creature",
     "group": "physical",
-    "when": "2026-11-04T20:30:00",
+    "when": "2026-11-19T15:00:00",
     "title": "Comfort Creature t-shirt | cute frog t-shirt for ADHD and autistic adults"
   },
   {
     "file": "brain-full-of-tabs.png",
     "slug": "brain-full-of-tabs",
     "group": "physical",
-    "when": "2026-11-05T08:00:00",
+    "when": "2026-11-19T18:00:00",
     "title": "Brain Full of Tabs t-shirt | cute frog t-shirt for ADHD and autistic adults"
   },
   {
     "file": "neurospicy.png",
     "slug": "neurospicy",
     "group": "physical",
-    "when": "2026-11-05T10:30:00",
+    "when": "2026-11-19T20:30:00",
     "title": "Neurospicy t-shirt | cute frog t-shirt for ADHD and autistic adults"
   },
   {
     "file": "low-battery.png",
     "slug": "low-battery",
     "group": "physical",
-    "when": "2026-11-05T15:00:00",
+    "when": "2026-11-20T08:00:00",
     "title": "Low Battery mug | cute frog mug for ADHD and autistic adults"
   },
   {
     "file": "chaos-gremlin.png",
     "slug": "chaos-gremlin",
     "group": "physical",
-    "when": "2026-11-05T18:00:00",
+    "when": "2026-11-20T10:30:00",
     "title": "Chaos Gremlin mug | cute frog mug for ADHD and autistic adults"
   },
   {
     "file": "overstimulated-water-bottle.png",
     "slug": "overstimulated-water-bottle",
     "group": "physical",
-    "when": "2026-11-05T20:30:00",
+    "when": "2026-11-20T15:00:00",
     "title": "Overstimulated water bottle | cute frog water bottle for ADHD and autistic adults"
   },
   {
     "file": "neurodivergent-household.png",
     "slug": "neurodivergent-household",
     "group": "physical",
-    "when": "2026-11-06T08:00:00",
+    "when": "2026-11-20T18:00:00",
     "title": "Neurodivergent Household wall print | cute frog wall print for ADHD and autistic adults"
   }
 ]
