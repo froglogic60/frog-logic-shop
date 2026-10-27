@@ -25,6 +25,9 @@ SETS = os.path.join(HERE, "..", "..", "assets", "xmas")
 # black-and-white colourways, the personalised pieces and the printable cards,
 # none of which had a pin. Batch 1 (the original eight) is left as it was.
 BATCH = os.environ.get("BATCH", "1")
+# BATCH=gifts (27 Oct 2026, Sam: "yes do 1 and 2"): seven pins for the new
+# Christmas gift-guide pages, each a 2x2 grid of real product photos from
+# /feed-images/. Seven because the account had 93 of its 100 scheduled slots used.
 OUT_NAME = {"1": "xmas-pins", "2": "xmas-pins-2"}.get(BATCH, "pins-" + BATCH)
 ROOT = os.path.join(HERE, "..", "..")
 OUT = os.path.join(HERE, OUT_NAME)
@@ -36,6 +39,8 @@ ETSY = "https://froglogic.etsy.com/listing/"
 BOARD = "Neurodivergent & introvert Christmas gifts"  # created 16 Oct 2026 (50-character limit)
 START = os.environ.get("START", "2026-10-17")
 SLOTS = ["13:00:00", "21:00:00"]  # UTC; clear of the pins-pages queue's times
+if BATCH == "gifts":
+    SLOTS = ["16:30:00", "19:30:00"]  # UTC; clear of batch 2's 13:00 and 21:00
 
 CREAM, BROWN, GREEN, RED, INK = (244, 239, 227), (107, 74, 50), (34, 51, 31), (181, 68, 58), (26, 26, 26)
 W, H = 1000, 1500
@@ -131,6 +136,18 @@ PINS3 = [
     dict(slug="guide-dysgraphia", img=("OG", "dysgraphia"), head="Dysgraphia", board="Free neurodivergence guides (The Pond Guides)", kicker="FREE GUIDE · PLAIN ENGLISH · NO SIGN-UP", lines=["Explained warmly,", "for you and the people around you"], link="https://froglogic.co.uk/p/dysgraphia/?ref=pinterest-guide", title="Dysgraphia explained in plain English | a free, warm guide to read online or print", desc="A free plain-English guide to Dysgraphia: what it's like from the inside, what people get wrong, and what actually helps. Read it online or print the PDF, no email or sign-up. Written for the person it's about and for partners, parents, teachers and managers. One of 23 free Pond Guides. From Frog Logic, made by one neurodivergent person in the UK.", keys="dysgraphia explained, dysgraphia guide, neurodivergent, free printable guide, dysgraphia for parents"),
 ]
 
+G = "GRID"
+GIFT_DESC = " From Frog Logic, made by one neurodivergent person in the UK, printed to order. Tees and mugs post free in the UK."
+PINS4 = [
+    dict(slug="gift-adhd", img=(G, ["47-things-at-once", "time-blind", "brain-full-of-tabs", "object-permanence"]), head="ADHD Gifts", kicker="CHRISTMAS GIFT GUIDE", lines=["Tees, mugs & prints that get it", "for someone with ADHD"], link="https://froglogic.co.uk/p/adhd-gifts/?ref=pinterest", title="ADHD gift ideas for Christmas | funny, kind tees, mugs and prints for someone with ADHD", desc="ADHD gifts that get it: the mug for 47 things at once, the tee for being time blind, the print for the list that exists while the doing doesn't. Nothing is a joke at their expense." + GIFT_DESC, keys="adhd gifts, adhd gift ideas, gifts for someone with adhd, adhd christmas gift, neurodivergent gifts"),
+    dict(slug="gift-autism", img=(G, ["info-dump-incoming", "parallel-play", "special-interest", "autistic-joy"]), head="Autism Gifts", kicker="FOR AUTISTIC ADULTS", lines=["In the words autistic people", "use for themselves"], link="https://froglogic.co.uk/p/autism-gifts-for-adults/?ref=pinterest", title="Gifts for autistic adults | autism gift ideas that celebrate special interests and autistic joy", desc="Autism gifts for grown-ups, with no puzzle pieces: special interests, info dumps, parallel play, comfort rewatches and autistic joy. Good for a friend with a late diagnosis or a partner who'd rather sit next to you than make small talk." + GIFT_DESC, keys="autism gifts, gifts for autistic adults, autistic gift ideas, actually autistic, neurodivergent gifts"),
+    dict(slug="gift-sen-parents", img=(G, ["twenty-minutes-counts", "you-re-allowed-to-find-it-hard", "nobody-asked-how-you-were", "i-learned-their-language"]), head="SEN Parents", kicker="GIFTS FOR PARENTS & CARERS", lines=["For the ones holding it", "all together, every day"], link="https://froglogic.co.uk/p/gifts-for-sen-parents/?ref=pinterest", title="Gifts for SEN parents and carers | kind mugs, prints and notebooks for autism and ADHD parents", desc="For the parent who goes to every appointment and learns one person's language fluently: a mug that says twenty minutes counts, a notebook that says you're allowed to find it hard, a print for when nobody asked how you were." + GIFT_DESC, keys="sen parent gifts, gifts for carers, autism mum gift, adhd parent gift, special needs parent gift"),
+    dict(slug="gift-stocking-fillers", img=(G, ["low-battery", "chaos-gremlin", "shutdown-mode", "comfort-rewatch"]), head="Stocking Fillers", kicker="NEURODIVERGENT \u00b7 UNDER \u00a315", lines=["Mugs, notebooks & prints", "for ADHD & autistic brains"], link="https://froglogic.co.uk/p/neurodivergent-stocking-fillers/?ref=pinterest", title="Neurodivergent stocking fillers under \u00a315 | ADHD and autism mugs, notebooks and prints", desc="Small Christmas gifts for ADHD, autistic and AuDHD friends and family: mugs that post free in the UK, notebooks, prints, and printable Christmas cards that arrive by email straight away." + GIFT_DESC, keys="neurodivergent stocking fillers, adhd stocking filler, autism stocking filler, small christmas gifts, gifts under 15"),
+    dict(slug="gift-christmas", img=(G, ["SET", "comfort-creature", "low-battery", "overstimulated-tee"]), head="Christmas Gifts", kicker="FOR NEURODIVERGENT PEOPLE", lines=["ADHD, autistic & AuDHD gifts", "from a neurodivergent-run shop"], link="https://froglogic.co.uk/p/neurodivergent-christmas-gifts/?ref=pinterest", title="Neurodivergent Christmas gifts | ADHD, autism and AuDHD gift ideas from a neurodivergent-run shop", desc="Christmas gifts for ADHD, autistic and AuDHD people, picked by a neurodivergent shop owner: the Socially Hibernating frog set, tees, mugs, prints and printable cards. The Christmas frog comes in the originals, bright colours, or black and white." + GIFT_DESC, keys="neurodivergent christmas gifts, adhd christmas gift, autism christmas gift, audhd gifts, introvert christmas gift"),
+    dict(slug="gift-adhd-mugs", img=(G, ["47-things-at-once", "object-permanence", "low-battery", "snacks-and-spite"]), head="ADHD Mugs", kicker="GIFT IDEAS \u00b7 FREE UK POST", lines=["For the 47 things at once", "and the coffee that helps"], link="https://froglogic.co.uk/p/adhd-gifts/?ref=pinterest-mugs", title="Funny ADHD mugs | gift ideas for someone with ADHD, free UK delivery", desc="ADHD mugs for the person running on coffee and 47 open tabs: 47 Things at Once, Object Permanence, Low Battery, Snacks and Spite. 11oz, dishwasher safe." + GIFT_DESC, keys="adhd mug, funny adhd gift, adhd coffee mug, gifts for adhd adults, neurodivergent mug"),
+    dict(slug="gift-late-diagnosed", img=(G, ["late-diagnosed", "comfort-rewatch", "unreasonably-delighted", "ask-me-about-it"]), head="Late Diagnosed", kicker="GIFTS FOR AN AUTISTIC FRIEND", lines=["For the friend who just", "found out who they are"], link="https://froglogic.co.uk/p/autism-gifts-for-adults/?ref=pinterest-late", title="Gifts for a late-diagnosed autistic friend | kind, funny autism gifts for adults", desc="For the friend who just got their diagnosis and is reviewing thirty years of evidence in one afternoon: the Late Diagnosed tee, a Comfort Rewatch mug, an Unreasonably Delighted print." + GIFT_DESC, keys="late diagnosed autism gift, autism diagnosis gift, gifts for autistic adults, actually autistic, neurodivergent gifts"),
+]
+
 def taster_page(S):
     """A picture of the free taster page: a printed daily page with a name,
     a short list and an energy battery (the real one is drawn in the browser)."""
@@ -187,6 +204,14 @@ def pin(p):
     S, x, y = 840, 80, 290
     if p.get("draw") == "taster":
         photo = taster_page(S)
+    elif p["img"][0] == G:  # a 2x2 grid of product photos from /feed-images/
+        photo = Image.new("RGB", (S, S), (255, 255, 255))
+        t = (S - 12) // 2
+        for k, name in enumerate(p["img"][1]):
+            src = os.path.join(SETS, "set-uk.jpg") if name == "SET" else os.path.join(ROOT, "feed-images", name + ".jpg")
+            tile = Image.open(src).convert("RGB")
+            side = min(tile.size); tile = tile.crop(((tile.width - side) // 2, (tile.height - side) // 2, (tile.width + side) // 2, (tile.height + side) // 2))
+            photo.paste(tile.resize((t, t), Image.LANCZOS), ((k % 2) * (t + 12), (k // 2) * (t + 12)))
     elif p["img"][0] == "OG":  # a product page's own 1200x1200 share picture
         photo = Image.open(os.path.join(ROOT, "p", p["img"][1], "og.png")).convert("RGB").resize((S, S), Image.LANCZOS)
     else:
@@ -209,7 +234,7 @@ def main():
     from datetime import date, timedelta
     day0 = date.fromisoformat(START)
     rows = []
-    for i, p in enumerate({"1": PINS, "2": PINS2, "guides": PINS3}[BATCH]):
+    for i, p in enumerate({"1": PINS, "2": PINS2, "guides": PINS3, "gifts": PINS4}[BATCH]):
         pin(p)
         when = f"{(day0 + timedelta(days=i // len(SLOTS))).isoformat()}T{SLOTS[i % len(SLOTS)]}"
         rows.append([p["title"][:100], RAW + p["slug"] + ".jpg", p.get("board", BOARD), "", p["desc"][:500], p["link"], when, p["keys"]])
