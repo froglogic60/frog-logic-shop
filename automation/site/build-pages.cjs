@@ -571,6 +571,11 @@ function feed(pages, shop) {
     if (!entry) continue; // not orderable at the till, so not listed
     const post = ukPostage(entry);
     if (post == null) continue;
+    // US shoppers (27 Oct 2026): Google shows GBP prices converted to dollars
+    // when US shipping is listed. Only pieces with a US-made twin at the SAME
+    // price get a US rate, so the landing page price always matches.
+    const us = entry.us && entry.us.shipping && entry.us.shipping.first != null && Number(entry.us.price) === Number(entry.price)
+      ? entry.us.shipping.first / 100 : null;
     const title = `${p.item.word}${p.item.frog ? " Cute Frog" : ""} ${f.name} – Neurodivergent ADHD & Autism Gift, ${f.tail}`.slice(0, 150);
     const desc = [p.item.line, copyFor(p.item, "physical").paras[1], PHYSICAL[kind].how, "Made by Frog Logic, a small UK shop run by one neurodivergent person."].join(" ");
     const base = {
@@ -590,7 +595,8 @@ ${extra}
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>${x(base.cat)}</g:google_product_category>
       <g:product_type>${x(base.type)}</g:product_type>
-      <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>${post.toFixed(2)} GBP</g:price></g:shipping>
+      <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>${post.toFixed(2)} GBP</g:price></g:shipping>${us != null ? `
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>${us.toFixed(2)} GBP</g:price></g:shipping>` : ""}
     </item>`;
     if (f.apparel && Array.isArray(entry.sizes) && entry.sizes.length) {
       const colour = p.item.frog ? "White" : "Charcoal";
