@@ -47,7 +47,7 @@ async function generate() {
   const jpg = path.join(QUEUE, `${name}.jpg`);
   await renderer.renderToJpeg(renderer.svgFor(post, sched.occurrence), jpg);
   fs.writeFileSync(path.join(QUEUE, `${name}.json`), JSON.stringify({
-    caption: post.caption, kind: post.kind, image: `${name}.jpg`,
+    caption: post.caption, kind: post.kind, image: `${name}.jpg`, page: post.page || null,
   }, null, 2));
 
   // Housekeeping: drop queue files older than 7 days so the repo stays small.
@@ -98,7 +98,12 @@ async function post() {
   // ?ref=<platform>, which GoatCounter records as the referrer. Still short
   // enough to type off a phone, which is the whole reason it is a bare
   // domain in the first place (see lib.js).
-  const forFacebook  = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/fb");
+  // A post about one product sends Facebook readers to that product's own page
+  // (photo, price and Add to basket together) instead of the home page, where
+  // most visitors were leaving without opening anything. ?ref=fb keeps the
+  // referrer for GoatCounter. Instagram captions aren't clickable, so /ig stays.
+  const fbLink = meta.page ? `froglogic.co.uk/p/${meta.page}/?ref=fb` : "froglogic.co.uk/fb";
+  const forFacebook  = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, fbLink);
   const forInstagram = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig");
 
   // Facebook: photo post (image + caption).
