@@ -172,8 +172,16 @@ customer-facing for "will this get found and bought?" before it goes up.
   verify"). On 26 Oct Sam set the category (Gift shop), service area Tonbridge
   with the address hidden, and the description; the Maps pin was showing North
   America before that.
-- Halloween retires itself on 1 Nov (script.js marks every halloween entry
-  retired from that date; nothing to deploy). Christmas order-by dates are live
+- Halloween goes on 1 Nov (Sam, 27 Oct: "Get rid of the Halloween ones Nov
+  1st"). script.js marks every halloween entry retired from that date, so the
+  page hides the band and menu link itself; the "Retire Halloween" workflow
+  (retire-halloween.yml, 00:20 UTC 1 Nov, date-guarded) reruns wire-catalog +
+  build-pages, drops the sticker download from catalog.json, checks nothing
+  Halloween is left, and publishes once. netlify.toml 301s the 10 old /p/
+  addresses to /#frogs (stickers to /#digital). Chaos Gremlin itself is a
+  year-round frog and stays.
+- The three Christmas ranges (originals, bright, black & white) stay as three
+  separate menu links and sections; never group or mix them (Sam, 27 Oct). Christmas order-by dates are live
   (UK 10 Dec, US 7 Dec) with posts queued 15 Nov and 5 Dec (the 5 Dec one doubles
   as the Small Business Saturday post); check Printify's
   2026 cut-offs around 10 Nov and move the dates earlier if theirs are.
