@@ -24,6 +24,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>01-overstimulated-M</g:id>
@@ -45,6 +46,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>01-overstimulated-L</g:id>
@@ -66,6 +68,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>01-overstimulated-XL</g:id>
@@ -87,6 +90,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>01-overstimulated-2XL</g:id>
@@ -108,6 +112,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>02-hyperfocused</g:id>
@@ -138,6 +143,7 @@
       <g:google_product_category>Office Supplies &gt; General Office Supplies &gt; Paper Products &gt; Notebooks &amp; Notepads</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Notebook</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>3.54 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.23 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>04-47-things-at-once</g:id>
@@ -153,6 +159,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>05-info-dump-incoming</g:id>
@@ -168,6 +175,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>09-special-interest</g:id>
@@ -198,6 +206,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>11-waiting-mode</g:id>
@@ -213,6 +222,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>12-time-blind-S</g:id>
@@ -234,6 +244,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>12-time-blind-M</g:id>
@@ -255,6 +266,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>12-time-blind-L</g:id>
@@ -276,6 +288,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>12-time-blind-XL</g:id>
@@ -297,6 +310,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>12-time-blind-2XL</g:id>
@@ -318,6 +332,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>14-object-permanence</g:id>
@@ -333,6 +348,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>15-auditory-processing</g:id>
@@ -363,6 +379,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>18-parallel-play-S</g:id>
@@ -384,6 +401,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>18-parallel-play-M</g:id>
@@ -405,6 +423,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>18-parallel-play-L</g:id>
@@ -426,6 +445,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>18-parallel-play-XL</g:id>
@@ -447,6 +467,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>18-parallel-play-2XL</g:id>
@@ -468,6 +489,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>20-snacks-and-spite</g:id>
@@ -483,6 +505,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>21-autistic-joy</g:id>
@@ -498,6 +521,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>22-interoception</g:id>
@@ -513,6 +537,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>24-late-diagnosed-S</g:id>
@@ -534,6 +559,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>24-late-diagnosed-M</g:id>
@@ -555,6 +581,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>24-late-diagnosed-L</g:id>
@@ -576,6 +603,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>24-late-diagnosed-XL</g:id>
@@ -597,6 +625,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>24-late-diagnosed-2XL</g:id>
@@ -618,6 +647,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>25-monotropic</g:id>
@@ -648,6 +678,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>27-regulation-loading</g:id>
@@ -663,6 +694,7 @@
       <g:google_product_category>Office Supplies &gt; General Office Supplies &gt; Paper Products &gt; Notebooks &amp; Notepads</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Notebook</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>3.54 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.23 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>29-no-idea-what-my-face-is-doing-S</g:id>
@@ -684,6 +716,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>29-no-idea-what-my-face-is-doing-M</g:id>
@@ -705,6 +738,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>29-no-idea-what-my-face-is-doing-L</g:id>
@@ -726,6 +760,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>29-no-idea-what-my-face-is-doing-XL</g:id>
@@ -747,6 +782,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>29-no-idea-what-my-face-is-doing-2XL</g:id>
@@ -768,6 +804,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>31-ask-me-about-it-S</g:id>
@@ -789,6 +826,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>31-ask-me-about-it-M</g:id>
@@ -810,6 +848,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>31-ask-me-about-it-L</g:id>
@@ -831,6 +870,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>31-ask-me-about-it-XL</g:id>
@@ -852,6 +892,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>31-ask-me-about-it-2XL</g:id>
@@ -873,6 +914,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>32-unreasonably-delighted</g:id>
@@ -888,6 +930,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>33-i-notice-everything</g:id>
@@ -918,6 +961,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>36-comfort-rewatch</g:id>
@@ -933,6 +977,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>38-pattern-recognition</g:id>
@@ -969,6 +1014,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>39-enthusiasm-unmasked-M</g:id>
@@ -990,6 +1036,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>39-enthusiasm-unmasked-L</g:id>
@@ -1011,6 +1058,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>39-enthusiasm-unmasked-XL</g:id>
@@ -1032,6 +1080,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>39-enthusiasm-unmasked-2XL</g:id>
@@ -1053,6 +1102,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>40-small-things-enormous-joy</g:id>
@@ -1068,6 +1118,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>41-never-too-much</g:id>
@@ -1083,6 +1134,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>42-nothing-needs-fixing-S</g:id>
@@ -1104,6 +1156,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>42-nothing-needs-fixing-M</g:id>
@@ -1125,6 +1178,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>42-nothing-needs-fixing-L</g:id>
@@ -1146,6 +1200,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>42-nothing-needs-fixing-XL</g:id>
@@ -1167,6 +1222,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>42-nothing-needs-fixing-2XL</g:id>
@@ -1188,6 +1244,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>43-not-broken</g:id>
@@ -1203,6 +1260,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>44-functioning-as-designed</g:id>
@@ -1218,6 +1276,7 @@
       <g:google_product_category>Office Supplies &gt; General Office Supplies &gt; Paper Products &gt; Notebooks &amp; Notepads</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Notebook</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>3.54 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.23 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>45-enough-S</g:id>
@@ -1239,6 +1298,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>45-enough-M</g:id>
@@ -1260,6 +1320,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>45-enough-L</g:id>
@@ -1281,6 +1342,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>45-enough-XL</g:id>
@@ -1302,6 +1364,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>45-enough-2XL</g:id>
@@ -1323,6 +1386,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>46-it-was-precision</g:id>
@@ -1353,6 +1417,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>50-the-right-amount-of-you</g:id>
@@ -1368,6 +1433,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>51-in-writing-please-S</g:id>
@@ -1389,6 +1455,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>51-in-writing-please-M</g:id>
@@ -1410,6 +1477,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>51-in-writing-please-L</g:id>
@@ -1431,6 +1499,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>51-in-writing-please-XL</g:id>
@@ -1452,6 +1521,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>51-in-writing-please-2XL</g:id>
@@ -1473,6 +1543,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>52-i-accommodated-you-first</g:id>
@@ -1488,6 +1559,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>54-asking-is-not-failing</g:id>
@@ -1503,6 +1575,7 @@
       <g:google_product_category>Office Supplies &gt; General Office Supplies &gt; Paper Products &gt; Notebooks &amp; Notepads</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Notebook</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>3.54 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.23 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>56-yes-i-want-friends</g:id>
@@ -1548,6 +1621,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>60-recovery-is-part-of-the-plan</g:id>
@@ -1563,6 +1637,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>61-nobody-asked-how-you-were</g:id>
@@ -1578,6 +1653,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>62-twenty-minutes-counts</g:id>
@@ -1593,6 +1669,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>63-guilt-is-not-evidence-S</g:id>
@@ -1614,6 +1691,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>63-guilt-is-not-evidence-M</g:id>
@@ -1635,6 +1713,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>63-guilt-is-not-evidence-L</g:id>
@@ -1656,6 +1735,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>63-guilt-is-not-evidence-XL</g:id>
@@ -1677,6 +1757,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>63-guilt-is-not-evidence-2XL</g:id>
@@ -1698,6 +1779,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>64-i-learned-their-language</g:id>
@@ -1728,6 +1810,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>67-you-re-allowed-to-find-it-hard</g:id>
@@ -1743,6 +1826,7 @@
       <g:google_product_category>Office Supplies &gt; General Office Supplies &gt; Paper Products &gt; Notebooks &amp; Notepads</g:google_product_category>
       <g:product_type>Frog Logic &gt; The words &gt; Notebook</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>3.54 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.23 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f1-comfort-creature-S</g:id>
@@ -1764,6 +1848,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f1-comfort-creature-M</g:id>
@@ -1785,6 +1870,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f1-comfort-creature-L</g:id>
@@ -1806,6 +1892,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f1-comfort-creature-XL</g:id>
@@ -1827,6 +1914,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f1-comfort-creature-2XL</g:id>
@@ -1848,6 +1936,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f2-brain-full-of-tabs-S</g:id>
@@ -1869,6 +1958,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f2-brain-full-of-tabs-M</g:id>
@@ -1890,6 +1980,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f2-brain-full-of-tabs-L</g:id>
@@ -1911,6 +2002,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f2-brain-full-of-tabs-XL</g:id>
@@ -1932,6 +2024,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f2-brain-full-of-tabs-2XL</g:id>
@@ -1953,6 +2046,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f3-neurospicy-S</g:id>
@@ -1974,6 +2068,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f3-neurospicy-M</g:id>
@@ -1995,6 +2090,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f3-neurospicy-L</g:id>
@@ -2016,6 +2112,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f3-neurospicy-XL</g:id>
@@ -2037,6 +2134,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f3-neurospicy-2XL</g:id>
@@ -2058,6 +2156,7 @@
       <g:google_product_category>Apparel &amp; Accessories &gt; Clothing &gt; Shirts &amp; Tops</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Tee</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>3.08 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f4-low-battery</g:id>
@@ -2073,6 +2172,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f5-chaos-gremlin</g:id>
@@ -2088,6 +2188,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Tableware &gt; Drinkware &gt; Mugs</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Mug</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>0.00 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>4.46 GBP</g:price></g:shipping>
     </item>
     <item>
       <g:id>f6-overstimulated</g:id>
@@ -2118,6 +2219,7 @@
       <g:google_product_category>Home &amp; Garden &gt; Decor &gt; Artwork &gt; Posters, Prints &amp; Visual Artwork</g:google_product_category>
       <g:product_type>Frog Logic &gt; The frogs &gt; Wall print</g:product_type>
       <g:shipping><g:country>GB</g:country><g:service>Standard</g:service><g:price>4.31 GBP</g:price></g:shipping>
+      <g:shipping><g:country>US</g:country><g:service>Standard</g:service><g:price>6.08 GBP</g:price></g:shipping>
     </item>
   </channel>
 </rss>
