@@ -66,7 +66,7 @@ const GUIDES = [
       "A Different Route|Wall print", "Asking Is Not Failing|Notebook", "I Accommodated You First|Wall print",
       "Neurodivergent Household|Wall print", "Low Battery|Mug",
     ],
-    extra: "Want something for the people around their child too? <a href=\"/p/the-pond-guides/\">The Pond Guides</a> are free plain-English guides to autism, ADHD, PDA and more, written to be handed to grandparents, teachers and the other parent.",
+    extra: "Want something for the people around their child too? <a href=\"/#guides\">The Pond Guides</a> are free plain-English guides to autism, ADHD, PDA and more, written to be handed to grandparents, teachers and the other parent.",
   },
   {
     slug: "neurodivergent-stocking-fillers",
@@ -165,7 +165,7 @@ function build({ pages, shell, esc, attr, OUT, SITE, ownPhoto, kindOf, money, BU
       <h2>More gift guides</h2>
       <p>${others.map((x) => `<a href="/p/${x.slug}/">${esc(x.h1)}</a>`).join(" &middot; ")}</p>
       <h2>Not sure what they'd like?</h2>
-      <p>Send them <a href="/p/the-pond-guides/">a free Pond Guide</a> instead: plain-English guides to autism, ADHD, AuDHD, PDA and more, no sign-up. Or <a href="/">see everything in the shop</a>.</p>
+      <p>Send them <a href="/#guides">a free Pond Guide</a> instead: plain-English guides to autism, ADHD, AuDHD, PDA and more, no sign-up. Or <a href="/">see everything in the shop</a>.</p>
     </div>
   </div>
 </section>`;
