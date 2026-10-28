@@ -130,6 +130,12 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct evening: five more help pages in help-pages.cjs (autism and a partner,
+  autistic burnout, Christmas with an autistic child, telling your employer about
+  ADHD, sensory overload): ten in all, live with the 1 Nov publish. Ten pins for
+  them (xmas-pins.py BATCH=help -> automation/social/pins-help/, 17-21 Nov);
+  Claude uploads them into free Pinterest slots on 30 Oct (100-pin limit).
+
 - 28 Oct: the 23 free Pond Guide PDFs restamped (automation/pdf/guide-share-line.py +
   guide-share-line.yml): "Free to share... at froglogic.co.uk" replaces the old
   personal-use/don't-share line, and the footer links froglogic.co.uk/?ref=pdf#guides.
