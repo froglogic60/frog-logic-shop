@@ -130,6 +130,14 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct: the 23 free Pond Guide PDFs restamped (automation/pdf/guide-share-line.py +
+  guide-share-line.yml): "Free to share... at froglogic.co.uk" replaces the old
+  personal-use/don't-share line, and the footer links froglogic.co.uk/?ref=pdf#guides.
+  Live with the 1 Nov publish. The paid Complete Set keeps its licence.
+- 28 Oct: 10 NHS Right to Choose clinics (approach-list #80-89; best fits The Owl
+  Centre and Help for Psychology) get the free guides on Mon 2 Nov with the schools
+  and forums: 55 emails in all. Psychiatry UK, Healios, Noodle, Paloma: forms only.
+
 - LINK RULE (28 Oct): froglogic.co.uk/p/the-pond-guides/ is the PAID £8 complete set.
   Never call it free. The free guides are listed at froglogic.co.uk/#guides
   (single guides free at /p/autism/, /p/adhd/ etc). Fixed 28 Oct in the group-post
