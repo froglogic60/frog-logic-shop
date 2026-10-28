@@ -26,6 +26,8 @@ const b64 = (f) => "data:image/png;base64," + fs.readFileSync(path.join(ROOT, f)
 // The three visuals, drawn in HTML so they stay sharp at both sizes.
 function visual(kind, img) {
   if (kind === "timetable") return `<div class="fan"><img class="p1" src="${img.t1}"><img class="p2" src="${img.t2}"></div>`;
+  if (kind === "bigpack") return `<div class="fan"><img class="p1" src="${img.b1}"><img class="p2" src="${img.b4}"></div>`;
+  if (kind === "gift") return `<div class="gift"><div class="gcard"><div class="gk">A gift for you</div><img src="${img.cc}"><div class="gt">A planner built for your brain</div></div></div>`;
   if (kind === "card") return `<div class="cards">
     <div class="face front"><div class="k">How to help me</div><div class="n">Alex</div><div class="h">I'm neurodivergent</div>
       <div class="s"><b>If it gets too much I might</b><ul><li>go quiet</li><li>need to leave</li><li>cover my ears</li></ul></div><div class="f">froglogic.co.uk</div></div>
@@ -50,6 +52,9 @@ const ITEMS = [
       { slug: "advent-pin", head: "Pond Advent", sub: "One free thing a day, 1–24 December", link: "https://froglogic.co.uk/p/pond-advent/?ref=pinterest", title: "Pond Advent: a free email advent calendar for autistic and ADHD families", desc: "One small, calm, useful thing a day from 1 to 24 December: plain-English guides for the relatives, a Christmas visual timetable, a how-to-help-me card and tips for visits, presents and the quiet days after. Free, then it stops.", keys: "advent calendar, autism christmas, adhd christmas, sen parents, neurodivergent christmas" },
       { slug: "advent-pin-2", head: "24 free doors", sub: "For a calmer neurodivergent Christmas", link: "https://froglogic.co.uk/p/pond-advent/?ref=pinterest-2", title: "Free neurodivergent advent calendar | 24 days of autism and ADHD Christmas help", desc: "A free advent calendar by email for neurodivergent families: one guide, printable or tip a day in December, written by a neurodivergent person in the UK. One email a day, one-click off, stops on Christmas Eve.", keys: "free advent calendar, autism parents, adhd parents, christmas tips, sensory friendly christmas" },
     ] },
+  // Posts only, no pins (28 Oct 2026, "yes do 1 and 2"): the two new paid pieces.
+  { name: "planner-gift-card", kind: "gift", tag: "Gift card · £25", head: "A present built for their brain", sub: "They answer fifteen questions, and a planner is built from their answers, in their words.", url: "froglogic.co.uk/gift-card", pins: [] },
+  { name: "timetable-big-pack", kind: "bigpack", tag: "Big Pack · £3", head: "60 picture cards for the big day", sub: "Church, the car, crackers, the dog walk and 12 blanks, plus a now and next board and a holiday week.", url: "froglogic.co.uk/big-pack", pins: [] },
 ];
 
 function page(css, { w, h, tag, head, sub, url, vis }) {
@@ -75,6 +80,9 @@ h1{font:600 ${h > 1400 ? 84 : 76}px/1.02 Fraunces;color:#6B4A32;margin:18px 0 18
 .advent span{height:92px;border:3px solid #22331F;border-radius:14px;display:flex;align-items:center;justify-content:center;font:600 40px Fraunces;background:#DDEBD5}
 .advent span:nth-child(3n){background:#F6E4C6}.advent span:nth-child(4n){background:#F6DCDC}
 .afrog{width:300px;margin-bottom:-30px}
+.gcard{width:520px;background:#E7E1F2;border-radius:10px;box-shadow:0 18px 40px rgba(60,50,40,.25);padding:34px 30px 40px;text-align:center;transform:rotate(-3deg)}
+.gcard .gk{font:700 18px 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase;color:#5E4A8C}.gcard img{width:300px;margin:12px 0}
+.gcard .gt{font:600 40px/1.1 Fraunces;color:#22331F}
 ${w < 1080 ? '.adv,.cards{zoom:.88}' : ''}
 </style></head><body><div class="c"><div class="tag">${tag}</div><h1>${head}</h1><p class="sub">${sub}</p><div class="vis">${vis}</div>
 <div class="foot"><div class="url">${url}</div><div class="sig">Frog Logic</div></div></div></body></html>`;
@@ -91,7 +99,9 @@ ${w < 1080 ? '.adv,.cards{zoom:.88}' : ''}
   }
   const css = fontFaceCSS(fontDir) + `@font-face{font-family:'DM Sans';src:url(data:font/ttf;base64,${fs.readFileSync(dm).toString("base64")});font-weight:100 1000;}`;
   const frog = "data:image/png;base64," + (await sharp(path.join(ROOT, "artwork/frogs/socially-hibernating.png")).extract({ left: 600, top: 500, width: 1820, height: 2060 }).resize({ width: 600 }).png().toBuffer()).toString("base64");
-  const img = { t1: b64("automation/social/xmas-printables/Christmas-Visual-Timetable-1.png"), t2: b64("automation/social/xmas-printables/Christmas-Visual-Timetable-2.png"), frog };
+  const cc = "data:image/png;base64," + (await sharp(path.join(ROOT, "artwork/frogs/comfort-creature.png")).extract({ left: 500, top: 520, width: 2020, height: 2000 }).resize({ width: 600 }).png().toBuffer()).toString("base64");
+  const img = { t1: b64("automation/social/xmas-printables/Christmas-Visual-Timetable-1.png"), t2: b64("automation/social/xmas-printables/Christmas-Visual-Timetable-2.png"),
+    b1: b64("automation/social/xmas-printables/Christmas-Visual-Timetable-Big-Pack-1.png"), b4: b64("automation/social/xmas-printables/Christmas-Visual-Timetable-Big-Pack-4.png"), frog, cc };
 
   let chromium; try { ({ chromium } = require("playwright")); } catch { ({ chromium } = require("playwright-core")); }
   const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
@@ -109,7 +119,7 @@ ${w < 1080 ? '.adv,.cards{zoom:.88}' : ''}
     for (const pin of it.pins) await shoot(`${pin.slug}.jpg`, 1000, 1500, { ...it, head: pin.head, sub: pin.sub });
   }
   // One pin a day at 18:30 UTC, taking turns: timetable, card, Advent, then the second of each.
-  const order = [0, 1].flatMap((k) => ITEMS.map((it) => it.pins[k]));
+  const order = [0, 1].flatMap((k) => ITEMS.map((it) => it.pins[k]).filter(Boolean));
   const rows = order.map((pin, n) => [pin.title.slice(0, 100), RAW + pin.slug + ".jpg", BOARD, "", pin.desc.slice(0, 500), pin.link,
     new Date(start.getTime() + n * 86400000).toISOString().slice(0, 10) + "T18:30:00", pin.keys]);
   await browser.close();
