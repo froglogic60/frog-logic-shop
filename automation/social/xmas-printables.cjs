@@ -48,7 +48,7 @@ const ICONS = {
   "": "",
 };
 
-// ---- 28 more for the paid Big Pack (Sam, 28 Oct 2026: "yes do 1 and 2"). The
+// ---- 29 more for the paid Big Pack (19 + 29 = 48 drawn, 12 blank) (Sam, 28 Oct 2026: "yes do 1 and 2"). The
 // free timetable keeps exactly the 20 above.
 const EXTRA = {
   "Shower": `<path d="M20 14 H50 V26" fill="none" ${S}/><path d="M36 26 H64 L72 40 H28 Z" fill="${C.grey}" ${S}/><path d="M36 52 L32 64 M50 52 V66 M64 52 L68 64 M42 74 L38 86 M58 74 L62 86" fill="none" stroke="${C.blue}" stroke-width="5" stroke-linecap="round"/>`,
@@ -78,6 +78,7 @@ const EXTRA = {
   "Wait": `<path d="M26 12 H74 M26 88 H74" ${S}/><path d="M32 12 C32 36 50 42 50 50 C50 58 32 64 32 88 H68 C68 64 50 58 50 50 C50 42 68 36 68 12 Z" fill="#fff" ${S}/><path d="M38 84 C40 72 50 68 50 68 C50 68 60 72 62 84 Z" fill="${C.gold}"/>`,
   "Finished": `<circle cx="50" cy="50" r="38" fill="${C.sage}" ${S}/><path d="M32 52 L45 64 L70 38" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>`,
   "Help": `<path d="M34 88 V54 L26 42 C23 36 31 31 36 37 L42 46 V20 C42 13 50 13 50 20 V42 V14 C50 7 58 7 58 14 V42 V18 C58 11 66 11 66 18 V44 V28 C66 21 74 21 74 28 V60 C74 76 66 88 54 88 Z" fill="${C.sand}" ${S}/>`,
+  "Hug": `<circle cx="36" cy="26" r="11" fill="${C.pink}" ${S}/><circle cx="64" cy="26" r="11" fill="${C.sand}" ${S}/><path d="M16 88 C16 54 50 46 50 46 C50 46 84 54 84 88 Z" fill="${C.blue}" ${S}/><path d="M28 64 C42 56 58 56 72 64" fill="none" ${S}/>`,
   "Stop": `<path d="M34 10 H66 L90 34 V66 L66 90 H34 L10 66 V34 Z" fill="${C.red}" ${S}/><text x="50" y="59" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="700" font-size="24" fill="#fff">STOP</text>`,
 };
 
