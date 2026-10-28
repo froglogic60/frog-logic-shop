@@ -349,6 +349,9 @@ const PAGES = [
       { h: "For the relatives", p: [
         "If the visitors need explaining too, the free guide below is written for grandparents, aunties and uncles. More ideas on <a href=\"/p/christmas-with-an-autistic-child/\">Christmas with an autistic child</a>.",
       ] },
+      { h: "One free thing a day in December", p: [
+        "<a href=\"/p/pond-advent/\">Pond Advent</a> is a free email advent calendar: one small, useful thing a day from 1 to 24 December, then it stops. And for a card to hand over when words are hard, try the free <a href=\"/p/help-card-maker/\">how to help me card maker</a>.",
+      ] },
     ],
     faq: [
       ["What is a visual timetable?", "A list of the day's activities shown in pictures, in order, so a child can see what's happening now and what comes next."],
