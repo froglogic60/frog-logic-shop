@@ -2,7 +2,7 @@
 
 Rules of thumb before posting: read the group's rules first (many ban links in posts but allow them in comments — if so, post without the link and add it in the first comment). One group a day, not five in an hour. Reply to every comment, even just "thank you". Never post the same text twice in the same group.
 
-Links: the whole set is froglogic.co.uk/p/the-pond-guides/ — single guides are froglogic.co.uk/p/autism/ , /p/adhd/ , /p/audhd/ , /p/pda/ , /p/dyslexia/ , /p/dyspraxia/ , /p/ocd/ , /p/anxiety/ , /p/sensory-differences/ , /p/misophonia/ , /p/alexithymia/ , /p/dyscalculia/ , /p/tourette-s-and-tics/
+Links: the FREE guides are listed at froglogic.co.uk/#guides (froglogic.co.uk/p/the-pond-guides/ is the PAID £8 complete set — never call it free) — single guides are froglogic.co.uk/p/autism/ , /p/adhd/ , /p/audhd/ , /p/pda/ , /p/dyslexia/ , /p/dyspraxia/ , /p/ocd/ , /p/anxiety/ , /p/sensory-differences/ , /p/misophonia/ , /p/alexithymia/ , /p/dyscalculia/ , /p/tourette-s-and-tics/
 
 ---
 
@@ -12,7 +12,7 @@ Hi, I'm Sam. I'm neurodivergent myself and I've written a set of short plain-Eng
 
 They're free. No email, no sign-up, just a PDF. Pick the one you need and send it on.
 
-froglogic.co.uk/p/the-pond-guides/
+froglogic.co.uk/#guides
 
 If one of them gets something wrong for your child, please tell me — I'd rather fix it than be right.
 
@@ -53,7 +53,7 @@ Written by one neurodivergent person from her lounge, so it's a view, not a text
 
 If you've ever had to explain someone's diagnosis to a relative, a respite worker or a school for the fifth time, I made something for that: twenty-three short plain-English guides, one per neurotype, written to be handed over. Free, no sign-up.
 
-froglogic.co.uk/p/the-pond-guides/
+froglogic.co.uk/#guides
 
 I'm neurodivergent myself and made these because I needed them. Tell me if one's wrong.
 
