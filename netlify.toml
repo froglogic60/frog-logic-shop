@@ -81,6 +81,13 @@
   to = "/p/pond-advent/?ref=short"
   status = 302
 
+# Where a Bespoke Planner gift card says to go: the planner questions (the form
+# has a gift code box). 28 Oct 2026.
+[[redirects]]
+  from = "/gift"
+  to = "https://forms.gle/GJjQ8rMSoqh7ffPx5"
+  status = 302
+
 [[redirects]]
   from = "/pin/guides"
   to = "/?ref=pinterest#guides"
@@ -223,6 +230,16 @@
   status = 404
   force = true
 [[redirects]]
+  from = "/digital/Bespoke-Planner-Gift-Card-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Bespoke-Planner-Gift-Card.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
   from = "/digital/Christmas-Cards-Black-and-White-Letter.pdf"
   to = "/404"
   status = 404
@@ -249,6 +266,16 @@
   force = true
 [[redirects]]
   from = "/digital/Christmas-Cards-Original.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Visual-Timetable-Big-Pack-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Christmas-Visual-Timetable-Big-Pack.pdf"
   to = "/404"
   status = 404
   force = true
