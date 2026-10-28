@@ -58,6 +58,12 @@
   from = "/pin"
   to = "/?ref=pinterest"
   status = 302
+# Christmas "send this to the relatives" picture (28 Oct 2026) says froglogic.co.uk/xmas.
+[[redirects]]
+  from = "/xmas"
+  to = "/?ref=xmascard#guides"
+  status = 302
+
 [[redirects]]
   from = "/pin/guides"
   to = "/?ref=pinterest#guides"
