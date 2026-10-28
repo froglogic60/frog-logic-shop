@@ -673,6 +673,390 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ---
 
+## 35. Capel Primary School, Tonbridge (school SENCO)
+
+**To:** schivers@capel-tonbridge.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Chivers,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 36. St Margaret Clitherow Catholic Primary, Tonbridge (school SENCO)
+
+**To:** senco@st-margaret-tonbridge.kcsp.org.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Challis,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 37. East Peckham Primary, East Peckham (school SENCO)
+
+**To:** senco@eastpeckhamprimary.org.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Miss Worrall,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 38. Ditton CE Junior School, Ditton (school SENCO)
+
+**To:** moonk@ditton-jun.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Moon,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 39. The Aylesford School, Aylesford (school SENCO)
+
+**To:** chayla.duff@aylesford.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Duff,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 40. The Rosewood School, Leybourne (school SENCO)
+
+**To:** k.hales@trs.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Miss Hales,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 41. Broadwater Down Primary, Tunbridge Wells (school SENCO)
+
+**To:** senco@broadwater-down.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Miss Rainbow,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 42. St Augustine's Catholic Primary, Tunbridge Wells (school SENCO)
+
+**To:** senco@st-augustines-tunbridgewells.kcsp.org.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Judith,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 43. Skinners' Kent Primary School, Tunbridge Wells (school SENCO)
+
+**To:** senco@skps.org.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Ms Bathurst and Mr Wills,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 44. Trinity School, Sevenoaks (school SENCO)
+
+**To:** senco@trinitysevenoaks.com
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mr Watts,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 45. Lady Boswell's CE Primary, Sevenoaks (school SENCO)
+
+**To:** senco@ladyboswells.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Browning,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 46. Plaxtol Primary School, Plaxtol (school SENCO)
+
+**To:** senco@plaxtol.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Housley,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 47. Halstead Community Primary, Halstead (school SENCO)
+
+**To:** senco@halstead.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Saheed,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 48. Palace Wood Primary, Maidstone (school SENCO)
+
+**To:** SENCO@palacewood.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Miss Tye,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 49. Tunbury Primary, Walderslade (school SENCO)
+
+**To:** 8862530.senco@tunbury.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Suzanne,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 50. Dartford Science & Technology College, Dartford (school SENCO)
+
+**To:** diane.garrett@dstc.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Garrett,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 51. Woodchurch CE Primary, Woodchurch (school SENCO)
+
+**To:** senco@woodchurch.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Butcher,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 52. Cage Green Primary, Tonbridge (school SENCO)
+
+**To:** office@cage-green.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Claire,
+>
+> (For the attention of Ms Ellis, SENCO, if this has reached the office.)
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 53. Sevenoaks Primary School, Sevenoaks (school SENCO)
+
+**To:** manager@sevenoaks.kent.sch.uk
+**Why them:** Kent school; SENCO email published on the school's own website (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families and staff (autism, ADHD, PDA)
+
+> Hi Mrs Bye,
+>
+> (For the attention of Mrs Bye, SENCO, if this has reached the office.)
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
+> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+>
+> Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
+> https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
 ## After sending
 
 Log who you sent to and when on the Desk (one line each is fine — "nasen sent 27 Oct"). The 8 Dec nudge is one short reply to your own email: "Just floating this back up in case it got buried — no worries if it's not for you."
