@@ -62,3 +62,14 @@ I'm neurodivergent myself and made these because I needed them. Tell me if one's
 ## 6. The reply version (for when someone in a group asks "how do I explain X to my mum/boss/partner?")
 
 I wrote a free one-page-ish guide for exactly this — plain English, for the person around them rather than the person with it. froglogic.co.uk/p/[condition]/ — no sign-up, just the PDF. Hope it helps, and tell me if it doesn't.
+
+---
+
+## 7. The new free things (live from 1 Nov 2026) — add as a P.S., one link only
+
+Parents groups: P.S. I've also made a free Christmas visual timetable with 20 picture cards for the big day, if it would help: froglogic.co.uk/timetable
+
+Everyone else: P.S. In December I'm sending one free thing a day by email, guides, printables and calm tips, and then it stops. It's called Pond Advent: froglogic.co.uk/advent
+
+For a "how do I explain what I need" thread: there's a free card maker for a wallet card that says how to help you when words go: froglogic.co.uk/card
+
