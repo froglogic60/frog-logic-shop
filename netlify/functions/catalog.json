@@ -2652,6 +2652,42 @@
     ]
   },
   {
+    "id": "d39-christmas-visual-timetable-big-pack",
+    "name": "Christmas Visual Timetable Big Pack",
+    "price": 3,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Christmas-Visual-Timetable-Big-Pack.pdf",
+    "files": [
+      {
+        "name": "Christmas Visual Timetable Big Pack (A4)",
+        "file": "Christmas-Visual-Timetable-Big-Pack.pdf"
+      },
+      {
+        "name": "Christmas Visual Timetable Big Pack (US Letter)",
+        "file": "Christmas-Visual-Timetable-Big-Pack-Letter.pdf"
+      }
+    ]
+  },
+  {
+    "id": "d40-bespoke-planner-gift-card",
+    "name": "Bespoke Planner Gift Card",
+    "price": 25,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Bespoke-Planner-Gift-Card.pdf",
+    "files": [
+      {
+        "name": "Bespoke Planner Gift Card (A4)",
+        "file": "Bespoke-Planner-Gift-Card.pdf"
+      },
+      {
+        "name": "Bespoke Planner Gift Card (US Letter)",
+        "file": "Bespoke-Planner-Gift-Card-Letter.pdf"
+      }
+    ]
+  },
+  {
     "id": "d35-bright-christmas-cards",
     "name": "Bright Christmas Cards",
     "price": 3,
