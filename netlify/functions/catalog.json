@@ -2634,6 +2634,24 @@
     ]
   },
   {
+    "id": "d38-thank-you-cards-for-sen-staff",
+    "name": "Thank You Cards for SEN Staff",
+    "price": 3,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Thank-You-Cards-SEN-Staff.pdf",
+    "files": [
+      {
+        "name": "Thank You Cards (A4)",
+        "file": "Thank-You-Cards-SEN-Staff.pdf"
+      },
+      {
+        "name": "Thank You Cards (US Letter)",
+        "file": "Thank-You-Cards-SEN-Staff-Letter.pdf"
+      }
+    ]
+  },
+  {
     "id": "d35-bright-christmas-cards",
     "name": "Bright Christmas Cards",
     "price": 3,
