@@ -872,6 +872,10 @@
         {
           "what": "Free 'how to help me' card maker (/p/help-card-maker/) and Pond Advent sign-up (/p/pond-advent/) built, live with the 1 Nov publish. Pond Advent: 24 emails, one a day 1–24 Dec at 7:41am, its own list. Test of door 1 sent to your inbox",
           "who": "note"
+        },
+        {
+          "what": "Christmas Visual Timetable Big Pack (60 picture cards) on Etsy now at £4.50, £3 on the site from 1 Nov. Bespoke Planner gift card (£25) on the site from 1 Nov: they answer the questions at froglogic.co.uk/gift with your email as the gift code",
+          "who": "note"
         }
       ]
     },
@@ -1035,6 +1039,15 @@
       ]
     },
     {
+      "date": "2026-11-13",
+      "items": [
+        {
+          "what": "Facebook + Instagram: the Bespoke Planner gift card (froglogic.co.uk/gift-card)",
+          "who": "robot"
+        }
+      ]
+    },
+    {
       "date": "2026-11-15",
       "items": [
         {
@@ -1048,6 +1061,15 @@
       "items": [
         {
           "what": "Claude: check Search Console → Pages. How many of the 125 product pages has Google indexed, and which searches are they showing for? (Pages went live 13 Oct)",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "items": [
+        {
+          "what": "Facebook + Instagram: the Christmas timetable Big Pack (froglogic.co.uk/big-pack)",
           "who": "robot"
         }
       ]
