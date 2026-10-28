@@ -48,8 +48,41 @@ const ICONS = {
   "": "",
 };
 
+// ---- 28 more for the paid Big Pack (Sam, 28 Oct 2026: "yes do 1 and 2"). The
+// free timetable keeps exactly the 20 above.
+const EXTRA = {
+  "Shower": `<path d="M20 14 H50 V26" fill="none" ${S}/><path d="M36 26 H64 L72 40 H28 Z" fill="${C.grey}" ${S}/><path d="M36 52 L32 64 M50 52 V66 M64 52 L68 64 M42 74 L38 86 M58 74 L62 86" fill="none" stroke="${C.blue}" stroke-width="5" stroke-linecap="round"/>`,
+  "Brush teeth": `<rect x="10" y="62" width="62" height="12" rx="6" fill="${C.blue}" ${S}/><rect x="60" y="46" width="26" height="16" rx="3" fill="#fff" ${S}/><path d="M64 46 V34 M71 46 V34 M78 46 V34" ${S}/>`,
+  "Medicine": `<g transform="rotate(-35 50 50)"><rect x="18" y="36" width="64" height="28" rx="14" fill="#fff" ${S}/><path d="M50 36 H68 A14 14 0 0 1 68 64 H50 Z" fill="${C.red}" ${S}/></g>`,
+  "Church": `<path d="M20 88 V52 L50 30 L80 52 V88 Z" fill="${C.sand}" ${S}/><path d="M50 30 V10 M42 17 H58" fill="none" ${S}/><path d="M42 88 V70 A8 8 0 0 1 58 70 V88" fill="#fff" ${S}/>`,
+  "Shopping": `<path d="M20 36 H80 L74 88 H26 Z" fill="${C.gold}" ${S}/><path d="M36 36 V28 C36 12 64 12 64 28 V36" fill="none" ${S}/>`,
+  "Train": `<rect x="22" y="12" width="56" height="64" rx="10" fill="${C.blue}" ${S}/><rect x="30" y="22" width="40" height="22" rx="3" fill="#fff" ${S}/><circle cx="36" cy="60" r="5" fill="#fff" ${S}/><circle cx="64" cy="60" r="5" fill="#fff" ${S}/><path d="M32 76 L22 90 M68 76 L78 90" ${S}/>`,
+  "Plane": `<path d="M50 8 C56 8 56 20 56 30 L88 52 V60 L56 50 V74 L66 82 V88 L50 84 L34 88 V82 L44 74 V50 L12 60 V52 L44 30 C44 20 44 8 50 8 Z" fill="#fff" ${S}/>`,
+  "Walk": `<ellipse cx="34" cy="64" rx="11" ry="17" fill="${C.brown}" ${S}/><ellipse cx="66" cy="34" rx="11" ry="17" fill="${C.brown}" ${S}/>`,
+  "Playground": `<path d="M18 88 V28 H34 V88" fill="none" ${S}/><path d="M18 46 H34 M18 64 H34" ${S}/><path d="M34 28 C60 28 58 82 88 86" fill="none" stroke="${C.red}" stroke-width="10" stroke-linecap="round"/>`,
+  "Grandparents' house": `<path d="M14 50 L50 18 L86 50 V88 H14 Z" fill="${C.sand}" ${S}/><path d="M50 76 C40 68 36 60 42 55 C46 52 50 57 50 57 C50 57 54 52 58 55 C64 60 60 68 50 76 Z" fill="${C.pink}" ${S}/>`,
+  "Party": `<ellipse cx="38" cy="34" rx="16" ry="20" fill="${C.red}" ${S}/><ellipse cx="64" cy="40" rx="16" ry="20" fill="${C.blue}" ${S}/><path d="M38 54 C34 68 44 76 40 90 M64 60 C60 72 70 78 64 90" fill="none" ${S}/>`,
+  "Music": `<path d="M38 74 V24 L76 16 V66" fill="none" ${S}/><ellipse cx="30" cy="74" rx="10" ry="8" fill="${C.ink}"/><ellipse cx="68" cy="66" rx="10" ry="8" fill="${C.ink}"/>`,
+  "Crafts": `<rect x="14" y="14" width="52" height="66" rx="4" fill="#fff" ${S}/><path d="M48 84 L84 48 L74 38 L38 74 Z" fill="${C.gold}" ${S}/><path d="M38 74 L34 88 L48 84 Z" fill="${C.sand}" ${S}/>`,
+  "Baking": `<circle cx="50" cy="24" r="12" fill="${C.sand}" ${S}/><path d="M38 40 H62 L82 52 L76 60 L62 54 V68 L72 88 L62 90 L50 74 L38 90 L28 88 L38 68 V54 L24 60 L18 52 Z" fill="${C.sand}" ${S}/><circle cx="50" cy="52" r="3" fill="${C.red}"/><circle cx="50" cy="62" r="3" fill="${C.red}"/>`,
+  "Decorate the tree": `<path d="M50 10 L20 58 H36 L22 80 H78 L64 58 H80 Z" fill="${C.sage}" ${S}/><path d="M50 80 V92" ${S}/><circle cx="40" cy="50" r="5" fill="${C.red}"/><circle cx="60" cy="64" r="5" fill="${C.gold}"/><circle cx="46" cy="70" r="5" fill="${C.blue}"/><circle cx="56" cy="38" r="5" fill="${C.pink}"/>`,
+  "Stocking": `<path d="M36 22 H64 V56 L80 66 C90 74 82 92 66 86 L36 68 Z" fill="${C.red}" ${S}/><rect x="32" y="10" width="36" height="14" rx="3" fill="#fff" ${S}/>`,
+  "Write cards": `<rect x="12" y="24" width="76" height="52" rx="4" fill="#fff" ${S}/><path d="M12 28 L50 58 L88 28" fill="none" ${S}/>`,
+  "Video game": `<path d="M24 32 H76 C88 32 92 70 82 74 C74 78 68 64 62 62 H38 C32 64 26 78 18 74 C8 70 12 32 24 32 Z" fill="${C.grey}" ${S}/><path d="M30 44 V58 M23 51 H37" ${S}/><circle cx="64" cy="46" r="4" fill="${C.ink}"/><circle cx="73" cy="55" r="4" fill="${C.ink}"/>`,
+  "Phone call": `<path d="M28 12 L42 28 L34 40 C40 52 48 60 60 66 L72 58 L88 72 L78 86 C48 86 14 52 14 22 Z" fill="${C.sage}" ${S}/>`,
+  "Lunch": `<path d="M14 66 L50 18 L86 66 Z" fill="${C.sand}" ${S}/><path d="M18 64 H82" stroke="${C.sage}" stroke-width="7"/><path d="M14 68 H86 V78 H14 Z" fill="${C.sand}" ${S}/>`,
+  "Drink": `<path d="M24 30 H70 L64 88 H30 Z" fill="${C.blue}" ${S}/><path d="M46 30 L58 8" fill="none" ${S}/>`,
+  "Sweets": `<path d="M38 90 V40 C38 18 72 18 72 40" fill="none" stroke="${C.ink}" stroke-width="20" stroke-linecap="round"/><path d="M38 90 V40 C38 18 72 18 72 40" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/><path d="M38 90 V40 C38 18 72 18 72 40" fill="none" stroke="${C.red}" stroke-width="11" stroke-dasharray="7 8"/>`,
+  "Crackers": `<path d="M30 40 H70 V60 H30 Z" fill="${C.red}" ${S}/><path d="M30 40 L12 30 V70 L30 60 Z M70 40 L88 30 V70 L70 60 Z" fill="${C.gold}" ${S}/>`,
+  "Photos": `<rect x="12" y="30" width="76" height="50" rx="8" fill="${C.grey}" ${S}/><path d="M34 30 L40 20 H60 L66 30" fill="${C.grey}" ${S}/><circle cx="50" cy="55" r="14" fill="#fff" ${S}/>`,
+  "Wait": `<path d="M26 12 H74 M26 88 H74" ${S}/><path d="M32 12 C32 36 50 42 50 50 C50 58 32 64 32 88 H68 C68 64 50 58 50 50 C50 42 68 36 68 12 Z" fill="#fff" ${S}/><path d="M38 84 C40 72 50 68 50 68 C50 68 60 72 62 84 Z" fill="${C.gold}"/>`,
+  "Finished": `<circle cx="50" cy="50" r="38" fill="${C.sage}" ${S}/><path d="M32 52 L45 64 L70 38" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>`,
+  "Help": `<path d="M34 88 V54 L26 42 C23 36 31 31 36 37 L42 46 V20 C42 13 50 13 50 20 V42 V14 C50 7 58 7 58 14 V42 V18 C58 11 66 11 66 18 V44 V28 C66 21 74 21 74 28 V60 C74 76 66 88 54 88 Z" fill="${C.sand}" ${S}/>`,
+  "Stop": `<path d="M34 10 H66 L90 34 V66 L66 90 H34 L10 66 V34 Z" fill="${C.red}" ${S}/><text x="50" y="59" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="700" font-size="24" fill="#fff">STOP</text>`,
+};
+
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
-const icon = (k, size) => `<svg viewBox="0 0 100 100" width="${size}" height="${size}">${ICONS[k]}</svg>`;
+const icon = (k, size) => `<svg viewBox="0 0 100 100" width="${size}" height="${size}">${ICONS[k] || EXTRA[k]}</svg>`;
 
 function timetableHTML(frog) {
   const row = (n) => `<div class="row"><div class="when">${n === 0 ? "First" : n === 7 ? "Last" : "Then"}</div><div class="slot"></div><div class="line"></div><div class="tick"></div></div>`;
@@ -78,6 +111,97 @@ function timetableHTML(frog) {
     <li>Expect a quieter day or two afterwards.</li></ul>
     <p class="more">Explaining your child to relatives? There are free plain-English guides to autism, ADHD, PDA and more at <b>froglogic.co.uk</b></p></div>
   <div class="foot">A friendly printable from Frog Logic, made by a neurodivergent person in the UK. Not medical advice.</div>
+</section>`;
+}
+
+// The paid Big Pack (D39): the free timetable's schedule, plus a now/next board,
+// a holiday-week planner, 60 picture cards (48 drawn, 12 blank), first/then and
+// break cards, and the grown-ups' page.
+function bigPackHTML(frog) {
+  const row = (n) => `<div class="row"><div class="when">${n === 0 ? "First" : n === 7 ? "Last" : "Then"}</div><div class="slot"></div><div class="line"></div><div class="tick"></div></div>`;
+  const all = Object.keys(ICONS).filter(Boolean).concat(Object.keys(EXTRA));
+  while (all.length < 60) all.push("");
+  const cardPage = (keys, n) => `
+<section class="page">
+  <div class="kick">CUT ALONG THE DASHED LINES · ${n} OF 3</div><h2>Picture cards</h2>
+  <div class="grid">${keys.map((k) => `<div class="pc">${k ? icon(k, 92) : ""}<div class="lab">${k ? esc(k) : "&nbsp;"}</div></div>`).join("")}</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+</section>`;
+  const days = ["Christmas Eve", "Christmas Day", "Boxing Day", "", "", "", ""];
+  return `
+<section class="page">
+  <div class="head"><div><div class="kick">BIG PACK · PRINT · CUT · STICK</div><h1>My Christmas Day</h1><p class="sub">Put a picture card in each box, in order. Tick each one when it's done.</p></div><img class="frog" src="${frog}"></div>
+  <div class="rows">${[0, 1, 2, 3, 4, 5, 6, 7].map(row).join("")}</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+</section>
+<section class="page">
+  <div class="kick">ONE THING AT A TIME</div><h2>Now and next</h2>
+  <div class="nn"><div><div class="ftl">Now</div><div class="nnb"></div></div><div class="arrow">→</div><div><div class="ftl">Next</div><div class="nnb"></div></div></div>
+  <p class="sub small">Some days the whole timetable is too much to look at. Use just two cards: what's happening now, and what's next.</p>
+  <div class="kick" style="margin-top:10mm">TODAY IS</div>
+  <div class="today">${["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((d) => `<span>${d}</span>`).join("")}</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+</section>
+<section class="page">
+  <div class="kick">THE WHOLE HOLIDAY</div><h2>My holiday week</h2>
+  <div class="week"><div></div>${days.map((d) => `<div class="wd${d ? "" : " wdb"}">${d ? esc(d) : ""}</div>`).join("")}
+  ${["Morning", "Afternoon", "Evening"].map((t) => `<div class="wt">${t}</div>${days.map(() => `<div class="ws"></div>`).join("")}`).join("")}</div>
+  <p class="sub small">One card per box, or leave a box empty for a quiet one. A quiet day after a busy one helps.</p>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+</section>
+${[0, 1, 2].map((i) => cardPage(all.slice(i * 20, i * 20 + 20), i + 1)).join("")}
+<section class="page">
+  <div class="kick">FOR WHEN IT GETS A BIT MUCH</div><h2>First, then</h2>
+  <div class="ft"><div><div class="ftl">First</div><div class="ftb"></div></div><div class="arrow">→</div><div><div class="ftl">Then</div><div class="ftb"></div></div></div>
+  <div class="break">${icon("Quiet time", 110)}<div><div class="bt">I need a break</div><div class="bs">Show this card. Somewhere quiet, no questions, back when I'm ready.</div></div></div>
+  <div class="break" style="background:#FBEFE0">${icon("Help", 110)}<div><div class="bt">I need help</div><div class="bs">Show this card. Come closer, keep it calm, ask me yes or no.</div></div></div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+</section>
+<section class="page">
+  <div class="kick">FOR THE GROWN-UPS</div><h2>How to use the pack</h2>
+  <div class="note"><ul>
+    <li>Go through the day's timetable the night before, and again in the morning.</li>
+    <li>If plans change, change the cards and show the new order. A surprise on paper is easier than a surprise out loud.</li>
+    <li>On a big day, use the now and next board instead of the whole timetable.</li>
+    <li>Plan quiet days into the holiday week. Rest is part of the plan, not a reward.</li>
+    <li>Let the break card and the help card work without questions.</li>
+    <li>Laminate the cards, or print them on card, and stick Velcro dots or Blu Tack on the back. They'll last for years.</li>
+    <li>The blank cards are for the things only your family does. Draw them or write them.</li>
+  </ul>
+  <p class="more">Explaining your child to relatives? There are free plain-English guides to autism, ADHD, PDA and more at <b>froglogic.co.uk</b></p></div>
+  <div class="foot">Thank you for buying from a small neurodivergent-run shop. For your own family's or classroom's use; please don't resell or share the file. Not medical advice.</div>
+</section>`;
+}
+
+// The Bespoke Planner gift card (D40): a fold-in-half card. The person who
+// receives it claims their planner by answering the questions at
+// froglogic.co.uk/gift and typing the giver's email address as the gift code;
+// automation/planner/process-orders.js matches that to the gift payment.
+function giftCardHTML(frog, mark) {
+  return `
+<section class="page land">
+  <div class="half back"><img class="mark" src="${mark}"><div class="bk">Frog Logic</div><div class="bks">froglogic.co.uk</div></div>
+  <div class="half front gfront"><div class="gk">A gift for you</div><img class="gfrog" src="${frog}"><div class="gt">A planner built for your brain</div><div class="gs">The Bespoke Planner</div></div>
+</section>
+<section class="page land">
+  <div class="half ginside">
+    <div class="gh">What it is</div>
+    <p>Every planner you've ever bought was built for someone else's brain. This one is built for yours.</p>
+    <p>You answer fifteen questions: how your day actually runs, how you track your energy, what you keep forgetting, what a hard day looks like and who needs to understand you. Then a planner of up to eighteen pages is made from your answers, in your words, and emailed to you as a PDF to print as often as you like.</p>
+    <p>If it doesn't fit, answer again and it gets rebuilt, free.</p>
+  </div>
+  <div class="half ginside">
+    <div class="gto">To ______________________</div>
+    <div class="gh" style="margin-top:6mm">How to claim it</div>
+    <ol>
+      <li>Go to <b>froglogic.co.uk/gift</b></li>
+      <li>Answer the questions. There are no wrong answers.</li>
+      <li>In the gift code box, type the code below.</li>
+      <li>Your planner arrives by email, usually within a couple of hours.</li>
+    </ol>
+    <div class="gcode"><div class="gcl">Your gift code (the giver's email address)</div><div class="gcb"></div></div>
+    <div class="gto" style="margin-top:6mm">From ____________________</div>
+  </div>
 </section>`;
 }
 
@@ -124,6 +248,15 @@ h1{font:600 34pt/1 Fraunces;margin:2mm 0 2mm;color:${C.brown}} h2{font:600 26pt/
 .back{background:#fff}.mark{width:16mm}.bk{font:700 18pt Caveat;color:${C.brown};margin-top:2mm}.bks{font:400 9pt 'DM Sans';color:#a39683}
 .front{padding:12mm}.cfrog{width:78mm}.ct{font:600 22pt/1.15 Fraunces;text-align:center;text-wrap:balance;max-width:110mm;margin-top:6mm;color:${C.ink}}.cs{font:600 15pt Caveat;font-size:19pt;color:${C.brown};margin-top:6mm;text-align:center}
 .inside{align-items:flex-start;justify-content:flex-start;padding:18mm}.to,.from{font:700 20pt Caveat;color:#cfc7b4}.from{position:absolute;bottom:20mm}
+.nn{display:flex;align-items:center;gap:6mm;margin:4mm 0 6mm}.nnb{width:80mm;height:80mm;border:2.5px dashed ${C.grey};border-radius:6mm}
+.today{display:flex;flex-wrap:wrap;gap:3mm;margin-top:3mm}.today span{border:2px solid ${C.ink};border-radius:3mm;padding:2.5mm 4mm;font:600 12pt 'DM Sans'}
+.week{display:grid;grid-template-columns:20mm repeat(7,minmax(0,1fr));gap:2mm;margin:4mm 0 5mm}.wd{font:700 9pt 'DM Sans';text-align:center;align-self:end;color:${C.brown}}
+.wdb{border-bottom:1.5px solid #cfc7b4;height:8mm;margin:0 1mm}.wt{font:700 13pt Caveat;color:${C.brown};align-self:center}.ws{height:${size === "A4" ? 54 : 48}mm;border:2px dashed ${C.grey};border-radius:3mm}
+.gfront{background:#E7E1F2}.gk{font:700 9pt 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase;color:#5E4A8C}.gfrog{width:70mm;margin-top:4mm}
+.gt{font:600 24pt/1.12 Fraunces;text-align:center;text-wrap:balance;max-width:110mm;margin-top:5mm;color:${C.ink}}.gs{font:700 20pt Caveat;color:#5E4A8C;margin-top:3mm}
+.ginside{align-items:flex-start;justify-content:flex-start;padding:14mm 14mm;font:400 10.5pt/1.45 'DM Sans'}.ginside p{margin:0 0 3mm}.ginside ol{margin:1mm 0 0;padding-left:5mm}
+.gh{font:600 15pt Fraunces;color:#5E4A8C;margin-bottom:2mm}.gto{font:700 18pt Caveat;color:${C.brown}}
+.gcode{margin-top:6mm;width:100%}.gcl{font:700 8.5pt 'Space Grotesk';letter-spacing:.08em;text-transform:uppercase;color:#5E4A8C}.gcb{height:14mm;border:2.5px solid #5E4A8C;border-radius:3mm;margin-top:2mm}
 `;
 }
 
@@ -149,7 +282,9 @@ h1{font:600 34pt/1 Fraunces;margin:2mm 0 2mm;color:${C.brown}} h2{font:600 26pt/
   const jobs = [
     ["Christmas-Visual-Timetable", false, timetableHTML(hib)],
     ["Thank-You-Cards-SEN-Staff", true, cardsHTML(comfort, mark)],
-  ];
+    ["Christmas-Visual-Timetable-Big-Pack", false, bigPackHTML(hib)],
+    ["Bespoke-Planner-Gift-Card", true, giftCardHTML(comfort, mark)],
+  ].filter(([name]) => !process.env.ONLY || process.env.ONLY.split(",").includes(name));
   for (const [name, land, body] of jobs) {
     for (const size of ["A4", "Letter"]) {
       await page.setContent(`<!doctype html><html><head><meta charset="utf-8"><style>${css(fontCss, size, land)}</style></head><body>${body}</body></html>`, { waitUntil: "load" });
