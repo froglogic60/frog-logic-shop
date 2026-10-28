@@ -1,0 +1,35 @@
+name: Send Pond Advent
+# One free thing a day, 1-24 December 2026 (Sam, 28 Oct 2026: "3. Yes").
+# send-advent.mjs sends today's door from content/advent.json to the Pond Advent
+# list (secret ADVENT_CSV_URL, the published sheet behind the sign-up form) and
+# sends nothing outside 1-24 December. Run it by hand with test_to filled in to
+# send one door to one address only.
+on:
+  schedule:
+    - cron: "41 7 1-24 12 *"
+  workflow_dispatch:
+    inputs:
+      test_to:
+        description: "Send only to this address (a test)"
+        required: false
+      day:
+        description: "Which door (1-24) for a test"
+        required: false
+permissions:
+  contents: read
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Send today's door
+        run: node automation/newsletter/send-advent.mjs
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          ADVENT_CSV_URL: ${{ secrets.ADVENT_CSV_URL }}
+          TEST_TO: ${{ inputs.test_to }}
+          DAY: ${{ inputs.day }}
