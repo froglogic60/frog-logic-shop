@@ -130,6 +130,14 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct: promotion for the free tools. Short addresses (netlify.toml, live 1 Nov):
+  froglogic.co.uk/timetable, /card, /advent. promo-tools.cjs + promo-tools.yml built
+  automation/social/promo/ (3 FB/IG posts + 6 pins). FB/IG queued: timetable 4 Nov,
+  card maker 7 Nov, Pond Advent 10 Nov, "starts Tuesday" 28 Nov. Pins bulk-uploaded
+  28 Oct for 2-7 Nov 18:30 UTC (87 of 100 slots were used). group-posts.md #7 has the
+  P.S. lines; the daily group-post task on Jay can't be edited from the cloud, so Sam
+  pastes the P.S. step into it in the desktop app.
+
 - 28 Oct night: two free tools (automation/site/tool-pages.cjs, built by build-pages):
   /p/help-card-maker/ ("how to help me" wallet card, prints 4 per sheet, nothing
   saved; links the £2 How To Help Me sheet) and /p/pond-advent/ (sign-up).
