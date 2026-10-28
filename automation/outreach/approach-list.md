@@ -682,7 +682,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Chivers,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -702,7 +702,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Challis,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -722,7 +722,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Miss Worrall,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -742,7 +742,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Moon,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -762,7 +762,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Duff,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -782,7 +782,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Miss Hales,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -802,7 +802,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Miss Rainbow,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -822,7 +822,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Judith,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -842,7 +842,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Ms Bathurst and Mr Wills,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -862,7 +862,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mr Watts,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -882,7 +882,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Browning,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -902,7 +902,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Housley,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -922,7 +922,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Saheed,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -942,7 +942,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Miss Tye,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -962,7 +962,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Suzanne,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -982,7 +982,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Garrett,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -1002,7 +1002,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > Hi Mrs Butcher,
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -1024,7 +1024,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > (For the attention of Ms Ellis, SENCO, if this has reached the office.)
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
@@ -1046,7 +1046,7 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 > (For the attention of Mrs Bye, SENCO, if this has reached the office.)
 >
 > I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, PDA, dyslexia, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. Each one is two pages and free to read and print, no sign-up:
-> https://froglogic.co.uk/p/the-pond-guides/?ref=senco
+> https://froglogic.co.uk/?ref=senco#guides
 >
 > Please do hand them out if they're useful. If you'd like them all in one file with a licence to print for everyone you support, plus 17 printable tools (communication sheets, planners, scripts), the Organisation Pack is £95 for a team of up to 10, and I'm happy to invoice the school or take a purchase order:
 > https://froglogic.co.uk/p/the-organisation-pack/?ref=senco
