@@ -1,6 +1,8 @@
 // Bespoke planner order robot. Runs on a schedule in GitHub Actions.
 //   1. Reads the questionnaire responses (published-CSV Google Sheet).
-//   2. Checks Stripe for a completed payment (£25 link, or the old £10 one) matching each email.
+//   2. Checks Stripe for a completed payment (£25 link, or the old £10 one) matching each email,
+//      or a Bespoke Planner Gift Card bought at the shop's checkout by the person whose
+//      email the answerer typed as their gift code (28 Oct 2026). One planner per card.
 //   3. Builds the personalised PDF and emails it via Resend.
 //   4. Records fulfilled orders in fulfilled.json (committed by the workflow)
 //      so nobody ever gets charged twice or mailed twice.
@@ -105,6 +107,39 @@ async function collectPaid(plink, emails) {
   }
 }
 
+// Gift cards (D40, 28 Oct 2026): every paid shop checkout whose basket holds the
+// gift card -> { buyer email: number of cards bought }. The basket is stored in
+// the session metadata as "id~variant~qty~size|..." across basket_0, basket_1...
+const GIFT_ID = "d40-bespoke-planner-gift-card";
+async function giftCredits() {
+  const credits = new Map();
+  if (process.env.ALLOW_UNPAID === "1") return credits;
+  const since = Math.floor(Date.UTC(2026, 9, 28) / 1000); // the card went on sale after this
+  let after = "";
+  for (let page = 0; page < 30; page++) {
+    const url = `https://api.stripe.com/v1/checkout/sessions?limit=100&status=complete&created[gte]=${since}${after ? "&starting_after=" + after : ""}`;
+    const r = await fetch(url, { headers: { Authorization: "Bearer " + STRIPE } });
+    if (!r.ok) throw new Error("Stripe " + r.status + " " + (await r.text()).slice(0, 200));
+    const j = await r.json();
+    for (const s of j.data || []) {
+      const email = s.customer_details && s.customer_details.email && s.customer_details.email.trim().toLowerCase();
+      if (!email || s.payment_status !== "paid") continue;
+      const m = s.metadata || {};
+      const basket = Object.keys(m).filter((k) => /^basket_\d+$/.test(k)).sort((a, b) => Number(a.split("_")[1]) - Number(b.split("_")[1])).map((k) => m[k]).join("");
+      let qty = 0;
+      for (const line of basket.split("|")) {
+        const [id, , q] = line.split("~");
+        if (id === GIFT_ID) qty += Number(q) || 1;
+      }
+      if (!basket && m.product_id === GIFT_ID) qty = 1;
+      if (qty) credits.set(email, (credits.get(email) || 0) + qty);
+    }
+    if (!j.has_more || !j.data.length) break;
+    after = j.data[j.data.length - 1].id;
+  }
+  return credits;
+}
+
 async function sendPlanner(email, name, pdfPath) {
   const pdf = fs.readFileSync(pdfPath);
   const r = await fetch("https://api.resend.com/emails", {
@@ -146,29 +181,40 @@ async function sendPlanner(email, name, pdfPath) {
     // as "leave that page out".
     forgets: col(/keep forgetting/i), hardDayLooks: col(/hard day look/i), hardDayHelps: col(/actually helps/i),
     helpWho: col(/understand how your brain/i), routineStart: col(/start of day/i), routineEnd: col(/end of day/i),
+    // Added 28 Oct 2026: the gift code box (the giver's email address).
+    giftCode: col(/gift code/i),
   };
-  const OPTIONAL = new Set(["forgets", "hardDayLooks", "hardDayHelps", "helpWho", "routineStart", "routineEnd"]);
+  const OPTIONAL = new Set(["forgets", "hardDayLooks", "hardDayHelps", "helpWho", "routineStart", "routineEnd", "giftCode"]);
   for (const [k, v] of Object.entries(idx)) if (v === -1 && !OPTIONAL.has(k)) throw new Error("Column not found in sheet: " + k);
 
   const paid = await paidEmails();
+  const credits = paid ? await giftCredits() : new Map();
+  const used = new Map();
+  for (const d of state.done) if (d.gift) used.set(d.gift, (used.get(d.gift) || 0) + 1);
   let made = 0, waiting = 0;
   for (const r of rows.slice(1)) {
     const rec = Object.fromEntries(Object.entries(idx).map(([k, i]) => [k, i === -1 ? "" : (r[i] || "").trim()]));
     if (!rec.email || !rec.name) continue;
     const key = (rec.ts + "|" + rec.email).toLowerCase();
     if (doneKeys.has(key)) continue;
-    if (paid && !paid.has(rec.email.toLowerCase())) {
-      console.log("awaiting payment:", rec.email);
+    // A gift code is the giver's email address; it pays for one planner per
+    // card they bought. Without a usable code, the answerer pays as before.
+    const code = (rec.giftCode || "").trim().toLowerCase().replace(/^mailto:/, "");
+    let gift = "";
+    if (paid && code && (credits.get(code) || 0) > (used.get(code) || 0)) gift = code;
+    if (paid && !gift && !paid.has(rec.email.toLowerCase())) {
+      console.log(code ? "gift code not matched yet (or already used), awaiting payment:" : "awaiting payment:", rec.email);
       waiting++;
       continue;
     }
+    if (gift) used.set(gift, (used.get(gift) || 0) + 1);
     const answers = toAnswers(rec);
     console.log("building for:", rec.email, JSON.stringify(answers));
     const out = path.join(__dirname, "out-" + made + ".pdf");
     await buildPlannerPdf(answers, out);
     await sendPlanner(rec.email, rec.name, out);
     fs.unlinkSync(out);
-    state.done.push({ key, email: rec.email, sentAt: new Date().toISOString() });
+    state.done.push({ key, email: rec.email, sentAt: new Date().toISOString(), ...(gift ? { gift } : {}) });
     doneKeys.add(key);
     made++;
     console.log("sent:", rec.email);
