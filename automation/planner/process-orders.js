@@ -123,7 +123,8 @@ async function giftCredits() {
     const j = await r.json();
     for (const s of j.data || []) {
       const email = s.customer_details && s.customer_details.email && s.customer_details.email.trim().toLowerCase();
-      if (!email || s.payment_status !== "paid") continue;
+      // "no_payment_required" = a 100%-off promotion code (used to test the gift card for £0).
+      if (!email || !["paid", "no_payment_required"].includes(s.payment_status)) continue;
       const m = s.metadata || {};
       const basket = Object.keys(m).filter((k) => /^basket_\d+$/.test(k)).sort((a, b) => Number(a.split("_")[1]) - Number(b.split("_")[1])).map((k) => m[k]).join("");
       let qty = 0;
