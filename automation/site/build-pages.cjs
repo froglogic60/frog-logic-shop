@@ -640,7 +640,9 @@ ${items.join("\n")}
   const gifts = require("./gift-guides.cjs").build({ pages, shell, esc, attr, OUT, SITE, ownPhoto, kindOf, money, BUNDLES });
   // Help pages (28 Oct 2026): answers to the questions people ask on Reddit and Mumsnet.
   const help = require("./help-pages.cjs").build({ pages, shell, esc, attr, OUT, SITE });
-  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages.concat(gifts, help)));
+  // Free tools (28 Oct 2026): the "how to help me" card maker and the Pond Advent sign-up.
+  const tools = require("./tool-pages.cjs").build({ shell, esc, attr, OUT, SITE });
+  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages.concat(gifts, help, tools)));
   require("../planner/build-taster-page.js").build(); // /taster/ — the free one-page Bespoke Planner taste
   const gf = feed(pages, shop);
   fs.writeFileSync(path.join(ROOT, "google-feed.xml"), gf.xml);
