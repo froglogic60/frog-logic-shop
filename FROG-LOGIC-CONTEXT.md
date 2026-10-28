@@ -130,6 +130,16 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct night: two free tools (automation/site/tool-pages.cjs, built by build-pages):
+  /p/help-card-maker/ ("how to help me" wallet card, prints 4 per sheet, nothing
+  saved; links the £2 How To Help Me sheet) and /p/pond-advent/ (sign-up).
+  Pond Advent = its own list (newsletter promises monthly): netlify/functions/advent.js
+  (/api/advent: join + hello email; ?stop=<base64url> one-click off) posts to the
+  Google Form "Pond Advent sign-ups"; sheet published as CSV = secret ADVENT_CSV_URL.
+  24 emails in content/advent.json, sent 07:41 UTC 1-24 Dec by send-advent.yml
+  (run by hand with test_to + day to test one address). Door 1 test sent to Sam 28 Oct.
+  Linked from the home page newsletter block and the timetable page. Live 1 Nov.
+
 - 28 Oct night: FREE Christmas visual timetable (My Christmas Day schedule, 20
   picture cards, first/then board, I need a break card) at
   /p/christmas-visual-timetable/ (help-pages.cjs, `download` field), linked from
