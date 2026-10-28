@@ -376,6 +376,16 @@
   status = 404
   force = true
 [[redirects]]
+  from = "/digital/Thank-You-Cards-SEN-Staff-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Thank-You-Cards-SEN-Staff.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
   from = "/digital/Weekly-Spoon-Tracker.pdf"
   to = "/404"
   status = 404
