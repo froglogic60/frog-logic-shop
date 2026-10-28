@@ -130,6 +130,17 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct: five help pages live, built by automation/site/help-pages.cjs (called
+  from build-pages.cjs): how to explain PDA / ADHD to family, explaining autism to
+  grandparents, family won't accept a diagnosis, is an adult diagnosis worth it.
+  Each links its free Pond Guide (?ref=help). Indexing requested. Use them as the
+  link in Reddit/Mumsnet answers. Reddit is blocked for Claude's browser: Sam
+  pastes posts, Claude drafts; skip Crisis / CW flairs, no links there.
+- 28 Oct (Sam: "yes send them Monday"): 19 Kent school SENCOs (approach-list
+  #35-53) get the free guides + £95 Organisation Pack email on Mon 2 Nov via the
+  one-off "Send the school SENCO emails" workflow (send-senco.yml, date-guarded).
+  The email promises no follow-up, so never nudge them. Complete Set stays paid.
+
 - Reply to anyone who answers the group comments; draft replies for Sam.
 - Group and Reddit answers pointing to the free guides and taster (Claude
   drafts, Sam posts).
