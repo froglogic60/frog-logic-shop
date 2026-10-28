@@ -89,6 +89,16 @@
   status = 302
 
 [[redirects]]
+  from = "/gift-card"
+  to = "/p/bespoke-planner-gift-card/?ref=short"
+  status = 302
+
+[[redirects]]
+  from = "/big-pack"
+  to = "/p/christmas-visual-timetable-big-pack/?ref=short"
+  status = 302
+
+[[redirects]]
   from = "/pin/guides"
   to = "/?ref=pinterest#guides"
   status = 302
