@@ -860,6 +860,10 @@
         {
           "what": "Five help pages LIVE (answers to the questions people ask on Reddit and Mumsnet, each linking its free Pond Guide): /p/how-to-explain-pda-to-family/, /p/explaining-autism-to-grandparents/, /p/family-wont-accept-autism-diagnosis/, /p/is-an-adult-autism-diagnosis-worth-it/, /p/how-to-explain-adhd-to-family/. In the sitemap; indexing requested in Search Console. Use them as the link in forum answers",
           "who": "note"
+        },
+        {
+          "what": "Five more help pages written (explaining autism to a partner, autistic burnout, Christmas with an autistic child, telling your employer about ADHD, sensory overload). They go live with the 1 Nov publish. Ten Pinterest pins for all ten help pages built (automation/social/pins-help/), dated 17–21 Nov",
+          "who": "note"
         }
       ]
     },
@@ -886,6 +890,10 @@
         {
           "what": "Gift-guide follow-ups DONE 26 Oct: 8 nudged by the outreach robot (with the Christmas order-by dates); Elizabeth at Alive with Chronic Illness chased in Sam's own thread (January pacing event / newsletter, offer in kind). Neurodiverging said no. Watch hello@froglogic.co.uk for replies; Claude drafts answers",
           "who": "note"
+        },
+        {
+          "what": "Claude uploads the ten help-page pins into whatever free Pinterest slots there are (100-pin limit), after the Friday pin batch",
+          "who": "robot"
         }
       ]
     },
