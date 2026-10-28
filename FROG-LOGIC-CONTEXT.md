@@ -130,6 +130,20 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct late: two paid pieces, live on the site with the 1 Nov publish.
+  D39 Christmas Visual Timetable Big Pack: £3 site, £4.50 Etsy (listed 28 Oct, Learning &
+  School). 8 pages, 60 cards (19 free-version icons + 29 in EXTRA in xmas-printables.cjs
+  + 12 blanks). Free timetable page links to it. froglogic.co.uk/big-pack.
+  D40 Bespoke Planner Gift Card: £25, site only (needs the shop's Stripe checkout). Buyer
+  gets a printable fold card; the recipient answers the planner form at froglogic.co.uk/gift
+  (= forms.gle/GJjQ8rMSoqh7ffPx5) and types the giver's email in the new "gift code"
+  question; process-orders.js counts paid D40 checkout sessions per buyer email and fulfils
+  one planner per card (fulfilled.json entries carry gift: email). Form confirmation now
+  says gift-card holders have nothing to pay. NOT yet tested end to end (needs a real £25
+  purchase or a Stripe test). froglogic.co.uk/gift-card. build-pages.cjs: a digital item
+  can carry its own `page` wording (title, eyebrow, paras, cta).
+  FB/IG posts queued: gift card 13 Nov, Big Pack 20 Nov (promo-tools.cjs pictures).
+
 - 28 Oct: promotion for the free tools. Short addresses (netlify.toml, live 1 Nov):
   froglogic.co.uk/timetable, /card, /advent. promo-tools.cjs + promo-tools.yml built
   automation/social/promo/ (3 FB/IG posts + 6 pins). FB/IG queued: timetable 4 Nov,
