@@ -289,7 +289,7 @@ const PAGES = [
     ],
     sections: [
       { h: "Before the day", list: [
-        "Share the plan in advance, in pictures or words, and stick to it where you can.",
+        "Share the plan in advance, in pictures or words, and stick to it where you can. There's a <a href=\"/p/christmas-visual-timetable/\">free Christmas visual timetable</a> to print.",
         "Put decorations up gradually, or let your child help choose.",
         "Agree with relatives beforehand what will help (you can send them a guide).",
       ] },
@@ -311,6 +311,49 @@ const PAGES = [
       ["How can I make Christmas easier for my autistic child?", "Share the plan in advance, keep a quiet space, let them eat safe foods, open presents gradually and keep visits short."],
       ["Should autistic children open presents in front of everyone?", "Only if they're comfortable. Many find it easier to open a few at a time, or privately."],
       ["How do I explain my child's needs to relatives at Christmas?", "Tell them a few clear things you need before the day, and send them a short written guide to read on their own."],
+    ],
+    related: ["sensory-differences", "pda"],
+  },
+  {
+    // Sam, 28 Oct 2026 ("1. Yes"): a free printable, made by
+    // automation/social/xmas-printables.cjs. Free to share, like the guides.
+    slug: "christmas-visual-timetable",
+    title: "Free Christmas visual timetable for autistic children — printable PDF",
+    h1: "Free Christmas visual timetable",
+    description: "A free printable Christmas Day visual timetable for autistic children: a First, Then, Last schedule, 20 picture cards, a first/then board and an I need a break card. A4 and US Letter, no sign-up.",
+    guide: "autism",
+    image: "/automation/social/xmas-printables/Christmas-Visual-Timetable-2.png",
+    download: {
+      h: "Download the timetable",
+      text: "Three pages, free, no email address, no sign-up. Print it, cut out the cards and stick them on with Blu Tack or Velcro dots.",
+      files: [["A4", "/digital/Christmas-Visual-Timetable.pdf"], ["US Letter", "/digital/Christmas-Visual-Timetable-Letter.pdf"]],
+      preview: "/automation/social/xmas-printables/Christmas-Visual-Timetable-1.png",
+    },
+    intro: [
+      "I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge. Christmas Day throws the usual routine out of the window. Knowing what comes next, in pictures, takes a lot of the worry out of it. This is the timetable I'd want: simple, calm, and free.",
+    ],
+    sections: [
+      { h: "What's in it", list: [
+        "<strong>My Christmas Day:</strong> eight slots, First, Then and Last, each with a tick box.",
+        "<strong>20 picture cards:</strong> wake up, presents, quiet time, visitors, car journey, Christmas dinner, video call, bath, bed and more, plus a blank one for anything special.",
+        "<strong>First, then board:</strong> for the moments when the whole day is too much to look at.",
+        "<strong>I need a break card:</strong> to show instead of having to find the words.",
+        "<strong>A note for the grown-ups.</strong>",
+      ] },
+      { h: "How to use it", list: [
+        "Go through it the day before, and again in the morning.",
+        "If plans change, change the cards and show the new order. A surprise on paper is easier than a surprise out loud.",
+        "Let the break card work without questions.",
+        "Laminate the cards, or print on card, and you can use them every year.",
+      ] },
+      { h: "For the relatives", p: [
+        "If the visitors need explaining too, the free guide below is written for grandparents, aunties and uncles. More ideas on <a href=\"/p/christmas-with-an-autistic-child/\">Christmas with an autistic child</a>.",
+      ] },
+    ],
+    faq: [
+      ["What is a visual timetable?", "A list of the day's activities shown in pictures, in order, so a child can see what's happening now and what comes next."],
+      ["Do visual timetables help autistic children at Christmas?", "Many autistic children find unpredictability hard. Seeing the day in advance, and seeing changes on paper, can make it calmer."],
+      ["Is this timetable free?", "Yes. It's free to download, print and share, with no sign-up."],
     ],
     related: ["sensory-differences", "pda"],
   },
@@ -404,7 +447,13 @@ function build({ pages, shell, esc, attr, OUT, SITE }) {
     const guide = bySlug.get(g.guide);
     const guideName = guide && guide.item ? guide.item.word || guide.item.title : g.guide.toUpperCase();
     const url = `${SITE}/p/${g.slug}/`;
-    const image = `${SITE}/p/${g.guide}/og.png`;
+    const image = g.image ? SITE + g.image : `${SITE}/p/${g.guide}/og.png`;
+    const d = g.download;
+    const download = d ? `
+      <h2>${esc(d.h)}</h2>
+      <p>${esc(d.text)}</p>
+      <p>${d.files.map(([label, href]) => `<a class="btn" href="${attr(href)}" download>Download (${esc(label)})</a>`).join(" ")}</p>
+      ${d.preview ? `<p><img src="${attr(d.preview)}" alt="${attr(g.h1)}" loading="lazy" style="max-width:340px;width:100%;border:1px solid #e3dccb;border-radius:8px"></p>` : ""}` : "";
     const name = (s) => { const p = bySlug.get(s); return p && p.item ? (p.item.word || p.item.title || s) : s.replace(/-/g, " "); };
     const sections = g.sections.map((s) => `
       <h2>${esc(s.h)}</h2>
@@ -417,6 +466,7 @@ function build({ pages, shell, esc, attr, OUT, SITE }) {
     <h1>${esc(g.h1)}</h1>
     ${g.intro.map((x) => `<p class="section-sub">${x}</p>`).join("\n    ")}
     <div class="product-about">
+      ${download}
       ${sections}
       <h2>The free guide</h2>
       <p>Plain English, two pages, free to read, print or forward. No email address, no sign-up.</p>
