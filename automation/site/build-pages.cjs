@@ -638,7 +638,9 @@ ${items.join("\n")}
   }
   // Christmas gift guides (27 Oct 2026): hand-picked lists of pieces on sale.
   const gifts = require("./gift-guides.cjs").build({ pages, shell, esc, attr, OUT, SITE, ownPhoto, kindOf, money, BUNDLES });
-  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages.concat(gifts)));
+  // Help pages (28 Oct 2026): answers to the questions people ask on Reddit and Mumsnet.
+  const help = require("./help-pages.cjs").build({ pages, shell, esc, attr, OUT, SITE });
+  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap(pages.concat(gifts, help)));
   require("../planner/build-taster-page.js").build(); // /taster/ — the free one-page Bespoke Planner taste
   const gf = feed(pages, shop);
   fs.writeFileSync(path.join(ROOT, "google-feed.xml"), gf.xml);
