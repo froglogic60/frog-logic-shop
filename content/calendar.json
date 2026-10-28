@@ -856,6 +856,10 @@
         {
           "what": "Taster sign-ups: 0 people (0 pages), 0 this week, last none yet",
           "who": "robot"
+        },
+        {
+          "what": "Five help pages LIVE (answers to the questions people ask on Reddit and Mumsnet, each linking its free Pond Guide): /p/how-to-explain-pda-to-family/, /p/explaining-autism-to-grandparents/, /p/family-wont-accept-autism-diagnosis/, /p/is-an-adult-autism-diagnosis-worth-it/, /p/how-to-explain-adhd-to-family/. In the sitemap; indexing requested in Search Console. Use them as the link in forum answers",
+          "who": "note"
         }
       ]
     },
@@ -920,6 +924,15 @@
         {
           "what": "Follow Martha Brook and Karen Haller on Instagram so you catch their gift-guide calls (usually November); enter as soon as a call opens",
           "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "items": [
+        {
+          "what": "School SENCO emails go out this morning (robot \"Send the school SENCO emails\", 19 Kent schools near Tonbridge, Tunbridge Wells and Sevenoaks): free Pond Guides + the £95 Organisation Pack, invoice/PO offered. Replies come to hello@froglogic.co.uk. No nudges (the email promises none)",
+          "who": "robot"
         }
       ]
     },
