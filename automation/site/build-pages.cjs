@@ -215,6 +215,15 @@ function copyFor(item, group) {
     ],
     cta: { buy: true, label: "Download" },
   };
+  // A digital piece can carry its own page wording (28 Oct 2026: the generic
+  // "meant to be used on a hard day" text was wrong for cards and gift cards).
+  if (group === "digital" && item.page) return {
+    title: item.page.title,
+    h1: item.word,
+    eyebrow: item.page.eyebrow || `Printable PDF · ${item.price}`,
+    paras: [item.line, ...item.page.paras],
+    cta: { buy: true, label: item.page.cta || "Download" },
+  };
   if (group === "digital") return {
     title: `${item.word} — printable PDF for ADHD, autistic and neurodivergent adults`,
     h1: item.word,
