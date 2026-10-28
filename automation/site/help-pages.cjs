@@ -326,6 +326,7 @@ const PAGES = [
     download: {
       h: "Download the timetable",
       text: "Three pages, free, no email address, no sign-up. Print it, cut out the cards and stick them on with Blu Tack or Velcro dots.",
+      more: "Need more cards? The <a href=\"/p/christmas-visual-timetable-big-pack/\">Big Pack</a> (£3) has 60 picture cards (church, car, crackers, the dog walk and 12 blanks), a now and next board and a holiday-week planner.",
       files: [["A4", "/digital/Christmas-Visual-Timetable.pdf"], ["US Letter", "/digital/Christmas-Visual-Timetable-Letter.pdf"]],
       preview: "/automation/social/xmas-printables/Christmas-Visual-Timetable-1.png",
     },
@@ -455,6 +456,7 @@ function build({ pages, shell, esc, attr, OUT, SITE }) {
     const download = d ? `
       <h2>${esc(d.h)}</h2>
       <p>${esc(d.text)}</p>
+      ${d.more ? `<p>${d.more}</p>` : ""}
       <p>${d.files.map(([label, href]) => `<a class="btn" href="${attr(href)}" download>Download (${esc(label)})</a>`).join(" ")}</p>
       ${d.preview ? `<p><img src="${attr(d.preview)}" alt="${attr(g.h1)}" loading="lazy" style="max-width:340px;width:100%;border:1px solid #e3dccb;border-radius:8px"></p>` : ""}` : "";
     const name = (s) => { const p = bySlug.get(s); return p && p.item ? (p.item.word || p.item.title || s) : s.replace(/-/g, " "); };
