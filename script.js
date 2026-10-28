@@ -2643,6 +2643,7 @@ const DIGITAL_PRODUCTS = [
     num: "D38 — Printable PDF", word: "Thank You Cards for SEN Staff",
     line: "Three printable thank-you cards for the teaching assistant, teacher or SEN worker who gets your child: thank you for understanding me, thank you for being my safe person, and thank you for seeing me. The Comfort Creature frog on the front, a space for names inside. A4 and US Letter, fold in half.",
     price: "£3.00", link: "#", bg: "#5E7F58",
+    page: { title: "Printable thank you cards for a teaching assistant, SEN teacher or SENCO | autism and ADHD", paras: ["You get two PDFs the moment you pay, A4 and US Letter. Each card is one landscape sheet folded in half: the frog on the front, the Frog Logic mark on the back, and a faint To and From inside. Print on card (160–250gsm works well) at 100%, fold, and write inside. Print as many as you need: end of term, end of year, or the day they made a hard week easier.", "Personal use: print as many as you like for your own family; please don't resell or share the files."] },
     files: [{ name: "Thank You Cards (A4)", file: "Thank-You-Cards-SEN-Staff.pdf" }, { name: "Thank You Cards (US Letter)", file: "Thank-You-Cards-SEN-Staff-Letter.pdf" }],
     svg: `<svg viewBox="0 0 300 300">${grain("d38", 0.1)}
       <rect x="70" y="40" width="160" height="200" rx="4" fill="#DDEAD3"/>
@@ -2656,6 +2657,49 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="200" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="14" fill="#22331f">understanding me.</text>
       <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOR TAS · TEACHERS · SEN STAFF</text>
       <rect width="300" height="300" fill="url(#d38)"/>${mark()}</svg>`
+  },
+  {
+    // The paid big version of the free Christmas visual timetable (Sam, 28 Oct
+    // 2026: "yes do 1 and 2"). Built by automation/social/xmas-printables.cjs.
+    num: "D39 — Printable PDF", word: "Christmas Visual Timetable Big Pack",
+    line: "The full Christmas visual timetable: a My Christmas Day schedule, a now and next board, a holiday-week planner, 60 picture cards (48 drawn, from presents and visitors to the car, the church, the crackers and the dog walk, plus 12 blanks for your own), first/then, I need a break and I need help cards, and a page for the grown-ups. A4 and US Letter, print as often as you need.",
+    price: "£3.00", link: "#", bg: "#3C5B45",
+    page: { title: "Christmas visual timetable printable for autistic children | 60 picture cards, now and next board", paras: ["Eight pages in two PDFs, A4 and US Letter, delivered the moment you pay. Print the cards on card or laminate them, and stick Velcro dots or Blu Tack on the back so they last for years.", "There's a free version with 20 cards at <a href=\"/p/christmas-visual-timetable/\">the free Christmas visual timetable</a>. The Big Pack is for when you need more: more cards, the now and next board for big days, and the whole holiday week on one page.", "For your own family's or classroom's use; please don't resell or share the file."] },
+    files: [{ name: "Christmas Visual Timetable Big Pack (A4)", file: "Christmas-Visual-Timetable-Big-Pack.pdf" }, { name: "Christmas Visual Timetable Big Pack (US Letter)", file: "Christmas-Visual-Timetable-Big-Pack-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d39", 0.1)}
+      <rect x="62" y="40" width="176" height="200" rx="4" fill="#ffffff"/>
+      <g fill="none" stroke="#9AA7B0" stroke-width="1.6" stroke-dasharray="3 3">
+        <rect x="76" y="56" width="34" height="34" rx="4"/><rect x="118" y="56" width="34" height="34" rx="4"/><rect x="160" y="56" width="34" height="34" rx="4"/><rect x="202" y="56" width="24" height="34" rx="4"/>
+        <rect x="76" y="98" width="34" height="34" rx="4"/><rect x="118" y="98" width="34" height="34" rx="4"/><rect x="160" y="98" width="34" height="34" rx="4"/><rect x="202" y="98" width="24" height="34" rx="4"/>
+      </g>
+      <path d="M93 64 L81 84 H105 Z" fill="#8FB784" stroke="#22331F" stroke-width="2"/>
+      <rect x="124" y="68" width="22" height="16" fill="#B5443A" stroke="#22331F" stroke-width="2"/>
+      <circle cx="177" cy="73" r="9" fill="#E8B63C" stroke="#22331F" stroke-width="2"/>
+      <path d="M86 118 C86 106 100 106 100 118" fill="none" stroke="#22331F" stroke-width="2.4"/>
+      <text x="150" y="176" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="18" fill="#6b4a32">My Christmas Day</text>
+      <text x="150" y="200" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#22331F">60 picture cards</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">BIG PACK · A4 + LETTER · PRINT AT HOME</text>
+      <rect width="300" height="300" fill="url(#d39)"/>${mark()}</svg>`
+  },
+  {
+    // The Bespoke Planner as a present (Sam, 28 Oct 2026: "yes do 1 and 2").
+    // The buyer downloads a printable gift card; the person who gets it claims
+    // the planner at froglogic.co.uk/gift (the questions), typing the giver's
+    // email address as the gift code. automation/planner/process-orders.js
+    // matches that to this payment, one planner per card bought.
+    num: "D40 — Gift card", word: "Bespoke Planner Gift Card",
+    line: "Give someone a planner built for their brain. You get a printable gift card straight away to write in and hand over. They answer the fifteen questions at froglogic.co.uk/gift, type your email address as the gift code, and their own Bespoke Planner is built from their answers and emailed to them. Undated, up to eighteen pages, rebuilt free if it doesn't fit.",
+    price: "£25.00", link: "#", bg: "#5E4A8C",
+    page: { title: "Bespoke Planner gift card | a planner built for an ADHD or autistic brain, as a present", eyebrow: "Gift card · £25.00", cta: "Buy the gift card", paras: ["How it works: you pay, and the gift card arrives as a PDF straight away (A4 and US Letter). Print it, fold it, and write your email address in the gift code box, the one you paid with. That's what unlocks their planner, so one card is one planner.", "They go to froglogic.co.uk/gift, answer fifteen questions about how their day runs, and type the code. Their planner is built from their answers and emailed to them, usually within a couple of hours. If it doesn't fit, they can answer again and it gets rebuilt free.", "It's a good present for someone who's tried every planner and given up, or who's just been diagnosed and is working out how their brain runs. Not sure they'd like it? They can <a href=\"/taster/\">try one page free</a> first."] },
+    files: [{ name: "Bespoke Planner Gift Card (A4)", file: "Bespoke-Planner-Gift-Card.pdf" }, { name: "Bespoke Planner Gift Card (US Letter)", file: "Bespoke-Planner-Gift-Card-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d40", 0.11)}
+      <rect x="70" y="44" width="160" height="196" rx="4" fill="#E7E1F2"/>
+      <rect x="140" y="44" width="20" height="196" fill="#B5443A" opacity="0.85"/>
+      <path d="M150 44 C130 20 108 30 122 44 Z M150 44 C170 20 192 30 178 44 Z" fill="#B5443A" stroke="#22331F" stroke-width="2"/>
+      <text x="150" y="140" text-anchor="middle" font-family="Anton, sans-serif" font-size="26" fill="#22331F">A PLANNER</text>
+      <text x="150" y="168" text-anchor="middle" font-family="Anton, sans-serif" font-size="26" fill="#22331F">FOR THEIR BRAIN</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">GIFT CARD · THEY ANSWER · £25</text>
+      <rect width="300" height="300" fill="url(#d40)"/>${mark()}</svg>`
   },
 ];
 
