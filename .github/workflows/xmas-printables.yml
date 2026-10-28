@@ -1,9 +1,14 @@
 name: Build the Christmas timetable and thank-you cards
 # Renders the free Christmas visual timetable and the £3 thank-you cards for
-# SEN staff (xmas-printables.cjs, 28 Oct 2026) into digital/. Run by hand.
+# SEN staff, the £3 Big Pack and the Bespoke Planner gift card (xmas-printables.cjs,
+# 28 Oct 2026) into digital/. Run by hand.
 # Commits [skip netlify]: the next deliberate publish carries them.
 on:
   workflow_dispatch:
+    inputs:
+      only:
+        description: "Build only these (comma-separated names, e.g. Christmas-Visual-Timetable-Big-Pack); empty = all"
+        required: false
 permissions:
   contents: write
 jobs:
@@ -23,11 +28,13 @@ jobs:
       - name: Build the printables
         working-directory: automation/social
         run: node xmas-printables.cjs
+        env:
+          ONLY: ${{ inputs.only }}
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add digital/Christmas-Visual-Timetable*.pdf digital/Thank-You-Cards-SEN-Staff*.pdf automation/social/xmas-printables
+          git add digital/Christmas-Visual-Timetable*.pdf digital/Thank-You-Cards-SEN-Staff*.pdf digital/Bespoke-Planner-Gift-Card*.pdf automation/social/xmas-printables
           git commit -m "Christmas timetable and thank-you cards built [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
