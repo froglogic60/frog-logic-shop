@@ -73,3 +73,39 @@ Everyone else: P.S. In December I'm sending one free thing a day by email, guide
 
 For a "how do I explain what I need" thread: there's a free card maker for a wallet card that says how to help you when words go: froglogic.co.uk/card
 
+
+## 8. The free Christmas timetable as a post of its own (SEN parent groups, mid-November, as Frog Logic)
+
+Hi, I'm Sam, I'm neurodivergent and I run a little shop from my lounge.
+
+If Christmas Day is a hard one in your house, this might help: a free visual timetable for the day. Eight boxes for the day in order, 20 picture cards (presents, visitors, car journey, quiet time, dinner, bed, and a blank one to draw your own), a first/then board and an "I need a break" card. Print it, cut the cards out, stick them in the boxes.
+
+What helps us most is going through it the night before and again in the morning. If plans change, we change the cards. A surprise on paper is easier than a surprise out loud.
+
+It's free, no email, no sign-up, just a PDF.
+
+https://froglogic.co.uk/timetable
+
+If it's wrong for your child, tell me. I'd rather fix it.
+
+with love Sam
+
+(If the group only allows links in comments, post without the link line and add it as the first comment. Groups that have already had the Pond Guides post with the timetable P.S. are fine to get this one a couple of weeks later; it's a different post.)
+
+---
+
+## 9. Mumsnet SN board (only if you already have a Mumsnet account; post as yourself, not as a business)
+
+Mumsnet deletes posts it reads as advertising, even for free things, so this one keeps the shop out of it and asks for help instead of offering it.
+
+Title: Free Christmas Day visual timetable, would this help anyone else?
+
+I'm neurodivergent and so is my family, and Christmas Day has always been the hardest day of the year here: no routine, people everywhere, surprises all day.
+
+This year I made a visual timetable for it: the day in eight boxes, 20 picture cards (presents, visitors, car journey, quiet time, dinner, bed), a first/then board and an "I need a break" card. We go through it the night before and again in the morning, and if plans change we move the cards.
+
+I've put it online free, no sign-up, in case it helps anyone else: froglogic.co.uk/timetable
+
+If you use visual timetables at home, is there a card you'd add? I'd rather make it right than make it pretty.
+
+---
