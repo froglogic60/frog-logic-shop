@@ -64,6 +64,23 @@
   to = "/?ref=xmascard#guides"
   status = 302
 
+# Short addresses for the free tools (28 Oct 2026), said out loud and printed on
+# the promo pictures; the ref tag shows where visits came from.
+[[redirects]]
+  from = "/timetable"
+  to = "/p/christmas-visual-timetable/?ref=short"
+  status = 302
+
+[[redirects]]
+  from = "/card"
+  to = "/p/help-card-maker/?ref=short"
+  status = 302
+
+[[redirects]]
+  from = "/advent"
+  to = "/p/pond-advent/?ref=short"
+  status = 302
+
 [[redirects]]
   from = "/pin/guides"
   to = "/?ref=pinterest#guides"
