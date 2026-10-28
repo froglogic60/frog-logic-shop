@@ -1,0 +1,29 @@
+name: Free guides - free to share line
+# Stamps every free Pond Guide PDF (digital/Pond-Guide-*.pdf) with a
+# "free to share" line and the froglogic.co.uk address, replacing the old
+# "personal use only, don't share" line (Sam, 28 Oct 2026). Safe to rerun.
+# Commits [skip netlify]; the new files go live with the next publish.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Stamp the guides
+        run: |
+          pip install pymupdf
+          python automation/pdf/guide-share-line.py
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digital/Pond-Guide-*.pdf
+          git commit -m "Free guides: free-to-share line and web address [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
