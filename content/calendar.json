@@ -957,6 +957,10 @@
         {
           "what": "School SENCO + Parent Carer Forum emails go out this morning (robot \"Send the school SENCO emails\"): 19 Kent school SENCOs (free guides + £95 Organisation Pack) 26 Parent Carer Forums in the South East and London (free guides for their newsletters/groups, plus the Christmas picture) and 10 NHS Right to Choose clinics (free guides for their post-diagnosis resources). 55 emails. All link the FREE guides (froglogic.co.uk/#guides). Replies come to hello@froglogic.co.uk. No nudges (the emails promise none)",
           "who": "robot"
+        },
+        {
+          "what": "Pinterest 2–7 Nov, one a day at 18:30 UTC: timetable, card maker, Pond Advent, then a second pin of each",
+          "who": "robot"
         }
       ]
     },
@@ -983,6 +987,10 @@
         {
           "what": "Ad test results: what a click and a sale actually cost. Stop or continue — Claude will show the numbers",
           "who": "you"
+        },
+        {
+          "what": "Facebook + Instagram: the free Christmas visual timetable (froglogic.co.uk/timetable)",
+          "who": "robot"
         }
       ]
     },
@@ -991,6 +999,15 @@
       "items": [
         {
           "what": "FB/IG post from Sam: When Words Go",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-07",
+      "items": [
+        {
+          "what": "Facebook + Instagram: the free how to help me card maker (froglogic.co.uk/card)",
           "who": "robot"
         }
       ]
@@ -1009,6 +1026,10 @@
       "items": [
         {
           "what": "Christmas order-by dates DONE 26 Oct (site: UK 10 Dec, US 7 Dec; posts queued 15 Nov and 5 Dec). Claude: check Printify's 2026 holiday cut-offs (printify.com/network-fulfillment-status) and move the dates earlier if theirs are. Pinterest is loaded to 16 Nov (taster + 15 Pond Guides pins added 26 Oct, 2 a day from 8 Nov); next batch due before then, max 100 scheduled",
+          "who": "robot"
+        },
+        {
+          "what": "Facebook + Instagram: Pond Advent sign-up (froglogic.co.uk/advent)",
           "who": "robot"
         }
       ]
@@ -1055,6 +1076,15 @@
         {
           "what": "Half-way check: orders so far vs target of ten. Claude writes the honest version",
           "who": "note"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "items": [
+        {
+          "what": "Facebook + Instagram: Pond Advent starts Tuesday",
+          "who": "robot"
         }
       ]
     },
