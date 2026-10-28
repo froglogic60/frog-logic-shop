@@ -271,6 +271,9 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Decided, parked or declined (don't re-raise unless Sam does)
 
+- Etsy clothing videos with people wearing them (28 Oct): parked. Options were
+  Placeit video mockups (~$14.95/month) or a friend wearing a sample; no AI people.
+
 - Replit store retired (26 Aug); Etsy is the second channel; Share & Save on.
 - Hoodies off the site; totes and notebooks stay; printed stickers retired
   (printable sheet only); pins became stickers then retired.
