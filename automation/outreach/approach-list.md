@@ -1551,6 +1551,196 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ---
 
+## 80. The Owl Centre (Right to Choose clinic)
+
+**To:** enquiries@theowl.org
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). Lists outside resources for families after diagnosis (theowl.org/neurodiversity-post-diagnostic-support/). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi The Owl Centre team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 81. Help for Psychology (Right to Choose clinic)
+
+**To:** enquiries@help4psychology.co.uk
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). Recommended Reading page says they're happy to receive details of useful resources. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Help for Psychology team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 82. ADHD 360 (Right to Choose clinic)
+
+**To:** marketing@adhd-360.com
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). Marketing team address; Tools & Tips resource archive. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi ADHD 360 team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 83. Problem Shared (Right to Choose clinic)
+
+**To:** enquiries@problemshared.net
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). General enquiries; resources hub. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Problem Shared team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 84. Clinical Partners (Right to Choose clinic)
+
+**To:** help@clinical-partners.co.uk
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). General help address. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Clinical Partners team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 85. Psicon (Right to Choose clinic)
+
+**To:** enquiries@psicon.co.uk
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). General enquiries; Advice Hub (says they signpost after diagnosis). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Psicon team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 86. Medinet Minds (Right to Choose clinic)
+
+**To:** ASD@healthharmonie.co.uk
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). Autism service address (formerly Health Harmonie Minds). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Medinet Minds team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 87. Evolve Psychology (Right to Choose clinic)
+
+**To:** enquiries@evolveps.co.uk
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). General enquiries; aftercare page. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Evolve Psychology team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 88. Atrom Mindcare (Right to Choose clinic)
+
+**To:** contact@atrommindcare.com
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). General contact. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Atrom Mindcare team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 89. Held Health (Right to Choose clinic)
+
+**To:** info@held.health
+**Why them:** NHS Right to Choose autism/ADHD assessment provider; email on its own site (found 28 Oct 2026). General email; runs post-diagnostic groups. Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for families after a diagnosis
+
+> Hi Held Health team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic, a small UK shop. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around someone who's just been diagnosed: partners, parents, grandparents, managers. Each one is two pages, free to read, print and share, with no sign-up:
+> https://froglogic.co.uk/?ref=clinic#guides
+>
+> If you share resources with patients or families after an assessment, you'd be very welcome to include them. They're written as a friendly explainer, not medical advice, and I'm happy to correct anything your clinicians think is wrong.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
 ## After sending
 
 Log who you sent to and when on the Desk (one line each is fine — "nasen sent 27 Oct"). The 8 Dec nudge is one short reply to your own email: "Just floating this back up in case it got buried — no worries if it's not for you."
