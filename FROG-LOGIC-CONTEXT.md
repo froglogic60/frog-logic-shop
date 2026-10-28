@@ -130,6 +130,18 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- 28 Oct night: FREE Christmas visual timetable (My Christmas Day schedule, 20
+  picture cards, first/then board, I need a break card) at
+  /p/christmas-visual-timetable/ (help-pages.cjs, `download` field), linked from
+  Christmas with an autistic child. PDFs digital/Christmas-Visual-Timetable(-Letter).pdf.
+  D38 Thank You Cards for SEN Staff: £3 site (catalog.json + netlify.toml 404s),
+  £4.50 Etsy (listed 28 Oct, Thank You Cards category, Digital Downloads section).
+  Both built by automation/social/xmas-printables.cjs + xmas-printables.yml;
+  previews in automation/social/xmas-printables/. Site side live with the 1 Nov publish.
+- New Etsy listing: Copy an existing digital listing, Delete all photos, then
+  fetch images/PDFs from raw.githubusercontent.com into the file inputs with a
+  DataTransfer (inputs[0] for photos, the last input for digital files).
+
 - 28 Oct evening: five more help pages in help-pages.cjs (autism and a partner,
   autistic burnout, Christmas with an autistic child, telling your employer about
   ADHD, sensory overload): ten in all, live with the 1 Nov publish. Ten pins for
