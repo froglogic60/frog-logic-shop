@@ -130,6 +130,17 @@ customer-facing for "will this get found and bought?" before it goes up.
 
 ## Next up (see the Desk for dates)
 
+- LINK RULE (28 Oct): froglogic.co.uk/p/the-pond-guides/ is the PAID £8 complete set.
+  Never call it free. The free guides are listed at froglogic.co.uk/#guides
+  (single guides free at /p/autism/, /p/adhd/ etc). Fixed 28 Oct in the group-post
+  task, help pages, gift guides, group-posts.md and the queued emails.
+- 28 Oct: 26 Parent Carer Forums (approach-list #54-79) emailed with the schools on
+  Mon 2 Nov: free guides for their newsletters, no sales pitch, no nudges.
+  Kent PACT, East/West Sussex, Portsmouth, Richmond left out (emails unconfirmed).
+- Christmas "send this to the relatives" picture: xmas-card.cjs + xmas-card.yml
+  build automation/social/xmas/xmas-relatives-card.jpg; FB/IG post queued 3 Nov.
+  froglogic.co.uk/xmas (netlify.toml) goes live with the 1 Nov Halloween publish.
+
 - 28 Oct: five help pages live, built by automation/site/help-pages.cjs (called
   from build-pages.cjs): how to explain PDA / ADHD to family, explaining autism to
   grandparents, family won't accept a diagnosis, is an adult diagnosis worth it.
