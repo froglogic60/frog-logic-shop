@@ -52,7 +52,7 @@ const PAGES = [
       ["Is PDA just bad behaviour?", "No. Defiance is a choice. In PDA, everyday demands trigger a threat response, so the avoidance sits largely outside conscious control. Pressure tends to make it worse, not better."],
       ["What helps most with PDA?", "Reducing demands, offering real choices, indirect wording, giving control over timing, and treating collapse as distress rather than defiance."],
     ],
-    related: ["autism", "audhd", "the-pond-guides"],
+    related: ["autism", "audhd"],
   },
   {
     slug: "explaining-autism-to-grandparents",
@@ -89,7 +89,7 @@ const PAGES = [
       ["What should grandparents not say to an autistic child?", "Avoid \"you don't look autistic\", comparisons with other children, and commenting on meltdowns. Ask before touching, and follow the parent's lead."],
       ["How can Christmas be easier for an autistic child?", "Share the plan in advance, keep a quiet room, don't push new food, allow ear defenders or screens, and keep visits shorter than you think you need to."],
     ],
-    related: ["sensory-differences", "adhd", "the-pond-guides"],
+    related: ["sensory-differences", "adhd"],
   },
   {
     slug: "family-wont-accept-autism-diagnosis",
@@ -125,7 +125,7 @@ const PAGES = [
       ["Do I have to tell my family I'm autistic?", "No. Who knows, and when, is your decision."],
       ["How do I explain my late autism diagnosis to family?", "Keep it short, give one or two examples from your own life, and offer them something to read on their own. Many families take a written guide better than a conversation."],
     ],
-    related: ["audhd", "adhd", "the-pond-guides"],
+    related: ["audhd", "adhd"],
   },
   {
     slug: "is-an-adult-autism-diagnosis-worth-it",
@@ -161,7 +161,7 @@ const PAGES = [
       ["How can I get an adult autism assessment faster in England?", "Ask your GP for a referral under Right to Choose, which lets you choose an NHS-funded provider that may have a shorter wait."],
       ["Do I need a diagnosis to get adjustments at work?", "Not always. The Equality Act can apply if your condition has a substantial, long-term effect on day-to-day life, but a diagnosis usually makes asking much easier."],
     ],
-    related: ["adhd", "audhd", "the-pond-guides"],
+    related: ["adhd", "audhd"],
   },
   {
     slug: "how-to-explain-adhd-to-family",
@@ -198,7 +198,7 @@ const PAGES = [
       ["Is ADHD just being lazy?", "No. People with ADHD often try much harder than others for the same result. The difficulty is starting, switching and timing, not caring."],
       ["What can family do to help someone with ADHD?", "Kind reminders, body doubling, written plans, and noticing effort as well as results."],
     ],
-    related: ["autism", "audhd", "the-pond-guides"],
+    related: ["autism", "audhd"],
   },
 ];
 
@@ -223,7 +223,7 @@ function build({ pages, shell, esc, attr, OUT, SITE }) {
     const body = `
 <section class="collection product-page help-page" id="help">
   <div class="wrap">
-    <p class="crumbs"><a href="/">Frog Logic</a> › <a href="/p/the-pond-guides/">The Pond Guides</a> › ${esc(g.h1)}</p>
+    <p class="crumbs"><a href="/">Frog Logic</a> › <a href="/#guides">The Pond Guides</a> › ${esc(g.h1)}</p>
     <h1>${esc(g.h1)}</h1>
     ${g.intro.map((x) => `<p class="section-sub">${x}</p>`).join("\n    ")}
     <div class="product-about">
@@ -234,7 +234,7 @@ function build({ pages, shell, esc, attr, OUT, SITE }) {
       <h2>Questions people ask</h2>
       ${g.faq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join("\n      ")}
       <h2>More from the pond</h2>
-      <p>${g.related.map((s) => `<a href="/p/${s}/">${esc(String(name(s)))}</a>`).join(" &middot; ")} &middot; ${PAGES.filter((x) => x !== g).map((x) => `<a href="/p/${x.slug}/">${esc(x.h1)}</a>`).join(" &middot; ")}</p>
+      <p><a href="/#guides">All 23 free Pond Guides</a> &middot; ${g.related.map((s) => `<a href="/p/${s}/">${esc(String(name(s)))}</a>`).join(" &middot; ")} &middot; ${PAGES.filter((x) => x !== g).map((x) => `<a href="/p/${x.slug}/">${esc(x.h1)}</a>`).join(" &middot; ")}</p>
       <p class="section-sub">A friendly explainer written by a neurodivergent person, not medical or legal advice.</p>
     </div>
   </div>
