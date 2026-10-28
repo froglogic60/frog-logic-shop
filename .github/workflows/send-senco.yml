@@ -1,0 +1,60 @@
+name: Send the school SENCO emails (Mon 2 Nov 2026)
+# One-off (Sam, 28 Oct 2026: "yes send them Monday"). 19 Kent school SENCOs
+# were added to automation/outreach/approach-list.md on 28 Oct; Kent schools
+# were on half-term that week, so the send waits for Monday 2 November.
+# The schedule fires early (GitHub runs crons late) and only does anything on
+# 2026-11-02; otherwise it exits. Same sender and log as "Send the
+# approach-list emails" (send.mjs never emails anyone twice).
+on:
+  schedule:
+    - cron: "7 7 2 11 *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Only on Monday 2 November 2026
+        id: day
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%F)" != "2026-11-02" ]; then echo "go=no" >> "$GITHUB_OUTPUT"; echo "Not 2 Nov 2026, nothing to do"; else echo "go=yes" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-node@v4
+        if: steps.day.outputs.go == 'yes'
+        with:
+          node-version: 20
+      - name: Send
+        if: steps.day.outputs.go == 'yes'
+        run: node automation/outreach/send.mjs
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+      - name: Log it on the Desk
+        if: steps.day.outputs.go == 'yes'
+        run: |
+          node -e '
+            const fs = require("fs");
+            const sent = JSON.parse(fs.readFileSync("automation/outreach/sent.json", "utf8"));
+            const day = new Date().toISOString().slice(0, 10);
+            const today = sent.filter((s) => s.sentAt.slice(0, 10) === day);
+            if (!today.length) { console.log("nothing sent today"); process.exit(0); }
+            const cal = JSON.parse(fs.readFileSync("content/calendar.json", "utf8"));
+            let d = cal.days.find((x) => x.date === day);
+            if (!d) { d = { date: day, items: [] }; cal.days.push(d); cal.days.sort((a, b) => a.date.localeCompare(b.date)); }
+            const what = "Outreach emails SENT (" + today.length + "): " + today.map((s) => s.name.split(" — ")[0]).join(", ") + ". Replies go to hello@froglogic.co.uk. Nudge the quiet ones 8 Dec";
+            d.items = d.items.filter((i) => !i.what.startsWith("Outreach emails SENT"));
+            d.items.push({ what, who: "robot" });
+            cal.updated = day;
+            fs.writeFileSync("content/calendar.json", JSON.stringify(cal, null, 2) + "\n");
+            console.log(what);
+          '
+      - name: Commit the log
+        if: steps.day.outputs.go == 'yes'
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/outreach/sent.json content/calendar.json
+          git commit -m "Outreach: sent log + Desk [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
