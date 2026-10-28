@@ -2636,6 +2636,27 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">THREE CARDS · A4 + LETTER · PRINT AT HOME</text>
       <rect width="300" height="300" fill="url(#d36)"/>${mark()}</svg>`
   },
+  {
+    // Thank-you cards for TAs, teachers and SEN staff (Sam, 28 Oct 2026:
+    // "4. Yes"). End of term and end of year. Not Christmas-only, so it sits
+    // in the digital grid. Built by automation/social/xmas-printables.cjs.
+    num: "D38 — Printable PDF", word: "Thank You Cards for SEN Staff",
+    line: "Three printable thank-you cards for the teaching assistant, teacher or SEN worker who gets your child: thank you for understanding me, thank you for being my safe person, and thank you for seeing me. The Comfort Creature frog on the front, a space for names inside. A4 and US Letter, fold in half.",
+    price: "£3.00", link: "#", bg: "#5E7F58",
+    files: [{ name: "Thank You Cards (A4)", file: "Thank-You-Cards-SEN-Staff.pdf" }, { name: "Thank You Cards (US Letter)", file: "Thank-You-Cards-SEN-Staff-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d38", 0.1)}
+      <rect x="70" y="40" width="160" height="200" rx="4" fill="#DDEAD3"/>
+      <circle cx="150" cy="112" r="40" fill="#ede4d0"/>
+      <path d="M 116 118 C 116 88 184 88 184 118 C 184 146 116 146 116 118 Z" fill="#8fb784" stroke="#22331f" stroke-width="2.4"/>
+      <circle cx="132" cy="96" r="9" fill="#8fb784" stroke="#22331f" stroke-width="2.4"/><circle cx="168" cy="96" r="9" fill="#8fb784" stroke="#22331f" stroke-width="2.4"/>
+      <circle cx="128" cy="120" r="5" fill="#f08f87"/><circle cx="172" cy="120" r="5" fill="#f08f87"/>
+      <path d="M 142 120 C 146 126 154 126 158 120" fill="none" stroke="#22331f" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="150" cy="138" r="8" fill="#f6c3c8" stroke="#22331f" stroke-width="1.6"/>
+      <text x="150" y="182" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="14" fill="#22331f">Thank you for</text>
+      <text x="150" y="200" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="14" fill="#22331f">understanding me.</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">FOR TAS · TEACHERS · SEN STAFF</text>
+      <rect width="300" height="300" fill="url(#d38)"/>${mark()}</svg>`
+  },
 ];
 
 // Halloween retires itself (Sam, 26 Oct 2026: "retire Halloween after 31 Oct").
