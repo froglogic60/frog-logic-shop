@@ -279,5 +279,11 @@ Search Console, Merchant Center. Replit and Google Workspace: no longer charging
   `upload_image`. Etsy can also fetch files from raw.githubusercontent.com.
 - instagram.com is blocked for the Chrome extension; Business Suite edits
   Facebook, and Instagram profile edits need Sam's app.
+- Etsy delivery profiles: whenever Printify pushes a NEW product to Etsy it can
+  rewrite the existing profiles back to its dollar figures (charged as pounds)
+  and add ~60 countries, EU included, and the new listings get no production
+  partner. After any new Printify product, check every profile is UK-only or
+  US-only at the 15 Oct pound rates, and tick Printify print partner (UK)/(US)
+  on each new listing. Fixed this way on 28 Oct (7 profiles, 14 listings).
 - Logins, passwords, codes and identity checks are Sam's.
 - Fuller notes: Claude's memory files `frog-logic` and `frog-logic-ops`.
