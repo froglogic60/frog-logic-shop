@@ -332,6 +332,22 @@ customer-facing for "will this get found and bought?" before it goes up.
 - EU selling: only if EU demand appears and a paid EU representative is worth it.
 - Renaming the brand: discussed in July, not adopted. Frog Logic stays.
 - Package insert (Printify) is switched off; design kept.
+- 28 Oct night, Etsy search pass (Sam: "yes do 1 and 2"): 111 of 144 active listings
+  re-titled to lead with phrases Etsy's own search suggestions show buyers type
+  ("Funny ADHD Mug, Autism Mug — <slogan>", "Funny ADHD Shirt, Autism T Shirt — ...",
+  "ADHD Wall Art, Autism Wall Art Print — ...", "Frog Christmas Shirt / Frog Hoodie /
+  Frog Mug / Frog Blanket Throw — Socially Hibernating ...", "Spoon Theory Planner",
+  "Visual Schedule Autism Printable", "Communication Cards ..."); weak tags swapped
+  (neurodivergent mug -> adhd gift mug, unisex tshirt -> adhd shirt women, etc.).
+  Edited in Etsy only: Printify product titles are unchanged, so a printify-etsy.yml
+  publish run would put the OLD titles back — update titleFor() first. Etsy's internal
+  listings API (GET /api/v3/ajax/shop/67686244/listings?limit=100&offset=N, logged in)
+  returns every listing with title and tags. Recheck Etsy search visits mid-Nov.
+- 28 Oct night, Tes: free "Christmas Visual Timetable - Autism and SEN" (NoDerivatives)
+  and £3 "Christmas Visual Timetable Pack - Autism SEN" (the Big Pack) published, in
+  Tes review. Uploads: files via DataTransfer from raw.githubusercontent on the
+  uploader's file input; the cover image (uploadcare) takes a synthetic drop event.
+  Thank-you cards left off Tes (its buyers are teachers, not parents).
 - Etsy is complete (26 Oct check: every download listed, 142 active). Listing the
   23 Pond Guides singly on Etsy was offered; Sam: leave Etsy as it is for now.
 - A Tonbridge local-deals app idea (25 Oct) is not Frog Logic and is parked so
