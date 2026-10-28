@@ -1057,6 +1057,500 @@ Every contact route below was checked on 10 Oct 2026 against the Charity Commiss
 
 ---
 
+## 54. Medway Parents and Carers Forum, Medway (parent carer forum)
+
+**To:** info@medwaypcf.org.uk
+**Why them:** Official Parent Carer Forum for Medway; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Medway Parents and Carers Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 55. Family Voice Surrey, Surrey (parent carer forum)
+
+**To:** contact@familyvoicesurrey.org
+**Why them:** Official Parent Carer Forum for Surrey; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Family Voice Surrey team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 56. Parent Carers' Council (PaCC), Brighton & Hove (parent carer forum)
+
+**To:** admin@paccbrighton.org.uk
+**Why them:** Official Parent Carer Forum for Brighton & Hove; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Parent Carers' Council (PaCC) team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 57. Hampshire Parent Carer Network, Hampshire (parent carer forum)
+
+**To:** participation@hpcn.org.uk
+**Why them:** Official Parent Carer Forum for Hampshire; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Hampshire Parent Carer Network team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 58. Southampton Parent Carer Forum, Southampton (parent carer forum)
+
+**To:** Contact@sotonpcf.org.uk
+**Why them:** Official Parent Carer Forum for Southampton; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Southampton Parent Carer Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 59. FACT Bucks, Buckinghamshire (parent carer forum)
+
+**To:** admin@factbucks.org.uk
+**Why them:** Official Parent Carer Forum for Buckinghamshire; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi FACT Bucks team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 60. Reading Families' Forum, Reading (parent carer forum)
+
+**To:** info@readingfamiliesforum.co.uk
+**Why them:** Official Parent Carer Forum for Reading; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Reading Families' Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 61. Bracknell Parent Carer Forum, Bracknell Forest (parent carer forum)
+
+**To:** bracknell.pcf@gmail.com
+**Why them:** Official Parent Carer Forum for Bracknell Forest; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Bracknell Parent Carer Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 62. SEND Voices Wokingham, Wokingham (parent carer forum)
+
+**To:** info@sendvoiceswokingham.org.uk
+**Why them:** Official Parent Carer Forum for Wokingham; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi SEND Voices Wokingham team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 63. Parents and Carers Alliance (PACA MK), Milton Keynes (parent carer forum)
+
+**To:** pacamk@gmail.com
+**Why them:** Official Parent Carer Forum for Milton Keynes; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Parents and Carers Alliance (PACA MK) team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 64. Essex Family Forum, Essex (parent carer forum)
+
+**To:** hello@essexfamilyforum.org
+**Why them:** Official Parent Carer Forum for Essex; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Essex Family Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 65. Bexley Voice, Bexley (parent carer forum)
+
+**To:** admin@bexleyvoice.org.uk
+**Why them:** Official Parent Carer Forum for Bexley; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Bexley Voice team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 66. Bromley Parent Carer Forum, Bromley (parent carer forum)
+
+**To:** info@bromleypcf.co.uk
+**Why them:** Official Parent Carer Forum for Bromley; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Bromley Parent Carer Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 67. Greenwich SEND Voice, Greenwich (parent carer forum)
+
+**To:** info@greenwichsendvoice.co.uk
+**Why them:** Official Parent Carer Forum for Greenwich; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Greenwich SEND Voice team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 68. Lewisham Parent and Carers Forum, Lewisham (parent carer forum)
+
+**To:** info@lewishamparentcarer.org.uk
+**Why them:** Official Parent Carer Forum for Lewisham; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Lewisham Parent and Carers Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 69. Barnet Parent Carer Forum, Barnet (parent carer forum)
+
+**To:** info@barnetpcf.org.uk
+**Why them:** Official Parent Carer Forum for Barnet; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Barnet Parent Carer Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 70. Ealing Parent Carer Forum, Ealing (parent carer forum)
+
+**To:** info@epcf.org.uk
+**Why them:** Official Parent Carer Forum for Ealing; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Ealing Parent Carer Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 71. Hounslow Parent Carers Forum, Hounslow (parent carer forum)
+
+**To:** info@hounslowpcf.co.uk
+**Why them:** Official Parent Carer Forum for Hounslow; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Hounslow Parent Carers Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 72. Harrow Parent Forum, Harrow (parent carer forum)
+
+**To:** info@harrowparentforum.org
+**Why them:** Official Parent Carer Forum for Harrow; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Harrow Parent Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 73. SEND Parent Carers in Wandsworth, Wandsworth (parent carer forum)
+
+**To:** admin@sendpcwandsworth.org.uk
+**Why them:** Official Parent Carer Forum for Wandsworth; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi SEND Parent Carers in Wandsworth team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 74. Waltham Forest Parent Forum, Waltham Forest (parent carer forum)
+
+**To:** walthamforestparentforum@live.co.uk
+**Why them:** Official Parent Carer Forum for Waltham Forest; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Waltham Forest Parent Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 75. Tower Hamlets SEND Forum, Tower Hamlets (parent carer forum)
+
+**To:** thsendforum@gmail.com
+**Why them:** Official Parent Carer Forum for Tower Hamlets; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Tower Hamlets SEND Forum team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 76. SEND Power in Haringey, Haringey (parent carer forum)
+
+**To:** hello@sendpowerinharingey.org
+**Why them:** Official Parent Carer Forum for Haringey; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi SEND Power in Haringey team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 77. Havering SEND Family Voice, Havering (parent carer forum)
+
+**To:** info@haveringsendfamilyvoice.org
+**Why them:** Official Parent Carer Forum for Havering; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Havering SEND Family Voice team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 78. Empowering Parents Together, Redbridge (parent carer forum)
+
+**To:** info@empoweringparentstogether.org.uk
+**Why them:** Official Parent Carer Forum for Redbridge; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Empowering Parents Together team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
+## 79. Parentsactive, Hammersmith & Fulham (parent carer forum)
+
+**To:** info@parentsactive.org.uk
+**Why them:** Official Parent Carer Forum for Hammersmith & Fulham; email published on its own site (found 28 Oct 2026). Sam approved sending Mon 2 Nov. No nudge.
+**Subject:** Free plain-English guides for your families (autism, ADHD, PDA and more)
+
+> Hi Parentsactive team,
+>
+> I'm Sam, I'm neurodivergent, and I run Frog Logic from my lounge near Tonbridge. I've written 23 short plain-English guides, one per neurotype (autism, ADHD, AuDHD, PDA, sensory differences and more), for the people around a child: grandparents, the other parent, new staff. They're free to read, print and forward, no sign-up:
+> https://froglogic.co.uk/?ref=pcf#guides
+>
+> With Christmas coming, a lot of families will be explaining their child to relatives. If you think the guides would help your members, you're very welcome to share the link in a newsletter or your Facebook group. I also have a ready-made picture for social media if that's easier.
+>
+> No need to reply if it's not for you, and I won't email again unless you ask.
+>
+> Sam, Frog Logic
+
+---
+
 ## After sending
 
 Log who you sent to and when on the Desk (one line each is fine — "nasen sent 27 Oct"). The 8 Dec nudge is one short reply to your own email: "Just floating this back up in case it got buried — no worries if it's not for you."
