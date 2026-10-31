@@ -53,7 +53,32 @@
         "sales_channel_type_id"
       ],
       "result": "not UK/US — skipped"
+    },
+    "6ae4c5ab9df74eb1f90f1b8f": {
+      "shop": "website",
+      "country": "UNITED KINGDOM",
+      "created": "2026-10-30 16:28:27+00:00",
+      "status": "in-production",
+      "keys": [
+        "id",
+        "app_order_id",
+        "shop_id",
+        "address_to",
+        "line_items",
+        "metadata",
+        "total_price",
+        "total_shipping",
+        "total_tax",
+        "status",
+        "shipping_method",
+        "created_at",
+        "sent_to_production_at",
+        "fulfilment_type",
+        "printify_connect",
+        "sales_channel_type_id"
+      ],
+      "result": "not UK/US — skipped"
     }
   },
-  "updatedAt": "2026-10-30T14:39:36.844Z"
+  "updatedAt": "2026-10-31T13:57:47.277Z"
 }
