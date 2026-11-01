@@ -4,7 +4,7 @@
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
-      "what": "One product post to Facebook + Instagram at 1pm (Mon/Wed/Fri/Sun it is the Bespoke Planner). From 2 Nov a fun post at 7pm too: Pond News, permission slips, the pond regulars, frog facts, Gold Star Friday, Spot the frog, Show us your frogs (4 weeks queued to 29 Nov)",
+      "what": "One product post to Facebook + Instagram at 1pm (Wed + Sun it is the Bespoke Planner — cut from four a week on 1 Nov: two weeks at four reached ~2 people a post, 0 interactions). From 2 Nov a fun post at 7pm too: Pond News, permission slips, the pond regulars, frog facts, Gold Star Friday, Spot the frog, Show us your frogs (4 weeks queued to 29 Nov)",
       "who": "robot",
       "repeat": {
         "every": "day"
@@ -964,6 +964,10 @@
         {
           "what": "Taster sign-ups: 0 people (0 pages), 0 this week, last none yet",
           "who": "robot"
+        },
+        {
+          "what": "Engagement check (27 Oct) answered: four planner posts a week were invisible, not harmful (19 posts, 0 interactions, reach ~2; everything else unchanged at 0.16). Sam said cut it — planner now Wed + Sun only from 2 Nov. Also found: Sam’s Week 1 post went out twice (16 + 17 Oct, robot failed to mark it posted); Week 3 went out once on 30 Oct",
+          "who": "done"
         }
       ]
     },
