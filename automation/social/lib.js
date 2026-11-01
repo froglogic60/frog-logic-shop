@@ -78,6 +78,13 @@ const WEEK_MIX = ["q", "q", "q", "q", "q", "a", "a", "a", "a", "s", "s", "s", "s
 const WEEK_MIX_V2 = ["q", "q", "q", "q", "a", "a", "a", "a", "s", "s", "s", "p", "p", "p", "p", "e", "e", "e", "e", "b", "b"];
 const V2_FROM_WEEK = 8; // week 8 = Mon 12 Oct 2026
 const PLANNER_SLOTS = [1, 7, 13, 19]; // day*3 + slot: Mon, Wed, Fri, Sun at 1pm
+// From the week of 2 Nov 2026 (Sam, 1 Nov: "cut it"): the planner drops to two
+// slots a week, Wednesday and Sunday at 1pm. Two weeks of four-a-week reached
+// about 2 people a post with no interactions, and the extra posts read as
+// spam. The two freed slots go back to a download showcase and a quote.
+const WEEK_MIX_V3 = ["q", "q", "q", "q", "q", "a", "a", "a", "a", "s", "s", "s", "s", "p", "p", "e", "e", "e", "e", "b", "b"];
+const V3_FROM_WEEK = 11; // week 11 = Mon 2 Nov 2026
+const PLANNER_SLOTS_V3 = [7, 19]; // Wed, Sun at 1pm
 const EPOCH = Date.UTC(2026, 7, 17); // Monday 17 Aug 2026
 
 function mulberry32(seed) {
@@ -91,15 +98,18 @@ function mulberry32(seed) {
 
 function weekTypes(weekIndex) {
   const rand = mulberry32(weekIndex + 1);
+  const v3 = weekIndex >= V3_FROM_WEEK;
   const v2 = weekIndex >= V2_FROM_WEEK;
-  const arr = v2 ? WEEK_MIX_V2.filter((t) => t !== "p") : [...WEEK_MIX];
+  const mix = v3 ? WEEK_MIX_V3 : v2 ? WEEK_MIX_V2 : WEEK_MIX;
+  const arr = mix.filter((t) => t !== "p");
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(rand() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   // A shuffle can stack three planner posts on one day, so the planner gets
   // fixed slots instead: the 1pm post on Monday, Wednesday, Friday and Sunday.
-  if (v2) for (const pos of PLANNER_SLOTS) arr.splice(pos, 0, "p");
+  if (v3) for (const pos of PLANNER_SLOTS_V3) arr.splice(pos, 0, "p");
+  else if (v2) for (const pos of PLANNER_SLOTS) arr.splice(pos, 0, "p");
   return arr;
 }
 
