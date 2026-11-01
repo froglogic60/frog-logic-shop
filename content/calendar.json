@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -1200,6 +1200,7 @@
     "THE £100k QUESTION (asked 8 Oct 2026): £100k a year is ~14 orders a day at ~£20 each, needing ~700–1,400 visitors a day at normal conversion; the shop gets a handful. Three things move it — paid traffic (only once a £40+ product exists), earned traffic (slow, needs a face), and higher-value products (organisation packs, a £25–£40 Bespoke Planner, a workbook/course). The 90-day plan above tests all three",
     "ALIVE WITH CHRONIC ILLNESS said yes (20 Oct): Elizabeth Curtis offered newsletter, social, digital magazine and January pacing-event sponsorship for a pay-what-you-can donation. Replied 20 Oct 20:09 offering a donation in kind instead of cash: a free Low Spoons Day Planner link for her readers, a readers-only discount code with 10% of each order using it donated back, and free pacing printables for the January event. When she replies: make the free link and the code (Claude), send her blurb and images. Neurodiverging declined the same day",
     "Order yourself one silk-poster sample so you have held what customers get",
-    "Bing shopping (Microsoft Merchant Center): the Microsoft Advertising account is part-made on samanthajhall@live.co.uk and stops at a card. No charge without a campaign, but parked on 20 Oct. If you ever want it, add the card and tell Claude, who sets up the free shopping listings from the Google feed"
+    "Bing shopping (Microsoft Merchant Center): the Microsoft Advertising account is part-made on samanthajhall@live.co.uk and stops at a card. No charge without a campaign, but parked on 20 Oct. If you ever want it, add the card and tell Claude, who sets up the free shopping listings from the Google feed",
+    "READING LIST (added 1 Nov 2026): Pep Talks for Neurodivergent Women by Dr Vikky Leaney (out 26 Oct 2026, £12.99). Vikky is sending a review copy PDF from info@vikkyleaney.com."
   ]
 }
