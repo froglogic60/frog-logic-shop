@@ -135,10 +135,14 @@ stand → coming up → parked → costs → how to work on it → history.
   automation/social/fun-queue.json): Mon Pond News, Tue permission slip, Wed the
   pond regulars, Thu frog fact, Fri Gold Star Friday, Sat Spot the frog, Sun
   Show us your frogs. Queued to 29 Nov; **next batch needed before 30 Nov.**
-- Dated posts from `automation/social/announce-queue.json`, daily 10:00 UTC
+- Dated posts from `automation/social/announce-queue.json`, daily 10:13 UTC
   (one entry a day, so merge same-day posts).
-- Monthly newsletter on the 1st, 09:00 UTC (writes itself unless marked
+- Monthly newsletter on the 1st, 09:11 UTC (writes itself unless marked
   handwritten).
+- GitHub runs scheduled jobs hours late (planner robot every 5-7 h, posts ~5 h
+  late; checked 2 Nov). Jobs sit off the hour to help. If a dated post is
+  still unposted late in the day, run "Scheduled announcement queue" by hand
+  (it skips anything already posted).
 - Planner order robot every 2 hours; taster sign-up count daily 06:50.
 - Printify cost check Mondays 06:40 (emails hello@ only if something changed);
   engagement report Mondays 07:20.
