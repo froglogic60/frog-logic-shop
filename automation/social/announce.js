@@ -46,6 +46,8 @@ function findDue() {
 }
 
 async function render(spec) {
+  // Video posts (2 Nov 2026) carry a ready-made MP4 in the repo; nothing to render.
+  if (spec.video) { console.log(`Video post ${spec.name}: ${spec.video}`); return; }
   // A post can carry a ready-made photo instead of the text card (added 15 Oct
   // 2026 for the Christmas range: a product sells on its picture). `image` is
   // a path from the repo root, e.g. "automation/social/xmas/xmas-mug-post.jpg".
@@ -81,7 +83,51 @@ async function waitForUrl(url) {
   throw new Error(`Image never became reachable: ${url}`);
 }
 
+// Video post (2 Nov 2026): `video` is a repo path to an MP4, e.g.
+// "automation/social/videos/socially-hibernating-mug-bright-vertical.mp4"
+// (vertical 9:16 for Reels). Served via jsDelivr, which sends video/mp4
+// (raw.githubusercontent sends octet-stream). Instagram first, as a Reel
+// shared to the feed, then the Facebook Page video, so a failure on the
+// fussier one leaves nothing half-posted.
+async function publishVideo(spec) {
+  const videoUrl = `https://cdn.jsdelivr.net/gh/froglogic60/frog-logic-shop@main/${spec.video}`;
+  const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
+  const forFacebook  = spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/fb");
+  const forInstagram = spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig");
+
+  const create = await fetch(`${GRAPH}/${process.env.IG_USER_ID}/media`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ media_type: "REELS", video_url: videoUrl, caption: forInstagram, share_to_feed: true, access_token: token }),
+  }).then((r) => r.json());
+  if (!create.id) throw new Error(`IG reel container failed: ${JSON.stringify(create)}`);
+  let done = false;
+  for (let i = 0; i < 60; i++) {
+    const st = await fetch(`${GRAPH}/${create.id}?fields=status_code,status&access_token=${token}`).then((r) => r.json());
+    if (st.status_code === "FINISHED") { done = true; break; }
+    if (st.status_code === "ERROR") throw new Error(`IG reel processing failed: ${JSON.stringify(st)}`);
+    await new Promise((res) => setTimeout(res, 5000));
+  }
+  if (!done) throw new Error("IG reel still processing after 5 minutes; nothing published");
+  const pub = await fetch(`${GRAPH}/${process.env.IG_USER_ID}/media_publish`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ creation_id: create.id, access_token: token }),
+  }).then((r) => r.json());
+  if (!pub.id) throw new Error(`IG publish failed: ${JSON.stringify(pub)}`);
+  console.log("Instagram reel created:", pub.id);
+
+  const fb = await fetch(`${GRAPH}/${process.env.FB_PAGE_ID}/videos`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ file_url: videoUrl, description: forFacebook, access_token: token }),
+  }).then((r) => r.json());
+  if (!fb.id) throw new Error(`Facebook video failed (Instagram already posted): ${JSON.stringify(fb)}`);
+  console.log("Facebook video created:", fb.id);
+}
+
 async function publish(spec) {
+  if (spec.video) return publishVideo(spec);
   const imageUrl = `${RAW_BASE}/${spec.name}.jpg`;
   const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
   await waitForUrl(imageUrl);
