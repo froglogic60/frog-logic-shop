@@ -9,6 +9,10 @@ on:
       only:
         description: "Build only these (comma-separated names, e.g. Christmas-Visual-Timetable-Big-Pack); empty = all"
         required: false
+      tes:
+        description: "Build the Tes copies (no web address) into automation/social/tes/ instead of digital/"
+        type: boolean
+        default: false
 permissions:
   contents: write
 jobs:
@@ -30,10 +34,13 @@ jobs:
         run: node xmas-printables.cjs
         env:
           ONLY: ${{ inputs.only }}
+          TES: ${{ inputs.tes && '1' || '' }}
+          OUT_DIR: ${{ inputs.tes && 'tes' || '' }}
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f automation/social/tes/*.pdf 2>/dev/null || true
           git add digital/Christmas-Visual-Timetable*.pdf digital/Thank-You-Cards-SEN-Staff*.pdf digital/Bespoke-Planner-Gift-Card*.pdf automation/social/xmas-printables
           git commit -m "Christmas timetable and thank-you cards built [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
