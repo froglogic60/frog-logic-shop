@@ -135,7 +135,10 @@ orders, money in, and which were Sam's own tests or free samples. Only say
    Tes rules: no links to other sites in listing descriptions (since March 2024);
    links inside files only if they don't promote selling. The Tes guide files are
    their own versions (page 1 footer "Frog Logic — made with care", no web
-   address); keep shop links out of anything uploaded to Tes.
+   address); keep shop links out of anything uploaded to Tes. The two Christmas
+   timetables on Tes are Tes copies too (2 Nov 2026): "Build the Christmas
+   timetable" workflow with the tes box ticked writes them to
+   automation/social/tes/; re-run that way after any timetable change.
 
 ## Free samples and press (not sales)
 
