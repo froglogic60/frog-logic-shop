@@ -1,17 +1,50 @@
 # Frog Logic — start here
 
 Single orientation file for any Claude session working on Frog Logic. Read this
-first. When a decision changes, edit the line here, and keep the copies in step:
-this file on GitHub is the master; copies sit in `Downloads\frog-logic-shop`,
-`Downloads\Printify-Designer` and `OneDrive\Desktop\Frog Logic` on Sam's PC.
+first, all of it. When a decision changes, edit the line here, and keep the
+copies in step: this file on GitHub is the master; copies sit in
+`Downloads\frog-logic-shop`, `Downloads\Printify-Designer` and
+`OneDrive\Desktop\Frog Logic` on Sam's PC.
 
-Last updated: 2 November 2026 (PC folders tidied, SourceBottle narrowed, task rules; how to check sales; free samples and press log). (The previous version was frozen at 21 Aug and
-described the retired Replit store as live. Ignore any copy older than this.)
+Last updated: 2 November 2026 (tidied: current rules and state at the top,
+dated history at the bottom; stale lines fixed). Ignore any copy older than this.
 
 **The number-one goal is Frog Logic making sales.** Check anything
 customer-facing for "will this get found and bought?" before it goes up.
 
+Order of this file: rules → where things live → prices → what's on sale →
+what runs by itself → how to check sales → samples and press → where things
+stand → coming up → parked → costs → how to work on it → history.
+
 ---
+
+## House rules (never change without Sam)
+
+- One person, Sam, running it from her lounge in Kent. **"I", never "we".**
+- Audience: neurodivergent adults and the people around them. Tagline:
+  *soft landings for busy brains*.
+- Label rule: diagnoses (ADHD, autism…) appear in Sam's own story and the Pond
+  Guides only. Product names and copy name feelings, not conditions. Labels stay
+  in tags and keywords for search.
+- Sam's own posts open "Hi, I'm Sam, I'm neurodivergent", say "from my lounge",
+  sign off "with love Sam". Page posts are fun, feel-good stuff. Don't date the
+  shop's age ("only been open a short while").
+- **No video of Sam, no voice.** Product-only videos (mockup zooms) are fine.
+- Contact is email only: hello@froglogic.co.uk. Her phone number must never be
+  visible. Her trading address is on the privacy and terms pages only (legal
+  requirement).
+- Not VAT registered. Nothing should imply VAT is charged.
+- Honest signals only: no invented reviews, testimonials, AI "customers" or
+  urgency.
+- **No paid ads.** The £25 cap is spent. Google Ads credit declined.
+- Business emails: Claude drafts in Sam's voice; Sam approves before anything
+  is sent.
+- **Tes:** nothing uploaded to or written on Tes carries froglogic.co.uk or a
+  shop link (listings, files, profile, shop page). Tes copies are built
+  separately.
+- Files no longer needed go in `OneDrive\Desktop\Delete` (Sam empties it),
+  never left lying around or deleted outright.
+- This repo is PUBLIC: no contact details, no secrets.
 
 ## Where things live
 
@@ -19,16 +52,18 @@ customer-facing for "will this get found and bought?" before it goes up.
   Netlify, project `jade-arithmetic-2d2701`, Personal plan ($9/month, 1,000
   credits, 15 per deploy, cycle runs 26th–25th).
 - **Code = GitHub `froglogic60/frog-logic-shop`.** It is the source of truth.
-  `Downloads\frog-logic-shop` on the PC is an old August copy; don't edit it.
-- **Etsy:** froglogic.etsy.com (shop name FrogLogic). Downloads plus tees, mugs,
-  prints and the Christmas range made through Printify.
-- **Tes (27 Oct):** account FrogLogic (teacher marketplace, Bronze 60% royalty).
-  Pond Guides Complete Set £8 (same as site) + all 23 single guides free
-  (NoDerivatives licence; Tes copies have their own small print). Tes reviews
-  new resources for up to 3 working days. TPT (US) not done: set-up fee, 55%.
-- **Printify:** API store 28035653 (the site's orders) and "My Etsy Store"
-  29335686. The API store also holds ~2,870 stray products from the old Replit
-  app; a clean-out robot is possible, not urgent.
+  `Downloads\frog-logic-shop` on the PC is an old August copy of the code;
+  don't edit its code (only this context file is kept in step there).
+- **Etsy:** froglogic.etsy.com (shop name FrogLogic, id 67686244). Downloads
+  plus tees, mugs, prints and the Christmas range made through Printify.
+- **Tes:** author FrogLogic (teacher marketplace, Bronze 60% royalty). Pond
+  Guides Complete Set £8 (same as site) + all 23 single guides free
+  (NoDerivatives licence; Tes copies have their own small print), free
+  Christmas Visual Timetable + £3 Christmas Big Pack. Tes reviews new
+  resources for up to 3 working days. TPT (US) not done: set-up fee, 55%.
+- **Printify:** API store 28035653 (the site's orders and manual orders) and
+  "My Etsy Store" 29335686. The API store also holds ~2,870 stray products from
+  the old Replit app; a clean-out robot is possible, not urgent.
 - **The Desk:** froglogic.co.uk/desk.html, reads `content/calendar.json` live.
   It is the schedule. Anything dated or repeating goes there, and a repeating
   task shows on every day it applies to.
@@ -39,31 +74,18 @@ customer-facing for "will this get found and bought?" before it goes up.
   morning-check-instructions.txt stay at the top). `Downloads` now holds only
   frog-logic-shop, Printify-Designer and "TikTok this week". Personal paperwork
   is in `Documents\Personal admin`; photos in `Pictures\Photos 2024/2025/2026`.
-  `Desktop\Delete` holds ~8 GB Sam reviews before emptying.
+  `Desktop\Delete` holds files Sam reviews before emptying.
+- **Analytics:** GoatCounter, with channel doors (/pin, /ig, /fb, /etsy → ?ref=).
+- **Google:** Search Console and Merchant Center (account 5875298214, free
+  listings UK + US) on Sam's Google account in her PC Chrome. Google
+  Business Profile (Gift shop, Tonbridge service area, address hidden) awaiting
+  Google's verification.
 - **SourceBottle (media call-outs):** alerts narrowed 2 Nov to UK & Ireland only;
   topics Health & Wellbeing, Parenting & Education, Lifestyle Food & Fashion,
   Business & Finance (General, Professional Services and US switched off).
-- **Retired:** the Replit store and `Downloads\Printify-Designer`. The Replit
-  account is deleted and the app has been dark since 5 Sept. Nothing new goes to
-  Replit or its agent.
-
-## The business and the voice
-
-- One person, Sam, running it from her lounge in Kent. **"I", never "we".**
-- Audience: neurodivergent adults and the people around them. Tagline:
-  *soft landings for busy brains*.
-- Label rule: diagnoses (ADHD, autism…) appear in Sam's own story and the Pond
-  Guides only. Product names and copy name feelings, not conditions. Labels stay
-  in tags and keywords for search.
-- Sam's own posts open "Hi, I'm Sam, I'm neurodivergent", say "from my lounge",
-  sign off "with love Sam". Don't date the shop's age ("only been open a short
-  while").
-- **No video of Sam, no voice.** TikTok is text slides, posted by hand.
-- Contact is email only: hello@froglogic.co.uk. Her phone number must never be
-  visible. Her trading address is on the privacy and terms pages (legal
-  requirement); not on the package insert.
-- Not VAT registered. Nothing should imply VAT is charged.
-- Honest signals only: no invented reviews, testimonials or urgency.
+- **Retired:** the Replit store and `Downloads\Printify-Designer` (as a tool;
+  the folder keeps a copy of this file). The Replit account is deleted. Nothing
+  new goes to Replit or its agent.
 
 ## Pricing (rule set 16 Oct 2026)
 
@@ -77,37 +99,57 @@ customer-facing for "will this get found and bought?" before it goes up.
 - Site prices: printables about £1 a page (£2 minimum: 1–2 pages £2, 3–4 £3,
   5+ £4); tees £19 and mugs £13.50 with free UK post; prints £12; totes £17;
   notebooks £13; Bespoke Planner £25; Organisation Pack £95 / £195 / £395.
+  Free UK delivery over £80 for the rest.
 - Etsy prices sit above the site so the site stays the best deal (downloads
   mostly £3.50–£5.50; tee £19 UK / £22 US; mug £13.50; print £14).
 - Printed pieces post to the **UK and US only** (no EU or Northern Ireland,
   because of GPSR). Downloads sell everywhere. US orders are made in the US.
-- Newsletter code POND10 = 10% off a first order.
+- Codes: POND10 (newsletter, 10% off a first order); CRIPLIFE (Crip Life
+  readers).
 
 ## What's on sale
 
 - Typographic feelings range (tees, mugs, prints, totes, notebooks, bottles),
-  the Comfort & Chaos mascot frogs, Halloween (retire after 31 Oct), Christmas
-  "Socially Hibernating" in three colourways (soft, bright with a brightness
-  warning, black and white), personalised ornaments and US candle, printable
-  Christmas cards.
+  the Comfort & Chaos mascot frogs, Christmas "Socially Hibernating" in three
+  colourways (soft, bright with a brightness warning, black and white — never
+  mixed or grouped), personalised ornaments and US candle, printable Christmas
+  cards. **Halloween retired 1 Nov 2026** (Chaos Gremlin stays, year-round).
+- Single Christmas pieces are Etsy-only; only the Socially Hibernating sets
+  check out on froglogic.co.uk (30 Oct).
 - ~50+ printable downloads, 23 free Pond Guides (readable on their own pages).
 - **Bespoke Planner** £25: Google Form questionnaire → robot builds a 9–18 page
-  personal PDF, emails it. Free **taster** at froglogic.co.uk/taster/ (one free
-  page, live 22 Oct).
+  personal PDF, emails it. Free **taster** at froglogic.co.uk/taster/.
+  Gift card (D40, £25, site only) not yet tested end to end.
 - **Organisation Pack**: digital licence, 3 tiers. If one sells, build the
   12-month update-sender (Sam asked).
-- 125 product pages at froglogic.co.uk/p/<slug>/, sitemap in Search Console.
+- 125+ product pages at froglogic.co.uk/p/<slug>/, sitemap in Search Console.
+- Notebooks, totes and bottles stay OFF Etsy. Hoodies off the site.
 
 ## What runs by itself (GitHub Actions)
 
-- 3 FB/IG posts a day (crons at :17). 1pm on Mon/Wed/Fri/Sun is the Bespoke
-  Planner, and since 25 Oct every planner post ends with the free taster link.
-- Dated posts from `automation/social/announce-queue.json`, daily 10:00 UTC.
-- Monthly newsletter on the 1st (writes itself unless marked handwritten).
+- **1 product post a day** on Facebook + Instagram (daily-social.yml, 12:17
+  UTC). The Bespoke Planner takes the Wednesday and Sunday posts only (from the
+  week of 2 Nov; lib.js WEEK_MIX_V3 / PLANNER_SLOTS_V3); every planner post
+  ends with the free taster link.
+- **Fun page post** every evening (fun-posts.yml, 19:07 UTC, from
+  automation/social/fun-queue.json): Mon Pond News, Tue permission slip, Wed the
+  pond regulars, Thu frog fact, Fri Gold Star Friday, Sat Spot the frog, Sun
+  Show us your frogs. Queued to 29 Nov; **next batch needed before 30 Nov.**
+- Dated posts from `automation/social/announce-queue.json`, daily 10:00 UTC
+  (one entry a day, so merge same-day posts).
+- Monthly newsletter on the 1st, 09:00 UTC (writes itself unless marked
+  handwritten).
 - Planner order robot every 2 hours; taster sign-up count daily 06:50.
 - Printify cost check Mondays 06:40 (emails hello@ only if something changed);
   engagement report Mondays 07:20.
+- Pond Advent emails 1–24 Dec, 07:41 UTC (send-advent.yml).
 - Pinterest: scheduled pins from bulk CSV uploads (max 100 scheduled at once).
+- Scheduled tasks (Claude): weekly sales check Mondays 11:51 (first 9 Nov,
+  summary to Sam's phone); daily group post 12:47 UK to 20 Nov; morning email
+  check. Check a task's last run before relying on it.
+- TikTok is by hand (text slides) and off the dated days while Sam recovers:
+  three slide posts wait under "whenever you have the spoons" on the Desk.
+  Don't chase them.
 
 ## How to check sales (all four, every time)
 
@@ -131,7 +173,8 @@ orders, money in, and which were Sam's own tests or free samples. Only say
    tes.com/teaching-resources/dashboard/sales. Logged out, every dashboard page
    shows a generic "become an author" page instead. Sales build a balance there;
    Sam withdraws it with "Withdraw now" once it's over £10 (bank details asked on
-   the first withdrawal, once a week). 2 Nov 2026: 0 sales.
+   the first withdrawal, once a week). The "Complete profile" box on the sales
+   page shows whenever there are 0 sales; it doesn't mean the profile is empty.
    Tes rules: no links to other sites in listing descriptions (since March 2024);
    links inside files only if they don't promote selling. The Tes guide files are
    their own versions (page 1 footer "Frog Logic — made with care", no web
@@ -152,7 +195,137 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   balance; ships 4–6 Nov, due 10–12 Nov. Follow up 13 Nov (Desk): did it
   arrive, will it be in the guide? Thread is in Sam's Outlook (search Martina).
 
-## Where things stand (25–26 Oct 2026)
+## Where things stand (2 Nov 2026)
+
+- **No sales from strangers yet.** Full four-channel check 2 Nov: Stripe only
+  Sam's own reversed £19 test (16 Oct); Etsy 0 open, 0 completed; Printify
+  Etsy store 0 orders, site store only Martina's sample; Tes 0 sales (shop: 26
+  uploads, 228 views, 1 download). The shop works; **getting seen is the
+  problem**, so effort goes to visibility, not building.
+- 90-day target (to 6 Jan 2027): ten orders from strangers and one £100+ order,
+  then decide the bigger route from real numbers. Half-way check 24 Nov.
+- Social reach is tiny (27 Oct: 186 product posts in 28 days averaged 0.16
+  interactions), hence one product post a day plus the fun evening posts.
+- GoatCounter, 28 Sep–27 Oct: 105 visits (Pinterest 33, unknown 29, Facebook
+  18, ChatGPT 3, Google 2; UK 64%, US 20%; 54% phones).
+- Tes profile and shop page filled in 2 Nov (shop description, featured
+  resources switched on, PSHE added as a subject, web address taken out of the
+  About me). Still empty: the three featured-resource slots and the cover photo.
+- **To do: product videos on socials.** "Make a product video" workflow
+  (product-video.py) makes 12 s silent zoom MP4s from one mockup into
+  automation/social/videos/. First pair: the UK Bright Socially Hibernating mug
+  (square one is on Etsy listing 4599550881; vertical one is for Reels/TikTok).
+  The FB/IG robot posts pictures only, not video.
+
+## Coming up (dates also on the Desk)
+
+- 3 Nov: "send this to the relatives" Christmas picture post.
+- 4 Nov: free timetable post; Pinterest ad test full review.
+- 7 Nov: card-maker post. 10 Nov: Pond Advent post; check Printify's 2026
+  Christmas cut-offs and move the order-by dates earlier if theirs are.
+- 13 Nov: gift card post; Martina follow-up.
+- 14 Nov: Etsy XMAS10PART1 sale (10%, 80 listings) ends.
+- 15 Nov: order-by dates post. Mid-Nov: recheck Etsy search visits.
+- 17 Nov: Search Console check. 17–21 Nov: help-page pins.
+- 20 Nov: Big Pack post. 20 Nov: daily group-post task ends.
+- 23 Nov–1 Dec: Etsy Cyber Specials, 25% off 134 listings; put it in posts
+  from 23 Nov.
+- 24 Nov: 90-day halfway check. 28 Nov: "Advent starts Tuesday" post.
+- Before 30 Nov: next batch of fun posts. 1–24 Dec: Pond Advent emails.
+- 3 Dec: International Day of Persons with Disabilities post.
+- 5 Dec: order-by / Small Business Saturday post. 8 Dec: nudge the quiet
+  charities (never nudge the SENCOs or Parent Carer Forums).
+- Order-by dates live: UK 10 Dec, US 7 Dec.
+
+## Decided, parked or declined (don't re-raise unless Sam does)
+
+- Etsy clothing videos with people wearing them (28 Oct): parked. Options were
+  Placeit video mockups (~$14.95/month) or a friend wearing a sample; no AI people.
+
+- Replit store retired (26 Aug); Etsy is the second channel; Share & Save on.
+- Hoodies off the site; totes and notebooks stay; printed stickers retired
+  (printable sheet only); pins became stickers then retired.
+- Google Ads £400 credit: declined. Merchant Center free listings only.
+  Microsoft/Bing: parked (needs a card). eBay listings: no.
+- Frog Logic insert cards in eBay parcels: ruled out (eBay's off-eBay sales
+  policy). Printify package insert off; thank-you email instead.
+- EU selling: only if EU demand appears and a paid EU representative is worth it.
+- Renaming the brand: discussed in July, not adopted. Frog Logic stays.
+- Package insert (Printify) is switched off; design kept.
+- 28 Oct night, Etsy search pass (Sam: "yes do 1 and 2"): 111 of 144 active listings
+  re-titled to lead with phrases Etsy's own search suggestions show buyers type
+  ("Funny ADHD Mug, Autism Mug — <slogan>", "Funny ADHD Shirt, Autism T Shirt — ...",
+  "ADHD Wall Art, Autism Wall Art Print — ...", "Frog Christmas Shirt / Frog Hoodie /
+  Frog Mug / Frog Blanket Throw — Socially Hibernating ...", "Spoon Theory Planner",
+  "Visual Schedule Autism Printable", "Communication Cards ..."); weak tags swapped
+  (neurodivergent mug -> adhd gift mug, unisex tshirt -> adhd shirt women, etc.).
+  Edited in Etsy only: Printify product titles are unchanged, so a printify-etsy.yml
+  publish run would put the OLD titles back — update titleFor() first. Etsy's internal
+  listings API (GET /api/v3/ajax/shop/67686244/listings?limit=100&offset=N, logged in)
+  returns every listing with title and tags. Recheck Etsy search visits mid-Nov.
+- 28 Oct night, Tes: free "Christmas Visual Timetable - Autism and SEN" (NoDerivatives)
+  and £3 "Christmas Visual Timetable Pack - Autism SEN" (the Big Pack) published, in
+  Tes review. Uploads: files via DataTransfer from raw.githubusercontent on the
+  uploader's file input; the cover image (uploadcare) takes a synthetic drop event.
+  Thank-you cards left off Tes (its buyers are teachers, not parents).
+- Etsy is complete (26 Oct check: every download listed, 142 active). Listing the
+  23 Pond Guides singly on Etsy was offered; Sam: leave Etsy as it is for now.
+- A Tonbridge local-deals app idea (25 Oct) is not Frog Logic and is parked so
+  Sam can focus on Frog Logic.
+
+## Running costs (checked 25 Oct)
+
+Claude Max £90/month · Netlify $9/month · Porkbun domain ~$5.66/year ·
+Etsy and Stripe fees per sale. Free: GitHub, Resend, GoatCounter, Printify,
+Search Console, Merchant Center. Replit and Google Workspace: no longer charging.
+(ElevenLabs and OpenAI are Miranda's, not the shop's.)
+
+## How to work on it (the traps that have cost time or credits)
+
+- Claude can read the repo but commits through the GitHub web editor in Sam's
+  Chrome. Direct pushes from Cowork chats are blocked by an open Anthropic bug
+  (claude-code issue #84581, checked 2 Nov 2026), even with the Claude GitHub
+  App installed; Claude Code at claude.ai/code with the repo picked can push. Every commit message carries `[skip netlify]`; one deliberate
+  "Publish the shop" run at the end carries site changes (15 credits a deploy).
+- Editor: replace content via the CodeMirror view, check the sha256, then commit
+  in a **separate** call; the message box is found by placeholder
+  `/^(Update|Rename|Create)/`; check `[skip netlify]` right before clicking.
+- Binary files can't go through the web editor: build them in a workflow.
+- Facebook groups: Sam's personal profile isn't a member. Switch Chrome's
+  Facebook to the Frog Logic profile, post, then switch back. Typing "Sam"
+  opens a tag list; end the line with a space and click the send arrow
+  (Escape triggers a "Leave page?" box).
+- Chrome `file_upload` refuses files from the cloud workspace and the PC. To
+  attach a picture: show it on a froglogic.co.uk page, screenshot it, use
+  `upload_image`. Etsy can also fetch files from raw.githubusercontent.com.
+- instagram.com is blocked for the Chrome extension; Business Suite edits
+  Facebook, and Instagram profile edits need Sam's app.
+- Etsy delivery profiles: whenever Printify pushes a NEW product to Etsy it can
+  rewrite the existing profiles back to its dollar figures (charged as pounds)
+  and add ~60 countries, EU included, and the new listings get no production
+  partner. After any new Printify product, check every profile is UK-only or
+  US-only at the 15 Oct pound rates, and tick Printify print partner (UK)/(US)
+  on each new listing. Fixed this way on 28 Oct (7 profiles, 14 listings).
+- Logins, passwords, codes and identity checks are Sam's.
+- Scheduled tasks: one-off reminders tied to an old chat (or the old
+  "Claude Desktop (Windows)" device) may never run, and a fresh-session task
+  stopped silently on 1 Nov. Put one-offs in the current chat, and check
+  recurring tasks' last run before relying on them. Moved all one-offs 2 Nov.
+- File Explorer is click-only for Claude: the "Move to" menu reorders its recent
+  folders, so screenshot before every click and use Choose location. Never
+  click a remembered position (3 misplaced moves on 2 Nov, all fixed).
+- Before setting anything new up, check what Sam already uses (the Desk, the
+  printed list, Outlook). Before giving a reason for a failure, find the cause.
+- Fuller notes: Claude's memory files `frog-logic` and `frog-logic-ops`.
+
+---
+
+## History (what was built and when; for reference)
+
+Older notes, kept so nothing is lost. Where a line here disagrees with the
+sections above, the sections above win.
+
+### Where things stood (25–26 Oct 2026)
 
 - **No sales from strangers yet.** Etsy, last 30 days: 12 visits, 0 orders,
   0 favourites, 1 visit from Etsy search. Social reach is tiny. The shop works;
@@ -162,6 +335,7 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   more paid ads.** Full review on the Desk for 4 Nov.
 - 90-day target (to 6 Jan 2027): ten orders from strangers and one £100+ order,
   then decide the bigger route from real numbers. Half-way check 24 Nov.
+
 
 ### Done on 25–26 Oct
 
@@ -181,7 +355,9 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   because they'd lose money at 25%: UK hoodies (all colourways), all fleece
   blankets, UK ornament, US candle.
 
-## Next up (see the Desk for dates)
+
+### Built 26–28 Oct
+
 
 - 28 Oct late: two paid pieces, live on the site with the 1 Nov publish.
   D39 Christmas Visual Timetable Big Pack: £3 site, £4.50 Etsy (listed 28 Oct, Learning &
@@ -369,82 +545,3 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   the edge. Those guides can go back into Pinterest batches.
 - TikTok is off the dated days while Sam recovers: three slide posts are ready
   under "whenever you have the spoons" on the Desk. Don't chase them.
-- eBay insert cards in parcels from Sam's personal eBay account (card in the
-  box only; no links in eBay listings or messages).
-
-## Decided, parked or declined (don't re-raise unless Sam does)
-
-- Etsy clothing videos with people wearing them (28 Oct): parked. Options were
-  Placeit video mockups (~$14.95/month) or a friend wearing a sample; no AI people.
-
-- Replit store retired (26 Aug); Etsy is the second channel; Share & Save on.
-- Hoodies off the site; totes and notebooks stay; printed stickers retired
-  (printable sheet only); pins became stickers then retired.
-- Google Ads £400 credit: declined. Merchant Center free listings only.
-  Microsoft/Bing: parked (needs a card). eBay listings: no.
-- EU selling: only if EU demand appears and a paid EU representative is worth it.
-- Renaming the brand: discussed in July, not adopted. Frog Logic stays.
-- Package insert (Printify) is switched off; design kept.
-- 28 Oct night, Etsy search pass (Sam: "yes do 1 and 2"): 111 of 144 active listings
-  re-titled to lead with phrases Etsy's own search suggestions show buyers type
-  ("Funny ADHD Mug, Autism Mug — <slogan>", "Funny ADHD Shirt, Autism T Shirt — ...",
-  "ADHD Wall Art, Autism Wall Art Print — ...", "Frog Christmas Shirt / Frog Hoodie /
-  Frog Mug / Frog Blanket Throw — Socially Hibernating ...", "Spoon Theory Planner",
-  "Visual Schedule Autism Printable", "Communication Cards ..."); weak tags swapped
-  (neurodivergent mug -> adhd gift mug, unisex tshirt -> adhd shirt women, etc.).
-  Edited in Etsy only: Printify product titles are unchanged, so a printify-etsy.yml
-  publish run would put the OLD titles back — update titleFor() first. Etsy's internal
-  listings API (GET /api/v3/ajax/shop/67686244/listings?limit=100&offset=N, logged in)
-  returns every listing with title and tags. Recheck Etsy search visits mid-Nov.
-- 28 Oct night, Tes: free "Christmas Visual Timetable - Autism and SEN" (NoDerivatives)
-  and £3 "Christmas Visual Timetable Pack - Autism SEN" (the Big Pack) published, in
-  Tes review. Uploads: files via DataTransfer from raw.githubusercontent on the
-  uploader's file input; the cover image (uploadcare) takes a synthetic drop event.
-  Thank-you cards left off Tes (its buyers are teachers, not parents).
-- Etsy is complete (26 Oct check: every download listed, 142 active). Listing the
-  23 Pond Guides singly on Etsy was offered; Sam: leave Etsy as it is for now.
-- A Tonbridge local-deals app idea (25 Oct) is not Frog Logic and is parked so
-  Sam can focus on Frog Logic.
-
-## Running costs (checked 25 Oct)
-
-Claude Max £90/month · Netlify $9/month · Porkbun domain ~$5.66/year ·
-Etsy and Stripe fees per sale. Free: GitHub, Resend, GoatCounter, Printify,
-Search Console, Merchant Center. Replit and Google Workspace: no longer charging.
-(ElevenLabs and OpenAI are Miranda's, not the shop's.)
-
-## How to work on it (the traps that have cost time or credits)
-
-- Claude can read the repo but commits through the GitHub web editor in Sam's
-  Chrome. Every commit message carries `[skip netlify]`; one deliberate
-  "Publish the shop" run at the end carries site changes (15 credits a deploy).
-- Editor: replace content via the CodeMirror view, check the sha256, then commit
-  in a **separate** call; the message box is found by placeholder
-  `/^(Update|Rename|Create)/`; check `[skip netlify]` right before clicking.
-- Binary files can't go through the web editor: build them in a workflow.
-- Facebook groups: Sam's personal profile isn't a member. Switch Chrome's
-  Facebook to the Frog Logic profile, post, then switch back. Typing "Sam"
-  opens a tag list; end the line with a space and click the send arrow
-  (Escape triggers a "Leave page?" box).
-- Chrome `file_upload` refuses files from the cloud workspace and the PC. To
-  attach a picture: show it on a froglogic.co.uk page, screenshot it, use
-  `upload_image`. Etsy can also fetch files from raw.githubusercontent.com.
-- instagram.com is blocked for the Chrome extension; Business Suite edits
-  Facebook, and Instagram profile edits need Sam's app.
-- Etsy delivery profiles: whenever Printify pushes a NEW product to Etsy it can
-  rewrite the existing profiles back to its dollar figures (charged as pounds)
-  and add ~60 countries, EU included, and the new listings get no production
-  partner. After any new Printify product, check every profile is UK-only or
-  US-only at the 15 Oct pound rates, and tick Printify print partner (UK)/(US)
-  on each new listing. Fixed this way on 28 Oct (7 profiles, 14 listings).
-- Logins, passwords, codes and identity checks are Sam's.
-- Scheduled tasks: one-off reminders tied to an old chat (or the old
-  "Claude Desktop (Windows)" device) may never run, and a fresh-session task
-  stopped silently on 1 Nov. Put one-offs in the current chat, and check
-  recurring tasks' last run before relying on them. Moved all one-offs 2 Nov.
-- File Explorer is click-only for Claude: the "Move to" menu reorders its recent
-  folders, so screenshot before every click and use Choose location. Never
-  click a remembered position (3 misplaced moves on 2 Nov, all fixed).
-- Before setting anything new up, check what Sam already uses (the Desk, the
-  printed list, Outlook). Before giving a reason for a failure, find the cause.
-- Fuller notes: Claude's memory files `frog-logic` and `frog-logic-ops`.
