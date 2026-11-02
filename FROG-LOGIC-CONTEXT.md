@@ -5,7 +5,7 @@ first. When a decision changes, edit the line here, and keep the copies in step:
 this file on GitHub is the master; copies sit in `Downloads\frog-logic-shop`,
 `Downloads\Printify-Designer` and `OneDrive\Desktop\Frog Logic` on Sam's PC.
 
-Last updated: 26 October 2026. (The previous version was frozen at 21 Aug and
+Last updated: 2 November 2026 (PC folders tidied, SourceBottle narrowed, task rules). (The previous version was frozen at 21 Aug and
 described the retired Replit store as live. Ignore any copy older than this.)
 
 **The number-one goal is Frog Logic making sales.** Check anything
@@ -32,7 +32,17 @@ customer-facing for "will this get found and bought?" before it goes up.
 - **The Desk:** froglogic.co.uk/desk.html, reads `content/calendar.json` live.
   It is the schedule. Anything dated or repeating goes there, and a repeating
   task shows on every day it applies to.
-- **Brand assets, business plan:** `OneDrive\Desktop\Frog Logic`.
+- **Brand assets, business plan:** `OneDrive\Desktop\Frog Logic` (sorted 2 Nov
+  into: Business and accounts, Claude outputs, Designs and images, Etsy, Old
+  website files, Pinterest, Product PDFs, Tes, Videos and TikTok; the notes
+  files FROG-LOGIC-CONTEXT.md, group-posts.md, sam-posts.md and
+  morning-check-instructions.txt stay at the top). `Downloads` now holds only
+  frog-logic-shop, Printify-Designer and "TikTok this week". Personal paperwork
+  is in `Documents\Personal admin`; photos in `Pictures\Photos 2024/2025/2026`.
+  `Desktop\Delete` holds ~8 GB Sam reviews before emptying.
+- **SourceBottle (media call-outs):** alerts narrowed 2 Nov to UK & Ireland only;
+  topics Health & Wellbeing, Parenting & Education, Lifestyle Food & Fashion,
+  Business & Finance (General, Professional Services and US switched off).
 - **Retired:** the Replit store and `Downloads\Printify-Designer`. The Replit
   account is deleted and the app has been dark since 5 Sept. Nothing new goes to
   Replit or its agent.
@@ -385,4 +395,13 @@ Search Console, Merchant Center. Replit and Google Workspace: no longer charging
   US-only at the 15 Oct pound rates, and tick Printify print partner (UK)/(US)
   on each new listing. Fixed this way on 28 Oct (7 profiles, 14 listings).
 - Logins, passwords, codes and identity checks are Sam's.
+- Scheduled tasks: one-off reminders tied to an old chat (or the old
+  "Claude Desktop (Windows)" device) may never run, and a fresh-session task
+  stopped silently on 1 Nov. Put one-offs in the current chat, and check
+  recurring tasks' last run before relying on them. Moved all one-offs 2 Nov.
+- File Explorer is click-only for Claude: the "Move to" menu reorders its recent
+  folders, so screenshot before every click and use Choose location. Never
+  click a remembered position (3 misplaced moves on 2 Nov, all fixed).
+- Before setting anything new up, check what Sam already uses (the Desk, the
+  printed list, Outlook). Before giving a reason for a failure, find the cause.
 - Fuller notes: Claude's memory files `frog-logic` and `frog-logic-ops`.
