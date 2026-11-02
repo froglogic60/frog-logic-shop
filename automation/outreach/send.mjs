@@ -38,6 +38,7 @@ const toSend = entries.filter((e) => !byHand.includes(e) && !done.has(e.to.toLow
 console.log(`${entries.length} entries, ${toSend.length} to send, ${byHand.length} contact-form only, ${done.size} already sent`);
 
 for (const e of toSend) {
+  await new Promise((r) => setTimeout(r, 600)); // Resend allows 10 a second; 23 bounced with 429 on 2 Nov
   if (process.env.DRY_RUN === "1") { console.log("would send:", e.to, "|", e.subject); continue; }
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
