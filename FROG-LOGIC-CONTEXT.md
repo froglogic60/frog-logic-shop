@@ -126,11 +126,16 @@ orders, money in, and which were Sam's own tests or free samples. Only say
    orders and anything made by hand) and printify.com/app/store/29335686/orders
    (Etsy). A "Manual" order with no payment behind it is usually a free sample:
    check the list below before calling it a sale.
-4. **Tes:** the £8 Pond Guides set and the £3 Big Pack. Shop page
-   tes.com/member/FrogLogic. On 2 Nov the author dashboard
-   (tes.com/teaching-resources/dashboard/overview) showed only the generic
-   "become an author" page in Claude's tab, so ask Sam where Tes shows her sales
-   before relying on it.
+4. **Tes:** the £8 Pond Guides set and the £3 Big Pack. Log in at tes.com
+   with hello@froglogic.co.uk (Sam's password), then
+   tes.com/teaching-resources/dashboard/sales. Logged out, every dashboard page
+   shows a generic "become an author" page instead. Sales build a balance there;
+   Sam withdraws it with "Withdraw now" once it's over £10 (bank details asked on
+   the first withdrawal, once a week). 2 Nov 2026: 0 sales.
+   Tes rules: no links to other sites in listing descriptions (since March 2024);
+   links inside files only if they don't promote selling. The Tes guide files are
+   their own versions (page 1 footer "Frog Logic — made with care", no web
+   address); keep shop links out of anything uploaded to Tes.
 
 ## Free samples and press (not sales)
 
