@@ -211,11 +211,13 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
 - Tes profile and shop page filled in 2 Nov (shop description, featured
   resources switched on, PSHE added as a subject, web address taken out of the
   About me). Still empty: the three featured-resource slots and the cover photo.
-- **To do: product videos on socials.** "Make a product video" workflow
-  (product-video.py) makes 12 s silent zoom MP4s from one mockup into
-  automation/social/videos/. First pair: the UK Bright Socially Hibernating mug
-  (square one is on Etsy listing 4599550881; vertical one is for Reels/TikTok).
-  The FB/IG robot posts pictures only, not video.
+- **Product videos.** "Make a product video" workflow (product-video.py) makes
+  12 s silent zoom MP4s from one mockup into automation/social/videos/. First
+  pair: the UK Bright Socially Hibernating mug (square one on Etsy listing
+  4599550881; vertical one scheduled as a FB + IG Reel for 3 Nov 17:30 in
+  Business Suite, caption links the Etsy listing). The FB/IG robot posts
+  pictures only, so Reels go through Business Suite (method under "How to work
+  on it"). Next: make videos for more mockups.
 
 ## Coming up (dates also on the Desk)
 
@@ -306,6 +308,11 @@ Search Console, Merchant Center. Replit and Google Workspace: no longer charging
   partner. After any new Printify product, check every profile is UK-only or
   US-only at the 15 Oct pound rates, and tick Printify print partner (UK)/(US)
   on each new listing. Fixed this way on 28 Oct (7 profiles, 14 listings).
+- Business Suite Reels: its page can't fetch from GitHub, so open a github.com
+  tab from it with a real click on a helper button, fetch the MP4 from
+  raw.githubusercontent.com there and postMessage the File back to
+  window.opener; in Business Suite, hook HTMLInputElement.prototype.click so
+  "Add video" gets the File via DataTransfer instead of a file box (2 Nov).
 - Logins, passwords, codes and identity checks are Sam's.
 - Scheduled tasks: one-off reminders tied to an old chat (or the old
   "Claude Desktop (Windows)" device) may never run, and a fresh-session task
