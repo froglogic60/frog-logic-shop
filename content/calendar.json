@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -980,6 +980,10 @@
         },
         {
           "what": "Pinterest 2–7 Nov, one a day at 18:30 UTC: timetable, card maker, Pond Advent, then a second pin of each",
+          "who": "robot"
+        },
+        {
+          "what": "Outreach emails SENT (20): Capel Primary School, Tonbridge (school SENCO), St Margaret Clitherow Catholic Primary, Tonbridge (school SENCO), East Peckham Primary, East Peckham (school SENCO), Ditton CE Junior School, Ditton (school SENCO), The Aylesford School, Aylesford (school SENCO), The Rosewood School, Leybourne (school SENCO), Broadwater Down Primary, Tunbridge Wells (school SENCO), St Augustine's Catholic Primary, Tunbridge Wells (school SENCO), Skinners' Kent Primary School, Tunbridge Wells (school SENCO), Trinity School, Sevenoaks (school SENCO), Lewisham Parent and Carers Forum, Lewisham (parent carer forum), Barnet Parent Carer Forum, Barnet (parent carer forum), Ealing Parent Carer Forum, Ealing (parent carer forum), Hounslow Parent Carers Forum, Hounslow (parent carer forum), Harrow Parent Forum, Harrow (parent carer forum), SEND Parent Carers in Wandsworth, Wandsworth (parent carer forum), Waltham Forest Parent Forum, Waltham Forest (parent carer forum), Tower Hamlets SEND Forum, Tower Hamlets (parent carer forum), SEND Power in Haringey, Haringey (parent carer forum), Havering SEND Family Voice, Havering (parent carer forum). Replies go to hello@froglogic.co.uk. Nudge the quiet ones 8 Dec",
           "who": "robot"
         }
       ]
