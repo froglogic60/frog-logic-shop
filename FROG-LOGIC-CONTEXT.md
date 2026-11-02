@@ -5,7 +5,7 @@ first. When a decision changes, edit the line here, and keep the copies in step:
 this file on GitHub is the master; copies sit in `Downloads\frog-logic-shop`,
 `Downloads\Printify-Designer` and `OneDrive\Desktop\Frog Logic` on Sam's PC.
 
-Last updated: 2 November 2026 (PC folders tidied, SourceBottle narrowed, task rules). (The previous version was frozen at 21 Aug and
+Last updated: 2 November 2026 (PC folders tidied, SourceBottle narrowed, task rules; how to check sales; free samples and press log). (The previous version was frozen at 21 Aug and
 described the retired Replit store as live. Ignore any copy older than this.)
 
 **The number-one goal is Frog Logic making sales.** Check anything
@@ -108,6 +108,41 @@ customer-facing for "will this get found and bought?" before it goes up.
 - Printify cost check Mondays 06:40 (emails hello@ only if something changed);
   engagement report Mondays 07:20.
 - Pinterest: scheduled pins from bulk CSV uploads (max 100 scheduled at once).
+
+## How to check sales (all four, every time)
+
+"Check sales" means every channel below, not Stripe alone. Report each one:
+orders, money in, and which were Sam's own tests or free samples. Only say
+"no sales" once all four have been checked.
+
+1. **Stripe** (the site, Bespoke Planner links, gift cards):
+   dashboard.stripe.com/acct_1TmFXEGgi5tektD4/payments with a date filter,
+   e.g. `?created[gte]=<unix time of the 1st>`. Without a date filter Stripe
+   asks for Sam's password (PSD2, data older than 90 days). Sam's own test
+   payments show her own email as the customer.
+2. **Etsy:** etsy.com/your/orders/sold, BOTH the open list and "Completed".
+   Etsy money never goes through Stripe.
+3. **Printify, both stores:** printify.com/app/store/28035653/orders (site
+   orders and anything made by hand) and printify.com/app/store/29335686/orders
+   (Etsy). A "Manual" order with no payment behind it is usually a free sample:
+   check the list below before calling it a sale.
+4. **Tes:** the £8 Pond Guides set and the £3 Big Pack. Shop page
+   tes.com/member/FrogLogic. On 2 Nov the author dashboard
+   (tes.com/teaching-resources/dashboard/overview) showed only the generic
+   "become an author" page in Claude's tab, so ask Sam where Tes shows her sales
+   before relying on it.
+
+## Free samples and press (not sales)
+
+Anything sent free goes here the same day, with its follow-up date on the
+Desk. Kept short on purpose: this repo is public, so no contact details.
+
+- **30 Oct 2026 · Martina Mercer-Phillips, Sunday Woman Magazine.** She
+  tests everything before it goes in her "Awesome Gifts for Neurodivergent
+  People" guide and chose the Socially Hibernating Christmas Frog Mug (11oz,
+  UK maker). Printify manual order #28035653.8, USD 11.07 from the Printify
+  balance; ships 4–6 Nov, due 10–12 Nov. Follow up 13 Nov (Desk): did it
+  arrive, will it be in the guide? Thread is in Sam's Outlook (search Martina).
 
 ## Where things stand (25–26 Oct 2026)
 
