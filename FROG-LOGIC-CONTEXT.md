@@ -318,6 +318,11 @@ Search Console, Merchant Center. Replit and Google Workspace: no longer charging
   window.opener; in Business Suite, hook HTMLInputElement.prototype.click so
   "Add video" gets the File via DataTransfer instead of a file box (2 Nov).
 - Logins, passwords, codes and identity checks are Sam's.
+- Product videos (2 Nov): "Make a product video" workflow turns a mockup photo
+  into 12 s zoom videos (square for Etsy, vertical for Reels) in
+  automation/social/videos/. announce.js posts an entry with a "video" field as an
+  Instagram Reel + Facebook video (via jsDelivr). First one: the Bright
+  Socially Hibernating mug, on its UK Etsy listing and posted 2 Nov. No AI people.
 - Scheduled tasks: one-off reminders tied to an old chat (or the old
   "Claude Desktop (Windows)" device) may never run, and a fresh-session task
   stopped silently on 1 Nov. Put one-offs in the current chat, and check
