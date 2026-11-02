@@ -1,11 +1,12 @@
 name: Scheduled announcement queue
-# Checks automation/social/announce-queue.json once a day at 10:00 UTC (11am BST),
+# Checks automation/social/announce-queue.json once a day at 10:13 UTC (moved off
+# the hour 2 Nov 2026: GitHub runs on-the-hour jobs hours late),
 # sitting between the 08/12/17 UTC daily posts. If an entry's date has arrived and
 # it hasn't gone out yet, it is rendered, committed and posted, then marked done.
 # Nothing due = the job exits in seconds without installing anything.
 on:
   schedule:
-    - cron: "0 10 * * *"
+    - cron: "13 10 * * *"
   workflow_dispatch:
 permissions:
   contents: write
