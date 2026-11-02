@@ -18,8 +18,10 @@ const path = require("path");
 const { ensureFonts, fontFaceCSS } = require("./gfonts.js");
 
 const ROOT = path.join(__dirname, "..", "..");
-const DIGITAL = path.join(ROOT, "digital");
-const PREV = path.join(__dirname, "xmas-printables");
+// TES=1 builds the Tes copies (no web address: Tes bars links that promote selling), into OUT_DIR.
+const TES = process.env.TES === "1";
+const DIGITAL = process.env.OUT_DIR ? path.resolve(process.env.OUT_DIR) : path.join(ROOT, "digital");
+const PREV = process.env.OUT_DIR ? path.join(path.resolve(process.env.OUT_DIR), "prev") : path.join(__dirname, "xmas-printables");
 const DMSANS = "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf";
 const C = { cream: "#F4EFE3", ink: "#22331F", brown: "#6B4A32", sage: "#8FB784", red: "#B5443A", gold: "#E8B63C", pink: "#F08F87", blue: "#6E9BC8", sand: "#E2C99F", grey: "#9AA7B0" };
 const S = `stroke="${C.ink}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"`;
@@ -92,13 +94,13 @@ function timetableHTML(frog) {
 <section class="page">
   <div class="head"><div><div class="kick">FREE · PRINT · CUT · STICK</div><h1>My Christmas Day</h1><p class="sub">Put a picture card in each box, in order. Tick each one when it's done.</p></div><img class="frog" src="${frog}"></div>
   <div class="rows">${[0, 1, 2, 3, 4, 5, 6, 7].map(row).join("")}</div>
-  <div class="foot">Free to share — print it, forward it, hand it to anyone who needs it. More free guides at froglogic.co.uk</div>
+  <div class="foot">Free to share — print it, forward it, hand it to anyone who needs it. More free guides ${TES ? "in the FrogLogic shop on Tes" : "at froglogic.co.uk"}</div>
 </section>
 <section class="page">
   <div class="kick">CUT ALONG THE DASHED LINES</div><h2>Picture cards</h2>
   <div class="grid">${cards}</div>
   <p class="sub small">The blank card is for anything special to your day. Draw it or write it.</p>
-  <div class="foot">Free to share. More free guides at froglogic.co.uk</div>
+  <div class="foot">Free to share. More free guides ${TES ? "in the FrogLogic shop on Tes" : "at froglogic.co.uk"}</div>
 </section>
 <section class="page">
   <div class="kick">FOR WHEN IT GETS A BIT MUCH</div><h2>First, then</h2>
@@ -110,7 +112,7 @@ function timetableHTML(frog) {
     <li>Keep a quiet room free, and let the break card work without questions.</li>
     <li>Safe foods are fine on Christmas Day. So are ear defenders and screens.</li>
     <li>Expect a quieter day or two afterwards.</li></ul>
-    <p class="more">Explaining your child to relatives? There are free plain-English guides to autism, ADHD, PDA and more at <b>froglogic.co.uk</b></p></div>
+    <p class="more">Explaining your child to relatives? There are free plain-English guides to autism, ADHD, PDA and more ${TES ? "in the <b>FrogLogic shop on Tes</b>" : "at <b>froglogic.co.uk</b>"}</p></div>
   <div class="foot">A friendly printable from Frog Logic, made by a neurodivergent person in the UK. Not medical advice.</div>
 </section>`;
 }
@@ -126,14 +128,14 @@ function bigPackHTML(frog) {
 <section class="page">
   <div class="kick">CUT ALONG THE DASHED LINES · ${n} OF 3</div><h2>Picture cards</h2>
   <div class="grid">${keys.map((k) => `<div class="pc">${k ? icon(k, 92) : ""}<div class="lab">${k ? esc(k) : "&nbsp;"}</div></div>`).join("")}</div>
-  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic${TES ? "" : " · froglogic.co.uk"}</div>
 </section>`;
   const days = ["Christmas Eve", "Christmas Day", "Boxing Day", "", "", "", ""];
   return `
 <section class="page">
   <div class="head"><div><div class="kick">BIG PACK · PRINT · CUT · STICK</div><h1>My Christmas Day</h1><p class="sub">Put a picture card in each box, in order. Tick each one when it's done.</p></div><img class="frog" src="${frog}"></div>
   <div class="rows">${[0, 1, 2, 3, 4, 5, 6, 7].map(row).join("")}</div>
-  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic${TES ? "" : " · froglogic.co.uk"}</div>
 </section>
 <section class="page">
   <div class="kick">ONE THING AT A TIME</div><h2>Now and next</h2>
@@ -141,14 +143,14 @@ function bigPackHTML(frog) {
   <p class="sub small">Some days the whole timetable is too much to look at. Use just two cards: what's happening now, and what's next.</p>
   <div class="kick" style="margin-top:10mm">TODAY IS</div>
   <div class="today">${["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((d) => `<span>${d}</span>`).join("")}</div>
-  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic${TES ? "" : " · froglogic.co.uk"}</div>
 </section>
 <section class="page">
   <div class="kick">THE WHOLE HOLIDAY</div><h2>My holiday week</h2>
   <div class="week"><div></div>${days.map((d) => `<div class="wd${d ? "" : " wdb"}">${d ? esc(d) : ""}</div>`).join("")}
   ${["Morning", "Afternoon", "Evening"].map((t) => `<div class="wt">${t}</div>${days.map(() => `<div class="ws"></div>`).join("")}`).join("")}</div>
   <p class="sub small">One card per box, or leave a box empty for a quiet one. A quiet day after a busy one helps.</p>
-  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic${TES ? "" : " · froglogic.co.uk"}</div>
 </section>
 ${[0, 1, 2].map((i) => cardPage(all.slice(i * 20, i * 20 + 20), i + 1)).join("")}
 <section class="page">
@@ -156,7 +158,7 @@ ${[0, 1, 2].map((i) => cardPage(all.slice(i * 20, i * 20 + 20), i + 1)).join("")
   <div class="ft"><div><div class="ftl">First</div><div class="ftb"></div></div><div class="arrow">→</div><div><div class="ftl">Then</div><div class="ftb"></div></div></div>
   <div class="break">${icon("Quiet time", 110)}<div><div class="bt">I need a break</div><div class="bs">Show this card. Somewhere quiet, no questions, back when I'm ready.</div></div></div>
   <div class="break" style="background:#FBEFE0">${icon("Help", 110)}<div><div class="bt">I need help</div><div class="bs">Show this card. Come closer, keep it calm, ask me yes or no.</div></div></div>
-  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic · froglogic.co.uk</div>
+  <div class="foot">Christmas Visual Timetable Big Pack · Frog Logic${TES ? "" : " · froglogic.co.uk"}</div>
 </section>
 <section class="page">
   <div class="kick">FOR THE GROWN-UPS</div><h2>How to use the pack</h2>
@@ -169,7 +171,7 @@ ${[0, 1, 2].map((i) => cardPage(all.slice(i * 20, i * 20 + 20), i + 1)).join("")
     <li>Laminate the cards, or print them on card, and stick Velcro dots or Blu Tack on the back. They'll last for years.</li>
     <li>The blank cards are for the things only your family does. Draw them or write them.</li>
   </ul>
-  <p class="more">Explaining your child to relatives? There are free plain-English guides to autism, ADHD, PDA and more at <b>froglogic.co.uk</b></p></div>
+  <p class="more">Explaining your child to relatives? There are free plain-English guides to autism, ADHD, PDA and more ${TES ? "in the <b>FrogLogic shop on Tes</b>" : "at <b>froglogic.co.uk</b>"}</p></div>
   <div class="foot">Thank you for buying from a small neurodivergent-run shop. For your own family's or classroom's use; please don't resell or share the file. Not medical advice.</div>
 </section>`;
 }
