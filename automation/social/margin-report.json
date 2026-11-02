@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-26T13:34:32.415Z",
+  "checkedAt": "2026-11-02T16:32:57.531Z",
   "markupRule": 0.6,
   "rows": [
     {
@@ -399,18 +399,6 @@
       "sizes": 0
     },
     {
-      "id": "h9-do-not-perceive-me",
-      "name": "Do Not Perceive Me",
-      "blueprint": 763,
-      "maker": "Print Clever",
-      "price": 1200,
-      "cost": 696,
-      "keeps": 504,
-      "markup": 0.7241379310344828,
-      "postageFirst": 431,
-      "sizes": 0
-    },
-    {
       "id": "01-overstimulated",
       "name": "Overstimulated",
       "blueprint": 6,
@@ -579,54 +567,6 @@
       "sizes": 5
     },
     {
-      "id": "h1-do-not-perceive-me",
-      "name": "Do Not Perceive Me",
-      "blueprint": 6,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 936,
-      "keeps": 964,
-      "markup": 1.0299145299145298,
-      "postageFirst": 277,
-      "sizes": 5
-    },
-    {
-      "id": "h2-chaos-gremlin-halloween",
-      "name": "Chaos Gremlin Halloween",
-      "blueprint": 6,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 936,
-      "keeps": 964,
-      "markup": 1.0299145299145298,
-      "postageFirst": 277,
-      "sizes": 5
-    },
-    {
-      "id": "h3-social-battery-undead",
-      "name": "Social Battery: Undead",
-      "blueprint": 6,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 936,
-      "keeps": 964,
-      "markup": 1.0299145299145298,
-      "postageFirst": 277,
-      "sizes": 5
-    },
-    {
-      "id": "h4-sensory-witch",
-      "name": "Sensory Witch",
-      "blueprint": 6,
-      "maker": "Shirt Monkey",
-      "price": 1900,
-      "cost": 936,
-      "keeps": 964,
-      "markup": 1.0299145299145298,
-      "postageFirst": 277,
-      "sizes": 5
-    },
-    {
       "id": "04-47-things-at-once",
       "name": "47 Things at Once",
       "blueprint": 535,
@@ -737,54 +677,6 @@
     {
       "id": "f5-chaos-gremlin",
       "name": "Chaos Gremlin",
-      "blueprint": 535,
-      "maker": "T Shirt and Sons",
-      "price": 1350,
-      "cost": 534,
-      "keeps": 816,
-      "markup": 1.5280898876404494,
-      "postageFirst": 300,
-      "sizes": 0
-    },
-    {
-      "id": "h5-do-not-perceive-me",
-      "name": "Do Not Perceive Me",
-      "blueprint": 535,
-      "maker": "T Shirt and Sons",
-      "price": 1350,
-      "cost": 534,
-      "keeps": 816,
-      "markup": 1.5280898876404494,
-      "postageFirst": 300,
-      "sizes": 0
-    },
-    {
-      "id": "h6-chaos-gremlin-halloween",
-      "name": "Chaos Gremlin Halloween",
-      "blueprint": 535,
-      "maker": "T Shirt and Sons",
-      "price": 1350,
-      "cost": 534,
-      "keeps": 816,
-      "markup": 1.5280898876404494,
-      "postageFirst": 300,
-      "sizes": 0
-    },
-    {
-      "id": "h7-social-battery-undead",
-      "name": "Social Battery: Undead",
-      "blueprint": 535,
-      "maker": "T Shirt and Sons",
-      "price": 1350,
-      "cost": 534,
-      "keeps": 816,
-      "markup": 1.5280898876404494,
-      "postageFirst": 300,
-      "sizes": 0
-    },
-    {
-      "id": "h8-sensory-witch",
-      "name": "Sensory Witch",
       "blueprint": 535,
       "maker": "T Shirt and Sons",
       "price": 1350,
