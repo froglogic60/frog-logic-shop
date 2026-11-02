@@ -1,7 +1,7 @@
 name: Send monthly newsletter
 on:
   schedule:
-    - cron: "0 9 1 * *"
+    - cron: "11 9 1 * *"   # 09:11 UTC, off the hour (2 Nov 2026)
   workflow_dispatch:
 permissions:
   contents: write
