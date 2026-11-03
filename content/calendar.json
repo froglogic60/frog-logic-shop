@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -1010,6 +1010,10 @@
         {
           "what": "Books: fill in the yellow cells in Business and accounts > Frog Logic books 2026-27.xlsx. Mostly the £ amounts from your bank statement for the dollar payments (Netlify, Printify, Porkbun, Claude credits), plus the Claude September payment, any Replit / Google Workspace charges and the Etsy set-up fee. Also check the £83.72 Stripe payout is on its way (minimum-balance hold switched off 2 Nov)",
           "who": "you"
+        },
+        {
+          "what": "Taster sign-ups: 0 people (0 pages), 0 this week, last none yet",
+          "who": "robot"
         }
       ]
     },
