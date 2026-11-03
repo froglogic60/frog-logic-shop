@@ -8,6 +8,15 @@ on:
     # rather than just the product pictures"). 186 posts in 28 days averaged
     # 0.16 interactions and a reach of 2-3; the fun posts (fun-posts.yml, 7pm)
     # now carry the page and this keeps one product post at lunchtime.
+    #
+    # 3 Nov 2026: GitHub was still starting this 5-9 hours late (the 1pm post
+    # went out at 9:47pm on 2 Nov). Now several schedules fire EARLY and
+    # wait-slot.cjs holds the run until 1pm UK time; whichever starts first
+    # posts, the rest see it is done and stop. Too late (after 9:30pm UK) =
+    # no post that day rather than one nobody sees.
+    - cron: "47 7 * * *"
+    - cron: "17 9 * * *"
+    - cron: "47 10 * * *"
     - cron: "17 12 * * *"
   workflow_dispatch:
     inputs:
@@ -16,6 +25,11 @@ on:
         default: ""
 permissions:
   contents: write
+# One run at a time: a later early run queues behind the one that is waiting,
+# then finds the post already made and stops.
+concurrency:
+  group: daily-social
+  cancel-in-progress: false
 jobs:
   post:
     runs-on: ubuntu-latest
@@ -36,23 +50,41 @@ jobs:
           else
             case "${{ github.event.schedule }}" in
               "17 8 * * *")  SLOT=0 ;;
-              "17 12 * * *") SLOT=1 ;;
+              "47 7 * * *"|"17 9 * * *"|"47 10 * * *"|"17 12 * * *") SLOT=1 ;;
               "17 17 * * *") SLOT=2 ;;
               *) echo "Unknown schedule '${{ github.event.schedule }}'"; exit 1 ;;
             esac
           fi
           echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
           echo "This run is slot $SLOT"
+      - name: Wait until 1pm UK time
+        id: wait
+        run: node automation/social/wait-slot.cjs 13:00 21:30
+      - name: Already posted today?
+        id: done
+        if: steps.wait.outputs.go == 'yes'
+        run: |
+          git pull --ff-only origin main
+          F="automation/social/queue/$(date -u +%F)-${{ steps.slot.outputs.slot }}.json"
+          if [ -f "$F" ] && grep -q '"postedAt"' "$F"; then
+            echo "Already posted today ($F)."; echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
       - name: Install renderer
+        if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
         run: npm install --no-audit --no-fund
       - name: Install Chromium for rendering
+        if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
         run: npx playwright install --with-deps chromium
       - name: Generate today's post
+        if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
         run: SLOT=${{ steps.slot.outputs.slot }} node daily.js generate
       - name: Commit the image so Instagram can fetch it
+        if: steps.done.outputs.go == 'yes'
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -61,6 +93,7 @@ jobs:
           git pull --rebase origin main
           git push
       - name: Publish to Facebook and Instagram
+        if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
         run: SLOT=${{ steps.slot.outputs.slot }} node daily.js post
         env:
@@ -68,7 +101,7 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
       - name: Record that it went out (so a re-run can never post it twice)
-        if: always()
+        if: always() && steps.done.outputs.go == 'yes'
         run: |
           git add automation/social/queue
           git commit -m "Social posted $(date -u +%F) slot ${{ steps.slot.outputs.slot }} [skip netlify]" || echo "nothing to commit"
