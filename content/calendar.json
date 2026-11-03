@@ -1070,6 +1070,15 @@
       ]
     },
     {
+      "date": "2026-11-09",
+      "items": [
+        {
+          "what": "New bank card: when it arrives, put it into Netlify (app.netlify.com > froglogic60 > Usage & billing, next $9 payment about 26 Nov, the website needs it) and Etsy (Your account > Payments, fees are taken on the 1st). Then tell Claude, who will check both",
+          "who": "you"
+        }
+      ]
+    },
+    {
       "date": "2026-11-10",
       "items": [
         {
@@ -1116,6 +1125,10 @@
     {
       "date": "2026-11-20",
       "items": [
+        {
+          "what": "Reminder: has the new bank card gone into Netlify yet? Netlify takes $9 about 26 Nov and the website depends on it. Etsy fees come off on 1 Dec. Claude can check both if you say so",
+          "who": "you"
+        },
         {
           "what": "Facebook + Instagram: the Christmas timetable Big Pack (froglogic.co.uk/big-pack)",
           "who": "robot"
