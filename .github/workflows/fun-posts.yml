@@ -6,10 +6,21 @@ name: Fun page posts
 # in automation/social/fun/ (built by fun-cards.yml). 19:07 UTC = 7pm UK.
 on:
   schedule:
+    # 3 Nov 2026: GitHub started the 19:07 run at 01:29, so the post went out
+    # in the middle of the night. Now several schedules fire EARLY and
+    # wait-slot.cjs holds the run until 7pm UK time; the first to start posts,
+    # the others find nothing left due. After 10:30pm UK nothing is posted.
+    - cron: "37 13 * * *"
+    - cron: "7 15 * * *"
+    - cron: "37 16 * * *"
+    - cron: "7 18 * * *"
     - cron: "7 19 * * *"
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: fun-posts
+  cancel-in-progress: false
 jobs:
   announce:
     runs-on: ubuntu-latest
@@ -18,18 +29,36 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Wait until 19:00 UK time
+        id: wait
+        run: node automation/social/wait-slot.cjs 19:00 22:30
       - name: Is anything due today?
         id: check
+        if: steps.wait.outputs.go == 'yes'
         run: |
+          git pull --ff-only origin main
           node -e '
             const fs = require("fs");
             const f = "automation/social/fun-queue.json";
             const q = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : [];
             const now = new Date().toISOString().slice(0, 10);
+            // A fun post from a day that was missed is skipped, not posted a
+            // day late (3 Nov 2026), so "Gold Star Friday" never lands on Saturday.
+            let stale = 0;
+            for (const x of q) if (!x.posted && x.postOn < now) { x.posted = true; x.skipped = true; stale++; }
+            if (stale) { fs.writeFileSync(f, JSON.stringify(q, null, 2) + "\n"); console.log(`Skipped ${stale} missed post(s).`); }
             const e = q.find((x) => !x.posted && x.postOn <= now);
             console.log(e ? `Due: ${e.title}` : `Nothing due on ${now}.`);
             fs.appendFileSync(process.env.GITHUB_OUTPUT, `due=${e ? "yes" : "no"}\n`);
           '
+      - name: Save any skipped entries
+        if: steps.wait.outputs.go == 'yes'
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/fun-queue.json
+          git commit -m "Fun queue: missed day skipped [skip netlify]" || echo "nothing skipped"
+          git push || true
       - name: Install renderer
         if: steps.check.outputs.due == 'yes'
         working-directory: automation/social
