@@ -1,7 +1,8 @@
-name: Make the Christmas schedule listing photo
-# Builds automation/social/listing-photos/christmas-visual-schedule.jpg from the
-# Big Pack PDF (listing-mockup.py, 3 Nov 2026) and commits it, so Etsy and Tes
-# can be given the picture straight from GitHub.
+name: Make the listing photos
+# Builds the main listing photos in automation/social/listing-photos/ from the
+# real PDFs (3 Nov 2026): the Christmas schedule (listing-mockup.py) and the
+# thank-you and Christmas card sets (listing-cards.py), and commits them, so
+# Etsy and Tes can be given the pictures straight from GitHub.
 on:
   workflow_dispatch:
 permissions:
@@ -17,13 +18,15 @@ jobs:
           pip install pillow playwright
           python -m playwright install --with-deps chromium
           npm pack @fontsource/fraunces@5.1.0 && tar -xzf fontsource-fraunces-*.tgz
-      - name: Build the picture
-        run: FONT=package/files/fraunces-latin-600-normal.woff2 python automation/social/listing-mockup.py
+      - name: Build the pictures
+        run: |
+          FONT=package/files/fraunces-latin-600-normal.woff2 python automation/social/listing-mockup.py
+          FONT=package/files/fraunces-latin-600-normal.woff2 python automation/social/listing-cards.py
       - name: Commit it
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation/social/listing-photos
-          git commit -m "Christmas schedule listing photo [skip netlify]" || echo "nothing to commit"
+          git commit -m "Listing photos [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push
