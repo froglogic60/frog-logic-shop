@@ -135,14 +135,20 @@ stand → coming up → parked → costs → how to work on it → history.
   automation/social/fun-queue.json): Mon Pond News, Tue permission slip, Wed the
   pond regulars, Thu frog fact, Fri Gold Star Friday, Sat Spot the frog, Sun
   Show us your frogs. Queued to 29 Nov; **next batch needed before 30 Nov.**
-- Dated posts from `automation/social/announce-queue.json`, daily 10:13 UTC
+- Dated posts from `automation/social/announce-queue.json`, daily at 11am UK
   (one entry a day, so merge same-day posts).
 - Monthly newsletter on the 1st, 09:11 UTC (writes itself unless marked
   handwritten).
-- GitHub runs scheduled jobs hours late (planner robot every 5-7 h, posts ~5 h
-  late; checked 2 Nov). Jobs sit off the hour to help. If a dated post is
-  still unposted late in the day, run "Scheduled announcement queue" by hand
-  (it skips anything already posted).
+- GitHub runs scheduled jobs hours late (planner robot every 5-7 h, posts 5-9 h
+  late: on 2 Nov the 1pm post went out at 9:47pm and the 7pm fun post at
+  1:29am). FIX (3 Nov): the three posting workflows (daily-social, fun-posts,
+  announce-queue) each have 4-5 schedules that fire EARLY, and
+  automation/social/wait-slot.cjs holds the run until the UK post time (1pm,
+  7pm, 11am). The first run to start posts; the rest find it done (concurrency
+  group + posted check). A run starting after 9:30pm UK (10:30pm for fun posts)
+  posts nothing that day; a missed fun post is skipped, not posted a day late.
+  A run started by hand always posts at once. If a dated post is still
+  unposted late in the day, run "Scheduled announcement queue" by hand.
 - Planner order robot every 2 hours; taster sign-up count daily 06:50.
 - Printify cost check Mondays 06:40 (emails hello@ only if something changed);
   engagement report Mondays 07:20.
