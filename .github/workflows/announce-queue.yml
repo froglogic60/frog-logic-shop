@@ -6,10 +6,19 @@ name: Scheduled announcement queue
 # Nothing due = the job exits in seconds without installing anything.
 on:
   schedule:
+    # 3 Nov 2026: several early schedules, and wait-slot.cjs holds the run
+    # until 11am UK time (GitHub starts jobs hours late). The first run to
+    # start posts; the others find nothing left due.
+    - cron: "53 5 * * *"
+    - cron: "23 7 * * *"
+    - cron: "53 8 * * *"
     - cron: "13 10 * * *"
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: announce-queue
+  cancel-in-progress: false
 jobs:
   announce:
     runs-on: ubuntu-latest
@@ -18,9 +27,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Wait until 11:00 UK time
+        id: wait
+        run: node automation/social/wait-slot.cjs 11:00 21:30
       - name: Is anything due today?
         id: check
+        if: steps.wait.outputs.go == 'yes'
         run: |
+          git pull --ff-only origin main
           node -e '
             const fs = require("fs");
             const f = "automation/social/announce-queue.json";
