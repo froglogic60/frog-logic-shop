@@ -496,6 +496,14 @@ sections above, the sections above win.
   price matches the checkout, basket UK/US postage and the live Stripe page are
   right. Fixed: UK Christmas ornament said £10 but Etsy charges £13.75. Etsy
   shows US-made listings 20% dearer to UK viewers (import VAT) - not an error.
+- Crip Life (latest 3 Nov): Joanna Baker-Rogers said £10 buys an article on
+  their website only (about 4K views a month). Sam replied 3 Nov 11:45: no budget
+  left for paid promotion, offered a free swap instead (a free printable of the
+  readers' choice, the CRIPLIFE code, and sharing any Crip Life article in the
+  newsletter and on socials). Waiting for Joanna's answer.
+- Bounced outreach (Resend, checked 4 Nov): PACA Milton Keynes, Bracknell Parent
+  Carer Forum, SEND Power in Haringey (2 Nov), Kent Messenger and Enna (26 Oct).
+  Everything else delivered.
 - More outreach 26 Oct: ADHD UK and Genius Within (website forms), ADHD Aware
   and Crip Life (emailed by the robot; Crip Life = feature for cross-promotion),
   Neurodivergent Insights gift guide (site form, sent). A daily
