@@ -142,7 +142,8 @@ stand → coming up → parked → costs → how to work on it → history.
 - GitHub runs scheduled jobs hours late (planner robot every 5-7 h, posts 5-9 h
   late: on 2 Nov the 1pm post went out at 9:47pm and the 7pm fun post at
   1:29am). FIX (3 Nov): the three posting workflows (daily-social, fun-posts,
-  announce-queue) each have 4-5 schedules that fire EARLY, and
+  announce-queue) have early schedules every hour (from 00:47, 06:37 and
+  00:53 UTC; on 3 Nov GitHub still started runs ~7.5 h late), and
   automation/social/wait-slot.cjs holds the run until the UK post time (1pm,
   7pm, 11am). The first run to start posts; the rest find it done (concurrency
   group + posted check). A run starting after 9:30pm UK (10:30pm for fun posts)
