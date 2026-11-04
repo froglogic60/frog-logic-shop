@@ -14,6 +14,11 @@ on:
     # wait-slot.cjs holds the run until 1pm UK time; whichever starts first
     # posts, the rest see it is done and stop. Too late (after 9:30pm UK) =
     # no post that day rather than one nobody sees.
+    # 4 Nov 2026: the early runs still started about 7.5 hours late on 3 Nov
+    # (07:47 ran at 15:29), so the 1pm post went out at 3:30pm. Now there is a
+    # run every hour from 00:47; whichever lands within 5.5 hours of 1pm waits
+    # for it, and runs that land too early stop at once.
+    - cron: "47 0-6 * * *"
     - cron: "47 7 * * *"
     - cron: "17 9 * * *"
     - cron: "47 10 * * *"
@@ -50,7 +55,7 @@ jobs:
           else
             case "${{ github.event.schedule }}" in
               "17 8 * * *")  SLOT=0 ;;
-              "47 7 * * *"|"17 9 * * *"|"47 10 * * *"|"17 12 * * *") SLOT=1 ;;
+              "47 0-6 * * *"|"47 7 * * *"|"17 9 * * *"|"47 10 * * *"|"17 12 * * *") SLOT=1 ;;
               "17 17 * * *") SLOT=2 ;;
               *) echo "Unknown schedule '${{ github.event.schedule }}'"; exit 1 ;;
             esac
