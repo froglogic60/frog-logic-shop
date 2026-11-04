@@ -18,7 +18,7 @@ jobs:
           python-version: "3.12"
       - name: Install renderer
         run: |
-          pip install playwright==1.49.1
+          pip install playwright==1.49.1 pillow
           python -m playwright install --with-deps chromium
       - name: Build the book
         run: python automation/pdf/colouring-book.py
