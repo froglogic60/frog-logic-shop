@@ -59,7 +59,10 @@ stand → coming up → parked → costs → how to work on it → history.
 - **Tes:** author FrogLogic (teacher marketplace, Bronze 60% royalty). Pond
   Guides Complete Set £8 (same as site) + all 23 single guides free
   (NoDerivatives licence; Tes copies have their own small print), free
-  Christmas Visual Timetable + £3 Christmas Big Pack. Tes reviews new
+  Christmas Visual Timetable + £3 Christmas Big Pack, and 7 paid printables
+  (Handover Sheet, Sensory Profile, When Words Go cards, Access Needs Cards,
+  How To Help Me, Task Breakdown, Say What You Need; published 4 Nov,
+  no web address in files or text). Tes reviews new
   resources for up to 3 working days. TPT (US) not done: set-up fee, 55%.
 - **Printify:** API store 28035653 (the site's orders and manual orders) and
   "My Etsy Store" 29335686. The API store also holds ~2,870 stray products from
