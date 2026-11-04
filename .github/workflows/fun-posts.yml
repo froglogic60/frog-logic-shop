@@ -10,6 +10,9 @@ on:
     # in the middle of the night. Now several schedules fire EARLY and
     # wait-slot.cjs holds the run until 7pm UK time; the first to start posts,
     # the others find nothing left due. After 10:30pm UK nothing is posted.
+    # 4 Nov 2026: GitHub still started them about 7 hours late on 3 Nov (post
+    # out at 8:17pm), so there is now a run every hour from 06:37 as well.
+    - cron: "37 6-12 * * *"
     - cron: "37 13 * * *"
     - cron: "7 15 * * *"
     - cron: "37 16 * * *"
