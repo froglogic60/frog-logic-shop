@@ -208,7 +208,9 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
 
 ## Where things stand (2 Nov 2026)
 
-- **No sales from strangers yet.** Full four-channel check 2 Nov: Stripe only
+- **FIRST SALE TO A STRANGER: 3 Nov 2026, 13:55, website (Stripe), £6** (After The
+  Diagnosis, Finding My People, For The Sibling, £2 each; buyer in Hampshire;
+  webhook delivered, downloads emailed). Before that, full four-channel check 2 Nov: Stripe only
   Sam's own reversed £19 test (16 Oct); Etsy 0 open, 0 completed; Printify
   Etsy store 0 orders, site store only Martina's sample; Tes 0 sales (shop: 26
   uploads, 228 views, 1 download). The shop works; **getting seen is the
@@ -350,7 +352,7 @@ sections above, the sections above win.
 
 ### Where things stood (25–26 Oct 2026)
 
-- **No sales from strangers yet.** Etsy, last 30 days: 12 visits, 0 orders,
+- **One sale from a stranger so far (3 Nov, website, £6).** Etsy, last 30 days: 12 visits, 0 orders,
   0 favourites, 1 visit from Etsy search. Social reach is tiny. The shop works;
   **getting seen is the problem**, so effort goes to visibility, not building.
 - Pinterest ad test (planner) finished 24 Oct: £24.72, 53 outbound clicks,
