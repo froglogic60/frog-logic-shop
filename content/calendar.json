@@ -1077,7 +1077,7 @@
       "date": "2026-11-09",
       "items": [
         {
-          "what": "New bank card: when it arrives, put it into Netlify (app.netlify.com > froglogic60 > Usage & billing, next $9 payment about 26 Nov, the website needs it) and Etsy (Your account > Payments, fees are taken on the 1st). Then tell Claude, who will check both",
+          "what": "Monzo card on every Frog Logic payment (decided 4 Nov): Claude (claude.ai > Settings > Billing, Max renews 5 Nov), Netlify (app.netlify.com > froglogic60 > Usage & billing, $9 about 26 Nov) and Etsy fees (Shop Manager > Finances > Payment settings > Billing, fees on the 1st). Also switch Etsy deposits (Payment Methods > Bank details) to Monzo; Stripe already pays into Monzo. Porkbun in June. Sam types the card and bank details; Claude checks after",
           "who": "you"
         }
       ]
@@ -1130,7 +1130,7 @@
       "date": "2026-11-20",
       "items": [
         {
-          "what": "Reminder: has the new bank card gone into Netlify yet? Netlify takes $9 about 26 Nov and the website depends on it. Etsy fees come off on 1 Dec. Claude can check both if you say so",
+          "what": "Reminder: is the Monzo card on Claude, Netlify and Etsy fees, and do Etsy deposits go to Monzo? Netlify takes $9 about 26 Nov (the website depends on it), Etsy fees come off on 1 Dec. Claude can check all of them if you say so",
           "who": "you"
         },
         {
