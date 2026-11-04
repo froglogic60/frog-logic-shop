@@ -250,6 +250,16 @@
   status = 404
   force = true
 [[redirects]]
+  from = "/digital/Frog-Logic-Colouring-Book.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Frog-Logic-Colouring-Book-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
   from = "/digital/Christmas-Cards-Black-and-White-Letter.pdf"
   to = "/404"
   status = 404

@@ -1,0 +1,462 @@
+# The Frog Logic Colouring Book (Sam, 3-4 Nov 2026).
+# Eight Frog Logic frogs turned into colouring pages, each twice: big simple
+# shapes, and sitting in the pond with more to colour. Cover, a "before you
+# start" page, a make-your-own page and the frogs' own colours at the back.
+#
+# The frogs are traced from the real art, not redrawn: the seven Comfort & Chaos
+# frogs come from the frog: true entries in script.js, Socially Hibernating from
+# artwork/frogs/src/socially-hibernating.py. Change a frog there and re-run this.
+#
+# Writes:
+#   digital/Frog-Logic-Colouring-Book.pdf          A4, 20 pages
+#   digital/Frog-Logic-Colouring-Book-Letter.pdf   US Letter
+#   automation/social/etsy-kits/colouring-book/*.jpg   listing pictures (2000x2000)
+# Run by the "Build the colouring book" workflow (colouring-book.yml).
+import re, os, sys, math, random, asyncio, types, urllib.request
+from playwright.async_api import async_playwright
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+WORK = os.path.join(ROOT, "automation", "pdf", ".colouring")
+os.makedirs(WORK, exist_ok=True)
+FONTS = {
+  "Fraunces.ttf": "ofl/fraunces/Fraunces%5BSOFT,WONK,opsz,wght%5D.ttf",
+  "Caveat.ttf": "ofl/caveat/Caveat%5Bwght%5D.ttf",
+  "SpaceMono.ttf": "ofl/spacemono/SpaceMono-Regular.ttf",
+  "Atkinson.ttf": "ofl/atkinsonhyperlegible/AtkinsonHyperlegible-Regular.ttf",
+  "AtkinsonBold.ttf": "ofl/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+}
+for f, p in FONTS.items():
+    dest = os.path.join(WORK, f)
+    if not os.path.exists(dest):
+        urllib.request.urlretrieve("https://raw.githubusercontent.com/google/fonts/main/" + p, dest)
+
+INK = "#22331F"
+FROGS = [  # (source, title, caption)
+ ("comfort-creature","Comfort Creature","I regulate with soft things"),
+ ("brain-full-of-tabs","Brain Full of Tabs","(not responding)"),
+ ("chaos-gremlin","Chaos Gremlin Energy","I'm doing my best"),
+ ("low-battery","Low Battery","social battery: 3%"),
+ ("overstimulated","Overstimulated","but still cute. I need a minute."),
+ ("neurospicy","Neurospicy","mildly chaotic, highly loveable"),
+ ("neurodivergent-household","Neurodivergent Household","est. whenever we moved in"),
+ ("socially-hibernating","Socially Hibernating","see you in January"),
+]
+
+def sources():
+    s = open(os.path.join(ROOT, "script.js"), encoding="utf-8").read()
+    out = {}
+    for m in re.finditer(r'num: "[^"]*", word: "([^"]*)", frog: true', s):
+        i = s.find("svg: `", m.end()); j = s.find("`", i + 6)
+        name = m.group(1).lower().replace(" ", "-")
+        if name not in out: out[name] = s[i + 6:j]
+    src = open(os.path.join(ROOT, "artwork/frogs/src/socially-hibernating.py"), encoding="utf-8").read()
+    sys.modules.setdefault("cairosvg", types.ModuleType("cairosvg"))
+    ns = {"__file__": os.path.join(ROOT, "artwork/frogs/src/socially-hibernating.py")}
+    exec(src.split("def render")[0], ns)
+    out["socially-hibernating"] = ns["svg"](False)
+    missing = [n for n, _, _ in FROGS if n not in out]
+    if missing: sys.exit("frogs not found: " + ", ".join(missing))
+    return out
+
+# Turns a coloured frog into line art (colour=False) or just strips its
+# background and words (colour=True), and crops the viewBox to the drawing.
+CONVERT = r"""
+([src,colour]) => {
+  document.body.innerHTML = src;
+  const svg = document.querySelector('svg');
+  const INK = '#22331F';
+  const lum = c => { const m=c.match(/\d+/g); if(!m) return 1; const [r,g,b]=m.map(Number); return (0.299*r+0.587*g+0.114*b)/255; };
+  // background: first full-size rect, and the big halo circle / poster background
+  svg.querySelectorAll('rect').forEach(r=>{ if(+r.getAttribute('width')>=1000) r.remove(); });
+  svg.querySelectorAll('circle').forEach(c=>{ if(+c.getAttribute('r')>=300) c.remove(); });
+  // poster frames (household) go too: the page has its own layout
+  svg.querySelectorAll('rect').forEach(r=>{ if(+r.getAttribute('width')>=800) r.remove(); });
+  svg.querySelectorAll('text').forEach(t=>{
+    const fs=+t.getAttribute('font-size'); const fam=t.getAttribute('font-family')||'';
+    if (fs>=50 || /Caveat/.test(fam) || /EST\./.test(t.textContent)) t.remove();
+    else if(!colour){ t.setAttribute('fill',INK); t.removeAttribute('opacity'); }
+  });
+  const sws=[...svg.querySelectorAll('[stroke-width]')].map(e=>+e.getAttribute('stroke-width')).filter(x=>x>0).sort((a,b)=>a-b);
+  const thin = String(Math.round(sws[Math.floor(sws.length*0.7)]*0.6));
+  if(!colour) svg.querySelectorAll('path,circle,ellipse,rect,polygon,line,polyline').forEach(el=>{
+    el.removeAttribute('stroke-opacity');
+    const sw=+(el.getAttribute('stroke-width')||0);
+    if (sw>=40 && (getComputedStyle(el).fill==='none')) {   // wide painted bands: make them an outlined band
+      const back=el.cloneNode(); back.setAttribute('stroke',INK); back.setAttribute('stroke-width',String(sw+Math.max(14,sw*0.35)));
+      back.removeAttribute('opacity'); el.parentNode.insertBefore(back,el);
+      el.setAttribute('stroke','#FFFFFF'); el.removeAttribute('opacity'); el.setAttribute('data-done','1'); return;
+    }
+    if (el.getAttribute('data-done')) return;
+    const cs=getComputedStyle(el);
+    const fill=cs.fill, stroke=cs.stroke, op=+(el.getAttribute('opacity')||1);
+    const hasStroke = stroke && stroke!=='none' && +(el.getAttribute('stroke-width')||1)>0;
+    const fl = fill==='none' ? null : lum(fill);
+    if (hasStroke) { el.setAttribute('stroke',INK); if (fill==='none') el.removeAttribute('opacity'); }
+    if (fl===null) return;
+    if (op<1 && fl>0.6) { el.remove(); return; }           // shine / highlight overlays
+    if (fl<0.3) { el.setAttribute('fill',INK); el.removeAttribute('opacity'); return; }  // pupils, dots
+    const pureWhite = /255, 255, 255/.test(fill);
+    el.setAttribute('fill','#FFFFFF'); el.removeAttribute('opacity');
+    if (!hasStroke && !pureWhite) { el.setAttribute('stroke',INK); el.setAttribute('stroke-width',thin); }
+  });
+  if(colour) svg.querySelectorAll('path,circle,ellipse').forEach(el=>{ const sw=el.getAttribute('stroke'); if((!sw||sw==='none') && el.getBBox().width>=500) el.remove(); });
+  // wrap and measure
+  const NS='http://www.w3.org/2000/svg'; const g=document.createElementNS(NS,'g');
+  while(svg.firstChild) g.appendChild(svg.firstChild); svg.appendChild(g);
+  const b=g.getBBox(); const m=Math.max(b.width,b.height)*0.04;
+  svg.setAttribute('viewBox',`${b.x-m} ${b.y-m} ${b.width+2*m} ${b.height+2*m}`);
+  svg.removeAttribute('width'); svg.removeAttribute('height'); svg.removeAttribute('data-no-fit');
+  svg.setAttribute('xmlns',NS);
+  return svg.outerHTML;
+}
+"""
+
+LINE, COLOUR, INNER = {}, {}, []
+FROGS = [  # (file, title, caption)
+ ("comfort-creature","Comfort Creature","I regulate with soft things"),
+ ("brain-full-of-tabs","Brain Full of Tabs","(not responding)"),
+ ("chaos-gremlin","Chaos Gremlin Energy","I'm doing my best"),
+ ("low-battery","Low Battery","social battery: 3%"),
+ ("overstimulated","Overstimulated","but still cute. I need a minute."),
+ ("neurospicy","Neurospicy","mildly chaotic, highly loveable"),
+ ("neurodivergent-household","Neurodivergent Household","est. whenever we moved in"),
+ ("socially-hibernating","Socially Hibernating","see you in January"),
+]
+W, H = 1800, 2400
+FX, FY, FW, FH = 130, 360, 1540, 1720   # frog box
+
+def frog(name, x=FX, y=FY, w=FW, h=FH, colour=False, cap=6.7):
+    s = (COLOUR if colour else LINE)[name]
+    vb = re.search(r'viewBox="([^"]+)"', LINE[name]).group(1)
+    inner = re.sub(r'^<svg[^>]*>|</svg>$', '', s.strip())
+    vx,vy,vw,vh = map(float, vb.split())
+    k = min(w/vw, h/vh, cap if name!='socially-hibernating' else 9); dw, dh = vw*k, vh*k
+    rect = (x+(w-dw)/2, y+(h-dh)/2, dw, dh)
+    x,y,w,h = rect
+    return (f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="{vb}" preserveAspectRatio="xMidYMid meet" overflow="visible">{inner}</svg>', rect)
+
+def pad(x,y,r,a):
+    # lily pad with a notch, plus a vein
+    a0=math.radians(a); g=0.38
+    p1=(x+r*math.cos(a0-g), y+r*math.sin(a0-g)); p2=(x+r*math.cos(a0+g), y+r*math.sin(a0+g))
+    v=(x+r*0.82*math.cos(a0+math.pi), y+r*0.82*math.sin(a0+math.pi))
+    return (f'<path d="M {x:.0f} {y:.0f} L {p2[0]:.0f} {p2[1]:.0f} A {r} {r} 0 1 1 {p1[0]:.0f} {p1[1]:.0f} Z" fill="#fff" stroke="{INK}" stroke-width="11" stroke-linejoin="round"/>'
+            f'<path d="M {x:.0f} {y:.0f} L {v[0]:.0f} {v[1]:.0f}" stroke="{INK}" stroke-width="8" stroke-linecap="round"/>')
+def bubble(x,y,r): return f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="#fff" stroke="{INK}" stroke-width="9"/>'
+def flower(x,y,r):
+    s=''.join(f'<circle cx="{x+r*0.62*math.cos(i*1.2566):.0f}" cy="{y+r*0.62*math.sin(i*1.2566):.0f}" r="{r*0.45:.0f}" fill="#fff" stroke="{INK}" stroke-width="9"/>' for i in range(5))
+    return s+f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r*0.36:.0f}" fill="#fff" stroke="{INK}" stroke-width="9"/>'
+def ripple(x,y,r):
+    return (f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r}" ry="{r*0.35:.0f}" fill="none" stroke="{INK}" stroke-width="8"/>'
+            f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r*0.55:.0f}" ry="{r*0.18:.0f}" fill="none" stroke="{INK}" stroke-width="8"/>')
+
+def bigpad(rect):
+    fx,fy,fw,fh=rect; cx=fx+fw/2; cy=fy+fh-30; rx=max(fw*0.62,420); ry=120
+    # ellipse with a notch at the front-right
+    import math
+    a1,a2=math.radians(20),math.radians(44)
+    p1=(cx+rx*math.cos(a1),cy+ry*math.sin(a1)); p2=(cx+rx*math.cos(a2),cy+ry*math.sin(a2))
+    d=f'M {cx:.0f} {cy:.0f} L {p1[0]:.0f} {p1[1]:.0f} A {rx:.0f} {ry} 0 1 0 {p2[0]:.0f} {p2[1]:.0f} Z'
+    return (f'<path d="{d}" fill="#fff" stroke="{INK}" stroke-width="13" stroke-linejoin="round"/>', (cx-rx,cy-ry,2*rx,2*ry))
+def pond(seed, rect, extra=None):
+    rnd=random.Random(seed); items=[]; out=[]
+    fx,fy,fw,fh=rect; cx,cy=fx+fw/2,fy+fh/2
+    for _ in range(4000):
+        if len(items)>=30: break
+        kind=rnd.choices(['pad','bubble','flower','ripple'],[5,4,2,2])[0]
+        r={'pad':rnd.randint(85,140),'bubble':rnd.randint(24,44),'flower':rnd.randint(50,70),'ripple':rnd.randint(80,120)}[kind]
+        x=rnd.uniform(40+r,W-40-r); y=rnd.uniform(330+r,2130-r)
+        if extra and extra[0]-r-20<x<extra[0]+extra[2]+r+20 and extra[1]-r-20<y<extra[1]+extra[3]+r+20: continue
+        if fx-r-20<x<fx+fw+r+20 and fy-r-20<y<fy+fh+r+20 and not (((x-cx)/(fw*0.5+r))**2+((y-cy)/(fh*0.5+r))**2>1.15 and False): 
+            if not (min(abs(x-fx),abs(x-fx-fw))<r*0.6 and False): continue
+        if any(math.hypot(x-a,y-b)<r+rr+34 for a,b,rr in items): continue
+        items.append((x,y,r))
+        out.append({'pad':lambda:pad(x,y,r,rnd.uniform(0,360)),'bubble':lambda:bubble(x,y,r),'flower':lambda:flower(x,y,r),'ripple':lambda:ripple(x,y,r)}[kind]())
+    return ''.join(out)
+
+def hollow(text, y, size, maxw=1640):
+    return (f'<text class="fit" data-max="{maxw}" x="{W/2}" y="{y}" text-anchor="middle" font-family="Fraunces" font-weight="900" '
+            f'font-size="{size}" fill="#fff" stroke="{INK}" stroke-width="8" stroke-linejoin="round" paint-order="stroke">{text}</text>')
+def page(svg_body, footer=True):
+    foot = f'<text x="{W/2}" y="2372" text-anchor="middle" font-family="Atkinson" font-size="30" fill="#6E7A6B">Frog Logic · froglogic.co.uk</text>' if footer else ''
+    INNER.append(svg_body + foot)
+    return f'<section class="pg"><svg viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid meet">{svg_body}{foot}</svg></section>'
+
+def wrap(t, n=46):
+    out, cur = [], ''
+    for w in t.split():
+        if len(cur) + len(w) + 1 > n: out.append(cur); cur = w
+        else: cur = (cur + ' ' + w).strip()
+    return out + [cur]
+
+PRINT_LINE = "Print single-sided so pens don't bleed through, and print a page again whenever you want a fresh one."
+BOOK_LINE = "Every picture has a page to itself. The back of it is for trying out your pens, so felt tips won't spoil the next frog."
+
+def before_you_start(last_line, licence):
+    lines=["There are no rules in this book.",
+     "Any colours you like. Purple frogs are very welcome.",
+     "Start anywhere. Skip pages. Colour half a frog.",
+     "Outside the lines still counts.",
+     "Stop the moment it stops feeling nice.",
+     "Every frog comes twice: once with big, simple shapes, and once sitting in the pond with more to colour. Pick whichever suits your brain today.",
+     last_line]
+    y=560; body=hollow('Before you start',300,170)
+    for t in lines:
+        ls=wrap(t); body+=f'<circle cx="250" cy="{y-20}" r="16" fill="#fff" stroke="{INK}" stroke-width="7"/>'
+        for i,l in enumerate(ls): body+=f'<text x="300" y="{y+i*72}" font-family="Atkinson" font-size="54" fill="{INK}">{l}</text>'
+        y+=len(ls)*72+58
+    body+=f'<text x="{W/2}" y="{y+90}" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="96" fill="{INK}">made in my lounge, with love — Sam</text>'
+    if licence:
+        lic=wrap(licence,70)
+        for i,l in enumerate(lic): body+=f'<text x="{W/2}" y="{2200+i*48}" text-anchor="middle" font-family="Atkinson" font-size="34" fill="{INK}">{l}</text>'
+    return body
+
+def cover_page():
+    cov, r = frog('comfort-creature', 330, 640, 1140, 1300)
+    return (hollow('The Frog Logic',250,190)+hollow('Colouring Book',470,190)+cov+
+      f'<text x="{W/2}" y="2130" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="110" fill="{INK}">soft landings for busy brains</text>'
+      f'<text x="{W/2}" y="2240" text-anchor="middle" font-family="Atkinson" font-size="44" fill="{INK}">8 frogs · 2 ways each · no rules</text>')
+
+def frog_pages(i, n, t, c):
+    f, rect = frog(n)
+    cap=f'<text x="{W/2}" y="2250" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="104" fill="{INK}">{c}</text>'
+    f2, r2 = frog(n, FX+FW*0.14, FY+FH*0.13, FW*0.72, FH*0.72)
+    bp, br = bigpad(r2)
+    return hollow(t,270,180)+f+cap, pond(i*7+3, r2, br)+hollow(t,270,180)+bp+f2+cap
+
+def your_frog_page():
+    f,_=frog('neurodivergent-household',380,560,1040,1180)
+    body=hollow('Your frog, your feeling',270,160)+f'<text x="{W/2}" y="430" text-anchor="middle" font-family="Atkinson" font-size="48" fill="{INK}">Give this frog whatever it needs today: a hat, a snack, a blanket, a sign.</text>'+f
+    body+=f'<text x="230" y="2030" font-family="Atkinson" font-size="52" fill="{INK}">Today my frog is feeling…</text><line x1="230" y1="2170" x2="1570" y2="2170" stroke="{INK}" stroke-width="5"/>'
+    return body
+
+def build_pages():
+    INNER.clear()
+    pages=[]
+    pages.append(page(cover_page()))
+    pages.append(page(before_you_start(PRINT_LINE, "For your own personal use: print it as many times as you like, for yourself and your household. Please don't resell or share the file itself. © Frog Logic")))
+    for i,(n,t,c) in enumerate(FROGS):
+        for body in frog_pages(i, n, t, c): pages.append(page(body))
+    pages.append(page(your_frog_page()))
+    # real colours reference
+    body=hollow("The frogs' own colours",250,150)+f'<text x="{W/2}" y="390" text-anchor="middle" font-family="Atkinson" font-size="46" fill="{INK}">Only if you want them. Your colours are just as right.</text>'
+    for i,(n,t,c) in enumerate(FROGS):
+        col,row=i%2,i//2; x=120+col*800; y=470+row*460
+        g,_=frog(n,x+60,y,680,360,colour=True)
+        body+=g+f'<text x="{x+400}" y="{y+410}" text-anchor="middle" font-family="Atkinson" font-weight="700" font-size="40" fill="{INK}">{t}</text>'
+    pages.append(page(body))
+    return pages, list(INNER)
+
+CSS = """@font-face{font-family:Fraunces;src:url(Fraunces.ttf)}@font-face{font-family:Caveat;src:url(Caveat.ttf)}
+@font-face{font-family:'Space Mono';src:url(SpaceMono.ttf)}@font-face{font-family:Atkinson;src:url(Atkinson.ttf)}
+@font-face{font-family:Atkinson;font-weight:700;src:url(AtkinsonBold.ttf)}"""
+BOOK = """@page{size:%s;margin:0}html,body{margin:0}.pg{width:%s;height:%s;page-break-after:always;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pg svg{width:calc(100%% - 16mm);height:calc(100%% - 14mm)}"""
+FIT = """<script>document.fonts.ready.then(()=>{document.querySelectorAll('text.fit').forEach(t=>{const m=+t.dataset.max;let s=+t.getAttribute('font-size');while(t.getComputedTextLength()>m&&s>40){s-=4;t.setAttribute('font-size',s)}});document.body.dataset.ready=1})</script>"""
+
+def sheet(inner, x, y, w, rot=0, shadow=True):
+    # a page of the book drawn as a sheet of paper in a listing picture
+    h = w * 297 / 210
+    sh = f'<rect x="{x+14}" y="{y+18}" width="{w}" height="{h}" fill="#000" opacity="0.18" rx="6"/>' if shadow else ''
+    return (f'<g transform="rotate({rot} {x+w/2} {y+h/2})">{sh}<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="#fff" rx="6"/>'
+            f'<svg x="{x+w*0.05}" y="{y+h*0.035}" width="{w*0.9}" height="{h*0.93}" viewBox="0 0 {W} {H}">{inner}</svg></g>')
+
+def coloured_pond(i):
+    n, t, c = FROGS[i]
+    f2, r2 = frog(n, FX+FW*0.14, FY+FH*0.13, FW*0.72, FH*0.72, colour=True)
+    bp, br = bigpad(r2)
+    pond_svg = pond(i*7+3, r2, br)
+    fills = iter(["#BFD8A8", "#F6C3C8", "#B8C9E0", "#F2E4B8", "#CDB8E0", "#F7D6A6"] * 40)
+    pond_svg = re.sub(r'fill="#fff"', lambda m: f'fill="{next(fills)}"', pond_svg)
+    bp = bp.replace('fill="#fff"', 'fill="#9CC48A"')
+    title = hollow(t, 270, 180).replace('fill="#fff"', 'fill="#F08F87"')
+    cap = f'<text x="{W/2}" y="2250" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="104" fill="{INK}">{c}</text>'
+    return pond_svg + title + bp + f2 + cap
+
+def listing_pictures(pages_inner):
+    BG = "#DDEAD3"
+    def pic(body, label=None, sub=None, sy=1900):
+        t = ''
+        if label: t += f'<text x="1000" y="170" text-anchor="middle" font-family="Fraunces" font-weight="700" font-size="104" fill="{INK}">{label}</text>'
+        if sub: t += f'<text x="1000" y="{sy}" text-anchor="middle" font-family="Atkinson" font-weight="700" font-size="62" fill="{INK}">{sub}</text>'
+        return f'<svg viewBox="0 0 2000 2000" width="2000" height="2000"><rect width="2000" height="2000" fill="{BG}"/>{body}{t}</svg>'
+    P = pages_inner
+    out = []
+    # 1 hero: cover in front, two frog pages fanned behind
+    out.append(pic(sheet(P[9], 200, 330, 900, -9) + sheet(P[13], 900, 330, 900, 8) + sheet(P[0], 500, 250, 1000, 0),
+                   "Frog colouring book", "20 printable pages · A4 + US Letter · instant download", 1860))
+    # 2 every frog twice
+    out.append(pic(sheet(P[2], 140, 330, 820, -3) + sheet(P[3], 1040, 330, 820, 3),
+                   "Every frog, two ways", "big simple shapes  ·  or the pond, with more to colour", 1680))
+    # 3 coloured example next to the blank
+    out.append(pic(sheet(P[13], 140, 330, 820, -3) + sheet(coloured_pond(5), 1040, 330, 820, 3),
+                   "Any colours. No rules.", "outside the lines still counts", 1680))
+    # 4 all eight frogs
+    g = ''
+    for i, (n, t, c) in enumerate(FROGS):
+        col, row = i % 4, i // 4
+        x, y = 70 + col * 475, 300 + row * 780
+        g += f'<rect x="{x}" y="{y}" width="430" height="700" rx="16" fill="#fff"/>'
+        f, _ = frog(n, x + 30, y + 30, 370, 520)
+        g += f + f'<text x="{x+215}" y="{y+640}" text-anchor="middle" font-family="Atkinson" font-weight="700" font-size="34" fill="{INK}">{t}</text>'
+    out.append(pic(g, "Eight frogs inside", "the Frog Logic frogs, made for colouring"))
+    # 5 what you get
+    lines = ["20 pages: 8 frogs, each twice", "Two PDFs: A4 and US Letter", "Thick, clear lines and big spaces",
+             "Print single-sided, as often as you like", "A gentle no-rules page to start", "A make-your-own-frog page",
+             "Instant download, nothing posted"]
+    body = sheet(P[1], 1130, 380, 720, 4)
+    for i, l in enumerate(lines):
+        y = 470 + i * 190
+        body += f'<circle cx="190" cy="{y-22}" r="22" fill="#fff" stroke="{INK}" stroke-width="8"/>'
+        body += f'<text x="240" y="{y}" font-family="Atkinson" font-weight="700" font-size="54" fill="{INK}">{l}</text>' if len(l) < 26 else \
+                ''.join(f'<text x="240" y="{y + k*62}" font-family="Atkinson" font-weight="700" font-size="54" fill="{INK}">{s}</text>' for k, s in enumerate(wrap(l, 24)))
+    out.append(pic(body, "What you get", "for your own personal use · © Frog Logic"))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Amazon KDP paperback (8.5 x 11 in, black ink, white paper, no interior bleed).
+# Pictures sit on the right-hand pages only, each backed by a plain page with
+# one gentle line, so pens can't show through onto another frog. 40 pages.
+# Files go to KDP_OUT (default automation/pdf/.colouring/kdp, not committed:
+# the repo is public and these are the book itself).
+KDP_PAGES = 40
+AUTHOR = "Frog Logic"            # KDP author box must match this exactly
+SPINE_IN = KDP_PAGES * 0.002252          # white paper
+NOTES = ["Half a frog still counts.", "Permission to stop here.", "No one is marking this.", "Slow is a speed.",
+         "Snack break? Snack break.", "Wobbly lines are still lines.", "You can come back to this one.", "The pond will still be here tomorrow."]
+
+def note_page(k):
+    return (f'<text x="{W/2}" y="1180" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="120" fill="{INK}">{NOTES[k % len(NOTES)]}</text>'
+            f'<text x="{W/2}" y="2250" text-anchor="middle" font-family="Atkinson" font-size="38" fill="#6E7A6B">This side is left plain so your pens can\u2019t show through onto a picture.</text>')
+
+def copyright_page():
+    rows = ["The Frog Logic Colouring Book", f"by {AUTHOR}", "", f"\u00a9 2026 {AUTHOR}. All rights reserved.",
+            "The frogs and words in this book are Frog Logic\u2019s own.", "Please don\u2019t copy, share or sell the pages.", "",
+            "Made by Sam, in Kent, England.", "froglogic.co.uk \u00b7 hello@froglogic.co.uk"]
+    return ''.join(f'<text x="{W/2}" y="{1500 + i*70}" text-anchor="middle" font-family="Atkinson" font-size="44" fill="{INK}">{r}</text>' for i, r in enumerate(rows))
+
+def belongs_page():
+    return (hollow('This book belongs to', 900, 150) +
+            f'<line x1="300" y1="1250" x2="1500" y2="1250" stroke="{INK}" stroke-width="5"/>'
+            f'<text x="{W/2}" y="1500" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="100" fill="{INK}">and their favourite frog is…</text>'
+            f'<line x1="300" y1="1750" x2="1500" y2="1750" stroke="{INK}" stroke-width="5"/>')
+
+def end_page():
+    f, _ = frog('overstimulated', 560, 900, 680, 760)
+    return (hollow('Thank you', 420, 170) +
+            f'<text x="{W/2}" y="640" text-anchor="middle" font-family="Atkinson" font-size="52" fill="{INK}">for colouring with the Frog Logic frogs.</text>'
+            f'<text x="{W/2}" y="730" text-anchor="middle" font-family="Atkinson" font-size="52" fill="{INK}">This last one is for whatever is left in your pens.</text>' + f +
+            f'<text x="{W/2}" y="1960" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="100" fill="{INK}">more frogs at froglogic.co.uk</text>'
+            f'<text x="{W/2}" y="2080" text-anchor="middle" font-family="Caveat" font-weight="600" font-size="80" fill="{INK}">with love, Sam</text>')
+
+def kdp_interior_pages():
+    p = [cover_page(), copyright_page(),
+         before_you_start("Every picture has a page to itself, with a plain back, so felt tips won\u2019t spoil the next frog. Strong pens? Slip a sheet of card behind the page.", None),
+         belongs_page()]
+    k = 0
+    for i, (n, t, c) in enumerate(FROGS):
+        for body in frog_pages(i, n, t, c):
+            p += [body, note_page(k)]; k += 1
+    p += [your_frog_page(), note_page(k), end_page(), note_page(k + 1)]
+    assert len(p) == KDP_PAGES, len(p)
+    return p
+
+def kdp_interior_html(pages):
+    # 8.5 x 11, gutter 0.625 in on the binding side, 0.45 in elsewhere (KDP minimums: 0.375 / 0.25)
+    css = ("@page{size:8.5in 11in;margin:0}html,body{margin:0}"
+           ".pg{width:8.5in;height:11in;box-sizing:border-box;padding:0.45in;page-break-after:always;overflow:hidden}"
+           ".r{padding-left:0.625in}.v{padding-right:0.625in}.pg svg{width:100%;height:100%;display:block}")
+    secs = ''.join(f'<section class="pg {"r" if i % 2 == 0 else "v"}"><svg viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid meet">{b}</svg></section>'
+                   for i, b in enumerate(pages))
+    html = f'<html><head><style>{CSS}{css}</style></head><body>{secs}{FIT}</body></html>'
+    return html.replace("#22331F", "#111111").replace("#22331f", "#111111")   # black ink
+
+def kdp_cover_svg():
+    import base64
+    U = 300                                     # units per inch
+    bleed, tw, th = 0.125, 8.5, 11.0
+    Wc, Hc = (2 * bleed + 2 * tw + SPINE_IN) * U, (2 * bleed + th) * U
+    fx = (bleed + tw + SPINE_IN) * U            # front panel left edge
+    ty = bleed * U                              # trim top
+    logo = base64.b64encode(open(os.path.join(ROOT, "assets/frog-logic-logo.png"), "rb").read()).decode()
+    o = [f'<svg viewBox="0 0 {Wc:.1f} {Hc:.1f}" width="{Wc/U:.4f}in" height="{Hc/U:.4f}in" xmlns="http://www.w3.org/2000/svg">',
+         f'<rect width="{Wc:.1f}" height="{Hc:.1f}" fill="#DDEAD3"/>']
+    cx = fx + tw * U / 2
+    # front
+    o.append(f'<text x="{cx:.0f}" y="{ty+560}" text-anchor="middle" font-family="Fraunces" font-weight="800" font-size="250" fill="#22331F">The Frog Logic</text>')
+    o.append(f'<text x="{cx:.0f}" y="{ty+840}" text-anchor="middle" font-family="Fraunces" font-weight="800" font-size="250" fill="#22331F">Colouring Book</text>')
+    o.append(f'<text x="{cx:.0f}" y="{ty+1040}" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="150" fill="#6B4A32">calm colouring for busy brains</text>')
+    o.append(f'<circle cx="{cx:.0f}" cy="{ty+1900}" r="760" fill="#F4EFE3"/>')
+    g, _ = frog('comfort-creature', cx - 700, ty + 1180, 1400, 1440, colour=True); o.append(g)
+    for j, n in enumerate(['chaos-gremlin', 'low-battery', 'overstimulated', 'neurospicy']):
+        g, _ = frog(n, fx + 270 + j * 520, ty + 2610, 460, 380, colour=True); o.append(g)
+    o.append(f'<text x="{cx:.0f}" y="{ty+3075}" text-anchor="middle" font-family="Atkinson" font-weight="700" font-size="66" fill="#22331F">8 frogs \u00b7 each drawn two ways \u00b7 bold lines, big shapes</text>')
+    o.append(f'<text x="{cx:.0f}" y="{ty+3200}" text-anchor="middle" font-family="Fraunces" font-weight="700" font-size="92" fill="#22331F">{AUTHOR}</text>')
+    # back (keep the lower right clear for Amazon's barcode)
+    bx = bleed * U; bc = bx + tw * U / 2
+    o.append(f'<image href="data:image/png;base64,{logo}" x="{bc-280:.0f}" y="{ty+330}" width="560" height="575"/>')
+    blurb = ["Eight frogs who feel things. Comfort Creature, Low Battery,",
+             "Brain Full of Tabs, Overstimulated and their friends, each",
+             "drawn twice: once in big simple shapes for low-energy days,",
+             "and once in the pond with more to colour when you want it.",
+             "", "Bold lines. No tiny fiddly bits. One picture per page,",
+             "with a plain back so your pens can\u2019t spoil the next frog.",
+             "No rules, nothing to get right, and half a frog still counts.",
+             "", "Made by Sam, from my lounge, for busy brains."]
+    for i, l in enumerate(blurb):
+        o.append(f'<text x="{bc:.0f}" y="{ty+1180+i*110}" text-anchor="middle" font-family="Atkinson" font-size="62" fill="#22331F">{l}</text>')
+    o.append(f'<text x="{bx+300:.0f}" y="{ty+3000}" font-family="Fraunces" font-weight="700" font-size="70" fill="#22331F">froglogic.co.uk</text>')
+    o.append('</svg>')
+    return ''.join(o), Wc / U, Hc / U
+
+async def main():
+    src = sources()
+    async with async_playwright() as p:
+        b = await p.chromium.launch(); pg = await b.new_page()
+        await pg.set_content("<html><body></body></html>")
+        for name, svg in src.items():
+            if name not in [n for n, _, _ in FROGS]: continue
+            LINE[name] = await pg.evaluate(CONVERT, [svg, False])
+            COLOUR[name] = await pg.evaluate(CONVERT, [svg, True])
+        # Socially Hibernating is drawn at 3000px with finer lines: bring them up to the others
+        LINE["socially-hibernating"] = re.sub(r'stroke-width="([\d.]+)"', lambda m: f'stroke-width="{float(m.group(1))*1.35:.1f}"', LINE["socially-hibernating"])
+        pages, inner = build_pages()
+        html_path = os.path.join(WORK, "book.html")
+        for label, size, w, h in [("", "A4", "210mm", "297mm"), ("-Letter", "letter", "8.5in", "11in")]:
+            open(html_path, "w", encoding="utf-8").write(f'<html><head><style>{CSS}{BOOK % (size, w, h)}</style></head><body>{"".join(pages)}{FIT}</body></html>')
+            await pg.goto("file://" + html_path); await pg.wait_for_selector("body[data-ready]")
+            await pg.pdf(path=os.path.join(ROOT, "digital", f"Frog-Logic-Colouring-Book{label}.pdf"), prefer_css_page_size=True, print_background=True)
+        kit = os.path.join(ROOT, "automation", "social", "etsy-kits", "colouring-book")
+        os.makedirs(kit, exist_ok=True)
+        await pg.set_viewport_size({"width": 2000, "height": 2000})
+        for i, svg in enumerate(listing_pictures(inner), 1):
+            open(html_path, "w", encoding="utf-8").write(f'<html><head><style>{CSS}html,body{{margin:0}}</style></head><body>{svg}{FIT}</body></html>')
+            await pg.goto("file://" + html_path); await pg.wait_for_selector("body[data-ready]")
+            await pg.screenshot(path=os.path.join(kit, f"{i}-colouring-book.jpg"), type="jpeg", quality=88)
+        # Amazon KDP paperback: interior and cover
+        out = os.environ.get("KDP_OUT") or os.path.join(WORK, "kdp")
+        os.makedirs(out, exist_ok=True)
+        open(html_path, "w", encoding="utf-8").write(kdp_interior_html(kdp_interior_pages()))
+        await pg.goto("file://" + html_path); await pg.wait_for_selector("body[data-ready]")
+        await pg.pdf(path=os.path.join(out, "KDP-Frog-Logic-Colouring-Book-interior.pdf"), prefer_css_page_size=True, print_background=True)
+        svg, cw, ch = kdp_cover_svg()
+        open(html_path, "w", encoding="utf-8").write(f'<html><head><style>{CSS}@page{{size:{cw:.4f}in {ch:.4f}in;margin:0}}html,body{{margin:0}}svg{{display:block}}</style></head><body>{svg}{FIT}</body></html>')
+        await pg.goto("file://" + html_path); await pg.wait_for_selector("body[data-ready]")
+        await pg.pdf(path=os.path.join(out, "KDP-Frog-Logic-Colouring-Book-cover.pdf"), prefer_css_page_size=True, print_background=True)
+        await b.close()
+    # KDP prefers fonts it can't trip over: turn all text into outlines with Ghostscript,
+    # cover to CMYK at its exact width, interior to greyscale for black ink.
+    import shutil, subprocess
+    if shutil.which("gs"):
+        cov, inn = (os.path.join(out, f"KDP-Frog-Logic-Colouring-Book-{n}.pdf") for n in ("cover", "interior"))
+        base = ["gs", "-q", "-sDEVICE=pdfwrite", "-dNoOutputFonts", "-dCompatibilityLevel=1.4"]
+        subprocess.run(base + ["-o", cov + ".tmp", "-sColorConversionStrategy=CMYK", "-dProcessColorModel=/DeviceCMYK",
+                               f"-dDEVICEWIDTHPOINTS={cw*72:.3f}", f"-dDEVICEHEIGHTPOINTS={ch*72:.3f}", "-dFIXEDMEDIA", cov], check=True)
+        subprocess.run(base + ["-o", inn + ".tmp", "-sColorConversionStrategy=Gray", "-dProcessColorModel=/DeviceGray", inn], check=True)
+        os.replace(cov + ".tmp", cov); os.replace(inn + ".tmp", inn)
+    else:
+        print("WARNING: Ghostscript not found; KDP files still have embedded fonts and RGB colour")
+    print("built the colouring book: 2 PDFs and", i, "listing pictures; KDP files in", out)
+
+asyncio.run(main())
