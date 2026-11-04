@@ -1,0 +1,32 @@
+name: Build the colouring book
+# Renders the Frog Logic Colouring Book (automation/pdf/colouring-book.py,
+# 4 Nov 2026): the A4 and US Letter PDFs into digital/ and the five Etsy
+# listing pictures into automation/social/etsy-kits/colouring-book/.
+# Run by hand after any change to a frog. Commits [skip netlify]: the next
+# deliberate publish carries the PDFs.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install renderer
+        run: |
+          pip install playwright==1.49.1
+          python -m playwright install --with-deps chromium
+      - name: Build the book
+        run: python automation/pdf/colouring-book.py
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digital/Frog-Logic-Colouring-Book*.pdf automation/social/etsy-kits/colouring-book
+          git commit -m "Colouring book built [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
