@@ -1077,7 +1077,7 @@
       "date": "2026-11-09",
       "items": [
         {
-          "what": "Monzo card on every Frog Logic payment (decided 4 Nov): Claude (claude.ai > Settings > Billing, Max renews 5 Nov), Netlify (app.netlify.com > froglogic60 > Usage & billing, $9 about 26 Nov) and Etsy fees (Shop Manager > Finances > Payment settings > Billing, fees on the 1st). Also switch Etsy deposits (Payment Methods > Bank details) to Monzo; Stripe already pays into Monzo. Porkbun in June. Sam types the card and bank details; Claude checks after",
+          "what": "DONE 4 Nov (checked by Claude): the Monzo card is on Claude, Netlify and Etsy fees, and Etsy and Stripe both pay sales into Monzo. Still to move: Porkbun (renews June)",
           "who": "you"
         }
       ]
@@ -1130,7 +1130,7 @@
       "date": "2026-11-20",
       "items": [
         {
-          "what": "Reminder: is the Monzo card on Claude, Netlify and Etsy fees, and do Etsy deposits go to Monzo? Netlify takes $9 about 26 Nov (the website depends on it), Etsy fees come off on 1 Dec. Claude can check all of them if you say so",
+          "what": "Netlify takes $9 about 26 Nov on the Monzo card: keep enough in Monzo (Monthly budget tab in the books). Etsy fees come off on 1 Dec",
           "who": "you"
         },
         {
