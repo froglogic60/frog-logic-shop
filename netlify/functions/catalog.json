@@ -2440,6 +2440,24 @@
     ]
   },
   {
+    "id": "d41-the-frog-logic-colouring-book",
+    "name": "The Frog Logic Colouring Book",
+    "price": 4,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Frog-Logic-Colouring-Book.pdf",
+    "files": [
+      {
+        "name": "Frog Logic Colouring Book (A4)",
+        "file": "Frog-Logic-Colouring-Book.pdf"
+      },
+      {
+        "name": "Frog Logic Colouring Book (US Letter)",
+        "file": "Frog-Logic-Colouring-Book-Letter.pdf"
+      }
+    ]
+  },
+  {
     "id": "d35-bright-christmas-cards",
     "name": "Bright Christmas Cards",
     "price": 3,
