@@ -52,7 +52,8 @@
     },
     "caption": "If you're having a bonfire tonight, build it on the day if you can. If it's already built, move it bit by bit or have a good look through before you light it. The frog thanks you 🐸🔥\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/fact-1.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-05T20:48:25.342Z"
   },
   {
     "postOn": "2026-11-06",
