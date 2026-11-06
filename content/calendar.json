@@ -1117,6 +1117,10 @@
         {
           "what": "Facebook + Instagram: Pond Advent sign-up (froglogic.co.uk/advent)",
           "who": "robot"
+        },
+        {
+          "what": "Sky: did Sky reply to the cancellation email (sent 6 Nov, account 624725558248)? If not, ring 0333 759 0434 or use chat 9:00-19:30 — Claude can open the chat",
+          "who": "you"
         }
       ]
     },
@@ -1228,6 +1232,15 @@
       ]
     },
     {
+      "date": "2026-12-04",
+      "items": [
+        {
+          "what": "Sky: check the final Stream payment (around 3 Dec, should be a part month, then nothing) and that the puck returns bag/label has arrived",
+          "who": "you"
+        }
+      ]
+    },
+    {
       "date": "2026-12-05",
       "items": [
         {
@@ -1251,6 +1264,10 @@
         {
           "what": "Charity nudges: DONE 20 Oct (all 7 emailed ones). Nothing more to send them unless they reply",
           "who": "note"
+        },
+        {
+          "what": "Sky: service should have ended (31 days from 6 Nov). Send the Stream puck back with Sky's returns method, keep the proof of posting",
+          "who": "you"
         }
       ]
     },
