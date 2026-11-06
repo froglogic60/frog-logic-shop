@@ -234,6 +234,20 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   Business Suite, caption links the Etsy listing). The FB/IG robot posts
   pictures only, so Reels go through Business Suite (method under "How to work
   on it"). Next: make videos for more mockups.
+- **Colouring books (6 Nov 2026).** Two Frog Logic paperbacks submitted to
+  Amazon KDP under the author name Samantha Hall, both £7.99 / $9.99, "In
+  review" (up to 72 h): The Frog Logic Colouring Book (40 pp, KDP id
+  W3QPC6HDCS2, built by automation/pdf/colouring-book.py with AUTHOR =
+  "Samantha Hall") and the new Frog Logic Cosy Christmas Colouring Book
+  (66 pp, KDP id 4FBJNMHM12A, ISBN 9798140285209, drawn in code by
+  automation/pdf/christmas-colouring-book.py; "Build the Christmas colouring
+  book" workflow rebuilds the printable PDFs and the promo pictures). The
+  Christmas book is also on the site as D42, a £5 printable (30 pages, A4 +
+  US Letter, p/cosy-christmas-colouring-book/), live since the 6 Nov publish.
+  Announce posts queued: 9 Nov (Christmas book) and 12 Nov (first colouring
+  book). When the KDP listings go live, put the Amazon links into both
+  product pages and queue an "on Amazon now" post. Sam's other books (Cute
+  Animals, Nature Scenes) stay off KDP until she says.
 
 ## Coming up (dates also on the Desk)
 
