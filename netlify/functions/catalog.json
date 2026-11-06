@@ -2458,6 +2458,24 @@
     ]
   },
   {
+    "id": "d42-cosy-christmas-colouring-book",
+    "name": "Cosy Christmas Colouring Book",
+    "price": 5,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Frog-Logic-Cosy-Christmas-Colouring-Book.pdf",
+    "files": [
+      {
+        "name": "Cosy Christmas Colouring Book (A4)",
+        "file": "Frog-Logic-Cosy-Christmas-Colouring-Book.pdf"
+      },
+      {
+        "name": "Cosy Christmas Colouring Book (US Letter)",
+        "file": "Frog-Logic-Cosy-Christmas-Colouring-Book-Letter.pdf"
+      }
+    ]
+  },
+  {
     "id": "d35-bright-christmas-cards",
     "name": "Bright Christmas Cards",
     "price": 3,
