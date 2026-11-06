@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -1064,6 +1064,10 @@
         },
         {
           "what": "Claude: check the new main picture is showing on the Tes Christmas Big Pack (13630406). Published 3 Nov; Tes reviews changes for up to 3 working days. Same picture went live on Etsy on 3 Nov, with the new titles and tags on the timetable and the SEN staff thank-you cards",
+          "who": "robot"
+        },
+        {
+          "what": "Taster sign-ups: 0 people (0 pages), 0 this week, last none yet",
           "who": "robot"
         }
       ]
