@@ -1092,6 +1092,14 @@
         {
           "what": "DONE 4 Nov (checked by Claude): the Monzo card is on Claude, Netlify and Etsy fees, and Etsy and Stripe both pay sales into Monzo. Still to move: Porkbun (renews June)",
           "who": "you"
+        },
+        {
+          "what": "Announce post: Cosy Christmas Colouring Book (£5 printable, 30 pages) — robot posts it at 11am; check it went out",
+          "who": "robot"
+        },
+        {
+          "what": "KDP: check the Bookshelf — both Frog Logic colouring books (submitted 6 Nov) should be live by now; copy the Amazon links into the two product pages (script.js paras) and queue an \"on Amazon now\" post",
+          "who": "claude"
         }
       ]
     },
@@ -1104,6 +1112,15 @@
         },
         {
           "what": "Facebook + Instagram: Pond Advent sign-up (froglogic.co.uk/advent)",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "items": [
+        {
+          "what": "Announce post: The Frog Logic Colouring Book (£4 printable) — robot posts it at 11am; check it went out",
           "who": "robot"
         }
       ]
