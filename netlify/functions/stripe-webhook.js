@@ -77,6 +77,7 @@ async function sendDownloadEmail({ toEmail, items }) {
                ? `<p>Your pack is licensed for ${items.filter((i) => i.licence).map((i) => i.licence).join("; ")} — print as much as you need for the people you support. The full licence is on page two, in plain English. Updated files for the next twelve months come to this address.</p>`
                : `<p>For personal and household use — print freely, please don't resell or redistribute the files.</p>`}
              <p>These links work for ${LINK_DAYS} days, so save the files somewhere safe. If you need them again after that, just ask.</p>
+             <p>If it helps, would you hit reply and tell me in a sentence? Frog Logic is just me, and real words from real people are the only reviews the shop has. If you're happy for me to quote you on the site (first name only, or no name), say so and I will.</p>
              <p>Trouble with a file — won't open, wrong one, didn't arrive? Reply to this email or write to
              <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a> and I'll sort it. The
              <a href="${site}/returns">returns page</a> has the detail.</p>
@@ -104,6 +105,7 @@ export function thankYouHtml({ firstName, items, parcels, site }) {
              <p>Everything is printed to order, so please allow a little time${parcels > 1 ? `. Your pieces come from ${parcels} different makers, so they'll arrive as ${parcels} separate parcels` : ""}. If anything hasn't turned up within two weeks, reply to this email and I'll chase it.</p>
              <p>While you wait: the <a href="${site}/p/the-pond-guides/?ref=thankyou">Pond Guides</a> are free, plain-English guides to autism, ADHD, AuDHD, PDA and more, written to hand to the people around you. Help yourself.</p>
              <p>If a friend would like something from the pond, <strong>POND10</strong> takes 10% off their first order.</p>
+             <p>And when it arrives: if you like it, would you hit reply and tell me in a sentence? Real words from real people are the only reviews the shop has. If you're happy for me to quote you on the site (first name only, or no name), say so and I will.</p>
              <p>Anything wrong, or just want to say hello? Reply to this email or write to
              <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a>. The
              <a href="${site}/returns">returns page</a> has the detail.</p>
