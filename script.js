@@ -2721,6 +2721,39 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="276" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">20 PAGES · 8 FROGS · PRINT AT HOME</text>
       <rect width="300" height="300" fill="url(#d41)"/>${mark()}</svg>`
   },
+  {
+    // Frog Logic Cosy Christmas Colouring Book (Sam, 6 Nov 2026: "create a Frog
+    // Logic Christmas colouring book for KDP... this one can go in the shop too").
+    // Drawn in code by automation/pdf/christmas-colouring-book.py; the "Build the
+    // Christmas colouring book" workflow rebuilds the PDFs and the pictures.
+    // Also a 66-page paperback on Amazon (KDP, £7.99) — add the Amazon link to
+    // the paras once it is live.
+    num: "D42 — Christmas colouring book", word: "Cosy Christmas Colouring Book",
+    line: "Thirty printable pages of the Frog Logic frog having a cosy Christmas: fairy-light naps, hot chocolate, mince pies, mitten snuggles and quiet hours by the fire. Thick, clear lines, big shapes, a kind line on every page. A4 and US Letter, print as often as you like.",
+    price: "£5.00", link: "#", bg: "#2F4A3A",
+    page: { title: "Christmas colouring book printable | bold and easy cosy frog pages for neurodivergent adults", eyebrow: "Printable colouring book · 30 pages · £5.00", cta: "Get the Christmas colouring book", paras: ["Thirty cosy Christmas scenes with the Frog Logic frog: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit, Snow Globe World and more. Every page has thick, bold lines and big shapes, so it's relaxing rather than fiddly, and a small, gentle line to go with it.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household.", "Prefer a real book? The same 30 designs are a 66-page paperback on Amazon, with a plain back to every picture so pens can't bleed through."] },
+    files: [{ name: "Cosy Christmas Colouring Book (A4)", file: "Frog-Logic-Cosy-Christmas-Colouring-Book.pdf" }, { name: "Cosy Christmas Colouring Book (US Letter)", file: "Frog-Logic-Cosy-Christmas-Colouring-Book-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d42", 0.1)}
+      <circle cx="40" cy="30" r="2.5" fill="#F6EFE2"/><circle cx="262" cy="52" r="2" fill="#F6EFE2"/><circle cx="28" cy="150" r="2" fill="#F6EFE2"/><circle cx="276" cy="190" r="2.5" fill="#F6EFE2"/><circle cx="60" cy="262" r="2" fill="#F6EFE2"/><circle cx="246" cy="270" r="2" fill="#F6EFE2"/><circle cx="150" cy="22" r="1.8" fill="#F6EFE2"/><circle cx="90" cy="60" r="1.8" fill="#F6EFE2"/><circle cx="212" cy="112" r="1.8" fill="#F6EFE2"/>
+      <text x="150" y="44" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="7.5" letter-spacing="0.2em" fill="${GOLD}">FROG LOGIC</text>
+      <text x="150" y="70" text-anchor="middle" font-family="Fraunces, serif" font-weight="800" font-size="24" fill="#F6EFE2">Cosy Christmas</text>
+      <text x="150" y="90" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="15" fill="#F6EFE2">Colouring Book</text>
+      <g transform="translate(150 182) scale(0.62)">
+        <!-- the frog: head, cheeks, Santa hat, scarf, mug -->
+        <path d="M-74,40 C-112,96 -112,160 -78,172 L78,172 C112,160 112,96 74,40 Z" fill="#FFFFFF" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/>
+        <ellipse cx="0" cy="0" rx="96" ry="70" fill="#FFFFFF" stroke="#22331F" stroke-width="7"/><circle cx="-52" cy="-56" r="38" fill="#FFFFFF" stroke="#22331F" stroke-width="7"/><circle cx="52" cy="-56" r="38" fill="#FFFFFF" stroke="#22331F" stroke-width="7"/>
+        <ellipse cx="0" cy="0" rx="96" ry="70" fill="#FFFFFF"/><circle cx="-52" cy="-56" r="34" fill="#FFFFFF"/><circle cx="52" cy="-56" r="34" fill="#FFFFFF"/>
+        <path d="M-72,-52 Q-52,-74 -32,-52 M32,-52 Q52,-74 72,-52" fill="none" stroke="#22331F" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="-10" cy="-10" r="3.5" fill="#22331F"/><circle cx="10" cy="-10" r="3.5" fill="#22331F"/>
+        <path d="M-24,10 Q0,30 24,10" fill="none" stroke="#22331F" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="-60" cy="14" r="15" fill="#F08F87"/><circle cx="60" cy="14" r="15" fill="#F08F87"/>
+        <path d="M-82,32 Q0,56 82,32 L84,56 Q0,82 -84,56 Z" fill="#C8473E" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M-34,74 L34,74 L30,134 Q0,144 -30,134 Z" fill="#F3D9A4" stroke="#22331F" stroke-width="6" stroke-linejoin="round"/>
+        <g transform="translate(0 -112) rotate(-8) scale(0.82)"><path d="M-62,4 C-50,-60 10,-96 70,-70 C40,-60 34,-30 58,4 Z" fill="#C8473E" stroke="#22331F" stroke-width="7" stroke-linejoin="round"/><circle cx="74" cy="-70" r="15" fill="#FFFFFF" stroke="#22331F" stroke-width="7"/><rect x="-72" y="-6" width="144" height="26" rx="13" fill="#FFFFFF" stroke="#22331F" stroke-width="7"/></g>
+      </g>
+      <text x="150" y="276" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">30 PAGES · PRINT AT HOME</text>
+      <rect width="300" height="300" fill="url(#d42)"/>${mark()}</svg>`
+  },
 ];
 
 // Halloween retires itself (Sam, 26 Oct 2026: "retire Halloween after 31 Oct").
