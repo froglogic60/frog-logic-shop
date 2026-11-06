@@ -331,7 +331,7 @@ def note_page(k):
             f'<text x="{W/2}" y="2250" text-anchor="middle" font-family="Atkinson" font-size="38" fill="#6E7A6B">This side is left plain so your pens can\u2019t show through onto a picture.</text>')
 
 def copyright_page():
-    rows = ["The Frog Logic Colouring Book", f"by {AUTHOR}", "", f"\u00a9 2026 {AUTHOR}. All rights reserved.",
+    rows = ["The Frog Logic Colouring Book", f"by {AUTHOR} (Samantha Hall)", "", f"\u00a9 2026 Samantha Hall, trading as {AUTHOR}. All rights reserved.",
             "The frogs and words in this book are Frog Logic\u2019s own.", "Please don\u2019t copy, share or sell the pages.", "",
             "Made by Sam, in Kent, England.", "froglogic.co.uk \u00b7 hello@froglogic.co.uk"]
     return ''.join(f'<text x="{W/2}" y="{1500 + i*70}" text-anchor="middle" font-family="Atkinson" font-size="44" fill="{INK}">{r}</text>' for i, r in enumerate(rows))
@@ -390,9 +390,10 @@ def kdp_cover_svg():
     o.append(f'<circle cx="{cx:.0f}" cy="{ty+1900}" r="760" fill="#F4EFE3"/>')
     g, _ = frog('comfort-creature', cx - 700, ty + 1180, 1400, 1440, colour=True); o.append(g)
     for j, n in enumerate(['chaos-gremlin', 'low-battery', 'overstimulated', 'neurospicy']):
-        g, _ = frog(n, fx + 270 + j * 520, ty + 2610, 460, 380, colour=True); o.append(g)
-    o.append(f'<text x="{cx:.0f}" y="{ty+3075}" text-anchor="middle" font-family="Atkinson" font-weight="700" font-size="66" fill="#22331F">8 frogs \u00b7 each drawn two ways \u00b7 bold lines, big shapes</text>')
-    o.append(f'<text x="{cx:.0f}" y="{ty+3200}" text-anchor="middle" font-family="Fraunces" font-weight="700" font-size="92" fill="#22331F">{AUTHOR}</text>')
+        g, _ = frog(n, fx + 270 + j * 520, ty + 2540, 440, 360, colour=True); o.append(g)
+    o.append(f'<text x="{cx:.0f}" y="{ty+3020}" text-anchor="middle" font-family="Atkinson" font-weight="700" font-size="62" fill="#22331F">8 frogs \u00b7 each drawn two ways \u00b7 bold lines, big shapes</text>')
+    o.append(f'<text x="{cx:.0f}" y="{ty+3105}" text-anchor="middle" font-family="Fraunces" font-weight="700" font-size="88" fill="#22331F">{AUTHOR}</text>')
+    o.append(f'<text x="{cx:.0f}" y="{ty+3172}" text-anchor="middle" font-family="Caveat" font-weight="700" font-size="62" fill="#6B4A32">by Samantha Hall</text>')
     # back (keep the lower right clear for Amazon's barcode)
     bx = bleed * U; bc = bx + tw * U / 2
     o.append(f'<image href="data:image/png;base64,{logo}" x="{bc-280:.0f}" y="{ty+330}" width="560" height="575"/>')
