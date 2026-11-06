@@ -65,7 +65,8 @@
     },
     "caption": "Small counts. Replied to one email? Gold star. Ate something green? Gold star. Got up on a hard day? Big gold star.\n\nTell the frog below and he'll give you yours ⭐\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/star-1.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-06T19:00:58.985Z"
   },
   {
     "postOn": "2026-11-07",
