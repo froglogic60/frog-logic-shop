@@ -1,0 +1,59 @@
+name: Build the Christmas colouring book
+# Renders the Frog Logic Cosy Christmas Colouring Book
+# (automation/pdf/christmas-colouring-book.py, 6 Nov 2026): the A4 and US
+# Letter printable PDFs into digital/ and the two shop/social pictures into
+# automation/social/promo/. The KDP paperback interior is built too, as an
+# artifact only (the repo is public, so the book itself is not committed).
+# Run by hand after any change to a scene. Commits [skip netlify]: the next
+# deliberate publish carries the PDFs.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer and fonts
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q librsvg2-bin fontconfig
+          pip install pypdf pillow fonttools
+          mkdir -p fonts ~/.fonts && cd fonts
+          npm pack @fontsource/poppins @fontsource/fraunces --silent
+          for t in *.tgz; do tar xzf "$t" && mv package "${t%%-[0-9]*}"; done
+          python - <<'EOF'
+          from fontTools.ttLib import TTFont
+          import os
+          for f in ["fontsource-poppins/files/poppins-latin-500-normal.woff", "fontsource-poppins/files/poppins-latin-700-normal.woff",
+                    "fontsource-fraunces/files/fraunces-latin-700-normal.woff", "fontsource-fraunces/files/fraunces-latin-800-normal.woff"]:
+              t = TTFont(f); t.flavor = None
+              t.save(os.path.expanduser("~/.fonts/" + os.path.basename(f).replace(".woff", ".ttf")))
+          EOF
+          fc-cache -f && fc-list | grep -iE "poppins|fraunces"
+      - name: Build the printable book and pictures
+        run: |
+          python automation/pdf/christmas-colouring-book.py printable .xmas-out
+          cp .xmas-out/Frog-Logic-Cosy-Christmas-Colouring-Book.pdf .xmas-out/Frog-Logic-Cosy-Christmas-Colouring-Book-Letter.pdf digital/
+          mkdir -p automation/social/promo
+          cp .xmas-out/christmas-colouring-book-square.jpg .xmas-out/christmas-colouring-book-post.jpg automation/social/promo/
+      - name: Build the KDP interior (artifact only)
+        run: python automation/pdf/christmas-colouring-book.py kdp .xmas-kdp
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kdp-interior
+          path: .xmas-kdp/Frog-Logic-Cosy-Christmas-Interior-8.5x11.pdf
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digital/Frog-Logic-Cosy-Christmas-Colouring-Book*.pdf automation/social/promo/christmas-colouring-book-*.jpg
+          git commit -m "Christmas colouring book built [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
