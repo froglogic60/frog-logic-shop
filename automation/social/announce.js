@@ -19,6 +19,7 @@
 const fs = require("fs");
 const path = require("path");
 const { makeRenderer } = require("./render2.js");
+const { makeReel, videoUrlFor, publishReel } = require("./reel.js");
 
 const GRAPH = "https://graph.facebook.com/v20.0";
 const RAW_BASE = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/queue";
@@ -57,6 +58,7 @@ async function render(spec) {
     fs.mkdirSync(QUEUE, { recursive: true });
     fs.copyFileSync(src, path.join(QUEUE, `${spec.name}.jpg`));
     console.log(`Using ${spec.image} for ${spec.name}.jpg`);
+    if (!spec.still) makeReel(path.join(QUEUE, `${spec.name}.jpg`));
     return;
   }
   const renderer = makeRenderer({
@@ -66,6 +68,8 @@ async function render(spec) {
   const out = path.join(QUEUE, `${spec.name}.jpg`);
   await renderer.renderToJpeg(renderer.svgFor(post, 0), out);
   console.log(`Generated ${spec.name}.jpg — "${spec.title}"`);
+  // Video-first (7 Nov 2026): every post also gets a Reel unless it says still:true.
+  if (!spec.still) makeReel(out);
 }
 
 async function getPageToken(userToken, pageId) {
@@ -90,7 +94,7 @@ async function waitForUrl(url) {
 // shared to the feed, then the Facebook Page video, so a failure on the
 // fussier one leaves nothing half-posted.
 async function publishVideo(spec) {
-  const videoUrl = `https://cdn.jsdelivr.net/gh/froglogic60/frog-logic-shop@main/${spec.video}`;
+  const videoUrl = videoUrlFor(spec.video);
   const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
   const forFacebook  = spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/fb");
   const forInstagram = spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig");
@@ -128,6 +132,23 @@ async function publishVideo(spec) {
 
 async function publish(spec) {
   if (spec.video) return publishVideo(spec);
+  // A Reel made from this post's picture (video-first, 7 Nov 2026). If it fails
+  // before Instagram has posted anything, the picture goes out instead.
+  const reel = path.join(QUEUE, `${spec.name}.mp4`);
+  if (!spec.still && fs.existsSync(reel)) {
+    const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
+    try {
+      return await publishReel({
+        videoUrl: videoUrlFor(`automation/social/queue/${spec.name}.mp4`),
+        igCaption: spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig"),
+        fbCaption: spec.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/fb"),
+        token,
+      });
+    } catch (e) {
+      if (e.igPosted) throw e;
+      console.error("Reel failed, posting the picture instead:", e.message);
+    }
+  }
   const imageUrl = `${RAW_BASE}/${spec.name}.jpg`;
   const token = await getPageToken(process.env.META_ACCESS_TOKEN, process.env.FB_PAGE_ID);
   await waitForUrl(imageUrl);

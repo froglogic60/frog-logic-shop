@@ -17,6 +17,7 @@ const fs = require("fs");
 const path = require("path");
 const { loadSiteData, scheduleFor, buildPost } = require("./lib.js");
 const { makeRenderer } = require("./render2.js");
+const { makeReel, videoUrlFor, publishReel } = require("./reel.js");
 
 const GRAPH = "https://graph.facebook.com/v20.0";
 const RAW_BASE = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/queue";
@@ -46,8 +47,11 @@ async function generate() {
   const name = `${iso}-${slot}`;
   const jpg = path.join(QUEUE, `${name}.jpg`);
   await renderer.renderToJpeg(renderer.svgFor(post, sched.occurrence), jpg);
+  // Video-first (7 Nov 2026): the picture is also turned into a 9 s Reel.
+  const mp4 = makeReel(jpg);
   fs.writeFileSync(path.join(QUEUE, `${name}.json`), JSON.stringify({
     caption: post.caption, kind: post.kind, image: `${name}.jpg`, page: post.page || null,
+    video: mp4 ? `${name}.mp4` : null,
   }, null, 2));
 
   // Housekeeping: drop queue files older than 7 days so the repo stays small.
@@ -105,6 +109,31 @@ async function post() {
   const fbLink = meta.page ? `froglogic.co.uk/p/${meta.page}/?ref=fb` : "froglogic.co.uk/fb";
   const forFacebook  = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, fbLink);
   const forInstagram = meta.caption.replace(/froglogic\.co\.uk(?![\/\w])/g, "froglogic.co.uk/ig");
+
+  // Video-first (7 Nov 2026): post the Reel; if it fails before Instagram
+  // has posted, fall through to the picture post below.
+  if (meta.video) {
+    try {
+      const ids = await publishReel({
+        videoUrl: videoUrlFor(`automation/social/queue/${meta.video}`),
+        igCaption: forInstagram, fbCaption: forFacebook, token,
+      });
+      meta.postedAt = new Date().toISOString();
+      meta.facebookId = ids.facebookId;
+      meta.instagramId = ids.instagramId;
+      meta.postedAs = "video";
+      fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
+      return;
+    } catch (e) {
+      if (e.igPosted) {
+        meta.postedAt = new Date().toISOString();
+        meta.postedAs = "video (Instagram only)";
+        fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
+        throw e;
+      }
+      console.error("Reel failed, posting the picture instead:", e.message);
+    }
+  }
 
   // Facebook: photo post (image + caption).
   const fb = await fetch(`${GRAPH}/${process.env.FB_PAGE_ID}/photos`, {
