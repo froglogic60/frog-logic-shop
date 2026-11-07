@@ -55,6 +55,11 @@ jobs:
         if: steps.check.outputs.due == 'yes'
         working-directory: automation/social
         run: npx playwright install --with-deps chromium
+      - name: Install video tools (Reels, 7 Nov 2026)
+        if: steps.check.outputs.due == 'yes'
+        run: |
+          python3 -c "import PIL" 2>/dev/null || pip install --quiet --break-system-packages pillow || pip install --quiet pillow
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Render the card
         if: steps.check.outputs.due == 'yes'
         working-directory: automation/social
@@ -71,7 +76,7 @@ jobs:
       - name: Post to Facebook and Instagram
         if: steps.check.outputs.due == 'yes'
         working-directory: automation/social
-        run: node announce.js due-post
+        run: COMMIT_SHA=$(git rev-parse HEAD) node announce.js due-post
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
