@@ -469,3 +469,23 @@
   to = "/404"
   status = 404
   force = true
+[[redirects]]
+  from = "/digital/Frog-Logic-Cosy-Christmas-Colouring-Book.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Frog-Logic-Cosy-Christmas-Colouring-Book-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/The-Calm-Plan-A4.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/The-Calm-Plan-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true

@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -1104,6 +1104,14 @@
         {
           "what": "KDP: check the Bookshelf — both Frog Logic colouring books (submitted 6 Nov) should be live by now; copy the Amazon links into the two product pages (script.js paras) and queue an \"on Amazon now\" post",
           "who": "claude"
+        },
+        {
+          "what": "The Calm Plan: run \"Build the product pages\", then the ONE \"Publish the shop\" deploy today puts it live at /p/the-calm-plan/ (£5), plus the review-ask emails and the fix that stops the Christmas colouring book PDFs downloading free",
+          "who": "claude"
+        },
+        {
+          "what": "KDP order this week: Cute Animals, Nature Scenes, then The Calm Plan (files in Desktop\\The Calm Plan), then Mandalas and Fantasy Worlds as the weekly limit allows",
+          "who": "claude"
         }
       ]
     },
@@ -1121,6 +1129,15 @@
         {
           "what": "Sky: did Sky reply to the cancellation email (sent 6 Nov, account 624725558248)? If not, ring 0333 759 0434 or use chat 9:00-19:30 — Claude can open the chat",
           "who": "you"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "items": [
+        {
+          "what": "The Calm Plan post goes out (announce queue, 11am)",
+          "who": "claude"
         }
       ]
     },

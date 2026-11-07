@@ -2537,5 +2537,23 @@
     "currency": "gbp",
     "file": "Organisation-Pack-Organisation.pdf",
     "licence": "every member of staff at one organisation, across all of its sites"
+  },
+  {
+    "id": "d43-the-calm-plan",
+    "name": "The Calm Plan",
+    "price": 5,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "The-Calm-Plan-A4.pdf",
+    "files": [
+      {
+        "name": "The Calm Plan (A4)",
+        "file": "The-Calm-Plan-A4.pdf"
+      },
+      {
+        "name": "The Calm Plan (US Letter)",
+        "file": "The-Calm-Plan-Letter.pdf"
+      }
+    ]
   }
 ]
