@@ -84,6 +84,11 @@ jobs:
         if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
         run: npx playwright install --with-deps chromium
+      - name: Install video tools (Reels, 7 Nov 2026)
+        if: steps.done.outputs.go == 'yes'
+        run: |
+          python3 -c "import PIL" 2>/dev/null || pip install --quiet --break-system-packages pillow || pip install --quiet pillow
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Generate today's post
         if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
@@ -100,7 +105,7 @@ jobs:
       - name: Publish to Facebook and Instagram
         if: steps.done.outputs.go == 'yes'
         working-directory: automation/social
-        run: SLOT=${{ steps.slot.outputs.slot }} node daily.js post
+        run: COMMIT_SHA=$(git rev-parse HEAD) SLOT=${{ steps.slot.outputs.slot }} node daily.js post
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
