@@ -30,6 +30,9 @@ let SHOP = process.env.PRINTIFY_SHOP_ID;
 if (!KEY) { console.error("Missing PRINTIFY_API_KEY"); process.exit(1); }
 const DRY = process.env.DRY_RUN === "1";
 const ONLY = (process.env.ONLY || "").split(",").map((s) => s.trim()).filter(Boolean);
+// ONLY_IDS: a regex of catalogue ids, so new designs can be built without
+// re-correcting every earlier US product (8 Nov 2026), e.g. "^f(8|9|1[0-9]|2[0-3])-".
+const ONLY_IDS = process.env.ONLY_IDS ? new RegExp(process.env.ONLY_IDS, "i") : null;
 
 // ukBlueprint picks the products; target is where the US copy is built.
 // pick() chooses which US variant stands in for a UK variant title.
@@ -125,7 +128,7 @@ async function shopProducts() {
     const usShipping = { first: usProfile.first_item.cost, additional: usProfile.additional_items.cost, currency: usProfile.first_item.currency };
     console.log(`\n=== ${kind}: ${bp.title} | ${pr.title} — US post ${usShipping.first}/${usShipping.additional} ${usShipping.currency}`);
 
-    const ids = margin.filter((r) => r.blueprint === L.ukBlueprint).map((r) => r.id).filter((id) => !/^h\d/.test(id));
+    const ids = margin.filter((r) => r.blueprint === L.ukBlueprint).map((r) => r.id).filter((id) => !/^h\d/.test(id) && (!ONLY_IDS || ONLY_IDS.test(id)));
     for (const id of ids) {
       const item = catalog.find((c) => c.id === id);
       const title = `${item ? item.name : id} — Frog Logic ${L.label} (US)`;
