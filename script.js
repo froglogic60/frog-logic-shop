@@ -1994,25 +1994,25 @@ const PRODUCTS = [
     svg: S_ART.brain_in_another_pond
   },
   {
-    num: "F24 — Tee", word: "Please Allow 3–5 Business Days", frog: true,
+    num: "F24 — Tee", word: "Please Allow 3-5 Business Days", frog: true,
     line: "Thinking at the speed of a big download. The answer arrives eventually, fully formed.",
     price: "£19.00", link: "#", bg: "#F4EFE3",
     svg: S_ART.three_to_five_business_days
   },
   {
-    num: "F25 — Mug", word: "Please Allow 3–5 Business Days", frog: true,
+    num: "F25 — Mug", word: "Please Allow 3-5 Business Days", frog: true,
     line: "Thinking at the speed of a big download. The answer arrives eventually, fully formed.",
     price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: S_ART.three_to_five_business_days
   },
   {
-    num: "F26 — Tee", word: "Had a Thought, It’s Gone", frog: true,
+    num: "F26 — Tee", word: "Had a Thought, It's Gone", frog: true,
     line: "It was a brilliant thought. It was right here. The frog watched it leave.",
     price: "£19.00", link: "#", bg: "#F4EFE3",
     svg: S_ART.had_a_thought_its_gone
   },
   {
-    num: "F27 — Mug", word: "Had a Thought, It’s Gone", frog: true,
+    num: "F27 — Mug", word: "Had a Thought, It's Gone", frog: true,
     line: "It was a brilliant thought. It was right here. The frog watched it leave.",
     price: "£13.50", link: "#", bg: "#F4EFE3",
     svg: S_ART.had_a_thought_its_gone

@@ -3185,7 +3185,7 @@
   },
   {
     "id": "f24-please-allow-3-5-business-days",
-    "name": "Please Allow 3–5 Business Days",
+    "name": "Please Allow 3-5 Business Days",
     "price": 19,
     "type": "physical",
     "currency": "gbp",
@@ -3258,7 +3258,7 @@
   },
   {
     "id": "f25-please-allow-3-5-business-days",
-    "name": "Please Allow 3–5 Business Days",
+    "name": "Please Allow 3-5 Business Days",
     "price": 13.5,
     "type": "physical",
     "currency": "gbp",
@@ -3287,7 +3287,7 @@
   },
   {
     "id": "f26-had-a-thought-it-s-gone",
-    "name": "Had a Thought, It’s Gone",
+    "name": "Had a Thought, It's Gone",
     "price": 19,
     "type": "physical",
     "currency": "gbp",
@@ -3360,7 +3360,7 @@
   },
   {
     "id": "f27-had-a-thought-it-s-gone",
-    "name": "Had a Thought, It’s Gone",
+    "name": "Had a Thought, It's Gone",
     "price": 13.5,
     "type": "physical",
     "currency": "gbp",
