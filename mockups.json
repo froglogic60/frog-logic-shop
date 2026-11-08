@@ -263,9 +263,65 @@
     "src": "https://images-api.printify.com/mockup/6af08437f180f4f0340b1175/69010/8348/brain-in-another-pond-frog-logic-mug.jpg?camera_label=front",
     "alt": "Brain in Another Pond on the real product"
   },
+  "f24-please-allow-3-5-business-days": {
+    "src": "https://images-api.printify.com/mockup/6af0bfbcfb9024aaf308a2fb/12100/102005/please-allow-3-5-business-days-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Please Allow 3–5 Business Days on the real product"
+  },
+  "f25-please-allow-3-5-business-days": {
+    "src": "https://images-api.printify.com/mockup/6af0bfc07a7a4ea34b0b020b/69010/8348/please-allow-3-5-business-days-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Please Allow 3–5 Business Days on the real product"
+  },
+  "f26-had-a-thought-it-s-gone": {
+    "src": "https://images-api.printify.com/mockup/6af0bfc45a7173e14f0ac58d/12100/102005/had-a-thought-its-gone-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Had a Thought, It’s Gone on the real product"
+  },
+  "f27-had-a-thought-it-s-gone": {
+    "src": "https://images-api.printify.com/mockup/6af0bfc8bc999340580a9cae/69010/8348/had-a-thought-its-gone-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Had a Thought, It’s Gone on the real product"
+  },
+  "f28-unexpected-human-interaction": {
+    "src": "https://images-api.printify.com/mockup/6af0bfcc59d5223aba04e120/12100/102005/unexpected-human-interaction-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Unexpected Human Interaction on the real product"
+  },
+  "f29-unexpected-human-interaction": {
+    "src": "https://images-api.printify.com/mockup/6af0bfd07a7a4ea34b0b0217/69010/8348/unexpected-human-interaction-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Unexpected Human Interaction on the real product"
+  },
   "f3-neurospicy": {
     "src": "https://images-api.printify.com/mockup/6a931beadb8c1bf77202f68b/12100/92570/neurospicy-frog-logic-tee.jpg?camera_label=front",
     "alt": "Neurospicy on the real product"
+  },
+  "f30-procrastinate-later": {
+    "src": "https://images-api.printify.com/mockup/6af0bfd4bc999340580a9cbd/12100/102005/procrastinate-later-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Procrastinate Later on the real product"
+  },
+  "f31-procrastinate-later": {
+    "src": "https://images-api.printify.com/mockup/6af0bfd8e696fed2aa02b915/69010/8348/procrastinate-later-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Procrastinate Later on the real product"
+  },
+  "f32-this-meeting-could-have-been-an-email": {
+    "src": "https://images-api.printify.com/mockup/6af0bfdcfb9024aaf308a314/12100/102005/this-meeting-could-have-been-an-email-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "This Meeting Could Have Been an Email on the real product"
+  },
+  "f33-this-meeting-could-have-been-an-email": {
+    "src": "https://images-api.printify.com/mockup/6af0bfe0bc999340580a9cc8/69010/8348/this-meeting-could-have-been-an-email-frog-logic-mug.jpg?camera_label=front",
+    "alt": "This Meeting Could Have Been an Email on the real product"
+  },
+  "f34-professional-overthinker": {
+    "src": "https://images-api.printify.com/mockup/6af0bfe559d5223aba04e142/12100/102005/professional-overthinker-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Professional Overthinker on the real product"
+  },
+  "f35-professional-overthinker": {
+    "src": "https://images-api.printify.com/mockup/6af0bfe8fb9024aaf308a31b/69010/8348/professional-overthinker-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Professional Overthinker on the real product"
+  },
+  "f36-open-tabs-have-open-tabs": {
+    "src": "https://images-api.printify.com/mockup/6af0bfed59d5223aba04e14f/12100/102005/open-tabs-have-open-tabs-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Open Tabs Have Open Tabs on the real product"
+  },
+  "f37-open-tabs-have-open-tabs": {
+    "src": "https://images-api.printify.com/mockup/6af0bff09219dad501082215/69010/8348/open-tabs-have-open-tabs-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Open Tabs Have Open Tabs on the real product"
   },
   "f4-low-battery": {
     "src": "https://images-api.printify.com/mockup/6a931bf1c1f8509ec80326fb/69010/8348/low-battery-frog-logic-mug.jpg?camera_label=front",
