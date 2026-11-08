@@ -2404,6 +2404,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b38d5a7173e14f0abac1",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2421,6 +2455,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3aef2139253b306b905",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2460,6 +2506,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b3913706445adc062bf0",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2477,6 +2557,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3b1f2139253b306b909",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2516,6 +2608,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b3953706445adc062bfb",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2533,6 +2659,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3b49219dad50108166a",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2572,6 +2710,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b39ae696fed2aa02ae1d",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2589,6 +2761,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3b73706445adc062c32",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2628,6 +2812,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b39e9219dad501081652",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2645,6 +2863,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3ba9219dad501081670",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2684,6 +2914,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b3a2f2139253b306b8f5",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2701,6 +2965,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3bd2f1d1d118f05395a",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2740,6 +3016,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b3a63706445adc062c14",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2757,6 +3067,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3c0d0555ac4190350cd",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
@@ -2796,6 +3118,40 @@
       "first": 277,
       "additional": 154,
       "zoneKey": "6:331"
+    },
+    "us": {
+      "price": 19,
+      "printifyProductId": "6af0b3aa3706445adc062c23",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102
+        },
+        {
+          "size": "M",
+          "variantId": 12101
+        },
+        {
+          "size": "L",
+          "variantId": 12100
+        },
+        {
+          "size": "XL",
+          "variantId": 12103
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104
+        }
+      ],
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 308,
+        "additional": 161
+      }
     }
   },
   {
@@ -2813,6 +3169,18 @@
       "first": 300,
       "additional": 192,
       "zoneKey": "535:6"
+    },
+    "us": {
+      "price": 13.5,
+      "printifyProductId": "6af0b3c3f2139253b306b91c",
+      "printifyVariantId": 65216,
+      "shipping": {
+        "provider": "us-99",
+        "providerName": "Printify Choice",
+        "country": "US",
+        "first": 446,
+        "additional": 231
+      }
     }
   },
   {
