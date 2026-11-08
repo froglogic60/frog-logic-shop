@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-15T11:17:52.115Z",
+  "ranAt": "2026-11-08T14:35:55.182Z",
   "etsyStore": 29335686,
   "results": [
     {
@@ -903,8 +903,282 @@
       "worstCost": 1177,
       "keeps": 585,
       "published": true
+    },
+    {
+      "id": "f8-frogs-in-a-trench-coat",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Frogs in a Trench Coat Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088b5da2ce6a780058c5d",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f10-the-frogs-ate-it",
+      "kind": "tee",
+      "where": "uk",
+      "title": "The Frogs Ate It Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088b7f180f4f0340b17d6",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f12-frog-is-processing",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Frog Is Processing Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088b9d0555ac4190325c4",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f14-professional-thought-hopper",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Professional Thought Hopper Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088baf2139253b3068c83",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f16-one-lily-pad-at-a-time",
+      "kind": "tee",
+      "where": "uk",
+      "title": "One Lily Pad at a Time Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088bcf180f4f0340b17e4",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f18-emotionally-supported-by-frogs",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Emotionally Supported by Frogs Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088bee696fed2aa0282dc",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f20-executive-dysfunction-pond-club",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Executive Dysfunction Pond Club Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088bff2139253b3068c8a",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f22-brain-in-another-pond",
+      "kind": "tee",
+      "where": "uk",
+      "title": "Brain in Another Pond Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "printifyProductId": "6af088c1f2139253b3068c8d",
+      "price": 1900,
+      "worstCost": 936,
+      "keeps": 580,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f9-frogs-in-a-trench-coat",
+      "kind": "mug",
+      "where": "uk",
+      "title": "Frogs in a Trench Coat Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c2f180f4f0340b17ec",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f11-the-frogs-ate-it",
+      "kind": "mug",
+      "where": "uk",
+      "title": "The Frogs Ate It Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c3f180f4f0340b17ee",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f13-frog-is-processing",
+      "kind": "mug",
+      "where": "uk",
+      "title": "Frog Is Processing Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c4da2ce6a780058c64",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f15-professional-thought-hopper",
+      "kind": "mug",
+      "where": "uk",
+      "title": "Professional Thought Hopper Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c6f180f4f0340b17f4",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f17-one-lily-pad-at-a-time",
+      "kind": "mug",
+      "where": "uk",
+      "title": "One Lily Pad at a Time Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c75dc84ade530322f0",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f19-emotionally-supported-by-frogs",
+      "kind": "mug",
+      "where": "uk",
+      "title": "Emotionally Supported by Frogs Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c8f180f4f0340b17f7",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f21-executive-dysfunction-pond-club",
+      "kind": "mug",
+      "where": "uk",
+      "title": "Executive Dysfunction Pond Club Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088c9f2139253b3068c9a",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
+    },
+    {
+      "id": "f23-brain-in-another-pond",
+      "kind": "mug",
+      "where": "uk",
+      "title": "Brain in Another Pond Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "printifyProductId": "6af088caf180f4f0340b17fa",
+      "price": 1350,
+      "worstCost": 534,
+      "keeps": 572,
+      "published": false,
+      "needsPhotos": true
     }
   ],
   "held": [],
-  "errors": []
+  "errors": [],
+  "photoStep": [
+    {
+      "title": "Frogs in a Trench Coat Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088b5da2ce6a780058c5d"
+    },
+    {
+      "title": "The Frogs Ate It Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088b7f180f4f0340b17d6"
+    },
+    {
+      "title": "Frog Is Processing Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088b9d0555ac4190325c4"
+    },
+    {
+      "title": "Professional Thought Hopper Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088baf2139253b3068c83"
+    },
+    {
+      "title": "One Lily Pad at a Time Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088bcf180f4f0340b17e4"
+    },
+    {
+      "title": "Emotionally Supported by Frogs Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088bee696fed2aa0282dc"
+    },
+    {
+      "title": "Executive Dysfunction Pond Club Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088bff2139253b3068c8a"
+    },
+    {
+      "title": "Brain in Another Pond Cute Frog T-Shirt — Neurodivergent ADHD and Autism Shirt, Unisex Heavy Cotton Tee",
+      "kind": "tee",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c1f2139253b3068c8d"
+    },
+    {
+      "title": "Frogs in a Trench Coat Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c2f180f4f0340b17ec"
+    },
+    {
+      "title": "The Frogs Ate It Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c3f180f4f0340b17ee"
+    },
+    {
+      "title": "Frog Is Processing Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c4da2ce6a780058c64"
+    },
+    {
+      "title": "Professional Thought Hopper Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c6f180f4f0340b17f4"
+    },
+    {
+      "title": "One Lily Pad at a Time Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c75dc84ade530322f0"
+    },
+    {
+      "title": "Emotionally Supported by Frogs Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c8f180f4f0340b17f7"
+    },
+    {
+      "title": "Executive Dysfunction Pond Club Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088c9f2139253b3068c9a"
+    },
+    {
+      "title": "Brain in Another Pond Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug",
+      "kind": "mug",
+      "url": "https://printify.com/app/mockup-library/shops/29335686/products/6af088caf180f4f0340b17fa"
+    }
+  ]
 }
