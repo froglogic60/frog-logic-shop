@@ -54,7 +54,7 @@ async function api(p, method = "GET", body) {
       const old = new Set();
       const print_areas = p.print_areas.map((a) => ({
         variant_ids: a.variant_ids,
-        placeholders: a.placeholders.map((ph) => ({
+        placeholders: a.placeholders.filter((ph) => ph.images && ph.images.length).map((ph) => ({
           position: ph.position,
           images: ph.images.map((im) => { old.add(im.id); return { id: newId || im.id, x: im.x, y: im.y, scale: im.scale, angle: im.angle }; }),
         })),
