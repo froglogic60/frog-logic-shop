@@ -10,6 +10,9 @@ on:
       only:
         description: "Lines (comma list, blank = all): tee,mug,print,notebook"
         default: ""
+      only_ids:
+        description: "Only catalogue ids matching this pattern (blank = all)"
+        default: ""
       dry_run:
         description: "Report only, build nothing"
         type: boolean
@@ -31,6 +34,7 @@ jobs:
           PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
           PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
           ONLY: ${{ inputs.only }}
+          ONLY_IDS: ${{ inputs.only_ids }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
       - name: Commit the result
         if: always()
