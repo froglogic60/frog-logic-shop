@@ -13,7 +13,7 @@
 // an Etsy-linked shop, IMAGES ONLY: shipping_template stays false so Printify
 // does not rewrite the UK-only / US-only delivery profiles.
 const KEY = process.env.PRINTIFY_API_KEY;
-const MAIN = process.env.PRINTIFY_SHOP_ID;
+let MAIN = process.env.PRINTIFY_SHOP_ID;
 const ART = process.env.ART;
 const DRY = process.env.DRY_RUN === "1";
 const PUBLISH = process.env.PUBLISH === "1";
@@ -35,6 +35,8 @@ async function api(p, method = "GET", body) {
 }
 
 (async () => {
+  // Same as printify-frogs.js: an empty secret means the first shop on the account.
+  if (!MAIN) { const shops = await api("/shops.json"); MAIN = String(shops[0].id); console.log("website shop:", shops[0].title, MAIN); }
   const list = process.env.PRODUCTS.split(",").map((s) => s.trim()).filter(Boolean).map((s) => {
     const [shop, id] = s.split(":");
     return { shop: shop === "main" ? MAIN : shop, id };
@@ -62,7 +64,7 @@ async function api(p, method = "GET", body) {
       if (DRY) continue;
       await api(`/shops/${shop}/products/${id}.json`, "PUT", { print_areas });
       console.log("   artwork swapped");
-      if (PUBLISH && shop !== MAIN) {
+      if (PUBLISH && String(shop) !== String(MAIN)) {
         await sleep(45000); // let Printify redraw the mockups first
         await api(`/shops/${shop}/products/${id}/publish.json`, "POST", {
           title: false, description: false, images: true, variants: false, tags: false, keyFeatures: false, shipping_template: false,
