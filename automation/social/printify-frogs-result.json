@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-11-08T14:16:26.535Z",
+  "createdAt": "2026-11-08T18:31:15.713Z",
   "results": [
     {
       "id": "f1-comfort-creature",
@@ -917,6 +917,419 @@
       "artworkScale": 0.4337722695584818,
       "artworkFile": "brain-in-another-pond.png",
       "mockup": "https://images-api.printify.com/mockup/6af08437f180f4f0340b1175/69010/8348/brain-in-another-pond-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f24-please-allow-3-5-business-days",
+      "num": "F24 — Tee",
+      "word": "Please Allow 3–5 Business Days",
+      "kind": "tee",
+      "printifyProductId": "6af0bfbcfb9024aaf308a2fb",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "three-to-five-business-days.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfbcfb9024aaf308a2fb/12100/102005/please-allow-3-5-business-days-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f25-please-allow-3-5-business-days",
+      "num": "F25 — Mug",
+      "word": "Please Allow 3–5 Business Days",
+      "kind": "mug",
+      "printifyProductId": "6af0bfc07a7a4ea34b0b020b",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "three-to-five-business-days.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfc07a7a4ea34b0b020b/69010/8348/please-allow-3-5-business-days-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f26-had-a-thought-it-s-gone",
+      "num": "F26 — Tee",
+      "word": "Had a Thought, It’s Gone",
+      "kind": "tee",
+      "printifyProductId": "6af0bfc45a7173e14f0ac58d",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "had-a-thought-its-gone.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfc45a7173e14f0ac58d/12100/102005/had-a-thought-its-gone-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f27-had-a-thought-it-s-gone",
+      "num": "F27 — Mug",
+      "word": "Had a Thought, It’s Gone",
+      "kind": "mug",
+      "printifyProductId": "6af0bfc8bc999340580a9cae",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "had-a-thought-its-gone.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfc8bc999340580a9cae/69010/8348/had-a-thought-its-gone-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f28-unexpected-human-interaction",
+      "num": "F28 — Tee",
+      "word": "Unexpected Human Interaction",
+      "kind": "tee",
+      "printifyProductId": "6af0bfcc59d5223aba04e120",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "unexpected-human-interaction.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfcc59d5223aba04e120/12100/102005/unexpected-human-interaction-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f29-unexpected-human-interaction",
+      "num": "F29 — Mug",
+      "word": "Unexpected Human Interaction",
+      "kind": "mug",
+      "printifyProductId": "6af0bfd07a7a4ea34b0b0217",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "unexpected-human-interaction.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfd07a7a4ea34b0b0217/69010/8348/unexpected-human-interaction-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f30-procrastinate-later",
+      "num": "F30 — Tee",
+      "word": "Procrastinate Later",
+      "kind": "tee",
+      "printifyProductId": "6af0bfd4bc999340580a9cbd",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "procrastinate-later.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfd4bc999340580a9cbd/12100/102005/procrastinate-later-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f31-procrastinate-later",
+      "num": "F31 — Mug",
+      "word": "Procrastinate Later",
+      "kind": "mug",
+      "printifyProductId": "6af0bfd8e696fed2aa02b915",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "procrastinate-later.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfd8e696fed2aa02b915/69010/8348/procrastinate-later-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f32-this-meeting-could-have-been-an-email",
+      "num": "F32 — Tee",
+      "word": "This Meeting Could Have Been an Email",
+      "kind": "tee",
+      "printifyProductId": "6af0bfdcfb9024aaf308a314",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "could-have-been-an-email.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfdcfb9024aaf308a314/12100/102005/this-meeting-could-have-been-an-email-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f33-this-meeting-could-have-been-an-email",
+      "num": "F33 — Mug",
+      "word": "This Meeting Could Have Been an Email",
+      "kind": "mug",
+      "printifyProductId": "6af0bfe0bc999340580a9cc8",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "could-have-been-an-email.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfe0bc999340580a9cc8/69010/8348/this-meeting-could-have-been-an-email-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f34-professional-overthinker",
+      "num": "F34 — Tee",
+      "word": "Professional Overthinker",
+      "kind": "tee",
+      "printifyProductId": "6af0bfe559d5223aba04e142",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "professional-overthinker.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfe559d5223aba04e142/12100/102005/professional-overthinker-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f35-professional-overthinker",
+      "num": "F35 — Mug",
+      "word": "Professional Overthinker",
+      "kind": "mug",
+      "printifyProductId": "6af0bfe8fb9024aaf308a31b",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "professional-overthinker.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfe8fb9024aaf308a31b/69010/8348/professional-overthinker-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f36-open-tabs-have-open-tabs",
+      "num": "F36 — Tee",
+      "word": "Open Tabs Have Open Tabs",
+      "kind": "tee",
+      "printifyProductId": "6af0bfed59d5223aba04e14f",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "open-tabs-have-open-tabs.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bfed59d5223aba04e14f/12100/102005/open-tabs-have-open-tabs-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f37-open-tabs-have-open-tabs",
+      "num": "F37 — Mug",
+      "word": "Open Tabs Have Open Tabs",
+      "kind": "mug",
+      "printifyProductId": "6af0bff09219dad501082215",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "open-tabs-have-open-tabs.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0bff09219dad501082215/69010/8348/open-tabs-have-open-tabs-frog-logic-mug.jpg?camera_label=front"
     }
   ],
   "errors": []
