@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-08T14:30:48.766Z",
+  "checkedAt": "2026-11-08T18:38:38.261Z",
   "markupRule": 0.6,
   "rows": [
     {
@@ -663,6 +663,90 @@
       "sizes": 5
     },
     {
+      "id": "f24-please-allow-3-5-business-days",
+      "name": "Please Allow 3–5 Business Days",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
+      "id": "f26-had-a-thought-it-s-gone",
+      "name": "Had a Thought, It’s Gone",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
+      "id": "f28-unexpected-human-interaction",
+      "name": "Unexpected Human Interaction",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
+      "id": "f30-procrastinate-later",
+      "name": "Procrastinate Later",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
+      "id": "f32-this-meeting-could-have-been-an-email",
+      "name": "This Meeting Could Have Been an Email",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
+      "id": "f34-professional-overthinker",
+      "name": "Professional Overthinker",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
+      "id": "f36-open-tabs-have-open-tabs",
+      "name": "Open Tabs Have Open Tabs",
+      "blueprint": 6,
+      "maker": "Shirt Monkey",
+      "price": 1900,
+      "cost": 936,
+      "keeps": 964,
+      "markup": 1.0299145299145298,
+      "postageFirst": 277,
+      "sizes": 5
+    },
+    {
       "id": "04-47-things-at-once",
       "name": "47 Things at Once",
       "blueprint": 535,
@@ -869,6 +953,90 @@
     {
       "id": "f23-brain-in-another-pond",
       "name": "Brain in Another Pond",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f25-please-allow-3-5-business-days",
+      "name": "Please Allow 3–5 Business Days",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f27-had-a-thought-it-s-gone",
+      "name": "Had a Thought, It’s Gone",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f29-unexpected-human-interaction",
+      "name": "Unexpected Human Interaction",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f31-procrastinate-later",
+      "name": "Procrastinate Later",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f33-this-meeting-could-have-been-an-email",
+      "name": "This Meeting Could Have Been an Email",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f35-professional-overthinker",
+      "name": "Professional Overthinker",
+      "blueprint": 535,
+      "maker": "T Shirt and Sons",
+      "price": 1350,
+      "cost": 534,
+      "keeps": 816,
+      "markup": 1.5280898876404494,
+      "postageFirst": 300,
+      "sizes": 0
+    },
+    {
+      "id": "f37-open-tabs-have-open-tabs",
+      "name": "Open Tabs Have Open Tabs",
       "blueprint": 535,
       "maker": "T Shirt and Sons",
       "price": 1350,
