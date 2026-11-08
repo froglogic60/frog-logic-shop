@@ -2555,5 +2555,27 @@
         "file": "The-Calm-Plan-Letter.pdf"
       }
     ]
+  },
+  {
+    "id": "d44-the-adhd-money-kit",
+    "name": "The ADHD Money Kit",
+    "price": 7,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "ADHD-Money-Kit-A4.pdf",
+    "files": [
+      {
+        "name": "The ADHD Money Kit (A4)",
+        "file": "ADHD-Money-Kit-A4.pdf"
+      },
+      {
+        "name": "The ADHD Money Kit (US Letter)",
+        "file": "ADHD-Money-Kit-Letter.pdf"
+      },
+      {
+        "name": "The ADHD Money Kit spreadsheet (Excel / Google Sheets)",
+        "file": "ADHD-Money-Kit-Spreadsheet.xlsx"
+      }
+    ]
   }
 ]

@@ -64,7 +64,7 @@ export default async (req) => {
   const expires = Number(u.searchParams.get("e") || 0);
   const sig = u.searchParams.get("s") || "";
 
-  if (!/^[A-Za-z0-9._-]+\.pdf$/.test(file) || !expires || !sig) return page(400, "That download link isn't complete.");
+  if (!/^[A-Za-z0-9._-]+\.(pdf|xlsx)$/.test(file) || !expires || !sig) return page(400, "That download link isn't complete.");
 
   let good = false;
   try {
@@ -83,7 +83,8 @@ export default async (req) => {
   return new Response(fs.readFileSync(p), {
     status: 200,
     headers: {
-      "content-type": "application/pdf",
+      // .xlsx added 8 Nov 2026 for the ADHD Money Kit spreadsheet.
+      "content-type": file.endsWith(".xlsx") ? "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" : "application/pdf",
       "content-disposition": `attachment; filename="${file}"`,
       "cache-control": "private, no-store",
       "x-robots-tag": "noindex",
