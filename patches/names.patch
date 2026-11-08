@@ -1,0 +1,75 @@
+# Slogan names: plain hyphen and apostrophe (Etsy/Printify refuse en dash and curly quote in titles) [skip netlify]
+diff --git a/netlify/functions/catalog.json b/netlify/functions/catalog.json
+index 64d49d0..0b28317 100644
+--- a/netlify/functions/catalog.json
++++ b/netlify/functions/catalog.json
+@@ -3185,7 +3185,7 @@
+   },
+   {
+     "id": "f24-please-allow-3-5-business-days",
+-    "name": "Please Allow 3–5 Business Days",
++    "name": "Please Allow 3-5 Business Days",
+     "price": 19,
+     "type": "physical",
+     "currency": "gbp",
+@@ -3258,7 +3258,7 @@
+   },
+   {
+     "id": "f25-please-allow-3-5-business-days",
+-    "name": "Please Allow 3–5 Business Days",
++    "name": "Please Allow 3-5 Business Days",
+     "price": 13.5,
+     "type": "physical",
+     "currency": "gbp",
+@@ -3287,7 +3287,7 @@
+   },
+   {
+     "id": "f26-had-a-thought-it-s-gone",
+-    "name": "Had a Thought, It’s Gone",
++    "name": "Had a Thought, It's Gone",
+     "price": 19,
+     "type": "physical",
+     "currency": "gbp",
+@@ -3360,7 +3360,7 @@
+   },
+   {
+     "id": "f27-had-a-thought-it-s-gone",
+-    "name": "Had a Thought, It’s Gone",
++    "name": "Had a Thought, It's Gone",
+     "price": 13.5,
+     "type": "physical",
+     "currency": "gbp",
+diff --git a/script.js b/script.js
+index 5438bc0..c723dda 100644
+--- a/script.js
++++ b/script.js
+@@ -1994,25 +1994,25 @@ const PRODUCTS = [
+     svg: S_ART.brain_in_another_pond
+   },
+   {
+-    num: "F24 — Tee", word: "Please Allow 3–5 Business Days", frog: true,
++    num: "F24 — Tee", word: "Please Allow 3-5 Business Days", frog: true,
+     line: "Thinking at the speed of a big download. The answer arrives eventually, fully formed.",
+     price: "£19.00", link: "#", bg: "#F4EFE3",
+     svg: S_ART.three_to_five_business_days
+   },
+   {
+-    num: "F25 — Mug", word: "Please Allow 3–5 Business Days", frog: true,
++    num: "F25 — Mug", word: "Please Allow 3-5 Business Days", frog: true,
+     line: "Thinking at the speed of a big download. The answer arrives eventually, fully formed.",
+     price: "£13.50", link: "#", bg: "#F4EFE3",
+     svg: S_ART.three_to_five_business_days
+   },
+   {
+-    num: "F26 — Tee", word: "Had a Thought, It’s Gone", frog: true,
++    num: "F26 — Tee", word: "Had a Thought, It's Gone", frog: true,
+     line: "It was a brilliant thought. It was right here. The frog watched it leave.",
+     price: "£19.00", link: "#", bg: "#F4EFE3",
+     svg: S_ART.had_a_thought_its_gone
+   },
+   {
+-    num: "F27 — Mug", word: "Had a Thought, It’s Gone", frog: true,
++    num: "F27 — Mug", word: "Had a Thought, It's Gone", frog: true,
+     line: "It was a brilliant thought. It was right here. The frog watched it leave.",
+     price: "£13.50", link: "#", bg: "#F4EFE3",
+     svg: S_ART.had_a_thought_its_gone
