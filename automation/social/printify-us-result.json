@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-11-08T17:39:19.012Z",
+  "createdAt": "2026-11-08T18:42:14.339Z",
   "results": [
     {
       "id": "01-overstimulated",
@@ -1896,6 +1896,489 @@
       "placement": "refitted",
       "mockup": "https://images-api.printify.com/mockup/6af0b3c3f2139253b306b91c/65216/6310/brain-in-another-pond-frog-logic-mug-us.jpg?camera_label=front",
       "ukProductId": "6af08437f180f4f0340b1175"
+    },
+    {
+      "id": "f24-please-allow-3-5-business-days",
+      "kind": "tee",
+      "name": "Please Allow 3–5 Business Days",
+      "printifyProductId": "6af0c24f9219dad501082494",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c24f9219dad501082494/12100/102005/please-allow-3-5-business-days-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfbcfb9024aaf308a2fb"
+    },
+    {
+      "id": "f26-had-a-thought-it-s-gone",
+      "kind": "tee",
+      "name": "Had a Thought, It’s Gone",
+      "printifyProductId": "6af0c253f2139253b306c716",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c253f2139253b306c716/12100/102005/had-a-thought-its-gone-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfc45a7173e14f0ac58d"
+    },
+    {
+      "id": "f28-unexpected-human-interaction",
+      "kind": "tee",
+      "name": "Unexpected Human Interaction",
+      "printifyProductId": "6af0c25859d5223aba04e3e5",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c25859d5223aba04e3e5/12100/102005/unexpected-human-interaction-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfcc59d5223aba04e120"
+    },
+    {
+      "id": "f30-procrastinate-later",
+      "kind": "tee",
+      "name": "Procrastinate Later",
+      "printifyProductId": "6af0c25c59d5223aba04e3f6",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c25c59d5223aba04e3f6/12100/102005/procrastinate-later-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfd4bc999340580a9cbd"
+    },
+    {
+      "id": "f32-this-meeting-could-have-been-an-email",
+      "kind": "tee",
+      "name": "This Meeting Could Have Been an Email",
+      "printifyProductId": "6af0c26159d5223aba04e40c",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c26159d5223aba04e40c/12100/102005/this-meeting-could-have-been-an-email-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfdcfb9024aaf308a314"
+    },
+    {
+      "id": "f34-professional-overthinker",
+      "kind": "tee",
+      "name": "Professional Overthinker",
+      "printifyProductId": "6af0c2655dc84ade53035ad2",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c2655dc84ade53035ad2/12100/102005/professional-overthinker-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfe559d5223aba04e142"
+    },
+    {
+      "id": "f36-open-tabs-have-open-tabs",
+      "kind": "tee",
+      "name": "Open Tabs Have Open Tabs",
+      "printifyProductId": "6af0c269bc999340580a9faf",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 968
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 968
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 968
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 968
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 1177
+        }
+      ],
+      "price": 1900,
+      "worstCost": 1177,
+      "blueprintId": 6,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 399,
+        "additional": 209,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c269bc999340580a9faf/12100/102005/open-tabs-have-open-tabs-frog-logic-tee-us.jpg?camera_label=front-2",
+      "ukProductId": "6af0bfed59d5223aba04e14f"
+    },
+    {
+      "id": "f25-please-allow-3-5-business-days",
+      "kind": "mug",
+      "name": "Please Allow 3–5 Business Days",
+      "printifyProductId": "6af0c26ef2139253b306c784",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c26ef2139253b306c784/65216/6310/please-allow-3-5-business-days-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bfc07a7a4ea34b0b020b"
+    },
+    {
+      "id": "f27-had-a-thought-it-s-gone",
+      "kind": "mug",
+      "name": "Had a Thought, It’s Gone",
+      "printifyProductId": "6af0c272f2139253b306c791",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c272f2139253b306c791/65216/6310/had-a-thought-its-gone-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bfc8bc999340580a9cae"
+    },
+    {
+      "id": "f29-unexpected-human-interaction",
+      "kind": "mug",
+      "name": "Unexpected Human Interaction",
+      "printifyProductId": "6af0c2755a7173e14f0ac899",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c2755a7173e14f0ac899/65216/6310/unexpected-human-interaction-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bfd07a7a4ea34b0b0217"
+    },
+    {
+      "id": "f31-procrastinate-later",
+      "kind": "mug",
+      "name": "Procrastinate Later",
+      "printifyProductId": "6af0c278fb9024aaf308a61b",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c278fb9024aaf308a61b/65216/6310/procrastinate-later-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bfd8e696fed2aa02b915"
+    },
+    {
+      "id": "f33-this-meeting-could-have-been-an-email",
+      "kind": "mug",
+      "name": "This Meeting Could Have Been an Email",
+      "printifyProductId": "6af0c27cd0555ac419035e91",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c27cd0555ac419035e91/65216/6310/this-meeting-could-have-been-an-email-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bfe0bc999340580a9cc8"
+    },
+    {
+      "id": "f35-professional-overthinker",
+      "kind": "mug",
+      "name": "Professional Overthinker",
+      "printifyProductId": "6af0c27ff2139253b306c7b8",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c27ff2139253b306c7b8/65216/6310/professional-overthinker-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bfe8fb9024aaf308a31b"
+    },
+    {
+      "id": "f37-open-tabs-have-open-tabs",
+      "kind": "mug",
+      "name": "Open Tabs Have Open Tabs",
+      "printifyProductId": "6af0c282d0555ac419035e9e",
+      "printifyVariantId": 65216,
+      "price": 1350,
+      "worstCost": 503,
+      "blueprintId": 478,
+      "blueprint": "Ceramic Mug, (11oz, 15oz)",
+      "providerId": 99,
+      "provider": "Printify Choice",
+      "usShipping": {
+        "first": 579,
+        "additional": 299,
+        "currency": "USD"
+      },
+      "placement": "refitted",
+      "mockup": "https://images-api.printify.com/mockup/6af0c282d0555ac419035e9e/65216/6310/open-tabs-have-open-tabs-frog-logic-mug-us.jpg?camera_label=front",
+      "ukProductId": "6af0bff09219dad501082215"
     }
   ],
   "errors": []
