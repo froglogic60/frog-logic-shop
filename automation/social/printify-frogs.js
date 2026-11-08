@@ -77,6 +77,21 @@ const ARTWORK = {
   "f21-executive-dysfunction-pond-club": "executive-dysfunction-pond-club.png",
   "f22-brain-in-another-pond": "brain-in-another-pond.png",
   "f23-brain-in-another-pond": "brain-in-another-pond.png",
+  // Second slogan batch, 8 Nov 2026 (tee then mug for each design)
+  "f24-please-allow-3-5-business-days": "three-to-five-business-days.png",
+  "f25-please-allow-3-5-business-days": "three-to-five-business-days.png",
+  "f26-had-a-thought-it-s-gone": "had-a-thought-its-gone.png",
+  "f27-had-a-thought-it-s-gone": "had-a-thought-its-gone.png",
+  "f28-unexpected-human-interaction": "unexpected-human-interaction.png",
+  "f29-unexpected-human-interaction": "unexpected-human-interaction.png",
+  "f30-procrastinate-later": "procrastinate-later.png",
+  "f31-procrastinate-later": "procrastinate-later.png",
+  "f32-this-meeting-could-have-been-an-email": "could-have-been-an-email.png",
+  "f33-this-meeting-could-have-been-an-email": "could-have-been-an-email.png",
+  "f34-professional-overthinker": "professional-overthinker.png",
+  "f35-professional-overthinker": "professional-overthinker.png",
+  "f36-open-tabs-have-open-tabs": "open-tabs-have-open-tabs.png",
+  "f37-open-tabs-have-open-tabs": "open-tabs-have-open-tabs.png",
 };
 
 // Same targets as printify-rebuild.js, checked against Printify's own titles
