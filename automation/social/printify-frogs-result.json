@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-09-05T16:20:44.440Z",
+  "createdAt": "2026-11-08T14:16:26.535Z",
   "results": [
     {
       "id": "f1-comfort-creature",
@@ -445,6 +445,478 @@
       "artworkScale": 1,
       "artworkFile": "do-not-perceive-me-poster.png",
       "mockup": "https://images-api.printify.com/mockup/6a9c4159164919b030061805/75271/20213/do-not-perceive-me-frog-logic-print.jpg?camera_label=front"
+    },
+    {
+      "id": "f8-frogs-in-a-trench-coat",
+      "num": "F8 — Tee",
+      "word": "Frogs in a Trench Coat",
+      "kind": "tee",
+      "printifyProductId": "6af083fce83cc5e66301604e",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "frogs-in-a-trench-coat.png",
+      "mockup": "https://images-api.printify.com/mockup/6af083fce83cc5e66301604e/12100/102005/frogs-in-a-trench-coat-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f9-frogs-in-a-trench-coat",
+      "num": "F9 — Mug",
+      "word": "Frogs in a Trench Coat",
+      "kind": "mug",
+      "printifyProductId": "6af08400e83cc5e66301605a",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "frogs-in-a-trench-coat.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08400e83cc5e66301605a/69010/8348/frogs-in-a-trench-coat-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f10-the-frogs-ate-it",
+      "num": "F10 — Tee",
+      "word": "The Frogs Ate It",
+      "kind": "tee",
+      "printifyProductId": "6af08404e696fed2aa027cb7",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "the-frogs-ate-it.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08404e696fed2aa027cb7/12100/102005/the-frogs-ate-it-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f11-the-frogs-ate-it",
+      "num": "F11 — Mug",
+      "word": "The Frogs Ate It",
+      "kind": "mug",
+      "printifyProductId": "6af08408f180f4f0340b114a",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "the-frogs-ate-it.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08408f180f4f0340b114a/69010/8348/the-frogs-ate-it-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f12-frog-is-processing",
+      "num": "F12 — Tee",
+      "word": "Frog Is Processing",
+      "kind": "tee",
+      "printifyProductId": "6af0840cf180f4f0340b114f",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "frog-is-processing.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0840cf180f4f0340b114f/12100/102005/frog-is-processing-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f13-frog-is-processing",
+      "num": "F13 — Mug",
+      "word": "Frog Is Processing",
+      "kind": "mug",
+      "printifyProductId": "6af08410e696fed2aa027cc1",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "frog-is-processing.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08410e696fed2aa027cc1/69010/8348/frog-is-processing-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f14-professional-thought-hopper",
+      "num": "F14 — Tee",
+      "word": "Professional Thought Hopper",
+      "kind": "tee",
+      "printifyProductId": "6af084146d33a6245903311f",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "professional-thought-hopper.png",
+      "mockup": "https://images-api.printify.com/mockup/6af084146d33a6245903311f/12100/102005/professional-thought-hopper-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f15-professional-thought-hopper",
+      "num": "F15 — Mug",
+      "word": "Professional Thought Hopper",
+      "kind": "mug",
+      "printifyProductId": "6af084185a7173e14f0a89b8",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "professional-thought-hopper.png",
+      "mockup": "https://images-api.printify.com/mockup/6af084185a7173e14f0a89b8/69010/8348/professional-thought-hopper-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f16-one-lily-pad-at-a-time",
+      "num": "F16 — Tee",
+      "word": "One Lily Pad at a Time",
+      "kind": "tee",
+      "printifyProductId": "6af0841c30eb20c4780faeed",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "one-lily-pad-at-a-time.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0841c30eb20c4780faeed/12100/102005/one-lily-pad-at-a-time-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f17-one-lily-pad-at-a-time",
+      "num": "F17 — Mug",
+      "word": "One Lily Pad at a Time",
+      "kind": "mug",
+      "printifyProductId": "6af084206d33a6245903312b",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "one-lily-pad-at-a-time.png",
+      "mockup": "https://images-api.printify.com/mockup/6af084206d33a6245903312b/69010/8348/one-lily-pad-at-a-time-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f18-emotionally-supported-by-frogs",
+      "num": "F18 — Tee",
+      "word": "Emotionally Supported by Frogs",
+      "kind": "tee",
+      "printifyProductId": "6af08424f180f4f0340b115b",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "emotionally-supported-by-frogs.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08424f180f4f0340b115b/12100/102005/emotionally-supported-by-frogs-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f19-emotionally-supported-by-frogs",
+      "num": "F19 — Mug",
+      "word": "Emotionally Supported by Frogs",
+      "kind": "mug",
+      "printifyProductId": "6af08428f180f4f0340b1160",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "emotionally-supported-by-frogs.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08428f180f4f0340b1160/69010/8348/emotionally-supported-by-frogs-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f20-executive-dysfunction-pond-club",
+      "num": "F20 — Tee",
+      "word": "Executive Dysfunction Pond Club",
+      "kind": "tee",
+      "printifyProductId": "6af0842c6d33a62459033139",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "executive-dysfunction-pond-club.png",
+      "mockup": "https://images-api.printify.com/mockup/6af0842c6d33a62459033139/12100/102005/executive-dysfunction-pond-club-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f21-executive-dysfunction-pond-club",
+      "num": "F21 — Mug",
+      "word": "Executive Dysfunction Pond Club",
+      "kind": "mug",
+      "printifyProductId": "6af08430e83cc5e663016081",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "executive-dysfunction-pond-club.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08430e83cc5e663016081/69010/8348/executive-dysfunction-pond-club-frog-logic-mug.jpg?camera_label=front"
+    },
+    {
+      "id": "f22-brain-in-another-pond",
+      "num": "F22 — Tee",
+      "word": "Brain in Another Pond",
+      "kind": "tee",
+      "printifyProductId": "6af084346d33a62459033141",
+      "printifyVariantId": 12102,
+      "sizes": [
+        {
+          "size": "S",
+          "variantId": 12102,
+          "cost": 936
+        },
+        {
+          "size": "M",
+          "variantId": 12101,
+          "cost": 936
+        },
+        {
+          "size": "L",
+          "variantId": 12100,
+          "cost": 936
+        },
+        {
+          "size": "XL",
+          "variantId": 12103,
+          "cost": 936
+        },
+        {
+          "size": "2XL",
+          "variantId": 12104,
+          "cost": 936
+        }
+      ],
+      "price": 1900,
+      "worstCost": 936,
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "Shirt Monkey",
+      "country": "GB",
+      "artworkScale": 1,
+      "artworkFile": "brain-in-another-pond.png",
+      "mockup": "https://images-api.printify.com/mockup/6af084346d33a62459033141/12100/102005/brain-in-another-pond-frog-logic-tee.jpg?camera_label=front-2"
+    },
+    {
+      "id": "f23-brain-in-another-pond",
+      "num": "F23 — Mug",
+      "word": "Brain in Another Pond",
+      "kind": "mug",
+      "printifyProductId": "6af08437f180f4f0340b1175",
+      "printifyVariantId": 69010,
+      "price": 1350,
+      "worstCost": 534,
+      "blueprint": "11oz White Mug",
+      "provider": "T Shirt and Sons",
+      "country": "GB",
+      "artworkScale": 0.4337722695584818,
+      "artworkFile": "brain-in-another-pond.png",
+      "mockup": "https://images-api.printify.com/mockup/6af08437f180f4f0340b1175/69010/8348/brain-in-another-pond-frog-logic-mug.jpg?camera_label=front"
     }
   ],
   "errors": []
