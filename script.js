@@ -2991,6 +2991,29 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="278" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">UK PRINTABLE + SPREADSHEET</text>
       <rect width="300" height="300" fill="url(#d44)"/>${mark()}</svg>`
   },
+  {
+    // Year-round visual timetable (Sam, 8 Nov 2026: "do all of them"). Built by
+    // xmas-printables.cjs (job Visual-Timetable-Cards) into digital/.
+    num: "D45 — Printable PDF", word: "Visual Timetable Cards",
+    line: "A year-round visual timetable with UK school-day wording: a My Day schedule, a Today page for grown-ups and teens, a now and next board, a whole-week planner, 74 picture cards (54 for children, from the school run, PE kit and packed lunch to tea time, the dentist and swimming, plus 20 grown-up cards like work, emails, cook, pay bills and take meds), first/then, I need a break and I need help cards. A4 and US Letter.",
+    price: "£5.00", link: "#", bg: "#3C5B45",
+    page: { title: "Visual timetable printable UK | visual schedule picture cards for autistic children and adults, now and next board, school routine cards", eyebrow: "Printable PDF · 10 pages · 80 cards · £5.00", cta: "Get the cards", paras: ["Ten pages in two PDFs, A4 and US Letter, delivered the moment you pay. A My Day timetable to fill in, a Today page with a time column for grown-ups and teens, a now and next board for the busy days, and a whole week on one page for PE days, clubs and visits.", "The picture cards use the words UK families and schools actually say: school run, assembly, PE kit, break time, packed lunch, home time, after-school club, homework and tea time. There are 54 drawn for children, 20 grown-up cards (work, emails, meeting, cook, washing, pay bills, take meds, wind down and more) and blanks for anything only your family does.", "Print the cards on card or laminate them, and stick Velcro dots or Blu Tack on the back so they last for years. Share a set with school so home and school use the same pictures. For your own family's or classroom's use; please don't resell or share the file."] },
+    files: [{ name: "Visual Timetable Cards (A4)", file: "Visual-Timetable-Cards.pdf" }, { name: "Visual Timetable Cards (US Letter)", file: "Visual-Timetable-Cards-Letter.pdf" }],
+    svg: `<svg viewBox="0 0 300 300">${grain("d45", 0.1)}
+      <rect x="62" y="40" width="176" height="200" rx="4" fill="#ffffff"/>
+      <g fill="none" stroke="#9AA7B0" stroke-width="1.6" stroke-dasharray="3 3">
+        <rect x="76" y="56" width="34" height="34" rx="4"/><rect x="118" y="56" width="34" height="34" rx="4"/><rect x="160" y="56" width="34" height="34" rx="4"/><rect x="202" y="56" width="24" height="34" rx="4"/>
+        <rect x="76" y="98" width="34" height="34" rx="4"/><rect x="118" y="98" width="34" height="34" rx="4"/><rect x="160" y="98" width="34" height="34" rx="4"/><rect x="202" y="98" width="24" height="34" rx="4"/>
+      </g>
+      <path d="M82 84 V68 H104 V84 Z M80 70 L93 60 L106 70" fill="#E2C99F" stroke="#22331F" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M126 64 C126 58 144 58 144 64 V84 H126 Z" fill="#6E9BC8" stroke="#22331F" stroke-width="2"/>
+      <circle cx="177" cy="73" r="10" fill="#fff" stroke="#22331F" stroke-width="2"/><path d="M177 63 C171 69 171 77 177 83 M177 63 C183 69 183 77 177 83" fill="none" stroke="#B5443A" stroke-width="1.6"/>
+      <path d="M84 120 H102 C102 128 96 130 93 130 C90 130 84 128 84 120 Z" fill="#6E9BC8" stroke="#22331F" stroke-width="2"/>
+      <text x="150" y="176" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="18" fill="#6b4a32">My day</text>
+      <text x="150" y="200" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="13" fill="#22331F">80 picture cards</text>
+      <text x="150" y="266" text-anchor="middle" font-family="Space Mono, monospace" font-size="8.5" fill="${GOLD}" letter-spacing="0.14em">UK SCHOOL DAY · A4 + LETTER</text>
+      <rect width="300" height="300" fill="url(#d45)"/>${mark()}</svg>`
+  },
 ];
 
 // Halloween retires itself (Sam, 26 Oct 2026: "retire Halloween after 31 Oct").

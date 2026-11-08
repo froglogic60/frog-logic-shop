@@ -3184,6 +3184,398 @@
     }
   },
   {
+    "id": "f24-please-allow-3-5-business-days",
+    "name": "Please Allow 3–5 Business Days",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfbcfb9024aaf308a2fb",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f25-please-allow-3-5-business-days",
+    "name": "Please Allow 3–5 Business Days",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfc07a7a4ea34b0b020b",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "f26-had-a-thought-it-s-gone",
+    "name": "Had a Thought, It’s Gone",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfc45a7173e14f0ac58d",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f27-had-a-thought-it-s-gone",
+    "name": "Had a Thought, It’s Gone",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfc8bc999340580a9cae",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "f28-unexpected-human-interaction",
+    "name": "Unexpected Human Interaction",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfcc59d5223aba04e120",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f29-unexpected-human-interaction",
+    "name": "Unexpected Human Interaction",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfd07a7a4ea34b0b0217",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "f30-procrastinate-later",
+    "name": "Procrastinate Later",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfd4bc999340580a9cbd",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f31-procrastinate-later",
+    "name": "Procrastinate Later",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfd8e696fed2aa02b915",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "f32-this-meeting-could-have-been-an-email",
+    "name": "This Meeting Could Have Been an Email",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfdcfb9024aaf308a314",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f33-this-meeting-could-have-been-an-email",
+    "name": "This Meeting Could Have Been an Email",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfe0bc999340580a9cc8",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "f34-professional-overthinker",
+    "name": "Professional Overthinker",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfe559d5223aba04e142",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f35-professional-overthinker",
+    "name": "Professional Overthinker",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfe8fb9024aaf308a31b",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
+    "id": "f36-open-tabs-have-open-tabs",
+    "name": "Open Tabs Have Open Tabs",
+    "price": 19,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bfed59d5223aba04e14f",
+    "printifyVariantId": 12102,
+    "sizes": [
+      {
+        "size": "S",
+        "variantId": 12102
+      },
+      {
+        "size": "M",
+        "variantId": 12101
+      },
+      {
+        "size": "L",
+        "variantId": 12100
+      },
+      {
+        "size": "XL",
+        "variantId": 12103
+      },
+      {
+        "size": "2XL",
+        "variantId": 12104
+      }
+    ],
+    "shipping": {
+      "provider": 331,
+      "providerName": "Shirt Monkey",
+      "first": 277,
+      "additional": 154,
+      "zoneKey": "6:331"
+    }
+  },
+  {
+    "id": "f37-open-tabs-have-open-tabs",
+    "name": "Open Tabs Have Open Tabs",
+    "price": 13.5,
+    "type": "physical",
+    "currency": "gbp",
+    "freeUkPost": true,
+    "printifyProductId": "6af0bff09219dad501082215",
+    "printifyVariantId": 69010,
+    "shipping": {
+      "provider": 6,
+      "providerName": "T Shirt and Sons",
+      "first": 300,
+      "additional": 192,
+      "zoneKey": "535:6"
+    }
+  },
+  {
     "id": "d37-christmas-cards",
     "name": "Christmas Cards",
     "price": 3,
@@ -3391,6 +3783,24 @@
       {
         "name": "The ADHD Money Kit spreadsheet (Excel / Google Sheets)",
         "file": "ADHD-Money-Kit-Spreadsheet.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "d45-visual-timetable-cards",
+    "name": "Visual Timetable Cards",
+    "price": 5,
+    "type": "digital",
+    "currency": "gbp",
+    "file": "Visual-Timetable-Cards.pdf",
+    "files": [
+      {
+        "name": "Visual Timetable Cards (A4)",
+        "file": "Visual-Timetable-Cards.pdf"
+      },
+      {
+        "name": "Visual Timetable Cards (US Letter)",
+        "file": "Visual-Timetable-Cards-Letter.pdf"
       }
     ]
   }

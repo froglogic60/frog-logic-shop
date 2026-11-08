@@ -504,3 +504,13 @@
   to = "/404"
   status = 404
   force = true
+[[redirects]]
+  from = "/digital/Visual-Timetable-Cards.pdf"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/digital/Visual-Timetable-Cards-Letter.pdf"
+  to = "/404"
+  status = 404
+  force = true
