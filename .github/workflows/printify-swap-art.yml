@@ -1,0 +1,39 @@
+name: Swap the artwork on existing products
+# Puts a corrected PNG from artwork/frogs/ in place of the old one on the listed
+# Printify products, keeping position, scale, variants, prices and words.
+# Etsy push (if ticked) is photos only, so delivery profiles are left alone.
+on:
+  workflow_dispatch:
+    inputs:
+      art:
+        description: "PNG file name in artwork/frogs/"
+        required: true
+      products:
+        description: "Comma list of shop:productId (main = the website's shop)"
+        required: true
+      publish:
+        description: "Push the new photos to Etsy (Etsy-shop products only)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Report only, change nothing"
+        type: boolean
+        default: true
+jobs:
+  swap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Swap the artwork
+        working-directory: automation/social
+        run: node printify-swap-art.js
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRINTIFY_SHOP_ID: ${{ secrets.PRINTIFY_SHOP_ID }}
+          ART: ${{ inputs.art }}
+          PRODUCTS: ${{ inputs.products }}
+          PUBLISH: ${{ inputs.publish && '1' || '' }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
