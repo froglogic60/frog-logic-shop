@@ -1,0 +1,58 @@
+name: Make product videos from Printify
+# Batch version of "Make a product video" (8 Nov 2026). For each Printify
+# product id it downloads the default (front) mockup from the Printify API and
+# runs automation/social/product-video.py on it. Writes
+# automation/social/videos/<name>-<shape>.mp4 and commits [skip netlify].
+on:
+  workflow_dispatch:
+    inputs:
+      products:
+        description: "Comma list of name=printifyProductId, e.g. frogs-in-a-trench-coat-mug=6af088c2f180f4f0340b17ec"
+        required: true
+      shop:
+        description: "Printify shop id (29335686 = Etsy store, 28035653 = API store)"
+        required: false
+        default: "29335686"
+      shapes:
+        description: "square (Etsy), vertical (Reels/TikTok), or square,vertical"
+        required: false
+        default: "square,vertical"
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install pillow
+      - name: Fetch mockups and render
+        env:
+          PRINTIFY_API_KEY: ${{ secrets.PRINTIFY_API_KEY }}
+          PRODUCTS: ${{ inputs.products }}
+          SHOP: ${{ inputs.shop }}
+          SHAPES: ${{ inputs.shapes }}
+        run: |
+          mkdir -p .video-src
+          IFS=',' read -ra ITEMS <<< "$PRODUCTS"
+          for item in "${ITEMS[@]}"; do
+            name="${item%%=*}"; id="${item##*=}"
+            name="$(echo "$name" | tr -d ' ')"; id="$(echo "$id" | tr -d ' ')"
+            url=$(curl -sf -H "Authorization: Bearer $PRINTIFY_API_KEY" \
+              "https://api.printify.com/v1/shops/$SHOP/products/$id.json" \
+              | python3 -c "import json,sys; p=json.load(sys.stdin); im=p['images']; d=[i for i in im if i.get('is_default')] or [i for i in im if 'front' in i['src']] or im; print(d[0]['src'])")
+            echo "$name <- $url"
+            curl -sfL "$url" -o ".video-src/$name.jpg"
+            IMAGE=".video-src/$name.jpg" NAME="$name" python3 automation/social/product-video.py
+          done
+          ls -la automation/social/videos
+      - name: Commit
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/videos/*.mp4
+          git commit -m "Product videos from Printify [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
