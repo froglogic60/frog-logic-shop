@@ -90,7 +90,8 @@
     },
     "caption": "It's Sunday, so let's fill the comments with frogs 🐸 Pop a photo of any frog in your life below.\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/frogs-1.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-08T19:02:09.793Z"
   },
   {
     "postOn": "2026-11-09",
