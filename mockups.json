@@ -203,9 +203,65 @@
     "src": "https://images-api.printify.com/mockup/6a931bddc1f8509ec80326f5/12100/92570/comfort-creature-frog-logic-tee.jpg?camera_label=front",
     "alt": "Comfort Creature on the real product"
   },
+  "f10-the-frogs-ate-it": {
+    "src": "https://images-api.printify.com/mockup/6af08404e696fed2aa027cb7/12100/102005/the-frogs-ate-it-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "The Frogs Ate It on the real product"
+  },
+  "f11-the-frogs-ate-it": {
+    "src": "https://images-api.printify.com/mockup/6af08408f180f4f0340b114a/69010/8348/the-frogs-ate-it-frog-logic-mug.jpg?camera_label=front",
+    "alt": "The Frogs Ate It on the real product"
+  },
+  "f12-frog-is-processing": {
+    "src": "https://images-api.printify.com/mockup/6af0840cf180f4f0340b114f/12100/102005/frog-is-processing-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Frog Is Processing on the real product"
+  },
+  "f13-frog-is-processing": {
+    "src": "https://images-api.printify.com/mockup/6af08410e696fed2aa027cc1/69010/8348/frog-is-processing-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Frog Is Processing on the real product"
+  },
+  "f14-professional-thought-hopper": {
+    "src": "https://images-api.printify.com/mockup/6af084146d33a6245903311f/12100/102005/professional-thought-hopper-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Professional Thought Hopper on the real product"
+  },
+  "f15-professional-thought-hopper": {
+    "src": "https://images-api.printify.com/mockup/6af084185a7173e14f0a89b8/69010/8348/professional-thought-hopper-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Professional Thought Hopper on the real product"
+  },
+  "f16-one-lily-pad-at-a-time": {
+    "src": "https://images-api.printify.com/mockup/6af0841c30eb20c4780faeed/12100/102005/one-lily-pad-at-a-time-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "One Lily Pad at a Time on the real product"
+  },
+  "f17-one-lily-pad-at-a-time": {
+    "src": "https://images-api.printify.com/mockup/6af084206d33a6245903312b/69010/8348/one-lily-pad-at-a-time-frog-logic-mug.jpg?camera_label=front",
+    "alt": "One Lily Pad at a Time on the real product"
+  },
+  "f18-emotionally-supported-by-frogs": {
+    "src": "https://images-api.printify.com/mockup/6af08424f180f4f0340b115b/12100/102005/emotionally-supported-by-frogs-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Emotionally Supported by Frogs on the real product"
+  },
+  "f19-emotionally-supported-by-frogs": {
+    "src": "https://images-api.printify.com/mockup/6af08428f180f4f0340b1160/69010/8348/emotionally-supported-by-frogs-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Emotionally Supported by Frogs on the real product"
+  },
   "f2-brain-full-of-tabs": {
     "src": "https://images-api.printify.com/mockup/6a931be3c1f8509ec80326f8/12100/92570/brain-full-of-tabs-frog-logic-tee.jpg?camera_label=front",
     "alt": "Brain Full of Tabs on the real product"
+  },
+  "f20-executive-dysfunction-pond-club": {
+    "src": "https://images-api.printify.com/mockup/6af0842c6d33a62459033139/12100/102005/executive-dysfunction-pond-club-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Executive Dysfunction Pond Club on the real product"
+  },
+  "f21-executive-dysfunction-pond-club": {
+    "src": "https://images-api.printify.com/mockup/6af08430e83cc5e663016081/69010/8348/executive-dysfunction-pond-club-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Executive Dysfunction Pond Club on the real product"
+  },
+  "f22-brain-in-another-pond": {
+    "src": "https://images-api.printify.com/mockup/6af084346d33a62459033141/12100/102005/brain-in-another-pond-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Brain in Another Pond on the real product"
+  },
+  "f23-brain-in-another-pond": {
+    "src": "https://images-api.printify.com/mockup/6af08437f180f4f0340b1175/69010/8348/brain-in-another-pond-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Brain in Another Pond on the real product"
   },
   "f3-neurospicy": {
     "src": "https://images-api.printify.com/mockup/6a931beadb8c1bf77202f68b/12100/92570/neurospicy-frog-logic-tee.jpg?camera_label=front",
@@ -227,40 +283,12 @@
     "src": "https://images-api.printify.com/mockup/6a931c01db8c1bf77202f6a5/75271/20213/neurodivergent-household-frog-logic-print.jpg?camera_label=front",
     "alt": "Neurodivergent Household on the real product"
   },
-  "h1-do-not-perceive-me": {
-    "src": "https://images-api.printify.com/mockup/6a9c41282525159670072912/12100/92570/do-not-perceive-me-frog-logic-tee.jpg?camera_label=front",
-    "alt": "Do Not Perceive Me on the real product"
+  "f8-frogs-in-a-trench-coat": {
+    "src": "https://images-api.printify.com/mockup/6af083fce83cc5e66301604e/12100/102005/frogs-in-a-trench-coat-frog-logic-tee.jpg?camera_label=front-2",
+    "alt": "Frogs in a Trench Coat on the real product"
   },
-  "h2-chaos-gremlin-halloween": {
-    "src": "https://images-api.printify.com/mockup/6a9c41325f2fea83b0004c4a/12100/92570/chaos-gremlin-halloween-frog-logic-tee.jpg?camera_label=front",
-    "alt": "Chaos Gremlin Halloween on the real product"
-  },
-  "h3-social-battery-undead": {
-    "src": "https://images-api.printify.com/mockup/6a9c413a935ed1cc3c0dcd5c/12100/92570/social-battery-undead-frog-logic-tee.jpg?camera_label=front",
-    "alt": "Social Battery: Undead on the real product"
-  },
-  "h4-sensory-witch": {
-    "src": "https://images-api.printify.com/mockup/6a9c4144dd664f915805b8cd/12100/92570/sensory-witch-frog-logic-tee.jpg?camera_label=front",
-    "alt": "Sensory Witch on the real product"
-  },
-  "h5-do-not-perceive-me": {
-    "src": "https://images-api.printify.com/mockup/6a9c41496f59811746060273/69010/8348/do-not-perceive-me-frog-logic-mug.jpg?camera_label=front",
-    "alt": "Do Not Perceive Me on the real product"
-  },
-  "h6-chaos-gremlin-halloween": {
-    "src": "https://images-api.printify.com/mockup/6a9c414c164919b0300617f2/69010/8348/chaos-gremlin-halloween-frog-logic-mug.jpg?camera_label=front",
-    "alt": "Chaos Gremlin Halloween on the real product"
-  },
-  "h7-social-battery-undead": {
-    "src": "https://images-api.printify.com/mockup/6a9c4150c8dc7ed3a507b184/69010/8348/social-battery-undead-frog-logic-mug.jpg?camera_label=front",
-    "alt": "Social Battery: Undead on the real product"
-  },
-  "h8-sensory-witch": {
-    "src": "https://images-api.printify.com/mockup/6a9c41546f59811746060288/69010/8348/sensory-witch-frog-logic-mug.jpg?camera_label=front",
-    "alt": "Sensory Witch on the real product"
-  },
-  "h9-do-not-perceive-me": {
-    "src": "https://images-api.printify.com/mockup/6a9c4159164919b030061805/75271/20213/do-not-perceive-me-frog-logic-print.jpg?camera_label=front",
-    "alt": "Do Not Perceive Me on the real product"
+  "f9-frogs-in-a-trench-coat": {
+    "src": "https://images-api.printify.com/mockup/6af08400e83cc5e66301605a/69010/8348/frogs-in-a-trench-coat-frog-logic-mug.jpg?camera_label=front",
+    "alt": "Frogs in a Trench Coat on the real product"
   }
 }
