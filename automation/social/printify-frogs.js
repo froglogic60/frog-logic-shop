@@ -60,6 +60,23 @@ const ARTWORK = {
   "h7-social-battery-undead": "social-battery-undead.png",
   "h8-sensory-witch": "sensory-witch.png",
   "h9-do-not-perceive-me": "do-not-perceive-me-poster.png",
+  // Frog slogan range, 8 Nov 2026 (tee then mug for each design)
+  "f8-frogs-in-a-trench-coat": "frogs-in-a-trench-coat.png",
+  "f9-frogs-in-a-trench-coat": "frogs-in-a-trench-coat.png",
+  "f10-the-frogs-ate-it": "the-frogs-ate-it.png",
+  "f11-the-frogs-ate-it": "the-frogs-ate-it.png",
+  "f12-frog-is-processing": "frog-is-processing.png",
+  "f13-frog-is-processing": "frog-is-processing.png",
+  "f14-professional-thought-hopper": "professional-thought-hopper.png",
+  "f15-professional-thought-hopper": "professional-thought-hopper.png",
+  "f16-one-lily-pad-at-a-time": "one-lily-pad-at-a-time.png",
+  "f17-one-lily-pad-at-a-time": "one-lily-pad-at-a-time.png",
+  "f18-emotionally-supported-by-frogs": "emotionally-supported-by-frogs.png",
+  "f19-emotionally-supported-by-frogs": "emotionally-supported-by-frogs.png",
+  "f20-executive-dysfunction-pond-club": "executive-dysfunction-pond-club.png",
+  "f21-executive-dysfunction-pond-club": "executive-dysfunction-pond-club.png",
+  "f22-brain-in-another-pond": "brain-in-another-pond.png",
+  "f23-brain-in-another-pond": "brain-in-another-pond.png",
 };
 
 // Same targets as printify-rebuild.js, checked against Printify's own titles
