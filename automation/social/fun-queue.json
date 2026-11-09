@@ -105,7 +105,8 @@
     },
     "caption": "Sid would like everyone to know he was \"on his way the whole time\". The crisp was delicious. 🐌\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/news-2.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-09T19:02:42.080Z"
   },
   {
     "postOn": "2026-11-10",
