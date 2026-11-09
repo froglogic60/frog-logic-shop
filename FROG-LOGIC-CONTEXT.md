@@ -206,8 +206,9 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   tests everything before it goes in her "Awesome Gifts for Neurodivergent
   People" guide and chose the Socially Hibernating Christmas Frog Mug (11oz,
   UK maker). Printify manual order #28035653.8, USD 11.07 from the Printify
-  balance; ships 4–6 Nov, due 10–12 Nov. Follow up 13 Nov (Desk): did it
-  arrive, will it be in the guide? Thread is in Sam's Outlook (search Martina).
+  balance. **Delivered: Sam told Claude on 9 Nov that Martina has received
+  it.** Follow up 13 Nov (Desk): will it be in the guide? Thread is in Sam's
+  Outlook (search Martina).
 
 ## Where things stand (2 Nov 2026)
 
