@@ -1,0 +1,92 @@
+# Digital downloads only: remove Amazon/paperback mentions [skip netlify]
+diff --git a/automation/social/announce-queue.json b/automation/social/announce-queue.json
+index 1a59c83..5bb562f 100644
+--- a/automation/social/announce-queue.json
++++ b/automation/social/announce-queue.json
+@@ -252,9 +252,9 @@
+     "name": "xmas-colouring-book",
+     "tag": "christmas at the pond",
+     "title": "Cosy Christmas Colouring Book",
+-    "body": "Thirty cosy frog pages to colour. Printable now, and a paperback on Amazon.",
++    "body": "Thirty cosy frog pages to colour. Printable, yours in minutes.",
+     "image": "automation/social/promo/christmas-colouring-book-post.jpg",
+-    "caption": "New at the pond: the Cosy Christmas Colouring Book 🐸🎄\n\nThirty pages of the Frog Logic frog having a quiet Christmas: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit. Thick lines, big shapes, nothing fiddly, and a small kind line on every page.\n\nNo rules. Any colours. Half a frog counts.\n\n£5 printable, A4 and US Letter, yours in minutes: froglogic.co.uk/p/cosy-christmas-colouring-book/\n\nPrefer a real book? It's a paperback on Amazon too, £7.99: amazon.co.uk/dp/B0HQWVKLFP\n\nwith love\nSam\n\n#FrogLogic #ColouringBook #AdultColouring #ChristmasColouring #Neurodivergent #ADHD #ActuallyAutistic #AuDHD #CosyChristmas",
++    "caption": "New at the pond: the Cosy Christmas Colouring Book 🐸🎄\n\nThirty pages of the Frog Logic frog having a quiet Christmas: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit. Thick lines, big shapes, nothing fiddly, and a small kind line on every page.\n\nNo rules. Any colours. Half a frog counts.\n\n£5 printable, A4 and US Letter, yours in minutes: froglogic.co.uk/p/cosy-christmas-colouring-book/\n\nwith love\nSam\n\n#FrogLogic #ColouringBook #AdultColouring #ChristmasColouring #Neurodivergent #ADHD #ActuallyAutistic #AuDHD #CosyChristmas",
+     "posted": false
+   },
+   {
+@@ -272,9 +272,9 @@
+     "name": "calm-plan",
+     "tag": "new at the pond",
+     "title": "The Calm Plan",
+-    "body": "A gentle UK guide to getting ready for power cuts, floods and other emergencies, for busy brains. £5 printable, paperback coming to Amazon.",
++    "body": "A gentle UK guide to getting ready for power cuts, floods and other emergencies, for busy brains. £5 printable.",
+     "image": "automation/social/promo/calm-plan-post.jpg",
+-    "caption": "New at the pond: The Calm Plan 🐸🔦\n\nThe government is asking every UK household to be ready to manage for three days if something goes wrong. Sensible advice. But for a busy brain, a power cut or a flood warning isn't just an inconvenience: it's sudden change, noise, darkness and too many decisions at once.\n\nSo I made the gentle version. Ten free minutes that make the biggest difference. The official three-day checklist without the waste or the panic-buying. A calm kit for noise, light and safe foods. Step-by-step scripts for the first hour. An About me card for when words are hard. And fill-in pages that become your own plan.\n\nAll the safety information comes from official UK sources, listed in the book.\n\n£5 printable, A4 and US Letter: froglogic.co.uk/p/the-calm-plan/\nThe paperback is on its way to Amazon too.\n\nwith love\nSam\n\n#FrogLogic #BeReady #EmergencyPlan #PowerCut #Neurodivergent #ActuallyAutistic #ADHD #AuDHD #SEND",
++    "caption": "New at the pond: The Calm Plan 🐸🔦\n\nThe government is asking every UK household to be ready to manage for three days if something goes wrong. Sensible advice. But for a busy brain, a power cut or a flood warning isn't just an inconvenience: it's sudden change, noise, darkness and too many decisions at once.\n\nSo I made the gentle version. Ten free minutes that make the biggest difference. The official three-day checklist without the waste or the panic-buying. A calm kit for noise, light and safe foods. Step-by-step scripts for the first hour. An About me card for when words are hard. And fill-in pages that become your own plan.\n\nAll the safety information comes from official UK sources, listed in the book.\n\n£5 printable, A4 and US Letter: froglogic.co.uk/p/the-calm-plan/\n\nwith love\nSam\n\n#FrogLogic #BeReady #EmergencyPlan #PowerCut #Neurodivergent #ActuallyAutistic #ADHD #AuDHD #SEND",
+     "posted": false
+   },
+   {
+@@ -282,9 +282,9 @@
+     "name": "colouring-book-printable",
+     "tag": "soft landings",
+     "title": "The Frog Logic Colouring Book",
+-    "body": "Eight frogs who feel things, each drawn twice. Printable now, and a paperback on Amazon.",
++    "body": "Eight frogs who feel things, each drawn twice. Printable, yours in minutes.",
+     "image": "automation/social/etsy-kits/colouring-book/1-colouring-book.jpg",
+-    "caption": "Eight frogs who feel things, drawn to be coloured 🐸\n\nThe Frog Logic Colouring Book: Comfort Creature, Low Battery, Brain Full of Tabs, Overstimulated and their friends, each drawn twice. Once in big simple shapes for low-energy days, and once in the pond with more to colour when you want it.\n\nBold lines. No tiny fiddly bits. No rules, nothing to get right, and half a frog still counts.\n\n£4 printable, A4 and US Letter: froglogic.co.uk/p/the-frog-logic-colouring-book/\n\nIt's also a paperback on Amazon, £7.99, with a plain back to every picture so pens can't bleed through: amazon.co.uk/dp/B0HQVSPLMS\n\nwith love\nSam\n\n#FrogLogic #ColouringBook #AdultColouring #Neurodivergent #ADHD #ActuallyAutistic #AuDHD #CalmColouring",
++    "caption": "Eight frogs who feel things, drawn to be coloured 🐸\n\nThe Frog Logic Colouring Book: Comfort Creature, Low Battery, Brain Full of Tabs, Overstimulated and their friends, each drawn twice. Once in big simple shapes for low-energy days, and once in the pond with more to colour when you want it.\n\nBold lines. No tiny fiddly bits. No rules, nothing to get right, and half a frog still counts.\n\n£4 printable, A4 and US Letter: froglogic.co.uk/p/the-frog-logic-colouring-book/\n\nwith love\nSam\n\n#FrogLogic #ColouringBook #AdultColouring #Neurodivergent #ADHD #ActuallyAutistic #AuDHD #CalmColouring",
+     "posted": false
+   },
+   {
+diff --git a/script.js b/script.js
+index d6d9122..11207df 100644
+--- a/script.js
++++ b/script.js
+@@ -2906,11 +2906,11 @@ const DIGITAL_PRODUCTS = [
+     // automation/pdf/colouring-book.py from the frog: true art above and the
+     // Socially Hibernating source; the "Build the colouring book" workflow
+     // rebuilds the PDFs and the Etsy pictures. Etsy listing: "Frog Coloring Book
+-    // Printable..." at £5.50; Amazon paperback (KDP) at £7.99 / $9.99.
++    // Printable..." at £5.50. (Sam, 9 Nov: Frog Logic sells the DIGITAL downloads only — never link or mention the KDP paperbacks.)
+     num: "D41 — Colouring book", word: "The Frog Logic Colouring Book",
+     line: "Twenty printable pages of the Frog Logic frogs to colour. Every frog comes twice: once in big, simple shapes for low-energy days, and once sitting in the pond with more to colour. Thick, clear lines, no fiddly bits, a gentle no-rules page to start and a make-your-own-frog page at the end. A4 and US Letter, print as often as you like.",
+     price: "£4.00", link: "#", bg: "#8FB784",
+-    page: { title: "Frog colouring book printable | bold and easy colouring pages for ADHD and neurodivergent adults", eyebrow: "Printable colouring book · 20 pages · £4.00", cta: "Get the colouring book", paras: ["Eight Frog Logic frogs to colour: Comfort Creature, Brain Full of Tabs, Chaos Gremlin Energy, Low Battery, Overstimulated, Neurospicy, Neurodivergent Household and Socially Hibernating.", "Each one comes twice. One page is the frog on its own in big, bold shapes, for days when you want something easy. The other has the frog sitting in the pond with lily pads, flowers and bubbles around it, for when you want more to colour. Pick whichever suits your brain today.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household.", "Prefer a real book? It's a 40-page paperback on Amazon too, £7.99: <a href=\"https://www.amazon.co.uk/dp/B0HQVSPLMS\" rel=\"noopener\">The Frog Logic Colouring Book on Amazon</a>."] },
++    page: { title: "Frog colouring book printable | bold and easy colouring pages for ADHD and neurodivergent adults", eyebrow: "Printable colouring book · 20 pages · £4.00", cta: "Get the colouring book", paras: ["Eight Frog Logic frogs to colour: Comfort Creature, Brain Full of Tabs, Chaos Gremlin Energy, Low Battery, Overstimulated, Neurospicy, Neurodivergent Household and Socially Hibernating.", "Each one comes twice. One page is the frog on its own in big, bold shapes, for days when you want something easy. The other has the frog sitting in the pond with lily pads, flowers and bubbles around it, for when you want more to colour. Pick whichever suits your brain today.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household."] },
+     files: [{ name: "Frog Logic Colouring Book (A4)", file: "Frog-Logic-Colouring-Book.pdf" }, { name: "Frog Logic Colouring Book (US Letter)", file: "Frog-Logic-Colouring-Book-Letter.pdf" }],
+     svg: `<svg viewBox="0 0 300 300">${grain("d41", 0.1)}
+       <rect x="62" y="30" width="176" height="226" rx="4" fill="#ffffff"/>
+@@ -2926,12 +2926,12 @@ const DIGITAL_PRODUCTS = [
+     // Logic Christmas colouring book for KDP... this one can go in the shop too").
+     // Drawn in code by automation/pdf/christmas-colouring-book.py; the "Build the
+     // Christmas colouring book" workflow rebuilds the PDFs and the pictures.
+-    // Also a 66-page paperback on Amazon (KDP, £7.99) — add the Amazon link to
+-    // the paras once it is live.
++    // Sam, 9 Nov: Frog Logic sells digital downloads only — no Amazon/paperback
++    // links or mentions on the site or in posts.
+     num: "D42 — Christmas colouring book", word: "Cosy Christmas Colouring Book",
+     line: "Thirty printable pages of the Frog Logic frog having a cosy Christmas: fairy-light naps, hot chocolate, mince pies, mitten snuggles and quiet hours by the fire. Thick, clear lines, big shapes, a kind line on every page. A4 and US Letter, print as often as you like.",
+     price: "£5.00", link: "#", bg: "#2F4A3A",
+-    page: { title: "Christmas colouring book printable | bold and easy cosy frog pages for neurodivergent adults", eyebrow: "Printable colouring book · 30 pages · £5.00", cta: "Get the Christmas colouring book", paras: ["Thirty cosy Christmas scenes with the Frog Logic frog: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit, Snow Globe World and more. Every page has thick, bold lines and big shapes, so it's relaxing rather than fiddly, and a small, gentle line to go with it.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household.", "Prefer a real book? The same 30 designs are a 66-page paperback on Amazon, £7.99, with a plain back to every picture so pens can't bleed through: <a href=\"https://www.amazon.co.uk/dp/B0HQWVKLFP\" rel=\"noopener\">the Cosy Christmas Colouring Book on Amazon</a>."] },
++    page: { title: "Christmas colouring book printable | bold and easy cosy frog pages for neurodivergent adults", eyebrow: "Printable colouring book · 30 pages · £5.00", cta: "Get the Christmas colouring book", paras: ["Thirty cosy Christmas scenes with the Frog Logic frog: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit, Snow Globe World and more. Every page has thick, bold lines and big shapes, so it's relaxing rather than fiddly, and a small, gentle line to go with it.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household."] },
+     files: [{ name: "Cosy Christmas Colouring Book (A4)", file: "Frog-Logic-Cosy-Christmas-Colouring-Book.pdf" }, { name: "Cosy Christmas Colouring Book (US Letter)", file: "Frog-Logic-Cosy-Christmas-Colouring-Book-Letter.pdf" }],
+     svg: `<svg viewBox="0 0 300 300">${grain("d42", 0.1)}
+       <circle cx="40" cy="30" r="2.5" fill="#F6EFE2"/><circle cx="262" cy="52" r="2" fill="#F6EFE2"/><circle cx="28" cy="150" r="2" fill="#F6EFE2"/><circle cx="276" cy="190" r="2.5" fill="#F6EFE2"/><circle cx="60" cy="262" r="2" fill="#F6EFE2"/><circle cx="246" cy="270" r="2" fill="#F6EFE2"/><circle cx="150" cy="22" r="1.8" fill="#F6EFE2"/><circle cx="90" cy="60" r="1.8" fill="#F6EFE2"/><circle cx="212" cy="112" r="1.8" fill="#F6EFE2"/>
+@@ -2957,13 +2957,13 @@ const DIGITAL_PRODUCTS = [
+   {
+     // The Calm Plan (Sam, 7 Nov 2026: an emergency-preparedness book, "people need this now").
+     // Built by The Calm Plan source in OneDrive\Desktop\The Calm Plan\calm-plan-source.zip
+-    // (build.py/art.py/cover.py). Also a 30-page paperback on Amazon (KDP, £6.99) once it
+-    // clears review: add the Amazon link to the paras then. Safety facts come only from the
++    // (build.py/art.py/cover.py). Sam, 9 Nov: digital downloads only on Frog Logic —
++    // never add the Amazon paperback link or mention it. Safety facts come only from the
+     // official sources listed at the back of the book.
+     num: "D43 — The Calm Plan", word: "The Calm Plan",
+     line: "A gentle UK guide to getting ready for power cuts, floods and other emergencies, for neurodivergent adults and families. Ten free minutes that matter most, the official three-day checklist without the waste, a calm kit, first-hour scripts, an About me card and fill-in plan pages. A4 and US Letter.",
+     price: "£5.00", link: "#", bg: "#22384A",
+-    page: { title: "Emergency preparedness guide UK printable | calm power cut and flood plan for neurodivergent adults and families", eyebrow: "Printable guide · 30 pages · £5.00", cta: "Get The Calm Plan", paras: ["The government now asks every UK household to be able to manage for three days if something goes wrong. For busy brains, a power cut or a flood warning isn't just an inconvenience: it's sudden change, noise, darkness and too many decisions at once. The Calm Plan is the gentle version: small steps, made calmly on an ordinary day, so on the hard day you just follow the plan you already wrote.", "Inside: the ten free minutes that make the biggest difference (the Priority Services Register, flood warnings, numbers on paper, what the emergency alert siren means), the official three-day checklist with honest answers to cost, waste and space, a calm kit for noise, light, comfort and safe foods, step-by-step first-hour scripts, an About me card for helpers when words are hard, and fill-in pages that become your household's own plan. All the safety information comes from official UK sources, listed in the book.", "You get two PDFs straight away, A4 and US Letter. Print the fill-in pages as often as you like for your own household. A paperback is on its way to Amazon too."] },
++    page: { title: "Emergency preparedness guide UK printable | calm power cut and flood plan for neurodivergent adults and families", eyebrow: "Printable guide · 30 pages · £5.00", cta: "Get The Calm Plan", paras: ["The government now asks every UK household to be able to manage for three days if something goes wrong. For busy brains, a power cut or a flood warning isn't just an inconvenience: it's sudden change, noise, darkness and too many decisions at once. The Calm Plan is the gentle version: small steps, made calmly on an ordinary day, so on the hard day you just follow the plan you already wrote.", "Inside: the ten free minutes that make the biggest difference (the Priority Services Register, flood warnings, numbers on paper, what the emergency alert siren means), the official three-day checklist with honest answers to cost, waste and space, a calm kit for noise, light, comfort and safe foods, step-by-step first-hour scripts, an About me card for helpers when words are hard, and fill-in pages that become your household's own plan. All the safety information comes from official UK sources, listed in the book.", "You get two PDFs straight away, A4 and US Letter. Print the fill-in pages as often as you like for your own household."] },
+     files: [{ name: "The Calm Plan (A4)", file: "The-Calm-Plan-A4.pdf" }, { name: "The Calm Plan (US Letter)", file: "The-Calm-Plan-Letter.pdf" }],
+     svg: `<svg viewBox="0 0 300 300">${grain("d43", 0.1)}
+       <circle cx="40" cy="30" r="2" fill="#F6EFE2"/><circle cx="262" cy="52" r="2" fill="#F6EFE2"/><circle cx="28" cy="150" r="1.6" fill="#F6EFE2"/><circle cx="276" cy="190" r="2" fill="#F6EFE2"/><circle cx="150" cy="20" r="1.6" fill="#F6EFE2"/>
