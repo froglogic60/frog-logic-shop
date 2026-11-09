@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-08T18:38:38.261Z",
+  "checkedAt": "2026-11-09T16:51:35.011Z",
   "markupRule": 0.6,
   "rows": [
     {
@@ -664,7 +664,7 @@
     },
     {
       "id": "f24-please-allow-3-5-business-days",
-      "name": "Please Allow 3–5 Business Days",
+      "name": "Please Allow 3-5 Business Days",
       "blueprint": 6,
       "maker": "Shirt Monkey",
       "price": 1900,
@@ -676,7 +676,7 @@
     },
     {
       "id": "f26-had-a-thought-it-s-gone",
-      "name": "Had a Thought, It’s Gone",
+      "name": "Had a Thought, It's Gone",
       "blueprint": 6,
       "maker": "Shirt Monkey",
       "price": 1900,
@@ -964,7 +964,7 @@
     },
     {
       "id": "f25-please-allow-3-5-business-days",
-      "name": "Please Allow 3–5 Business Days",
+      "name": "Please Allow 3-5 Business Days",
       "blueprint": 535,
       "maker": "T Shirt and Sons",
       "price": 1350,
@@ -976,7 +976,7 @@
     },
     {
       "id": "f27-had-a-thought-it-s-gone",
-      "name": "Had a Thought, It’s Gone",
+      "name": "Had a Thought, It's Gone",
       "blueprint": 535,
       "maker": "T Shirt and Sons",
       "price": 1350,
