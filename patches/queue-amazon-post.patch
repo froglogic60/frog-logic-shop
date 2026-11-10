@@ -1,0 +1,22 @@
+# Queue: colouring books on Amazon post, 16 Nov [skip netlify]
+diff --git a/automation/social/announce-queue.json b/automation/social/announce-queue.json
+index 84d88fa..7e49ff8 100644
+--- a/automation/social/announce-queue.json
++++ b/automation/social/announce-queue.json
+@@ -317,6 +317,16 @@
+     "caption": "Christmas order-by dates, so nobody gets caught out 🐸\n\nEverything I sell is printed to order, so it needs a little time:\n\nUK: order printed pieces by Thursday 10 December\nUS: order by Monday 7 December\n\nPrintables (the Christmas cards, the planners, the free guides) arrive by email straight away, right up to Christmas Eve.\n\nfroglogic.co.uk\n\n#FrogLogic #ChristmasGifts #Neurodivergent #ADHD #ActuallyAutistic #IntrovertChristmas",
+     "posted": false
+   },
++  {
++    "postOn": "2026-11-16",
++    "name": "colouring-books-on-amazon",
++    "tag": "new at the pond",
++    "title": "Now a real book too",
++    "body": "Both Frog Logic colouring books are now paperbacks on Amazon, £7.99 each.",
++    "image": "automation/social/promo/christmas-colouring-book-post.jpg",
++    "caption": "Hi, I'm Sam 🐸 If you'd rather hold a real book than print one at home, here they are.\n\nBoth Frog Logic colouring books are now paperbacks on Amazon, £7.99 each:\n\nCosy Christmas Colouring Book, 30 calm frog designs: amazon.co.uk/dp/B0HQWVKLFP\n\nThe Frog Logic Colouring Book, 8 frogs each drawn two ways: amazon.co.uk/dp/B0HQVSPLMS\n\nThick lines, big shapes, nothing fiddly, and a plain back to every picture so pens can't bleed through. No rules. Half a frog counts.\n\nPrefer to print at home? The printable versions are still at froglogic.co.uk\n\nwith love\nSam\n\n#FrogLogic #ColouringBook #AdultColouring #ChristmasColouring #Neurodivergent #ADHD #ActuallyAutistic #AuDHD",
++    "posted": false
++  },
+   {
+     "postOn": "2026-11-20",
+     "name": "timetable-big-pack",
