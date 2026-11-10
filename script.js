@@ -2906,11 +2906,11 @@ const DIGITAL_PRODUCTS = [
     // automation/pdf/colouring-book.py from the frog: true art above and the
     // Socially Hibernating source; the "Build the colouring book" workflow
     // rebuilds the PDFs and the Etsy pictures. Etsy listing: "Frog Coloring Book
-    // Printable..." at £5.50. (Sam, 9 Nov: Frog Logic sells the DIGITAL downloads only — never link or mention the KDP paperbacks.)
+    // Printable..." at £5.50. (Sam, 10 Nov: the page links to the Amazon paperback, B0HQVSPLMS.)
     num: "D41 — Colouring book", word: "The Frog Logic Colouring Book",
     line: "Twenty printable pages of the Frog Logic frogs to colour. Every frog comes twice: once in big, simple shapes for low-energy days, and once sitting in the pond with more to colour. Thick, clear lines, no fiddly bits, a gentle no-rules page to start and a make-your-own-frog page at the end. A4 and US Letter, print as often as you like.",
     price: "£4.00", link: "#", bg: "#8FB784",
-    page: { title: "Frog colouring book printable | bold and easy colouring pages for ADHD and neurodivergent adults", eyebrow: "Printable colouring book · 20 pages · £4.00", cta: "Get the colouring book", paras: ["Eight Frog Logic frogs to colour: Comfort Creature, Brain Full of Tabs, Chaos Gremlin Energy, Low Battery, Overstimulated, Neurospicy, Neurodivergent Household and Socially Hibernating.", "Each one comes twice. One page is the frog on its own in big, bold shapes, for days when you want something easy. The other has the frog sitting in the pond with lily pads, flowers and bubbles around it, for when you want more to colour. Pick whichever suits your brain today.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household."] },
+    page: { title: "Frog colouring book printable | bold and easy colouring pages for ADHD and neurodivergent adults", eyebrow: "Printable colouring book · 20 pages · £4.00", cta: "Get the colouring book", paras: ["Eight Frog Logic frogs to colour: Comfort Creature, Brain Full of Tabs, Chaos Gremlin Energy, Low Battery, Overstimulated, Neurospicy, Neurodivergent Household and Socially Hibernating.", "Each one comes twice. One page is the frog on its own in big, bold shapes, for days when you want something easy. The other has the frog sitting in the pond with lily pads, flowers and bubbles around it, for when you want more to colour. Pick whichever suits your brain today.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household.", "Prefer a real book? It's a 40-page paperback on Amazon too, £7.99: <a href=\"https://www.amazon.co.uk/dp/B0HQVSPLMS\" rel=\"noopener\">The Frog Logic Colouring Book on Amazon</a>."] },
     files: [{ name: "Frog Logic Colouring Book (A4)", file: "Frog-Logic-Colouring-Book.pdf" }, { name: "Frog Logic Colouring Book (US Letter)", file: "Frog-Logic-Colouring-Book-Letter.pdf" }],
     svg: `<svg viewBox="0 0 300 300">${grain("d41", 0.1)}
       <rect x="62" y="30" width="176" height="226" rx="4" fill="#ffffff"/>
@@ -2926,12 +2926,11 @@ const DIGITAL_PRODUCTS = [
     // Logic Christmas colouring book for KDP... this one can go in the shop too").
     // Drawn in code by automation/pdf/christmas-colouring-book.py; the "Build the
     // Christmas colouring book" workflow rebuilds the PDFs and the pictures.
-    // Sam, 9 Nov: Frog Logic sells digital downloads only — no Amazon/paperback
-    // links or mentions on the site or in posts.
+    // Sam, 10 Nov: the page links to the Amazon paperback, B0HQWVKLFP.
     num: "D42 — Christmas colouring book", word: "Cosy Christmas Colouring Book",
     line: "Thirty printable pages of the Frog Logic frog having a cosy Christmas: fairy-light naps, hot chocolate, mince pies, mitten snuggles and quiet hours by the fire. Thick, clear lines, big shapes, a kind line on every page. A4 and US Letter, print as often as you like.",
     price: "£5.00", link: "#", bg: "#2F4A3A",
-    page: { title: "Christmas colouring book printable | bold and easy cosy frog pages for neurodivergent adults", eyebrow: "Printable colouring book · 30 pages · £5.00", cta: "Get the Christmas colouring book", paras: ["Thirty cosy Christmas scenes with the Frog Logic frog: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit, Snow Globe World and more. Every page has thick, bold lines and big shapes, so it's relaxing rather than fiddly, and a small, gentle line to go with it.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household."] },
+    page: { title: "Christmas colouring book printable | bold and easy cosy frog pages for neurodivergent adults", eyebrow: "Printable colouring book · 30 pages · £5.00", cta: "Get the Christmas colouring book", paras: ["Thirty cosy Christmas scenes with the Frog Logic frog: Socially Hibernating under the fairy lights, Hot Chocolate Hour, Fireside Frog, Stocking Nap, Mitten Snuggle, Robin Visit, Snow Globe World and more. Every page has thick, bold lines and big shapes, so it's relaxing rather than fiddly, and a small, gentle line to go with it.", "There are no rules. Any colours, any order, half a frog counts, and outside the lines still counts. You get two PDFs straight away, A4 and US Letter. Print single-sided, as often as you like, for yourself and your household.", "Prefer a real book? The same 30 designs are a 66-page paperback on Amazon, £7.99, with a plain back to every picture so pens can't bleed through: <a href=\"https://www.amazon.co.uk/dp/B0HQWVKLFP\" rel=\"noopener\">the Cosy Christmas Colouring Book on Amazon</a>."] },
     files: [{ name: "Cosy Christmas Colouring Book (A4)", file: "Frog-Logic-Cosy-Christmas-Colouring-Book.pdf" }, { name: "Cosy Christmas Colouring Book (US Letter)", file: "Frog-Logic-Cosy-Christmas-Colouring-Book-Letter.pdf" }],
     svg: `<svg viewBox="0 0 300 300">${grain("d42", 0.1)}
       <circle cx="40" cy="30" r="2.5" fill="#F6EFE2"/><circle cx="262" cy="52" r="2" fill="#F6EFE2"/><circle cx="28" cy="150" r="2" fill="#F6EFE2"/><circle cx="276" cy="190" r="2.5" fill="#F6EFE2"/><circle cx="60" cy="262" r="2" fill="#F6EFE2"/><circle cx="246" cy="270" r="2" fill="#F6EFE2"/><circle cx="150" cy="22" r="1.8" fill="#F6EFE2"/><circle cx="90" cy="60" r="1.8" fill="#F6EFE2"/><circle cx="212" cy="112" r="1.8" fill="#F6EFE2"/>
@@ -2957,8 +2956,8 @@ const DIGITAL_PRODUCTS = [
   {
     // The Calm Plan (Sam, 7 Nov 2026: an emergency-preparedness book, "people need this now").
     // Built by The Calm Plan source in OneDrive\Desktop\The Calm Plan\calm-plan-source.zip
-    // (build.py/art.py/cover.py). Sam, 9 Nov: digital downloads only on Frog Logic —
-    // never add the Amazon paperback link or mention it. Safety facts come only from the
+    // (build.py/art.py/cover.py). Sam, 10 Nov: add the Amazon paperback link to the
+    // paras once the KDP book is live (upload due 15 Nov). Safety facts come only from the
     // official sources listed at the back of the book.
     num: "D43 — The Calm Plan", word: "The Calm Plan",
     line: "A gentle UK guide to getting ready for power cuts, floods and other emergencies, for neurodivergent adults and families. Ten free minutes that matter most, the official three-day checklist without the waste, a calm kit, first-hour scripts, an About me card and fill-in plan pages. A4 and US Letter.",

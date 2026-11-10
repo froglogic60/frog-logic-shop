@@ -246,10 +246,13 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   Christmas book is also on the site as D42, a £5 printable (30 pages, A4 +
   US Letter, p/cosy-christmas-colouring-book/), live since the 6 Nov publish.
   Announce posts queued: 9 Nov (Christmas book) and 12 Nov (first colouring
-  book). **Sam, 9 Nov 2026: Frog Logic sells DIGITAL DOWNLOADS ONLY — never link to
-  or mention the Amazon/KDP paperbacks on the site, in posts or in pitches**
-  (links added that morning were taken off the same day). Sam's other books (Cute
-  Animals, Nature Scenes) stay off KDP until she says.
+  book). **Sam, 10 Nov 2026: the Frog Logic product pages and posts DO link to the
+  Amazon paperbacks** (colouring book B0HQVSPLMS, Christmas book B0HQWVKLFP;
+  add The Calm Plan's link once it is live). On 9 Nov the links were taken off
+  after "we're only selling digital downloads not paperbacks" was misread;
+  Sam asked for them back on 10 Nov. Press pitches still feature the digital
+  downloads (her 8 Nov rule). Sam's Bold and Easy books (Cute Animals, Nature
+  Scenes) went live on KDP on 8 Nov under her own name.
 
 - **Sales push (8 Nov 2026, Sam: "nothing's selling").** Numbers in the
   sole-trader Project doc claude/SALES-DIAGNOSIS.md: 30 days to 8 Nov, Etsy 23
