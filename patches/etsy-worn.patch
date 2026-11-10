@@ -1,0 +1,97 @@
+# Etsy listing videos of people wearing the tees (square, photos only) [skip netlify]
+diff --git a/automation/social/reel.js b/automation/social/reel.js
+index 4c7e791..28ebde2 100644
+--- a/automation/social/reel.js
++++ b/automation/social/reel.js
+@@ -72,7 +72,7 @@ async function makeWorn(mp4Path, worn) {
+     }
+     const tmp = mp4Path.replace(/\.mp4$/, ".worn.mp4");
+     execFileSync("python3", [path.join(__dirname, "worn.py"), tmp, worn.title, worn.line || "", worn.price, ...files],
+-      { stdio: "inherit", env: { ...process.env, FONT_DIR: fontDir } });
++      { stdio: "inherit", env: { ...process.env, FONT_DIR: fontDir, SHAPE: worn.shape || "" } });
+     fs.renameSync(tmp, mp4Path);
+     return true;
+   } catch (e) {
+diff --git a/automation/social/worn-etsy.js b/automation/social/worn-etsy.js
+new file mode 100644
+index 0000000..77e4e38
+--- /dev/null
++++ b/automation/social/worn-etsy.js
+@@ -0,0 +1,30 @@
++// Etsy listing videos of people wearing each tee (Sam, 10 Nov 2026).
++// For every tee with a product photo, makes a square, silent, photographs-only
++// video (about 11 s, inside Etsy's 5-15 s rule) from Printify's model photos.
++// Writes automation/social/videos/worn/<catalogue id>.mp4. Posts nothing.
++const fs = require("fs");
++const path = require("path");
++const { loadSiteData, wornPost } = require("./lib.js");
++const { makeWorn } = require("./reel.js");
++
++(async () => {
++  const site = loadSiteData();
++  const dir = path.join(__dirname, "videos", "worn");
++  fs.mkdirSync(dir, { recursive: true });
++  const seen = new Set();
++  let made = 0, failed = 0;
++  for (let n = 0; n < 60; n++) {
++    const post = wornPost(n, site, "2099-01-01");
++    if (!post || seen.has(post.page)) continue;
++    seen.add(post.page);
++    const id = post.worn.src.match(/\/([a-z0-9-]+)-frog-logic-tee\.jpg/);
++    const name = (id ? id[1] : post.page).replace(/-tee$/, "");
++    const out = path.join(dir, name + ".mp4");
++    fs.writeFileSync(out, "");
++    const ok = await makeWorn(out, { ...post.worn, shape: "square" });
++    if (ok) made++; else { failed++; fs.unlinkSync(out); }
++    console.log(`${ok ? "ok    " : "FAILED"} ${name}`);
++  }
++  console.log(`\n${made} made, ${failed} failed`);
++  if (!made) process.exit(1);
++})().catch((e) => { console.error(e); process.exit(1); });
+diff --git a/automation/social/worn.py b/automation/social/worn.py
+index 193a530..0519ee4 100644
+--- a/automation/social/worn.py
++++ b/automation/social/worn.py
+@@ -16,9 +16,15 @@ SRC = sys.argv[5:]
+ if len(SRC) < 2:
+     sys.exit("need at least two photographs")
+ OW, OH, FPS = 1080, 1920, 30
++# SHAPE=square: 1080x1080, photographs only, for Etsy listing videos (no
++# words, no price and no website address: Etsy prices differ and Etsy does not
++# allow sending shoppers off the site).
++SQUARE = os.environ.get("SHAPE") == "square"
++if SQUARE:
++    OH = 1080
+ HOLD, FADE = 2.1, 0.45            # seconds each photo is held, and the cross-fade
+ CREAM, INK, GREEN, GOLD = (244, 239, 227), (26, 26, 26), (47, 74, 58), (232, 182, 60)
+-PY, PS = 540, 1080                # photo: full width square starting here
++PY, PS = (0 if SQUARE else 540), 1080   # photo: full width square starting here
+ FONTS = os.environ.get("FONT_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), ".gfonts")
+ 
+ 
+@@ -56,8 +62,11 @@ def wrap(d, text, f, width):
+ # ---- the still layer: background, words, price pill -------------------------
+ base = Image.new("RGB", (OW, OH), CREAM)
+ d = ImageDraw.Draw(base)
+-small = font("DMSans-var.ttf", 30, 700)
+-d.text((OW / 2, 215), "F R O G   L O G I C", font=small, fill=GREEN, anchor="mm")
++small = None if SQUARE else font("DMSans-var.ttf", 30, 700)
++if SQUARE:
++    TITLE, LINE = "", ""
++else:
++  d.text((OW / 2, 215), "F R O G   L O G I C", font=small, fill=GREEN, anchor="mm")
+ 
+ # Title: biggest size at which it fits in two lines.
+ for size in (92, 84, 76, 68, 60, 54, 48):
+@@ -93,8 +102,9 @@ pw = d.textlength(ptxt, font=pf) + 80
+ pill = Image.new("RGBA", (OW, OH), (0, 0, 0, 0))
+ pd = ImageDraw.Draw(pill)
+ px0, py0 = (OW - pw) / 2, 1392
+-pd.rounded_rectangle((px0, py0, px0 + pw, py0 + 84), 42, fill=GOLD + (245,))
+-pd.text((OW / 2, py0 + 42), ptxt, font=pf, fill=INK, anchor="mm")
++if not SQUARE:
++    pd.rounded_rectangle((px0, py0, px0 + pw, py0 + 84), 42, fill=GOLD + (245,))
++    pd.text((OW / 2, py0 + 42), ptxt, font=pf, fill=INK, anchor="mm")
+ 
+ photos = [Image.open(p).convert("RGB").resize((1200, 1200), Image.LANCZOS) for p in SRC]
+ N = len(photos)
