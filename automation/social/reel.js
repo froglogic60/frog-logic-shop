@@ -72,7 +72,7 @@ async function makeWorn(mp4Path, worn) {
     }
     const tmp = mp4Path.replace(/\.mp4$/, ".worn.mp4");
     execFileSync("python3", [path.join(__dirname, "worn.py"), tmp, worn.title, worn.line || "", worn.price, ...files],
-      { stdio: "inherit", env: { ...process.env, FONT_DIR: fontDir } });
+      { stdio: "inherit", env: { ...process.env, FONT_DIR: fontDir, SHAPE: worn.shape || "" } });
     fs.renameSync(tmp, mp4Path);
     return true;
   } catch (e) {

@@ -16,9 +16,15 @@ SRC = sys.argv[5:]
 if len(SRC) < 2:
     sys.exit("need at least two photographs")
 OW, OH, FPS = 1080, 1920, 30
+# SHAPE=square: 1080x1080, photographs only, for Etsy listing videos (no
+# words, no price and no website address: Etsy prices differ and Etsy does not
+# allow sending shoppers off the site).
+SQUARE = os.environ.get("SHAPE") == "square"
+if SQUARE:
+    OH = 1080
 HOLD, FADE = 2.1, 0.45            # seconds each photo is held, and the cross-fade
 CREAM, INK, GREEN, GOLD = (244, 239, 227), (26, 26, 26), (47, 74, 58), (232, 182, 60)
-PY, PS = 540, 1080                # photo: full width square starting here
+PY, PS = (0 if SQUARE else 540), 1080   # photo: full width square starting here
 FONTS = os.environ.get("FONT_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), ".gfonts")
 
 
@@ -56,8 +62,11 @@ def wrap(d, text, f, width):
 # ---- the still layer: background, words, price pill -------------------------
 base = Image.new("RGB", (OW, OH), CREAM)
 d = ImageDraw.Draw(base)
-small = font("DMSans-var.ttf", 30, 700)
-d.text((OW / 2, 215), "F R O G   L O G I C", font=small, fill=GREEN, anchor="mm")
+small = None if SQUARE else font("DMSans-var.ttf", 30, 700)
+if SQUARE:
+    TITLE, LINE = "", ""
+else:
+  d.text((OW / 2, 215), "F R O G   L O G I C", font=small, fill=GREEN, anchor="mm")
 
 # Title: biggest size at which it fits in two lines.
 for size in (92, 84, 76, 68, 60, 54, 48):
@@ -93,8 +102,9 @@ pw = d.textlength(ptxt, font=pf) + 80
 pill = Image.new("RGBA", (OW, OH), (0, 0, 0, 0))
 pd = ImageDraw.Draw(pill)
 px0, py0 = (OW - pw) / 2, 1392
-pd.rounded_rectangle((px0, py0, px0 + pw, py0 + 84), 42, fill=GOLD + (245,))
-pd.text((OW / 2, py0 + 42), ptxt, font=pf, fill=INK, anchor="mm")
+if not SQUARE:
+    pd.rounded_rectangle((px0, py0, px0 + pw, py0 + 84), 42, fill=GOLD + (245,))
+    pd.text((OW / 2, py0 + 42), ptxt, font=pf, fill=INK, anchor="mm")
 
 photos = [Image.open(p).convert("RGB").resize((1200, 1200), Image.LANCZOS) for p in SRC]
 N = len(photos)
