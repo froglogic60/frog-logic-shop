@@ -1,0 +1,21 @@
+# Context: Etsy tee people videos done [skip netlify]
+diff --git a/FROG-LOGIC-CONTEXT.md b/FROG-LOGIC-CONTEXT.md
+index cbd5ba0..f7dbf99 100644
+--- a/FROG-LOGIC-CONTEXT.md
++++ b/FROG-LOGIC-CONTEXT.md
+@@ -309,8 +309,13 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
+   key needed. Now used for SOCIAL: every Saturday from 14 Nov the 1pm post is a
+   Reel of four of those photos (lib.js wornPost, reel.js makeWorn, worn.py;
+   "Preview a tee-worn-by-people video" workflow makes one without posting).
+-  Not yet done: adding the same photos to the Etsy listings and site pages
+-  (Etsy listings currently show 5 photos, none with a person). Printify's
++  ETSY (done 10 Nov): all 58 tee listings (29 designs, UK + US) have a square
++  11 s people video as well as any zoom video (Etsy allows 2 per listing).
++  Made by the "Make Etsy videos of people wearing the tees" workflow
++  (worn-etsy.js); copies in OneDrive\Desktop\Frog Logic\Videos and TikTok\
++  Etsy tee videos with people\. The Etsy tee listings already had 4-5 people
++  photos each (an earlier note here saying they had none was wrong). Not done:
++  the 9 Christmas "Socially Hibernating" tee/hoodie listings. Printify's
+   "Listing video" tab is a paid Kittl tool; not used.
+ 
+ - Replit store retired (26 Aug); Etsy is the second channel; Share & Save on.
