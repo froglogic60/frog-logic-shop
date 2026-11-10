@@ -26,6 +26,54 @@ function makeReel(jpgPath) {
   }
 }
 
+// ---- tees worn by people (Sam, 10 Nov 2026) --------------------------------
+// Printify's mockup library has photographs of people wearing each tee. They
+// are served from the same public image address as the front photo in
+// mockups.json, with a different camera number, so no API key is needed.
+// Camera numbers checked in Printify on 10 Nov 2026 for the unisex tee every
+// Frog Logic tee is printed on.
+const WORN_CAMERAS = [
+  [92662, "lifestyle"],   // close up, denim jacket
+  [92573, "person-2"],
+  [92576, "person-6"],
+  [101996, "duo-2"],
+  [92572, "person-1"],
+];
+
+// worn = { src: front photo address from mockups.json, title, line, price }.
+// Writes the Reel over mp4Path. Returns true if it was made; on any problem
+// it returns false and the ordinary Reel already at mp4Path is left alone.
+async function makeWorn(mp4Path, worn) {
+  try {
+    const m = String(worn.src).match(/\/mockup\/([0-9a-f]+)\/(\d+)\/\d+\//);
+    if (!m) throw new Error("no product photo address for this tee");
+    const dir = fs.mkdtempSync(path.join(require("os").tmpdir(), "worn-"));
+    const files = [];
+    for (const [cam, label] of WORN_CAMERAS) {
+      if (files.length >= 4) break;
+      const url = `https://images-api.printify.com/mockup/${m[1]}/${m[2]}/${cam}/tee.jpg?camera_label=${label}`;
+      const r = await fetch(url).catch(() => null);
+      if (!r || !r.ok) { console.error(`worn photo ${label} not available (${r ? r.status : "no reply"})`); continue; }
+      const buf = Buffer.from(await r.arrayBuffer());
+      if (buf.length < 20000) { console.error(`worn photo ${label} too small to be a photo`); continue; }
+      const f = path.join(dir, label + ".jpg");
+      fs.writeFileSync(f, buf);
+      files.push(f);
+    }
+    if (files.length < 2) throw new Error("fewer than two photographs came back");
+    const { ensureFonts } = require("./gfonts.js");
+    const fontDir = await ensureFonts(path.join(__dirname, ".gfonts"));
+    const tmp = mp4Path.replace(/\.mp4$/, ".worn.mp4");
+    execFileSync("python3", [path.join(__dirname, "worn.py"), tmp, worn.title, worn.line || "", worn.price, ...files],
+      { stdio: "inherit", env: { ...process.env, FONT_DIR: fontDir } });
+    fs.renameSync(tmp, mp4Path);
+    return true;
+  } catch (e) {
+    console.error("Worn Reel could not be made, keeping the ordinary one:", e.message);
+    return false;
+  }
+}
+
 function videoUrlFor(repoPath) {
   const ref = process.env.COMMIT_SHA || "main";
   return `https://cdn.jsdelivr.net/gh/${REPO}@${ref}/${repoPath}`;
@@ -78,4 +126,4 @@ async function publishReel({ videoUrl, igCaption, fbCaption, token }) {
   return { instagramId: pub.id, facebookId: fb.id };
 }
 
-module.exports = { makeReel, videoUrlFor, publishReel };
+module.exports = { makeReel, makeWorn, videoUrlFor, publishReel };

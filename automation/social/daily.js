@@ -17,7 +17,7 @@ const fs = require("fs");
 const path = require("path");
 const { loadSiteData, scheduleFor, buildPost } = require("./lib.js");
 const { makeRenderer } = require("./render2.js");
-const { makeReel, videoUrlFor, publishReel } = require("./reel.js");
+const { makeReel, makeWorn, videoUrlFor, publishReel } = require("./reel.js");
 
 const GRAPH = "https://graph.facebook.com/v20.0";
 const RAW_BASE = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/queue";
@@ -49,8 +49,11 @@ async function generate() {
   await renderer.renderToJpeg(renderer.svgFor(post, sched.occurrence), jpg);
   // Video-first (7 Nov 2026): the picture is also turned into a 9 s Reel.
   const mp4 = makeReel(jpg);
+  // Saturday tee posts: the Reel is photographs of people wearing the tee. If
+  // those can't be fetched, the ordinary Reel made above goes out instead.
+  const worn = mp4 && post.worn ? await makeWorn(mp4, post.worn) : false;
   fs.writeFileSync(path.join(QUEUE, `${name}.json`), JSON.stringify({
-    caption: post.caption, kind: post.kind, image: `${name}.jpg`, page: post.page || null,
+    caption: post.caption, kind: worn ? "worn" : post.kind, image: `${name}.jpg`, page: post.page || null,
     video: mp4 ? `${name}.mp4` : null,
   }, null, 2));
 

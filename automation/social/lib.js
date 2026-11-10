@@ -133,6 +133,13 @@ function scheduleFor(dateUtc, slot) {
   const type = types[pos];
   const focus = w >= V4_FROM_WEEK;
   const dateIso = new Date(dateUtc).toISOString().slice(0, 10);
+  // Saturdays from 14 Nov 2026: the daily post is a tee worn by a person (Sam,
+  // 10 Nov: "Printify is showing pictures of people wearing the clothing").
+  // One a week, because the tees had no views as flat artwork and the
+  // printables are what people look at; raise it if these do better.
+  if (slot === 1 && dateIso >= WORN_FROM && new Date(dateUtc).getUTCDay() === 6) {
+    return { type: "w", occurrence: Math.round((Date.parse(dateIso) - Date.parse(WORN_FROM)) / (7 * 86400000)), focus, dateIso };
+  }
   // occurrence = how many times this type appeared before this slot, ever.
   let occurrence = 0;
   for (let wi = 0; wi < w; wi++) occurrence += weekTypes(wi).filter((t) => t === type).length;
@@ -276,8 +283,33 @@ function focusPost(occurrence, site, dateIso) {
   };
 }
 
+// ---- tees worn by people (Saturdays from 14 Nov 2026) ------------------------
+const WORN_FROM = "2026-11-14";
+const XMAS_UK_ORDER_BY = "2026-12-10";
+let MOCKUPS = {};
+try { MOCKUPS = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "..", "mockups.json"), "utf8")); } catch { /* none */ }
+function catalogId(p) {
+  const n = p.num.includes("\u2014") ? p.num.split("\u2014")[0].trim() : p.num;
+  return (n + "-" + p.word).replace(/[^A-Za-z0-9]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase();
+}
+function wornPost(occurrence, site, dateIso) {
+  const tees = site.PRODUCTS.filter((p) => /Tee/.test(p.num || "") && !p.retired && MOCKUPS[catalogId(p)]);
+  if (!tees.length) return null;
+  // 5 steps at a time so the frog tees and the feelings tees take turns.
+  const p = tees[(occurrence * 5 + 28) % tees.length];
+  const slug = site.pageSlug ? site.pageSlug(p) : null;
+  const link = slug ? `${SHOP}/p/${slug}/` : SHOP;
+  const xmas = dateIso && dateIso <= XMAS_UK_ORDER_BY ? "\nOrder by 10 December for Christmas (UK)." : "";
+  return {
+    kind: "art", item: p, page: slug,
+    worn: { src: MOCKUPS[catalogId(p)].src, title: p.word, line: p.line || "", price: `${p.price.replace(/\.00$/, "")} \u00b7 free UK post` },
+    caption: `${p.word}. ${p.line} \ud83d\udc38\n\nOn a real tee: ${p.price}, free UK post. ${link}${xmas}\n${etsyLine(p)}\n\n${tags(occurrence)}`,
+  };
+}
+
 function buildPost({ type, occurrence, focus, dateIso }, bank, site) {
   if (type === "p") return plannerPost(occurrence, site);
+  if (type === "w") { const wp = wornPost(occurrence, site, dateIso); if (wp) return wp; type = "a"; }
   if (type === "q") {
     const q = bank.quotes[occurrence % bank.quotes.length];
     return {
@@ -318,4 +350,4 @@ function buildPost({ type, occurrence, focus, dateIso }, bank, site) {
   };
 }
 
-module.exports = { loadSiteData, prepareFonts, scheduleFor, buildPost };
+module.exports = { loadSiteData, prepareFonts, scheduleFor, buildPost, wornPost };
