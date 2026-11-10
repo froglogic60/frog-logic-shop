@@ -1,0 +1,32 @@
+name: Make Etsy videos of people wearing the tees
+# Square, silent, photographs-only videos for the Etsy tee listings, made from
+# Printify's model photos. Saved to automation/social/videos/worn/. Posts nothing.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install video tools
+        run: |
+          python3 -c "import PIL" 2>/dev/null || pip install --quiet --break-system-packages pillow || pip install --quiet pillow
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: Make the videos
+        working-directory: automation/social
+        run: |
+          npm install --no-audit --no-fund --silent || true
+          node worn-etsy.js
+      - name: Save them
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/social/videos/worn
+          git commit -m "Etsy videos of people wearing the tees [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
