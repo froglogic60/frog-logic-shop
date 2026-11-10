@@ -1,0 +1,317 @@
+# Saturday tee posts: videos of people wearing the tee, from Printify's photos [skip netlify]
+diff --git a/automation/social/daily.js b/automation/social/daily.js
+index 7754a4a..5edbc24 100644
+--- a/automation/social/daily.js
++++ b/automation/social/daily.js
+@@ -17,7 +17,7 @@ const fs = require("fs");
+ const path = require("path");
+ const { loadSiteData, scheduleFor, buildPost } = require("./lib.js");
+ const { makeRenderer } = require("./render2.js");
+-const { makeReel, videoUrlFor, publishReel } = require("./reel.js");
++const { makeReel, makeWorn, videoUrlFor, publishReel } = require("./reel.js");
+ 
+ const GRAPH = "https://graph.facebook.com/v20.0";
+ const RAW_BASE = "https://raw.githubusercontent.com/froglogic60/frog-logic-shop/main/automation/social/queue";
+@@ -49,8 +49,11 @@ async function generate() {
+   await renderer.renderToJpeg(renderer.svgFor(post, sched.occurrence), jpg);
+   // Video-first (7 Nov 2026): the picture is also turned into a 9 s Reel.
+   const mp4 = makeReel(jpg);
++  // Saturday tee posts: the Reel is photographs of people wearing the tee. If
++  // those can't be fetched, the ordinary Reel made above goes out instead.
++  const worn = mp4 && post.worn ? await makeWorn(mp4, post.worn) : false;
+   fs.writeFileSync(path.join(QUEUE, `${name}.json`), JSON.stringify({
+-    caption: post.caption, kind: post.kind, image: `${name}.jpg`, page: post.page || null,
++    caption: post.caption, kind: worn ? "worn" : post.kind, image: `${name}.jpg`, page: post.page || null,
+     video: mp4 ? `${name}.mp4` : null,
+   }, null, 2));
+ 
+diff --git a/automation/social/lib.js b/automation/social/lib.js
+index 8c397e7..7896af3 100644
+--- a/automation/social/lib.js
++++ b/automation/social/lib.js
+@@ -133,6 +133,13 @@ function scheduleFor(dateUtc, slot) {
+   const type = types[pos];
+   const focus = w >= V4_FROM_WEEK;
+   const dateIso = new Date(dateUtc).toISOString().slice(0, 10);
++  // Saturdays from 14 Nov 2026: the daily post is a tee worn by a person (Sam,
++  // 10 Nov: "Printify is showing pictures of people wearing the clothing").
++  // One a week, because the tees had no views as flat artwork and the
++  // printables are what people look at; raise it if these do better.
++  if (slot === 1 && dateIso >= WORN_FROM && new Date(dateUtc).getUTCDay() === 6) {
++    return { type: "w", occurrence: Math.round((Date.parse(dateIso) - Date.parse(WORN_FROM)) / (7 * 86400000)), focus, dateIso };
++  }
+   // occurrence = how many times this type appeared before this slot, ever.
+   let occurrence = 0;
+   for (let wi = 0; wi < w; wi++) occurrence += weekTypes(wi).filter((t) => t === type).length;
+@@ -276,8 +283,33 @@ function focusPost(occurrence, site, dateIso) {
+   };
+ }
+ 
++// ---- tees worn by people (Saturdays from 14 Nov 2026) ------------------------
++const WORN_FROM = "2026-11-14";
++const XMAS_UK_ORDER_BY = "2026-12-10";
++let MOCKUPS = {};
++try { MOCKUPS = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "..", "mockups.json"), "utf8")); } catch { /* none */ }
++function catalogId(p) {
++  const n = p.num.includes("\u2014") ? p.num.split("\u2014")[0].trim() : p.num;
++  return (n + "-" + p.word).replace(/[^A-Za-z0-9]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase();
++}
++function wornPost(occurrence, site, dateIso) {
++  const tees = site.PRODUCTS.filter((p) => /Tee/.test(p.num || "") && !p.retired && MOCKUPS[catalogId(p)]);
++  if (!tees.length) return null;
++  // 5 steps at a time so the frog tees and the feelings tees take turns.
++  const p = tees[(occurrence * 5 + 28) % tees.length];
++  const slug = site.pageSlug ? site.pageSlug(p) : null;
++  const link = slug ? `${SHOP}/p/${slug}/` : SHOP;
++  const xmas = dateIso && dateIso <= XMAS_UK_ORDER_BY ? "\nOrder by 10 December for Christmas (UK)." : "";
++  return {
++    kind: "art", item: p, page: slug,
++    worn: { src: MOCKUPS[catalogId(p)].src, title: p.word, line: p.line || "", price: `${p.price.replace(/\.00$/, "")} \u00b7 free UK post` },
++    caption: `${p.word}. ${p.line} \ud83d\udc38\n\nOn a real tee: ${p.price}, free UK post. ${link}${xmas}\n${etsyLine(p)}\n\n${tags(occurrence)}`,
++  };
++}
++
+ function buildPost({ type, occurrence, focus, dateIso }, bank, site) {
+   if (type === "p") return plannerPost(occurrence, site);
++  if (type === "w") { const wp = wornPost(occurrence, site, dateIso); if (wp) return wp; type = "a"; }
+   if (type === "q") {
+     const q = bank.quotes[occurrence % bank.quotes.length];
+     return {
+@@ -318,4 +350,4 @@ function buildPost({ type, occurrence, focus, dateIso }, bank, site) {
+   };
+ }
+ 
+-module.exports = { loadSiteData, prepareFonts, scheduleFor, buildPost };
++module.exports = { loadSiteData, prepareFonts, scheduleFor, buildPost, wornPost };
+diff --git a/automation/social/reel.js b/automation/social/reel.js
+index eec470d..87b7b8e 100644
+--- a/automation/social/reel.js
++++ b/automation/social/reel.js
+@@ -26,6 +26,54 @@ function makeReel(jpgPath) {
+   }
+ }
+ 
++// ---- tees worn by people (Sam, 10 Nov 2026) --------------------------------
++// Printify's mockup library has photographs of people wearing each tee. They
++// are served from the same public image address as the front photo in
++// mockups.json, with a different camera number, so no API key is needed.
++// Camera numbers checked in Printify on 10 Nov 2026 for the unisex tee every
++// Frog Logic tee is printed on.
++const WORN_CAMERAS = [
++  [92662, "lifestyle"],   // close up, denim jacket
++  [92573, "person-2"],
++  [92576, "person-6"],
++  [101996, "duo-2"],
++  [92572, "person-1"],
++];
++
++// worn = { src: front photo address from mockups.json, title, line, price }.
++// Writes the Reel over mp4Path. Returns true if it was made; on any problem
++// it returns false and the ordinary Reel already at mp4Path is left alone.
++async function makeWorn(mp4Path, worn) {
++  try {
++    const m = String(worn.src).match(/\/mockup\/([0-9a-f]+)\/(\d+)\/\d+\//);
++    if (!m) throw new Error("no product photo address for this tee");
++    const dir = fs.mkdtempSync(path.join(require("os").tmpdir(), "worn-"));
++    const files = [];
++    for (const [cam, label] of WORN_CAMERAS) {
++      if (files.length >= 4) break;
++      const url = `https://images-api.printify.com/mockup/${m[1]}/${m[2]}/${cam}/tee.jpg?camera_label=${label}`;
++      const r = await fetch(url).catch(() => null);
++      if (!r || !r.ok) { console.error(`worn photo ${label} not available (${r ? r.status : "no reply"})`); continue; }
++      const buf = Buffer.from(await r.arrayBuffer());
++      if (buf.length < 20000) { console.error(`worn photo ${label} too small to be a photo`); continue; }
++      const f = path.join(dir, label + ".jpg");
++      fs.writeFileSync(f, buf);
++      files.push(f);
++    }
++    if (files.length < 2) throw new Error("fewer than two photographs came back");
++    const { ensureFonts } = require("./gfonts.js");
++    const fontDir = await ensureFonts(path.join(__dirname, ".gfonts"));
++    const tmp = mp4Path.replace(/\.mp4$/, ".worn.mp4");
++    execFileSync("python3", [path.join(__dirname, "worn.py"), tmp, worn.title, worn.line || "", worn.price, ...files],
++      { stdio: "inherit", env: { ...process.env, FONT_DIR: fontDir } });
++    fs.renameSync(tmp, mp4Path);
++    return true;
++  } catch (e) {
++    console.error("Worn Reel could not be made, keeping the ordinary one:", e.message);
++    return false;
++  }
++}
++
+ function videoUrlFor(repoPath) {
+   const ref = process.env.COMMIT_SHA || "main";
+   return `https://cdn.jsdelivr.net/gh/${REPO}@${ref}/${repoPath}`;
+@@ -78,4 +126,4 @@ async function publishReel({ videoUrl, igCaption, fbCaption, token }) {
+   return { instagramId: pub.id, facebookId: fb.id };
+ }
+ 
+-module.exports = { makeReel, videoUrlFor, publishReel };
++module.exports = { makeReel, makeWorn, videoUrlFor, publishReel };
+diff --git a/automation/social/worn-preview.js b/automation/social/worn-preview.js
+new file mode 100644
+index 0000000..9b25168
+--- /dev/null
++++ b/automation/social/worn-preview.js
+@@ -0,0 +1,19 @@
++// Makes one "tee worn by people" Reel without posting it, so it can be looked
++// at first. Writes automation/social/promo/worn-preview.mp4 (overwritten each
++// time).   N=0 node worn-preview.js    N = which Saturday in the rotation.
++const fs = require("fs");
++const path = require("path");
++const { loadSiteData, wornPost } = require("./lib.js");
++const { makeWorn } = require("./reel.js");
++
++(async () => {
++  const n = parseInt(process.env.N || "0", 10) || 0;
++  const post = wornPost(n, loadSiteData(), new Date().toISOString().slice(0, 10));
++  if (!post) throw new Error("no tee with a product photo found");
++  const out = path.join(__dirname, "promo", "worn-preview.mp4");
++  if (fs.existsSync(out)) fs.unlinkSync(out);
++  fs.writeFileSync(out, ""); // makeWorn replaces this
++  const ok = await makeWorn(out, post.worn);
++  if (!ok) { fs.unlinkSync(out); process.exit(1); }
++  console.log("\n" + post.caption);
++})().catch((e) => { console.error(e); process.exit(1); });
+diff --git a/automation/social/worn.py b/automation/social/worn.py
+new file mode 100644
+index 0000000..193a530
+--- /dev/null
++++ b/automation/social/worn.py
+@@ -0,0 +1,136 @@
++# A Reel made from Printify's own photographs of people wearing the tee
++# (Sam, 10 Nov 2026: "Printify is showing pictures of people wearing the
++# clothing ... make our social posts videos using those").
++#
++# The photographs are Printify's mockup library shots (real studio models with
++# our artwork placed on the shirt), fetched by reel.js. 1080x1920, 30 fps,
++# silent H.264. The words sit above the photo so Instagram's own buttons and
++# caption, which cover the bottom of a Reel, never hide them.
++#
++#   python3 worn.py out.mp4 "Title" "Line under it" "£19 · free UK post" a.jpg b.jpg ...
++import sys, os, math, subprocess
++from PIL import Image, ImageDraw, ImageFont
++
++OUT, TITLE, LINE, PRICE = sys.argv[1:5]
++SRC = sys.argv[5:]
++if len(SRC) < 2:
++    sys.exit("need at least two photographs")
++OW, OH, FPS = 1080, 1920, 30
++HOLD, FADE = 2.1, 0.45            # seconds each photo is held, and the cross-fade
++CREAM, INK, GREEN, GOLD = (244, 239, 227), (26, 26, 26), (47, 74, 58), (232, 182, 60)
++PY, PS = 540, 1080                # photo: full width square starting here
++FONTS = os.environ.get("FONT_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), ".gfonts")
++
++
++def font(name, size, wght):
++    f = ImageFont.truetype(os.path.join(FONTS, name), size)
++    try:
++        axes = f.get_variation_axes()
++        vals = []
++        for a in axes:
++            tag = a.get("name")
++            tag = tag.decode() if isinstance(tag, bytes) else str(tag)
++            if tag.lower() in ("weight", "wght"):
++                vals.append(min(max(wght, a["minimum"]), a["maximum"]))
++            else:
++                vals.append(a["default"])
++        f.set_variation_by_axes(vals)
++    except Exception:
++        pass
++    return f
++
++
++def wrap(d, text, f, width):
++    lines, cur = [], ""
++    for w in text.split():
++        t = (cur + " " + w).strip()
++        if d.textlength(t, font=f) <= width or not cur:
++            cur = t
++        else:
++            lines.append(cur); cur = w
++    if cur:
++        lines.append(cur)
++    return lines
++
++
++# ---- the still layer: background, words, price pill -------------------------
++base = Image.new("RGB", (OW, OH), CREAM)
++d = ImageDraw.Draw(base)
++small = font("DMSans-var.ttf", 30, 700)
++d.text((OW / 2, 215), "F R O G   L O G I C", font=small, fill=GREEN, anchor="mm")
++
++# Title: biggest size at which it fits in two lines.
++for size in (92, 84, 76, 68, 60, 54, 48):
++    tf = font("Fraunces-var.ttf", size, 700)
++    tl = wrap(d, TITLE, tf, OW - 150)
++    if len(tl) <= 2:
++        break
++# Line under it: shrink to fit two lines; if it still won't, keep whole
++# sentences from the front rather than cutting one in half.
++text = LINE
++while True:
++    for ls in (38, 34, 31):
++        lf = font("DMSans-var.ttf", ls, 500)
++        ll = wrap(d, text, lf, OW - 170)
++        if len(ll) <= 2:
++            break
++    if len(ll) <= 2 or ". " not in text:
++        ll = ll[:2]; break
++    text = text.rsplit(". ", 1)[0] + "."
++th = len(tl) * size * 1.08
++block = th + (14 + len(ll) * 50 if ll else 0)
++y = 255 + (PY - 30 - 255 - block) / 2
++for t in tl:
++    d.text((OW / 2, y + size * 0.54), t, font=tf, fill=INK, anchor="mm"); y += size * 1.08
++y += 14
++for t in ll:
++    d.text((OW / 2, y + 25), t, font=lf, fill=(70, 70, 70), anchor="mm"); y += 50
++
++# Price pill, laid over the bottom of the photo but above Instagram's buttons.
++pf = font("DMSans-var.ttf", 40, 700)
++ptxt = PRICE + "   froglogic.co.uk"
++pw = d.textlength(ptxt, font=pf) + 80
++pill = Image.new("RGBA", (OW, OH), (0, 0, 0, 0))
++pd = ImageDraw.Draw(pill)
++px0, py0 = (OW - pw) / 2, 1392
++pd.rounded_rectangle((px0, py0, px0 + pw, py0 + 84), 42, fill=GOLD + (245,))
++pd.text((OW / 2, py0 + 42), ptxt, font=pf, fill=INK, anchor="mm")
++
++photos = [Image.open(p).convert("RGB").resize((1200, 1200), Image.LANCZOS) for p in SRC]
++N = len(photos)
++STEP = HOLD + FADE
++DUR = N * STEP + 0.6              # the last photo lingers
++
++
++def shot(i, age):
++    # Slow move in; alternate photos drift the other way so it doesn't pulse.
++    z = 1.0 + 0.07 * min(age / (STEP + FADE), 1) if i % 2 == 0 else 1.07 - 0.07 * min(age / (STEP + FADE), 1)
++    w = 1200 / z
++    x0 = (1200 - w) / 2
++    y0 = (1200 - w) * 0.35       # keep the chest (the artwork) in frame
++    return photos[i].resize((PS, PS), Image.BICUBIC, box=(x0, y0, x0 + w, y0 + w))
++
++
++p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
++                      "-s", f"{OW}x{OH}", "-r", str(FPS), "-i", "-", "-c:v", "libx264",
++                      "-profile:v", "high", "-pix_fmt", "yuv420p", "-crf", "22", "-preset", "medium",
++                      "-movflags", "+faststart", OUT], stdin=subprocess.PIPE)
++for f in range(round(FPS * DUR)):
++    t = f / FPS
++    i = min(int(t / STEP), N - 1)
++    age = t - i * STEP
++    img = shot(i, age)
++    if i > 0 and age < FADE:      # fade in over the previous photo
++        prev = shot(i - 1, age + STEP)
++        u = 0.5 - 0.5 * math.cos(math.pi * age / FADE)
++        img = Image.blend(prev, img, u)
++    frame = base.copy()
++    frame.paste(img, (0, PY))
++    frame.paste(pill, (0, 0), pill)
++    if t < 0.5:                   # open with a short fade up from the background
++        frame = Image.blend(Image.new("RGB", (OW, OH), CREAM), frame, t / 0.5)
++    p.stdin.write(frame.tobytes())
++p.stdin.close()
++if p.wait() != 0:
++    sys.exit("ffmpeg failed")
++print("worn reel written", OUT, f"{N} photos, {DUR:.1f}s")
