@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -1145,6 +1145,10 @@
         {
           "what": "Sky: did Sky reply to the cancellation email (sent 6 Nov, account 624725558248)? If not, ring 0333 759 0434 or use chat 9:00-19:30 — Claude can open the chat",
           "who": "you"
+        },
+        {
+          "what": "Taster sign-ups: 0 people (0 pages), 0 this week, last none yet",
+          "who": "robot"
         }
       ]
     },
