@@ -3,6 +3,10 @@ name: Make Etsy videos of people wearing the tees
 # Printify's model photos. Saved to automation/social/videos/worn/. Posts nothing.
 on:
   workflow_dispatch:
+    inputs:
+      set:
+        description: "Leave empty for the 29 tees, or xmas for the Christmas tees and hoodies"
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -21,7 +25,7 @@ jobs:
         working-directory: automation/social
         run: |
           npm install --no-audit --no-fund --silent || true
-          node worn-etsy.js
+          SET="${{ inputs.set }}" node worn-etsy.js
       - name: Save them
         run: |
           git config user.name "frog-logic-bot"
