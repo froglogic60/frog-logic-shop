@@ -314,8 +314,9 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   Made by the "Make Etsy videos of people wearing the tees" workflow
   (worn-etsy.js); copies in OneDrive\Desktop\Frog Logic\Videos and TikTok\
   Etsy tee videos with people\. The Etsy tee listings already had 4-5 people
-  photos each (an earlier note here saying they had none was wrong). Not done:
-  the 9 Christmas "Socially Hibernating" tee/hoodie listings. Printify's
+  photos each (an earlier note here saying they had none was wrong). 11 Nov:
+  the 12 Christmas "Socially Hibernating" tee and hoodie listings done too
+  (run the workflow with set = xmas; files xmas-*.mp4). Printify's
   "Listing video" tab is a paid Kittl tool; not used.
 
 - Replit store retired (26 Aug); Etsy is the second channel; Share & Save on.
