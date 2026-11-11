@@ -49,7 +49,7 @@ async function makeWorn(mp4Path, worn) {
     if (!m) throw new Error("no product photo address for this tee");
     const dir = fs.mkdtempSync(path.join(require("os").tmpdir(), "worn-"));
     const files = [];
-    for (const [cam, label] of WORN_CAMERAS) {
+    for (const [cam, label] of (worn.cameras || WORN_CAMERAS)) {
       if (files.length >= 4) break;
       const url = `https://images-api.printify.com/mockup/${m[1]}/${m[2]}/${cam}/tee.jpg?camera_label=${label}`;
       const r = await fetch(url).catch(() => null);
