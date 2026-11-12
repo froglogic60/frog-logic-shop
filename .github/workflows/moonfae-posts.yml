@@ -1,0 +1,48 @@
+name: Moonfae card posts
+# Sam, 12 Nov 2026: one tarot card's meaning to the Moonfae Readings Facebook
+# page and @moonfaereadings on Instagram every Mon, Wed and Fri, evening UK
+# time. Two start times in case GitHub runs late; posted.json stops a double
+# post. Script and cards: automation/moonfae/.
+on:
+  schedule:
+    - cron: "7 16 * * 1,3,5"
+    - cron: "37 18 * * 1,3,5"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: moonfae-posts
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -c "import PIL" 2>/dev/null || pip install --quiet --break-system-packages pillow || pip install --quiet pillow
+      - name: Make today's card
+        id: gen
+        working-directory: automation/moonfae
+        run: python3 moonfae_post.py generate
+      - name: Commit the image
+        if: steps.gen.outputs.due == 'yes'
+        run: |
+          git config user.name "frog-logic-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/moonfae/queue
+          git commit -m "Moonfae card image [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
+      - name: Post to Facebook and Instagram
+        if: steps.gen.outputs.due == 'yes'
+        working-directory: automation/moonfae
+        run: COMMIT_SHA=$(git rev-parse HEAD) python3 moonfae_post.py post
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      - name: Record that it went out
+        if: steps.gen.outputs.due == 'yes'
+        run: |
+          git add automation/moonfae/posted.json
+          git commit -m "Moonfae card posted [skip netlify]" || echo "nothing to commit"
+          git pull --rebase origin main
+          git push
