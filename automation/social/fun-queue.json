@@ -132,7 +132,8 @@
     },
     "caption": "The frog brought her a biscuit and sat with her for a bit. She was, it turns out, a little less fine than announced. The biscuit helped. It usually does.\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/pond-2.jpg",
-    "posted": false
+    "posted": true,
+    "skipped": true
   },
   {
     "postOn": "2026-11-12",
