@@ -160,7 +160,8 @@
     },
     "caption": "Today the stars go to the kind people. Tell us who held the door, sent the text, made the tea. The frog will give them a gold star, and you one for noticing ⭐\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/star-2.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-13T19:02:04.777Z"
   },
   {
     "postOn": "2026-11-14",
