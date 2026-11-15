@@ -6,8 +6,8 @@ copies in step: this file on GitHub is the master; copies sit in
 `Downloads\frog-logic-shop`, `Downloads\Printify-Designer` and
 `OneDrive\Desktop\Frog Logic` on Sam's PC.
 
-Last updated: 2 November 2026 (tidied: current rules and state at the top,
-dated history at the bottom; stale lines fixed). Ignore any copy older than this.
+Last updated: 15 November 2026 (2–15 Nov results added under "Where things
+stand"; rules and state at the top, dated history at the bottom). Ignore any copy older than this.
 
 **The number-one goal is Frog Logic making sales.** Check anything
 customer-facing for "will this get found and bought?" before it goes up.
@@ -122,7 +122,9 @@ stand → coming up → parked → costs → how to work on it → history.
 - ~50+ printable downloads, 23 free Pond Guides (readable on their own pages).
 - **Bespoke Planner** £25: Google Form questionnaire → robot builds a 9–18 page
   personal PDF, emails it. Free **taster** at froglogic.co.uk/taster/.
-  Gift card (D40, £25, site only) not yet tested end to end.
+  Gift card (D40, £25, site only): buying tested 4 Nov at £0 with the one-use
+  code FROGTESTXMB5GS (receipt + download email arrived). Redeeming not yet
+  tested: Sam fills the planner form with her buying email as the gift code.
 - **Organisation Pack**: digital licence, 3 tiers. If one sells, build the
   12-month update-sender (Sam asked).
 - 125+ product pages at froglogic.co.uk/p/<slug>/, sitemap in Search Console.
@@ -212,6 +214,37 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
 
 ## Where things stand (2 Nov 2026)
 
+- **2–15 Nov results (added 15 Nov):**
+  - Pinterest ad test (10–24 Oct): £24.72, 21,862 impressions, 54 pin clicks,
+    53 site visits at ~47p. Stripe: the planner link was opened once ever (9 Oct,
+    unpaid); no planner checkout during the ad. Clicks came, sales didn't.
+  - GoatCounter 28 Oct–2 Nov: 53 visits (home 24, ADHD + autism guides 23,
+    product pages 2), 0 basket opens/adds/checkouts. People read, then leave
+    before any product. Proposed fix (waiting for Sam's yes): a "Something to
+    hand over" strip near the top of all 23 guides with How To Help Me and Access
+    Needs Cards (£2 each, real Add to basket), and those two first in "More from
+    the pond". build-pages.cjs guideBody/buildPage; one publish.
+  - Stripe checkouts since 10 Oct: 1 paid stranger (£6, 3 Nov); unpaid/abandoned:
+    tee £19 (25 Oct), Christmas sets £90 + £88 (14 Oct), US tee+print £39.27 (12 Oct).
+  - Outreach: all 55 approach-list emails sent 2 Nov (19 SENCOs, 26 parent carer
+    forums, 10 Right to Choose clinics). The 07:07 cron never fired; first manual
+    run hit Resend's 10/sec limit, so send.mjs now waits 600 ms per email.
+    Replies to hello@; nudge 8 Dec.
+  - Posted: Mumsnet SN thread (mumsnet.com/talk/special_needs/5596253); Small Business Sunday 8 Nov (Instagram reel DffQCG3AEWg
+    + Facebook video); timetable post #8 as Frog Logic in Autism Parents Support
+    & Resources 15 Nov (one group a day to ~19 Nov; Frog Logic is the member,
+    not Samantha).
+  - Printify 2026 Christmas cut-offs (delivery by 24 Dec): Choice UK 10 Dec, US
+    Standard 9 Dec / Economy 7 Dec, Europe 8 Dec; UK makers (T Shirt & Sons,
+    Print Clever, Shirt Monkey) UK 14 Dec but US 18 Nov, Europe 27 Nov. Site
+    order-by dates fit; Sam chose not to change Etsy listings for the US 18 Nov.
+  - Martina's mug delivered (shipped 3 Nov); duplicate unpublished mug
+    (6ae4c220…) deleted 11 Nov. Halloween retired 1 Nov, old URLs redirect.
+  - Stripe connector added to Claude (read-only).
+  - Still open: guide strip yes/no; Pond Advent sign-up test yes/no; allow
+    search.google.com + pinterest.co.uk in the Claude extension (indexing for the
+    six Christmas pages; pin queue after 16 Nov); Jade (The Autism Page) reply of
+    4 Nov unanswered; planner email says "we'll adjust it" (change to I'll).
 - **FIRST SALE TO A STRANGER: 3 Nov 2026, 13:55, website (Stripe), £6** (After The
   Diagnosis, Finding My People, For The Sibling, £2 each; buyer in Hampshire;
   webhook delivered, downloads emailed). Before that, full four-channel check 2 Nov: Stripe only
