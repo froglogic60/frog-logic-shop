@@ -162,8 +162,8 @@ const COPY = {
   },
   "Affirmation Cards": {
     title: "Affirmation Cards for Neurodivergent Adults | 24 Cut-Out Cards: My Pace Is Not a Flaw, Slow Days Are Still Days | Cute Frog Printable PDF",
-    inside: ["24 cards to cut out and keep where you'll actually see them", "“My pace is not a flaw. It's just my pace.” “Small hops still move me across the pond.”", "Nothing here needs to be earned first", "Two A4 pages, cut along the lines"],
-    why: "Twenty-four lines for the days the inner voice is unkind.",
+    inside: ["18 cards to cut out and keep where you'll actually see them", "“My pace is not a flaw. It's just my pace.” “Small hops still move me across the pond.”", "Nothing here needs to be earned first", "Two A4 pages, cut along the lines"],
+    why: "Eighteen lines for the days the inner voice is unkind.",
     tags: ["affirmation cards", "affirmations", "adhd affirmations", "autism affirmations", "self compassion", "neurodivergent", "cute frog", "positivity cards", "mental health cards", "self love cards", "printable pdf", "instant download", "neurodiversity"],
   },
   "Habit Stacking Cards": {
@@ -173,8 +173,8 @@ const COPY = {
     tags: ["habit stacking", "adhd habits", "habit cards", "routine cards", "executive function", "neurodivergent", "adhd routine", "habit tracker", "cute frog", "productivity", "printable pdf", "instant download", "neurodiversity"],
   },
   "Translation Cards": {
-    title: "Translation Cards | 12 Self-Talk Swaps: 'I'm Lazy' → 'I'm Conserving Energy for What Matters' | Cute Frog Printable PDF for ADHD & Autism",
-    inside: ["Twelve harsh things you say about yourself, each with a truer sentence beside it", "“I'm too sensitive” → “I notice things at a different volume than most”", "“I can't focus” → “My attention free-ranges instead of staying fenced in”", "Two A4 pages, ready to use"],
+    title: "Translation Cards | 18 Self-Talk Swaps: 'I'm Lazy' → 'I'm Conserving Energy for What Matters' | Cute Frog Printable PDF for ADHD & Autism",
+    inside: ["Eighteen harsh things you say about yourself, each with a truer sentence beside it", "“I'm too sensitive” → “I notice things at a different volume than most”", "“I can't focus” → “My attention free-ranges instead of staying fenced in”", "Two A4 pages, ready to use"],
     why: "The harsh thing you say about yourself, and a truer sentence to put next to it.",
     tags: ["self talk", "cognitive reframing", "adhd self esteem", "autism self esteem", "rsd", "neurodivergent", "cute frog", "mental health cards", "self compassion", "cbt cards", "printable pdf", "instant download", "neurodiversity"],
   },
