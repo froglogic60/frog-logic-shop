@@ -63,6 +63,7 @@ def caption(card, index, d):
         f"{card['name']} ✨\n\n{card['caption']}\n\n"
         f"A question to sit with: {card['question']}\n\n"
         f"{cta(index, d)}\n\n"
+        f"Finally I can do readings again! Sam.\n\n"
         f"For entertainment and personal reflection · 18+\n\n{TAGS}"
     )
 
