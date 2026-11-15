@@ -2658,7 +2658,7 @@ const DIGITAL_PRODUCTS = [
   },
   {
     num: "D28 — Printable PDF", word: "Affirmation Cards",
-    line: "Twenty-four lines to cut out and keep somewhere you'll actually see them. Nothing here needs to be earned first.",
+    line: "Eighteen lines to cut out and keep somewhere you'll actually see them. Nothing here needs to be earned first.",
     price: "£2.00", link: "#", bg: "#8C5A1C",
     svg: `<svg viewBox="0 0 300 300">${grain("d28", 0.09)}
       <g>
@@ -2691,7 +2691,7 @@ const DIGITAL_PRODUCTS = [
   },
   {
     num: "D30 — Printable PDF", word: "Translation Cards",
-    line: "The harsh thing you say about yourself, and a truer sentence to put next to it. Twelve swaps, ready to use.",
+    line: "The harsh thing you say about yourself, and a truer sentence to put next to it. Eighteen swaps, ready to use.",
     price: "£2.00", link: "#", bg: "#8C4A2F",
     svg: `<svg viewBox="0 0 300 300">${grain("d30", 0.1)}
       <text x="150" y="122" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="17" fill="${CREAM}" opacity="0.6">"I'm lazy."</text>
@@ -2701,7 +2701,7 @@ const DIGITAL_PRODUCTS = [
       <text x="150" y="188" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="${CREAM}">"I'm conserving pond</text>
       <text x="150" y="208" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="${CREAM}">energy for what matters."</text>
       <text x="150" y="252" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="${GOLD}">TRANSLATION CARDS</text>
-      <text x="150" y="274" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${CREAM}" opacity="0.65" letter-spacing="0.12em">TWELVE SWAPS, READY TO USE</text>
+      <text x="150" y="274" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${CREAM}" opacity="0.65" letter-spacing="0.12em">EIGHTEEN SWAPS, READY TO USE</text>
       <rect width="300" height="300" fill="url(#d30)"/>${mark()}</svg>`
   },
   {
