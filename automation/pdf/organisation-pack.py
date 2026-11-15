@@ -55,7 +55,7 @@ SECTIONS = [
     ("Kinder words", [
         ("Permission-Cards.pdf", "Permission Cards", "Twelve cut-out cards. “Rest is not something you earn first.”"),
         ("Translation-Cards.pdf", "Translation Cards", "The harsh thing they say about themselves, and a truer sentence beside it."),
-        ("Affirmation-Cards.pdf", "Affirmation Cards", "Twenty-four lines to cut out and keep somewhere they will actually see them."),
+        ("Affirmation-Cards.pdf", "Affirmation Cards", "Eighteen lines to cut out and keep somewhere they will actually see them."),
     ]),
     ("After an assessment", [
         ("After-The-Diagnosis.pdf", "After The Diagnosis", "Relief, grief and anger at once; what made sense; who needs to know."),
