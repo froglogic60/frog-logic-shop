@@ -200,7 +200,8 @@
     },
     "caption": "Dot has the right idea, honestly. Back next week with more news, or none, depending on Dot. 🐭\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/news-3.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-16T19:04:04.835Z"
   },
   {
     "postOn": "2026-11-17",
