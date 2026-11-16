@@ -2670,7 +2670,7 @@ const DIGITAL_PRODUCTS = [
       <text x="88" y="162" font-family="Fraunces, serif" font-size="15" fill="${INK}">not a flaw.</text>
       <text x="88" y="184" font-family="Space Mono, monospace" font-size="7.5" fill="#8C5A1C" letter-spacing="0.12em">FROG LOGIC</text>
       <text x="150" y="250" text-anchor="middle" font-family="Anton, sans-serif" font-size="30" fill="${CREAM}">AFFIRMATION CARDS</text>
-      <text x="150" y="272" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${CREAM}" opacity="0.65" letter-spacing="0.12em">TWENTY-FOUR, CUT OUT AND KEEP</text>
+      <text x="150" y="272" text-anchor="middle" font-family="Space Mono, monospace" font-size="8" fill="${CREAM}" opacity="0.65" letter-spacing="0.12em">EIGHTEEN, CUT OUT AND KEEP</text>
       <rect width="300" height="300" fill="url(#d28)"/>${mark()}</svg>`
   },
   {
