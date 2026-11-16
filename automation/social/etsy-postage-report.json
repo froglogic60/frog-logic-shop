@@ -1,7 +1,13 @@
 {
-  "checkedAt": "2026-11-09T16:52:21.622Z",
+  "checkedAt": "2026-11-16T16:26:05.317Z",
   "etsyStore": 29335686,
   "products": [
+    {
+      "id": "6afa512359c1284d9f02a424",
+      "title": "Personalised Christmas Frog Mug, Custom Name Mug, Cute Frog Gift for ADHD and Autistic Adults, Neurodivergent Christmas Gift",
+      "bp": 535,
+      "pp": 6
+    },
     {
       "id": "6af0c45859d5223aba04e600",
       "title": "Open Tabs Have Open Tabs Cute Frog Mug — Neurodivergent ADHD and Autism Gift, 11oz Ceramic Coffee Mug, Ships from the US",
@@ -1000,6 +1006,22 @@
     }
   ],
   "rates": {
+    "535:6": {
+      "GB": [
+        {
+          "first": 389,
+          "additional": 249,
+          "currency": "USD"
+        }
+      ],
+      "US": [
+        {
+          "first": 3419,
+          "additional": 619,
+          "currency": "USD"
+        }
+      ]
+    },
     "478:99": {
       "GB": [],
       "US": [
@@ -1024,9 +1046,6 @@
           "currency": "USD"
         }
       ]
-    },
-    "535:6": {
-      "error": "GET /catalog/blueprints/535/print_providers/6/shipping.json -> 404 {\"title\":\"Blueprint Print Provider of blueprint \\u002"
     },
     "6:99": {
       "GB": [],
