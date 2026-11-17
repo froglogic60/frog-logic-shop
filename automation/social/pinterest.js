@@ -14,6 +14,7 @@
 //
 //   node pinterest.js              build every pin into automation/social/.pins
 //   LIMIT=3 node pinterest.js      build the first three, for checking
+//   ETSY=1 ONLY="How To Help Me" node pinterest.js   Etsy photo, no price or address
 //
 // 1000x1500 is Pinterest's 2:3 ratio. Anything squarer gets cropped in the
 // feed; anything longer gets truncated.
@@ -28,7 +29,11 @@ const CREAM = "#F4EFE3";
 const INK = "#1A1A1A";
 const GOLD = "#E8B63C";
 
-const OUT = path.join(__dirname, ".pins");
+// ETSY=1 builds the same images for Etsy listing photos: no price (Etsy adds
+// VAT and converts currency, so a printed price is wrong for someone) and no
+// shop address (Etsy forbids pointing buyers off Etsy). Sam, 17 Nov 2026.
+const ETSY = process.env.ETSY === "1";
+const OUT = path.join(__dirname, ETSY ? ".pins-etsy" : ".pins");
 const SITE = "https://shop.froglogic.co.uk/#digital";
 
 // Products whose pin is deliberately not built. A Pinterest description is
@@ -177,8 +182,8 @@ function pinSvg(p, logoData, artOverride) {
         )}</text>`
     )
     .join("\n  ")}
-  <text x="70" y="${H - 52}" font-family="Space Mono" font-size="30" fill="${GOLD}">${esc(p.price)}</text>
-  <text x="${W - 70}" y="${H - 52}" text-anchor="end" font-family="Space Mono" font-size="24" fill="${CREAM}" opacity="0.7">shop.froglogic.co.uk</text>
+  ${ETSY ? "" : `<text x="70" y="${H - 52}" font-family="Space Mono" font-size="30" fill="${GOLD}">${esc(p.price)}</text>
+  <text x="${W - 70}" y="${H - 52}" text-anchor="end" font-family="Space Mono" font-size="24" fill="${CREAM}" opacity="0.7">shop.froglogic.co.uk</text>`}
 </svg>`;
 }
 
