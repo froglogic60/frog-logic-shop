@@ -11,6 +11,9 @@
 //
 // Etsy prices sit above the site so Sam's own shop stays the best deal, and no
 // copy may mention froglogic.co.uk — Etsy forbids linking out from a listing.
+// No price is printed on the photos (Sam, 16 Nov 2026): Etsy adds VAT for UK
+// buyers and converts currency abroad, so a printed price was always wrong for
+// someone. PRICE only goes into listing.txt.
 const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
@@ -161,7 +164,7 @@ const COPY = {
     tags: ["zine", "printable zine", "adhd humour", "autism humour", "neurodivergent gift", "frog zine", "holiday survival", "accommodations", "adhd gift", "autism gift", "printable pdf", "instant download", "neurodiversity"],
   },
   "Affirmation Cards": {
-    title: "Affirmation Cards for Neurodivergent Adults | 24 Cut-Out Cards: My Pace Is Not a Flaw, Slow Days Are Still Days | Cute Frog Printable PDF",
+    title: "Affirmation Cards for Neurodivergent Adults | 18 Cut-Out Cards: My Pace Is Not a Flaw, Slow Days Are Still Days | Cute Frog Printable PDF",
     inside: ["18 cards to cut out and keep where you'll actually see them", "“My pace is not a flaw. It's just my pace.” “Small hops still move me across the pond.”", "Nothing here needs to be earned first", "Two A4 pages, cut along the lines"],
     why: "Eighteen lines for the days the inner voice is unkind.",
     tags: ["affirmation cards", "affirmations", "adhd affirmations", "autism affirmations", "self compassion", "neurodivergent", "cute frog", "positivity cards", "mental health cards", "self love cards", "printable pdf", "instant download", "neurodiversity"],
@@ -229,7 +232,6 @@ function img1(p, logoData) { // hero: art left, title right
     `<text x="${tx}" y="300" font-family="Space Mono" font-size="26" letter-spacing="4" fill="${GOLD}">PRINTABLE PDF · INSTANT DOWNLOAD</text>` +
     textLines(t, tx, 420, ts, ts * 1.08, "Fraunces", CREAM, 600) +
     textLines(wrap(p.line.split(/(?<=[.!?])\s+/)[0], 34).slice(0, 5), tx, 420 + t.length * ts * 1.08 + 50, 36, 50, "Space Grotesk", CREAM, 400, 0.85) +
-    `<text x="${tx}" y="${H - 150}" font-family="Space Mono" font-size="44" fill="${GOLD}">£${PRICE}</text>` +
     `<text x="${W - 150}" y="${H - 150}" text-anchor="end" font-family="Space Mono" font-size="30" fill="${CREAM}" opacity="0.6">FROG LOGIC</text>`,
     INK);
 }
@@ -263,7 +265,7 @@ function img4(p, c) { // how it works
         `<text x="280" y="${y - 10}" font-family="Fraunces" font-size="54" font-weight="600" fill="${CREAM}">${esc(h)}</text>` +
         `<text x="280" y="${y + 44}" font-family="Space Grotesk" font-size="34" fill="${CREAM}" opacity="0.75">${esc(d)}</text>`;
     }).join("") +
-    `<text x="${W - 150}" y="${H - 150}" text-anchor="end" font-family="Space Mono" font-size="30" fill="${CREAM}" opacity="0.6">FROG LOGIC · £${PRICE}</text>`,
+    `<text x="${W - 150}" y="${H - 150}" text-anchor="end" font-family="Space Mono" font-size="30" fill="${CREAM}" opacity="0.6">FROG LOGIC</text>`,
     INK);
 }
 function img5(p, c) { // why / voice
