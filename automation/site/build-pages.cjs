@@ -407,7 +407,12 @@ function buildPage(entry, related, shop) {
   const jsonld = group === "guide"
     ? { "@context": "https://schema.org", "@type": "Article", headline: c.title, name: `${item.word} — a Pond Guide`, description, url, image, isAccessibleForFree: true, inLanguage: "en-GB", author: { "@type": "Organization", name: "Frog Logic", url: SITE }, publisher: { "@type": "Organization", name: "Frog Logic", url: SITE }, dateModified: TODAY }
     : { "@context": "https://schema.org", "@type": "Product", name: c.h1, description, url, image, brand: { "@type": "Brand", name: "Frog Logic" },
-        offers: (tiers || [item]).map((t) => ({ "@type": "Offer", url, priceCurrency: "GBP", price: money(t.price), availability: "https://schema.org/InStock", itemCondition: "https://schema.org/NewCondition", seller: { "@type": "Organization", name: "Frog Logic" } })) };
+        // One Offer only (18 Nov 2026): Google Merchant Center read the
+        // Organisation Pack's three tier offers as "missing product price"
+        // and disapproved it. Merchant listings take a single price, so a
+        // tiered page offers its cheapest tier (Team, shown on the page).
+        offers: [tiers && tiers.length ? tiers.reduce((a, b) => (Number(String(b.price).replace(/[^0-9.]/g, "")) < Number(String(a.price).replace(/[^0-9.]/g, "")) ? b : a)) : item]
+          .map((t) => ({ "@type": "Offer", url, priceCurrency: "GBP", price: money(t.price), availability: "https://schema.org/InStock", itemCondition: "https://schema.org/NewCondition", seller: { "@type": "Organization", name: "Frog Logic" } })) };
 
   return shell({ title: c.title, description, url, image, imageAlt: `${item.word} — ${kind}`, body, jsonld, sizeGuide: isTee });
 }
