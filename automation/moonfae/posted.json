@@ -1,9 +1,13 @@
 {
- "next": 1,
+ "next": 2,
  "posted": [
   {
    "date": "2026-11-13",
    "card": "The Fool"
+  },
+  {
+   "date": "2026-11-18",
+   "card": "The Magician"
   }
  ]
 }
