@@ -227,7 +227,8 @@
     },
     "caption": "Some friends you see every day. Some you see in spring. Both count 🐸\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/pond-3.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-18T19:24:02.487Z"
   },
   {
     "postOn": "2026-11-19",
