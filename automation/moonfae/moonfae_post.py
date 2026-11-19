@@ -53,9 +53,12 @@ def due():
 
 def cta(index, d):
     gift_season = "2026-11-16" <= d.isoformat() <= "2026-12-20"
+    # Launch price (Sam, 18-19 Nov 2026): from £10 up to and including 5 Dec,
+    # then back to the normal £15 by itself.
+    price = "£10" if d.isoformat() <= "2026-12-05" else "£15"
     if gift_season and index % 2 == 0:
-        return f"Looking for a different kind of Christmas present? Gift a written reading, from £15: {SITE}/#gift"
-    return f"Want to see what the cards say about your own question? Written readings by email, from £15: {SITE}"
+        return f"Looking for a different kind of Christmas present? Gift a written reading, from {price}: {SITE}/#gift"
+    return f"Want to see what the cards say about your own question? Written readings by email, from {price}: {SITE}"
 
 
 def caption(card, index, d):
