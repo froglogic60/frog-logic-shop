@@ -154,7 +154,7 @@ async function sendPlanner(email, name, pdfPath) {
         <h1 style="font-size:22px;">Here it is — built for your brain</h1>
         <p>Your planner is attached as a PDF, assembled from your answers with your name on the cover.</p>
         <p>It's undated on purpose: print the pages you need, as often as you need them, forever. Skipped days aren't failure — they're just days.</p>
-        <p>If anything about it doesn't fit, reply to this email and we'll adjust it — that's what bespoke means.</p>
+        <p>If anything about it doesn't fit, reply to this email and I'll adjust it — that's what bespoke means.</p>
         <p style="margin-top:28px;font-size:12px;color:#5a6b5f;">Frog Logic · soft landings for busy brains · shop.froglogic.co.uk</p>
       </div>`,
       attachments: [{ filename: `${String(name).replace(/[^A-Za-z0-9 _-]/g, "").trim() || "your"}-bespoke-planner.pdf`, content: pdf.toString("base64") }],
