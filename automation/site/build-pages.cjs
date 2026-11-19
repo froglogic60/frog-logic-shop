@@ -355,6 +355,30 @@ function relatedCards(items, shop) {
       </a>`).join("");
 }
 
+// ---- "Something to hand over" (19 Nov 2026, Sam's yes): the guides get read
+// but nobody reached a product (GoatCounter 28 Oct-2 Nov: 0 basket adds), so
+// every guide page now offers the two £2 sheets near the top with a real
+// Add to basket button (basket.js catches [data-checkout-num] inside a .card).
+const HAND_OVER = ["How To Help Me", "Access Needs Cards"];
+function handOverItems(shop) {
+  return HAND_OVER.map((w) => shop.DIGITAL_PRODUCTS.find((p) => p.word === w && !p.retired)).filter(Boolean);
+}
+function handOverStrip(shop) {
+  const items = handOverItems(shop);
+  if (!items.length) return "";
+  return `
+    <section class="hand-over" aria-labelledby="hand-over-head">
+      <h2 id="hand-over-head" class="related-head">Something to hand over</h2>
+      <p class="guide-next">When explaining out loud is too much, give them a sheet instead. Printable, ${esc(items[0].price.replace(/\.00$/, ""))} each, emailed straight away.</p>
+      <div class="pad-grid related-grid">${items.map((it) => `
+        <div class="card related">
+          <a href="/p/${attr(shop.pageSlug(it))}/" class="stage" style="background:${it.bg};display:block">${String(it.svg).replace(/href="assets\//g, 'href="/assets/')}</a>
+          <div class="card-meta"><p class="card-num">${esc(it.num)}</p><h3><a href="/p/${attr(shop.pageSlug(it))}/">${esc(it.word)}</a></h3><p class="card-line">${esc(it.line)}</p><p class="card-price">${esc(it.price)}</p><button class="btn btn-primary" data-checkout-num="${attr(it.num)}" data-checkout-word="${attr(it.word)}" data-checkout-kind="digital">Add to basket</button></div>
+        </div>`).join("")}
+      </div>
+    </section>`;
+}
+
 function buildPage(entry, related, shop) {
   const { item, group, slug, svg, photo, tiers } = entry;
   const c = copyFor(item, group);
@@ -394,6 +418,7 @@ function buildPage(entry, related, shop) {
         </div>
       </article>
     </div>
+    ${group === "guide" ? handOverStrip(shop) : ""}
     ${group === "guide" && GUIDE_TEXT[item.slug] ? guideBody(item, GUIDE_TEXT[item.slug]) : ""}
     <div class="product-about">
       <h2>About the shop</h2>
@@ -515,6 +540,14 @@ function collect(shop) {
 }
 
 function pickRelated(page, pages) {
+  // Guides lead "More from the pond" with the two hand-over sheets (19 Nov 2026).
+  if (page.group === "guide") {
+    const first = HAND_OVER.map((w) => pages.find((p) => p.group === "digital" && p.item.word === w)).filter(Boolean);
+    const guides = pages.filter((p) => p !== page && p.group === "guide");
+    const i = pages.indexOf(page);
+    const rest = guides.length ? [guides[(i * 7) % guides.length]] : [];
+    if (first.length) return [...first, ...rest].slice(0, 3);
+  }
   const same = pages.filter((p) => p !== page && p.group === page.group);
   const pool = same.length >= 3 ? same : pages.filter((p) => p !== page && p.group !== "xset");
   // Deterministic: start from the page's own position so neighbours vary.
