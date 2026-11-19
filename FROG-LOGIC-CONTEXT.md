@@ -253,10 +253,16 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   - Martina's mug delivered (shipped 3 Nov); duplicate unpublished mug
     (6ae4c220…) deleted 11 Nov. Halloween retired 1 Nov, old URLs redirect.
   - Stripe connector added to Claude (read-only).
-  - Still open: guide strip yes/no; Pond Advent sign-up test yes/no; allow
-    search.google.com + pinterest.co.uk in the Claude extension (indexing for the
-    six Christmas pages; pin queue after 16 Nov); Jade (The Autism Page) reply of
-    4 Nov unanswered; planner email says "we'll adjust it" (change to I'll).
+  - Still open: allow search.google.com + pinterest.co.uk in the Claude
+    extension (indexing for the six Christmas pages; pin queue after 16 Nov);
+    planner email says "we'll adjust it" (change to I'll).
+  - Done 19 Nov (Sam's yes): guide strip live. build-pages.cjs handOverStrip()
+    puts "Something to hand over" (How To Help Me + Access Needs Cards, £2,
+    real Add to basket) under the product card on all 23 guides, and both lead
+    "More from the pond" there; published, Add to basket tested live. Pond
+    Advent sign-up tested with hello@ ("You're in" + hello email arrived);
+    hello@ stays on the list so the 1 Dec send can be checked. Jade: Sam had
+    replied 4 Nov with two PDFs; follow-up with the timetable link sent 19 Nov.
 - **FIRST SALE TO A STRANGER: 3 Nov 2026, 13:55, website (Stripe), £6** (After The
   Diagnosis, Finding My People, For The Sibling, £2 each; buyer in Hampshire;
   webhook delivered, downloads emailed). Before that, full four-channel check 2 Nov: Stripe only
