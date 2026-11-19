@@ -212,6 +212,18 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   it.** Follow up 13 Nov (Desk): will it be in the guide? Thread is in Sam's
   Outlook (search Martina).
 
+- **19 Nov 2026 · Goodtoknow online competition (DMRi / The Competition
+  Platform, contact Kelly Shaw).** Free standard package, no paid extras
+  (name "Frog Logic" shows free as Prize Sponsor; links cost £200). Runs 3–31
+  Dec 2026, competition ID 124607, submitted by Claude with Sam's yes,
+  "Awaiting Approval". Prize: 10 winners × Family Christmas printables bundle
+  worth £30 (Pond Guides set, Visual Timetable Cards, Cosy Christmas Colouring
+  Book, Christmas Big Pack, SEN thank-you cards, How To Help Me, After The
+  Diagnosis, For The Sibling), emailed as PDFs. **Desk:** check the preview at
+  hello@ (one free change round, then £50+VAT); by ~7 Jan 2027 collect the
+  winners' details, email bundles within 7 days (platform max 28 days, or
+  £300 + £350+VAT). Details: Project doc claude/goodtoknow-competition-2026.md.
+
 ## Where things stand (2 Nov 2026)
 
 - **2–15 Nov results (added 15 Nov):**
