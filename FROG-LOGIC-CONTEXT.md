@@ -253,7 +253,7 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
   - Martina's mug delivered (shipped 3 Nov); duplicate unpublished mug
     (6ae4c220…) deleted 11 Nov. Halloween retired 1 Nov, old URLs redirect.
   - Stripe connector added to Claude (read-only).
-  - Still open: planner email says "we'll adjust it" (change to I'll). The six
+  - Done 19 Nov: planner email now says "I'll adjust it" (process-orders.js). The six
     Christmas pages' indexing and the pin queue after 16 Nov can go ahead: the
     Claude extension reached search.google.com and pinterest.co.uk on 19 Nov.
   - Done 19 Nov (Sam's yes): guide strip live. build-pages.cjs handOverStrip()
