@@ -255,7 +255,8 @@
     },
     "caption": "Said no to something? Left the washing for tomorrow? Didn't go, and felt fine about it? That's a gold star too. Tell the frog ⭐\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/star-3.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-20T19:02:50.196Z"
   },
   {
     "postOn": "2026-11-21",
