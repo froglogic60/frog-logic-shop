@@ -280,7 +280,8 @@
     },
     "caption": "Fancy dress Sunday 🎩🐸 Real, knitted, drawn or plastic, all dressed-up frogs welcome.\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/frogs-3.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-22T19:02:13.682Z"
   },
   {
     "postOn": "2026-11-23",
