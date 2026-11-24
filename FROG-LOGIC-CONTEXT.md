@@ -226,6 +226,8 @@ Desk. Kept short on purpose: this repo is public, so no contact details.
 
 - **23 Nov 2026 · Crip Life article (Emma Purcell, editor).** Sam's ~500-word Frog Logic article live on Crip Life from 23 Nov. Reader offers: a free printable of their choice (email hello@, say Crip Life sent them) and 10% off a first order with CRIPLIFE; both run until 31 Jan 2027 (Sam's reply sent 23 Nov). Share it on the Frog Logic page, Instagram and newsletter.
 
+- **24 Nov 2026 · Emily Ladau, 2026 Disability Holiday Gift Guide (emilyladau.com, US).** Frog Logic is live in the guide (agreed 6 Nov; Sam's description + code POND10, 10% off a first order; no sample sent). Sam's thank-you sent 24 Nov, promising to share the guide on the Frog Logic page and Instagram this week.
+
 ## Where things stand (2 Nov 2026)
 
 - **2–15 Nov results (added 15 Nov):**
