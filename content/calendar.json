@@ -1,6 +1,6 @@
 {
   "note": "The shop desk calendar. Claude keeps this file up to date; the page at /desk.html reads it straight from GitHub, so edits here show up without a deploy. Anything that repeats goes in \"standing\" with a \"repeat\" rule ({\"every\":\"day\"} or {\"every\":[\"Mon\",\"Thu\"]}, optional \"from\"/\"until\" dates); the desk then copies it into every matching day under Coming up, so a repeating task is never just a one-off entry.",
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "standing": [
     {
       "time": "9am, 1pm, 6pm",
@@ -1336,6 +1336,15 @@
     },
     {
       "date": "2026-11-25",
+      "items": [
+        {
+          "what": "Taster sign-ups: 1 people (1 pages), 1 this week, last 2026-11-24",
+          "who": "robot"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
       "items": [
         {
           "what": "Taster sign-ups: 1 people (1 pages), 1 this week, last 2026-11-24",
