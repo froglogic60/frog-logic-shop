@@ -158,7 +158,10 @@ stand → coming up → parked → costs → how to work on it → history.
 - Planner order robot every 2 hours; taster sign-up count daily 06:50.
 - Printify cost check Mondays 06:40 (emails hello@ only if something changed);
   engagement report Mondays 07:20.
-- Pond Advent emails 1–24 Dec, 07:41 UTC (send-advent.yml).
+- Pond Advent emails 1–24 Dec, 07:41 UTC (send-advent.yml). From 27 Nov (Sam's yes)
+  22 doors carry a short P.S. under the free-gift button linking one related
+  paid printable (`ps` field in content/advent.json, ?ref=advent); none on
+  door 21 (longest night) or door 24 (thank-you).
 - Pinterest: scheduled pins from bulk CSV uploads (max 100 scheduled at once).
 - Scheduled tasks (Claude): weekly sales check Mondays 11:51 (first 9 Nov,
   summary to Sam's phone); daily group post 12:47 UK to 20 Nov; morning email
