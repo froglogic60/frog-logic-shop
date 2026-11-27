@@ -49,6 +49,7 @@ function html(day, email) {
       <p style="font:700 12px/1 sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#B5443A;margin:0 0 14px;">Pond Advent · door ${day.day} of 24</p>
       ${day.p.map((x) => `<p>${x}</p>`).join("\n      ")}
       <p style="margin:22px 0;"><a href="${link}" style="display:inline-block;background:#3C5B45;color:#F4EFE3;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:600;">${esc(label)}</a></p>
+      ${day.ps ? `<p style="font-size:15px;">${day.ps}</p>` : ""}
       <p style="margin-top:28px;font-size:13px;color:#6B6355;">Everything behind the doors is free. Frog Logic is my small shop of calm, neurodivergent-friendly clothes, mugs and printables, at <a href="${SITE}/?ref=advent" style="color:#6B6355;">froglogic.co.uk</a>, if you'd ever like a look.</p>
       <p style="font-size:12px;color:#6B6355;">You're getting this because you signed up for Pond Advent. It stops on 24 December. <a href="${stop}" style="color:#6B6355;">Take me off the list</a>.</p>
     </div>`,
