@@ -350,7 +350,8 @@
     },
     "caption": "The internet is very loud today. Over here it's just the frog handing out gold stars. Tell him one thing you got through this week ⭐\n\n#FrogLogic #frogs",
     "image": "automation/social/fun/star-4.jpg",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-11-27T19:01:55.639Z"
   },
   {
     "postOn": "2026-11-28",
