@@ -162,6 +162,12 @@ stand → coming up → parked → costs → how to work on it → history.
   22 doors carry a short P.S. under the free-gift button linking one related
   paid printable (`ps` field in content/advent.json, ?ref=advent); none on
   door 21 (longest night) or door 24 (thank-you).
+- Pond Advent door videos (27 Nov, Sam's yes): one 11.5 s vertical video a
+  day, 1-24 Dec, Reel + Facebook Page video at 10:00 UK, from
+  automation/social/advent-queue.json via advent-queue.yml. Videos in
+  automation/social/videos/advent/ (Jingle Bells chorus, public domain, synthesised).
+  TikTok is by hand: Sam has the same videos + captions (Pond-Advent-TikTok.zip).
+  TikTok API still posts private-only for unaudited apps (checked 27 Nov 2026).
 - Pinterest: scheduled pins from bulk CSV uploads (max 100 scheduled at once).
 - Scheduled tasks (Claude): weekly sales check Mondays 11:51 (first 9 Nov,
   summary to Sam's phone); daily group post 12:47 UK to 20 Nov; morning email
