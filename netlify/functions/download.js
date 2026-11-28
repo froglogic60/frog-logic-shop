@@ -11,6 +11,14 @@
 // The signature is an HMAC of the file name and expiry, keyed with the
 // Stripe secret key that is already set on the site, so no new secret is
 // needed. A link works for LINK_DAYS days. The free Pond Guides stay public.
+//
+// 28 Nov 2026: the paid files were still sitting in this PUBLIC repository (and
+// in the published site folder, held back only by the 404 rules). They now live
+// in a PRIVATE repository, PAID_FILES_REPO. When PAID_FILES_TOKEN is set (a
+// read-only key for that one repository, kept in Netlify's settings, never in
+// code or logs) each download is fetched from there at the moment the buyer
+// uses their link. Until the token is set, the old bundled copy is used, so
+// this file is safe to publish before the switch.
 
 import crypto from "node:crypto";
 import fs from "node:fs";
@@ -48,6 +56,27 @@ function findFile(file) {
   return null;
 }
 
+const PAID_REPO = process.env.PAID_FILES_REPO || "froglogic60/frog-logic-paid-files";
+
+// Fetch one file from the private store. Returns an ArrayBuffer, or null if the
+// file isn't there. Throws on anything else. The token is only ever sent to
+// api.github.com and is never written to a log or a response.
+async function fromPrivateStore(file) {
+  const token = process.env.PAID_FILES_TOKEN;
+  if (!token) return undefined; // not switched on yet
+  const res = await fetch(`https://api.github.com/repos/${PAID_REPO}/contents/${encodeURIComponent(file)}`, {
+    headers: {
+      authorization: `Bearer ${token}`,
+      accept: "application/vnd.github.raw+json",
+      "x-github-api-version": "2022-11-28",
+      "user-agent": "frog-logic-download",
+    },
+  });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`private store answered ${res.status}`);
+  return await res.arrayBuffer();
+}
+
 const page = (status, text) =>
   new Response(
     `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frog Logic download</title><body style="font-family:system-ui,sans-serif;max-width:34rem;margin:3rem auto;padding:0 1rem;line-height:1.5"><h1 style="font-size:1.3rem">${text}</h1><p>Write to <a href="mailto:hello@froglogic.co.uk">hello@froglogic.co.uk</a> with your order email and I'll send you a fresh link straight away.</p><p><a href="https://froglogic.co.uk/">Back to Frog Logic</a></p></body>`,
@@ -58,7 +87,15 @@ export default async (req) => {
   const u = new URL(req.url);
   // Health check (no file, no secrets): are the PDFs bundled and is a key set?
   if (u.searchParams.get("check") === "1") {
-    return Response.json({ files: findFile("When-Words-Go.pdf") ? "ok" : "missing", key: !!(process.env.DOWNLOAD_KEY || process.env.STRIPE_SECRET_KEY) });
+    let store = "off";
+    if (process.env.PAID_FILES_TOKEN) {
+      try {
+        store = (await fromPrivateStore("When-Words-Go.pdf")) ? "ok" : "missing";
+      } catch (e) {
+        store = "error";
+      }
+    }
+    return Response.json({ files: findFile("When-Words-Go.pdf") ? "ok" : "missing", store, key: !!(process.env.DOWNLOAD_KEY || process.env.STRIPE_SECRET_KEY) });
   }
   const file = u.searchParams.get("f") || "";
   const expires = Number(u.searchParams.get("e") || 0);
@@ -77,10 +114,21 @@ export default async (req) => {
   if (!good) return page(403, "That download link doesn't look right.");
   if (expires < Date.now() / 1000) return page(410, "That download link has expired.");
 
-  const p = findFile(file);
-  if (!p) return page(404, "That file can't be found.");
+  let body;
+  try {
+    body = await fromPrivateStore(file);
+  } catch (e) {
+    console.error(`download: ${file}: ${e.message}`);
+    return page(502, "That download isn't available right now.");
+  }
+  if (body === undefined) {
+    // Private store not switched on: the bundled copy, as before.
+    const p = findFile(file);
+    body = p ? fs.readFileSync(p) : null;
+  }
+  if (!body) return page(404, "That file can't be found.");
 
-  return new Response(fs.readFileSync(p), {
+  return new Response(body, {
     status: 200,
     headers: {
       // .xlsx added 8 Nov 2026 for the ADHD Money Kit spreadsheet.
