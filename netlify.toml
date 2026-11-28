@@ -449,6 +449,14 @@
   to = "/404"
   status = 404
   force = true
+# 28 Nov 2026: this spreadsheet belongs to the paid Weekly Spoon Tracker and
+# had no rule, so it was open at its address.
+[[redirects]]
+  from = "/digital/Weekly-Spoon-Tracker.xlsx"
+  to = "/404"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "/digital/Weekly-Spoon-Tracker.pdf"
   to = "/404"
