@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Bring in the paid files (private store)
+        run: bash automation/pdf/paid-store.sh fetch
+        env:
+          PAID_FILES_WRITE_TOKEN: ${{ secrets.PAID_FILES_WRITE_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -22,11 +26,15 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Build the book
         run: python automation/pdf/colouring-book.py
+      - name: Save the paid files (private store)
+        run: bash automation/pdf/paid-store.sh save
+        env:
+          PAID_FILES_WRITE_TOKEN: ${{ secrets.PAID_FILES_WRITE_TOKEN }}
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add digital/Frog-Logic-Colouring-Book*.pdf automation/social/etsy-kits/colouring-book
+          git add digital automation/social/etsy-kits/colouring-book
           git commit -m "Colouring book built [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push

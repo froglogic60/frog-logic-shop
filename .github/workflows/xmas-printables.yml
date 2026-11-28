@@ -20,6 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Bring in the paid files (private store)
+        run: bash automation/pdf/paid-store.sh fetch
+        env:
+          PAID_FILES_WRITE_TOKEN: ${{ secrets.PAID_FILES_WRITE_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -36,12 +40,16 @@ jobs:
           ONLY: ${{ inputs.only }}
           TES: ${{ inputs.tes && '1' || '' }}
           OUT_DIR: ${{ inputs.tes && 'tes' || '' }}
+      - name: Save the paid files (private store)
+        run: bash automation/pdf/paid-store.sh save
+        env:
+          PAID_FILES_WRITE_TOKEN: ${{ secrets.PAID_FILES_WRITE_TOKEN }}
       - name: Commit
         run: |
           git config user.name "frog-logic-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f automation/social/tes/*.pdf 2>/dev/null || true
-          git add digital/Christmas-Visual-Timetable*.pdf digital/Thank-You-Cards-SEN-Staff*.pdf digital/Bespoke-Planner-Gift-Card*.pdf digital/Visual-Timetable-Cards*.pdf automation/social/xmas-printables
+          git add digital automation/social/xmas-printables
           git commit -m "Christmas timetable and thank-you cards built [skip netlify]" || echo "nothing to commit"
           git pull --rebase origin main
           git push

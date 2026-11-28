@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Bring in the paid files (private store)
+        run: bash automation/pdf/paid-store.sh fetch
+        env:
+          PAID_FILES_WRITE_TOKEN: ${{ secrets.PAID_FILES_WRITE_TOKEN }}
       - name: Tools
         run: |
           sudo apt-get update -q && sudo apt-get install -y -q poppler-utils fonts-dejavu-core
